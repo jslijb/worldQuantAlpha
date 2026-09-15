@@ -155,6 +155,12 @@ $PY src/submit/probe_corr_service.py
 # 提交某个前缀的达标候选（自动去重 + 质量过滤 + corr 预检 + 提交 + 记账）
 $PY src/submit/submit_v2.py auto w114_
 
+# corr 预检不可用时改走盲提交（一次一个；PENDING 即停手防互堵）
+$PY src/submit/blind_submit.py <alpha_id> <cid>
+
+# 只读 corr 预检（绝不提交/不写台账），用于实验判读
+$PY src/submit/corr_only.py w122_
+
 # 只预检不提交
 $PY src/submit/precheck_only.py
 
@@ -205,10 +211,11 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 算子 | 共 66 个（清单 `data/alpha_quality_analysis/operators.json`）。**无** `ts_skewness`/`ts_kurtosis`（写 `ts_std_dev`，不是 `ts_stddev`） |
 | analyst 权限 | 账号**无独立 analyst 数据集**，**`rating` 字段 404**。等价评级字段全在 analyst4 且全为 VECTOR，**必须 `vec_avg` 聚合** |
 | coverage | USA/TOP3000/delay1 恒为 0.5，无区分度；选字段看 **alphaCount 越低越不易撞车** |
-| **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障" |
-| corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**（正常 3~4 次、4~6 秒即返回 records）—— **不是故障**。0915 已证伪此前的"服务停摆"结论：探针只轮询 3 次（6 秒）便放弃所致。已提交 alpha 的 `is.selfCorrelation` 一直有值，可作旁证 |
+| **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障"。⚠️ **0915 实测：本轮探针+预检共约 380 次 corr 端点请求，之后相关判决一直是 `PENDING`** —— 探测本身就是积压的成因之一，别再打 |
+| corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**，**不是故障**。⚠️ **0915 二次修正**：当前实际状态是**相关计算在账号侧排队积压**，90~180 秒量级的连续轮询（实测 51 次/90 秒、180 秒预算）**都拿不到 records**，且**全程零 429**（所以也不是限流封禁）。`_autologs/corr_ready_0915.txt` 一次性快扫为空 = 一条算好的都没有 |
+| **★ 拿相关判决的正确入口** | **不要再用 `correlations/self` 反复打**（一条候选上百次请求，会加剧本已积压的相关计算队列）。改为：`POST /alphas/{id}/submit` **触发平台现算** → 读 **`GET /alphas/{id}`**：①`is.checks` 里会新增 `SELF_CORRELATION`，取值 `PENDING`→`PASS`/`FAIL`；②入池成功后 `is.selfCorrelation` 有值（实测 w122_a `akLp3pzW` = **0.8036**，ACTIVE/stage=OS）。提交器：`src/submit/blind_submit.py`（盲提交，一次一个，PENDING 即停手防互堵）、`src/submit/submit_v2.py`（带 corr 预检，预检不可用时会对每条 150 秒 TIMEOUT） |
 | 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%（豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)） |
-| **Learn 文档接口** | 平台 Learn 是**两套独立内容**：①**文档** = `GET /tutorials`（目录树，**7 课程/29 页**）+ `GET /tutorial-pages/{page_id}`（正文 `content` 块数组）；②**视频课程** = `GET /video-courses`。抓取脚本 `src/tools/fetch_learn_docs.py`（文档，`tree`/`page`/**`all` 全量**）/ `fetch_learn_video.py`（视频）/ `merge_video_notes.py`（同组视频合并） |
+| **Learn 文档接口** | 平台 Learn 是**两套独立内容**：①**文档** = `GET /tutorials`（目录树，**7 课程/29 页**）+ `GET /tutorial-pages/{page_id}`（正文 `content` 块数组）；②**视频课程** = `GET /video-courses`。**`/tutorials` 无分页**：`next=None`、`offset=20` 起返回空，**29 页即全量**（已与平台 Documentation 页面的 7 个分组逐一核对：9+5+3+3+5+3+1）；正文里的 `/learn/documentation/...` 链接反查也**没有目录树外的页面**（唯一例外 `another-sample-alpha` 是官方自己的死链）。抓取脚本 `src/tools/fetch_learn_docs.py`（文档，`tree`/`page`/**`all` 全量**）/ `fetch_learn_video.py`（视频）/ `merge_video_notes.py`（同组视频合并） |
 | **文档页 content 块类型** | 实测共 **6 种**（漏一种就丢内容）：`TEXT`(HTML→MD)、`HEADING`、`IMAGE`(独立块，**value.url 需登录态下载**)、`TABLE`、**`EQUATION`**(LaTeX，原样保留)、**`SIMULATION_EXAMPLE`**(表达式 + 12 项完整模拟设置)。⚠️ 图片**大多数不在 TEXT 的 HTML 里，而是独立 `IMAGE` 块**——只解析 TEXT 会漏掉绝大部分配图（0915 首轮即此坑，漏 81 张） |
 | **Learn 视频字幕** | `GET /video-courses?limit=100`（需登录）直接返回官方**英文字幕**：**16 课程组 / 69 视频，50 个带字幕**（仅 `quantcepts` 组 19 个无）。**不用下载视频、不用本地语音识别**。⚠️ **接口默认只返 10 条，必须带 `?limit=100`**，否则漏掉后半程课程组（0915 曾误记为"46 视频/27 字幕"，即此因）。**`source` 标 YouTube 的视频同样直接带 `transcript` 字段——取字幕不需要访问 YouTube**；文档页内嵌的 YouTube 视频也可用 `uid` 反查本接口取字幕 |
 
@@ -275,3 +282,4 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 2026-09-15 | **`introduction-alphas` 组 6/6 视频全部译完**（合计 30,107 字符字幕）。确认该组第 2~6 个视频虽 `source=YouTube`，但 `transcript` 由接口一并返回，**取字幕无需访问 YouTube**；第 6 节约束表补记该点 |
 | 2026-09-15 | **打通 Learn 文档链路**：`/tutorials` 取官方目录树（7 课程/29 页）、`/tutorial-pages/{id}` 取正文（TEXT/HEADING/TABLE + 图片）。新增 `src/tools/fetch_learn_docs.py`、`src/tools/merge_video_notes.py`；归档第 3 批 `about-brain-platform`（含 2 图）；**6 个视频译文合并为 `视频合集_Alpha入门培训系列.md` 并删除单文件**；修正视频总量 **46/27 → 69/50**（此前漏带 `limit=100`）；`00_归档索引.md` 重写为「官方结构 ↔ 本地归档」对照 |
 | 2026-09-15 | **官方 documentation 全部 29 页一次抓完**（`fetch_learn_docs.py all`，幂等可重跑）：88 图 / 24 个示例表达式 / 12 条公式 / 6 表格，落 `docs/study/learn/docs/` 并按官方课程分目录；**补上此前漏解析的 `IMAGE`/`EQUATION`/`SIMULATION_EXAMPLE` 三种块**（首轮只解析 TEXT 导致 81 张图全丢）；手工粘贴的 3 篇移入 `_手稿存档/`；第 1 节树形图、放置规则表、第 6 节约束表同步 |
+| 2026-09-15 | **修正 corr 判决的取证入口**：`POST /submit` 会触发平台现算相关性并写入 `GET /alphas/{id}` 的 `is.checks[].SELF_CORRELATION`（PENDING→PASS/FAIL）；`is.selfCorrelation` 给数值（w122_a `akLp3pzW`=0.8036，ACTIVE）。`correlations/self` 在账号排队积压下 90~180 秒均返回空 body、且全程零 429（=积压非故障、非封禁）；连续探测本身会加剧积压。第 6 节两行同步，`docs/methodology/03_过墙与提交/01_相关性墙破法.md` 增第八节 |

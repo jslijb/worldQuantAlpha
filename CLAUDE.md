@@ -150,10 +150,12 @@ $PY src/submit/precheck_only.py
 # 汇总 mined 结果
 $PY src/tools/summarize_mined.py
 
-# ★ 把本次变更提交进本地 git（每批挖矿/提交后必做，见下）
-$PY src/ops/git_snapshot.py
-$PY src/ops/git_snapshot.py "本批说明"      # 追加一行自定义说明
-$PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真提交
+# ★ 提交并推送（每批挖矿/提交后必做，见下）
+$PY src/ops/git_snapshot.py --allow-public
+$PY src/ops/git_snapshot.py --allow-public "本批说明"   # 追加一行自定义说明
+$PY src/ops/git_snapshot.py --dry-run                  # 只看将要提交什么，不真提交
+$PY src/ops/git_snapshot.py --push-only --allow-public # 已有本地提交待推时用（本次无变更也推）
+$PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不推送
 ```
 
 **提交判定链**：质量闸门（S+F≥4.0 & testS≥1.25 & 无 FAIL）→ corr 预检（max corr<0.7 直通；否则豁免线 = `1.10 × max(所有 corr≥0.7 对手的 Sharpe)`，候选 S 达线也可提交）→ `POST /alphas/{id}/submit` → `GET /alphas/{id}` 核 `status==ACTIVE` → 追加台账。
@@ -162,8 +164,10 @@ $PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真�
 
 ### 版本控制（git）
 
-- **远端**：`origin` = `https://github.com/jslijb/worldQuantAlpha.git`，分支 `main`。提交后自动推送。
-  - ⚠️ **推送到公开仓库会被 `git_snapshot.py` 自动拦截**——本项目含 alpha 表达式、台账与完整方法论，公开不可逆。确需公开须显式加 `--allow-public`。
+- **远端**：`origin` = `https://github.com/jslijb/worldQuantAlpha.git`，分支 `main`。提交后自动推送（`git push -u origin HEAD`）。
+- **远端可见性（0915 实测）**：该仓库是 **Public 公开仓库**。李工已于 0915 明确确认并完成首次全量推送（8 个提交 / 1342 文件），**自动化推送固定带 `--allow-public`**。
+  - ⚠️ 红线：`git_snapshot.py` 对公开仓库默认拦截（退出码 4），这是防"手滑误推"的闸门。**只在已确认的 origin 上、且李工显式同意时**才加 `--allow-public`；**origin 一旦换成别的仓库，必须重新确认可见性**，不得默认放行。
+  - 若日后改回 Private，`--allow-public` 对私有仓库不生效、无副作用，命令无需改动。
 - **何时提交**：① 每挖完一批 Alpha（`mine_batch{NNN}.py` 跑完）② 每完成一轮提交（台账有新记录）③ 完成一批文档/代码改动。一句话——**一次有意义的产出 = 一次提交**。
 - **怎么提交**：统一走 `src/ops/git_snapshot.py`，它会自动识别变更、生成提交信息、无变更时静默跳过（不产生空提交）。
 - **信息格式**：自动生成，形如
@@ -249,3 +253,4 @@ $PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真�
 | 2026-09-15 | 纳入 git 版本控制：新增 `.gitignore`（凭据/缓存/日志不入库，`.workbuddy` 只留 memory）、`.gitattributes`（文本统一 LF）、`.git/hooks/pre-commit`（凭据拦截钩子）、`src/ops/git_snapshot.py`（统一快照提交入口）；第 5 节扩写为「常用命令与版本控制」 |
 | 2026-09-15 | 钩子源文件版本化到 `src/ops/git-hooks/pre-commit`（`.git/hooks/` 不入库，换机器需按第 5 节命令重建） |
 | 2026-09-15 | 关联远端 `origin` = github.com/jslijb/worldQuantAlpha；`git_snapshot.py` 增加自动推送与**公开仓库拦截**（新增 `--no-push` / `--allow-public` 参数） |
+| 2026-09-15 | 首次全量推送完成（8 提交 / 1342 文件，凭据零泄漏）；`git_snapshot.py` 新增 `--push-only`（已有本地提交待推时用）；记录远端为 Public 及放行规则 |

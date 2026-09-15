@@ -80,9 +80,11 @@ news12（875 字段）、fundamental2（766）、pv13（165）、option8、model
 - `docs/` 全部文档（`methodology/` 六子目录 / `research` / `study` / `exam`（考试资料单独）/ `project` / `reference` / `archive`）。
 - `_autologs/` 运行日志。根目录只留 `CLAUDE.md`/`README.md`/`brain_credentials.txt`。
 - **历史脚本已于 0915 提取经验后清除**（404 个 py）；表达式与结果完整存于 `src/archive/expr_library.py`（ALL_EXPR 1098 / LEG_VALUE 207 / PY_ONLY 1314 / QUALIFIED 460）。外挂全量备份：`D:\Python\worldquant_backup_20260915\`（0915 重构前快照，勿删）。
-- **版本控制（0915 接入）**：git 仓库（分支 `main`），全部代码/数据/文档入库，`.git` 约 35M。远端 `origin` = `https://github.com/jslijb/worldQuantAlpha.git`。
-  - ⚠️ **该远端当前是 Public（公开），因此尚未推送**——需李工先去 GitHub 仓库 Settings → General → Danger Zone → Change visibility 改为 Private，之后才能推。
-  - `git_snapshot.py` 已内置**公开仓库拦截**：推送前匿名探测远端可见性，检测到 public 即中止（退出码 4）并告警，须显式加 `--allow-public` 才放行。`--no-push` 可只提交不推。
+- **版本控制（0915 接入，已关联远端）**：git 仓库（分支 `main`），全部代码/数据/文档入库，`.git` 约 35M。远端 `origin` = `https://github.com/jslijb/worldQuantAlpha.git`。
+  - **远端是 Public（公开）**：李工 0915 **明确确认并完成首次全量推送**（1342 文件，凭据零泄漏）→ **自动化命令固定带 `--allow-public`**。
+  - ⚠️ 红线：`git_snapshot.py` 默认拦截公开仓库（退出码 4）。该闸门只对"已确认的 origin"放行；**origin 一旦换成别的仓库，必须重新确认可见性，不得默认放行**。
+  - 参数：`--allow-public` 放行公开库 / `--no-push` 只提交不推 / `--push-only` 已有本地提交待推时用 / `--dry-run` 预演。
+  - **国内访问 github.com:443 不稳定**（0915 实测间歇性连接超时，curl 同样失败）。推送失败**不影响本地提交**；重试 3 次间隔 10s，仍失败则报告"远端落后 N 个提交"，待网络恢复 `git push -u origin main` 补推。
   - **每挖完一批 Alpha 必须提交一次**（约定）。统一走 `src/ops/git_snapshot.py`——自动识别变更、自动生成提交信息（如 `mine(w122): 新增 9 条候选 / 台账 +3`）、无变更时跳过、`--dry-run` 可预演。**不要手写 git add/commit**。
   - **凭据红线**：`brain_credentials.txt` 由 `.gitignore` + `pre-commit` 钩子双重拦截，**永不入库**。禁止 `git add -f` 与 `--no-verify`。
   - **钩子源文件已版本化**于 `src/ops/git-hooks/pre-commit`（`.git/hooks/` 本身不入库）：换机器后执行 `cp src/ops/git-hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`。

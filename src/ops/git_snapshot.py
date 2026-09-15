@@ -212,7 +212,9 @@ def remote_visibility(url: str) -> str:
 def main() -> int:
     argv = list(sys.argv[1:])
     dry = "--dry-run" in argv or "-n" in argv
-    argv = [a for a in argv if a not in ("--dry-run", "-n")]
+    no_push = "--no-push" in argv
+    allow_public = "--allow-public" in argv
+    argv = [a for a in argv if not a.startswith("-")]
     note = argv[0] if argv else ""
 
     # ---- 前置自检 1：仓库存在 ----

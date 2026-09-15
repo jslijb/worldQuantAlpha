@@ -214,6 +214,7 @@ def main() -> int:
     dry = "--dry-run" in argv or "-n" in argv
     no_push = "--no-push" in argv
     allow_public = "--allow-public" in argv
+    push_only = "--push-only" in argv
     argv = [a for a in argv if not a.startswith("-")]
     note = argv[0] if argv else ""
 
@@ -239,6 +240,9 @@ def main() -> int:
 
     changes = collect_changes()
     if not changes:
+        if push_only:
+            print("无变更可提交（--push-only：跳过提交，直接推送）")
+            return push_to_remote(no_push, allow_public)
         print("无变更，跳过提交（不产生空提交）")
         return 0
 
@@ -271,7 +275,14 @@ def main() -> int:
     log = git("log", "-1", "--stat", "--format=%h %ad %s", "--date=format:%Y-%m-%d %H:%M")
     print(log.out.strip())
 
-    # ---------- 推送远端 ----------
+    return push_to_remote(no_push, allow_public)
+
+
+def push_to_remote(no_push: bool, allow_public: bool) -> int:
+    """把本地 HEAD 推送到 origin，推送前做公开仓库红线拦截。
+
+    返回值：0 成功/无需推送；4 被公开仓库红线拦截。
+    """
     url = git("remote", "get-url", "origin").out.strip()
     if not url:
         print("\n[完成] 已提交到本地仓库（未配置远端 origin，未推送）")

@@ -1,0 +1,48 @@
+#!/bin/sh
+# ============================================================
+# pre-commit 安全网：拦截凭据文件进入版本库
+# 说明：.gitignore 是主防线，本钩子是二次保险。
+#       凭据一旦提交进 git 历史，即使删除也仍存在于历史对象中，
+#       清理成本极高 —— 所以在入口处直接拦死。
+# 项目规范见根目录 CLAUDE.md「版本控制」一节。
+# ============================================================
+
+blocked=0
+
+# ---- 检查 1：文件名黑名单 ----
+for f in $(git diff --cached --name-only --diff-filter=ACM); do
+  case "$f" in
+    brain_credentials.txt|*credentials*.txt|*.credentials|*.credential|*_token.txt|*_secret.txt|.env|.env.*)
+      echo ""
+      echo "[pre-commit 拦截] 敏感文件被暂存：$f"
+      blocked=1
+      ;;
+  esac
+done
+
+# ---- 检查 2：小型纯凭据文件兜底（<200 字节且含邮箱样式） ----
+if [ "$blocked" = "0" ]; then
+  for f in $(git diff --cached --name-only --diff-filter=ACM); do
+    [ -f "$f" ] || continue
+    sz=$(wc -c < "$f" 2>/dev/null || echo 0)
+    if [ "$sz" -gt 0 ] && [ "$sz" -lt 120 ]; then
+      if grep -qE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}' "$f" 2>/dev/null; then
+        echo ""
+        echo "[pre-commit 拦截] 疑似凭据文件的极小文本：$f (${sz} 字节，含邮箱样式)"
+        blocked=1
+      fi
+    fi
+  done
+fi
+
+if [ "$blocked" = "1" ]; then
+  echo ""
+  echo "已阻止本次提交。修复方法："
+  echo "  git rm --cached <文件>          # 从版本控制移除（磁盘文件保留）"
+  echo "  确认 .gitignore 首节已包含该文件"
+  echo "  如需绕过（强烈不建议）：git commit --no-verify"
+  echo ""
+  exit 1
+fi
+
+exit 0

@@ -246,3 +246,4 @@ $PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真�
 |---|---|
 | 2026-09-15 | 创建。完成项目重构：1900 个散乱文件 → 分层结构；411 个历史脚本提取经验后清除（表达式存入 `src/archive/expr_library.py`，方法论存入 `docs/methodology/`）；建立本规范文件 |
 | 2026-09-15 | 纳入 git 版本控制：新增 `.gitignore`（凭据/缓存/日志不入库，`.workbuddy` 只留 memory）、`.gitattributes`（文本统一 LF）、`.git/hooks/pre-commit`（凭据拦截钩子）、`src/ops/git_snapshot.py`（统一快照提交入口）；第 5 节扩写为「常用命令与版本控制」 |
+| 2026-09-15 | 钩子源文件版本化到 `src/ops/git-hooks/pre-commit`（`.git/hooks/` 不入库，换机器需按第 5 节命令重建） |

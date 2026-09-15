@@ -1,0 +1,40 @@
+=== 今天(0915)新产出的达标未提交候选（按SF排序）===
+达标未提交总数: 441
+w53_c     wpY3Yxvd   SF=6.19 S=2.99 tS=2.49 T=0.133
+w55_h     Vk6Za7Lw   SF=6.15 S=3.01 tS=2.54 T=0.142
+w54_d     A10e0LQY   SF=6.15 S=3.02 tS=2.53 T=0.144
+w54_h     qMWOWaE1   SF=6.14 S=3.01 tS=2.53 T=0.143
+w52_g     kqVvjjnK   SF=6.14 S=3.01 tS=2.53 T=0.143
+w53_f     Vk6Z6nmw   SF=6.11 S=2.98 tS=2.43 T=0.141
+w55_f     RRV9brza   SF=6.09 S=3.00 tS=2.38 T=0.144
+w54_e     zqYgYexo   SF=6.08 S=2.98 tS=2.51 T=0.141
+w53_g     78Z3ZgrZ   SF=6.06 S=3.00 tS=2.42 T=0.149
+w55_a     kqVvoRMP   SF=6.05 S=2.96 tS=2.58 T=0.145
+w53_a     MP1d7Nvk   SF=6.05 S=3.02 tS=2.57 T=0.155
+w51_a     KPOvGJRj   SF=6.05 S=2.92 tS=2.48 T=0.130
+w54_g     78Z3Z5m5   SF=6.04 S=2.97 tS=2.65 T=0.142
+w53_e     78Z3ZAe1   SF=6.04 S=2.97 tS=2.59 T=0.142
+w53_d     kqVvVxag   SF=6.03 S=2.97 tS=2.32 T=0.143
+w55_b     JjxoNKAj   SF=6.01 S=2.99 tS=2.64 T=0.158
+w51_b     vRkZN1gG   SF=6.00 S=2.94 tS=2.52 T=0.139
+w52_a     d5OYjqdY   SF=5.98 S=2.91 tS=2.42 T=0.138
+w54_a     58QrQzeM   SF=5.96 S=2.96 tS=3.11 T=0.143
+w49_d     j23orrMk   SF=5.95 S=2.86 tS=2.40 T=0.117
+w54_f     JjxoxraA   SF=5.94 S=2.94 tS=2.46 T=0.144
+w53_b     3q91lvxO   SF=5.91 S=3.02 tS=2.64 T=0.172
+w52_d     78Z3jxx2   SF=5.91 S=2.90 tS=2.58 T=0.139
+w52_c     O0rR7mmR   SF=5.91 S=2.93 tS=2.46 T=0.150
+w51_c     vRkZNpEb   SF=5.91 S=2.95 tS=2.56 T=0.152
+
+=== w124_e 表达式 ===
+group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_dxd5/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_aqi/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1"))
+
+=== w124_a~h 表达式对比 ===
+w124_a SF=2.69 : group_rank(fnd6_newqv1300_spcepq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_optrfrq/assets, bucket(rank(ts_mean(volume*close,
+w124_b SF=2.93 : group_rank(fnd6_newa2v1300_spced/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newa1v1300_aqpl1/assets, bucket(rank(ts_mean(volume*close, 
+w124_c SF=3.02 : group_rank(fnd6_newqv1300_prcraq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newa2v1300_tstkn/assets, bucket(rank(ts_mean(volume*close, 
+w124_d SF=3.03 : group_rank(fnd6_optvolq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_anoq/assets, bucket(rank(ts_mean(volume*close, 20)), range
+w124_e SF=4.28 : group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_dxd5/assets, bucket(rank(ts_mean(volume*close, 20)), range
+w124_f SF=3.97 : group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(ts_std_dev(returns, 20)), ra
+w124_g SF=2.14 : group_rank(fnd6_newqv1300_spcepq/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_optrfrq/assets, bucket(rank(ts_mean(volume*close,
+w124_h SF=3.13 : group_rank(fnd6_newqv1300_spcepq/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_optrfrq/assets, bucket(rank(ts_std_dev(returns, 20)

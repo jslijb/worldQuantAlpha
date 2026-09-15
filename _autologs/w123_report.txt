@@ -1,0 +1,23 @@
+=== batch123 (w123_) 产出指标 ===
+w123_a   YP5eoVoW   S=1.50 F=1.27 SF=2.77 tS=0.43 T=0.146 fail subm=False FAILS=[]
+w123_b   N1QZE0lX   S=1.51 F=1.25 SF=2.76 tS=1.01 T=0.138 fail subm=False FAILS=[]
+w123_c   9qVn5vaq   S=1.20 F=1.09 SF=2.29 tS=0.55 T=0.125 fail subm=False FAILS=['LOW_SHARPE']
+w123_d   vRkQ7xe3   S=1.74 F=1.39 SF=3.13 tS=1.71 T=0.164 fail subm=False FAILS=[]
+w123_e   mLgvnAlE   S=1.73 F=1.11 SF=2.84 tS=0.74 T=0.146 fail subm=False FAILS=[]
+w123_f   d5OGJQYw   S=2.25 F=1.50 SF=3.75 tS=1.90 T=0.185 fail subm=False FAILS=[]
+w123_g   mLgvnV36   S=1.71 F=1.10 SF=2.81 tS=2.18 T=0.147 fail subm=False FAILS=[]
+w123_h   58QXKJRX   S=1.30 F=1.13 SF=2.43 tS=0.18 T=0.111 fail subm=False FAILS=[]
+
+=== mined 目录最近修改的 12 个文件 ===
+w123_e.json 09-15 16:08
+w123_f.json 09-15 16:09
+w123_g.json 09-15 16:09
+w123_h.json 09-15 16:11
+w124_b.json 09-15 16:18
+w124_a.json 09-15 16:18
+w124_d.json 09-15 16:20
+w124_c.json 09-15 16:20
+w124_f.json 09-15 16:21
+w124_e.json 09-15 16:22
+w124_h.json 09-15 16:24
+w124_g.json 09-15 16:25

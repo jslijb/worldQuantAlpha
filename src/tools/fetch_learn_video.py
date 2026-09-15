@@ -35,7 +35,8 @@ def login() -> requests.Session:
 def main() -> int:
     s = login()
     OUT.mkdir(parents=True, exist_ok=True)
-    r = s.get(f"{BASE}/video-courses", timeout=60)
+    # ⚠️ 默认只返 10 条，必须显式带 limit，否则会漏掉后半程课程组
+    r = s.get(f"{BASE}/video-courses", params={"limit": 100}, timeout=60)
     print("GET /video-courses ->", r.status_code, len(r.content), "bytes")
     if r.status_code != 200:
         print(r.text[:500])
@@ -48,8 +49,9 @@ def main() -> int:
     if isinstance(data, dict):
         print("顶层键：", list(data.keys()))
     items = data.get("results", data) if isinstance(data, dict) else data
-    print("条目数：", len(items) if hasattr(items, "__len__") else "?")
-    print(json.dumps(items[:2] if hasattr(items, "__getitem__") else items, ensure_ascii=False)[:1500])
+    n_v = sum(len(c.get("videos", [])) for c in items)
+    n_t = sum(1 for c in items for v in c.get("videos", []) if v.get("transcript"))
+    print(f"课程组：{len(items)}｜视频：{n_v}｜带字幕：{n_t}")
     return 0
 
 

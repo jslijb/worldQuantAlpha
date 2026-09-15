@@ -1,0 +1,146 @@
+{
+  "id": "about-brain-platform",
+  "title": "Introduction to Alphas",
+  "lastModified": "2026-08-26T07:08:36.924940-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"754qf\">BRAIN is a web-based tool for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=operators.-,Backtesting,-Backtesting\">backtesting</a> trading ideas. An <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alpha</a> is a concrete trading idea that can be simulated historically.</p>",
+      "id": "2837a66e-2275-4bdd-9054-7a0206985413"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Alphas"
+      },
+      "id": "8ebed88c-ccb4-44f8-a173-bd42183f4471"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"2ljx2\">In BRAIN, an &#x27;Alpha&#x27; refers to a mathematical model, written as an expression, which places different bets (<a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=W-,Weight,-BRAIN\">weights</a>) on different <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Instrument,-Instrument\">instruments</a> (stocks), and is expected to be profitable in the long run. After a user enters an Alpha expression that consists of data, <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=O-,Operator,-Operator\">operators</a> and constants, the input code is evaluated for each instrument to construct a portfolio. Then BRAIN makes investments in each instrument for a one-day period in proportion to the values of the expression. The process repeats each day.<br/></p>",
+      "id": "b71362d2-9fde-44ab-b868-0f2ff33765fb"
+    },
+    {
+      "type": "TEXT",
+      "value": "<iframe width=\"743\" height=\"333\" \" src=\"https://www.youtube.com/embed/A3RNoYAz_9U?start=66&end=192&feature=oembed&rel=0\" title=\"Learn2Quant: Creating a Quant Alpha | Lesson 2\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "id": "1183498a-ba79-4a6b-8d47-efa2074d548c"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Alpha Lifecycle"
+      },
+      "id": "05ecc6cf-b9ac-4a9a-ad3b-d1f484785a06"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"21ukn\"></p><p data-block-key=\"rifnh\">The flow chart below shows the lifecycle of an <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alpha</a>:</p>",
+      "id": "cd02587f-6908-4b44-99c4-e91214fffaf8"
+    },
+    {
+      "type": "TEXT",
+      "value": "<img src=https://api.worldquantbrain.com/content/images/sEX-vpQmh1uRWP-BIv3MVrsKI1k=/18/original/ alt=\"alpha_lifecycle\" width=\"700\">",
+      "id": "a13d02ab-05ee-4bb2-bf98-4ea146fc7984"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"t2u2c\">First, one might peruse blogs, journals and research papers on the internet to come up with an idea. The Alpha expression is entered in BRAIN and operations (like truncation,neutralization, decay) are performed on the raw Alpha. BRAIN makes investments (goes long or short) for all the instrumentsof the universe chosen in the Settings panel and the PnL is simulated. Then the performance is calculated (Sharpe, Turnover, Returns) as seen in the Simulation Results page. And if the Alpha is not deemed worthy, the Alpha idea is revised. Else, it enters production.</p>",
+      "id": "c0efbee7-456e-4924-9a32-4b9c03b263a0"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Weights"
+      },
+      "id": "e35f3846-8adb-4337-b5e6-e95a57562e55"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"rimv2\">In simple terms, BRAIN uses an Alpha to create a vector of weights, with each weight corresponding to one of the stocks in the selected <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=U-,Universe,-Universe\">universe</a>. These weights may or may not be market neutralized, as per your <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=strategy.-,Neutralization,-Neutralization\">neutralization</a> setting (by market, industry, sub-industry or none). This creates a portfolio for each day in the simulation period, which can then be used to calculate that day&#x27;s <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">Profit and Loss (PnL)</a>.</p>",
+      "id": "efbe2911-6063-46b2-8519-3ee6a629c61c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<iframe width=\"743\" height=\"333\" src=\"https://www.youtube.com/embed/A3RNoYAz_9U?start=193&end=262\" title=\"Long Short Neutrality\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "id": "3bf6a5f9-88d3-46f0-a9f3-fcc412ead243"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Assigning weights"
+      },
+      "id": "49b1a6dd-e76b-4523-b7af-437774eac8eb"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7dyxi\">Suppose in the Expression box, you type in 1/close, and set the simulation settings as follows: <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Region,-Set\">Region</a> = US, Universe = TOP3000, Delay = 1, Decay = 0, Neutralization = None, Truncation = 0. Now, once you hit &quot;Simulate&quot; button, then for each day in the Simulation Duration (5 years), the simulator does the following:<br/>It calculates 1/close (using the closing price for the previous day), for each <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Instrument,-Instrument\">instrument</a> in the basket &quot;US: TOP3000&quot; (i.e. top 3000 stocks in the US, by market <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=level.-,Capitalization,-Daily\">capitalization</a>). This creates a vector of 3000 values (one for each stock). This vector is then normalized, i.e. divided by the sum of its values(so that all the values sum up to 1). This creates a vector of &quot;weights&quot; for all the stocks, which is called a &quot;Portfolio&quot;. Each weight represents the fraction of money invested in that stock. If our <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=deviation.-,Booksize,-Booksize\">booksize</a> is $20 Million, then the money invested in each stock is $20M x (weight of that stock in the portfolio). This is done for each day in the simulation period, and at the end of each day the total profit or loss made by our portfolio is calculated.</p>",
+      "id": "edf3a2d7-3d8a-4235-9399-0897bfbaa466"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Positive and Negative weights"
+      },
+      "id": "c443631f-6a0d-4125-b09c-8807b6be4d8c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"8jki5\">BRAIN assigns positive weights to indicate long positions in stocks, and negative weights to indicate short positions in stocks. The greater the magnitude of the weight on a stock, the larger the long or short position taken on it.</p><p data-block-key=\"s1dwi\">It is easy to invest $100 in stock, but negative positions (shorts) are common too. E.g. one can get $100 now by shorting a stock (i.e. investing -$100), which must be bought back later. PnL would be the opposite of $100 invested, as seen in the table below. Negative weights are called short positions and positive weights are called long positions. Typically investors take short positions when they expect stock price to decrease and long positions (i.e. buying stocks) when they expect price to increase. Please refer to <a href=\"http://www.investopedia.com/terms/s/shortselling.asp\">Investopedia</a> for more details on short selling.</p><p data-block-key=\"qlx1c\">The below table gives an example of payoffs from a $100 short and a $100 long position, for a 1% price change in each direction. For simplicity, it does not account for dividends, margin and financing costs.</p>",
+      "id": "499d70dc-d24f-459a-87f1-b8b29de7984d"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Position",
+            "Name",
+            "PnL if stock price rises 1%",
+            "PnL if stock price falls 1%"
+          ],
+          [
+            "$100",
+            "Long",
+            "$1",
+            "-$1"
+          ],
+          [
+            "-$100",
+            "Short",
+            "-$1",
+            "$1"
+          ]
+        ],
+        "firstRowIsTableHeader": true,
+        "firstColIsHeader": false
+      },
+      "id": "2902048e-2053-4151-83dd-471bacd76722"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "BRAIN"
+      },
+      "id": "72d89a78-777a-4056-bd8e-6939260658a8"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"4pcpl\">BRAIN is a web-based simulator of global financial markets that was created to explore Alpha research. It accepts an Alpha expression as input and plots its Profit and Loss (PnL) as output. The input expression is evaluated for each financial instrument, every day over historical dates, and a portfolio is constructed accordingly. BRAIN invests in each financial instrument according to the value of the expression. It takes positions (either buying or short selling) and assigns weights to each instrument. The weights are then scaled to book size (amount of money invested), based on which a PnL graph is plotted. These weights are not constant; they change over time based on current information and the history of the changes of some variables (such as prices, volumes, etc.).</p>",
+      "id": "c6d82411-29b3-4ea6-8b36-72caeed42e2b"
+    },
+    {
+      "type": "TEXT",
+      "value": "<img src=\"https://api.worldquantbrain.com/content/images/I_g6YAX-kKGKGKK6ygENw-q6C0I=/53/original/\" alt=\"alphas_and_brain\" width=\"1000\">",
+      "id": "d81fc1f4-815a-4e18-9c25-3946d8702e96"
+    }
+  ],
+  "sequence": 4,
+  "category": "Getting Started",
+  "duration": "PT6M"
+}

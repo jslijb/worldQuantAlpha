@@ -1,0 +1,251 @@
+{
+  "count": 7,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": "discover-brain",
+      "category": "Getting Started",
+      "pages": [
+        {
+          "title": "*Read this First * - Starter Pack",
+          "duration": "PT19M",
+          "id": "read-first-starter-pack",
+          "lastModified": "2026-08-23T02:12:23.202382-04:00"
+        },
+        {
+          "title": "10 Steps to Start on BRAIN",
+          "duration": "PT1M",
+          "id": "10-steps-start-brain-platform",
+          "lastModified": "2026-08-23T02:12:28.124522-04:00"
+        },
+        {
+          "title": "Introduction to Alphas",
+          "duration": "PT6M",
+          "id": "about-brain-platform",
+          "lastModified": "2026-08-26T07:08:36.924940-04:00"
+        },
+        {
+          "title": "Intermediate Pack - Understand Results [1/2]",
+          "duration": "PT5M",
+          "id": "intermediate-pack-part-1",
+          "lastModified": "2026-08-23T02:12:44.807180-04:00"
+        },
+        {
+          "title": "Intermediate Pack - Improve your Alpha [2/2]",
+          "duration": "PT5M",
+          "id": "intermediate-pack-part-2",
+          "lastModified": "2026-08-23T02:12:52.780622-04:00"
+        },
+        {
+          "title": "WorldQuant Challenge",
+          "duration": "PT3M",
+          "id": "challenge-help",
+          "lastModified": "2025-03-12T05:07:12.194953-04:00"
+        },
+        {
+          "title": "Scoring Algorithm for Challenge Users",
+          "duration": null,
+          "id": "scoring-algorithm-challenge-users",
+          "lastModified": "2026-08-25T23:35:55.862589-04:00"
+        },
+        {
+          "title": "BRAIN and Alphas",
+          "duration": null,
+          "id": "brain-and-alphas",
+          "lastModified": "2026-08-26T07:09:00.682196-04:00"
+        },
+        {
+          "title": "Intermediate Pack - Conditional Operators [3/3] 🥉",
+          "duration": null,
+          "id": "intermediate-pack-part-3",
+          "lastModified": "2026-08-26T07:10:28.166238-04:00"
+        }
+      ],
+      "duration": "PT39M",
+      "title": "Discover BRAIN",
+      "sequence": 0,
+      "lastModified": "2023-03-30T10:03:04.259135-04:00"
+    },
+    {
+      "id": "create-alphas",
+      "category": "Getting Started",
+      "pages": [
+        {
+          "title": "Simulate your first Alpha",
+          "duration": "PT3M",
+          "id": "running-your-first-alpha",
+          "lastModified": "2026-08-26T06:34:15.850551-04:00"
+        },
+        {
+          "title": "Test Period",
+          "duration": "PT3M",
+          "id": "test-period",
+          "lastModified": "2026-08-26T01:56:22.574685-04:00"
+        },
+        {
+          "title": "How to choose the Simulation Settings",
+          "duration": "PT6M",
+          "id": "simulation-settings",
+          "lastModified": "2026-08-26T06:34:08.969855-04:00"
+        },
+        {
+          "title": "⭐ How BRAIN works",
+          "duration": "PT12M",
+          "id": "how-brain-platform-works",
+          "lastModified": "2026-08-26T07:08:45.054391-04:00"
+        },
+        {
+          "title": "Introduction to BRAIN Expression Language",
+          "duration": "PT3M",
+          "id": "introduction-brain-expression-language",
+          "lastModified": "2026-08-23T02:12:36.375133-04:00"
+        }
+      ],
+      "duration": "PT27M",
+      "title": "Create Alphas",
+      "sequence": 2,
+      "lastModified": "2023-03-30T10:03:40.153233-04:00"
+    },
+    {
+      "id": "examples",
+      "category": "Getting Started",
+      "pages": [
+        {
+          "title": "⭐ Alpha Examples for Beginners",
+          "duration": "PT4M",
+          "id": "19-alpha-examples",
+          "lastModified": "2026-08-26T01:38:39.415361-04:00"
+        },
+        {
+          "title": "⭐ Alpha Examples for Bronze Users 🥉",
+          "duration": "PT2M",
+          "id": "sample-alpha-concepts",
+          "lastModified": "2026-08-26T00:06:12.208988-04:00"
+        },
+        {
+          "title": "⭐ Alpha Examples for Silver Users🥈",
+          "duration": "PT3M",
+          "id": "example-expression-alphas",
+          "lastModified": "2026-08-26T00:06:06.852451-04:00"
+        }
+      ],
+      "duration": "PT9M",
+      "title": "Examples",
+      "sequence": 3,
+      "lastModified": "2026-01-07T00:59:41.390915-05:00"
+    },
+    {
+      "id": "interpret-results",
+      "category": "Interpreting Results",
+      "pages": [
+        {
+          "title": "Clear these tests before submitting an Alpha",
+          "duration": "PT11M",
+          "id": "alpha-submission",
+          "lastModified": "2026-09-15T01:31:48.138796-04:00"
+        },
+        {
+          "title": "Parameters in the Simulation results",
+          "duration": "PT6M",
+          "id": "parameters-simulation-results",
+          "lastModified": "2026-08-26T06:34:36.877995-04:00"
+        },
+        {
+          "title": "How to pass the Sub-universe test? 🥈",
+          "duration": null,
+          "id": "how-pass-sub-universe-test",
+          "lastModified": "2026-08-26T07:10:34.904134-04:00"
+        }
+      ],
+      "duration": "PT17M",
+      "title": "Interpret Results",
+      "sequence": 4,
+      "lastModified": "2026-01-07T00:58:45.866729-05:00"
+    },
+    {
+      "id": "understanding-data",
+      "category": "Data",
+      "pages": [
+        {
+          "title": "Understanding Data in BRAIN: Key Concepts and Tips",
+          "duration": "PT4M",
+          "id": "data",
+          "lastModified": "2026-08-26T01:56:48.752644-04:00"
+        },
+        {
+          "title": "How to use the Data Explorer",
+          "duration": "PT3M",
+          "id": "how-use-data-explorer",
+          "lastModified": "2026-08-26T00:05:12.640477-04:00"
+        },
+        {
+          "title": "Vector Data Fields 🥉",
+          "duration": "PT4M",
+          "id": "vector-datafields",
+          "lastModified": "2026-08-26T03:47:44.438325-04:00"
+        },
+        {
+          "title": "Group Data Fields 🥈",
+          "duration": "PT3M",
+          "id": "group-data-fields",
+          "lastModified": "2026-08-26T00:05:18.430158-04:00"
+        },
+        {
+          "title": "Option6 Implied volatility (IV)",
+          "duration": "PT2M",
+          "id": "getting-started-option6-implied-volatility-iv",
+          "lastModified": "2026-08-26T06:30:47.620324-04:00"
+        }
+      ],
+      "duration": "PT16M",
+      "title": "Understanding Data",
+      "sequence": 5,
+      "lastModified": "2026-01-07T00:58:25.404498-05:00"
+    },
+    {
+      "id": "advanced-topics",
+      "category": "Getting Started",
+      "pages": [
+        {
+          "title": "Must-read posts: How to improve your Alphas🥉",
+          "duration": "PT2M",
+          "id": "list-must-read-posts-how-improve-your-alphas-are-submitted",
+          "lastModified": "2026-08-26T06:34:28.878940-04:00"
+        },
+        {
+          "title": "Neutralization 🥉",
+          "duration": "PT5M",
+          "id": "neut-cons",
+          "lastModified": "2026-08-26T03:47:37.627939-04:00"
+        },
+        {
+          "title": "D0",
+          "duration": "PT4M",
+          "id": "getting-started-d0",
+          "lastModified": "2026-08-26T01:47:58.735892-04:00"
+        }
+      ],
+      "duration": "PT11M",
+      "title": "Advanced Topics",
+      "sequence": 6,
+      "lastModified": "2026-01-07T00:58:08.807554-05:00"
+    },
+    {
+      "id": "regions-and-universes",
+      "category": "Regions and Universes",
+      "pages": [
+        {
+          "title": "China Alphas: Understand the market 🥈",
+          "duration": null,
+          "id": "china-region",
+          "lastModified": "2026-08-26T01:12:37.214921-04:00"
+        }
+      ],
+      "duration": null,
+      "title": "Regions and Universes",
+      "sequence": 7,
+      "lastModified": "2026-01-07T00:57:41.708317-05:00"
+    }
+  ]
+}

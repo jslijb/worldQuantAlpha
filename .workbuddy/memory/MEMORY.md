@@ -79,7 +79,13 @@ news12（875 字段）、fundamental2（766）、pv13（165）、option8、model
 - `data/alpha_quality_analysis/` 全部数据（**台账 `SUBMITTED_LEDGER.csv` 唯一事实源**；`mined/` 1098 json；`candidates_all.csv` 1098 条；`candidates_unsubmitted_qualified.csv` **456 条未提交达标**；`leg_value_rank.csv` 207 条单腿排行）。
 - `docs/` 全部文档（`methodology/` 六子目录 / `research` / `study` / `exam`（考试资料单独）/ `project` / `reference` / `archive`）。
 - `_autologs/` 运行日志。根目录只留 `CLAUDE.md`/`README.md`/`brain_credentials.txt`。
-- **历史脚本已于 0915 提取经验后清除**（404 个 py）；表达式与结果完整存于 `src/archive/expr_library.py`（ALL_EXPR 1098 / LEG_VALUE 207 / PY_ONLY 1314 / QUALIFIED 460）。备份：`D:\Python\worldquant_backup_20260915\`。
+- **历史脚本已于 0915 提取经验后清除**（404 个 py）；表达式与结果完整存于 `src/archive/expr_library.py`（ALL_EXPR 1098 / LEG_VALUE 207 / PY_ONLY 1314 / QUALIFIED 460）。外挂全量备份：`D:\Python\worldquant_backup_20260915\`（0915 重构前快照，勿删）。
+- **版本控制（0915 接入）**：本地 git 仓库（分支 `main`、无远端），全部代码/数据/文档入库，`.git` 约 35M。
+  - **每挖完一批 Alpha 必须提交一次**（约定）。统一走 `src/ops/git_snapshot.py`——自动识别变更、自动生成提交信息（如 `mine(w122): 新增 9 条候选 / 台账 +3`）、无变更时跳过、`--dry-run` 可预演。**不要手写 git add/commit**。
+  - **凭据红线**：`brain_credentials.txt` 由 `.gitignore` + `pre-commit` 钩子双重拦截，**永不入库**。禁止 `git add -f` 与 `--no-verify`。
+  - **钩子源文件已版本化**于 `src/ops/git-hooks/pre-commit`（`.git/hooks/` 本身不入库）：换机器后执行 `cp src/ops/git-hooks/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit`。
+  - 不进库的：凭据、工具缓存（`.codegraph`/`.codeartsdoer`/`.arts`/`.freebuff`）、`*.log`、`.workbuddy` 除 `memory/` 外部分。
+  - 两个定时任务（`07ac2d4a` 每日挖矿 / `a9b2c5cd` 补提交）prompt 已加入"收尾执行 git_snapshot"步骤。
 
 ## 📊 历史挖掘实证（0915 从 1098 条记录提炼，详 `docs/methodology/`）
 - **460/1098 达标（41.9%）但只提交 60 个 id → 456 条达标候选从未提交**；历史瓶颈是相关性墙不是质量。

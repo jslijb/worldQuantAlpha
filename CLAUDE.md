@@ -162,7 +162,8 @@ $PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真�
 
 ### 版本控制（git）
 
-- **本地仓库**，分支 `main`，**无远端**（不 push）。
+- **远端**：`origin` = `https://github.com/jslijb/worldQuantAlpha.git`，分支 `main`。提交后自动推送。
+  - ⚠️ **推送到公开仓库会被 `git_snapshot.py` 自动拦截**——本项目含 alpha 表达式、台账与完整方法论，公开不可逆。确需公开须显式加 `--allow-public`。
 - **何时提交**：① 每挖完一批 Alpha（`mine_batch{NNN}.py` 跑完）② 每完成一轮提交（台账有新记录）③ 完成一批文档/代码改动。一句话——**一次有意义的产出 = 一次提交**。
 - **怎么提交**：统一走 `src/ops/git_snapshot.py`，它会自动识别变更、生成提交信息、无变更时静默跳过（不产生空提交）。
 - **信息格式**：自动生成，形如

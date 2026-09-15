@@ -7,15 +7,18 @@ git_snapshot.py — 项目变更快照提交（唯一入口）
       把变更提交进本地 git 仓库。自动识别变更内容并生成有意义的信息。
 
 用法：
-    python src/ops/git_snapshot.py                     # 自动识别变更、自动生成信息
-    python src/ops/git_snapshot.py "补充说明"           # 追加自定义说明行
+    python src/ops/git_snapshot.py                     # 自动识别变更 → 提交 → 推送到远端
+    python src/ops/git_snapshot.py "补充说明"           # 追加一行自定义说明
     python src/ops/git_snapshot.py --dry-run           # 只显示将要提交什么，不真提交
+    python src/ops/git_snapshot.py --no-push           # 只提交本地，不推送
+    python src/ops/git_snapshot.py --allow-public      # 允许推送到公开仓库（默认拦截）
 
 行为约定：
     - 无变更时静默跳过，不产生空提交
-    - 只做本地 commit，不 push（本仓库无远端）
+    - 提交后若配置了远端 origin 则自动推送（--no-push 跳过）
+    - ★ 推送前探测远端可见性：检测到 GitHub 公开仓库即拦截并告警（alpha 表达式属核心资产，不外泄）
     - 首步自检 brain_credentials.txt 未被纳入版本控制，发现即中止
-    - 提交前打一次凭据自检；提交后打印本次 commit 摘要
+    - 提交后打印本次 commit 摘要；推送失败不阻断本地提交
 
 可从任意工作目录调用（自动向上定位项目根）。
 """
@@ -178,8 +181,36 @@ def build_message(changes: list, note: str) -> str:
     return head, "\n".join(body)
 
 
+def remote_visibility(url: str) -> str:
+    """探测远端是否为公开仓库（仅对 github.com 有效）。
+
+    返回 'public' / 'not-public' / 'unknown'。
+    原理：匿名 HEAD 请求仓库主页——200 = 公开，404 = 私有或不存在。
+    """
+    m = re.match(r"https?://github\.com/([^/]+)/([^/]+?)(?:\.git)?/?$", url.strip())
+    if not m:
+        return "unknown"
+    import urllib.error
+    import urllib.request
+
+    req = urllib.request.Request(
+        f"https://github.com/{m.group(1)}/{m.group(2)}",
+        method="HEAD",
+        headers={"User-Agent": "git-snapshot/1.0"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return "public" if r.status == 200 else "unknown"
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return "not-public"   # 私有，或不存在（push 时自会报错）
+        return "unknown"
+    except Exception:
+        return "unknown"
+
+
 def main() -> int:
-    argv = [a for a in sys.argv[1:]]
+    argv = list(sys.argv[1:])
     dry = "--dry-run" in argv or "-n" in argv
     argv = [a for a in argv if a not in ("--dry-run", "-n")]
     note = argv[0] if argv else ""

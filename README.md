@@ -70,16 +70,19 @@ worldquant/
 
 ## 版本控制
 
-项目已用 git 管理（本地仓库，无远端），分支 `main`。
+项目已用 git 管理，分支 `main`，远端 `origin` 指向 GitHub 仓库。**提交后自动推送。**
 
 ```bash
-$PY src/ops/git_snapshot.py              # 自动识别变更并提交
+$PY src/ops/git_snapshot.py              # 自动识别变更 → 提交 → 推送远端
 $PY src/ops/git_snapshot.py --dry-run    # 只看将要提交什么，不真提交
+$PY src/ops/git_snapshot.py --no-push    # 只提交本地，不推送
 git log --oneline                        # 查看提交历史
 git status --short                       # 查看未提交改动
 ```
 
 **提交约定**：每挖完一批 Alpha 提交一次，每完成一轮提交/文档改动提交一次。脚本自动生成提交信息（形如 `mine(w122): 新增 9 条候选 / 台账 +3`），无变更时静默跳过、不产生空提交。
+
+**⚠️ 公开仓库拦截**：本项目含 1098 条 alpha 表达式与提交台账，属核心资产。脚本推送前会探测远端可见性，**检测到公开仓库即拦截**并告警；确需公开要显式加 `--allow-public`。
 
 **凭据安全**：`brain_credentials.txt` 由 `.gitignore`（主防线）+ `.git/hooks/pre-commit`（二次拦截）双重挡住，永不入库。
 

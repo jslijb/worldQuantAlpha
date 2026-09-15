@@ -29,9 +29,15 @@ def append_ledger(aid, expr, S, F, T, R, DD, ds, decay, neut, tag):
         w = csv.writer(f)
         w.writerow([aid, expr, S, F, T, R, DD, '', ds, decay, neut, tag])
 
-def corr_precheck(aid):
-    """返回 (max_corr, strict_line, detail)；耐心窗口拉长以扛住平台队列积压"""
+def corr_precheck(aid, budget_sec=150.0):
+    """返回 (max_corr, strict_line, detail)；耐心窗口拉长以扛住平台队列积压
+    0915 修正：加 wall-clock 时间预算。原实现最坏 200 次 × sleep(10s) = 33 分钟空转
+    （实测已出现 `corr TIMEOUT，跳过`）；而正常情况仅需 3~4 次轮询（4~6 秒）即返回 records，
+    150 秒预算足够，超出即判 TIMEOUT 跳过。"""
+    _t0 = time.time()
     for _ in range(200):
+        if time.time() - _t0 > budget_sec:
+            break
         try:
             r = sess.get(f'https://api.worldquantbrain.com/alphas/{aid}/correlations/self')
         except Exception:

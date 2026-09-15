@@ -1,0 +1,73 @@
+台账行: 61 | mined 中匹配到表达式: 30 / 61
+增强视图已写出: data/alpha_quality_analysis/ledger_with_expr.csv
+
+有表达式的已提交 alpha: 30
+
+=== 中性化方式分布 ===
+  SUBINDUSTRY       28 (93%)
+  INDUSTRY           2 (7%)
+
+=== 字段使用频次（已提交池）===
+  assets                29 次 (97%)
+  close                 29 次 (97%)
+  volume                25 次 (83%)
+  cash                  22 次 (73%)
+  cashflow_op           18 次 (60%)
+  enterprise_value      18 次 (60%)
+  low                   18 次 (60%)
+  fnd6_xrent             9 次 (30%)
+  xrent                  9 次 (30%)
+  returns                4 次 (13%)
+  ev                     2 次 (7%)
+  cap                    2 次 (7%)
+  liab                   1 次 (3%)
+  income                 1 次 (3%)
+  high                   1 次 (3%)
+  sga                    1 次 (3%)
+  sales                  1 次 (3%)
+
+=== 算子使用频次（已提交池）===
+  group_rank            30 次 (100%)
+  rank                  30 次 (100%)
+  ts_delta              29 次 (97%)
+  ts_mean               26 次 (87%)
+  ts_av_diff            22 次 (73%)
+  bucket                 3 次 (10%)
+  ts_rank                1 次 (3%)
+
+=== 已提交池 S 最高的 12 个 + 表达式 ===
+  0mR2K6lr   S= 3.45 F= 2.13 selfCorr=        | 0913批次w101_f
+      group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(news_short_interest, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+
+  j23Pl0e5   S= 3.25 F= 1.86 selfCorr=        | 0912批次w64_h
+      group_rank(anl4_fs_detail_estimate_1qf_v4_nd_grossincome_high/assets, subindustry) + group_rank(fnd6_txtubxintis/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+
+  mLgd6nwX   S= 3.17 F= 1.96 selfCorr=        | 0912批次w57_f
+      group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 46), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 44), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+
+  e79PvPpE   S= 3.13 F= 2.72 selfCorr=        | 0913批次w92_d
+      group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+
+  O0rZ90n1   S= 2.82 F= 2.29 selfCorr=        | 0909批次
+      group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))
+
+  le8EMjoN   S= 2.79 F= 1.62 selfCorr=        | 0912批次w58_f
+      group_rank(fnd6_newqv1300_ivstq/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+
+  rK59235m   S= 2.72 F= 2.54 selfCorr=        | 0912批次w50_c
+      group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+
+  gJQMxZoJ   S= 2.67 F=  2.4 selfCorr=        | 0908批次5个
+      group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2))
+
+  QP3V2bVG   S= 2.58 F=  2.0 selfCorr=        | 0908批次5个
+      group_rank(liabilities_curr/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))
+
+  kqVp6wnO   S= 2.51 F= 1.91 selfCorr=        | 0914-batch116-w116_d(无vol+CAPR桶)
+      group_rank(fnd6_tstkc/assets, bucket(rank(ts_rank(cap, 250)), range="0.1, 1, 0.1")) + group_rank(fnd6_cicurr/assets, bucket(rank(ts_rank(cap, 250)), range="0.1, 1, 0.1")) + group_rank(fnd6_intc/assets, bucket(rank(ts_rank(cap, 250)), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_rank(cap, 250)), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cashflow_op/enterprise_v
+
+  akLmmvPW   S= 2.48 F= 1.63 selfCorr=        | 0914-batch116b-w116_e
+      group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(sales/assets), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(sales/assets), range="0.1, 1, 0.1")) + group_rank(fnd6_tstkc/assets, bucket(rank(sales/assets), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cash/assets, 45), bucket(rank(sales/assets), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cashflow_op/enterprise
+
+  N1QJPJE8   S= 2.47 F=  1.7 selfCorr=        | 0912批次w68_b
+      group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + group_rank(-ts_delta(close, 5), industry) + rank(volume/ts_mean(volume, 90))

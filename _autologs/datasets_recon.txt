@@ -1,0 +1,98 @@
+可用数据集数: 14  (类型样例: dict)
+
+id                         字段数    alpha数  名称
+analyst4                  1324    748975  Analyst Estimate Data for Equity
+fundamental6               886    830952  Company Fundamental Data for Equity
+news12                     875    164006  US News Data
+fundamental2               766    137744  Report Footnotes
+pv13                       165    161925  Relationship Data for Equity
+news18                     121     56908  Ravenpack News Data
+option9                     74     73777  Options Analytics
+option8                     64    177046  Volatility Data
+model16                     24     10052  Fundamental Scores
+pv1                         24   2107769  Price Volume Data for Equity
+socialmedia12               18     58325  Sentiment Data for Equity
+model51                     16     42604  Systematic Risk Metrics
+univ1                        6       107  Universe Dataset
+socialmedia8                 4     16519  Social Media Data for Equity
+
+=== 重点数据集的字段抽样（低 alphaCount 优先）===
+--- fundamental2 / MATRIX: 共 150 个（抽样 120）---
+   authorized_exercisable_options_count_price_range     aC=     0 u=    0 | Number of exercisable options authorized under sto
+   authorized_option_shares_outstanding_count           aC=     2 u=    2 | Number of outstanding shares authorized under stoc
+   benefit_obligation_service_cost_change               aC=     2 u=    2 | Change in service cost for defined benefit plan ob
+   customer_related_intangibles_gross_value             aC=     2 u=    2 | Gross value of customer-related finite-lived intan
+   db_plan_periodic_benefit_cost                        aC=     2 u=    2 | Net periodic cost recognized for defined benefit p
+   doubtful_accounts_provision_2                        aC=     2 u=    2 | Provision set aside for accounts that may not be c
+   allocated_sbp_expense_rsu                            aC=     3 u=    2 | Allocated expense for share-based compensation rel
+   available_for_sale_securities_amortized_cost         aC=     3 u=    3 | Amortized cost of securities available for sale.
+   deferred_tax_liability_goodwill_intangibles          aC=     3 u=    3 | Deferred tax liabilities related to goodwill and i
+   defined_benefit_plan_interest_cost                   aC=     3 u=    1 | Interest cost for defined benefit plan obligations
+   available_for_sale_securities_oci_adjustment         aC=     4 u=    4 | Net-of-tax adjustment for available-for-sale secur
+   benefits_paid_defined_benefit_plan_assets            aC=     4 u=    4 | Assets paid out as benefits under a defined benefi
+   comprehensive_income_net_tax_value                   aC=     4 u=    3 | Comprehensive income value after tax adjustments.
+   debt_principal_due_year_five                         aC=     4 u=    3 | Principal repayments on long-term debt scheduled f
+   debt_securities_available_for_sale                   aC=     4 u=    4 | Debt securities classified as available for sale.
+   defined_benefit_plan_service_cost                    aC=     4 u=    2 | Service cost recognized for defined benefit pensio
+   derivative_asset_fair_value                          aC=     4 u=    4 | Fair value of derivative assets.
+   available_for_sale_securities_oci_net                aC=     5 u=    3 | Net adjustment to accumulated other comprehensive 
+
+--- pv13 / MATRIX: 共 30 个（抽样 120）---
+   single_sector_pureplay_company_count                 aC=    58 u=   45 | Number of companies exclusively operating in a sin
+   pv13_revere_comproduct_company                       aC=    79 u=   67 | Company product
+   primary_sector_focused_company_count                 aC=   262 u=  220 | Number of companies primarily focused in a given s
+   pv13_revere_term                                     aC=   343 u=  211 | Indicates when a sector is the terminal sector (i.
+   pv13_revere_parent                                   aC=   570 u=  446 | Code of parent sector
+   pv13_revere_index_value                              aC=   652 u=  502 | Value of specified index for the date
+   pv13_revere_level                                    aC=   764 u=  525 | Level of the sector within the hierarchy
+   pv13_revere_company_total                            aC=   797 u=  639 | Total number of companies in the sector
+   rel_ret_cust                                         aC=   846 u=  391 | averaged one-day-return of the instrument's custom
+   pv13_ustomergraphrank_auth_rank                      aC=   848 u=  602 | the HITS authority score of customers
+   pv13_ustomergraphrank_page_rank                      aC=  1262 u=  849 | the PageRank of customers
+   pv13_ustomergraphrank_hub_rank                       aC=  1285 u=  846 | the HITS hub score of customers
+   pv13_revere_zipcode                                  aC=  1380 u=  589 | Zip code
+   pv13_revere_country                                  aC=  1623 u=  889 | Country code
+   pv13_revere_city                                     aC=  1930 u= 1053 | City code
+   pv13_ompetitorgraphrank_hub_rank                     aC=  2115 u= 1302 | the HITS hub score of competitors
+   pv13_revere_index_cap                                aC=  2143 u= 1271 | Company market capitalization
+   rel_num_comp                                         aC=  2779 u= 1590 | number of the instrument's competitors
+
+--- analyst4 / VECTOR: 共 150 个（抽样 120）---
+   anl4_fs_detail_estimate_basic_af_v4_nd_currency      aC=     1 u=    1 | Currency code in which the estimate is reported
+   anl4_fs_basic_splt_v4_nd_div_estimate                aC=     2 u=    1 | Analyst’s estimated dividend per share for the spe
+   anl4_fs_basic_splt_v4_nd_div_previosestimate         aC=     2 u=    2 | Previous dividend per share estimate value prior t
+   anl4_fs_actual_af_v4_nd_actual                       aC=     7 u=    6 | Reported actual value for the financial item
+   anl4_fs_actual_basic_af_v4_nd_actual                 aC=     7 u=    6 | Reported actual value of the financial item for th
+   anl4_fs_detail_estimate_basic_af_v4_nd_previosestimate aC=     7 u=    5 | Previous estimate value from the same broker/analy
+   anl4_fs_detail_estimate_basic_qf_v4_nd_currency      aC=     8 u=    8 | Currency code in which the estimate is reported
+   anl4_fs_actual_qf_v4_nd_actual                       aC=     9 u=    8 | Reported actual value for the specified item
+   anl4_fs_basic_splt_v4_nd_sales_previosestimate       aC=     9 u=    8 | Previous sales estimate value prior to the latest 
+   anl4_fs_detail_estimate_basic_af_v4_nd_estimate      aC=    12 u=    8 | Current estimate value reported by the broker/anal
+   anl4_fs_actual_basic_qf_v4_nd_actual                 aC=    15 u=   15 | Reported actual value for the item
+   anl4_fs_basic_splt_v4_nd_sales_estimate              aC=    16 u=   13 | Analyst’s estimated sales/revenue for the specifie
+   anl4_fs_basic_splt_v4_nd_eps_estimate                aC=    18 u=    9 | Analyst’s estimated earnings per share for the spe
+   anl4_fs_basic_splt_v4_nd_eps_previosestimate         aC=    18 u=   11 | Previous earnings per share estimate value prior t
+   anl4_dez1basicafv4_preest                            aC=    20 u=   20 | The previous estimation of finanicial item
+   anl4_dez1basicqfv4_preest                            aC=    21 u=   19 | The previous estimation of finanicial item
+   anl4_eaz1lqfv110_prevval                             aC=    21 u=   18 | The previous estimation of financial item
+   anl4_fs_actual_af_v4_nd_currency                     aC=    26 u=   24 | Home currency of the instrument in which the actua
+
+--- fundamental6 / VECTOR: 共 150 个（抽样 120）---
+   fnd6_eventv110_pncwidq                               aC=     5 u=    5 | Core Pension w/o Interest Adjustment Diluted EPS E
+   fnd6_eventv110_pncidq                                aC=     8 u=    7 | Core Pension Interest Adjustment Diluted EPS Effec
+   fnd6_eventv110_aqdq                                  aC=     9 u=    9 | Acquisition/Merger Diluted EPS Effect
+   fnd6_divd                                            aC=    10 u=   10 | Cash Dividends - Daily
+   fnd6_eventv110_spiepsq                               aC=    10 u=    9 | Other Special Items Basic EPS Effect
+   fnd6_eventv110_nrtxtepsq                             aC=    11 u=    9 | Nonrecurring Income Taxes Basic EPS Effect
+   fnd6_eventv110_gdwliepsq                             aC=    12 u=   10 | Impairment of Goodwill Basic EPS Effect
+   fnd6_eventv110_wddq                                  aC=    13 u=   11 | Writedowns Diluted EPS Effect
+   fnd6_curcddv                                         aC=    14 u=   11 | ISO Currency Code - Dividend
+   fnd6_eventv110_pncwiepsq                             aC=    14 u=    5 | Core Pension w/o Interest Adjustment Basic EPS Eff
+   fnd6_newqeventv110_ibadj12                           aC=    14 u=   11 | Income Before Extra Items - Adj for Common Stock E
+   fnd6_eventv110_spidq                                 aC=    17 u=   14 | Other Special Items Diluted EPS Effect
+   fnd6_newqeventv110_gdwliaq                           aC=    18 u=   14 | Impairment of Goodwill After-tax
+   fnd6_newqeventv110_hedgeglq                          aC=    18 u=   16 | Gain/Loss on Ineffective Hedges
+   fnd6_newqeventv110_glpq                              aC=    19 u=   12 | Gain/Loss Pretax
+   fnd6_eventv110_gdwlidq                               aC=    20 u=   15 | Impairment of Goodwill Diluted EPS Effect
+   fnd6_eventv110_aqepsq                                aC=    21 u=   13 | Acquisition/Merger Basic EPS Effect
+   fnd6_newqeventv110_gdwlamq                           aC=    21 u=   16 | Amortization of Goodwill

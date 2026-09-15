@@ -21,28 +21,46 @@ with open(LEDGER, encoding='utf-8-sig') as f:
 print('ledger rows(unique ids):', len(done), flush=True)
 
 
-def probe(aid, label, max_tries=3):
+def probe(aid, label, budget_sec=90.0):
+    """判据修正（0915 实证）：
+       `200 + Retry-After + 空 body` = 平台正在现算，**必须继续轮询**，不是故障。
+       实测：轮询 3–4 次（4–6 秒）即返回完整 records。
+       故改为按时间预算轮询，拿到 records 才算 UP；预算内始终拿不到才算 DOWN。
+    """
     hits = []
-    for i in range(max_tries):
+    t0 = time.time()
+    i = 0
+    while time.time() - t0 < budget_sec:
+        i += 1
         try:
             r = sess.get(f'https://api.worldquantbrain.com/alphas/{aid}/correlations/self')
         except Exception as e:
-            hits.append(f'try{i+1}: EXC {type(e).__name__}')
+            hits.append(f'try{i}: EXC {type(e).__name__}')
             time.sleep(5); continue
         ra = r.headers.get('Retry-After')
         body_len = len(r.text or '')
-        nrec = -1
-        if r.status_code == 200 and not ra:
+        nrec = None
+        if r.status_code == 200 and body_len > 0:
             try:
                 nrec = len((r.json() or {}).get('records') or [])
             except Exception:
                 nrec = -1
-        hits.append(f'try{i+1}: {r.status_code} Retry-After={ra} bodylen={body_len} records={nrec}')
-        if nrec and nrec > 0:
-            print(f'[{label}] {aid} -> RECORDS({nrec}) 服务可用', flush=True)
+        if i <= 3 or nrec is not None:
+            hits.append(f'try{i}: t={time.time()-t0:5.1f}s {r.status_code} '
+                        f'Retry-After={ra} bodylen={body_len} records={nrec}')
+        if nrec is not None and nrec > 0:
+            print(f'[{label}] {aid} -> RECORDS({nrec}) 服务可用 '
+                  f'（耗时 {time.time()-t0:.1f}s，轮询 {i} 次）', flush=True)
             return True, hits
-        time.sleep(min(float(ra), 20) if ra else 3)
-    print(f'[{label}] {aid} -> 无 records', flush=True)
+        d = 1.6
+        try:
+            if ra:
+                d = max(1.5, min(6.0, float(ra) + 0.4))
+        except Exception:
+            pass
+        time.sleep(d)
+    hits.append(f'try{i}: t={time.time()-t0:5.1f}s --- {budget_sec:.0f}s 预算耗尽仍无 records')
+    print(f'[{label}] {aid} -> 无 records（{budget_sec:.0f}s 内）', flush=True)
     return False, hits
 
 

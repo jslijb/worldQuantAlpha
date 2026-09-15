@@ -1,0 +1,27 @@
+auth 201
+[FRESH] 3q9NMgk6 DOWN 180s poll=97
+      poll1 0.3s 200 RA=1.0 len=0
+      poll2 2.1s 200 RA=1.0 len=0
+      poll5 7.7s 200 RA=1.0 len=0
+      poll10 17.1s 200 RA=1.0 len=0
+      poll15 26.4s 200 RA=1.0 len=0
+      poll20 35.8s 200 RA=1.0 len=0
+      poll25 45.2s 200 RA=1.0 len=0
+      poll30 54.5s 200 RA=1.0 len=0
+      poll35 63.9s 200 RA=1.0 len=0
+      poll40 73.2s 200 RA=1.0 len=0
+      poll45 82.6s 200 RA=1.0 len=0
+      poll50 92.0s 200 RA=1.0 len=0
+[FRESH] MP1rjMj9 DOWN 180s poll=94
+      poll1 0.3s 200 RA=1.0 len=0
+      poll2 2.2s 200 RA=1.0 len=0
+      poll5 7.8s 200 RA=1.0 len=0
+      poll10 17.1s 200 RA=1.0 len=0
+      poll15 26.5s 200 RA=1.0 len=0
+      poll20 35.8s 200 RA=1.0 len=0
+      poll25 45.1s 200 RA=1.0 len=0
+      poll30 54.5s 200 RA=1.0 len=0
+      poll35 63.8s 200 RA=1.0 len=0
+      poll40 73.1s 200 RA=1.0 len=0
+      poll45 82.5s 200 RA=1.0 len=0
+      poll50 91.8s 200 RA=1.0 len=0

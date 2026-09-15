@@ -194,8 +194,9 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 算子 | 共 66 个（清单 `data/alpha_quality_analysis/operators.json`）。**无** `ts_skewness`/`ts_kurtosis`（写 `ts_std_dev`，不是 `ts_stddev`） |
 | analyst 权限 | 账号**无独立 analyst 数据集**，**`rating` 字段 404**。等价评级字段全在 analyst4 且全为 VECTOR，**必须 `vec_avg` 聚合** |
 | coverage | USA/TOP3000/delay1 恒为 0.5，无区分度；选字段看 **alphaCount 越低越不易撞车** |
-| 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10% |
-| corr 服务故障态 | `GET /alphas/{id}/correlations/self` 返回 `200 + Retry-After + 空 body` = 服务停摆。**探针必须用从未算过 corr 的候选**（缓存 alpha 会假阳性）。模拟服务不受影响 |
+| **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障" |
+| corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**（正常 3~4 次、4~6 秒即返回 records）—— **不是故障**。0915 已证伪此前的"服务停摆"结论：探针只轮询 3 次（6 秒）便放弃所致。已提交 alpha 的 `is.selfCorrelation` 一直有值，可作旁证 |
+| 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%（豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)） |
 
 ---
 

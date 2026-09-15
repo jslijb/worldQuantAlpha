@@ -1,0 +1,48 @@
+台账有效行: 61
+列名: ['id', 'expr', 'S', 'F', 'T', 'R', 'DD', 'selfCorr', 'dateSubmitted', 'decay', 'neutralization', 'batch']
+
+=== 已提交池 S 最高的 15 个（这些决定豁免线天花板）===
+  0mR2K6lr   S= 3.45 F= 2.13 tag=0913批次w101_f
+      
+  j23Pl0e5   S= 3.25 F= 1.86 tag=0912批次w64_h
+      
+  mLgd6nwX   S= 3.17 F= 1.96 tag=0912批次w57_f
+      
+  e79PvPpE   S= 3.13 F= 2.72 tag=0913批次w92_d
+      
+  e79kPeEM   S= 3.02 F= 1.79 tag=老31个
+      
+  O0rZ90n1   S= 2.82 F= 2.29 tag=0909批次
+      
+  le8EMjoN   S= 2.79 F= 1.62 tag=0912批次w58_f
+      
+  kqjpepz8   S= 2.74 F= 1.42 tag=老31个
+      
+  rK59235m   S= 2.72 F= 2.54 tag=0912批次w50_c
+      
+  gJQMxZoJ   S= 2.67 F= 2.40 tag=0908批次5个
+      
+  QP3V2bVG   S= 2.58 F= 2.00 tag=0908批次5个
+      
+  kqVp6wnO   S= 2.51 F= 1.91 tag=0914-batch116-w116_d(无vol+CAPR桶)
+      
+  9qX3M2mq   S= 2.49 F= 1.45 tag=老31个
+      
+  883OXpJl   S= 2.48 F= 1.78 tag=老31个
+      
+  akLmmvPW   S= 2.48 F= 1.63 tag=0914-batch116b-w116_e
+      
+
+=== 热对手 id 定位（本次 w112_ 预检中出现的）===
+  kqVp6wnO | S=2.51 F=1.91 tS= | submitted=2026-09-14
+      表达式: 
+  0mR2K6lr | S=3.45 F=2.13 tS= | submitted=2026-09-14
+      表达式: 
+  j23Pl0e5 | S=3.25 F=1.86 tS= | submitted=2026-09-12
+      表达式: 
+  E5vx6NJP | S=2.45 F=1.85 tS= | submitted=2026-09-13
+      表达式: 
+
+=== 已提交池的字段使用频次（前 25）===
+
+=== 已提交池的算子使用频次（前 20）===

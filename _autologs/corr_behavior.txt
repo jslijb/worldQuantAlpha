@@ -1,0 +1,30 @@
+=== A 组：已提交 alpha（池中有缓存） ===
+    [A] akLmmvPW try  1 t=   0.3s -> 200 RA=None len=1125 records=5
+    [A] akLmmvPW >>> 拿到结果，共 5 条 records（耗时 0.3s，轮询 1 次）
+
+    [A] kqVp6wnO try  1 t=   0.3s -> 200 RA=1.0 len=0 records=None
+    [A] kqVp6wnO try  2 t=   2.1s -> 200 RA=1.0 len=0 records=None
+    [A] kqVp6wnO try  3 t=   4.0s -> 200 RA=1.0 len=0 records=None
+    [A] kqVp6wnO try  4 t=   5.7s -> 200 RA=None len=1127 records=5
+    [A] kqVp6wnO >>> 拿到结果，共 5 条 records（耗时 5.7s，轮询 4 次）
+
+    [A] npKGgKLw try  1 t=   0.4s -> 200 RA=1.0 len=0 records=None
+    [A] npKGgKLw try  2 t=   2.2s -> 200 RA=1.0 len=0 records=None
+    [A] npKGgKLw try  3 t=   3.9s -> 200 RA=None len=1126 records=5
+    [A] npKGgKLw >>> 拿到结果，共 5 条 records（耗时 3.9s，轮询 3 次）
+
+=== B 组：全新候选（需平台现算） ===
+    [B] 3q9NMgk6 try  1 t=   0.3s -> 200 RA=1.0 len=0 records=None
+    [B] 3q9NMgk6 try  2 t=   2.1s -> 200 RA=1.0 len=0 records=None
+    [B] 3q9NMgk6 try  3 t=   3.8s -> 200 RA=1.0 len=0 records=None
+    [B] 3q9NMgk6 try  4 t=   5.6s -> 200 RA=None len=1125 records=5
+    [B] 3q9NMgk6 >>> 拿到结果，共 5 条 records（耗时 5.6s，轮询 4 次）
+
+    [B] MP1rjMj9 try  1 t=   0.3s -> 200 RA=1.0 len=0 records=None
+    [B] MP1rjMj9 try  2 t=   2.1s -> 200 RA=1.0 len=0 records=None
+    [B] MP1rjMj9 try  3 t=   3.8s -> 200 RA=1.0 len=0 records=None
+    [B] MP1rjMj9 try  4 t=   5.6s -> 200 RA=None len=1126 records=5
+    [B] MP1rjMj9 >>> 拿到结果，共 5 条 records（耗时 5.6s，轮询 4 次）
+
+    [B] KPOAOXEE try  1 t=   0.2s -> 200 RA=None len=1122 records=5
+    [B] KPOAOXEE >>> 拿到结果，共 5 条 records（耗时 0.2s，轮询 1 次）

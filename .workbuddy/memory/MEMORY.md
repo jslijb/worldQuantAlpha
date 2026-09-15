@@ -19,9 +19,13 @@
 - **算子** `GET /operators` → 66 个（存 `operators.json`）。有 ts_regression / ts_corr / ts_std_dev / ts_zscore / ts_decay_linear / group_neutralize / hump / trade_when / bucket / quantile；**无** ts_skewness / ts_kurtosis（写 `ts_std_dev`，不是 ts_stddev）。
 - **选字段看 alphaCount 越低越不易撞车**；coverage 在 USA/TOP3000/delay1 恒为 0.5，无区分度。
 - **脚本坑**：台账 CSV 首列带 BOM，必须 `utf-8-sig` 读，否则 DictReader 的 id 键全空、去重失效（0913 翻车过一次）。
+- **★ API 限流 = 60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining` / `RateLimit-Reset` / `X-RateLimit-Limit-Minute`）。超限返回 **HTTP 429**（body 仅 22 字节）。**corr 预检一条候选需轮询 3~4 次请求**，47 条候选 ≈ 190 请求 → 必然撞 429。**批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时，并极易误判成"服务故障"——0915 的"服务停摆"误判就有这个成因。
 - **轮询限速**：<1.3 秒高频打 corr 端点会被服务器 RST（WinError 10054）。间隔不低于 Retry-After，且必须捕获 ConnectionError。
 
 ## 相关性（极重要）
+- **★ 墙是自己砌的（0915 实证）**：瓶颈不是外部竞争，是**候选池自身同质**。w11x 池 99 条里 **95% 共享** `ts_av_diff(cash/assets,45)` + `ts_av_diff(cashflow_op/enterprise_value,45)`，88% 再加 `-ts_delta(close,2)`；已提交池字段频次 assets 97% / close 97% / volume 83% / cash 73%，中性化 SUBINDUSTRY 93%。→ corr 天然 0.74~0.93。
+- **豁免路径实质已死**：豁免线 = 1.10×max(corr≥0.7 对手的 S)，而我们的**最高 S 对手是自己提交的 `0mR2K6lr`(S=3.45)** → 线在 3.795，全池最强候选仅 3.05。**唯一出路是 corr < 0.70 直通。**
+- **可开采空间**：`fnd6_matrix.json` 574 个 MATRIX 字段中 **522 个从未被用过**（最冷 `fnd6_newqv1300_spcep12` aC=9）。换**没用过的锚**是当前首选破墙动作。
 - **相关是动态的**：同一表达式预检 corr 从 0.616 → 0.9879，只因中途提交了两个结构相似的因子。self-corr 是对**当前已提交池**实时算的 → 提交后必须对剩余池**重新预检**，旧结论作废；同构候选严禁扎堆。
 - **破墙法则**：**锚腿（冷门字段）+ 价量腿同时换**（双轮换）。避开最拥挤的 `ts_delta(close,2)` + `volume/ts_mean(volume,60)`。
 - **拥挤腿**：CASH45 / CFEV45 / PV / TXTUB / XRENT / PTPR（骨架饱和 corr 0.75-0.93）。
@@ -65,8 +69,20 @@ news12（875 字段）、fundamental2（766）、pv13（165）、option8、model
 - **改写 0913 的"analyst4 撞墙"**：撞墙的是**离散度/估值轴**；**评级偏离度轴可用**。瓶颈不在质量在**相关性**——没跑 corr 不下结论。
 - **风险**：同骨架共用分位桶会互撞（0913 实证 0.82–0.95）→ 提交前须备多个不同桶+不同锚变体。
 
-## 服务停摆期
-平台 `correlations/self` 对**全新 alpha** 返回 `200 + Retry-After + 空 body` 即未恢复。**探针必须用从未算过 corr 的候选**——缓存 alpha（如 E5vj5YdL）曾有历史 records，会造成"已恢复"假阳性。模拟（回测）服务不受影响。详见 `.workbuddy/memory/automations/a9b2c5cd-*`。`auto_submit_loop.py` 的 `service_ok()` 用缓存探针 → 恒 True 空转抢队列，勿开。
+## ⚠️ corr 服务**从未故障**（0915 修正，推翻此前全部"停摆"判断）
+- `200 + Retry-After:1.0 + 空 body` = **平台正在现算，须继续轮询**，**不是故障**。实测轮询 3–4 次（4–6 秒）即返回完整 records：A 组已提交 alpha（1/4/3 次）、B 组全新候选（4/4/1 次），**9/9 全成功**。
+- 此前连续 30+ 小时判"服务停摆"，纯粹是 `probe_corr_service.py` 的 `max_tries=3`（≈6 秒就放弃）判据写错。**已改为 90 秒时间预算**。附带证据：已提交 alpha 的 `is.selfCorrelation` 一直有值（0.65–0.97），相关性计算从未中断。
+- **提交链路一直可用**——代价是 47+ 条达标候选白积压 30+ 小时、多次自动化空转。教训：**探针判据写错比服务故障更能拖垮进度。**
+- 无关项：`correlations/prod` 返回 403（无权限），不是故障信号。
+
+### ⚠️ 二次修正（0915 11:46–12:00 实测）：**"从未故障"只说对了一半**
+- 上一条说"9/9 全成功"是**低负载时的表现**；高频探测后会成批挂起。实测（预算 120–180s、轮询 56–97 次）：
+  - 秒回（0.3s）的 `MP1rjMj9`(maxcorr 0.9885)、`KPOAOXEE`(0.8122) —— **全是命中缓存**；
+  - `3q9NMgk6` / `le8EMjoN`(已提交) / `akLmmvPW`(已提交) / `N1QZX9mq` —— **120–180s 内零 records**。
+  - 同一 id `MP1rjMj9` 先挂 180s、后又秒回 → 是**计算排队/限流**，不是缓存过期。
+- **推论**：耗的是**账号级 corr 计算配额/并发**，我方自己把它打满了（0915 六次自动化 + 多轮人工探测，还出过 WinError 10054 RST）。**其中 `a9b2c5cd` 每小时探一次，等于在跟正式提交抢配额。**
+- **⛔ 行动规则：不要在提交前额外做 corr 探测。** 探测会挤占配额，导致正式提交时拿不到结果。`submit_v2.corr_precheck` 自带 200 次轮询，耐心足够——**交给它，人工别再插队**。
+- **⛔ 缓存探针 `E5vj5YdL` 无效**：实测 `GET /alphas/E5vj5YdL` = **UNSUBMITTED**(S=2.73)，压根不在已提交池 → 永远返回空，是"假阴性"来源。正确缓存探针应为已提交的 **`E5vx6NJP`**（ACTIVE, selfCorr 0.6598）。
 
 ## 关键事实
 - selfCorr ≥ 0.7 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%。

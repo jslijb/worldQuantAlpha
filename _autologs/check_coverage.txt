@@ -1,0 +1,13 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+fnd6_newq_xoptdqp                coverage=None  alphaCount=None  type=MATRIX
+fnd6_newqv1300_spceepsq          coverage=None  alphaCount=None  type=MATRIX
+fnd6_newqv1300_pncq              HTTP 429 {
+  "message":"API rate limit exceeded"
+}
+fnd6_newqv1300_tfvceq            coverage=None  alphaCount=None  type=MATRIX
+fnd6_newqv1300_pncepsq           HTTP 429 {
+  "message":"API rate limit exceeded"
+}
+fnd6_newqv1300_cicurrq           coverage=None  alphaCount=None  type=MATRIX
+fnd6_newqv1300_spcep12           coverage=None  alphaCount=None  type=MATRIX

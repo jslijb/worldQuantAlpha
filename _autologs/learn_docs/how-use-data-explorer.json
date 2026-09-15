@@ -1,0 +1,143 @@
+{
+  "id": "how-use-data-explorer",
+  "title": "How to use the Data Explorer",
+  "lastModified": "2026-08-26T00:05:12.640477-04:00",
+  "content": [
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Data Explorer"
+      },
+      "id": "b829fabe-2a29-4a64-9231-fbcefe4dda17"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"f4nl3\">Powered by advanced AI technologies, such as NLP, the <a href=\"https://platform.worldquantbrain.com/data\"><b>Data Explorer</b></a> helps you quickly and accurately identify the data fields to implement your idea.</p>",
+      "id": "b432785b-6cb0-4565-85d3-1734e28aa3ed"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "DE1.png",
+        "width": 1188,
+        "height": 992,
+        "fileSize": 144161,
+        "url": "https://api.worldquantbrain.com/content/images/uX3FNijw_zpBHgbRrsqABsebM48=/360/original/DE1.png"
+      },
+      "id": "3bb65edd-1a76-41b3-8a3b-58c55ce20c88"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Searching for fields based on an idea"
+      },
+      "id": "cc5a5a4c-48b4-4124-ad60-a6cb93f71a6e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"gv5lf\">Let’s say you have an Alpha idea using market sentiment. You can easily search for related datasets and data fields in the Data Explorer. Notice that you will have to pre-define region, delay and universe prior to your search. Some data fields are present only in certain regions and delays.</p>",
+      "id": "4483839d-01be-4c07-9caf-704c6348c252"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "DE2.png",
+        "width": 1194,
+        "height": 984,
+        "fileSize": 146003,
+        "url": "https://api.worldquantbrain.com/content/images/6MUJQIldo-YDtcPzfaaU8bt7-I8=/361/original/DE2.png"
+      },
+      "id": "43ca04bf-d97d-4f8b-8cc7-4a4d3ef492a4"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Searching for fields based on specific criteria"
+      },
+      "id": "d725ebbd-b83f-47bf-8669-42d97abb93ed"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ot74k\">You can filter data fields based on criteria such as coverage, type, count of Alphas and users. For example, you can search for high coverage data fields from <b>Company Fundamental Data for Equity</b> dataset in CHN region and were used in at least 5 submitted Alphas. You can later sort these data fields by Alpha count to see which fields are used less, i.e., less crowded.</p>",
+      "id": "cdab5f0d-1ce0-4162-9c64-497e40dcbbfe"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "DE3.png",
+        "width": 1188,
+        "height": 1178,
+        "fileSize": 125549,
+        "url": "https://api.worldquantbrain.com/content/images/hjZPx_ax-2exAd5yDSSUrnY2qlA=/362/original/DE3.png"
+      },
+      "id": "5e7e81d6-2121-409c-b912-91e0f36a384c"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Searching and filtering datasets"
+      },
+      "id": "7e1f416c-8383-4803-826f-171b5133a433"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"4ppcc\">While you can click on the “browse by category” button, you can also search for datasets using “dataset category” or “dataset name”. This is helpful because it also allows you to filter these datasets by coverage, value score and crowdedness (measured by Alpha and user count). For example, you can search for datasets related to “fundamental” that have more than 100 active users. Note that you have to go to the “Datasets” tab to see the results.</p>",
+      "id": "0930f8b4-69cc-4f38-bcdd-ca886809a7c6"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "DE4.png",
+        "width": 1178,
+        "height": 415,
+        "fileSize": 48189,
+        "url": "https://api.worldquantbrain.com/content/images/o-uf3XHqNl96HWC0wmmOlkJ-KCw=/363/original/DE4.png"
+      },
+      "id": "4a3a6ec2-495f-43b5-ab4a-2e92c7e05cf3"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Rule of thumb when searching for data fields"
+      },
+      "id": "58269e2f-d341-4b28-92ee-5aaa87d0902a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"5wi5g\">Try to follow the 3Ss rule: keep your searches short, simple and straightforward. Try to use terminologies within your searches to increase the chance of finding the data fields you are looking for. In case you aren’t sure of the correct terminology, first try explaining it using your own words. For example, if you are looking for “insider trading” data but haven’t quite found the phrase, try, “trade by people inside company” and you can achieve the results.</p>",
+      "id": "4dbada9e-57f6-4cde-93b8-fc2a2178cbb7"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Maximize your results!"
+      },
+      "id": "fd5e30d9-8bf6-4e87-8f15-10e70d1057a1"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"j6xa4\">For some well-known concepts, try searching for the abbreviations along with the full name. This simple practice will not only increase your chances of finding the data fields that you are looking for but you can also obtain additional options to choose from. For example, try searching for both “earnings per share” and “eps,” both “implied volatility” and “IV”, etc.</p><p data-block-key=\"hoi8q\">The flowchart below is a suggested research framework with the inclusion of Data Explorer. You can use it as a reference for creating one for yourself.</p>",
+      "id": "70f80dee-8d07-4aed-9c07-8ea8f932eea9"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "data_explorer_flow.png",
+        "width": 1111,
+        "height": 1402,
+        "fileSize": 274079,
+        "url": "https://api.worldquantbrain.com/content/images/tUd2maOr6EUN-o_eFmQkLMxBUZ4=/313/original/data_explorer_flow.png"
+      },
+      "id": "0bafc355-5889-4b7a-af9e-6abed8ebac12"
+    }
+  ],
+  "sequence": 20,
+  "category": "Data",
+  "duration": "PT3M"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "vector-datafields",
+  "title": "Vector Data Fields 🥉",
+  "lastModified": "2026-08-26T03:47:44.438325-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>Vector Data are a distinct type of data fields that do not have a fixed size. In such type of data fields, the number of events recorded per day per instrument varies, so they are typically stored in a vector. This is unlike regular matrix data that you work with, which has one value per day per instrument. For example: If a dataset covers news data, it could be a vector because for each instrument there can be different number of news/events happening hence, covering such information in a matrix data tends to result in missing useful information. For example, a vector field reporting multiple news events for a single instrument in a day.</p>\r\n<p>Now, whenever you write an Alpha expression, the end result is a matrix of Alpha values which is the position that is taken in the market. And all the operators on platform are made for matrix input, hence use the matrix operator only after using the vec_ operators to convert the vector data field to matrix field. This is done by aggregating vector for each day and instrument into a single value like a matrix has. The same is depicted in figure below:</p>",
+      "id": "bfce417c-3e46-4773-9685-601e523406fe"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "vector desc.png",
+        "width": 1181,
+        "height": 480,
+        "fileSize": 66541,
+        "url": "https://api.worldquantbrain.com/content/images/9Sm7kRCELQv-CNQI9qqQd8Fb3G8=/160/original/vector_desc.png"
+      },
+      "id": "7264f897-8880-4897-9284-0d5b03d3db07"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Following are the different operators to convert vector data field into a matrix each differing in the way vector for a particular date and instrument is aggregated to a single value:</p>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Operator</th>\r\n<th>Description</th>\r\n</tr>\r\n</thead>\r\n<tr>\r\n<td>vec_avg(x)</td>\r\n<td>Taking mean of the vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_choose(x,nth=k)</td>\r\n<td>Choosing k<sup>th</sup> item(indexed at 0) from each vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_count(x)</td>\r\n<td>Number of elements in vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_ir(x)</td>\r\n<td>Information Ratio (Mean / Standard Deviation) of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_kurtosis(x)</td>\r\n<td>Kurtosis of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_max(x)</td>\r\n<td>Maximum value form vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_min(x)</td>\r\n<td>Minimum value form vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_norm(x)</td>\r\n<td>Sum of all absolute values of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_percentage(x,percentage=0.5)</td>\r\n<td>Percentile of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_powersum(x,constant=2)</td>\r\n<td>Sum of power of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_range(x)</td>\r\n<td>Difference between maximum and minimum element in vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_skewness(x)</td>\r\n<td>Skewness of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_stddev(x)</td>\r\n<td>Standard Deviation of vector field x</td>\r\n</tr>\r\n<tr>\r\n<td>vec_sum(x)</td>\r\n<td>Sum of vector field x</td>\r\n</tr>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>Some examples:</strong></p>\r\n<ol>\r\n<li>nws12_afterhsz_1_minute is a field which gives the percentage change in price within first minute of news release. There can be many news items per day for different instruments. Hence, the count of news can be different for different instruments. Suppose we want to apply a reversion/momentum predictor idea i.e. a general observation that when a stock has high intensity, it follows momentum and when a stock has low news intensity, it follows reversion, we require news count data. For this, we need to use vec_count functions on nws12_afterhsz_1_minute (or rather any similar field like nws12_afterhsz_10_min or nws12_afterhsz_120_min) field. This will convert vector of percentage changes to count of such occurrences. You can use vec_count(nws12_afterhsz_120_min) for getting news count. Below are the plots for average value and turnover of vec_count. You can see the raw turnover is very high and sometimes touching 200%. It tends to be necessary to reduce its turnover using decay operators before combining it with base data or other fields to make Alphas.<br><img src='https://api.worldquantbrain.com/content/images/37-sNsjiCRroNrh9Xy2EHPmuldM=/129/original/' width='450'/><img src='https://api.worldquantbrain.com/content/images/5oS5iPJ5jOq_aBvjWOI3mremiZg=/130/original/' width='450'/></li>\r\n<li>ONLY FOR CONSULTANTS WITH ACCESS TO CONSULTANT DATASETS: scl15_d1_sentiment is a field which gives sentiment score of various events in a day. Since we can take only one position for each instrument, as an input as well, we just need one value of sentiment. For AAPL for certain date, if there are 5 sentiment scores and we have to use just one, generally mean of all those scores can be reasonable representative of sentiment in that entire day. So, to convert this sentiment vector to a matrix field, we will use vec_avg(scl15_d1_sentiment). If you think a median could be a better representative, you can use vec_median(scl15_d1_sentiment) instead. Below are again the average value and turnover plots for the vec_avg field. Average value hovers densely  around 15,000 and turnover around 130%. Here as well, you need to reduce turnover by using ts_rank or ts_decay in your Alpha expression.<br><img src='https://api.worldquantbrain.com/content/images/sQZTAVq8yVU8HXHe4xxImveJy4w=/131/original/' width='450'/><img src='https://api.worldquantbrain.com/content/images/jpmzVfQF2D4YH_jAxa6kIdyTZLE=/132/original/' width='450'/></li>\r\n</ol>",
+      "id": "3340a65d-ca2a-4696-a9f5-5cabb06c5abc"
+    }
+  ],
+  "sequence": 30,
+  "category": "Data",
+  "duration": "PT4M"
+}

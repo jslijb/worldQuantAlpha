@@ -53,8 +53,14 @@ D:\Python\worldquant\
 │   │                          04_失败模式 / 05_历史因子复盘 / 06_打法手册）
 │   ├── research/              外部论文/研报移植记录
 │   ├── study/                 学习材料（零基础四课、进阶指南）
-│   │   └── learn/             ★ 平台 Learn 归档（`00_归档索引.md` = 官方结构↔本地对照 + 归档状态；
-│   │                          文档一页一文件、视频一个课程组合并一个文件；`images/` 配图、`refs/` 外链缓存）
+│   │   └── learn/             ★ 平台 Learn 归档（`00_归档索引.md` = 总入口/官方结构↔本地对照）
+│   │                          ├── docs/          官方 documentation 全文（29 页，按官方课程分目录）
+│   │                          │   ├── NN_<课程id>/MM_<页面id>.md
+│   │                          │   ├── images/<页面id>/    该页配图
+│   │                          │   └── README_官方文档结构.md  逐页清单
+│   │                          ├── 视频合集_*.md   视频课程（一个课程组合并一个文件）
+│   │                          ├── 课程视频总表.md  16 课程组 / 69 视频全量清单
+│   │                          └── _手稿存档/      早期手工粘贴稿（已被官方原文取代）
 │   ├── exam/                  考试与备考资料（含 images/ 截图）
 │   ├── project/               平台规则、SDD 工程文档、数据集参考、报告
 │   ├── reference/             官方 PDF + 知识图（images/）
@@ -74,8 +80,9 @@ D:\Python\worldquant\
 | 新方法论文档 | `docs/methodology/{已有子目录}/` | 子目录按主题，不新建顶层目录 |
 | 论文/研报移植记录 | `docs/research/` | 命名 `{来源}_{主题}.md` |
 | 备考/考试材料 | `docs/exam/` | 截图放 `docs/exam/images/` |
-| 平台 Learn 文档页 | `docs/study/learn/NN_标题.md` | **一页一文件**；`fetch_learn_docs.py page <id>` 抓取（文字/表格/图片/内嵌视频链接）；**原文照录、不改写**；配图落 `images/{page_id}/` |
+| 平台 Learn 文档页 | `docs/study/learn/docs/<NN>_<课程id>/<MM>_<页面id>.md` | **一页一文件，按官方课程目录分层**；`fetch_learn_docs.py all` **全量抓取**（幂等可重跑），`page <id>` 抓单页；**原文照录、不改写**；配图落 `docs/images/{page_id}/` |
 | Learn 视频课程译文 | `docs/study/learn/视频合集_课程名.md` | **一个课程组合并成一个文件**（`merge_video_notes.py`）；字幕走 `/video-courses` 接口取，**不下载视频**；全量清单见 `课程视频总表.md` |
+| 手工粘贴的 Learn 材料 | `docs/study/learn/_手稿存档/` | 官方原文到位后移入此处，**不再新增**；主目录只留官方归档 |
 | 过程日志/临时文件 | `_autologs/` | 不要落根目录 |
 
 **禁止**：根目录新增任何 .py / .md / 数据文件（除本文件、README.md、brain_credentials.txt）。
@@ -201,7 +208,8 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障" |
 | corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**（正常 3~4 次、4~6 秒即返回 records）—— **不是故障**。0915 已证伪此前的"服务停摆"结论：探针只轮询 3 次（6 秒）便放弃所致。已提交 alpha 的 `is.selfCorrelation` 一直有值，可作旁证 |
 | 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%（豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)） |
-| **Learn 文档接口** | 平台 Learn 是**两套独立内容**：①**文档** = `GET /tutorials`（目录树，7 课程/29 页）+ `GET /tutorial-pages/{page_id}`（正文 content 块：TEXT/HEADING/TABLE，图片在 `api.worldquantbrain.com/content/images/...`，**需登录态**）；②**视频课程** = `GET /video-courses`。抓取脚本 `src/tools/fetch_learn_docs.py`（文档）/ `fetch_learn_video.py`（视频）/ `merge_video_notes.py`（同组视频合并） |
+| **Learn 文档接口** | 平台 Learn 是**两套独立内容**：①**文档** = `GET /tutorials`（目录树，**7 课程/29 页**）+ `GET /tutorial-pages/{page_id}`（正文 `content` 块数组）；②**视频课程** = `GET /video-courses`。抓取脚本 `src/tools/fetch_learn_docs.py`（文档，`tree`/`page`/**`all` 全量**）/ `fetch_learn_video.py`（视频）/ `merge_video_notes.py`（同组视频合并） |
+| **文档页 content 块类型** | 实测共 **6 种**（漏一种就丢内容）：`TEXT`(HTML→MD)、`HEADING`、`IMAGE`(独立块，**value.url 需登录态下载**)、`TABLE`、**`EQUATION`**(LaTeX，原样保留)、**`SIMULATION_EXAMPLE`**(表达式 + 12 项完整模拟设置)。⚠️ 图片**大多数不在 TEXT 的 HTML 里，而是独立 `IMAGE` 块**——只解析 TEXT 会漏掉绝大部分配图（0915 首轮即此坑，漏 81 张） |
 | **Learn 视频字幕** | `GET /video-courses?limit=100`（需登录）直接返回官方**英文字幕**：**16 课程组 / 69 视频，50 个带字幕**（仅 `quantcepts` 组 19 个无）。**不用下载视频、不用本地语音识别**。⚠️ **接口默认只返 10 条，必须带 `?limit=100`**，否则漏掉后半程课程组（0915 曾误记为"46 视频/27 字幕"，即此因）。**`source` 标 YouTube 的视频同样直接带 `transcript` 字段——取字幕不需要访问 YouTube**；文档页内嵌的 YouTube 视频也可用 `uid` 反查本接口取字幕 |
 
 ---
@@ -266,3 +274,4 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 2026-09-15 | 发现 `GET /video-courses` 接口可直接取 Learn 培训视频的**官方英文字幕**（全量实为 16 课程组/69 视频/50 带字幕），无需下载视频或本地 ASR。新增 `src/tools/fetch_learn_video.py`；归档第 2 批《在 BRAIN 上开始的 10 个步骤》、`课程视频总表.md`；第 6 节平台约束表同步 |
 | 2026-09-15 | **`introduction-alphas` 组 6/6 视频全部译完**（合计 30,107 字符字幕）。确认该组第 2~6 个视频虽 `source=YouTube`，但 `transcript` 由接口一并返回，**取字幕无需访问 YouTube**；第 6 节约束表补记该点 |
 | 2026-09-15 | **打通 Learn 文档链路**：`/tutorials` 取官方目录树（7 课程/29 页）、`/tutorial-pages/{id}` 取正文（TEXT/HEADING/TABLE + 图片）。新增 `src/tools/fetch_learn_docs.py`、`src/tools/merge_video_notes.py`；归档第 3 批 `about-brain-platform`（含 2 图）；**6 个视频译文合并为 `视频合集_Alpha入门培训系列.md` 并删除单文件**；修正视频总量 **46/27 → 69/50**（此前漏带 `limit=100`）；`00_归档索引.md` 重写为「官方结构 ↔ 本地归档」对照 |
+| 2026-09-15 | **官方 documentation 全部 29 页一次抓完**（`fetch_learn_docs.py all`，幂等可重跑）：88 图 / 24 个示例表达式 / 12 条公式 / 6 表格，落 `docs/study/learn/docs/` 并按官方课程分目录；**补上此前漏解析的 `IMAGE`/`EQUATION`/`SIMULATION_EXAMPLE` 三种块**（首轮只解析 TEXT 导致 81 张图全丢）；手工粘贴的 3 篇移入 `_手稿存档/`；第 1 节树形图、放置规则表、第 6 节约束表同步 |

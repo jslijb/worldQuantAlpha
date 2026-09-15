@@ -1,0 +1,229 @@
+{
+  "id": "brain-and-alphas",
+  "title": "BRAIN and Alphas",
+  "lastModified": "2026-08-26T07:09:00.682196-04:00",
+  "content": [
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "What is the difference between crossover and mixing signals?"
+      },
+      "id": "81829c02-4675-486d-ac30-b17ba71250cf"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7gogi\">Answer: If there are different components of an <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alpha</a> say, and when used in combination, the positions taken by one part is reduced/changed due to the inverse positions taken by another part, it would be cross-over. Mixing would be if you combine two completely different ideas just to improve the performance. But we recommend not doing it at Alpha level. Mixing might also lead to cross-over.</p>",
+      "id": "c9c43862-518a-48ec-8845-4172d26061b6"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "I tried to code the Alpha based on the paper or books recommended by WorldQuant, but they performed much poorer than my improvised one. How can I improve from the academic results?"
+      },
+      "id": "c843c946-4ccf-4c3f-8ad9-db8baf5c3167"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"j32w1\">Answer: Academic results are just to be used as a guiding light or a place to start your Alpha research. Exact implementation of the model mentioned in the paper may not be efficient because of many reasons. Implement the idea in the papers in their most elementary form and then improve them by filtering or weighing based on factors, better implementation of the model etc.</p>",
+      "id": "35780529-439c-4224-9ddb-29ada7e19c5b"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Does BRAIN platform work with every browser?"
+      },
+      "id": "2c913e9f-580c-4203-9238-838137946632"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"tfjkc\"></p><p data-block-key=\"odh8z\">Answer: Officially supported desktop browsers:</p><p data-block-key=\"zj2tg\">- Internet Explorer 9 and above</p><p data-block-key=\"mn6r3\">- Firefox 3.6 and above</p><p data-block-key=\"tk32g\">- Chrome</p><p data-block-key=\"ogbc5\">Safari 5.1 and above, and most versions of Opera, while not officially supported, may work fairly well. All desktop OSs that can run a supported browser are supported. There is partial support for mobile devices including Android and iOS (no guarantees here). If it doesn’t work on a particular browser, please report it to <a href=\"mailto:support@worldquantbrain.com\">support@worldquantbrain.com</a>.</p><p data-block-key=\"3sh39\"></p>",
+      "id": "b8c6bd6c-a7c5-4641-8fd3-828651c49cb2"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "How do you get each stock position from expression result?"
+      },
+      "id": "a93b27e6-2508-46f5-82d3-841fd4b1e54a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"3lksj\">Answer: Below figure shows the sequence of operations/ transformations that are applied on an Alpha:</p><p data-block-key=\"lo2vm\"></p>",
+      "id": "031b7aca-6e77-4841-9efa-bd3110ce7035"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "get-stock-position",
+        "width": 862,
+        "height": 186,
+        "fileSize": 62943,
+        "url": "https://api.worldquantbrain.com/content/images/nT7iQJvWYw1sCrPlTudUxO5KKN0=/25/original/get-stock-position.png"
+      },
+      "id": "259f0c02-6ba4-4c5a-afe3-b44241829b6d"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "I am wondering if it is possible to abort a running simulation?"
+      },
+      "id": "e5138587-9563-43dd-8232-bbcdb11227d0"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"35bxg\">Answer: We have a cancel <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=definition.-,Simulation,-Simulation\">simulation</a> button that appears after simulating an Alpha.</p><p data-block-key=\"9vaqx\"></p>",
+      "id": "08af7f3e-422d-4f55-9b11-4d8e6f9af490"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Where is my profile? How can I change my password?"
+      },
+      "id": "7d9dd8bc-733e-4381-b0c6-253ff383c815"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"jwhbl\">Answer: You can view your profile at <a href=\"https://platform.worldquantbrain.com/profile/account/basic-details\">My Account</a> and change your password at <a href=\"https://platform.worldquantbrain.com/profile/account/change-password\">Change Password</a>.</p><p data-block-key=\"x7z4m\"></p>",
+      "id": "408fff92-78a0-42b2-92df-02617b7d8367"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Even after searching a lot, I am unable to find out more information about stock weights. Can you please provide more information about the same?"
+      },
+      "id": "4b6cd45b-0a06-4679-b50a-bc10d68acbcf"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"59p26\">Answer: Alpha value for a stock represents the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=W-,Weight,-BRAIN\">weight</a> of that particular stock in the complete portfolio. This is how it works:</p><p data-block-key=\"vif27\">1) You use an Alpha expression to assign Alpha values for each stock in the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=U-,Universe,-Universe\">universe</a>.<br/>2) Operations like <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=strategy.-,Neutralization,-Neutralization\">neutralization</a>, <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=Factor.-,Decay,-Sets\">decay</a> are then applied on these Alpha values as specified by the user.<br/>3) These new Alpha values assigned to each stock are then converted to the amount of money allocated to a stock by scaling it to <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Booksize,-Booksize\">booksize</a>.</p><p data-block-key=\"3p4fg\">This stock weight is thus nothing but the weight of the stock in the overall portfolio.</p><p data-block-key=\"0yylt\">Let me give you a simple example, when Alpha = close.<br/>Suppose you have a universe, with just 5 stocks (A, B, C, D,E) and on a particular date (20100104) they have the following close prices (in USD):</p><p data-block-key=\"4066w\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Instrument,-Instrument\">Instruments</a>: A B C D E</p><p data-block-key=\"k3tqz\">close: 6 5 2 8 4<br/></p><p data-block-key=\"22c3f\">Now, you want to use the value of these close prices to calculate Alpha weights on the next trading day. You first start with the Alpha expression, which is Alpha = close. So you first make a vector of &quot;close&quot;. i.e. (6, 5, 2, 8, 4). [Note: If your expression were Alpha = 1 / close, you&#x27;d have made a vector of &quot;1 / close&quot;, i.e. (1/6, 1/5, 1/2, 1/8, 1/4) = (0.167, 0.2, 0.5, 0.125, 0.25). ]</p><p data-block-key=\"8unaj\">Now you have the vector (6, 5, 2, 8, 4), this is not a vector of weights. A vector of weights needs to be normalized to 1. So we divide each element by the sum (= 25), so the sum of the elements equals 1.<br/>So the new vector is: (6 / 25, 5 / 25, 2 / 25, 8 / 25, 4 / 25) = (0.24, 0.20, 0.08, 0.32, 0.16). The sum of this vector is 1. And this is our portfolio. We multiply this by the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Booksize,-Booksize\">booksize</a> (20 Million), and we get the amount of money we want to bet on each of the stocks.</p><p data-block-key=\"vcqjn\">This was the case when we have set <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=strategy.-,Neutralization,-Neutralization\">Neutralization</a> = &quot;None&quot;. But this makes our <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=performance.-,Strategy,-Investment\">strategy</a> ride on market-risk. So, we select Neutralization = &quot;Market&quot;. In this case again, we start out by creating a vector of &quot;close&quot; = (6, 5, 2, 8, 4).<br/>Now we make it &quot;mean-neutral&quot;, i.e subtract the mean (= 5) from each of the elements, making the sum of the vector = 0.<br/>So the mean-neutral vector is: (1, 0, -3, 3, -1). You can see the sum of the elements is zero.</p><p data-block-key=\"6xo0t\">Now, in order to normalize, we need to ignore the sign and make the sum of elements = 1. So we calculate the sum of absolute values (= 1 + 0 + 3 + 3 + 1 = 8). Now we divide each element by this sum, giving us (1 / 8, 0 / 8, -3 / 8, 3 / 8, -1 / 8) = (+0.125, 0, -0.375, +0.375, -0.125).<br/>Now this is a normalized mean-neutral vector of weights. We multiply this by the booksize of 20 Million USD to get the amount we want to invest on each of the stocks, where a positive sign indicates taking long position and negative sign indicates taking short position. Also, since the positive values add up to +0.5 and the negative values add up to -0.5, we end up investing 10 Million in long and 10 Million in short positions, making the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=performance.-,Strategy,-Investment\">strategy</a> dollar neutral as required.</p>",
+      "id": "cbd83231-4f70-4d94-8719-7c3acd019c19"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Once we have got the weights of the stocks from the Alpha expression after normalization and all , what is the next step? How do we get the days profit and loss just by the weights assigned by the Alpha expression?"
+      },
+      "id": "99f9724e-0ce0-47cc-80e2-823c37b79cea"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"iclrr\">Answer: Suppose you have 3 stocks in your universe - A, B, C.</p><p data-block-key=\"msbog\">And for a particular day you have the normalized weights for each of these stocks. Say, weight_A = 0.2, weight_B = 0.3 and weight_C = 0.5.<br/>Now the amount of money I have got to invest is called the &quot;booksize&quot;. Suppose my booksize is 100 USD. So I calculate the money I want to invest in each of the stocks:</p><p data-block-key=\"odrdx\">money_A = 0.2 * 100 USD = 20 USD<br/>money_B = 0.3 * 100 USD = 30 USD<br/>money_C = 0.5 * 100 USD = 50 USD</p><p data-block-key=\"pp05z\">Now, I buy 20 USD worth of stock A, 30 USD worth of stock B and 50 USD worth of stock C. Now I have a portfolio, which is worth a total of 100 USD.<br/>I keep this portfolio for one full day, and sell it the next day in the simulation period. Now in one day, the prices of stocks A, B and C have changed. So the total value of my portfolio has also changed, say from 100 USD to 105 USD. So, I have made a profit of 5 USD on that day.<br/>Now I again calculate the Alpha values for the stocks, and again calculate weights, and again buy 100 USD worth of portfolio. [Note: In BRAIN platform, we use constant booksize for all the days, regardless of whether your portfolio makes money or loses money.]<br/>The booksize used by BRAIN platform is 20 Million USD for the US based stocks.</p><p data-block-key=\"8ei9e\">This is repeated for each day in the simulation period to calculate and plot the cumulative <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">PnL</a>.</p>",
+      "id": "3a288618-ee6d-4ed5-97e0-81f3936f0ab2"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Aren’t we supposed to focus on short term trading? Why is the time interval of several years? Is that just for demonstration purposes?"
+      },
+      "id": "b719118a-df59-4e74-80c0-578232ea410d"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"cqw2z\">Answer: Such time frames are for simulation purposes and it helps us conceptualize what would have happened if this Alpha was put into a <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=performance.-,Strategy,-Investment\">strategy</a> during that time period with daily activity, for daily frequency trading.</p><p data-block-key=\"vt7dv\"></p>",
+      "id": "4a32c5c8-d340-433e-9207-f848013d7453"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Could you please explain statistical arbitrage?"
+      },
+      "id": "51be281c-cc63-4a08-b8d8-d58fd8a4215e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"au5k2\">Answer: It is like betting on the law of large numbers. Assuming you win 51% of the number of times you bet which stock will perform better, you will make money on average, thereby exploiting the arbitrage in a statistical way.</p><p data-block-key=\"ohegv\"></p>",
+      "id": "b8e5f12a-6e86-4ae9-a913-f4f640f8e0f3"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "I use R and MATLAB for simulations. Is there any way in which I can use R or MATALB for Alphas?"
+      },
+      "id": "19296976-1738-46fd-a54b-ddb5df3918cc"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"q57z7\">Answer: Good question but BRAIN platform is available for use only with direct Expressions.</p><p data-block-key=\"5z0it\"></p>",
+      "id": "ee575e37-c3bf-4992-9844-671e1e383af4"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "How would we know what the weights that are being given to each stock everyday are and how the weights are changing every day?"
+      },
+      "id": "adbca5ab-f5b3-41a0-8cda-e135d6f7601a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"nuuat\">Answer: You won&#x27;t have visibility into specific equities as an Alpha is designed to create overall strategy that can be applied in a weighted fashion across the portfolio.</p><p data-block-key=\"8obln\"></p>",
+      "id": "188b5b9b-ef45-4fd5-b17a-4e92d15bb2d1"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Is BRAIN platform doing high-frequency trade? And is it doing intraday trade?"
+      },
+      "id": "5a6f77bd-9011-4f6a-a020-28255149e561"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"4sz7x\">Answer: Our Alpha is daily rebalanced and daily simulated instead. Strictly speaking, we are mainly doing daily rebalance middle frequency Alpha research. “Low” or “High” frequency depends on the audience. To mutual fund, weekly rebalance is “high”. For the real high frequency trading firms, daily rebalance is “low”. We are definitely not the common referred “HFT” whose advantage is mainly on execution speed.</p><p data-block-key=\"p2nck\"></p>",
+      "id": "dfc285a4-ff7b-4706-9873-9c8ecb76b852"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Would it be possible to provide an API so that I can use OAuth or something similar to send an Alpha to the server, and get a json style response on how well it performed, so that I could then parse it and adjust my algorithm automatically?"
+      },
+      "id": "2ebdfe30-1b82-4fb7-9a4b-3bb9ff79ec1c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"j0fej\">Answer: I am afraid BRAIN platform cannot support API to send an Alpha to server. Your suggestion is appreciated. We will forward to develop team for further discussion.</p>",
+      "id": "cf4d54c8-4a2b-4657-9bb2-9ac8045c65a7"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "How can we use pairs trading in BRAIN platform?"
+      },
+      "id": "86806af3-4e30-4909-80ca-d75fa1d9bdd6"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"fzwla\">Answer: We are currently not supporting pairs trading in BRAIN platform. Instead, I recommend you should consider all stocks as an universe (e.g. TOP 3000) rather than a little set of stocks in pair trading. In BRAIN platform, an &#x27;Alpha&#x27; refers to a mathematical model or strategy, written as an expression, which places different bets (weights) on different <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Instrument,-Instrument\">instruments</a> (stocks), and is expected to be profitable in the long run. In simple terms, it creates a vector of weights, with each weight corresponding to one of the stocks in the selected universe. These weights may or may not be market neutralized, as per your neutralization setting (market, <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=I-,Industry,-An\">industry</a>, <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=SuperAlphas.%C2%A0-,Subindustry,-Sub\">sub-industry</a> or none). This creates a portfolio for each day in the simulation period, which can then be used to calculate that day&#x27;s PnL.</p><p data-block-key=\"7k5x4\">For example, if your expression is &#x27;1 / close&#x27;, then for each day in the simulation period, BRAIN platform calculates the value &#x27;1 / closePrice&#x27; for each stock using the yesterday&#x27;s closing price for each stock. These values (one for each stock) are normalized, so that they all sum up to 1. This gives us weight for each stock in our universe and this vector of weights is called a portfolio for that day. We can then place money on each stock in proportion to its weight in the portfolio and calculate the profit or loss made by the portfolio on that day. This is then repeated for all the days in the simulation period.</p><p data-block-key=\"gra2z\"></p>",
+      "id": "11521b27-0e91-4ef2-9743-ccaf8f53ea2f"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "What's the actual definition of signal? How much Sharpe increasing could be reached when improving the signal?"
+      },
+      "id": "0ee0461a-66f0-4129-81e6-8979dd6e4d64"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7ntsp\">Answer: <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=results.-,Signal,-Any\">Signal</a> is a loosely defined term and so does not have any rigorous definition as such. In our talk we call any elementary model which on <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=operators.-,Backtesting,-Backtesting\">backtest</a> shows a glimmer of a possible Alpha as signal. Filtering, weighing with different factors, improving the basic expressions of the signal etc. can help you achieve good performance improvement over the signal.</p><p data-block-key=\"t3qvj\"></p>",
+      "id": "f7fde96d-08b5-437a-8396-5b92a24acfbc"
+    }
+  ],
+  "sequence": 33,
+  "category": "Getting Started",
+  "duration": null
+}

@@ -1,0 +1,244 @@
+{
+  "id": "parameters-simulation-results",
+  "title": "Parameters in the Simulation results",
+  "lastModified": "2026-08-26T06:34:36.877995-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<iframe width=\"743\" height=\"333\" src=\"https://www.youtube.com/embed/fjc1M92MPSc?start=69&end=236\" title=\"Learn2Quant: How Good is Your Alpha? A Metrics-Based Approach | Lesson 3\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></framed>",
+      "id": "06f160cc-a010-4e51-b42c-f15eaeaeb562"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"2iatj\">In the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=definition.-,Simulation,-Simulation\">Simulation</a> result page, you will find a ratings panel in the Stats tab of Results that says Spectacular, Excellent, Good, Average or Needs Improvement depending on your Alpha’s Fitness as shown below:</p>",
+      "id": "0f0fdc9f-2d3c-4178-803b-ffaec838220c"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Label",
+            "Fitness for Delay 1",
+            "Fitness for Delay 0"
+          ],
+          [
+            "Spectacular",
+            "> 2.5",
+            "> 3.25"
+          ],
+          [
+            "Excellent",
+            "> 2",
+            "> 2.6"
+          ],
+          [
+            "Good",
+            "> 1.5",
+            "> 1.95"
+          ],
+          [
+            "Average",
+            "> 1",
+            "> 1.3"
+          ],
+          [
+            "Needs Improvement",
+            "<= 1",
+            "<= 1.3"
+          ]
+        ],
+        "firstRowIsTableHeader": true,
+        "firstColIsHeader": false
+      },
+      "id": "2b2b2466-8868-4c20-b1ff-d79cd87e2219"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Return"
+      },
+      "id": "fff1c4d7-6f3b-4e22-b013-d5674213ded0"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ll1xo\"></p><p data-block-key=\"3emzz\">Return is the gain or loss of a security or portfolio in a particular period. Return consists of the income received plus capital gains, relative to the amount of the investment. In BRAIN, return = annualized PnL / half of book size.</p><p data-block-key=\"wznmc\"></p><p data-block-key=\"5ibk9\"></p>",
+      "id": "42c42cb2-677d-4589-90fe-927a3488f47f"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Sharpe and IR"
+      },
+      "id": "4b75726e-b9c8-4d94-a000-e9b04c4ad354"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"dkplz\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details%C2%A0*).-,Information%20ratio,-Information\">Information ratio (IR)</a> measures the prediction ability of a model. In BRAIN, it is defined as <i>the ratio of a portfolio’s mean daily</i> <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Returns,-Returns\"><i>returns</i></a><i> to the volatility of those returns:</i></p>",
+      "id": "fb1b9aae-386e-498f-846f-2d41b801298d"
+    },
+    {
+      "type": "EQUATION",
+      "value": "IR = \\frac{mean(PnL)}{stdev(PnL)}",
+      "id": "54911c08-643f-40de-8ca2-ec7e4a313b8f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"pii8f\">where <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">PnL</a> is the daily profit and loss, in dollars.</p><p data-block-key=\"om8uo\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Sharpe%20ratio,-Sharpe\">Sharpe</a> is the annualized version of the IR statistic, i.e. Sharpe = sqrt (252)*IR ≈ 15.8*IR; where 252 is the average number of trading days (days the markets are open) in the USA in a year.</p><p data-block-key=\"4zb0h\">Sharpe or IR measures the returns of an Alpha while attempting to identify its consistency. The higher the IR, the more consistent the Alpha’s returns are, and consistency is an ideal trait. High Sharpe (or IR) is more desirable than just high return.</p><p data-block-key=\"f61r0\"><i>Note: Sharpe and</i> <i>IR</i> <i>may be defined somewhat differently elsewhere than in</i> BRAIN<i>.</i></p>",
+      "id": "45b636e2-004b-4a26-8eea-221e6ac5d5e0"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Fitness"
+      },
+      "id": "cd9183be-52d4-44e8-85dc-ca0aa4edb81a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"urk3o\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=ratios.-,Fitness,-Fitness\">Fitness</a> of an <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alpha</a> is a function of Returns, <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Turnover,-Average\">Turnover</a> and Sharpe:</p>",
+      "id": "e1f186f0-79ab-4639-a99a-4d289467eb36"
+    },
+    {
+      "type": "EQUATION",
+      "value": "Fitness = Sharpe \\cdot \\sqrt{\\frac{abs(Returns)}{max(Turnover,0.125)}}",
+      "id": "b70a33db-3d1f-4364-bf81-9e224ae46aa3"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"gn6r2\"></p><p data-block-key=\"3z2ao\">Good Alphas have high fitness. You can optimize the performance of your Alphas by <b>increasing Sharpe (or returns) and reducing turnover</b>. Improving one factor normally has an adverse impact on the other factor. As you work on optimizing your Alpha, an improvement in its fitness is an indication that your changes are having a positive impact.</p>",
+      "id": "ea5128af-61a3-4151-9f58-bb3c589d6ece"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Cumulative PnL Chart"
+      },
+      "id": "b12eead8-0b24-4e49-9f4f-23c05ba304be"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"gj07p\"></p><p data-block-key=\"e392x\"><b>Cumulative PnL Chart:</b> A graph (shown below) of an Alpha’s performance (<a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">PnL</a>) over entire <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=definition.-,Simulation,-Simulation\">simulation</a>. This graph can be zoomed in by clicking and dragging below the plot area. Start and end dates for PnL plotting can also be changed here. Clicking the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Sharpe%20ratio,-Sharpe\">Sharpe Ratio</a> in dropdown menu at the upper right from PnL graph displays the Sharpe ratio graph (Sharpe over time). Make sure that the PnL graph has an upward trend, the Sharpe is high and the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=today-,Drawdown,-Drawdown\">Drawdown</a> is kept to a minimum.</p>",
+      "id": "c70bdd8a-6a6a-4efc-ae10-fda940e52ff1"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Cumulative PnL",
+        "width": 525,
+        "height": 360,
+        "fileSize": 48049,
+        "url": "https://api.worldquantbrain.com/content/images/q9drQriu1gSqBNnw2eoWE6U88VY=/9/original/Cumulative_PnL.png"
+      },
+      "id": "a5330388-1051-4477-bf46-17f1b57f33ec"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "IS Summary"
+      },
+      "id": "b04368a6-09cf-4109-98ba-4cda5b240b73"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"gljy8\"><b>IS Summary:</b> Scrolling down to the Stats block (shown below) of the simulation results shows various metrics about the Alpha&#x27;s performance.</p>",
+      "id": "a108a289-ed52-4c51-8bb0-b20d42e5b0bc"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "IS_Result.PNG",
+        "width": 1187,
+        "height": 388,
+        "fileSize": 32259,
+        "url": "https://api.worldquantbrain.com/content/images/Mo8HCP_leffAynw_hsX6NAj4XKc=/260/original/IS_Result.PNG"
+      },
+      "id": "c8d64673-fc35-4a1b-bca0-53009efa0fa8"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"rvu2p\"><b>Year:</b> The year on which the data was simulated. The last row shows the Alpha’s performance over all years.</p><p data-block-key=\"5ct59\"><b>Long/Short Count:</b> The number of <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Instrument,-Instrument\">instruments</a> in long or short positions, respectively.</p><p data-block-key=\"a3cfi\"><b>Sharpe</b>: Sharpe = IR * Sqrt(252), where IR = Avg(PnL)/Std_dev(PnL) over the observed time period.</p><p data-block-key=\"iidjb\"><b>Fitness</b> is defined in the <a id=\"38\" linktype=\"page\">Alpha Performance</a> help page: Fitness = Sharpe * sqrt(abs(<a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Returns,-Returns\">Returns</a>) / max(<a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Turnover,-Average\">Turnover</a>, 0.125)).</p><p data-block-key=\"g74ft\"><b>Returns:</b> The return on capital traded: Annual Return = Annualized PnL / Half of Book Size. It signifies the amount you made or lost during the period observed and is expressed in %. Book size refers to the amount of capital (money) used to trade during the simulation. Book size is constant and is set to $20 million every day throughout the simulation. Profit is not reinvested, and losses are replaced by cash injection into the portfolio. BRAIN assumes you have $10 million and will invest in assets up to $20 million. This is called leverage. Performance (like Returns, Sharpe) is computed on a base of $10 million.</p><p data-block-key=\"oeau7\"><b>Turnover:</b> Turnover signifies how often one trades. It can be defined as the ratio of value traded to book size. Daily Turnover = Dollar trading <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=time.-,Volume,-Volume\">volume</a>/Book size. Good Alphas have low turnover, since low turnover means lower transaction costs.</p><p data-block-key=\"mxs9s\"><b>Margin:</b> The profit per dollar traded; calculated as PnL divided by total dollars traded for a given time period.</p><p data-block-key=\"u8jmn\"><b>PnL</b>: Profit and Loss (PnL) is the money that the positions and trades generate (which means it is the amount of money you lost or made during the year), expressed in dollars.</p><p data-block-key=\"vv726\">daily_PnL = sum of (size of position * daily_return) for all instruments, where the daily return per instrument = (today’s close / yesterday’s close) – 1.0.</p><p data-block-key=\"72k5k\"><b>Drawdown</b> - the largest reduction in PnL during a time period, expressed as a percentage. It is calculated as follows: find the largest peak to trough drawdown in PnL, and divide its dollar amount by half of book size ($1</p>",
+      "id": "f2f2bce9-7bd3-4fc5-9db7-81579eb21616"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Self-Correlation"
+      },
+      "id": "a525aa4e-b5c9-444e-bd81-e2ba11cb9dde"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"j3gdq\"><b>Generate Self Correlation:</b> Clicking the Down Arrow button in a <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details%C2%A0*).-,Self%20correlation,-Maximum\">Self Correlation</a> row will produce a table with the performance statistics of up to the 5 most correlated Alphas you submitted that qualified for OS testing. This information is meant to help the user ensure they have a diverse set of Alphas. This information can also be accessed by clicking on the Alpha in the Alphas page.</p>",
+      "id": "9f9600ac-012d-48be-befd-660273d5fbfa"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Correlation",
+        "width": 967,
+        "height": 381,
+        "fileSize": 21715,
+        "url": "https://api.worldquantbrain.com/content/images/6nYq2R2YwLwHF4Vx5OySMgMjbXo=/39/original/Correlation.PNG"
+      },
+      "id": "94a24d9c-d4e7-41e4-a87f-2e261fc70e6f"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "IS, Semi-OS & OS"
+      },
+      "id": "66e2c941-86f7-4755-baa9-3addb0db77b4"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"obihi\">The rolling 5-year In-Sample simulation period begins seven years ago and ends two years ago, updating daily. Using simulation settings, you can divide your In-Sample (IS) period into a Train and Test period. The Train period can be utilized to develop your Alphas and SuperAlphas, while the Test period is ideal for validating them. An Alpha developed based on the simulation results of training period and performs well in both periods is likely a strong candidate for submission and may have avoided overfitting.</p><p data-block-key=\"e51ik\">The latest two years of data, the Semi-OS, are hidden for scoring and testing purposes. Consultants have access to a 10-year In-sample period, instead of 5-year.</p><p data-block-key=\"2ys5t\">Keeping the last 2 years of data hidden leads to higher confidence in the Out-Sample (OS) performance of Alphas and their scores. Statistics shown in the OS Tab of <b>My Alphas</b> page will be populated as data becomes available by each passing day.</p>",
+      "id": "69cf81a3-a83e-4ad9-91b1-25af69f20e0a"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "IS, Semi OS and OS",
+        "width": 985,
+        "height": 239,
+        "fileSize": 75388,
+        "url": "https://api.worldquantbrain.com/content/images/GBxJv7oA55p6vNjbyby5-t8lTIw=/290/original/image_2.png"
+      },
+      "id": "61a20597-6736-4c67-8e8d-d334710a8ba9"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Alpha Statuses"
+      },
+      "id": "e57665fe-88b1-4cda-b166-af41aad38801"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li data-block-key=\"u2do6\">Following successful simulation, the Alpha is labeled as &quot;UNSUBMITTED.&quot;</li><li data-block-key=\"ipkh6\">Upon submission, the Alpha is assigned the &quot;ACTIVE&quot; status.</li><li data-block-key=\"hz9p7\">For consultants, ACTIVE Alphas are qualified to accumulate weight and are eligible to contribute to the consultants&#x27; quarterly payments, as further described in their respective consulting or service agreements. This ACTIVE status will be kept until the dataset they rely upon is decommissioned or if WorldQuant otherwise decommissions an Alpha, in its discretion.</li><li data-block-key=\"ovwyp\">In case the dataset in no longer available or there is prolonged underperformance of the Alpha in the Out-Sample period, the Alpha&#x27;s status is revised to &quot;DECOMMISSIONED&quot;.</li><li data-block-key=\"gnhvl\">Decommissioned Alphas do not accrue weight and are not eligible to contribute to your quarterly payment.</li></ul><p data-block-key=\"6u5ya\"></p>",
+      "id": "9d011f23-b749-4153-ac4f-2e263df4c75a"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Alpha Lifecycle",
+        "width": 842,
+        "height": 110,
+        "fileSize": 12321,
+        "url": "https://api.worldquantbrain.com/content/images/YmSm8cBVOMDvyDAQbW2aqo7AiaU=/279/original/lifecycle_alpha_latest.png.jpg"
+      },
+      "id": "bc41754a-c0be-4294-897e-9ca3b3deda24"
+    }
+  ],
+  "sequence": 22,
+  "category": "Interpreting Results",
+  "duration": "PT6M"
+}

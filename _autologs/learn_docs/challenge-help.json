@@ -1,0 +1,57 @@
+{
+  "id": "challenge-help",
+  "title": "WorldQuant Challenge",
+  "lastModified": "2025-03-12T05:07:12.194953-04:00",
+  "content": [
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Overview"
+      },
+      "id": "cdc32a30-77ce-4eae-94f0-cf38bc1c3a2a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>The WorldQuant Challenge is a perpetual, online, solo competition. Users can submit <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alphas</a> to improve their scores and ranking.</p><p>Individuals who score 10,000 points may be eligible to receive an invitation for the research consultant opportunity, subject to other <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4418509454999\">criteria</a>(e.g. if they are residents in countries where the BRAIN consultant program is offered). Users who make it to Gold and Silver levels will have access to special training sessions and videos through the Events page.</p><p>New users are automatically enrolled into the challenge. The <a href=\"https://platform.worldquantbrain.com/competition/challenge\">Leaderboard</a> ranks all eligible users and can be filtered by country, university and/or city.</p>",
+      "id": "80f9d638-0d83-4a18-86b3-0bfec80051ea"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Scoring criteria"
+      },
+      "id": "8e4bd633-5f75-402b-8d56-398230494545"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Summary"
+      },
+      "id": "5c522633-15e3-4978-ba47-80fe5a3e2fd3"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p></p><ol><li>Your score is based on the quantity and quality (performance in the 5 year in-sample period) of Alphas that you submit on the platform</li><li>Your score also depends on quantity and quality of Alphas submitted by other users that day</li><li>Score is calculated per day (EST timezone), and not per Alpha</li><li>Highest daily score you can achieve is 2,000. Typically, this involves submitting 1 to 2 Alphas a day</li><li>There are no negative points. Your score cannot decrease</li><li>Scores refresh once every day at 3 AM EST</li><li>Participants with the same score will have the same rank</li><li>You can reach three levels in WorldQuant Challenge:<ol><li>Bronze (score &gt; 1,000)</li><li>Silver (score &gt; 5,000)</li><li>Gold (score &gt; 10,000)</li></ol></li></ol>",
+      "id": "0aa80ea1-a32c-4aa3-9fe0-b63c4c06e1b8"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Details"
+      },
+      "id": "305c4488-632e-4d7e-ac12-36dd734f858a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Each day, all Alphas submitted by a user accumulated and two factors are calculated:</p><p><b>Quantity Factor:</b> Larger the number of Alphas you submit during a day. Larger the factor, higher your score</p><p><b>Quality factor:</b> Quality factor is calculated as an average of the quality factor of all Alphas submitted during the day. Larger the factor, higher your score. It depends on the following settings and results in the in-sample period:</p><ul><li><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=U-,Universe,-Universe\">Universe</a> (smaller universes get more score)</li><li><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details%C2%A0*).-,Self%20correlation,-Maximum\">SelfCorrelation</a> (the lesser the better)</li><li><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=ratios.-,Fitness,-Fitness\">Fitness</a> (the higher the better)</li><li><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=days-,Delay,-An\">Delay</a> (D1 Alphas contribute more to the score than D0 Alphas)</li></ul><p>Both factors are then normalized across all the users who submitted at least one Alpha on that particular day. Your final daily score is then function of normalized Quantity and Quality Factors. The daily score is capped at 2,000 points.</p>",
+      "id": "05b04df4-3f7b-4152-97ac-f1aef9384697"
+    }
+  ],
+  "sequence": 31,
+  "category": "Getting Started",
+  "duration": "PT3M"
+}

@@ -1,0 +1,188 @@
+{
+  "id": "intermediate-pack-part-3",
+  "title": "Intermediate Pack - Conditional Operators [3/3] 🥉",
+  "lastModified": "2026-08-26T07:10:28.166238-04:00",
+  "content": [
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Conditional Operators"
+      },
+      "id": "f45dd081-e5b2-43cb-862a-f1509466d29b"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"vjhko\"></p><p data-block-key=\"ak4be\">TradeWhen Operator</p><p data-block-key=\"dpxpd\"><b><i>Syntax: trade_when(Event_condition, Alpha_expression, -1)</i></b></p><p data-block-key=\"abe5v\">The trade_when operator has several uses: it is used in order to change Alpha values under a specified condition, close Alpha positions simulated under a specified condition and to hold Alpha values in other cases. It is instrumental in reducing turnover.</p><p data-block-key=\"m3i1r\">The operator takes as input, the event condition and the Alpha expression. If exit condition is true, the Alpha is equal to NaN (does not trade). If exit condition is false and event condition is true, Alpha = Alpha expression. Finally, if exit condition is false and event condition is false, the Alpha is equal to the previous day’s Alpha, thus the same positions are held.</p><p data-block-key=\"z9j6b\">Example:</p><p data-block-key=\"3lp8h\"><b><i>rank(trade_when(volume&gt;adv20,-returns,-1))</i></b>. Suppose we believe that stocks that give high returns today could give low returns tomorrow (this concept is known as “reversion”). We note that reversion is typically observed more profoundly in stocks showing high volume trading activity or high &#x27;volatility&#x27; in stock returns. Thus, we should implement the Alpha expression based on only when the number of stocks traded today is higher than the monthly average by using trade_when(volume&gt;adv20).</p><p data-block-key=\"orip1\">If-else Operator</p><p data-block-key=\"q8woo\">Another conditional operator is the if_else operator. The syntax is as follows: <b><i>if_else(Event_condition, Alpha_expression_1, Alpha_expression_2)</i></b></p>",
+      "id": "bb5d49e1-7766-490e-8524-610af928b5f9"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Detailed Walkthrough of Creating an Alpha"
+      },
+      "id": "3d8307ef-4d8a-4a1e-ad7f-4eec3a853d04"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"hu2q4\"></p><p data-block-key=\"yaf03\">The first and foremost step of building an Alpha is coming up with an Alpha idea. In the beginning, the Learn section of the platform is a good resource for sourcing ideas. For instance, the “Example” tab and Alpha concepts page are very useful. Here are some general guidelines to build Alphas:</p><p data-block-key=\"a3aac\"><b>Know your Operators</b>: The second step of the research process is to implement your Alpha idea using operators. Hence, it is important to understand the concept of operators well. We recommend you go through the detailed operator descriptions before reading the research papers.</p><p data-block-key=\"jmc4t\"><b>Formulating your alpha</b>: The final step is to formulate your Alpha. This is where your understanding of the operators comes in. Try to replicate the idea suggested in the paper and assess its performance, then think of any improvements that can be made on this version using any additional operators / data.</p><p data-block-key=\"t0m4r\">We will take you through an example to show you how you can come up with an idea and refine it to create an Alpha.</p><p data-block-key=\"hedn7\"><b>Iteration 1</b></p><p data-block-key=\"up0io\">In this example we are using the <b><i>if_else</i></b> conditional operator, <b><i>ts_delta(close,2)</i></b> (difference of close price today and 2 days ago), <b><i>volume</i></b> (volume today) and <b><i>adv20</i></b> (average daily volume in past 20 days) datafields.</p><p data-block-key=\"s0qf6\">Our Hypothesis is: If the stock price of a company has increased over the last 2 days, it may decrease in the future. Also, if the number of stocks bought and sold today is higher than the monthly average, then the reversion effect may be observed more profoundly.</p><p data-block-key=\"t641t\">Implementation: We will take positions according to the difference of close price today and 3 days ago with alpha_2 using the ts_delta operator. When current volume is higher than average daily volume, we will take a larger position by multiplying by 2 to get alpha_1. Simulation settings are left as default.</p>",
+      "id": "dd8bba4a-404b-4176-b0b7-10228d751c9c"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "SUBINDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "event=volume>adv20;\r\nalpha_1=2*(-ts_delta(close,3));\r\nalpha_2=(-ts_delta(close,3));\r\nIf_else(event,alpha_1,alpha_2)"
+      },
+      "id": "dcdb4933-6d01-4e3a-bfa8-44c397b65d53"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic11.png",
+        "width": 771,
+        "height": 709,
+        "fileSize": 57270,
+        "url": "https://api.worldquantbrain.com/content/images/mqhb7xwGxl5PrCVEQrz4bRCbW0U=/228/original/pic11.png"
+      },
+      "id": "ecaaf3b4-a977-4f1a-9a90-56a513275da9"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic_155.png",
+        "width": 771,
+        "height": 121,
+        "fileSize": 39119,
+        "url": "https://api.worldquantbrain.com/content/images/KKvc6QqVmU1sEaOO6Wg6MsnBDc0=/243/original/pic_155.png"
+      },
+      "id": "e8634258-5138-4d3b-98ea-64a93d2c59ca"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"o2rbq\"></p><p data-block-key=\"diy1p\">The Alpha can’t be submitted but the results aren’t too bad either. This is a good sign for us and increases our confidence in the idea since our first implementation has shown decent results. Performance metrics give us a direction that we need to focus on increasing the fitness.</p><p data-block-key=\"h8bnp\"><b>Iteration 2</b></p><p data-block-key=\"mntl5\">In our first iteration, we used the if_else operator, what if we used the trade_when operator? We can try another implementation of our idea by entering our positions when current volume is higher than average daily volume, and maintain this position for the remainder of the quarter.</p>",
+      "id": "e130aac2-4b57-4105-9ba5-7cae135b802e"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 4,
+          "neutralization": "SUBINDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "event=volume>adv20;\r\nalpha=(-ts_delta(close,3));\r\ntrade_when(event,alpha,-1)"
+      },
+      "id": "e60c0573-2d4e-424c-8914-4d58942f4c4c"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic13.png",
+        "width": 585,
+        "height": 542,
+        "fileSize": 36582,
+        "url": "https://api.worldquantbrain.com/content/images/QqsSq3CUOiYEr58z9KtOqDnWteQ=/230/original/pic13.png"
+      },
+      "id": "4b27d316-10d5-48b0-a10d-08d700d88022"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic_175.png",
+        "width": 771,
+        "height": 113,
+        "fileSize": 38969,
+        "url": "https://api.worldquantbrain.com/content/images/qwcCDQC5hzep-FhMC6fFg-TBXdc=/244/original/pic_175.png"
+      },
+      "id": "8643bd03-f7be-40dc-ae43-184a2b353690"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"01eg1\"></p><p data-block-key=\"k3n7f\">Our turnover has decreased since we moved from if_else to trade_when operator and take positions in all the stocks. Our fitness has increased, going from 0.71 to 0.93. However, the fitness is still below 1 and remains un-submittable. Let’s see how else we can improve this idea.</p><p data-block-key=\"xx9yx\"><b>Iteration 3</b></p><p data-block-key=\"6ulq1\">For iteration 3, we will use the same Alpha expression as Iteration 2 and adjust the simulation settings.</p><p data-block-key=\"g70ii\">We will change decay to 2, neutralization to Industry and truncation to 0.01.</p>",
+      "id": "22aa66a5-d84c-4c3d-b1c5-1e587c7ebb07"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 2,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "event=volume>adv20;\r\nalpha=(-ts_delta(close,3));\r\ntrade_when(event,alpha,-1)"
+      },
+      "id": "7b040557-2510-438e-ad9b-919e85a4e579"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"9lv7s\"></p><p data-block-key=\"tbyvl\">Here is the result:</p>",
+      "id": "72766dc2-c45e-42ce-b0b5-8f7474153d65"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic16.png",
+        "width": 587,
+        "height": 545,
+        "fileSize": 33187,
+        "url": "https://api.worldquantbrain.com/content/images/nyUZmPfnkW1kQ_M-K0cR8pDTrqw=/233/original/pic16.png"
+      },
+      "id": "8dfe2e94-b7ac-4104-874b-2623f80e3dba"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "pic_193.png",
+        "width": 771,
+        "height": 120,
+        "fileSize": 37026,
+        "url": "https://api.worldquantbrain.com/content/images/S4dAm3palGmJ6n8G04pWqn3j6Hk=/245/original/pic_193.png"
+      },
+      "id": "afaf1a6c-9db5-4414-a458-4569ff2648fa"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"dwp6i\"></p><p data-block-key=\"rtqs6\">We see a significant improvement in most of our performance metrics. Sharpe has increased from 1.75 to 1.93, fitness has improved from 0.93 to 1.07, but turnover has increased. Thus, we see from this iteration that this mean reversion strategy works better when it is industry neutralized, decay is lowered and truncation is reduced.</p><p data-block-key=\"tjssr\"><b>Summary:</b></p><p data-block-key=\"uwjag\">You can use different implementations for the same idea on the BRAIN platform or use any of the numerous data fields at your disposal to improve an idea. Implementing new ideas will help you build higher Sharpe Alphas. After reading this Intermediate pack, you now have an array of operators and datafields at your disposal, let’s get simulating!</p><p data-block-key=\"opex4\"><b>Some Additional Tips</b></p><ol><li data-block-key=\"zcis0\">This <a href=\"https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf\">paper</a> lists 101 Alpha expressions. Although most are not submittable, they provide a good starting point. See if you can improve some of the simpler expressions, or explain them in words</li><li data-block-key=\"p4vrv\">Reading helps. Research papers are helpful in guiding you to think in a certain direction, which you might otherwise miss completely. Before reading, also make sure that the dataset given in the research paper exists in BRAIN. This will save you a lot of time in case you read a research paper only to realize the dataset isn’t available.</li><li data-block-key=\"2oqql\">Do not spend an extraordinary amount of time improving a single idea either. Move on to another datafield or operator. Try to understand more about how each operator functions and the characteristics of each datafield.</li></ol>",
+      "id": "713808a6-d8fd-496c-a40c-9c9092a06b39"
+    }
+  ],
+  "sequence": 40,
+  "category": "Getting Started",
+  "duration": null
+}

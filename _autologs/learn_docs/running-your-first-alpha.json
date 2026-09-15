@@ -1,0 +1,89 @@
+{
+  "id": "running-your-first-alpha",
+  "title": "Simulate your first Alpha",
+  "lastModified": "2026-08-26T06:34:15.850551-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"sahsd\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=A-,Alpha,-An\">Alphas</a> are created and simulated on the Simulate page in the Alphas dropdown tab. To run your first <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=definition.-,Simulation,-Simulation\">simulation</a>, click on the gear icon at the top right-hand side corner. This will open the settings panel. Here, select “US: TOP3000” for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Region,-Set\">Region</a> and <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=U-,Universe,-Universe\">Universe</a>, “<a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=SuperAlphas.%C2%A0-,Subindustry,-Sub\">Subindustry</a>” for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=strategy.-,Neutralization,-Neutralization\">Neutralization</a> and apply your settings. Make sure both Code and Result are ticked by clicking on them. In the Alpha expression text box, enter <b>-Delta(close, 5)</b> for now and click on &quot;Simulate&quot;. The Simulation Result page will show a graph for Cumulative Profit. This graph can be zoomed in to plot area for shorter time periods (1 month or 1 year).</p>",
+      "id": "76ad7623-a849-4ae4-92b1-aea1bd9441cc"
+    },
+    {
+      "type": "TEXT",
+      "value": "<img src=\"https://api.worldquantbrain.com/content/images/dQF-lBEbGZjng1vcyEBgL50NOT8=/41/original/\" alt=\"first_alpha\" width=\"1000\">",
+      "id": "0b2f637a-5684-439a-9e1a-68daac915348"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"apkuc\">The display consists of 2 graphs, one for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">PnL</a> vs. Time and the other for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Sharpe%20ratio,-Sharpe\">Sharpe Ratio</a> vs. Time.</p><p data-block-key=\"3rhon\">In the Stats tab, a good Alpha tend to have consistently increasing PnL and high Annual Return, Sharpe Ratio, % Profitable Days and Profit per Dollar Traded. It should have low <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=today-,Drawdown,-Drawdown\">Drawdown</a> and <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Turnover,-Average\">Turnover</a>. And more importantly, it shouldn’t have high fluctuations in the cumulative profit graph. If the standard deviation is low, there tends to be lesser fluctuations in the graph. If the graph shows high fluctuations/volatility, despite the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Returns,-Returns\">returns</a> being high, the Alpha will not be deemed good enough. An Alpha is considered to be “good” if:</p><ul><li data-block-key=\"msoh1\">Its turnover is low, but not less than 1%</li><li data-block-key=\"pym6c\">Its Percentage Drawdown is less than 10%</li><li data-block-key=\"64kw1\">Its Sharpe is greater than 2.0 for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=days-,Delay,-An\">delay</a> 0 Alphas and greater than 1.25 for <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=days-,Delay,-An\">delay</a> 1 Alphas</li></ul><p data-block-key=\"oqwp1\">The graph above for Alpha expression<b> -Delta(close, 5)</b> shows several significant drawdowns, as well as a flattening of returns in 2017. The table below marks this Alpha as Inferior (Needs Improvement). PnL and Sharpe for 2017 drop low, and drawdown is large in 2014 and 2015. This Alpha is Inferior (Needs Improvement) due to high volatility and low returns.</p>",
+      "id": "2aeacc38-6fe4-4aac-b87f-7f740f4287b2"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 0,
+          "neutralization": "MARKET",
+          "truncation": 0.08,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "-ts_delta(close, 5)"
+      },
+      "id": "c2a1b813-75bf-44a2-8d32-fc1be8c179f6"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "stats",
+        "width": 899,
+        "height": 562,
+        "fileSize": 27562,
+        "url": "https://api.worldquantbrain.com/content/images/lCamCGS0yYrQ-bUoy0tnOH1hRpA=/43/original/first_alpha_stats.PNG"
+      },
+      "id": "c42bfb87-f769-4a78-ad25-b3e03acda6d9"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"1r36m\">Use the green refreshing button in the Correlation block to get the information about the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=locations.-,Correlation,-Correlation\">correlation</a> of the currently simulated Alpha with the Alphas in your own <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Out-of-sample%20(OS),-Out\">OS (Out-of-Sample)</a> pool. This will be explained further in the <a id=\"39\" linktype=\"page\">Simulation Results</a> <a id=\"39\" linktype=\"page\">page</a>.</p><p data-block-key=\"e0g0n\">The image below shows the Properties of the Alpha. You can name your Alpha, assign a category and color code, and add user-defined tags to them. You can add a brief description about your Alpha for your reference. Suggestion - keep the number of user-defined tags low so that they don&#x27;t proliferate and are easily searchable in the My Alphas page.</p>",
+      "id": "5ba26c7d-97db-4402-a826-6046612e3f04"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "properties",
+        "width": 876,
+        "height": 391,
+        "fileSize": 13990,
+        "url": "https://api.worldquantbrain.com/content/images/jltN00KXkYt2eAJDpyVnypHn8d4=/44/original/first_alpha_properties.PNG"
+      },
+      "id": "b835d762-8ca8-499e-b141-400d7b975444"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"zbipf\">To Submit Alpha for OS Test, click the &quot;Submit Alpha&quot; button in the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details%C2%A0*).-,Submission,-The\">Submission</a> tab of the results panel. This will check if the Alpha meets the <a href=\"https://platform.worldquantbrain.com/learn/documentation/interpret-results/parameters-simulation-results\">Correlation</a> and <a href=\"https://platform.worldquantbrain.com/learn/documentation/interpret-results/parameters-simulation-results\">Sharpe</a> criteria before submitting it.</p>",
+      "id": "9286ede5-e77c-4184-8725-ac16075d39d3"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"i3b1w\">Check out the below video for another example.</p>",
+      "id": "71d58838-d605-4c65-a3be-0d7e52d82888"
+    },
+    {
+      "type": "TEXT",
+      "value": "<iframe width=\"743\" height=\"333\" src=\"https://www.youtube.com/embed/A3RNoYAz_9U?start=263&end=340\" title=\"Implementing an Alpha\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "id": "35468ec7-dc18-4a9d-89ef-cddddb3b128e"
+    }
+  ],
+  "sequence": 1,
+  "category": "Getting Started",
+  "duration": "PT3M"
+}

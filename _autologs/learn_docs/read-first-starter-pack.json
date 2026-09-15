@@ -1,0 +1,405 @@
+{
+  "id": "read-first-starter-pack",
+  "title": "*Read this First * - Starter Pack",
+  "lastModified": "2026-08-23T02:12:23.202382-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"amrhb\"><b>Welcome to WorldQuant BRAIN</b></p><p data-block-key=\"lwl6k\"></p><p data-block-key=\"gmtzk\">The objective this guide is to provide a basic overview of the BRAIN consultant program and simple bite-sized concepts to help you get started on Alpha making. This is by no means an exhaustive list, but after completing this guide, you will gain sufficient knowledge to try your hands at simulating ideas. It will be a learning process, many have done this before, and so you can do it too regardless of your background. Good luck!</p><p data-block-key=\"lnk8h\"><b>Research Consultant –</b> An opportunity to work with WorldQuant</p><p data-block-key=\"otw2m\"><b>Finance Basics –</b> The stock market and how it functions</p><p data-block-key=\"62gpt\"><b>Quantitative Analysis –</b> And its relation to BRAIN</p><p data-block-key=\"3t9cw\"><b>How to Use BRAIN –</b> Fast Expression, Operator and Data Field</p><p data-block-key=\"qsbhp\"><b>Common Financial Analysis Methods with Examples –</b> Technical and Fundamental Analysis</p>",
+      "id": "fddd633b-93d0-4faf-a316-14fe69dce7ce"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Research Consultant"
+      },
+      "id": "f113c3b6-23e6-4f20-82eb-37473fe92de7"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"0vwre\"><b>Become a Consultant with us</b></p>",
+      "id": "8ad0f3e5-1f2a-41a8-a71c-949fe0f5d20c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7gftr\"></p><p data-block-key=\"66zjj\">WorldQuant is a global quantitative asset management firm. Founded in 2007 by Igor Tulchinsky, our team of more than 850 employees worldwide develops and deploys investment strategies across a variety of asset classes in global markets. We provide global talent the opportunity to become research consultants in select approved countries and participate in WorldQuant’s greater research efforts.</p><p data-block-key=\"qwbsr\"></p><p data-block-key=\"f5h1u\"></p>",
+      "id": "4e9dbf97-1c14-466b-ba61-2c2234eb6def"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"tq8rb\"><b>A Global Community</b></p><p data-block-key=\"aic9h\"></p><p data-block-key=\"3nt8p\"></p><p data-block-key=\"2tth4\">We seek to produce high-quality predictive signals (Alphas) through our proprietary research platform so as to employ financial strategies focused on exploiting market inefficiencies. Our teams work collaboratively to drive the production of Alphas and financial strategies. WorldQuant BRAIN introduces its users to the intriguing world of quantitative finance in an interactive way through its simulation platform consisting of data sets and tools, performance dashboards and value-add measures.</p>",
+      "id": "0168d414-b8fe-4463-b7e5-d01cd54dc1ee"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"aqmsq\"></p><p data-block-key=\"yggh6\"><b>550,000+ Users</b> | <b>16,000+ Consultants</b> | <b>17 Regions</b></p>",
+      "id": "2db7a440-5322-40a0-82a5-e3f855b595da"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"c0g7s\"><b>Benefits of being a Consultant</b></p><p data-block-key=\"ygqos\"></p><p data-block-key=\"m41bp\">As a research consultant, you will have the following opportunities:</p><ul><li data-block-key=\"adfrc\">Receive merit-based financial compensation. Earn up to $120 per day (Activity-based) and $25,000 per quarter (Performance-based)</li><li data-block-key=\"g9gss\">Opportunity to be considered for potential internships and full-time positions for eligible BRAIN consultants</li><li data-block-key=\"5jjx4\">Membership within an elite community of global quants</li><li data-block-key=\"pxbd4\">Access to create Alphas in more regions across Europe and Asia</li><li data-block-key=\"oefif\">Access to 85,000+ data fields</li><li data-block-key=\"dm788\">Access to special features: data-visualization, advanced webinar series, multi-simulations, SuperAlphas, BRAIN API documentation with Python, and Python simulations.</li><li data-block-key=\"n7lxr\">And much more.</li></ul>",
+      "id": "5adbadc6-b43d-4fd4-a8bb-2c0b8d0cab9e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"42uru\"><b>Who is eligible?</b></p><p data-block-key=\"tvgnk\"></p><p data-block-key=\"ldst8\">No specific background required! Prior knowledge in Science, Technology, Engineering, Mathematics (STEM) or any other related field that is highly analytical and quantitative will be useful.</p><p data-block-key=\"hkmbe\">Users need to score at least 10,000 points on the WorldQuant Challenge to be eligible for this role. At present, we are offering this opportunity exclusively to residents of:</p><p data-block-key=\"5y5yw\"></p><ul><li data-block-key=\"3o1qy\">Armenia</li><li data-block-key=\"upxmj\">Mainland China</li><li data-block-key=\"rvxm5\">Hong Kong</li><li data-block-key=\"9ed74\">Taiwan</li><li data-block-key=\"0bdx4\">Hungary</li><li data-block-key=\"nbeep\">Kenya</li><li data-block-key=\"kj0rj\">Korea</li><li data-block-key=\"sszmi\">Indonesia</li><li data-block-key=\"wd0w4\">India</li><li data-block-key=\"pr0ym\">Malaysia</li><li data-block-key=\"89fdx\">Singapore</li><li data-block-key=\"asa4c\">UK</li><li data-block-key=\"4wcng\">Vietnam</li><li data-block-key=\"d3tym\">Thailand</li><li data-block-key=\"vvpym\">USA</li><li data-block-key=\"s4ur8\">Georgia</li><li data-block-key=\"kdz1h\">Nigeria</li></ul>",
+      "id": "a697a0d7-fb7f-48a4-8560-bd4ee9167bbb"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"efuy9\"><b>Read about the stories of our consultants :</b></p>",
+      "id": "5b791922-f788-430e-a6b9-f5cf960dcb97"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Azmi-Fauzi-Hero-Image-QA-scaled.jpg",
+        "width": 451,
+        "height": 291,
+        "fileSize": 45439,
+        "url": "https://api.worldquantbrain.com/content/images/O4KygmJEoHFhZh80ayjc_Z7wZn4=/149/original/consultant_1.jpg"
+      },
+      "id": "4fd33025-c8d5-434e-a5c5-22bf89573692"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"iu0id\"><a href=\"https://www.worldquant.com/ideas/consultant-spotlight-azmi-fauzi/\">Azmi Fauzi – Indonesia</a></p><p data-block-key=\"7vsj8\"></p><p data-block-key=\"du3s9\"></p>",
+      "id": "f8508d85-5d89-48a6-9790-13e0a811c3b4"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "consultant 2.jpg",
+        "width": 450,
+        "height": 291,
+        "fileSize": 50352,
+        "url": "https://api.worldquantbrain.com/content/images/Ld0_Ffq63gPZD1iKWXIz7ClChyQ=/150/original/consultant_2.jpg"
+      },
+      "id": "1362cbf4-5b9d-4719-aa33-bf771892eddf"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"v6y2y\"><a href=\"https://www.worldquant.com/ideas/consultant-spotlight-aradhana-singh/\">Aradhana Singh – India</a></p><p data-block-key=\"piswa\"></p>",
+      "id": "86163ca3-c74d-4201-9204-a6239c9d4bf0"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "consultant 3.jpg",
+        "width": 450,
+        "height": 290,
+        "fileSize": 38990,
+        "url": "https://api.worldquantbrain.com/content/images/Yudxfh2eoj_T_2scny5yegcdrHo=/151/original/consultant_3.jpg"
+      },
+      "id": "10dd0673-049f-4c61-a949-aa25219988f9"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"18hyi\"><a href=\"https://www.worldquant.com/ideas/consultant-spotlight-zhuangzhuang-meng/\">Zhuangzhuang Meng - China</a></p>",
+      "id": "24eddbf9-0ba3-47a4-b94a-3439400397f2"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "resized_2_Consultant-Spotlight_Donghwa-Seo.jpg",
+        "width": 450,
+        "height": 290,
+        "fileSize": 14356,
+        "url": "https://api.worldquantbrain.com/content/images/zkHyQPDLxA6nCPIVZoh6xtIUV3Q=/299/original/resized_2_Consultant-Spotlight_Donghwa-Seo.jpg"
+      },
+      "id": "6e1fae19-6f0a-471d-975a-b0d63271acde"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"qq2kd\"><a href=\"https://www.worldquant.com/ideas/consultant-spotlightdonghwa-seo/\">Donghwa Seo - Korea</a></p>",
+      "id": "273cc3f2-86be-4cfc-b707-4297cdf3a16b"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Finance Basics"
+      },
+      "id": "80d16064-99c5-44b3-a822-eb985cefa6b3"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"138m8\"></p><p data-block-key=\"iwbyh\">Many of our consultants started out from non-financial specializations, so don’t be worried if you don’t have prior financial knowledge. This section will brush you up with some basic know-how.</p><p data-block-key=\"qtj5v\"></p><p data-block-key=\"fcrdb\"></p>",
+      "id": "aa0a8c0f-758f-4c30-836a-d37b52014309"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"e0i6h\"><b>How the Stock Market works</b></p><p data-block-key=\"e7j1t\"></p><p data-block-key=\"yqofk\">The stock market refers to public markets that exist for issuing, buying, and selling stocks that trade on a stock exchange or over-the-counter. Stocks, also known as equities, represent fractional ownership in a company, and the stock market is a place where investors can buy and sell ownership of such investible assets [<a href=\"https://corporatefinanceinstitute.com/resources/wealth-management/stock-market/\">1</a>].</p>",
+      "id": "12975656-ee57-4c2c-a094-599f56d97c75"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"n1n0t\"><b>Seeking Returns</b></p><p data-block-key=\"bc35c\"></p><p data-block-key=\"dae7u\">Investors seek to profit from buying stocks by selling their stock for a profit if the stock price increases from their purchase price. For example, if an investor buys shares of a company’s stock at $10 a share and the price of the stock subsequently rises to $15 a share, the investor can then realize a 50% profit on their investment by selling their shares [<a href=\"https://corporatefinanceinstitute.com/resources/wealth-management/stock-market/\">1</a>]. Returns is defined by WorldQuant as the return on capital traded:</p>",
+      "id": "9d3ceaf4-cc15-4384-9400-b54b67e2f653"
+    },
+    {
+      "type": "EQUATION",
+      "value": "Annual Return = Annualized PnL / Half of Capital Traded",
+      "id": "7861d41e-1f66-4734-999d-3965e095b539"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"wwqub\">It signifies the amount made or lost during the period and is expressed in %</p>",
+      "id": "5f8d9a8e-c07b-44ac-ab65-0a32ee326f16"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"u1nmq\"><b>Long a Stock</b></p><p data-block-key=\"8qhm6\"></p><p data-block-key=\"63ze0\">Taking a long position in a stock simply means buying it, and if the stock increases in value, you will make money.</p>",
+      "id": "97e70522-89a2-4cb7-a258-3d79eb1450ea"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"6hu16\"><b>Short a Stock</b></p><p data-block-key=\"iwher\"></p><p data-block-key=\"7ya1k\">On the other hand, taking a short position in a stock means borrowing an equity that you do not own, usually from your broker, then selling it, and hoping that it declines in value. When that happens, you can buy it back at a lower price than you have paid for it and return the borrowed shares to your broker.</p>",
+      "id": "7f6803f5-f1ed-46eb-9a6b-baa0c3eb46de"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"arvyp\"><b>Defining Volume</b></p><p data-block-key=\"f4b9g\"></p><p data-block-key=\"hgjae\">Volume is the amount of an asset or security that changes hands over some period of time, often over the course of a day. For instance, stock trading volume could refer to the number of shares of a security traded between its daily open and close. Trading volume, and changes to volume over the course of time, are important inputs for technical traders [<a href=\"https://www.investopedia.com/terms/v/volume.asp#:~:text=Volume%20is%20the%20amount%20of,its%20daily%20open%20and%20close.\">2</a>].</p>",
+      "id": "3cf27aaa-6aea-4834-9309-f4c939014a0b"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"4rkif\"><b>Defining what is Close / Open Price</b></p><p data-block-key=\"ehsrm\"></p><p data-block-key=\"y24qx\">The opening price is the price at which a security first trades upon the opening of an exchange on a trading day. The closing price is the price of the final trade before the close of the trading session. These prices are important because they are used to create traditional line stock charts, as well as when calculating moving averages and other technical indicators [<a href=\"https://www.investopedia.com/terms/c/close.asp\">3</a>, <a href=\"https://www.investopedia.com/terms/o/openingprice.asp#:~:text=The%20opening%20price%20is%20the,is%20its%20daily%20opening%20price.\">4</a>].</p>",
+      "id": "a1fb0a97-5dba-4e55-beb0-c6f778f7b5ab"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"vs0fx\"><b>Further Reading &amp; References:</b></p><p data-block-key=\"q954v\"></p><p data-block-key=\"yw8ur\">[1] Corporate Finance Institute. (2022, October 28). Stock market. <a href=\"https://corporatefinanceinstitute.com/resources/wealth-management/stock-market/\">https://corporatefinanceinstitute.com/resources/wealth-management/stock-market/</a></p><p data-block-key=\"a4d30\">[2] What is volume of a stock, and why does it matter to investors? (2003, November 23). Investopedia. <a href=\"https://www.investopedia.com/terms/v/volume.asp#:~:text=Volume%20is%20the%20amount%20of,its%20daily%20open%20and%20close\">https://www.investopedia.com/terms/v/volume.asp#:~:text=Volume%20is%20the%20amount%20of,its%20daily%20open%20and%20close</a></p><p data-block-key=\"qls5c\">[3] Close. (2003, November 18). Investopedia. <a href=\"https://www.investopedia.com/terms/c/close.asp\">https://www.investopedia.com/terms/c/close.asp</a></p><p data-block-key=\"2y18a\">[4] Opening price: Definition, example, trading strategies. (2005, July 3). Investopedia. <a href=\"https://www.investopedia.com/terms/o/openingprice.asp#:~:text=The%20opening%20price%20is%20the,is%20its%20daily%20opening%20price\">https://www.investopedia.com/terms/o/openingprice.asp#:~:text=The%20opening%20price%20is%20the,is%20its%20daily%20opening%20price</a></p>",
+      "id": "9a36365c-2481-4a32-948c-5367374bb2da"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Quantitative Analysis"
+      },
+      "id": "318836e5-67b9-4bad-8bcc-4cad8210e066"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"evhb1\"></p><p data-block-key=\"olptc\">There are many methods to determine whether to long (buy) a stock or to short it. Quantitative analysis (QA) in finance is an approach that emphasizes mathematical and statistical analysis to help determine the value of a stock. Quantitative trading analysts (also known as &quot;quants&quot;) use a variety of data—including historical investment and stock market data—to develop trading algorithms and computer models. The information generated by these computer models helps investors analyze investment opportunities and develop what they believe will be a successful trading strategy [<a href=\"https://www.investopedia.com/articles/investing/041114/simple-overview-quantitative-analysis.asp\">5</a>].</p><p data-block-key=\"7tbf6\"></p><p data-block-key=\"cfr6p\"></p>",
+      "id": "4bbd0ddd-09ea-43d7-a309-4c7f597dc467"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7la30\"><b>About BRAIN</b></p><p data-block-key=\"4aj0u\"></p><p data-block-key=\"jkb8o\">Utilizing the quantitative analysis approach, BRAIN is a web-based simulator of global financial markets that was created to explore Alpha research. It accepts an Alpha expression as input and plots its Profit and Loss (PnL) as output.</p><p data-block-key=\"pp23o\"></p><p data-block-key=\"tpj6l\"></p>",
+      "id": "5b8c4cea-c9c6-4200-9f95-0115cd1fa9d5"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph3 (1).jpg",
+        "width": 771,
+        "height": 226,
+        "fileSize": 27486,
+        "url": "https://api.worldquantbrain.com/content/images/JiLXJGyIpKqCO0PmxJ_ukgVFBZA=/164/original/graph3_1.jpg"
+      },
+      "id": "aff93bfd-5af0-4a38-a716-5e7141f13c56"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ilfct\"></p><p data-block-key=\"mftva\">The input expression is evaluated for each financial instrument, every day over historical dates, and a portfolio is constructed accordingly. BRAIN invests in each financial instrument according to the value of the expression. It takes positions (either buying or short selling) and assigns weights to each instrument.</p>",
+      "id": "300eae3c-a4de-413e-a1a8-e104184f6730"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"9x0jq\"><b>What is an Alpha?</b></p><p data-block-key=\"31i2w\"></p><p data-block-key=\"c4vgz\">An Alpha is an algorithm that transforms the input data (price-volume, news, fundamental, etc.) into a vector in which values are proportional to the positions and weights we want to hold in each instrument for each day.</p>",
+      "id": "9326b648-f145-43cf-8132-d81c61b344ae"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"r8yyw\"><b>Weights</b></p><p data-block-key=\"ozzrp\"></p><p data-block-key=\"q2mql\">Imagine market data being a matrix, with each row representing one date and each column representing one stock. For example, the matrix for close price data could look like this:</p><p data-block-key=\"7au60\"></p><p data-block-key=\"uep8x\"></p>",
+      "id": "f67fd352-25ae-43cb-9358-b56b8492cedc"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph4 (1).jpg",
+        "width": 484,
+        "height": 218,
+        "fileSize": 20259,
+        "url": "https://api.worldquantbrain.com/content/images/O9YJ_pMYXCKByYOltPqRmJQy8Rc=/162/original/graph4_1.jpg"
+      },
+      "id": "5d9e4006-f68e-4a6f-abdd-24ade2f79c10"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ntj56\"></p><p data-block-key=\"ryzgo\"></p><p data-block-key=\"9fd03\"><i>Table: Closing stock prices of company A, B and C for 3 respective days.</i></p><p data-block-key=\"ys6lq\">The role of the Alpha expression is to transform the input matrix to an output vector of weights, with each weight corresponding to one of the stocks. The Alpha output vector, having weights as values corresponding to each instrument in the Universe, could look something like this:</p><p data-block-key=\"5kogi\"></p>",
+      "id": "10ab9f16-9c44-4550-a98d-58e51b799a75"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph5 (1).jpg",
+        "width": 484,
+        "height": 181,
+        "fileSize": 14751,
+        "url": "https://api.worldquantbrain.com/content/images/FYD8Quwp2wQBIE2ucxOMfJAIp9E=/163/original/graph5_1.jpg"
+      },
+      "id": "78805d9d-f923-48ff-bd00-0313c0d2b1ce"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ida3j\"></p><p data-block-key=\"8lfth\"><i>Table: Output vector to indicate the direction as well as sizing for company A, B and C.</i></p><p data-block-key=\"xqckp\"></p>",
+      "id": "dabb4650-04f1-4796-abec-6da157b21223"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"9njip\"><b>Cumulative Profit &amp; Loss (PnL)</b></p><p data-block-key=\"heisb\"></p><p data-block-key=\"ongl9\">Once we have got the weights of the stock from the Alpha expression, the next step is to get each day’s profit and loss (PnL).</p><p data-block-key=\"grvgd\">From the above table, I have weight_A = 0.2, weight_B = -0.5 and weight_C = 0.3. Now the amount of money I have got to invest is called the &quot;book size&quot;. Suppose my book size is 100 USD. So I calculate the money I want to invest in each of the stocks:</p><p data-block-key=\"uke8v\">money_A = 0.2 * 100 USD = 20 USD Long</p><p data-block-key=\"3hjbp\">money_B = -0.5 * 100 USD = 50 USD Short</p><p data-block-key=\"4ts20\">money_C = 0.3 * 100 USD = 30 USD Long</p><p data-block-key=\"j54il\">Now, I buy 20 USD worth of A, sell 50 USD worth of B and buy 30 USD worth of C. Now I have a portfolio, which is worth a total of 100 USD.</p><p data-block-key=\"4yft7\">I keep this portfolio for one full day, and sell it the next day in the simulation period. Now in one day, the prices of stocks A, B, C have changed. So the total value of my portfolio has also changed, say from 100 USD to 105 USD. So, I have made a profit of 5 USD on that day.</p><p data-block-key=\"412qd\">Now I again calculate the Alpha values for the stocks, and again calculate weights, and again trade 100 USD worth of portfolio. [Note: In BRAIN, we use constant book size for all the days, regardless of whether your portfolio makes money or loses money.]</p><p data-block-key=\"owixi\">This is repeated for each day in the simulation period to calculate and plot the cumulative PnL.</p><p data-block-key=\"rlpde\"></p><p data-block-key=\"vpfw0\"></p>",
+      "id": "ce1da5e9-e2a9-489e-a62b-5888e8a77a76"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph1 (2).png",
+        "width": 1035,
+        "height": 564,
+        "fileSize": 176107,
+        "url": "https://api.worldquantbrain.com/content/images/tmOql3-Ue9AY6tbifw55JI_rNQ4=/165/original/graph1_2.png"
+      },
+      "id": "2f76e202-1b8e-488e-8851-b1067d74a2e9"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"tnslt\"><b>Reducing Risk and Volatility</b></p><p data-block-key=\"kct48\"></p><p data-block-key=\"mwd41\">A good Alpha tends to ideally have consistently increasing PnL, high Annual Return, and more importantly, few fluctuations in the cumulative profit graph. If the standard deviation is low, there tends to be lesser fluctuations in the graph. If the graph shows high fluctuations/volatility, despite the returns being high, the Alpha will not be deemed good enough.</p><p data-block-key=\"3sxes\">WorldQuant aims to develop equity long-short market neutral Alphas that have low volatility and risk. Such investments are attractive because they are expected to produce substantially better risk-adjusted returns than long-only portfolios. Equity long-short market neutral strategy is used commonly by hedge funds, with the goal of minimizing exposure to the market and profit from the changes in the spread between two stocks.</p><p data-block-key=\"1r8u5\"><i>Further Reading &amp; References:</i></p><p data-block-key=\"byv9d\">[5] What to know about quantitative analysis. (2014, April 11). Investopedia. <a href=\"https://www.investopedia.com/articles/investing/041114/simple-overview-quantitative-analysis.asp\">https://www.investopedia.com/articles/investing/041114/simple-overview-quantitative-analysis.asp</a></p>",
+      "id": "b56c1784-8ae1-4d0f-9ed8-aa6e94579730"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "How to Use the Brain Platform"
+      },
+      "id": "810f1021-94fc-47c3-a18c-82421dfe88f6"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"f8oy4\"></p><p data-block-key=\"r8dxm\">Enough theory for now, let’s delve into how to write your first Alpha on BRAIN.</p><p data-block-key=\"o27vn\"></p><p data-block-key=\"81372\"><b>No Coding Experience Required</b></p><p data-block-key=\"dp4ua\">To all the non-coders, the good news of using BRAIN is that no prior coding experience is required.</p><p data-block-key=\"ugf3p\"></p><p data-block-key=\"ndwbg\"><b>BRAIN’s Way of Coding</b></p><p data-block-key=\"n4yj8\">BRAIN uses the fast expression language that consists of two main elements: Data fields and Operators.</p><p data-block-key=\"rbg1i\"></p><p data-block-key=\"u0dio\"><b>Can I use Python / R / MATLAB etc. for Alphas?</b></p><p data-block-key=\"10htz\">One of our users has asked us: Are there plans to allow users to utilize Python/MATLAB/R to interact with the BRAIN API, to analyze datasets and submit the Alpha vectors?</p><p data-block-key=\"h5mix\">Our reply is that: BRAIN is currently available for use with Fast Expressions and Python. Regarding APIs, we currently do not prohibit programmatic access to BRAIN when API communication is conducted with low intensity.</p><p data-block-key=\"wnwwf\"></p><p data-block-key=\"nmanb\"><b>Data Fields, Datasets</b></p><p data-block-key=\"26df8\">Data fields refer to a named collection of data, for example &#x27;open price&#x27; or &#x27;close price&#x27;.</p><p data-block-key=\"6d6a6\">Datasets are a collection of data fields. For example, ‘open price’ and ‘close price’ can be found in the price volume dataset <a href=\"https://platform.worldquantbrain.com/data/data-sets/pv1\">here</a>. Most users typically start out with price volume and fundamental datasets.</p><p data-block-key=\"t7cij\"></p><p data-block-key=\"s0b05\"><b>Operators</b></p><p data-block-key=\"dzh6p\">An Operator is a set of mathematical or statistical techniques required to implement your Alpha ideas, for example mathematical operators: + - / * or cross-sectional operators such as ‘rank’. Read <a href=\"https://platform.worldquantbrain.com/learn/data-and-operators/operators?_gl=1*je5iyn*_ga*MTAwMTk0NzY2OS4xNjcyNzA5NzU3*_ga_9RN6WVT1K1*MTY3MzM2MDU0OC4zNi4xLjE2NzMzNjQ3MjQuNTkuMC4w\">Learn/Operators</a> for more details.</p><p data-block-key=\"u4fj2\">Here are some common examples of Alphas build using data fields and operators:</p><p data-block-key=\"gqige\"></p><p data-block-key=\"50390\"></p>",
+      "id": "0c6d883c-b815-44b4-b864-56482440e38e"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph2.png",
+        "width": 771,
+        "height": 222,
+        "fileSize": 12414,
+        "url": "https://api.worldquantbrain.com/content/images/CkufFbl94S5uR8mcY2ibtUNFKeA=/166/original/graph2.png"
+      },
+      "id": "5542c7d4-841d-41c9-b0a0-e69d1033b6db"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"xx23z\">You can try out some sample Alphas by clicking on the Example button (bottom left corner) on the simulator page. Leverage the hint and test out a few simulations! Click here to try now: <a href=\"https://platform.worldquantbrain.com/simulate\">Simulate Page</a></p>",
+      "id": "90305f63-b4db-4b29-927e-09c211229426"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Methods of Analyzing the Stock Market"
+      },
+      "id": "06a3f95f-a9e4-4506-9ba4-6127a3898928"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"pb4ay\"></p><p data-block-key=\"apddb\">You might ask us, how do you come up with ideas for new Alphas? This section will take you through two Alpha ideas utilizing technical analysis and fundamental analysis, and explain the thought process behind them.</p><p data-block-key=\"brpf5\"></p><p data-block-key=\"8zpc6\"><b>Technical Analysis</b></p><p data-block-key=\"u6u8i\">Technical analysis is a trading discipline employed to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity, such as price movement and volume. Technical analysts believe past trading activity and price changes of a security can be valuable indicators of the security&#x27;s future price movements.</p><p data-block-key=\"l1zyv\">Across the industry, there are hundreds of patterns and signals that have been developed by researchers to support technical analysis trading. These include trend lines, channels, moving averages, and momentum indicators [<a href=\"https://www.investopedia.com/terms/t/technicalanalysis.asp\">6</a>].</p><p data-block-key=\"i71uy\"></p><p data-block-key=\"f86xh\"><b>Volume as an indicator</b></p><p data-block-key=\"zjzpr\">If a company’s stock has high volume, it means that many people are buying and selling the stock. Suppose our hypothesis is that the company with more shares traded is more desirable than another company with low volume. We will then allocate more weight to the company with higher volume.</p><p data-block-key=\"1z3wp\">One way to express this idea is through the Alpha expression here:</p><p data-block-key=\"n6o4u\"></p>",
+      "id": "89debc25-4e5f-414b-ae22-e42c902354ad"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 0,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.08,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "volume"
+      },
+      "id": "187307c2-2080-43af-8ef2-99870165619b"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "graph26.png",
+        "width": 980,
+        "height": 529,
+        "fileSize": 204444,
+        "url": "https://api.worldquantbrain.com/content/images/aZI3aquOPQJbVqZ1-uzAhVjjEqY=/167/original/graph26.png"
+      },
+      "id": "79fbe3bc-07e9-48f6-810b-f40fce1e52d5"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"t49qs\"><b>Fundamental Analysis</b></p><p data-block-key=\"1z082\">Fundamental analysis is a method of measuring a security&#x27;s intrinsic value by examining related economic and financial factors. Fundamental analysts study anything that can affect a security&#x27;s value, from macroeconomic factors such as the state of the economy and industry conditions to microeconomic factors like the effectiveness of the company&#x27;s management.</p><p data-block-key=\"i96qa\">Analysts could compare the company’s growth rates to the industry and sector that it operates in, along with the other information provided, to see if the company is valued correctly [<a href=\"https://www.investopedia.com/terms/f/fundamentalanalysis.asp\">7</a>].</p><p data-block-key=\"9p3od\"></p><p data-block-key=\"ujmi3\"><b>Inventory Turnover</b></p><p data-block-key=\"abzuq\">Financial ratios are ratios of fundamental data which give insights into the health and investment decisions of the company. One common financial ratio is the inventory turnover. It is a type of activity ratio that measures how quickly a company sells through and replaces its inventory. It is calculated as:</p><p data-block-key=\"y282i\"></p><p data-block-key=\"ciudy\"></p>",
+      "id": "2829a613-1c04-46bb-a6cf-703e6148c3da"
+    },
+    {
+      "type": "EQUATION",
+      "value": "Inventory Turnover = Sales / Average Inventory",
+      "id": "8f323686-6992-4fd5-93c7-44f430c917ff"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"vzlig\"><i>Sales divided by average inventory.</i></p><p data-block-key=\"kfwqj\"></p><p data-block-key=\"xnq6r\">The hypothesis is that a stock with higher inventory turnover ratio will have a better performance and thus be allocated more weight.<br/> The Alpha expression is as such:</p>",
+      "id": "f9276946-d35e-41df-a7bc-2fe95e61aca1"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 0,
+          "neutralization": "MARKET",
+          "truncation": 0.08,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "inventory_turnover"
+      },
+      "id": "1f5844fd-ba06-4155-828f-5328cfd5d800"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "invemtory_turnuverupdated.png",
+        "width": 1910,
+        "height": 1032,
+        "fileSize": 91407,
+        "url": "https://api.worldquantbrain.com/content/images/FAqTmy4O5eC-fzwuST1xlvWNseA=/266/original/invemtory_turnuverupdated.png"
+      },
+      "id": "33b1242b-67c9-4034-95b0-0af7ee34017c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"eptq4\"><b>Time Series &amp; Cross Sectional</b></p><p data-block-key=\"9rjel\">Additionally, there are two frequently used operator categories: time series and cross sectional.</p><p data-block-key=\"x4zpm\">Time series analysis can be useful to see how a given variable changes over time. Suppose you wanted to analyze a time series of daily closing stock prices for a given stock over a period of one year. You could obtain a list of all the closing prices for the stock from each day for the past year and analyze the time series data with technical analysis tools to know whether the stock’s time series shows any seasonality. This will help you to determine if the stock goes through peaks and troughs at regular times each year [<a href=\"https://www.investopedia.com/terms/t/timeseries.asp\">8</a>].</p><p data-block-key=\"3w5gx\">Alternatively, you can use cross-sectional analysis, where you compare a particular company to its industry peers. Cross-sectional analysis may focus on a single company for head-to-head analysis with its biggest competitors or it may approach it from an industry-wide lens to identify companies with a particular strength. Essentially, cross-sectional analysis shows an investor which company is best given the metrics you care about [<a href=\"https://www.investopedia.com/terms/c/cross_sectional_analysis.asp\">9</a>].</p><p data-block-key=\"umgko\">We hope you’ve enjoyed this guide! To get started, you may click on the Example Button (bottom left corner) on the <a href=\"https://platform.worldquantbrain.com/simulate\">Simulate Page</a>. There you will find some sample Alphas with hints to improve it.</p><p data-block-key=\"oc29u\">If you have any research related questions, you can check out our <a href=\"https://support.worldquantbrain.com/hc/en-us/community/topics\">Community forum</a> and post your questions there.</p><p data-block-key=\"qe8t5\"></p><p data-block-key=\"p8x91\"><b><i>Further Reading &amp; References:</i></b></p><p data-block-key=\"cq2g5\">[6] Technical analysis: What it is and how to use it in investing. (2003, November 24). Investopedia. <a href=\"https://www.investopedia.com/terms/t/technicalanalysis.asp\">https://www.investopedia.com/terms/t/technicalanalysis.asp</a></p><p data-block-key=\"6wcvz\">[7] Fundamental analysis: Principles, types, and how to use it. (2003, November 23). Investopedia. <a href=\"https://www.investopedia.com/terms/f/fundamentalanalysis.asp\">https://www.investopedia.com/terms/f/fundamentalanalysis.asp</a></p><p data-block-key=\"chwdk\">[8] Time series definition. (2006, March 12). Investopedia. <a href=\"https://www.investopedia.com/terms/t/timeseries.asp\">https://www.investopedia.com/terms/t/timeseries.asp</a></p><p data-block-key=\"wdmpu\">[9] What is cross sectional analysis and how does it work? (2007, May 21). Investopedia. <a href=\"https://www.investopedia.com/terms/c/cross_sectional_analysis.asp\">https://www.investopedia.com/terms/c/cross_sectional_analysis.asp</a></p>",
+      "id": "32dfd2c2-0f7b-4da3-8b1b-842bb2250701"
+    }
+  ],
+  "sequence": 1,
+  "category": "Getting Started",
+  "duration": "PT19M"
+}

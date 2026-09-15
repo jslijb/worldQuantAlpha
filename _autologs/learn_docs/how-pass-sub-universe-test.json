@@ -1,0 +1,69 @@
+{
+  "id": "how-pass-sub-universe-test",
+  "title": "How to pass the Sub-universe test? 🥈",
+  "lastModified": "2026-08-26T07:10:34.904134-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ujamd\"></p><p data-block-key=\"n6yol\"><b>Sub-universe test</b> is one of the robustness tests performed on an alpha by the BRAIN platform before submission. In simple words, it ensures that your alpha works not only in the universe you are trying to submit, but that it would also work in the next more liquid (or smaller) universe to some extent.</p><p data-block-key=\"y1vrt\">E. g. if you are trying to submit an alpha on USA TOP3000, the platform will also check its performance on USA TOP1000. If it performs poorly, then it means that your alpha is generating most of the profit on the non-liquid portion of stocks, which is one of the signs that your alpha is not robust enough and most likely will not perform as well as expected in out-of-sample testing. That’s why such alphas are not allowed to be submitted on Brain.</p><p data-block-key=\"4zvtf\">Technical details:</p><ul><li data-block-key=\"gr06k\">The threshold to pass the sub-universe test is defined by the formula:</li></ul><p data-block-key=\"q14yg\">subuniverse_sharpe &gt;= 0.75 * sqrt(subuniverse_size / alpha_universe_size) * alpha_sharpe</p><ul><li data-block-key=\"qkued\">Sub-Universe Sharpe is calculated using PnL of Alpha obtained through the following process (notice that it is similar to the Sharpe of an alpha simulated in the sub-universe, but not exactly the same, as you will see in the example below):<ul><li data-block-key=\"0zo8b\"><a href=\"https://platform.worldquantbrain.com/learn/data-and-operators/operators#:~:text=constant.%20Detailed%20description-,pasteurize(x),-Set%20to%20NaN\">Pasteurize</a> to the target universe, that is, for all stocks not in the sub-universe, assign value of NaN</li><li data-block-key=\"6x24g\">Apply <a href=\"https://platform.worldquantbrain.com/learn/documentation/create-alphas/simulation-settings#7-neutralization\">market neutralization</a> to resulting set (subtract mean of all values from each value) and then scale Alpha back to original size.</li><li data-block-key=\"koyyi\">Calculate PnL using resulting Alpha values</li></ul></li></ul><p data-block-key=\"uiyot\">Consider an alpha in USA TOP3000 which fails sub-universe test:</p>",
+      "id": "6620fe86-b995-4792-9c10-4d20d185702e"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "check111.png",
+        "width": 1247,
+        "height": 917,
+        "fileSize": 66041,
+        "url": "https://api.worldquantbrain.com/content/images/1wfhNpE5XxOjla9kRCkMef4-U6w=/262/original/check111.png"
+      },
+      "id": "a89a3bd8-adc2-435b-96e1-76c2c568e542"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Subuniverse 3.png",
+        "width": 1246,
+        "height": 120,
+        "fileSize": 15932,
+        "url": "https://api.worldquantbrain.com/content/images/YmzeSY0hG6D_LPaNmL_uiF2upS8=/263/original/Subuniverse_3.png"
+      },
+      "id": "5210ad00-97e4-48f0-84f8-749159b6c058"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"7kaqc\"></p><p data-block-key=\"6esk8\">Notice cutoff 0.75 * sqrt(subuniverse_size / alpha_universe_size) * alpha_sharpe = 0.75 * sqrt(1000 / 3000) * 2.73 = 1.18</p><p data-block-key=\"v61tq\">Let’s check this alpha performance on next more liquid universe, TOP1000</p>",
+      "id": "c8d5b2d8-960a-4e03-9fbe-263149897e10"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "subuniverse 5.png",
+        "width": 1237,
+        "height": 882,
+        "fileSize": 68558,
+        "url": "https://api.worldquantbrain.com/content/images/RyI4S_xylf7vnzH7LYZhlI4-Oc8=/264/original/subuniverse_5.png"
+      },
+      "id": "ce95e654-aae8-4173-bf7e-2a550042402f"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "subinverse 6.png",
+        "width": 1238,
+        "height": 120,
+        "fileSize": 16163,
+        "url": "https://api.worldquantbrain.com/content/images/j0s5ua5v4ni94ys_tskBOA9TYBM=/265/original/subinverse_6.png"
+      },
+      "id": "c530d8df-a598-459c-9f74-11ab0501117f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"wicfj\"></p><p data-block-key=\"eszge\">As you see, Sharpe ratio degraded significantly to 1.17, less than the cutoff of 1.18.</p><p data-block-key=\"mfcyb\"></p><p data-block-key=\"a31xw\"></p><p data-block-key=\"k7553\">Tips to help you improve your alpha(s) and pass the sub-universe test:</p><ul><li data-block-key=\"49t4q\">Avoid using multipliers related to the size of the company in your alphas, e.g. rank(-assets), 1 – rank(cap), etc. These multipliers may significantly shift the distribution of your alpha weights to more/less liquid side and it may affect the sub-universe performance</li><li data-block-key=\"iejc6\">Try decaying separately the liquid and non-liquid parts of your signal. As a proxy for liquidity you can use cap or volume*close, for example instead of</li></ul><p data-block-key=\"bf6pd\">“ts_decay_linear(signal, 10)”</p><p data-block-key=\"d131l\">you can try</p><p data-block-key=\"q5ss5\">“ts_decay_linear(signal, 5) * rank(volume*close) + ts_decay_linear(signal, 10) * (1 – rank(volume*close))”</p><ul><li data-block-key=\"vj4fm\">Check out your alpha improvements step by step, maybe one of them resulted in better stats, but at the same time alpha started to fail sub-universe test?</li><li data-block-key=\"8zxv5\">Try these <a href=\"https://support.worldquantbrain.com/hc/en-us/community/posts/8123350778391-How-do-you-get-a-higher-Sharpe-\">tips</a> to improve overall Sharpe of your alpha</li><li data-block-key=\"dgw0i\">If nothing helps - don’t get upset. Some signals are just not robust. It is always sad to discard an alpha with good IS performance, but remember: your long-term success as a quant depends on how your alphas will perform in out-of-sample, not during in-sample simulation. Most likely, you just dodged a bad alpha.</li></ul>",
+      "id": "da1b922d-43c9-4f09-a39e-6e9de68f7ce3"
+    }
+  ],
+  "sequence": 58,
+  "category": "Interpreting Results",
+  "duration": null
+}

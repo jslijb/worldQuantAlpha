@@ -1,0 +1,389 @@
+{
+  "id": "alpha-submission",
+  "title": "Clear these tests before submitting an Alpha",
+  "lastModified": "2026-09-15T01:31:48.138796-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"f2c1y\"></p><ul><li data-block-key=\"74slc\">The following performance tests are run till the end of the In-Sample Period.</li><li data-block-key=\"7id8d\">The &#x27;Submit Alpha&#x27; button (in the Submission tab of the <a href=\"https://platform.worldquantbrain.com/simulate\">simulation results</a> panel) is used to start <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Out-of-sample%20(OS),-Out\">out-of-sample (OS)</a> testing for Alphas meeting the performance and correlation cutoffs</li><li data-block-key=\"7oluw\"><b>Only submitted</b> <b>Alphas are considered for scoring.</b> Submitted Alphas show up on the <a href=\"https://platform.worldquantbrain.com/alphas/os\">Out-of-Sample tab</a> of the Alphas page.</li></ul><p data-block-key=\"ufhps\">Below table is for submission test for Alphas</p><p data-block-key=\"hm5ve\"></p>",
+      "id": "3533ca34-fa08-4b57-889b-3cc90cb1c223"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Submission Tests for Alphas"
+      },
+      "id": "e0456bb5-b83b-42b2-85d6-e3f7d5fa0dc1"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "article_6_core_requirements.png",
+        "width": 857,
+        "height": 463,
+        "fileSize": 33444,
+        "url": "https://api.worldquantbrain.com/content/images/5JPEbrEy2wnZKC_Gvp4oQRTNrNQ=/439/original/article_6_core_requirements.png"
+      },
+      "id": "f70abfd6-3dc2-487f-9acc-8f2f7d9c30e4"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "SUBMISSION CRITERIA",
+            "THRESHOLDS FOR USERS"
+          ],
+          [
+            "Fitness",
+            "At least “Average”:\nGreater than 1.3 for Delay-0 or Greater than 1 for Delay-1"
+          ],
+          [
+            "Sharpe",
+            "Greater than 2 for Delay-0 Alphas or Greater than 1.25 for Delay-1 Alphas"
+          ],
+          [
+            "Turnover",
+            "1% < Turnover < 70%"
+          ],
+          [
+            "Weight test",
+            "Max weight in any stock < 10%. This measures if sufficient number of stocks are assigned weight for sufficient days in a year. Number varies with simulation universe (Top 3000, Top 2000 etc.)"
+          ],
+          [
+            "Sub universe test",
+            "The Sharpe in the sub universe must be higher than at least one threshold. \nThese thresholds scale down Sharpe with sub universe size. You can find detailed example below."
+          ],
+          [
+            "Self-Correlation",
+            "<0.7 PnL correlation. Or Sharpe at least 10% greater than other correlated Alphas submitted by user"
+          ]
+        ],
+        "firstRowIsTableHeader": true,
+        "firstColIsHeader": false
+      },
+      "id": "02499847-5e8e-4276-a10e-d2b7984fb0ca"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Self-correlation"
+      },
+      "id": "f01bb20d-0b01-4370-a735-e159eb335d7f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li data-block-key=\"4a0qt\">Alphas can also qualify if their Sharpe is greater, by 10% or more, than that of all Alphas with which their correlation is higher than the cutoff.<ul><li data-block-key=\"mmczp\">For example, if your earlier submitted Alpha X has a Sharpe of 3.18, you can submit a highly correlated Alpha Y, if its Sharpe is 3.5 or more</li><li data-block-key=\"1b5xy\">This allows for making improvements to an existing Alpha.</li><li data-block-key=\"4b38o\">The Sharpe value used for this comparison (3.18) is visible in the correlation summary table in the simulation results.</li></ul></li><li data-block-key=\"migxj\"><a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details%C2%A0*).-,Self%20correlation,-Maximum\">Self correlation</a> operates on a four-year window whereas the inner <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=locations.-,Correlation,-Correlation\">correlation</a> operates on the intersect of the selected Alpha&#x27;s <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=consultants-,Profit%20and%20Loss%20(PnL),-Profit\">PnL</a> time periods.</li></ul>",
+      "id": "660599ae-2de4-4c17-b608-77ad793ca27f"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Weight"
+      },
+      "id": "d447adcd-99e0-435e-bfd8-cd71f12703e1"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"mlc61\"></p><p data-block-key=\"q99n4\">Alphas are also tested on the distribution of Alpha <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=W-,Weight,-BRAIN\">weights</a> across stocks. Alphas can fail this test if:</p><ul><li data-block-key=\"drnyh\"><a href=\"https://support.worldquantbrain.com/hc/en-us/community/posts/8394917303575-Why-fundamental-alphas-always-show-Weight-is-too-strongly-concentrated-or-too-few-instruments-are-assigned-weight-\">Too few stocks are assigned</a> weight for significant number of days in a year. Note that assigning zero weights to all stocks at the start of the <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=definition.-,Simulation,-Simulation\">simulation</a> does not fail this condition, it only applies after the Alpha starts assigning weights. The exact number of minimum stocks varies with the simulation <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=U-,Universe,-Universe\">universe</a>.</li><li data-block-key=\"a6qt4\">Alpha weight is too concentrated in any one stock. For example, if one stock has 30 percent of all Alpha weight, it will fail this test.</li></ul>",
+      "id": "3ced3f8d-c3ec-4bf0-8caf-e0ed13d34d9b"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Sub Universe Test"
+      },
+      "id": "b6f3f759-dd32-4fcc-a6e8-d0aea951392f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"tjgfy\"></p><p data-block-key=\"298e4\"><b>Sub-universe test</b> is one of the robustness tests performed on an Alpha by the BRAIN platform before submission. In simple words, it ensures that your Alpha works not only in the universe you are trying to submit, but that it would also work in the next more liquid (or smaller) universe to some extent.</p><p data-block-key=\"nride\">E. g. if you are trying to submit an Alpha on USA TOP3000, the platform will also check its performance on USA TOP1000. If it performs poorly, then it means that your Alpha is generating most of the profit on the non-liquid portion of stocks, which is one of the signs that your Alpha is not robust enough and most likely will not perform as well as expected in out-of-sample testing. That’s why such Alphas are not allowed to be submitted on Brain.</p><p data-block-key=\"kq7wu\">Technical details:</p><ul><li data-block-key=\"cf3au\">The threshold to pass the sub-universe test is defined by the formula:</li></ul><p data-block-key=\"79hoc\">subuniverse_sharpe &gt;= 0.75 * sqrt(subuniverse_size / alpha_universe_size) * alpha_sharpe</p><ul><li data-block-key=\"9vlcz\">Sub-Universe Sharpe is calculated using PnL of Alpha obtained through the following process (notice that it is similar to the Sharpe of an Alpha simulated in the sub-universe, but not exactly the same, as you will see in the example below):<ul><li data-block-key=\"fhvar\"><a href=\"https://platform.worldquantbrain.com/learn/data-and-operators/operators#:~:text=constant.%20Detailed%20description-,pasteurize(x),-Set%20to%20NaN\">Pasteurize</a> to the target universe, that is, for all stocks not in the sub-universe, assign value of NaN</li><li data-block-key=\"3ouij\">Apply <a href=\"https://platform.worldquantbrain.com/learn/documentation/create-alphas/simulation-settings#7-neutralization\">market neutralization</a> to resulting set (subtract mean of all values from each value) and then scale Alpha back to original size.</li><li data-block-key=\"60l13\">Calculate PnL using resulting Alpha values</li></ul></li></ul><p data-block-key=\"mwxar\">Consider an Alpha in USA TOP3000 which fails sub-universe test:</p><p data-block-key=\"l1gxy\"></p>",
+      "id": "3ad5ea53-8a2e-4f06-beb6-76efde5404ab"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "check111.png",
+        "width": 1247,
+        "height": 917,
+        "fileSize": 66041,
+        "url": "https://api.worldquantbrain.com/content/images/1wfhNpE5XxOjla9kRCkMef4-U6w=/262/original/check111.png"
+      },
+      "id": "77d12b34-9bde-4259-8720-7c7638443e2c"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Subuniverse 3.png",
+        "width": 1246,
+        "height": 120,
+        "fileSize": 15932,
+        "url": "https://api.worldquantbrain.com/content/images/YmzeSY0hG6D_LPaNmL_uiF2upS8=/263/original/Subuniverse_3.png"
+      },
+      "id": "3972e393-64c3-4e67-b87e-035ae175802e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"uiu3q\">Notice cutoff 0.75 * sqrt(subuniverse_size / alpha_universe_size) * alpha_sharpe = 0.75 * sqrt(1000 / 3000) * 2.73 = 1.18</p><p data-block-key=\"atk3o\">Let’s check this Alpha performance on next more liquid universe, TOP1000</p>",
+      "id": "fd3e6ef2-bb49-4140-ba52-7aa616a1601c"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "subuniverse 5.png",
+        "width": 1237,
+        "height": 882,
+        "fileSize": 68558,
+        "url": "https://api.worldquantbrain.com/content/images/RyI4S_xylf7vnzH7LYZhlI4-Oc8=/264/original/subuniverse_5.png"
+      },
+      "id": "19374d0b-88f2-4866-ac85-039ca665b045"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "subinverse 6.png",
+        "width": 1238,
+        "height": 120,
+        "fileSize": 16163,
+        "url": "https://api.worldquantbrain.com/content/images/j0s5ua5v4ni94ys_tskBOA9TYBM=/265/original/subinverse_6.png"
+      },
+      "id": "53c97aa9-5438-4222-833e-e600e81b80dc"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"ex7az\">As you see, Sharpe ratio degraded significantly to 1.17, less than the cutoff of 1.18.</p>",
+      "id": "6636a010-842e-4f8d-b441-1ddc8b3d57f9"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "article_6_subuniverse_test.png",
+        "width": 1141,
+        "height": 568,
+        "fileSize": 37665,
+        "url": "https://api.worldquantbrain.com/content/images/zi-tl7bvwSnTZN4NWZIVcRJ3tMk=/447/original/article_6_subuniverse_test.png"
+      },
+      "id": "37b35dc2-370a-4078-afc8-8205b684964d"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"k7wqb\">Tips to help you improve your Alpha(s) and pass the sub-universe test:</p><ul><li data-block-key=\"u1kon\">Avoid using multipliers related to the size of the company in your Alphas, e.g. rank(-assets), 1 – rank(cap), etc. These multipliers may significantly shift the distribution of your Alpha weights to more/less liquid side and it may affect the sub-universe performance</li><li data-block-key=\"d8jyl\">Try decaying separately the liquid and non-liquid parts of your signal. As a proxy for liquidity you can use cap or volume*close, for example instead of<br/>“ts_decay_linear(signal, 10)”<br/>you can try<br/>“ts_decay_linear(signal, 5) * rank(volume*close) + ts_decay_linear(signal, 10) * (1 – rank(volume*close))”</li><li data-block-key=\"t7tkl\">Check out your Alpha improvements step by step, maybe one of them resulted in better stats, but at the same time Alpha started to fail sub-universe test?</li><li data-block-key=\"3fdjg\">Try these <a href=\"https://support.worldquantbrain.com/hc/en-us/community/posts/8123350778391-How-do-you-get-a-higher-Sharpe-\">tips</a> to improve overall Sharpe of your Alpha</li><li data-block-key=\"34bi4\">If nothing helps - don’t get upset. Some signals are just not robust. It is always sad to discard an Alpha with good IS performance, but remember: your long-term success as a quant depends on how your Alphas will perform in out-of-sample, not during in-sample simulation. Most likely, you just dodged a bad Alpha.</li></ul>",
+      "id": "ec85b21b-34fd-443a-bbb7-1c8757e03e85"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Special Alpha Types"
+      },
+      "id": "cb439dfc-e628-4e3b-bf61-44d807c02c57"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "article_6_special_alpha_types.png",
+        "width": 1149,
+        "height": 505,
+        "fileSize": 59144,
+        "url": "https://api.worldquantbrain.com/content/images/xmfHGN_OrCNLYB9Y8C-BWKbD4-Y=/446/original/article_6_special_alpha_types.png"
+      },
+      "id": "004886cf-df45-4b97-a6b8-52107be798b6"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "ATOM Alphas"
+      },
+      "id": "832a3c8e-fb0c-4aa5-ab3a-8ff141cdddb5"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li data-block-key=\"huaro\">ATOM Alphas are Alphas that use fields from only 1 dataset. The following grouping fields are excluded when counting datasets and do not disqualify an Alpha from being an ATOM: currency, country, exchange, sector, industry, subindustry, market, split, adjfactor</li><li data-block-key=\"avbsn\">Using the inst_pnl operator will be counted as using the pv1 dataset. Therefore, inst_pnl(&lt;field_from_non_pv1_dataset&gt;) will not qualify as an ATOM Alpha</li><li data-block-key=\"h6pvp\">ATOM Alphas can skip the IS Ladder Sharpe test. ATOM Alphas must pass regular IS tests and the 2Y Sharpe test.</li></ul>",
+      "id": "d3962f9e-e379-4d5a-a852-e6b4b10c19fe"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Pyramid Alphas"
+      },
+      "id": "970fd534-7436-428d-b4ec-f370f18471b1"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li data-block-key=\"zqh32\">Pyramids are defined as a combination of region, delay, and dataset category. Example: USA-D1-analyst represents a pyramid for USA region, Delay-1, and analyst dataset category</li><li data-block-key=\"zw846\">A single Alpha can belong to multiple pyramids if the Alpha uses multiple data fields from different categories. Pyramid Alphas are Alphas that contribute to a maximum of 2 pyramids.</li><li data-block-key=\"9qrb9\">The following grouping fields are excluded when counting pyramids and do not disqualify an Alpha from being a pyramid: currency, country, exchange, sector, industry, subindustry, market, split, adjfactor. Example: An Alpha using two pyramids + neutralization fields will still count as contributing to only 2 pyramids and qualifies as a Pyramid Alpha</li></ul>",
+      "id": "95d61808-03b1-450a-bda3-b06875ee6279"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "2",
+        "content": "Power Pool Alphas"
+      },
+      "id": "8528258e-aa1d-4981-977e-dd60dc28557c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"340d5\">Criteria for Power Pool Alphas:</p><ul><li data-block-key=\"fj412\">Sharpe &gt;= 1.0</li><li data-block-key=\"82n6g\">Number of total operators &lt;= 8 (including repeat operators). The ts_backfill and group_backfill operators are not counted toward this limit.</li><li data-block-key=\"8bdig\">Number of unique data fields (excluding grouping fields) &lt;= 3</li><li data-block-key=\"b0if5\">Grouping fields: country, industry, subindustry, currency, market, sector, exchange, split, adjfactor</li><li data-block-key=\"bddr6\">Power Pool Correlation &lt; 0.5. If the Power Pool correlation is &gt; 0.5, the Alpha must have a Sharpe at least 10% higher than the most correlated Alpha to be considered eligible for submission.</li><li data-block-key=\"d8a67\">Once you tag an Alpha as power pool, it stays in the self-correlation pool even if you untag it later</li><li data-block-key=\"3cvvk\">The Alpha must pass turnover tests</li><li data-block-key=\"bamp8\">The Alpha must pass the sub-universe test</li><li data-block-key=\"chrfi\">The Alpha must pass the robust-universe test (where applicable)</li><li data-block-key=\"4qrn1\">Eligible region, delay, universe and other conditions (risk neutralization, datasets, turnover ranges, etc) are defined by the active Power Pool theme (e.g. GLB/D1, All regions/D0, EUR/D1 Fast Factors)</li><li data-block-key=\"7g1mq\">An Alpha description is required — it must include the Idea, the Rationale for data used, and the Rationale for operators used</li></ul><p data-block-key=\"c1441\">You may find out more about Power Pool Alphas <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/30786433958039-Which-Alphas-are-eligible-for-Power-Pool-Alphas-Competition\">here</a>.</p>",
+      "id": "ceb44f8f-d95a-402f-b000-23c1af18398c"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Sub-Geography Sharpe Cutoff for GLB Alphas"
+      },
+      "id": "8e262917-1e01-4920-b317-470984d3d424"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Submission Criteria",
+            "Threshold"
+          ],
+          [
+            "AMER Sharpe ",
+            "≥ 1"
+          ],
+          [
+            "APAC Sharpe",
+            "≥ 1"
+          ],
+          [
+            "EMEA Sharpe ",
+            "≥ 1"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": true
+      },
+      "id": "4ac872d4-6941-4875-875a-4cb503170f5e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"x4b8t\"></p><p data-block-key=\"wd5iv\">GLB Alphas are subject to additional sub-geography Sharpe cutoff criteria. These criteria ensure that your Alpha isn’t just performing well globally but is also delivering consistent returns across all three geographies. The goal is to avoid over-reliance on a single geography and encourage a more balanced contribution to your overall PnL.</p><p data-block-key=\"lalcz\"></p><p data-block-key=\"g2he0\"><b>Tips to Improve Sharpe Across Geographies</b></p><ul><li data-block-key=\"e94hj\"><b>AMER</b>: Focus on high-liquidity equities and consider incorporating earnings-related signals, as the stocks in these markets are highly responsive to earnings announcements.</li><li data-block-key=\"gwe94\"><b>APAC</b>: Pay attention to market microstructure data, as price-volume patterns in APAC markets often differ due to shorter market hours and unique market regulations.</li><li data-block-key=\"z8nru\"><b>EMEA</b>: Explore macroeconomic indicators, as EMEA stocks are often influenced by geopolitical events and currency fluctuations.</li><li data-block-key=\"d7rt6\">GLB Alphas also include a breakdown of global PnL by geography in their PnL chart, making it easy to see how much each geography is contributing. This helps you identify imbalances and determine areas for improvement.</li></ul>",
+      "id": "8ace0cb8-6180-4ae5-8c89-1d659c092ff3"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Picture1.png",
+        "width": 624,
+        "height": 442,
+        "fileSize": 84498,
+        "url": "https://api.worldquantbrain.com/content/images/XRKUfH1WF2_5hHtfWieOJ37eCIY=/422/original/Picture1.png"
+      },
+      "id": "94da55ea-933b-4bad-bf6d-534869cd5f28"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Japan Robustness Sharpe Test for ASI Alphas Submission"
+      },
+      "id": "1d16f3e7-1927-43b4-93e6-ab2523b2caa0"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"6k52u\"></p><p data-block-key=\"5dlww\"><b>Criteria: Japan Robustness Sharpe ≥ 1</b></p><p data-block-key=\"nsw3e\">ASI Alphas are subject to an additional country-specific robustness check focused on Japan. This criterion ensures that your Alpha delivers consistent, scalable performance within Japan, one of most liquid markets in ASI. Japan market provides and enhance executable capacity for live trading. If an ASI alpha is weak in Japan and derives most of its PnL outside JPN, it becomes difficult to realize due to lower liquidity, higher slippage, and limited capacity in other markets. Ensuring each ASI alpha achieves a minimum 1 Sharpe performance in Japan increases the realizability and scalability of PnL across ASI.</p><p data-block-key=\"22j8z\"><b>Note on Japan Sharpe shown in Visualization Tool versus this Test</b></p><ul><li data-block-key=\"4buuh\">The Japan Robustness Sharpe Test and the Visualization Tool use different Japan universes. Consequently, the test result may differ from the Japan Sharpe displayed in the Visualization Tool.</li><li data-block-key=\"5835h\">The Visualization Tool remains highly useful for diagnosing Japan-specific PnL, turnover dynamics, sector/industry and capitalization breakdowns, and coverage trends, which can guide improvements to Japan robustness.</li></ul>",
+      "id": "1d7902d4-b883-4492-8e63-ec1dba9fb3a3"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Picture1.png",
+        "width": 362,
+        "height": 344,
+        "fileSize": 27689,
+        "url": "https://api.worldquantbrain.com/content/images/Sn88d4bs2GHr8DWkYNNwoAz7vRg=/448/original/Picture1.png"
+      },
+      "id": "fa7181ad-850c-4366-ba3c-e91b1f5eeb62"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"9201n\"></p><p data-block-key=\"nrg0v\"><b>Tips to Improve Japan Sharpe</b></p><ul><li data-block-key=\"tazdt\">Strengthen economic rationale: Favor signals with clear intuition that plausibly hold in Japan (e.g., earnings revision persistence, conservative accruals, quality/low-risk tilts, liquidity-aware momentum). For example, you can improve your Alpha in JPN Region and re-simulate it to finally submit it in ASI region if alpha initially has &lt;1 sharpe in JPN. Nonetheless, pass the Japan test with margin signals an economically grounded mechanism rather than country-specific overfitting.</li><li data-block-key=\"a03kc\">Liquidity-aware construction: Emphasize large- and mid-cap breadth; avoid over-reliance on micro-caps where slippage/impact erode realized performance. Keep single-instrument weights well below 10%.</li><li data-block-key=\"0f15f\">Avoid excessive size-only tilts: Unbounded cap or illiquidity multipliers can degrade robustness. If using cap/volume scalers, keep them bounded and balanced to prevent over-concentration.</li><li data-block-key=\"tbx1n\">Control sector/industry exposures: Use neutralization sensibly to avoid dominance by one industry. Inspect industry/sector-level PnL and Sharpe in the Visualization Tool to detect imbalances.</li><li data-block-key=\"tv4ch\">Stabilize turnover: Choose decay and smoothing that reduce churn without killing responsiveness. Very high turnover increases fragility under realistic costs; very low turnover may reduce adaptability.</li><li data-block-key=\"o4vu4\">Stress-test via Visualization Tool: Review Japan breakdowns for Coverage, Size, PnL, and Sharpe by Capitalization/Industry/Sector; analyze rolling performance, and seasonality. Even with universe differences, these diagnostics remain informative for improving Japan performance.</li></ul>",
+      "id": "885d71d4-9417-441c-b5a6-f8aeff6b6217"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Interpreting Status Messages in Simulation Results"
+      },
+      "id": "89944b33-2725-4491-be77-65b783cfd115"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"voc7d\">When “Check Submission” or “Submit Alpha” button is pressed, tests are performed in the order described below. In case Alpha fails any of the tests, respective Test Message is displayed.</p>",
+      "id": "8e94c619-531c-441a-8587-a50bf87f972f"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "SR. NO.",
+            "TEST RESULT",
+            "TEST MESSAGE"
+          ],
+          [
+            "1",
+            "Alpha fails Weight test",
+            "Maximum weight on an instrument is greater than 10% OR Weight is too strongly concentrated or too few instruments are assigned weight."
+          ],
+          [
+            "2",
+            "Alpha fails Correlation test",
+            "Reduce max correlation"
+          ],
+          [
+            "3",
+            "Alpha fails fitness test",
+            "Improve fitness"
+          ],
+          [
+            "4",
+            "Delay 0 Alpha fails checkDelay1Sharpe",
+            "Alpha better suited for Delay 1"
+          ],
+          [
+            "5",
+            "Alpha fails SubUniverse test",
+            "Improve Sharpe in SubUniverse"
+          ]
+        ],
+        "firstRowIsTableHeader": true,
+        "firstColIsHeader": false
+      },
+      "id": "a7563a3d-d214-4887-876a-d622b86bf381"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"jus5u\"></p><ul><li data-block-key=\"p7dpu\">Example: if an Alpha clears criteria 1, 2 and 3 but fails at criteria 4, recommendation would be “Improve Sharpe or reduce turnover”.</li></ul>",
+      "id": "7cb43ed4-2a90-4634-842e-5752581d4307"
+    },
+    {
+      "type": "HEADING",
+      "value": {
+        "level": "1",
+        "content": "Selecting Alphas For Submission"
+      },
+      "id": "4a4b2bca-7cf7-442c-b302-e9e4f0c0746c"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p data-block-key=\"wzyqy\"></p><p data-block-key=\"88ipl\"></p><ul><li data-block-key=\"woy4w\">Do not submit Alphas as soon they clear the performance cutoff. Improve the idea until you have the best version: in terms of both performance and correlation.</li><li data-block-key=\"qzewo\">However, do not spend extraordinary amount of time improving a single idea either:<ul><li data-block-key=\"89ok1\">It is generally better to try out new ideas with low correlation to previous ones than to improve performance of Alphas with high correlation.</li><li data-block-key=\"ftqrm\">Generally, low correlation is more important than minor increase in performance. Example: An Alpha with slightly better performance but high correlation is worse that an Alpha with slightly lower performance but much lower correlation</li></ul></li></ul>",
+      "id": "e5cfe7ab-c70f-4a5f-856a-646f98ffa5d0"
+    }
+  ],
+  "sequence": 0,
+  "category": "Getting Started",
+  "duration": "PT11M"
+}

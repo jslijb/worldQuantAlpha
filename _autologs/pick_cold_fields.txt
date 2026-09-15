@@ -1,0 +1,25 @@
+matrix 字段总数: 526
+已用 fnd6 字段数: 30
+aC<100 且未用过: 22
+   9  fnd6_newq_xoptdqp
+   9  fnd6_newqv1300_spceepsq
+  10  fnd6_newqv1300_prcaq
+  10  fnd6_newqv1300_xoptdq
+  11  fnd6_newqv1300_spceq
+  16  fnd6_newqv1300_pncq
+  20  fnd6_newqv1300_glced12
+  21  fnd6_newqv1300_prcdq
+  21  fnd6_newqv1300_spcedq
+  21  fnd6_newqv1300_xoptepsq
+  22  fnd6_newq_xoptepsqp
+  22  fnd6_newq_xoptqp
+  24  fnd6_pncdq
+  30  fnd6_newa2v1300_xopteps
+  34  fnd6_newqv1300_glceeps12
+  37  fnd6_pncepsq
+  47  fnd6_newqv1300_glcea12
+  74  fnd6_xintopt
+  80  fnd6_newqv1300_fcaq
+  87  fnd6_newqv1300_tfvceq
+  89  fnd6_tfvce
+  99  fnd6_newqv1300_xoptq

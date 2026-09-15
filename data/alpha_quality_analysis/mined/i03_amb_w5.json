@@ -1,0 +1,144 @@
+{
+ "id": "le8l3d17",
+ "type": "REGULAR",
+ "author": "LJ49886",
+ "settings": {
+  "instrumentType": "EQUITY",
+  "region": "USA",
+  "universe": "TOP3000",
+  "delay": 1,
+  "decay": 8,
+  "neutralization": "SUBINDUSTRY",
+  "truncation": 0.08,
+  "pasteurization": "ON",
+  "unitHandling": "VERIFY",
+  "nanHandling": "OFF",
+  "maxTrade": "OFF",
+  "maxPosition": "OFF",
+  "language": "FASTEXPR",
+  "visualization": false,
+  "startDate": "2019-01-01",
+  "endDate": "2023-12-31",
+  "testPeriod": "P1Y"
+ },
+ "regular": {
+  "code": "group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + rank(-ts_delta(close, 5)) + rank(volume/ts_mean(volume, 60))",
+  "description": null,
+  "operatorCount": 13
+ },
+ "dateCreated": "2026-09-08T07:20:47-04:00",
+ "dateSubmitted": null,
+ "dateModified": "2026-09-08T07:20:47-04:00",
+ "name": null,
+ "favorite": false,
+ "hidden": false,
+ "color": null,
+ "category": null,
+ "tags": [],
+ "classifications": [
+  {
+   "id": "DATA_USAGE:SINGLE_DATA_SET",
+   "name": "Single Data Set Alpha"
+  }
+ ],
+ "grade": "GOOD",
+ "stage": "IS",
+ "status": "UNSUBMITTED",
+ "is": {
+  "pnl": 5517843,
+  "bookSize": 20000000,
+  "longCount": 1545,
+  "shortCount": 1524,
+  "turnover": 0.1811,
+  "returns": 0.1115,
+  "drawdown": 0.0512,
+  "margin": 0.001232,
+  "sharpe": 2.12,
+  "fitness": 1.66,
+  "startDate": "2019-01-01",
+  "checks": [
+   {
+    "name": "LOW_SHARPE",
+    "result": "PASS",
+    "limit": 1.25,
+    "value": 2.12
+   },
+   {
+    "name": "LOW_FITNESS",
+    "result": "PASS",
+    "limit": 1.0,
+    "value": 1.66
+   },
+   {
+    "name": "LOW_TURNOVER",
+    "result": "PASS",
+    "limit": 0.01,
+    "value": 0.1811
+   },
+   {
+    "name": "HIGH_TURNOVER",
+    "result": "PASS",
+    "limit": 0.7,
+    "value": 0.1811
+   },
+   {
+    "name": "CONCENTRATED_WEIGHT",
+    "result": "PASS"
+   },
+   {
+    "name": "LOW_SUB_UNIVERSE_SHARPE",
+    "result": "PASS",
+    "limit": 0.92,
+    "value": 1.59
+   },
+   {
+    "name": "SELF_CORRELATION",
+    "result": "PENDING"
+   },
+   {
+    "name": "MATCHES_COMPETITION",
+    "result": "PASS",
+    "competitions": [
+     {
+      "id": "challenge",
+      "name": "Challenge"
+     }
+    ]
+   }
+  ]
+ },
+ "os": null,
+ "train": {
+  "pnl": 4835943,
+  "bookSize": 20000000,
+  "longCount": 1540,
+  "shortCount": 1521,
+  "turnover": 0.1818,
+  "returns": 0.1226,
+  "drawdown": 0.0512,
+  "margin": 0.001349,
+  "fitness": 1.84,
+  "sharpe": 2.24,
+  "startDate": "2019-01-01"
+ },
+ "test": {
+  "pnl": 681900,
+  "bookSize": 20000000,
+  "longCount": 1564,
+  "shortCount": 1536,
+  "turnover": 0.1784,
+  "returns": 0.0679,
+  "drawdown": 0.0326,
+  "margin": 0.000761,
+  "fitness": 0.96,
+  "sharpe": 1.56,
+  "startDate": "2022-12-31"
+ },
+ "prod": null,
+ "competitions": null,
+ "themes": null,
+ "pyramids": null,
+ "pyramidThemes": null,
+ "team": null,
+ "origin": "PLATFORM"
+}

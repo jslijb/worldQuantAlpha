@@ -1,0 +1,38 @@
+== MATRIX 且 id 以 est_ 开头 ==
+   est_eps | MATRIX | aC=14770 | u=7295 | Earnings per share - mean of estimations
+   est_capex | MATRIX | aC=7233 | u=2132 | Capital Expenditures - mean of estimations
+   est_rd_expense | MATRIX | aC=5364 | u=3087 | Research and Development Expense - mean of estimations
+   est_ptp | MATRIX | aC=4247 | u=2678 | Pretax income - mean of estimations
+   est_cashflow_op | MATRIX | aC=3777 | u=2108 | Cash Flow From Operations - mean of estimations
+   est_fcf | MATRIX | aC=3579 | u=2538 | Free Cash Flow - Mean of Estimations
+   est_epsr | MATRIX | aC=3415 | u=1239 | GAAP Earnings per share - mean of estimations
+   est_sales | MATRIX | aC=3138 | u=1153 | Sales - mean of estimations
+   est_netprofit | MATRIX | aC=2981 | u=1566 | Net profit - mean of estimations
+   est_ebit | MATRIX | aC=2468 | u=560 | Earnings before interest and taxes - mean of estimation
+   est_ebitda | MATRIX | aC=2263 | u=649 | Earnings before interest, taxes, depreciation, and amor
+   est_epsa | MATRIX | aC=1837 | u=811 | Earnings per share adjusted by excluding extraordinary 
+   est_netprofit_adj | MATRIX | aC=1681 | u=980 | Adjusted net income - Mean of estimations
+   est_bookvalue_ps | MATRIX | aC=1666 | u=774 | Book value per share - average of estimations
+   est_grossincome | MATRIX | aC=1579 | u=600 | Gross income - Mean of estimations
+   est_tot_assets | MATRIX | aC=1495 | u=781 | Total Assets - mean of estimations
+   est_shequity | MATRIX | aC=1333 | u=606 | Mean of SH Equity segment - mean of estimations
+   est_cashflow_fin | MATRIX | aC=1064 | u=435 | Cash Flow From Financing - mean of estimations
+   est_cashflow_invst | MATRIX | aC=767 | u=441 | Cash Flow From Investing - mean of estimations
+   est_sga | MATRIX | aC=746 | u=239 | SGA - mean of estimations
+   est_ptpr | MATRIX | aC=718 | u=372 | Reported pretax income - mean of estimations
+   est_tot_goodwill | MATRIX | aC=677 | u=316 | Total Goodwill - mean of estimations
+   est_fcf_ps | MATRIX | aC=508 | u=367 | Free Cash Flow Per Share - Mean of Estimations
+   est_dividend_ps | MATRIX | aC=488 | u=325 | Dividend per share - average of estimations
+   est_netdebt | MATRIX | aC=375 | u=196 | Net debt - mean of estimations
+   est_cashflow_ps | MATRIX | aC=366 | u=208 | Cash Flow Per Share - average of estimations
+   est_tbv_ps | MATRIX | aC=233 | u=153 | Tangible Book Value per Share - mean of estimations
+   est_ffo | MATRIX | aC=80 | u=37 | Funds From Operation - Summary on Estimations, Mean
+
+== 所有含 ratingvalue/rec 的字段(全类型) ==
+   anl4_basicdetailrec_ratingvalue | VECTOR | aC=574 | u=347 | Score on the given instrument
+   anl4_eaz2lrec_ratingvalue | VECTOR | aC=5886 | u=2749 | Score on the given instrument
+   anl4_fs_detail_rec_v4_nd_estimate | VECTOR | aC=24 | u=14 | Recommendation value/rating provided by the broker/anal
+   anl4_total_rec | VECTOR | aC=2646 | u=1693 | The total number of recommendations
+
+== MATRIX 字段总数 / VECTOR 字段总数 ==
+{'MATRIX': 938, 'VECTOR': 212, '{\n  "message":"API rate limit exceeded"\n}': 1}

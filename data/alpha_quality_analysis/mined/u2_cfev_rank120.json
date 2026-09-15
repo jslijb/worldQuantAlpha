@@ -1,0 +1,144 @@
+{
+ "id": "6XrlZaLp",
+ "type": "REGULAR",
+ "author": "LJ49886",
+ "settings": {
+  "instrumentType": "EQUITY",
+  "region": "USA",
+  "universe": "TOP3000",
+  "delay": 1,
+  "decay": 6,
+  "neutralization": "SUBINDUSTRY",
+  "truncation": 0.08,
+  "pasteurization": "ON",
+  "unitHandling": "VERIFY",
+  "nanHandling": "OFF",
+  "maxTrade": "OFF",
+  "maxPosition": "OFF",
+  "language": "FASTEXPR",
+  "visualization": false,
+  "startDate": "2019-01-01",
+  "endDate": "2023-12-31",
+  "testPeriod": "P1Y"
+ },
+ "regular": {
+  "code": "group_rank(ts_rank(cashflow_op/enterprise_value, 120), subindustry)",
+  "description": null,
+  "operatorCount": 3
+ },
+ "dateCreated": "2026-09-09T07:31:16-04:00",
+ "dateSubmitted": null,
+ "dateModified": "2026-09-09T07:31:16-04:00",
+ "name": null,
+ "favorite": false,
+ "hidden": false,
+ "color": null,
+ "category": null,
+ "tags": [],
+ "classifications": [
+  {
+   "id": "DATA_USAGE:SINGLE_DATA_SET",
+   "name": "Single Data Set Alpha"
+  }
+ ],
+ "grade": "INFERIOR",
+ "stage": "IS",
+ "status": "UNSUBMITTED",
+ "is": {
+  "pnl": 2910852,
+  "bookSize": 20000000,
+  "longCount": 1018,
+  "shortCount": 1028,
+  "turnover": 0.1261,
+  "returns": 0.0588,
+  "drawdown": 0.0657,
+  "margin": 0.000933,
+  "sharpe": 1.3,
+  "fitness": 0.89,
+  "startDate": "2019-01-01",
+  "checks": [
+   {
+    "name": "LOW_SHARPE",
+    "result": "PASS",
+    "limit": 1.25,
+    "value": 1.3
+   },
+   {
+    "name": "LOW_FITNESS",
+    "result": "FAIL",
+    "limit": 1.0,
+    "value": 0.89
+   },
+   {
+    "name": "LOW_TURNOVER",
+    "result": "PASS",
+    "limit": 0.01,
+    "value": 0.1261
+   },
+   {
+    "name": "HIGH_TURNOVER",
+    "result": "PASS",
+    "limit": 0.7,
+    "value": 0.1261
+   },
+   {
+    "name": "CONCENTRATED_WEIGHT",
+    "result": "PASS"
+   },
+   {
+    "name": "LOW_SUB_UNIVERSE_SHARPE",
+    "result": "PASS",
+    "limit": 0.56,
+    "value": 1.21
+   },
+   {
+    "name": "SELF_CORRELATION",
+    "result": "PENDING"
+   },
+   {
+    "name": "MATCHES_COMPETITION",
+    "result": "PASS",
+    "competitions": [
+     {
+      "id": "challenge",
+      "name": "Challenge"
+     }
+    ]
+   }
+  ]
+ },
+ "os": null,
+ "train": {
+  "pnl": 2339007,
+  "bookSize": 20000000,
+  "longCount": 1012,
+  "shortCount": 1022,
+  "turnover": 0.128,
+  "returns": 0.0593,
+  "drawdown": 0.0657,
+  "margin": 0.000927,
+  "fitness": 0.85,
+  "sharpe": 1.25,
+  "startDate": "2019-01-01"
+ },
+ "test": {
+  "pnl": 571845,
+  "bookSize": 20000000,
+  "longCount": 1045,
+  "shortCount": 1050,
+  "turnover": 0.1189,
+  "returns": 0.057,
+  "drawdown": 0.0159,
+  "margin": 0.000958,
+  "fitness": 1.13,
+  "sharpe": 1.67,
+  "startDate": "2022-12-31"
+ },
+ "prod": null,
+ "competitions": null,
+ "themes": null,
+ "pyramids": null,
+ "pyramidThemes": null,
+ "team": null,
+ "origin": "PLATFORM"
+}

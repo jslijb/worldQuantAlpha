@@ -1,0 +1,13 @@
+﻿cid,alpha_id,status,source,S,F,T,R,DD,trainS,trainF,testS,testF,testDD,error,expr
+f01_cash_rev,1YxdakJW,UNSUBMITTED,cash锚+短反转,2.07,1.31,0.1985,0.0791,0.0321,2.0,1.27,2.52,1.56,0.0183,,"group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2))"
+f02_xrent_rev,om6l31b6,UNSUBMITTED,租金锚+短反转,2.09,1.6,0.1687,0.099,0.0317,2.26,1.82,1.36,0.81,0.022,,"group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2))"
+f03_acc_rev,zqYmJlk1,UNSUBMITTED,应计锚+短反转,1.65,1.1,0.1635,0.0732,0.0643,1.53,0.99,2.12,1.58,0.0268,,"group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + rank(-ts_delta(close, 2))"
+f04_wc_rev,j2309QVW,UNSUBMITTED,营运资本锚+短反转,0.62,0.33,0.1666,0.0466,0.2144,0.41,0.18,2.0,1.56,0.0278,,"group_rank(assets_curr/assets, subindustry) + rank(-ts_delta(close, 2))"
+f05_52w_rev,,SIM_FAIL,52周高位+短反转,,,,,,,,,,,"{""id"": ""2X0aGwbD84QG8BbfbkipsRe"", ""type"": ""REGULAR"", ""status"": ""ERROR"", ""message"": ""Attempted to use inaccessible or unknown operator \""ts_max\"". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>"", ""location"": {""line"": 1, ""start"": 17, ""end"": 35, ""property"": ""regular""}, ""links"": {""lin","group_rank(close/ts_max(close, 250), subindustry) + rank(-ts_delta(close, 2))"
+f06_liq_rev,9qVrabLe,UNSUBMITTED,低流动性锚+短反转,0.26,0.11,0.1875,0.0317,0.4141,0.25,0.1,0.32,0.14,0.0988,,"group_rank(-volume/cap, subindustry) + rank(-ts_delta(close, 2))"
+f07_ebit_rev,58QOa9O6,UNSUBMITTED,ebit/ev锚+短反转,1.71,1.17,0.2083,0.0982,0.0871,1.76,1.25,1.49,0.85,0.0223,,"group_rank(ts_av_diff(ebit/enterprise_value, 60), subindustry) + rank(-ts_delta(close, 2))"
+f08_opex_rev,9qVra9ke,UNSUBMITTED,费用锚+短反转,1.87,1.29,0.1635,0.0783,0.041,1.67,1.11,2.84,2.25,0.0189,,"group_rank(operating_expense/assets, subindustry) + rank(-ts_delta(close, 2))"
+f09_sector_grp,le8lQ3n7,UNSUBMITTED,e04换sector分组降相关,2.53,1.96,0.2211,0.1324,0.0448,2.67,2.17,1.87,1.1,0.0384,,"group_rank(liabilities_curr/assets, sector) + rank(-ts_delta(close, 2))"
+f10_mult_strc,Vk6P2G00,UNSUBMITTED,e04乘法结构降相关,2.41,1.78,0.1904,0.1039,0.0338,2.56,2.0,1.71,0.94,0.0313,,"group_rank(liabilities_curr/assets, subindustry) * rank(-ts_delta(close, 2))"
+f11_vol_surge,QP3V2bVG,UNSUBMITTED,e04+放量第三信号,2.58,2.0,0.1986,0.1195,0.0578,2.64,2.11,2.33,1.55,0.0312,,"group_rank(liabilities_curr/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+f12_vwap_rev,1YxdalNW,UNSUBMITTED,e04换vwap反转,2.47,1.95,0.1678,0.1047,0.0362,2.61,2.17,1.83,1.11,0.0306,,"group_rank(liabilities_curr/assets, subindustry) + rank(-ts_delta(vwap, 2))"

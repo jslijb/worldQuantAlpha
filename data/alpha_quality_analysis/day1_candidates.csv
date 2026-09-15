@@ -1,0 +1,11 @@
+﻿id,type,settings,regular,dataset,decay,neutralization,source,note
+c1,alpha,"region=USA&universe=TOP3000&delay=1&neut=market&decay=5&trunc=0.08",group_rank(etz_eps_delta, subindustry),analyst,5,market,示例4+换字段,分析师预期修正
+c2,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=5&trunc=0.08",rank(snt_bullish - snt_bearish),sentiment,5,subindustry,新数据集,情绪多空差
+c3,alpha,"region=USA&universe=TOP3000&delay=1&neut=industry&decay=5&trunc=0.08",rank(ts_av_diff(news_volume_1h, 5)),news,5,industry,新数据集,新闻成交量异动
+c4,alpha,"region=USA&universe=TOP3000&delay=1&neut=industry&decay=5&trunc=0.08",rank(ts_rank(cust_ret, 20)),relationship,5,industry,新数据集,供应链传导动量
+c5,alpha,"region=USA&universe=TOP3000&delay=1&neut=market&decay=0&trunc=0.08",group_rank(eps / close, subindustry),fundamental,0,market,示例3,价值因子E/P
+c6,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=0&trunc=0.08",close > ts_sum(close, 20) / 20 ? 1.6 * rank(-ts_delta(close, 2)) : rank(-ts_delta(close, 2)),pv,0,subindustry,示例11,SMA20增强反转
+c7,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=130&trunc=0.08",rank((ts_sum(open > close, 20) / ts_sum(open < close, 20)) / (ts_sum(open > close, 252) / ts_sum(open < close, 252))),pv,130,subindustry,示例7,月度涨跌天数比
+c8,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=6&trunc=0.08",-rank(ts_delta(close, 2)) * (1 - rank(ts_decay_linear(volume / sum(volume, 30), 10))),pv,6,subindustry,示例1,量价加权均值回归
+c9,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=5&trunc=0.08",rank(ts_delay(close, 2) - ts_regression(close, vwap, 60, rettype=3)),pv,5,subindustry,示例6,收盘相对VWAP回归残差
+c10,alpha,"region=USA&universe=TOP3000&delay=1&neut=subindustry&decay=20&trunc=0.08",rank(cashflow_op / net_income),fundamental,20,subindustry,新字段,财务质量因子

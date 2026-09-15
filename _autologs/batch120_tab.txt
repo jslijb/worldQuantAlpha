@@ -1,0 +1,11 @@
+cid      id              S      F    S+F        T        R      DD     tS     多     空  FAIL
+w120_a   vRkEWOpb     2.05   1.59   3.64   0.1553    0.093   0.047   1.13  1622  1449  []
+w120_b   O0rLlAb1     2.17   1.85   4.02   0.1297   0.0947   0.038   1.04  1620  1451  ['LOW_SUB_UNIVERSE_SHARPE']
+w120_c   qMWaQO7Z     1.75   1.14   2.89   0.1638     0.07  0.0381    0.5  1543  1426  ['LOW_SUB_UNIVERSE_SHARPE']
+w120_d   om6bxRll     1.78   1.45   3.23   0.1279   0.0852  0.0654   0.75  1577  1494  []
+w120_e   P0ZRkKaJ     1.94   1.65   3.59   0.1165   0.0899  0.0515   0.47  1571  1500  []
+w120_f   8830MYX7     2.04   1.74   3.78   0.1071   0.0907  0.0387   0.82  1626  1445  []
+w120_g   YP5VRoQM     1.79   1.31   3.10   0.1175   0.0672   0.026   0.28  1513  1412  ['LOW_SUB_UNIVERSE_SHARPE']
+w120_h   9qVeNOXd     2.14   1.85   3.99   0.1075   0.0931  0.0363   0.87  1608  1463  ['LOW_SUB_UNIVERSE_SHARPE']
+w120_p   akL05pb1     0.27   0.03   0.30   1.1249   0.0112  0.0801  -0.63   248  1223  ['LOW_SHARPE', 'LOW_FITNESS', 'HIGH_TURNOVER', 'CONCENTRATED_WEIGHT']
+w120_q   qMWaQRGE     0.31   0.03   0.34   1.1056   0.0119   0.084  -0.75   605  1520  ['LOW_SHARPE', 'LOW_FITNESS', 'HIGH_TURNOVER']

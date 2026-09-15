@@ -1,0 +1,32 @@
+﻿no,id,expr,S,F,S+F,tier,cat,liabcurr,cf_ev,close_rank,returns20,corr_vol,rev_assets,ni_cfo,date_MM_DD,cash_assets,ebit_ev,subind,yin,xrent,xopr
+1,58p2XdxX,liabilities/assets,1.55,1.34,2.89,D(<3.0),single,True,False,False,False,False,False,False,08/15,False,False,False,False,False,False
+2,wpjoxbbd,"gr(ts_rank(cf/ev,60),ind) dec=4",1.37,1.0,2.37,D(<3.0),single,False,True,False,False,False,False,False,08/27,False,False,False,False,False,False
+3,rKj7w0Z1,"gr(ts_rank(cf/ev,60),ind) dec=6",1.6,1.24,2.84,D(<3.0),single,False,True,False,False,False,False,False,08/28,False,False,False,False,False,False
+4,RR79x16n,liabilities_curr/assets,1.47,1.16,2.63,D(<3.0),single,True,False,False,False,False,False,False,08/28,False,False,False,False,False,False
+5,9qX8Nr6r,liabilities_curr/cap,1.26,1.49,2.75,D(<3.0),single,True,False,False,False,False,False,False,08/28,False,False,False,False,False,False
+6,vRjG1Jzw,"gr(ts_av_diff(cf/ev,60),ind) delay=1",1.79,1.27,3.06,C(3.0-3.39),single,False,True,False,False,False,False,False,08/29,False,False,False,False,False,False
+7,QP7z069Q,"signed_power(liabilities_curr/assets,0.5)",1.64,1.38,3.02,C(3.0-3.39),single,True,False,False,False,False,False,False,08/29,False,False,False,False,False,False
+8,1YwKML56,"gr(ts_av_diff(cf/ev,60),ind) delay=0",2.21,1.75,3.96,B(3.4-3.99),single,False,True,False,False,False,False,False,08/29,False,False,False,False,False,False
+9,1YwRK1wW,"gr(liabcurr/assets)+gr(-ts_rank(close,20))",2.11,1.31,3.42,B(3.4-3.99),combo,True,False,True,False,False,False,False,08/30,False,False,False,False,False,False
+10,9qX3M2mq,"gr(liabcurr/assets)+gr(-ts_rank(close,10))",2.49,1.45,3.94,B(3.4-3.99),combo,True,False,True,False,False,False,False,08/31,False,False,False,False,False,False
+11,kqjpepz8,"gr(liabcurr/assets)+gr(-ts_rank(close,5))",2.74,1.42,4.16,A(>=4.0),combo,True,False,True,False,False,False,False,08/31,False,False,False,False,False,False
+12,N1QxNQK7,"gr(liabcurr/cap)+gr(-ts_rank(close,5))",2.06,1.17,3.23,C(3.0-3.39),combo,True,False,True,False,False,False,False,09/02,False,False,False,False,False,False
+13,e79kPeEM,"gr(liabcurr/assets)+gr(ts_av_diff(cf/ev,60))+gr(-ts_rank(close,5))",3.02,1.79,4.81,A(>=4.0),combo,True,True,True,False,False,False,False,09/02,False,False,False,False,False,False
+14,qMW92Az2,"gr(liabcurr/cap)+gr(ts_av_diff(cf/ev,60))+gr(-ts_rank(close,10))",2.32,1.6,3.92,B(3.4-3.99),combo,True,True,True,False,False,False,False,09/02,False,False,False,False,False,False
+15,E5v15JPJ,"gr(liabcurr/assets)+gr(-ts_corr(close,vol,20))",1.67,1.14,2.81,D(<3.0),combo,True,False,False,False,True,False,False,09/02,False,False,False,False,False,False
+16,le8ddYbe,"gr(liabcurr/assets)+gr(-ts_corr(close,vol,20))+gr(ts_av_diff(cf/ev,60))",2.41,1.87,4.28,A(>=4.0),combo,True,True,False,False,True,False,False,09/02,False,False,False,False,False,False
+17,akLqqmm6,"gr(ts_av_diff(cash/assets,30))+gr(-ts_rank(close,5))+gr(-ts_corr(close,vol,20))",1.71,1.23,2.94,D(<3.0),combo,False,False,True,False,True,False,False,09/03,True,False,False,False,False,False
+18,A10MYm3d,"gr(ts_av_diff(ebit/ev,30))+gr(-ts_rank(close,5))+gr(-ts_corr(close,vol,20))",1.9,1.46,3.36,C(3.0-3.39),combo,False,False,True,False,True,False,False,09/03,False,True,False,False,False,False
+19,QP3XalpK,"gr(-(ni-cashflow_op)/assets)+gr(-ts_av_diff(close,20))",1.27,1.07,2.34,D(<3.0),combo,False,False,False,False,False,False,True,09/03,False,False,False,False,False,False
+20,wpYgReRx,"gr(rev/assets)+gr(-ts_av_diff(close,20))",1.54,1.41,2.95,D(<3.0),combo,False,False,False,False,False,True,False,09/03,False,False,False,False,False,False
+21,MP1mQRro,"gr(-(ni-cfo)/assets)+gr(rev/assets)+gr(-ts_av_diff(close,20))",1.91,1.74,3.65,B(3.4-3.99),combo,False,False,False,False,False,True,True,09/04,False,False,False,False,False,False
+22,om6ea8j6,"gr(-(ni-cfo)/assets)+gr(-ts_rank(returns,20))",2.0,1.25,3.25,C(3.0-3.39),combo,False,False,False,True,False,False,True,09/04,False,False,False,False,False,False
+23,RRVLeabj,"gr(rev/assets)+gr(-ts_rank(returns,20))",1.61,1.09,2.7,D(<3.0),combo,False,False,False,True,False,True,False,09/04,False,False,False,False,False,False
+24,58QVJA9M,"gr(ts_av_diff(cash/assets,30))+gr(-ts_rank(returns,20))",2.15,1.27,3.42,B(3.4-3.99),combo,False,False,False,True,False,False,False,09/04,True,False,False,False,False,False
+25,6XrbGx1L,"gr(-(ni-cfo)/assets)+gr(rev/assets)+gr(-ts_rank(returns,20))",2.26,1.75,4.01,A(>=4.0),combo,False,False,False,True,False,True,True,09/04,False,False,False,False,False,False
+26,58Q7kl1z,"gr(cash/assets trend)+gr(ebit/ev trend)+gr(-ts_rank(returns,20)) SUBIND",2.14,1.49,3.63,B(3.4-3.99),combo,False,False,False,True,False,False,False,09/05,True,True,True,False,False,False
+27,A10a7pdY,"gr(yin5 vol)+gr(rev/assets)+gr(-ts_rank(returns,20)) SUBIND",2.32,1.54,3.86,B(3.4-3.99),combo,False,False,False,True,False,True,False,09/06,False,False,True,True,False,False
+28,883OXpJl,"gr(fnd6_xrent/assets)+gr(assets_curr/assets trend)+gr(-ts_rank(returns,20)) SUBIND",2.48,1.78,4.26,A(>=4.0),combo,False,False,False,True,False,False,False,09/07,False,False,True,False,True,False
+29,j23nOrVW,"gr(fnd6_xrent/assets)+gr(fnd6_xopr/assets)+gr(-ts_corr(close,vol,20)) SUBIND",1.92,1.51,3.43,B(3.4-3.99),combo,False,False,False,False,True,False,False,09/07,False,False,True,False,True,True
+30,LL9n2Jp1,"gr(debt_st/assets)+gr(operating_expense/assets)+gr(-ts_rank(returns,20)) SUBIND",2.22,1.57,3.79,B(3.4-3.99),combo,False,False,False,True,False,False,False,09/07,False,False,True,False,False,False
+31,E5vkQ76G,"gr(fn_accrued_liab_curr_a/assets)+gr(-ts_rank(returns,20)) SUBIND",2.39,1.72,4.11,A(>=4.0),combo,False,False,False,True,False,False,False,09/07,False,False,True,False,False,False

@@ -1,0 +1,330 @@
+========================================================================
+A 类：建议直接删除（逐项）
+========================================================================
+       10.0 KB  __pycache__\alpha_hunter.cpython-313.pyc
+        8.2 KB  __pycache__\find_and_submit_alphas.cpython-313.pyc
+        7.4 KB  __pycache__\hunt6.cpython-313.pyc
+        7.4 KB  __pycache__\hunt7.cpython-313.pyc
+        9.1 KB  __pycache__\mine_alphas.cpython-313.pyc
+        9.7 KB  __pycache__\mine_submit.cpython-313.pyc
+       12.7 KB  __pycache__\smart_mine.cpython-313.pyc
+       18.9 KB  __pycache__\test_utils.cpython-313-pytest-7.4.4.pyc
+        7.4 KB  __pycache__\utils.cpython-313.pyc
+  -- Python 字节码缓存：9 个文件
+        0.0 KB  .pytest_cache\.gitignore
+        0.2 KB  .pytest_cache\CACHEDIR.TAG
+        0.3 KB  .pytest_cache\README.md
+        0.0 KB  .pytest_cache\v\cache\lastfailed
+        0.4 KB  .pytest_cache\v\cache\nodeids
+        0.0 KB  .pytest_cache\v\cache\stepwise
+  -- pytest 缓存：6 个文件
+        0.2 KB  .codegraph\.gitignore
+    10164.0 KB  .codegraph\codegraph.db
+       32.0 KB  .codegraph\codegraph.db-shm
+        0.0 KB  .codegraph\codegraph.db-wal
+       25.7 KB  .codegraph\daemon.log
+        0.1 KB  .codegraph\daemon.pid
+  -- 代码图谱索引（daemon 已死）：6 个文件
+
+      623.5 KB  alpha_list_pending_simulated.csv
+        0.0 KB  alpha_quality_analysis/batch25.log
+        0.5 KB  alpha_quality_analysis/.corr_block_cache_0912.txt
+        0.8 KB  alpha_quality_analysis/.corr_block_cache_0913.txt
+      136.3 KB  docs\pdf_pages\IQC团队\p01.png
+      148.9 KB  docs\pdf_pages\IQC团队\p02.png
+       27.1 KB  docs\pdf_pages\IQC团队\p03.png
+      249.6 KB  docs\pdf_pages\IQC技巧\p01.png
+      124.2 KB  docs\pdf_pages\IQC技巧\p02.png
+       76.1 KB  docs\pdf_pages\IQC技巧\p03.png
+       88.4 KB  docs\pdf_pages\IQC技巧\p04.png
+      107.5 KB  docs\pdf_pages\IQC技巧\p05.png
+        9.0 KB  docs\pdf_pages\IQC技巧\p06.png
+       89.1 KB  docs\pdf_pages\其他数据集\p01.png
+      213.1 KB  docs\pdf_pages\其他数据集\p02.png
+      110.0 KB  docs\pdf_pages\其他数据集\p03.png
+      151.3 KB  docs\pdf_pages\其他数据集\p04.png
+      143.1 KB  docs\pdf_pages\其他数据集\p05.png
+      185.1 KB  docs\pdf_pages\其他数据集\p06.png
+      189.1 KB  docs\pdf_pages\其他数据集\p07.png
+      159.0 KB  docs\pdf_pages\其他数据集\p08.png
+      149.2 KB  docs\pdf_pages\其他数据集\p09.png
+      193.4 KB  docs\pdf_pages\其他数据集\p10.png
+      124.5 KB  docs\pdf_pages\其他数据集\p11.png
+      145.7 KB  docs\pdf_pages\其他数据集\p12.png
+      177.0 KB  docs\pdf_pages\其他数据集\p13.png
+      115.7 KB  docs\pdf_pages\其他数据集\p14.png
+      149.7 KB  docs\pdf_pages\其他数据集\p15.png
+      153.5 KB  docs\pdf_pages\其他数据集\p16.png
+      140.6 KB  docs\pdf_pages\其他数据集\p17.png
+      191.7 KB  docs\pdf_pages\其他数据集\p18.png
+      169.5 KB  docs\pdf_pages\其他数据集\p19.png
+      186.4 KB  docs\pdf_pages\其他数据集\p20.png
+      147.3 KB  docs\pdf_pages\其他数据集\p21.png
+      129.2 KB  docs\pdf_pages\其他数据集\p22.png
+      146.5 KB  docs\pdf_pages\其他数据集\p23.png
+      175.3 KB  docs\pdf_pages\其他数据集\p24.png
+      173.7 KB  docs\pdf_pages\其他数据集\p25.png
+      163.1 KB  docs\pdf_pages\其他数据集\p26.png
+      169.6 KB  docs\pdf_pages\其他数据集\p27.png
+      151.4 KB  docs\pdf_pages\其他数据集\p28.png
+      157.8 KB  docs\pdf_pages\其他数据集\p29.png
+      195.3 KB  docs\pdf_pages\其他数据集\p30.png
+      121.2 KB  docs\pdf_pages\其他数据集\p31.png
+      111.4 KB  docs\pdf_pages\其他数据集\p32.png
+      130.1 KB  docs\pdf_pages\其他数据集\p33.png
+      123.8 KB  docs\pdf_pages\其他数据集\p34.png
+      122.9 KB  docs\pdf_pages\其他数据集\p35.png
+      137.3 KB  docs\pdf_pages\其他数据集\p36.png
+      139.6 KB  docs\pdf_pages\其他数据集\p37.png
+       97.5 KB  docs\pdf_pages\其他数据集\p38.png
+      123.9 KB  docs\pdf_pages\向量数据\p01.png
+      122.6 KB  docs\pdf_pages\向量数据\p02.png
+       93.0 KB  docs\pdf_pages\向量数据\p03.png
+      111.0 KB  docs\pdf_pages\向量数据\p04.png
+      106.5 KB  docs\pdf_pages\向量数据\p05.png
+       68.6 KB  docs\pdf_pages\向量数据\p06.png
+      132.1 KB  docs\pdf_pages\向量数据\p07.png
+      118.8 KB  docs\pdf_pages\权重共享\p01.png
+      216.6 KB  docs\pdf_pages\权重共享\p02.png
+       38.1 KB  docs\pdf_pages\权重共享\p03.png
+  -- PDF 分页图：57 个文件
+        3.5 KB  docs\pdf_text\IQC团队.txt
+        5.8 KB  docs\pdf_text\IQC技巧.txt
+       83.6 KB  docs\pdf_text\其他数据集.txt
+       66.1 KB  docs\pdf_text\其他数据集_p1.png
+        9.2 KB  docs\pdf_text\向量数据.txt
+        4.1 KB  docs\pdf_text\权重共享.txt
+  -- PDF 文本提取：6 个文件
+        2.5 KB  docs\ocr_output\analyst_table.txt
+        5.3 KB  docs\ocr_output\fundamental_table.txt
+        0.7 KB  docs\ocr_output\pv_table.txt
+        1.0 KB  docs\ocr_output\sentiment_table.txt
+  -- OCR 输出：4 个文件
+
+       33.0 KB  alpha_quality_analysis/fig_components.png
+       66.0 KB  alpha_quality_analysis/fig_drawdown.png
+       71.7 KB  alpha_quality_analysis/fig_real_scores.png
+       31.7 KB  alpha_quality_analysis/fig_scores.png
+       71.3 KB  alpha_quality_analysis/fig_selfcorr.png
+       51.3 KB  alpha_quality_analysis/fig_trend.png
+       44.2 KB  alpha_quality_analysis/fig_turnover.png
+       45.2 KB  alpha_quality_analysis/fig_verify.png
+       15.5 KB  alpha_quality_analysis/QUALITY_REPORT.html  (md 版保留)
+
+========================================================================
+B 类：建议归档到 archive/（不删）
+========================================================================
+
+--- 根目录（186 个 .py）---
+  【archive/mining/】110 个
+      mine_batch10.py
+      mine_batch100.py
+      mine_batch101.py
+      mine_batch102.py
+      mine_batch103.py
+      mine_batch104.py
+      mine_batch105.py
+      mine_batch106.py
+      mine_batch107.py
+      mine_batch108.py
+      mine_batch109.py
+      mine_batch11.py
+      mine_batch110.py
+      mine_batch111.py
+      mine_batch112.py
+      mine_batch113.py
+      mine_batch114.py
+      mine_batch115.py
+      mine_batch116.py
+      mine_batch117.py
+      mine_batch118.py
+      mine_batch119.py
+      mine_batch12.py
+      mine_batch13.py
+      mine_batch14.py
+      mine_batch2.py
+      mine_batch24.py
+      mine_batch25.py
+      mine_batch25r.py
+      mine_batch26.py
+      mine_batch27.py
+      mine_batch28.py
+      mine_batch29.py
+      mine_batch3.py
+      mine_batch30.py
+      mine_batch31.py
+      mine_batch32.py
+      mine_batch33.py
+      mine_batch34.py
+      mine_batch35.py
+      mine_batch36.py
+      mine_batch37.py
+      mine_batch38.py
+      mine_batch39.py
+      mine_batch4.py
+      mine_batch40.py
+      mine_batch41.py
+      mine_batch42.py
+      mine_batch43.py
+      mine_batch44.py
+      mine_batch45.py
+      mine_batch46.py
+      mine_batch47.py
+      mine_batch48.py
+      mine_batch49.py
+      mine_batch5.py
+      mine_batch50.py
+      mine_batch51.py
+      mine_batch52.py
+      mine_batch53.py
+      mine_batch54.py
+      mine_batch55.py
+      mine_batch56.py
+      mine_batch57.py
+      mine_batch58.py
+      mine_batch59.py
+      mine_batch6.py
+      mine_batch60.py
+      mine_batch61.py
+      mine_batch62.py
+      mine_batch63.py
+      mine_batch64.py
+      mine_batch65.py
+      mine_batch66.py
+      mine_batch67.py
+      mine_batch68.py
+      mine_batch69.py
+      mine_batch7.py
+      mine_batch70.py
+      mine_batch71.py
+      mine_batch72.py
+      mine_batch73.py
+      mine_batch74.py
+      mine_batch75.py
+      mine_batch76.py
+      mine_batch77.py
+      mine_batch78.py
+      mine_batch79.py
+      mine_batch8.py
+      mine_batch80.py
+      mine_batch81.py
+      mine_batch82.py
+      mine_batch83.py
+      mine_batch84.py
+      mine_batch85.py
+      mine_batch86.py
+      mine_batch87.py
+      mine_batch88.py
+      mine_batch89.py
+      mine_batch9.py
+      mine_batch90.py
+      mine_batch91.py
+      mine_batch92.py
+      mine_batch93.py
+      mine_batch94.py
+      mine_batch95.py
+      mine_batch96.py
+      mine_batch97.py
+      mine_batch98.py
+      mine_batch99.py
+  【archive/submit/】33 个
+      daily_submit.py
+      daily_v2.py
+      final_push.py
+      final_submit.py
+      find_and_submit_alphas.py
+      submit_0913.py
+      submit_0913b.py
+      submit_0913c.py
+      submit_0913d.py
+      submit_0913e.py
+      submit_0913f.py
+      submit_0913g.py
+      submit_0913h.py
+      submit_0913i.py
+      submit_0913j.py
+      submit_0913k.py
+      submit_0913l.py
+      submit_0914a.py
+      submit_0914b.py
+      submit_0914c.py
+      submit_0914d.py
+      submit_0914e.py
+      submit_0914f.py
+      submit_2627.py
+      submit_32.py
+      submit_auto_0912.py
+      submit_batch104.py
+      submit_now.py
+      submit_now_0912.py
+      submit_v3.py
+      submit_v4.py
+      submit_v5.py
+      submit_v6.py
+  【archive/hunt/】4 个
+      alpha_hunter.py
+      mine_probe.py
+      mine_submit.py
+      world4.py
+  【archive/tests/】12 个
+      balance_test.py
+      combo_test.py
+      debug2.py
+      debug3.py
+      debug_api.py
+      fast_test.py
+      hybrid_test.py
+      norm_test.py
+      quick_one.py
+      scale_test.py
+      simple_ratios.py
+      test_utils.py
+  【archive/checks/】11 个
+      alpha_probe.py
+      corr_check_backups_0912.py
+      corr_check_w60.py
+      corr_watch.py
+      poll_w95a.py
+      poll_w96.py
+      precheck_only.py
+      probe_chn_0914.py
+      recheck_exempt_0914.py
+      scout_datasets_0914.py
+      scout_fields_0914.py
+  【archive/tools/】8 个
+      alpha_quality_analysis.py
+      calc_fitness.py
+      extract_pdf_text.py
+      fetch_alphas.py
+      ocr_dataset_tables.py
+      ocr_pdfs.py
+      render_pdfs.py
+      summarize_mined.py
+  【archive/misc/】1 个
+      mine_batch.py
+
+--- docs/（223 个 .py，全部归档）---
+  【archive/misc/】3 个
+  【archive/checks/】30 个
+  【archive/tools/】12 个
+  【archive/hunt/】54 个
+  【archive/submit/】124 个
+
+--- docs/ 文本与日志 ---
+  .txt 共 69 个 -> archive/logs/
+      docs\check_log.txt
+      docs\hunt_log.txt
+      docs\hunt_log10.txt
+      docs\hunt_log11.txt
+      docs\hunt_log12.txt
+      docs\hunt_log13.txt
+      docs\hunt_log14.txt
+      docs\hunt_log15.txt
+      docs\hunt_log16.txt
+      docs\hunt_log17.txt
+      docs\hunt_log18.txt
+      docs\hunt_log19.txt
+      docs\hunt_log2.txt
+      docs\hunt_log20.txt
+      docs\hunt_log21.txt
+      ...（其余 54 个同类）

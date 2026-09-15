@@ -1,0 +1,31 @@
+# ============================================================
+# Git 属性配置 — 换行符与二进制处理
+# 目的：避免 Windows(CRLF) / Linux(LF) 之间的换行符噪声，
+#       以及防止 PDF/图片被当作文本做 diff。
+# ============================================================
+
+# 默认：由 git 自动判定文本/二进制
+* text=auto
+
+# ---------- 二进制：不做换行转换、不生成文本 diff ----------
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.zip   binary
+*.xlsx  binary
+*.docx  binary
+
+# ---------- 文本：入库统一 LF，保证跨平台一致 ----------
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.csv   text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.toml  text eol=lf
+*.sh    text eol=lf
+*.gitignore text eol=lf

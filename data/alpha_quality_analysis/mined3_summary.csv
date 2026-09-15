@@ -1,0 +1,7 @@
+﻿cid,alpha_id,status,source,S,F,T,R,DD,trainS,trainF,testS,testF,testDD,error,expr
+e01_val_probe,JjxO0xnx,UNSUBMITTED,价值锚探针(cf/ev真名),0.44,0.29,0.0312,0.0556,0.4042,0.43,0.29,0.5,0.3,0.0646,,rank(cashflow_op / enterprise_value)
+e02_val_rev,zqYmwkJR,UNSUBMITTED,组合:反转+价值锚,1.21,0.86,0.2532,0.1284,0.1532,1.14,0.81,1.7,1.21,0.0404,,"rank(-ts_delta(close, 2)) + rank(cashflow_op / enterprise_value)"
+e03_val_rev_res,vRklnrKz,UNSUBMITTED,三信号:价值+反转+残差,1.43,0.93,0.2861,0.1215,0.0935,1.3,0.83,2.28,1.58,0.0379,,"group_rank(cashflow_op / enterprise_value, subindustry) + rank(-ts_delta(close, 2)) + rank(ts_delay(close, 2) - ts_regression(close, vwap, 60, rettype=3))"
+e04_liab_rev,78Z1qvnv,UNSUBMITTED,组合:负债锚+反转(相关性试探),2.5,1.98,0.168,0.1056,0.035,2.62,2.18,1.94,1.2,0.0296,,"group_rank(liabilities_curr / assets, subindustry) + rank(-ts_delta(close, 2))"
+e05_d10_smooth,e7908GPN,UNSUBMITTED,d10加ts_mean平滑压T,1.58,0.8,0.4335,0.1104,0.0461,1.58,0.82,1.67,0.73,0.0342,,"ts_mean(group_rank(-ts_delta(close, 2) * rank(volume / ts_mean(volume, 20)), subindustry), 3)"
+e06_val_volrev,0mREk68G,UNSUBMITTED,组合:价值+放量反转(全group_rank压T),1.07,0.7,0.2213,0.0959,0.1329,1.01,0.66,1.5,1.01,0.0404,,"group_rank(cashflow_op / enterprise_value, subindustry) + group_rank(-ts_delta(close, 2) * rank(volume / ts_mean(volume, 20)), subindustry)"

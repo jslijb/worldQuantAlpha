@@ -1,0 +1,49 @@
+================ ts_mean
+def: ts_mean(x, d)
+desc: Calculates the simple average (mean) value of a variable x over the past d days.
+
+================ ts_rank
+def: ts_rank(x, d, constant = 0)
+desc: Ranks the value of a variable for each instrument over a specified number of past days, returning the rank of the current value (optionally adjusted by a constant). Useful for normalizing time-series data and highlighting relative performance over time.
+
+================ ts_regression
+def: ts_regression(y, x, d, lag = 0, rettype = 0)
+desc: Returns various parameters related to regression function
+
+================ ts_decay_linear
+def: ts_decay_linear(x, d, dense = false)
+desc: Applies a linear decay to time-series data over a set number of days, smoothing the data by averaging recent values and reducing the impact of older or missing data.
+
+================ ts_backfill
+def: ts_backfill(x,lookback = d, k=1)
+desc: Replaces missing (NaN) values in a time series with the most recent valid value from a specified lookback window, improving data coverage and reducing risk from missing data.
+
+================ ts_av_diff
+def: ts_av_diff(x, d)
+desc: Calculates the difference between a value and its mean over a specified period, ignoring NaN values in the mean calculation. In short, it returns x – ts_mean(x, d) with NaNs ignored.
+
+================ hump
+def: hump(x, hump = 0.01)
+desc: Limits amount and magnitude of changes in input (thus reducing turnover)
+
+================ ts_delta
+def: ts_delta(x, d)
+desc: Calculates the difference between a value and its delayed version over a specified period. Useful for measuring changes or momentum in time-series data.
+
+================ vec_avg
+def: vec_avg(x)
+desc: Calculates the mean (average) of all elements in a vector field for each instrument and date, converting vector data to a single matrix value.
+
+================ bucket
+def: bucket(rank(x), range=“0, 1, 0.1”, skipBoth=False, NaNGroup=False)
+or
+bucket(rank(x), buckets = “2,5,6,7,10”, skipBoth=False, NaNGroup=False)
+desc: The bucket operator creates custom groups by dividing data into buckets (ranges) based on ranked values of any data field. These buckets can then be used with group operators like group_neutralize, group_rank, group_zscore etc.
+
+================ trade_when
+def: trade_when(x, y, z)
+desc: The trade_when operator changes Alpha values only when a specific condition is met, keeps previous values otherwise, and can close positions by assigning NaN under an exit condition. It is useful for reducing turnover and controlling when trades are executed.
+
+================ group_neutralize
+def: group_neutralize(x, group)
+desc: Neutralizes Alpha values within each specified group by subtracting the group mean from each value. Groups can be industry, sector, country, or any custom grouping.

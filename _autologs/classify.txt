@@ -1,0 +1,25 @@
+==================================================================
+根目录 .py 合计 186 个
+==================================================================
+  挖矿批次 mine_batch*.py                 112 个
+  提交 submit_*.py                       29 个
+  检查/预检 check/probe/corr/poll          12 个
+  测试/调试 *_test/debug*                  10 个
+  工具 fetch/extract/ocr/render/sum       7 个
+  提交 daily/final/find/fast              6 个
+  早期挖矿 mine_*.py                        4 个
+  公共库 utils/AlphaSimulator              3 个
+  【未归类】                                 3 个  -> ['auto_submit_loop.py', 'mine_batch.py', 'test_utils.py']
+
+==================================================================
+docs/ 下 .py 合计 223 个
+==================================================================
+  提交 submit_*.py                      124 个
+  工具 fetch/extract/ocr/render/sum      24 个
+  检查/预检 check/probe/corr/poll          18 个
+  【未归类】57 个 -> ['analyze_alpha_quality.py', 'definitive_check.py', 'hunt_one.py', 'hunt_quick.py', 'hunt_round10.py', 'hunt_round11.py', 'hunt_round12.py', 'hunt_round13.py', 'hunt_round14.py', 'hunt_round15.py', 'hunt_round16.py', 'hunt_round17.py', 'hunt_round18.py', 'hunt_round19.py', 'hunt_round2.py', 'hunt_round20.py', 'hunt_round21.py', 'hunt_round22.py', 'hunt_round23.py', 'hunt_round24.py', 'hunt_round25.py', 'hunt_round26.py', 'hunt_round27.py', 'hunt_round28.py', 'hunt_round29.py']
+
+==================================================================
+alpha_quality_analysis/ 下 .py 合计 2 个
+==================================================================
+  【未归类】2 个 -> ['analyze_real.py', 'build_report.py']

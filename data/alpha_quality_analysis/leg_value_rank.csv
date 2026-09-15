@@ -1,0 +1,781 @@
+﻿leg,appear,pass_quality,pass_rate
+"rank(volume/ts_mean(volume, 60))",417,213,0.5108
+"group_rank(-ts_delta(close, 2), subindustry)",351,191,0.5442
+"group_rank(ts_av_diff(cash/assets, 45), subindustry)",184,136,0.7391
+"group_rank(fnd6_xrent/assets, subindustry)",181,140,0.7735
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry)",180,91,0.5056
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",176,126,0.7159
+"group_rank(ts_av_diff(cash/assets, 30), subindustry)",140,70,0.5
+"rank(volume/ts_mean(volume, 120))",91,61,0.6703
+"rank(-ts_delta(close, 2))",84,22,0.2619
+"group_rank(authorized_stock_buyback_amount/assets, subindustry)",83,54,0.6506
+"group_rank(-ts_delta(close, 10), subindustry)",75,51,0.68
+"group_rank(fnd6_newqv1300_cimiiq/assets, subindustry)",67,36,0.5373
+"group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry)",57,43,0.7544
+"rank(volume/ts_mean(volume, 90))",48,18,0.375
+"group_rank(fnd6_xopr/assets, subindustry)",45,31,0.6889
+"group_rank(fnd6_newqv1300_ivstq/assets, subindustry)",45,17,0.3778
+"group_rank(-ts_delta(close, 5), industry)",39,11,0.2821
+"group_rank(fnd6_txtubxintis/assets, subindustry)",37,16,0.4324
+"group_rank(operating_expense/assets, subindustry)",36,16,0.4444
+"0.5*group_rank(-ts_delta(close, 10), subindustry)",33,6,0.1818
+"0.5*rank(volume/ts_mean(volume, 120))",33,6,0.1818
+"group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)",30,10,0.3333
+"group_rank(ts_av_diff(cash/assets, 75), subindustry)",29,16,0.5517
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",29,19,0.6552
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",29,19,0.6552
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=""0.1, 1, 0.1""))",27,18,0.6667
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=""0.1, 1, 0.1""))",27,18,0.6667
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",27,19,0.7037
+"group_rank(fnd6_newqv1300_cshopq/assets, subindustry)",27,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, subindustry)",26,18,0.6923
+"group_rank(fnd6_newqv1300_lol2q/assets, subindustry)",25,8,0.32
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",24,16,0.6667
+"group_rank(fnd6_newqv1300_mibtq/assets, subindustry)",24,6,0.25
+"group_rank(fnd6_mfma2_revt/assets, subindustry)",23,5,0.2174
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfi_low/assets, subindustry)",23,14,0.6087
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, subindustry)",22,11,0.5
+"rank(volume/ts_mean(volume, 150))",21,14,0.6667
+"group_rank(-ts_delta(close, 2), bucket(rank(cap), range=""0.1, 1, 0.1""))",21,16,0.7619
+"group_rank(-ts_delta(close, 8), subindustry)",21,15,0.7143
+"group_rank(fnd6_xintopt/assets, subindustry)",18,8,0.4444
+"group_rank(fnd6_newqv1300_tfvceq/assets, subindustry)",18,0,0.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=""0.1, 1, 0.1""))",17,12,0.7059
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",17,11,0.6471
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, subindustry)",16,6,0.375
+"group_rank(ts_av_diff(cash/assets, 45), industry)",16,14,0.875
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",16,9,0.5625
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",16,9,0.5625
+"group_rank(-ts_rank(close, 10), industry)",16,9,0.5625
+"rank(-ts_delta(close, 2)) * rank(volume/ts_mean(volume, 60))",15,11,0.7333
+"group_rank(fnd6_xintopt/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",15,7,0.4667
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",15,7,0.4667
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",15,9,0.6
+"group_rank(fnd6_tstkc/assets, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",15,8,0.5333
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",15,8,0.5333
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",15,8,0.5333
+"group_rank(fnd6_newqv1300_txdbq/assets, subindustry)",15,0,0.0
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",14,6,0.4286
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",14,7,0.5
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_median/assets, subindustry)",14,8,0.5714
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_capex_std/assets, subindustry)",14,7,0.5
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",13,7,0.5385
+"group_rank(-news_open_gap/close, subindustry)",12,9,0.75
+"group_rank(ts_av_diff(cash/assets, 60), subindustry)",12,7,0.5833
+"group_rank(-ts_delta(close, 3), subindustry)",12,10,0.8333
+"group_rank(ts_av_diff(cash/assets, 60), industry)",12,2,0.1667
+"group_rank(anl4_fs_actuals_basic_qf_nd_div_value/assets, subindustry)",12,7,0.5833
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, subindustry)",12,7,0.5833
+"group_rank(-ts_delta(close, 5), subindustry)",11,6,0.5455
+"rank(-ts_mean(returns, 5))",11,0,0.0
+"group_rank(dividend/(sharesout*close), subindustry)",11,5,0.4545
+"group_rank(fnd6_tstkc/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",11,7,0.6364
+"group_rank(fnd6_intc/assets, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",11,7,0.6364
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, subindustry)",11,2,0.1818
+"rank(-ts_delta(vwap, 2))",10,8,0.8
+"group_rank(fnd6_newqv1300_lnoq/assets, subindustry)",10,3,0.3
+"group_rank(annual_intangible_assets_net_carrying_value/assets, subindustry)",10,0,0.0
+"0.5*group_rank(ts_av_diff(cash/assets, 45), subindustry)",9,0,0.0
+"0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",9,0,0.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",9,6,0.6667
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",9,8,0.8889
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean/assets, subindustry)",9,6,0.6667
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean/assets, industry)",9,5,0.5556
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, industry)",9,5,0.5556
+"group_rank(ts_av_diff(cashflow_op/enterprise_value,60),subindustry)",9,3,0.3333
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_high/assets, subindustry)",8,2,0.25
+"group_rank(fnd6_intc/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",8,8,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfi_low/assets, industry)",8,2,0.25
+"0.5*group_rank(ts_av_diff(cash/assets, 75), subindustry)",8,0,0.0
+"0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry)",8,0,0.0
+"group_rank(anl4_fs_detail_estimates_basic_qf_delay1_v4_nd_div_mean/assets, subindustry)",8,0,0.0
+"group_rank(-(fnd6_ni-fnd6_newa2_oancf)/assets, subindustry)",8,0,0.0
+"group_rank(ts_av_diff(cash/assets,30),subindustry)",8,3,0.375
+"group_rank(-ts_delta(close, 2), industry)",7,6,0.8571
+"group_rank(news_short_interest, subindustry)",7,4,0.5714
+"group_rank(fnd6_lifr/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",7,5,0.7143
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",7,4,0.5714
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_netdebt_mean/assets, industry)",7,3,0.4286
+"group_rank(-ts_delta(close, 120), subindustry)",7,1,0.1429
+"group_rank(ts_delta(cash/assets, 60), subindustry)",6,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), industry)",6,4,0.6667
+"group_rank(fnd6_tstkc/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",6,5,0.8333
+"group_rank(fnd6_newqv1300_txdbq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",6,1,0.1667
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",6,1,0.1667
+"group_rank(liabilities_curr/assets, industry)",6,5,0.8333
+"0.45*group_rank(ts_av_diff(cash/assets, 45), subindustry)",6,2,0.3333
+"0.45*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",6,2,0.3333
+"group_rank(common_stock_repurchase_payment/assets, subindustry)",6,0,0.0
+"group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/assets, subindustry)",6,0,0.0
+"group_rank(anl4_fs_detail_estimates_basic_qf_v4_nd_cfps_median/assets, subindustry)",6,0,0.0
+"rank(-ts_delta(close, 5))",5,1,0.2
+"group_rank(-ts_mean(abs(open/ts_delay(close,1) - group_mean(open/ts_delay(close,1), 1, market)), 20), subindustry)",5,0,0.0
+"group_rank(fnd6_intc/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",5,3,0.6
+"group_rank(fnd6_tfvce/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",5,3,0.6
+"group_rank(fnd6_tstkc/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",5,2,0.4
+"group_rank(fnd6_newqv1300_fcaq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",5,4,0.8
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_capex_number/assets, industry)",5,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_median/assets, industry)",5,0,0.0
+"group_rank(-ts_mean(pcr_vol_10, 5), industry)",5,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, industry)",5,4,0.8
+"group_rank(-ts_delta(close, 10), industry)",5,2,0.4
+"group_rank(annual_intangible_amortization_expense_second_year/assets, subindustry)",5,0,0.0
+"group_rank(accumulated_oci_net_of_tax_value/assets, subindustry)",5,0,0.0
+"0.5*group_rank(-ts_delta(close, 8), subindustry)",5,0,0.0
+"0.5*rank(volume/ts_mean(volume, 150))",5,0,0.0
+"group_rank((eps - est_epsr)/assets, subindustry)",5,1,0.2
+"group_rank(fnd6_xopr/assets,subindustry)",4,2,0.5
+"0.5 * (group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry))",4,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_mean/assets, subindustry)",4,2,0.5
+"group_rank(fnd6_tfvce/assets, subindustry)",4,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_high/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",4,0,0.0
+"group_rank(fnd6_xintopt/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",4,4,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",4,4,1.0
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",4,4,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebit_low/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",4,1,0.25
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_fcf_low/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",4,3,0.75
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebit_low/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",4,1,0.25
+"group_rank(fnd6_newqv1300_tfvceq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",4,4,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",4,3,0.75
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",4,3,0.75
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",4,3,0.75
+"ts_rank(volume/ts_mean(volume, 60), 60)",4,0,0.0
+"rank(-ts_corr(close, volume, 20))",4,0,0.0
+"group_rank(fnd6_ivch/assets, subindustry)",4,1,0.25
+"group_rank(-ts_delta(close, 4), subindustry)",4,4,1.0
+"rank(volume/ts_mean(volume, 40))",4,4,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 90), subindustry)",4,3,0.75
+"group_rank(fnd6_xrent/assets, industry)",4,4,1.0
+"group_rank(fnd6_txtubpospinc/assets, subindustry)",4,1,0.25
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sh_equity_median/assets, industry)",4,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, industry)",4,2,0.5
+"group_rank(annual_deferred_income_tax_expense/assets, subindustry)",4,0,0.0
+"0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",4,3,0.75
+"0.35*group_rank(ts_av_diff(cash/assets, 45), subindustry)",4,3,0.75
+"0.35*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",4,3,0.75
+"0.35*group_rank(-ts_delta(close, 10), subindustry)",4,3,0.75
+"0.35*rank(volume/ts_mean(volume, 120))",4,3,0.75
+"group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, subindustry)",4,0,0.0
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_tbvps_low/assets, subindustry)",4,0,0.0
+"group_rank(fnd6_gp/assets, subindustry)",4,0,0.0
+"group_rank(fnd6_xrent/assets,subindustry)",3,0,0.0
+"group_rank(ts_av_diff(ebit/enterprise_value,30),subindustry)",3,0,0.0
+"group_rank(ts_av_diff(ebitda/enterprise_value,60),subindustry)",3,0,0.0
+"close > ts_sum(close, 20) / 20 ? 1.6 * rank(-ts_delta(close, 2)) : rank(-ts_delta(close, 2))",3,0,0.0
+"rank(ts_delay(close, 2) - ts_regression(close, vwap, 60, rettype=3))",3,0,0.0
+"group_zscore(fnd6_xopr/assets, subindustry)",3,0,0.0
+"group_rank(ts_av_diff(assets_curr/assets, 30), subindustry)",3,0,0.0
+"group_rank(-ts_mean(abs(returns)/volume, 60), subindustry)",3,1,0.3333
+"group_rank(ts_delta(liabilities_curr/assets, 60), subindustry)",3,0,0.0
+"group_rank(-historical_volatility_30, subindustry)",3,0,0.0
+"group_rank((ts_std_dev(returns,20) < group_mean(ts_std_dev(returns,20),1,market) ? -ts_delta(close,10) : ts_delta(close,10)), subindustry)",3,0,0.0
+"0.5*(group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=""0.1, 1, 0.1"")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=""0.1, 1, 0.1"")) + group_rank(-ts_delta(close, 2), bucket(rank(cap), range=""0.1, 1, 0.1"")))",3,0,0.0
+"group_rank(fnd6_xintopt/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",3,3,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",3,3,1.0
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",3,3,1.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_fcf_low/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",3,1,0.3333
+"group_rank(fnd6_intc/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",3,3,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",3,3,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), sector)",3,3,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",3,2,0.6667
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",3,0,0.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",3,1,0.3333
+"group_rank(-fnd6_xintopt/assets, subindustry)",3,0,0.0
+"group_rank(fnd6_txdbcl/assets, subindustry)",3,0,0.0
+"group_rank(fnd6_dlcch/assets, subindustry)",3,0,0.0
+"group_rank(fnd6_lul3/assets, subindustry)",3,0,0.0
+"group_rank(ts_av_diff(cash/assets, 50), subindustry)",3,3,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 75), subindustry)",3,3,1.0
+"group_rank(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_median/assets, 60), subindustry)",3,0,0.0
+"group_rank(-ts_rank(close, 10), subindustry)",3,1,0.3333
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean/assets, industry)",3,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_median/assets, industry)",3,0,0.0
+"group_rank(ts_mean(scl12_sentiment_fast_d1, 5), industry)",3,0,0.0
+"group_rank(news_mins_4_pct_up - news_mins_4_pct_dn, industry)",3,0,0.0
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_sga_high - anl4_fs_detail_estimate_1qf_v4_nd_sga_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_sga_mean), subindustry)",3,2,0.6667
+"0.3*group_rank(-ts_delta(close, 10), subindustry)",3,1,0.3333
+"0.3*rank(volume/ts_mean(volume, 120))",3,1,0.3333
+"0.4*group_rank(ts_av_diff(cash/assets, 45), subindustry)",3,2,0.6667
+"0.4*group_rank(-ts_delta(close, 10), subindustry)",3,2,0.6667
+"0.4*rank(volume/ts_mean(volume, 120))",3,2,0.6667
+rank(implied_volatility_mean_skew_30-implied_volatility_mean_skew_270),3,0,0.0
+"0.45*group_rank(-ts_delta(close, 10), subindustry)",3,0,0.0
+"0.45*rank(volume/ts_mean(volume, 120))",3,0,0.0
+"group_rank(-ts_delta(close, 250), subindustry)",3,0,0.0
+"group_rank(close/ts_mean(close, 250), subindustry)",3,0,0.0
+"group_rank(ts_delta(fnd6_sale/assets, 66), subindustry)",3,0,0.0
+"group_rank(ts_delta(est_netprofit, 66), subindustry)",3,0,0.0
+"group_rank(-news_pct_120min, subindustry)",3,0,0.0
+"rank(-ts_delta(vwap, 3))",2,2,1.0
+"group_rank(-ts_delta(capex/assets, 60), subindustry)",2,0,0.0
+"volume > adv20 ? 2 * rank(-ts_delta(close, 2)) : rank(-ts_delta(close, 2))",2,0,0.0
+"group_rank(ts_av_diff(ebit/enterprise_value, 30), subindustry)",2,0,0.0
+"group_rank(-ts_delta(close, 2) * rank(volume / ts_mean(volume, 20)), subindustry)",2,0,0.0
+rank(cashflow_op / enterprise_value),2,0,0.0
+"group_rank(cashflow_op / enterprise_value, subindustry)",2,0,0.0
+"group_zscore(-ts_delta(close, 2), subindustry)",2,0,0.0
+"group_rank(ts_av_diff(ebit/enterprise_value, 60), subindustry)",2,0,0.0
+"group_rank(liabilities_curr/assets, subindustry)",2,2,1.0
+"ts_regression(group_rank(fnd6_xrent/assets, subindustry) + group_rank(-ts_delta(close, 5), subindustry) + rank(volume/ts_mean(volume, 60)), group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) + rank(volume/ts_mean(volume, 60)), 250, lag=0, rettype=0)",2,0,0.0
+"rank(-ts_delta(close, 3))",2,1,0.5
+"group_rank(-ts_delta(debt_st/assets, 60), subindustry)",2,0,0.0
+"rank(-ts_mean(open/ts_delay(close, 1) - 1, 5))",2,0,0.0
+"group_rank(news_prev_day_ret, subindustry)",2,1,0.5
+"group_rank(rel_ret_cust, subindustry)",2,0,0.0
+"group_rank(-abs(ts_delta(volume/sharesout,1) - group_mean(ts_delta(volume/sharesout,1),1,market)), subindustry)",2,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean/assets, subindustry)",2,1,0.5
+"group_rank(fnd6_newq_xoptdqp/assets, subindustry)",2,0,0.0
+"group_rank(-fnd6_pncdq/assets, subindustry)",2,0,0.0
+"0.5*(group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=""0.1, 1, 0.1"")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=""0.1, 1, 0.1"")) + group_rank(-ts_delta(close, 2), bucket(rank(cap), range=""0.1, 1, 0.1"")) + group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=""0.1, 1, 0.1"")))",2,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_mean/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=""0.05, 1, 0.05""))",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=""0.05, 1, 0.05""))",2,2,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(cap), range=""0.05, 1, 0.05""))",2,2,1.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=""0.05, 1, 0.05""))",2,2,1.0
+"group_rank(ts_av_diff(cash/assets, 75), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sh_equity_median/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_fcf_low/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_intc/assets, sector)",2,2,1.0
+"group_rank(fnd6_tfvce/assets, sector)",2,2,1.0
+"group_rank(ts_av_diff(cash/assets, 45), sector)",2,2,1.0
+"group_rank(-ts_delta(close, 2), sector)",2,2,1.0
+"group_rank(fnd6_tstkc/assets, industry)",2,2,1.0
+"group_rank(fnd6_lifr/assets, industry)",2,2,1.0
+"group_rank(ts_delta(fnd6_tstkc/assets, 60), bucket(rank(cap), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_delta(fnd6_intc/assets, 60), bucket(rank(cap), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_zscore(fnd6_tfvce/assets, 120), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_zscore(fnd6_cicurr/assets, 120), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_corr(cap, ts_mean(volume, 20), 60), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(-ts_delta(close, 2), bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(-ts_delta(close, 2), bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",2,2,1.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(-ts_delta(close, 2), bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(fnd6_tstkc/assets, bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",2,0,0.0
+"group_rank(fnd6_intc/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",2,1,0.5
+"group_rank(fnd6_newqv1300_spceq/assets, subindustry)",2,0,0.0
+"rank(-ts_std_dev(returns, 20))",2,0,0.0
+"group_rank(fnd6_spce/assets, subindustry)",2,0,0.0
+"group_rank(fnd6_txds/assets, subindustry)",2,0,0.0
+"group_rank(ts_delta(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_median, 60), subindustry)",2,0,0.0
+"group_rank(fscore_bfl_total, subindustry)",2,0,0.0
+"group_rank(forward_price_90/close, subindustry)",2,0,0.0
+"group_rank(-snt_buzz_ret_fast_d1, subindustry)",2,0,0.0
+"group_rank(ts_av_diff(cash/assets, 40), subindustry)",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 30), subindustry)",2,2,1.0
+"group_rank(ts_av_diff(cash, 45)/assets, subindustry)",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op, 45)/enterprise_value, subindustry)",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 40), subindustry)",2,2,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 44), subindustry)",2,2,1.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, subindustry)",2,2,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_median/assets, subindustry)",2,1,0.5
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_capex_number/assets, subindustry)",2,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sh_equity_median/assets, subindustry)",2,1,0.5
+"group_rank(-ts_mean(pcr_oi_10, 5), industry)",2,0,0.0
+"group_rank(multi_factor_static_score_derivative, industry)",2,0,0.0
+"group_rank(relative_valuation_rank_derivative, industry)",2,0,0.0
+"group_rank(news_pct_10min, industry)",2,0,0.0
+"group_rank(ts_mean(news_pct_10min, 5), industry)",2,0,0.0
+"group_rank(fnd6_newqv1300_xoptdq/assets, industry)",2,0,0.0
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_capex_std/assets, industry)",2,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, industry)",2,0,0.0
+"group_rank(-ts_delta(close, 8), industry)",2,1,0.5
+"group_rank(ts_av_diff(cash/assets, 75), industry)",2,1,0.5
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_ptpr_high - anl4_fs_detail_estimate_1qf_v4_nd_ptpr_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean), subindustry)",2,0,0.0
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_ptpr_high - anl4_fs_detail_estimate_1qf_v4_nd_ptpr_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean), industry)",2,0,0.0
+"group_rank(-ts_delta(vwap, 10), subindustry)",2,0,0.0
+"group_rank(-ts_delta(close, 10), market)",2,1,0.5
+"group_rank(acquisition_total_purchase_value/assets, subindustry)",2,0,0.0
+"0.25*group_rank(-ts_delta(close, 10), subindustry)",2,1,0.5
+"0.25*rank(volume/ts_mean(volume, 120))",2,1,0.5
+"0.7*group_rank(-ts_delta(close, 10), subindustry)",2,0,0.0
+"0.7*rank(volume/ts_mean(volume, 120))",2,0,0.0
+"group_rank(anl4_fs_guidances_advanced_qf_nd_rd_exp_maxguidance/assets, subindustry)",2,0,0.0
+"group_rank(-(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance-anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/assets, subindustry)",2,0,0.0
+"group_rank(anl4_fs_guidances_advanced_qf_nd_sh_equity_maxguidance/assets, subindustry)",2,0,0.0
+"group_rank(anl4_fs_guidances_basic_af_nd_cfps_minguidance/assets, subindustry)",2,0,0.0
+rank(fscore_bfl_quality),2,0,0.0
+rank(fscore_bfl_profitability),2,0,0.0
+"group_rank(anl4_fs_guidances_advanced_af_nd_ffoa_minguidance/assets, subindustry)",2,0,0.0
+"group_rank(anl4_fs_guidances_advanced_qf_nd_totgw_minguidance/assets, subindustry)",2,0,0.0
+"group_rank(-anl4_fs_detail_estimates_basic_qf_delay1_v4_nd_div_std/assets, subindustry)",2,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_median/assets, subindustry)",2,0,0.0
+rank(-(close/vwap-1)),2,0,0.0
+"group_rank(-ts_delta(close, 20), subindustry)",2,2,1.0
+"rank(volume/ts_mean(volume, 250))",2,2,1.0
+"group_rank(-ts_delta((fnd6_dltt+fnd6_dlc)/assets, 66), subindustry)",2,0,0.0
+"rank(-ts_delta(vwap, 5))",2,0,0.0
+"group_rank(-ts_delta(capex/assets,60),subindustry)",1,0,0.0
+"a = ts_sum(open > close, 20) / ts_sum(open < close, 20); b = ts_sum(open > close, 252) / ts_sum(open < close, 252); rank(a / b)",1,0,0.0
+"bar = (open - close) / (high - low); a = ts_sum((open > close) * bar, 20) / ts_sum((open < close) * (-bar), 20); b = ts_sum((open > close) * bar, 252) / ts_sum((open < close) * (-bar), 252); rank(a / b)",1,0,0.0
+"ts_sum(sign(ts_delta(close, 1)), 4) == -4 ? 0 : rank(-ts_delta(close, 2))",1,0,0.0
+"rank(trade_when(volume > adv20, -returns, -1))",1,0,0.0
+rank(sales / assets),1,0,0.0
+"group_rank(eps / close, subindustry)",1,0,0.0
+"group_rank(est_netprofit / cap, subindustry)",1,0,0.0
+"group_rank(fn_accrued_liab_curr_a/assets, subindustry)",1,0,0.0
+"group_rank(debt_st/assets, subindustry)",1,0,0.0
+"-rank(ts_delta(close, 2)) * (1 - rank(ts_decay_linear(volume / ts_mean(volume, 30), 10)))",1,0,0.0
+"event = abs(ts_zscore(ts_delay(close, 1) - open, 20)) > 3.5; alpha = ts_rank(ts_delta(close, 5), 252); close_at_event = trade_when(event, close, -1); end = abs(close_at_event - close) / close_at_event > 0.1; ts_decay_linear(trade_when(event, alpha, end), 5)",1,0,0.0
+"close > ts_sum(close, 20) / 20 ? 2 * rank(-ts_delta(close, 2)) : rank(-ts_delta(close, 2))",1,0,0.0
+"rank(ts_delay(close, 2) - ts_regression(close, vwap, 20, rettype=3))",1,0,0.0
+"group_rank(-ts_delta(close, 2) + ts_delay(close, 2) - ts_regression(close, vwap, 60, rettype=3), subindustry)",1,0,0.0
+"rank(-ts_corr(close, volume, 60))",1,0,0.0
+"group_rank(liabilities_curr / assets, subindustry)",1,1,1.0
+"ts_mean(group_rank(-ts_delta(close, 2) * rank(volume / ts_mean(volume, 20)), subindustry), 3)",1,0,0.0
+"trade_when(rank(volume/ts_mean(volume,60)) > 0.5, group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry), -1)",1,0,0.0
+"signed_power(group_rank(-ts_delta(close, 2), subindustry), 2)",1,0,0.0
+"trade_when(ts_rank(volume, 60) < 0.9, group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry), -1)",1,0,0.0
+"signed_power(rank(volume/ts_mean(volume, 60)), 2)",1,0,0.0
+"trade_when(rank(volume/ts_mean(volume,60)) > 0.5, group_zscore(-ts_delta(close, 2), subindustry) + group_zscore(fnd6_xopr/assets, subindustry), -1)",1,0,0.0
+"group_zscore(fnd6_xopr/assets, industry)",1,0,0.0
+"group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry)",1,0,0.0
+"group_rank(assets_curr/assets, subindustry)",1,0,0.0
+"group_rank(-volume/cap, subindustry)",1,0,0.0
+"group_rank(liabilities_curr/assets, sector)",1,1,1.0
+"group_rank(liabilities_curr/assets, subindustry) * rank(-ts_delta(close, 2))",1,1,1.0
+"ts_regression(group_rank(fnd6_xrent/assets, subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) + rank(volume/ts_mean(volume, 60)), 250, lag=0, rettype=0)",1,0,0.0
+"ts_regression(group_rank(fnd6_xopr/assets, subindustry) + group_rank(-ts_delta(close, 5), subindustry) + rank(volume/ts_mean(volume, 120)), group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60)), 250, lag=0, rettype=0)",1,0,0.0
+"ts_regression(group_rank(fnd6_xrent/assets, subindustry) + group_rank(-ts_delta(close, 5), subindustry) + rank(volume/ts_mean(volume, 60)), group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60)), 250, lag=0, rettype=0)",1,0,0.0
+"group_rank(-ts_corr(rank(close), rank(volume), 20), subindustry)",1,0,0.0
+"group_rank(-ts_mean(returns * returns, 20), subindustry)",1,0,0.0
+"group_rank(-ts_corr(close, volume, 60), subindustry)",1,0,0.0
+"group_rank(ts_rank(close, 250), subindustry)",1,0,0.0
+"group_rank(fnd6_xrent/assets, subindustry) * rank(-ts_delta(close, 2))",1,0,0.0
+"group_rank(fnd6_xrent/assets, sector)",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 30), sector)",1,0,0.0
+"group_rank(ts_rank(cashflow_op/assets, 120), subindustry)",1,0,0.0
+"group_rank(ts_rank(fnd6_mfma2_revt/assets, 120), subindustry)",1,0,0.0
+"rank(-ts_mean(returns, 3)) * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"group_rank(ts_av_diff(fnd6_xrent, 30), subindustry)",1,0,0.0
+"rank(-ts_delta(vwap, 2)) * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"rank(-ts_mean(returns, 5)) * rank(volume/ts_mean(volume, 60))",1,1,1.0
+"group_rank(ts_delta(close, 250), subindustry)",1,0,0.0
+"group_rank(-ts_mean(abs(returns)/(close*volume), 20), subindustry)",1,0,0.0
+"trade_when(ts_rank(volume, 60) > 0.3, group_rank(fnd6_mfma2_revt/assets, subindustry) + rank(-ts_delta(close, 2)), -1)",1,0,0.0
+"group_zscore(fnd6_mfma2_revt/assets, subindustry)",1,0,0.0
+"group_rank(ts_delta(close, 60), subindustry)",1,0,0.0
+"group_rank(-ts_mean(abs(returns), 20), subindustry)",1,0,0.0
+"group_rank(ts_rank(fnd6_mfma2_revt/assets, 250), subindustry)",1,0,0.0
+"trade_when(ts_rank(volume, 60) > 0.3, group_rank(fnd6_xopr/assets, subindustry) + rank(-ts_delta(close, 2)), -1)",1,0,0.0
+"trade_when(ts_rank(volume, 60) > 0.2, group_rank(fnd6_xopr/assets, subindustry) + rank(-ts_delta(close, 2)), -1)",1,1,1.0
+"group_rank(ts_mean((close-low)/(high-low+0.001), 10), subindustry)",1,0,0.0
+"group_rank(-ts_mean((high-low)/ts_delay(close, 1), 20), subindustry)",1,0,0.0
+"rank((close-vwap)/vwap) * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"rank(ts_mean(open/ts_delay(close, 1) - 1, 20))",1,0,0.0
+"group_rank(ts_mean((close-low)/(high-low+0.001), 20), subindustry)",1,0,0.0
+"rank(-ts_mean(open/ts_delay(close, 1) - 1, 10))",1,0,0.0
+"0.6 * rank(-ts_delta(close, 2)) * rank(volume/ts_mean(volume, 60))",1,1,1.0
+"0.4 * rank(-ts_delta(close, 2)) * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"0.6 * rank(-ts_delta(close, 2))",1,0,0.0
+"0.4 * rank(-ts_delta(close, 2))",1,0,0.0
+"0.6 * rank(-ts_delta(vwap, 2))",1,1,1.0
+"0.6 * rank(volume/ts_mean(volume, 60))",1,1,1.0
+"0.4 * rank(-ts_delta(vwap, 2))",1,0,0.0
+"0.4 * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"0.5 * rank(-ts_delta(close, 2)) * rank(volume/ts_mean(volume, 60))",1,0,0.0
+"group_rank(ts_rank(cashflow_op/enterprise_value, 120), subindustry)",1,0,0.0
+"trade_when(volume > adv20, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(abs(ts_zscore(close, 20)) > 0.5, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(ts_std_dev(returns, 20) > ts_std_dev(returns, 60), group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(days_from_last_change(eps) < 20, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,0,0.0
+"trade_when(abs(ts_delta(close, 5)) > 0.3 * ts_std_dev(close, 20), group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(volume > ts_mean(volume, 60), group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(rank(abs(returns)) < 0.8, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"trade_when(returns < 0, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"group_rank(-news_short_interest, subindustry)",1,0,0.0
+"group_rank(-ts_delta(historical_volatility_30, 66), subindustry)",1,0,0.0
+"group_rank(-historical_volatility_90, subindustry)",1,0,0.0
+"group_rank(-rel_ret_cust, subindustry)",1,0,0.0
+"group_rank(ts_delta(scl12_sentiment, 22), subindustry)",1,1,1.0
+"group_rank(abs(ts_delta(volume/sharesout,1) - group_mean(ts_delta(volume/sharesout,1),1,market)), subindustry)",1,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_median/assets, subindustry)",1,0,0.0
+"group_rank(if_else(rank(ts_std_dev(volume/sharesout, 20)) < 0.5, ts_rank(volume/sharesout, 20), -ts_rank(volume/sharesout, 20)), subindustry)",1,0,0.0
+"group_rank(-ts_std_dev(volume/sharesout, 20), subindustry)",1,0,0.0
+"group_rank(if_else(rank(ts_std_dev(volume/sharesout, 20)) < 0.5, ts_rank(volume/sharesout, 20), -ts_rank(volume/sharesout, 20)), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_xintopt/assets, bucket(rank(cap), range=""0.05, 1, 0.05""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, bucket(rank(cap), range=""0.05, 1, 0.05""))",1,1,1.0
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, bucket(rank(cap), range=""0.05, 1, 0.05""))",1,1,1.0
+"group_rank(fnd6_xintopt/assets, bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(-anl4_fs_detail_estimates_advanced_af_nd_capex_median/assets, bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=""0.2, 1, 0.2""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 75), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 5), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 120), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 8), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_high/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_mean/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_high/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_mean/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 75), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_median/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebit_low/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sh_equity_median/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebitda_median/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebitda_median/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfo_median/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebit_low/assets, bucket(rank(cap), range=""0.05, 1, 0.05""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_median/assets, bucket(rank(cap), range=""0.05, 1, 0.05""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sh_equity_median/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ebitda_median/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfo_median/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newq_xoptqp/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"0.5*group_rank(-ts_delta(close, 10), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"0.5*group_rank(volume/ts_mean(volume, 120), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), sector)",1,1,1.0
+"group_rank(volume/ts_mean(volume, 60), industry)",1,1,1.0
+"group_rank(ts_corr(close, volume, 20), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_txdbq/assets, bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 120), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 120), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 20), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(volume/ts_mean(volume, 240), bucket(rank(cap), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 250), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 250), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 60), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_mean(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_lifr/assets, sector)",1,1,1.0
+"group_rank(fnd6_cicurr/assets, industry)",1,1,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_mean(volume*close, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_fcaq/assets, bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(inventory/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(sga_expense/sales), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_txdbq/assets, bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(cash/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_rank(volume, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_delta(close, 120)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(cap), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(debt/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(volume, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 2), bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_intc/assets, bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(assets_curr/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 2), bucket(rank(sales_growth), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_txdbq/assets, bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_delta(sales, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_intc/assets, bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_lnoq/assets, bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_corr(close, volume, 60)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_pncepsq/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newq_xoptepsqp/assets, bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_tfvceq/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_tfvce/assets, bucket(rank(capex/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_newqv1300_xoptq/assets, bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_lifr/assets, bucket(rank(ebitda/enterprise_value), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_av_diff(vec_avg(anl4_fs_detail_rec_v4_nd_estimate), 120), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_lifr/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_fs_detail_rec_v4_nd_estimate)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_fs_detail_rec_v4_nd_estimate), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(vec_avg(anl4_total_rec), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(fnd6_intc/assets, bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_av_diff(vec_avg(anl4_eaz2lrec_ratingvalue), 120), bucket(rank(debt_lt/assets), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(-ts_av_diff(ts_mean(vec_avg(anl4_basicdetailrec_ratingvalue), 20), 120), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6 ? 1 - rank(ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120)) : 0",1,0,0.0
+"group_neutralize(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6 ? 1 - rank(ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120)) : 0, bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,0,0.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(ts_mean(volume*close, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_cicurr/assets, bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(sales/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_fs_detail_rec_v4_nd_estimate)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_fs_detail_rec_v4_nd_estimate), 120), 0), bucket(rank(ts_std_dev(returns, 20)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_glcea12/assets, bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_tstkc/assets, bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(cashflow_op/assets), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_eaz2lrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_eaz2lrec_ratingvalue), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"0.5*group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=2))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=0))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(if_else(rank(ts_regression(rank(returns), rank(vec_avg(anl4_basicdetailrec_ratingvalue)), 120, lag=0, rettype=3))>0.6, -ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 120), 0), bucket(rank(ts_rank(cap, 250)), range=""0.1, 1, 0.1""))",1,1,1.0
+"group_rank(fnd6_newqv1300_fcaq/assets, subindustry)",1,0,0.0
+"group_rank(-fnd6_newqv1300_rcpq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_rdipaq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_mkvaltq, subindustry)",1,0,0.0
+"rank(-ts_arg_max(close, 20))",1,0,0.0
+"group_zscore(ts_av_diff(cash/assets, 30), subindustry)",1,0,0.0
+"group_rank(fnd6_lno/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_txdfo/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_txtubxintbs/assets, subindustry)",1,0,0.0
+"group_rank(fscore_bfl_quality, subindustry)",1,0,0.0
+"group_rank(-beta_last_30_days_spy, subindustry)",1,0,0.0
+"group_rank(-implied_volatility_mean_skew_60, subindustry)",1,0,0.0
+"group_rank(-implied_volatility_mean_skew_20, subindustry)",1,0,0.0
+"group_rank(-scl12_buzz_fast_d1, subindustry)",1,0,0.0
+"group_rank(-snt_buzz_bfl_fast_d1, subindustry)",1,0,0.0
+"group_rank(scl12_sentiment_fast_d1, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_glced12/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_glceeps12/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_pncq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_prcaq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_prcdq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_rdipepsq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_spcedq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newa2v1300_xopteps/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newqv1300_xoptq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_newq_xoptepsqp/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_pncdq/assets, subindustry)",1,0,0.0
+"group_rank(fnd6_pncepsq/assets, subindustry)",1,0,0.0
+"trade_when(volume > ts_mean(volume, 20), group_rank(fnd6_newqv1300_cimiiq/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), -1)",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 35), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 55), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 105), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 50), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 48), subindustry)",1,1,1.0
+"quantile(group_rank(fnd6_xrent/assets, subindustry))",1,1,1.0
+"quantile(group_rank(ts_av_diff(cash/assets, 45), subindustry))",1,1,1.0
+"quantile(group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry))",1,1,1.0
+"trade_when(volume > ts_mean(volume, 20), group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), -1)",1,1,1.0
+"ts_decay_linear(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), 5)",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 42), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 42), subindustry)",1,1,1.0
+"group_neutralize(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), industry)",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 44), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 46), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(cash/assets, 46), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_totassets_median/assets, 60), subindustry)",1,1,1.0
+"group_rank(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, 60), subindustry)",1,0,0.0
+"group_rank(fnd6_dxd2/assets, subindustry)",1,1,1.0
+"group_rank(fnd6_tfvl/assets, subindustry)",1,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_netdebt_mean/assets, subindustry)",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_grossincome_high/assets, subindustry)",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_high/assets, subindustry)",1,1,1.0
+"group_rank(debt_st/assets, industry)",1,0,0.0
+"group_rank(ts_mean(snt_value_fast_d1, 5), industry)",1,0,0.0
+"group_rank(forward_price_20 / close, industry)",1,0,0.0
+"group_rank(forward_price_90 / close, industry)",1,0,0.0
+"group_rank(ts_mean(news_mins_4_pct_up, 5), industry)",1,0,0.0
+"group_rank(news_max_up_amt / close, industry) - group_rank(news_mins_4_pct_dn, industry)",1,0,0.0
+"group_rank(news_mins_1_pct_up - news_mins_1_pct_dn, industry)",1,0,0.0
+"group_rank(close / news_eod_low - 1, industry)",1,0,0.0
+"group_rank(news_open_gap, industry)",1,0,0.0
+"group_rank(news_curr_vol / ts_mean(news_curr_vol, 20), industry)",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cff_high/assets, industry)",1,0,0.0
+"group_rank(fnd6_newqv1300_prcaq/assets, industry)",1,0,0.0
+"group_rank(fnd6_newqv1300_spceepsq/assets, industry)",1,0,0.0
+"group_rank(fnd6_newqv1300_spceq/assets, industry)",1,0,0.0
+"group_rank(fnd6_newqv1300_glced12/assets, industry)",1,0,0.0
+"group_rank(anl4_fs_actuals_basic_qf_nd_div_value/assets, industry)",1,0,0.0
+"group_rank(fnd6_newq_xoptdqp/assets, industry)",1,0,0.0
+"group_rank(fnd6_newqv1300_pncq/assets, industry)",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 90), industry)",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 75), industry)",1,1,1.0
+"trade_when(ts_rank(volume, 5) > 0.2, group_rank(anl4_fs_actuals_basic_qf_nd_div_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), -1)",1,1,1.0
+"trade_when(ts_rank(volume, 5) > 0.2, group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_median/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60)), -1)",1,1,1.0
+"trade_when(ts_rank(ts_std_dev(returns, 20), 120) < 0.7, group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfi_low/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,0,0.0
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_cff_high - anl4_fs_detail_estimate_1qf_v4_nd_cff_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean), subindustry)",1,1,1.0
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_totassets_high - anl4_fs_detail_estimate_1qf_v4_nd_totassets_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_totassets_median), subindustry)",1,0,0.0
+"group_rank((anl4_fs_detail_estimate_1qf_v4_nd_cff_high - anl4_fs_detail_estimate_1qf_v4_nd_cff_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean), industry)",1,0,0.0
+"group_rank(ts_zscore(close, 120), subindustry)",1,0,0.0
+"group_rank(ts_corr(rank(close), rank(volume), 20), subindustry)",1,0,0.0
+"group_rank(close/vwap - 1, subindustry)",1,0,0.0
+"group_rank(ts_delta(close, 20), subindustry)",1,0,0.0
+"group_neutralize(rank(anl4_fs_detail_estimate_1qf_v4_nd_cfi_low/assets) + rank(anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets) + rank(ts_av_diff(cash/assets, 75)) + rank(ts_av_diff(cashflow_op/enterprise_value, 60)), subindustry)",1,0,0.0
+"group_rank(ts_zscore(returns, 60), subindustry)",1,0,0.0
+"group_rank(ts_std_dev(returns, 20), subindustry)",1,0,0.0
+"quantile(group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, subindustry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), driver=gaussian)",1,1,1.0
+"ts_decay_linear(group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, subindustry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), 10)",1,1,1.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, market)",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, market)",1,0,0.0
+"group_rank(ts_av_diff(cash/assets, 45), market)",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), market)",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_sga_median/assets, bucket(rank(volume), range=""0,1,0.33""))",1,1,1.0
+"hump(trade_when(ts_rank(volume, 5) > 0.5, group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_high/assets, subindustry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_cfi_low/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1), hump=0.008)",1,0,0.0
+"normalize(group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totgw_median/assets, subindustry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, subindustry) + group_rank(ts_zscore(cash/assets, 120), subindustry) + group_rank(ts_zscore(cashflow_op/enterprise_value, 120), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), useStd=true)",1,0,0.0
+"group_rank(ts_zscore(cash/assets, 90), subindustry)",1,0,0.0
+"group_rank(ts_zscore(cashflow_op/enterprise_value, 90), subindustry)",1,0,0.0
+"group_rank(-ts_delta(close, 6), subindustry)",1,0,0.0
+"rank(volume/ts_mean(volume, 110))",1,0,0.0
+"rank(volume/ts_mean(volume, 140))",1,0,0.0
+"group_rank(ts_zscore(close, 15), subindustry)",1,0,0.0
+"0.15*group_rank(-ts_delta(close, 10), subindustry)",1,0,0.0
+"0.15*rank(volume/ts_mean(volume, 120))",1,0,0.0
+"trade_when(ts_rank(volume, 5) > 0.5, group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), -1)",1,1,1.0
+"2*group_rank(authorized_stock_buyback_amount/assets, subindustry)",1,0,0.0
+"0.3*group_rank(ts_av_diff(cash/assets, 45), subindustry)",1,1,1.0
+"0.3*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",1,1,1.0
+"0.25*group_rank(ts_av_diff(cash/assets, 45), subindustry)",1,0,0.0
+"0.25*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",1,0,0.0
+"1.5*group_rank(authorized_stock_buyback_amount/assets, subindustry)",1,0,0.0
+"group_rank(authorized_stock_repurchase_amount/assets, subindustry)",1,1,1.0
+"1.5*group_rank(common_stock_repurchase_payment/assets, subindustry)",1,0,0.0
+"group_rank(anl4_fs_guidances_advanced_qf_nd_ffoa_maxguidance/assets, subindustry)",1,0,0.0
+"group_rank(anl4_fs_guidances_advanced_af_nd_totassets_minguidance/assets, subindustry)",1,0,0.0
+rank(fscore_bfl_growth),1,0,0.0
+rank(fscore_bfl_momentum),1,0,0.0
+rank(fscore_bfl_total),1,0,0.0
+rank(fscore_bfl_surface_accel),1,0,0.0
+"rank(-ts_delta(implied_volatility_mean_skew_30, 20))",1,0,0.0
+rank(implied_volatility_mean_skew_10-implied_volatility_mean_skew_150),1,0,0.0
+"group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry)",1,0,0.0
+"group_rank(anl4_fs_guidances_advanced_qf_nd_soe_minguidance/assets, subindustry)",1,0,0.0
+"group_rank(-(anl4_fs_guidances_advanced_qf_nd_ffoa_maxguidance-anl4_fs_guidances_advanced_af_nd_ffoa_minguidance)/assets, subindustry)",1,0,0.0
+"group_rank(-anl4_fs_guidances_advanced_qf_nd_custom_eps_maxguidance/assets, subindustry)",1,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_netdebt_high/assets, subindustry)",1,0,0.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_totgw_median/assets, subindustry)",1,0,0.0
+"0.35*group_rank(ts_av_diff(cash/assets, 75), subindustry)",1,0,0.0
+"0.35*group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry)",1,0,0.0
+"0.35*group_rank(-ts_delta(close, 8), subindustry)",1,0,0.0
+"0.35*rank(volume/ts_mean(volume, 150))",1,0,0.0
+"group_rank(anl4_fs_detail_estimates_advanced_af_nd_cff_median/assets, subindustry)",1,0,0.0
+"group_rank(anl4_fs_detail_estimates_basic_qf_delay1_v4_nd_div_mean/assets, market)",1,0,0.0
+"group_rank(anl4_fs_detail_estimates_basic_qf_v4_nd_cfps_median/assets, market)",1,0,0.0
+"0.30*group_rank(ts_av_diff(cash/assets, 45), subindustry)",1,1,1.0
+"0.30*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",1,1,1.0
+"0.30*group_rank(-ts_delta(close, 10), subindustry)",1,1,1.0
+"0.30*rank(volume/ts_mean(volume, 120))",1,1,1.0
+"group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_netdebt_low/assets, subindustry)",1,0,0.0
+"group_rank(anl4_fs_detail_estimate_1qf_v4_nd_rd_exp_median/assets, subindustry)",1,0,0.0
+"group_rank(dividend/close, subindustry)",1,0,0.0
+"group_rank(-(high-low)/close, subindustry)",1,0,0.0
+"1.0*group_rank(ts_av_diff(cash/assets, 60), subindustry)",1,1,1.0
+"1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 30), subindustry)",1,1,1.0
+"1.0*group_rank(-ts_delta(close, 15), subindustry)",1,1,1.0
+"1.0*rank(volume/ts_mean(volume, 200))",1,1,1.0
+"group_rank(-actual_return_on_pension_plan_assets/assets, subindustry)",1,1,1.0
+"group_rank(-ts_delta(close, 15), subindustry)",1,1,1.0
+"rank(volume/ts_mean(volume, 200))",1,1,1.0
+"group_rank(-ts_delta(close, 120)/assets, subindustry)",1,1,1.0
+"group_rank(-(close/vwap), subindustry)",1,1,1.0
+"group_rank(-common_stock_repurchase_payment/assets, subindustry)",1,1,1.0
+rank(authorized_stock_buyback_amount/assets) - rank(annual_intangible_assets_net_carrying_value/assets),1,0,0.0
+"ts_zscore(authorized_stock_buyback_amount/assets, 250)",1,0,0.0
+"-ts_zscore(annual_intangible_assets_net_carrying_value/assets, 250)",1,0,0.0
+"ts_zscore(ts_av_diff(cash/assets, 45), 250)",1,0,0.0
+"ts_zscore(ts_av_diff(cashflow_op/enterprise_value, 45), 250)",1,0,0.0
+"-ts_zscore(ts_delta(close, 10), 60)",1,0,0.0
+"ts_zscore(volume/ts_mean(volume, 120), 250)",1,0,0.0
+"group_neutralize(group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), subindustry)",1,1,1.0
+"quantile(group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), driver=""gaussian"")",1,1,1.0
+"group_rank(authorized_stock_buyback_amount/assets, market)",1,1,1.0
+"group_rank(-annual_intangible_assets_net_carrying_value/assets, sector)",1,1,1.0
+"group_rank(-ts_corr(close, volume, 10), subindustry)",1,1,1.0
+"ts_decay_linear(group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)), 5)",1,1,1.0
+"normalize(scale(group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))))",1,1,1.0
+"group_rank(ts_delta(authorized_stock_buyback_amount/assets, 66), subindustry)",1,1,1.0
+"group_rank(fnd6_oibdp/assets, subindustry)",1,0,0.0
+"group_rank(ts_delta(fnd6_gp/assets, 66), subindustry)",1,0,0.0
+"group_rank(fnd6_sale/assets, subindustry)",1,0,0.0
+"group_rank(ts_delta((eps - est_epsr), 66), subindustry)",1,0,0.0
+"group_rank(news_max_up_amt/close, subindustry)",1,0,0.0
+"group_rank(news_ton_last, subindustry)",1,0,0.0
+"group_rank(-news_pct_90min, subindustry)",1,0,0.0
+"group_rank(ts_rank(cashflow_op/enterprise_value,120),subindustry)",1,0,0.0
+"group_rank(ts_rank(cash/assets,120),subindustry)",1,0,0.0
+"group_rank(-ts_delta(close, 1), subindustry)",1,1,1.0
+"0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value,60),subindustry)",1,0,0.0
+"0.6*group_rank(ts_av_diff(cash/assets,30),subindustry)",1,0,0.0
+"group_rank(ts_av_diff(cashflow_op/enterprise_value,90),subindustry)",1,0,0.0
+"group_rank(ts_av_diff(cash/assets,90),subindustry)",1,0,0.0
+"0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,60),subindustry)",1,1,1.0
+"0.25*group_rank(ts_av_diff(cash/assets,30),subindustry)",1,1,1.0
+"0.25*group_rank(fnd6_xopr/assets,subindustry)",1,1,1.0

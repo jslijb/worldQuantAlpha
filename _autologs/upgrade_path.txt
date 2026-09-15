@@ -1,0 +1,160 @@
+==========================================================================
+一、单腿复用价值：每条腿出现在多少条全过记录里
+==========================================================================
+腿表达式                                                                                                               出现   全过      率
+rank(volume/ts_mean(volume, 60))                                                                                  417  213  51.1%
+group_rank(-ts_delta(close, 2), subindustry)                                                                      351  191  54.4%
+group_rank(ts_av_diff(cash/assets, 45), subindustry)                                                              184  136  73.9%
+group_rank(fnd6_xrent/assets, subindustry)                                                                        181  140  77.3%
+group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry)                                             180   91  50.6%
+group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)                                             176  126  71.6%
+group_rank(ts_av_diff(cash/assets, 30), subindustry)                                                              140   70  50.0%
+rank(volume/ts_mean(volume, 120))                                                                                  91   61  67.0%
+rank(-ts_delta(close, 2))                                                                                          84   22  26.2%
+group_rank(authorized_stock_buyback_amount/assets, subindustry)                                                    83   54  65.1%
+group_rank(-ts_delta(close, 10), subindustry)                                                                      75   51  68.0%
+group_rank(fnd6_newqv1300_cimiiq/assets, subindustry)                                                              67   36  53.7%
+group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry)                                       57   43  75.4%
+rank(volume/ts_mean(volume, 90))                                                                                   48   18  37.5%
+group_rank(fnd6_xopr/assets, subindustry)                                                                          45   31  68.9%
+group_rank(fnd6_newqv1300_ivstq/assets, subindustry)                                                               45   17  37.8%
+group_rank(-ts_delta(close, 5), industry)                                                                          39   11  28.2%
+group_rank(fnd6_txtubxintis/assets, subindustry)                                                                   37   16  43.2%
+group_rank(operating_expense/assets, subindustry)                                                                  36   16  44.4%
+0.5*group_rank(-ts_delta(close, 10), subindustry)                                                                  33    6  18.2%
+0.5*rank(volume/ts_mean(volume, 120))                                                                              33    6  18.2%
+group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)                                                         30   10  33.3%
+group_rank(ts_av_diff(cash/assets, 75), subindustry)                                                               29   16  55.2%
+group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1"))              29   19  65.5%
+group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1     29   19  65.5%
+group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range="0.1, 1, 0.1"))                                    27   18  66.7%
+group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range="0.1, 1, 0.1"))                   27   18  66.7%
+group_rank(-ts_delta(close, 2), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1"))                      27   19  70.4%
+
+==========================================================================
+二、D 档（SF 3.0-4.0）"差一点"的候选 top25 —— 最值得捡回的历史资产
+==========================================================================
+cid        id             S     F    SF       T    tS 腿 FAIL
+w58_h      Vk6ZdNVG    3.03  1.49  4.52  0.7010  3.85  4 HIGH_TURNOVER
+w120_b     O0rLlAb1    2.17  1.85  4.02  0.1297  1.04  6 LOW_SUB_UNIVERSE_SHARPE
+e6_volpow  pwPjeEEq    2.19  1.80  3.99  0.0715   2.2  3 
+w120_h     9qVeNOXd    2.14  1.85  3.99  0.1075  0.87  6 LOW_SUB_UNIVERSE_SHARPE
+w66_h      MP1epox8    2.55  1.44  3.99  0.3109  2.61  6 
+w87_f      Grd7d6k0    2.26  1.73  3.99  0.1721  1.95  4 
+w100_d     ZY0vkmbn    2.34  1.64  3.98  0.1722  2.56  1 
+w59_f      E5vN6Kv9    2.41  1.57  3.98  0.3690  2.87  5 
+w119_e     1Yx8kOZ6    2.36  1.61  3.97  0.2055  2.21  6 
+w87_c      RRVv7GVz    2.21  1.76  3.97  0.0880  1.35  6 
+w63_a      1YxlE55k    2.37  1.59  3.96  0.3248  1.83  4 
+w68_e      A10rL02e    2.44  1.52  3.96  0.3871  1.62  4 
+s3_pw06    3q9l0lM6    2.15  1.80  3.95  0.0758   2.4  3 
+w116_a     j23kKP5Z    2.28  1.67  3.95  0.1982  2.09  6 
+w26_lnoq   d5O1vvaE    2.30  1.65  3.95  0.2576  3.23  4 
+w79_e      XgWMA3El    2.31  1.64  3.95  0.2053  1.41  6 
+w83_c      1Yx2dvkX    2.35  1.60  3.95  0.2383   1.5  4 
+x5_d0_cfevcash Jjx7zR3e    2.15  1.80  3.95  0.1174  2.03  2 
+y6_d0_t010 LL97zo61    2.15  1.80  3.95  0.1174  2.03  2 
+h08_xc_sec om6lYQwJ    2.24  1.70  3.94  0.1897  1.13  3 
+s6_xo04    P0Z75POJ    2.21  1.73  3.94  0.1175   2.1  3 
+w119_m     Vk6rV8pJ    2.36  1.58  3.94  0.2147  1.93  6 
+w119_n     8830beVa    2.45  1.49  3.94  0.2675  2.71  6 
+w38_f      Jjx3WMqn    2.06  1.88  3.94  0.1134  1.47  5 
+w47_h      rK59lLnj    2.07  1.87  3.94  0.1190  0.48  5 
+
+   D 档腿数分布: {1: 11, 2: 26, 3: 42, 4: 57, 5: 51, 6: 64, 7: 6, 8: 3}
+   D 档中 tS>=1.25 的有 199 条（验证期稳定，只差 IS 分数）
+   D 档中 无FAIL 的有 238 条（只差分数不够）
+
+==========================================================================
+三、同一字段组合下 A 档 vs E 档 的表达式差异（升级动作实证）
+==========================================================================
+--- 骨架 assets, cashflow_op, close, enterprise_value, fnd6_xrent, subindustry, volume  (n=78  A=36 E=1)
+   [A最好] w53_c SF=6.19 tS=2.49 T=0.1331 腿=5
+      group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+   [E最差] w37_h SF=1.33 tS=-0.23 T=0.1095 腿=5
+      group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+   A 有而 E 没有的腿: []
+
+--- 骨架 annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cashflow_op, close, enterprise_val  (n=31  A=17 E=1)
+   [A最好] w94_e SF=5.89 tS=2.53 T=0.1524 腿=6
+      group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+   [E最差] w96_h SF=2.38 tS=2.49 T=0.4685 腿=5
+      rank(authorized_stock_buyback_amount/assets) - rank(annual_intangible_assets_net_carrying_value/assets) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+   A 有而 E 没有的腿: ['trade_when(abs(ts_delta(close, 5)) > 0.3 * ts_std_dev(close,']
+
+==========================================================================
+四、脚本独有（mined 未覆盖）表达式 1442 条 —— 抽样
+==========================================================================
+   类型分布: {'pv/其他': 1252, 'fundamental': 119, 'analyst4': 62, 'news/sentiment': 8, 'option': 1}
+
+   (anl4_fs_detail_estimate_1qf_v4_nd_cff_high - anl4_fs_detail_estimate_1qf_v4_nd_cff_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_cff_mean)
+   (anl4_fs_detail_estimate_1qf_v4_nd_ptpr_high - anl4_fs_detail_estimate_1qf_v4_nd_ptpr_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_ptpr_mean)
+   (anl4_fs_detail_estimate_1qf_v4_nd_sga_high - anl4_fs_detail_estimate_1qf_v4_nd_sga_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_sga_mean)
+   (anl4_fs_detail_estimate_1qf_v4_nd_totassets_high - anl4_fs_detail_estimate_1qf_v4_nd_totassets_low) / abs(anl4_fs_detail_estimate_1qf_v4_nd_totassets_median)
+   (rank(ebit/enterprise_value) + rank(cashflow_op/enterprise_value) + rank(ebitda/enterprise_value))/3
+   (rank(ebit/enterprise_value) + rank(cashflow_op/enterprise_value))/2
+   (ts_std_dev(returns,20) < group_mean(ts_std_dev(returns,20),1,market) ? -ts_delta(close,10) : ts_delta(close,10))
+   ) + rank(
+   ): done.add(row[
+   ): ids.add(row[
+   )} + 0.15*{GS(PVD10)} + 0.15*rank({VOL120})
+   )} + 0.25*{GS(CASH45)} + 0.25*{GS(CFOEV45)} + 0.25*{GS(PVD10)} + 0.25*rank({VOL120})
+   )} + 0.3*{GS(CASH45)} + 0.3*{GS(CFOEV45)} + 0.3*{GS(PVD10)} + 0.3*rank({VOL120})
+   )} + 0.3*{GS(PVD10)} + 0.3*rank({VOL120})
+   )} + 0.35*rank(volume/ts_mean(volume, 120))
+   )} + 0.35*{GS(CASH45)} + 0.35*{GS(CFOEV45)} + 0.35*{GS(PVD10)} + 0.35*rank({VOL120})
+   )} + 0.4*{GS(CASH45)} + 0.4*{GS(CFOEV45)} + 0.25*{GS(PVD10)} + 0.25*rank({VOL120})
+   )} + 0.4*{GS(CASH45)} + 0.4*{GS(CFOEV45)} + 0.4*{GS(PVD10)} + 0.4*rank({VOL120})
+   )} + 0.4*{GS(CFOEV45)} + 0.4*{GS(PVD10)} + 0.4*rank({VOL120})
+   )} + 0.4*{GS(PVD10)} + 0.4*rank({VOL120})
+   )} + 0.45*{GS(CASH45)} + 0.45*{GS(CFOEV45)} + 0.5*{GS(PVD10)} + 0.5*rank({VOL120})
+   )} + 0.5*rank(volume/ts_mean(volume, 120))
+   )} + 0.5*{GS(PVD10)} + 0.5*rank({VOL120})
+   )} + 0.7*{GS(PVD10)} + 0.7*rank({VOL120})
+   )} + rank(-ts_mean(returns, 5)) + ts_rank(volume/ts_mean(volume, 60), 60)
+   )} + rank(volume/ts_mean(volume, 120))
+   )} + rank(volume/ts_mean(volume, 250))
+   )} + {GI_(CASH)} + {GI_(CFOEV)} + {GI_(PVD5)} + rank({VOL90})
+   )} + {GI_(CASH45)} + {GI_(CFOEV45)} + {GI_(PVD10)} + rank({VOL120})
+   )} + {GI_(CASH45)} + {GS(CFOEV45)} + {GI_(PVD5)} + rank({VOL90})
+   )} + {GI_(CASH45)} + {GS(CFOEV45)} + {GS(PVD10)} + rank({VOL120})
+   )} + {GI_(CASH45)} + {GS(CFOEV45)} + {GS(PVD2)} + rank({VOL60})
+   )} + {GI_(CASH60)} + {GI_(CFOEV60)} + {GI_(PVD5)} + rank({VOL120})
+   )} + {GI_(CASH60)} + {GI_(CFOEV60)} + {GI_(PVD5)} + rank({VOL90})
+   )} + {GI_(CASH60)} + {GI_(CFOEV75)} + {GI_(PVD8)} + rank({VOL120})
+   )} + {GI_(CASH75)} + {GI_(CFOEV60)} + {GI_(PVD10)} + rank({VOL120})
+   )} + {GI_(CASH75)} + {GI_(PVD10)} + rank({VOL120})
+   )} + {GI_(PVD5)} + rank({VOL90})
+   )} + {GI_(PVD8)} + rank({VOL120})
+   )} + {GM(CASH45)} + {GM(CFOEV45)} + {GM(PVD10)} + rank({VOL120})
+
+==========================================================================
+五、全过（A/B/C 档）但未出现在台账的候选
+==========================================================================
+   全过 483 条，其中 456 条未提交（台账 60 个 id，匹配 27 条）
+   未提交者 SF 中位=4.57，tS 中位=2.30
+
+   按 cid 前缀分组（未提交的全过候选）:
+   w114:13, w116:10, w118:10, w32:10, w119:9, w102:8, w106:8, w121:8, w39:8, w51:8, w52:8, w53:8, w54:8, w55:8, w56:8, w65:8, w77:8, w96:8, w97:8, w100:7, w109:7, w110:7, w43:7, w50:7, w57:7, w74:7, w76:7, w78:7, w79:7, w94:7
+
+   最强 20 条未提交候选:
+   w53_c      wpY3Yxvd   SF=6.19 tS= 2.49 T=0.1331  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w54_d      A10e0LQY   SF=6.15 tS= 2.53 T=0.1443  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w55_h      Vk6Za7Lw   SF=6.15 tS= 2.54 T=0.1425  group_neutralize(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindus
+   w52_g      kqVvjjnK   SF=6.14 tS= 2.53 T=0.1426  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w54_h      qMWOWaE1   SF=6.14 tS= 2.53 T=0.1426  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w53_f      Vk6Z6nmw   SF=6.11 tS= 2.43 T=0.1409  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w55_f      RRV9brza   SF=6.09 tS= 2.38 T=0.1440  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 42), subindustry) + group_rank
+   w54_e      zqYgYexo   SF=6.08 tS= 2.51 T=0.1412  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w53_g      78Z3ZgrZ   SF=6.06 tS= 2.42 T=0.1488  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w51_a      KPOvGJRj   SF=6.05 tS= 2.48 T=0.1299  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w53_a      MP1d7Nvk   SF=6.05 tS= 2.57 T=0.1552  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w55_a      kqVvoRMP   SF=6.05 tS= 2.58 T=0.1452  group_rank(fnd6_xrent/assets, industry) + group_rank(ts_av_diff(cash/assets, 45), industry) + group_rank(ts_av
+   w53_e      78Z3ZAe1   SF=6.04 tS= 2.59 T=0.1418  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 50), subindustry) + group_rank
+   w54_g      78Z3Z5m5   SF=6.04 tS= 2.65 T=0.1421  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 48), subindustry) + group_rank
+   w53_d      kqVvVxag   SF=6.03 tS= 2.32 T=0.1432  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 40), subindustry) + group_rank
+   w55_b      JjxoNKAj   SF=6.01 tS= 2.64 T=0.1579  group_rank(fnd6_xrent/assets, industry) + group_rank(ts_av_diff(cash/assets, 45), industry) + group_rank(ts_av
+   w51_b      vRkZN1gG   SF=6.00 tS= 2.52 T=0.1393  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w52_a      d5OYjqdY   SF=5.98 tS= 2.42 T=0.1376  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank
+   w54_a      58QrQzeM   SF=5.96 tS= 3.11 T=0.1429  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash, 45)/assets, subindustry) + group_rank
+   w49_d      j23orrMk   SF=5.95 tS=  2.4 T=0.1165  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank

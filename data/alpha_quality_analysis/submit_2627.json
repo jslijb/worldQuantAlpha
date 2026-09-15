@@ -1,0 +1,24 @@
+[
+ {
+  "f": "w27_ivstq_lol2",
+  "id": "WjPexbLZ",
+  "S": 2.32,
+  "F": 1.79,
+  "SF": 4.109999999999999,
+  "expr": "group_rank(fnd6_newqv1300_ivstq/assets, subindustry) + group_rank(fnd6_newqv1300_lol2q/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))",
+  "decay": 8,
+  "neut": "SUBINDUSTRY",
+  "teS": 3.48
+ },
+ {
+  "f": "w27_ivstq_ind",
+  "id": "le8KY21N",
+  "S": 2.14,
+  "F": 1.65,
+  "SF": 3.79,
+  "expr": "group_rank(fnd6_newqv1300_ivstq/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))",
+  "decay": 8,
+  "neut": "INDUSTRY",
+  "teS": 3.13
+ }
+]

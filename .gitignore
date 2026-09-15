@@ -1,0 +1,51 @@
+# ============================================================
+# WorldQuant BRAIN 项目 .gitignore
+# 规范源见根目录 CLAUDE.md「版本控制」一节
+# ============================================================
+
+# ---------- 凭据（红线：绝不入库，一旦提交极难彻底清除） ----------
+brain_credentials.txt
+*.credentials
+*.credential
+*_token.txt
+*_secret.txt
+.env
+.env.*
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---------- 运行日志（时效性内容，无历史追溯价值） ----------
+*.log
+_autologs/*.log
+
+# ---------- 工具缓存 / IDE ----------
+.codegraph/
+.codeartsdoer/
+.arts/
+.freebuff/
+.idea/
+.vscode/
+*.swp
+
+# ---------- WorkBuddy 工作区目录 ----------
+# 只保留 memory（项目知识资产，需版本化）；
+# 其余（自动任务运行态、缓存）属本地状态，会制造提交噪声。
+.workbuddy/*
+!.workbuddy/memory/
+
+# ---------- 临时文件 ----------
+*.tmp
+*.bak
+*~
+Thumbs.db
+desktop.ini

@@ -1,0 +1,13 @@
+﻿cid,alpha_id,status,source,S,F,T,R,DD,trainS,trainF,testS,testF,testDD,error,expr
+h01_amb_vol,78Z1J6q8,UNSUBMITTED,Amihud+反转+放量(g07加码),2.22,1.7,0.191,0.1125,0.0533,2.31,1.84,1.81,1.17,0.0276,,"group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+h02_amb60,,TIMEOUT,Amihud 60日窗+反转,,,,,,,,,,,,"group_rank(-ts_mean(abs(returns)/volume, 60), subindustry) + rank(-ts_delta(close, 2))"
+h03_amb_xrent,gJQMxZoJ,UNSUBMITTED,Amihud+xrent双锚+反转,2.67,2.4,0.143,0.1152,0.0293,2.86,2.69,1.8,1.26,0.0188,,"group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2))"
+h04_opex_cash,9qVrJkYe,UNSUBMITTED,opex+cash双锚+反转,2.29,1.77,0.1555,0.0927,0.0324,2.33,1.83,2.1,1.5,0.021,,"group_rank(operating_expense/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2))"
+h05_xc_vwap,om6lVrZn,UNSUBMITTED,g02换vwap反转(差异化),2.49,2.05,0.1612,0.1097,0.0309,2.77,2.44,1.23,0.67,0.0192,,"group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(vwap, 2))"
+h06_xc_w5,A10P3RLY,UNSUBMITTED,g02换5日反转窗,2.26,1.93,0.1488,0.1087,0.035,2.53,2.32,1.01,0.54,0.0211,,"group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 5))"
+h07_xc_vol3,O0rZ90n1,UNSUBMITTED,g02四信号加放量,2.82,2.29,0.1871,0.1236,0.0306,3.0,2.53,2.08,1.4,0.0229,,"group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+h08_xc_sec,om6lYQwJ,UNSUBMITTED,g02换sector分组,2.24,1.7,0.1897,0.1087,0.0371,2.49,2.01,1.13,0.57,0.0227,,"group_rank(fnd6_xrent/assets, sector) + group_rank(ts_av_diff(cash/assets, 30), sector) + rank(-ts_delta(close, 2))"
+h09_cash_w5,rK5lW6gd,UNSUBMITTED,g03换5日反转窗,2.03,1.36,0.2106,0.0943,0.0578,1.97,1.32,2.35,1.55,0.0187,,"group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 5)) + rank(volume/ts_mean(volume, 60))"
+h10_amb_only,WjPGg9LN,UNSUBMITTED,Amihud+vwap反转(不加重叠vol信号),2.01,1.55,0.165,0.0979,0.0386,2.11,1.69,1.56,1.01,0.0242,,"group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + rank(-ts_delta(vwap, 2))"
+h11_xc_decay12,npK2W2Jq,UNSUBMITTED,g02加大decay压T提F,2.48,2.28,0.1271,0.107,0.0315,2.8,2.76,1.04,0.58,0.0182,,"group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2))"
+h12_opex_vol5,wpYleY3p,UNSUBMITTED,g05换5日反转窗,1.96,1.37,0.1867,0.0912,0.0382,1.87,1.3,2.4,1.73,0.035,,"group_rank(operating_expense/assets, subindustry) + rank(-ts_delta(close, 5)) + rank(volume/ts_mean(volume, 60))"

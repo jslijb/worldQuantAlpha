@@ -1,0 +1,222 @@
+# CLAUDE.md — WorldQuant BRAIN 项目工作规范
+
+> 本文件是项目的**唯一规范源**。任何 AI 工具/协作者动手前先读这里。
+> 最后重构：2026-09-15（1900 个散乱文件 → 分层结构，历史脚本经验已提取后清除）
+> **维护约定见第 4 节——本文件需要持续更新，不是一次性的。**
+
+---
+
+## 0. 这个项目在做什么
+
+用 WorldQuant BRAIN 平台 API 批量挖 Alpha 因子、过质量闸门与相关性闸门、提交并记账。
+
+| 项 | 内容 |
+|---|---|
+| 目标 | 每日 5 个高质量 Alpha（下限）；累计 100 个提交解锁 Super Alpha；Rank 进前 100 |
+| 高质量定义 | S+F ≥ 4.0（IS Sharpe + IS Fitness）**且** testS ≥ 1.25（验证期不崩）**且** checks 无 FAIL |
+| 真正的瓶颈 | **相关性墙**——不是质量（历史 1098 条里 460 条达标），是"合格因子彼此太像" |
+| 运行环境 | Python `D:/ProgramData/Miniforge3/envs/bigmodel/python.exe`（conda 环境 bigmodel，已装 requests/pandas/matplotlib/reportlab） |
+| 凭据 | `brain_credentials.txt`（项目根，JSON 格式 `["user","pass"]`） |
+
+---
+
+## 1. 目录规范（强约束）
+
+```
+D:\Python\worldquant\
+├── CLAUDE.md                  ← 本文件（规范源，AI 工具固定读）
+├── README.md                  ← 项目入口概览
+├── brain_credentials.txt      ← 凭据（脚本按相对路径读，不要移动）
+│
+├── src/                       ★ 全部 Python 代码只在这里
+│   ├── core/                  utils.py（登录/取字段）、AlphaSimulator.py（并发模拟器）
+│   ├── submit/                submit_v2.py（★提交器）、probe_corr_service.py（★corr 服务双探针）、precheck_only.py
+│   ├── mine/                  mine_batch120.py、mine_batch121.py（当前活跃挖矿批）
+│   ├── ops/                   auto_submit_loop.py（自动重试循环，当前停用）
+│   ├── tools/                 指标计算、结果汇总、字段抓取、本轮重构工具
+│   └── archive/               expr_library.py（★历史表达式库，见下）
+│
+├── data/                      ★ 全部数据只在这里
+│   └── alpha_quality_analysis/
+│       ├── SUBMITTED_LEDGER.csv        ★ 台账，唯一事实源
+│       ├── mined/                      1098 个模拟结果 json
+│       ├── candidates_all.csv          1098 条结构化清单（含 S/F/T/tS/FAIL/band）
+│       ├── candidates_unsubmitted_qualified.csv  456 条未提交达标候选
+│       ├── leg_value_rank.csv          207 条单腿价值排行
+│       └── *_matrix.json               字段清单（fnd6 / analyst4）
+│
+├── docs/                      ★ 全部 Markdown 文档只在这里
+│   ├── methodology/           挖矿方法论（01_骨架与配方 / 02_参数与设置 / 03_过墙与提交 /
+│   │                          04_失败模式 / 05_历史因子复盘 / 06_打法手册）
+│   ├── research/              外部论文/研报移植记录
+│   ├── study/                 学习材料（零基础四课、进阶指南）
+│   ├── exam/                  考试与备考资料（含 images/ 截图）
+│   ├── project/               平台规则、SDD 工程文档、数据集参考、报告
+│   ├── reference/             官方 PDF + 知识图（images/）
+│   └── archive/               过时文档
+│
+└── _autologs/                 运行日志（临时产物，可随时清理）
+```
+
+### 放置规则（新增文件时照此归位）
+
+| 新增什么 | 放哪 | 说明 |
+|---|---|---|
+| 新挖矿脚本 | `src/mine/mine_batch{NNN}.py` | 编号递增，不复用旧编号 |
+| 新提交/预检脚本 | `src/submit/` | 提交逻辑一律走 `submit_v2.py`，不要另起炉灶 |
+| 一次性分析/维护脚本 | `src/tools/` | 用完可留档 |
+| 模拟结果 json | `data/alpha_quality_analysis/mined/` | 脚本产出直接落这里 |
+| 新方法论文档 | `docs/methodology/{已有子目录}/` | 子目录按主题，不新建顶层目录 |
+| 论文/研报移植记录 | `docs/research/` | 命名 `{来源}_{主题}.md` |
+| 备考/考试材料 | `docs/exam/` | 截图放 `docs/exam/images/` |
+| 过程日志/临时文件 | `_autologs/` | 不要落根目录 |
+
+**禁止**：根目录新增任何 .py / .md / 数据文件（除本文件、README.md、brain_credentials.txt）。
+
+### 路径写法约定
+`src/` 下的脚本**必须自带项目根定位**（因为脚本不在根目录了）：
+
+```python
+import os as _os, pathlib as _pl
+_p = _pl.Path(__file__).resolve()
+for _d in [_p.parent, *_p.parents]:
+    if (_d / 'brain_credentials.txt').exists():
+        _os.chdir(_d); break
+```
+
+之后所有相对路径（`brain_credentials.txt`、`data/alpha_quality_analysis/mined`）照常工作。
+
+---
+
+## 2. 代码规范
+
+- 全部代码集中在 `src/`，**不再往根目录放脚本**。
+- 新脚本一律加第 1 节的根定位代码块。
+- 模拟并发**上限 2**（超过报 `429 CONCURRENT_SIMULATION_LIMIT_EXCEEDED`），必须 `max_workers=2` + 429 退避重试。
+- 长跑脚本必须**可断点续跑**：产出用 `os.path.exists` 跳过、提交前用台账去重。
+- 后台命令约 2 分钟会被截断，长任务用 `run_in_background` 或分片。
+- 轮询限速：`<1.3 秒`高频打 corr 端点会被服务器 RST（WinError 10054）；间隔不低于 `Retry-After`，并捕获 `ConnectionError`。
+
+---
+
+## 3. 数据规范
+
+- **`data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` 是唯一事实源**。所有"提交了几个"的问题以此为准。
+- 台账**只追加，不删除、不覆盖**。追加时用 `utf-8-sig` 读（首列带 BOM，否则 `DictReader` 的 id 键全空、去重失效——0913 翻车过一次）。
+- 时间口径：`dateSubmitted` 自带 `-04:00`，美东时间。**北京 12:00 = 美东 00:00**；北京 03:00 ≈ 美东前一天 15:00。
+- 模拟结果 json 落 `mined/`，文件名 `{批次}_{序号}.json`（如 `w121_d.json`）。
+
+---
+
+## 4. 文档规范与维护约定
+
+### 本文件（CLAUDE.md）什么时候必须更新
+1. **目录结构变了**（新增/移动/删除顶层目录或子目录 → 同步第 1 节树形图）
+2. **新增了归位规则**（某类文件该放哪 → 同步第 1 节表格）
+3. **平台约束发生变化**（并发上限、字段权限、API 行为 → 同步第 6 节）
+4. **出现新的术语译法**（→ 同步第 7 节）
+5. **红线变化**（→ 同步第 8 节）
+6. 维护完在文件末尾「变更记录」追加一行。
+
+### 方法论文档什么时候必须更新
+- 跑完一批实证（≥5 条候选）→ 把结论补进 `docs/methodology/` 对应文件
+- 有新发现推翻旧结论 → **必须显式标"修正 X 月 X 日结论"**，不要悄悄改
+- 文档里所有数字必须能对应 `data/` 下的 CSV，禁止凭印象写计数
+
+### 写作要求
+- 结论必须有实证来源（写清批次号、样本数、对照条件）
+- 区分"已验证"与"未验证"，未验证的标明"未实测"
+- 不用自造术语；量化术语按第 7 节译法
+
+---
+
+## 5. 常用命令
+
+```bash
+PY="D:/ProgramData/Miniforge3/envs/bigmodel/python.exe"
+
+# 探测平台自相关服务是否恢复（双探针，必做前置）
+$PY src/submit/probe_corr_service.py
+
+# 提交某个前缀的达标候选（自动去重 + 质量过滤 + corr 预检 + 提交 + 记账）
+$PY src/submit/submit_v2.py auto w114_
+
+# 只预检不提交
+$PY src/submit/precheck_only.py
+
+# 汇总 mined 结果
+$PY src/tools/summarize_mined.py
+```
+
+**提交判定链**：质量闸门（S+F≥4.0 & testS≥1.25 & 无 FAIL）→ corr 预检（max corr<0.7 直通；否则豁免线 = `1.10 × max(所有 corr≥0.7 对手的 Sharpe)`，候选 S 达线也可提交）→ `POST /alphas/{id}/submit` → `GET /alphas/{id}` 核 `status==ACTIVE` → 追加台账。
+
+⚠️ **必须串行提交**：同账号并发提交会互堵（0914 实测 4 个 POST 201 后永不裁决）。同骨架变体一次只提一个（互撞率 0.82–0.95）。
+
+---
+
+## 6. 平台硬约束（实测）
+
+| 约束 | 内容 |
+|---|---|
+| 并发模拟 | **上限 2**，超过报 429 |
+| 字段类型 | `fnd6_*` 明细多为 VECTOR（事件型），`divide` 不支持事件输入。选字段前按 `type=MATRIX` 过滤 |
+| `_v1300` 字段 | **delay=0 不可用**（unknown variable） |
+| 算子 | 共 66 个（清单 `data/alpha_quality_analysis/operators.json`）。**无** `ts_skewness`/`ts_kurtosis`（写 `ts_std_dev`，不是 `ts_stddev`） |
+| analyst 权限 | 账号**无独立 analyst 数据集**，**`rating` 字段 404**。等价评级字段全在 analyst4 且全为 VECTOR，**必须 `vec_avg` 聚合** |
+| coverage | USA/TOP3000/delay1 恒为 0.5，无区分度；选字段看 **alphaCount 越低越不易撞车** |
+| 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10% |
+| corr 服务故障态 | `GET /alphas/{id}/correlations/self` 返回 `200 + Retry-After + 空 body` = 服务停摆。**探针必须用从未算过 corr 的候选**（缓存 alpha 会假阳性）。模拟服务不受影响 |
+
+---
+
+## 7. 术语译法规范（量化行业习惯，禁止字面直译）
+
+| 英文 | ✅ 正确 | ❌ 禁止 |
+|---|---|---|
+| Pasteurization | 池外标的置空（按池过滤） | 消毒 |
+| Margin | 单位成交盈亏（PnL/成交额，bps） | 保证金 |
+| Production Correlation | 在产 Alpha 相关性 | 生产相关性 |
+| Instrument / Universe | 标的 / 股票池 | 工具 / 宇宙 |
+| Book size | 账面规模（多空双边名义敞口，默认 2000 万） | — |
+| Truncation | 单票权重上限 | 截断 / 去极值 |
+| Lookback Days | 回溯窗口（天） | — |
+| Fitness | 适应度（综合质量分） | 体能 |
+| IS Ladder Sharpe | IS 分段夏普稳定性 | — |
+| Region / Test Period | 市场区域 / 验证期 | — |
+
+新增术语须同步维护本表，并同步 `docs/exam/备考总纲_详细版.md` 的术语对照表。
+
+---
+
+## 8. 红线
+
+1. **不删除、不覆盖台账**（`SUBMITTED_LEDGER.csv`），只追加。
+2. **不删除已提交的 Alpha**。
+3. **考试/考核进行中不提供答案**——含各类限次数的准入/认证测评；"开卷"与"对方未禁用 AI"均不改变判断。只做考后复盘、考前陪练。
+4. **不把不同项目的技术张冠李戴**（本工作区只做 WorldQuant）。
+5. 对外动作（提交、发消息、任何不可逆操作）先确认；对内动作（读、分析、整理、写文档）放手做。
+
+---
+
+## 9. 快速导航
+
+| 想知道什么 | 看哪 |
+|---|---|
+| 三条最强骨架长什么样 | `docs/methodology/01_骨架与配方/01_黄金骨架库.md` |
+| 参数该取多少 | `docs/methodology/02_参数与设置/01_参数甜点表.md` |
+| 挖出来提交不了（相关性） | `docs/methodology/03_过墙与提交/01_相关性墙破法.md` |
+| 模拟结果挂 FAIL 了 | `docs/methodology/04_失败模式/01_checks_FAIL全解.md` |
+| 历史挖出过什么 / 还能不能用 | `docs/methodology/05_历史因子复盘/` |
+| **历史上那些低分因子怎么救** | `docs/methodology/05_历史因子复盘/02_低质量因子升级动作.md` |
+| 有哪些现成的达标候选没提交 | `data/alpha_quality_analysis/candidates_unsubmitted_qualified.csv` |
+| 历史上所有表达式 | `src/archive/expr_library.py` |
+| 平台规则/数据集说明 | `docs/project/` |
+| 备考/考试资料 | `docs/exam/` |
+
+---
+
+## 变更记录
+
+| 日期 | 变更 |
+|---|---|
+| 2026-09-15 | 创建。完成项目重构：1900 个散乱文件 → 分层结构；411 个历史脚本提取经验后清除（表达式存入 `src/archive/expr_library.py`，方法论存入 `docs/methodology/`）；建立本规范文件 |

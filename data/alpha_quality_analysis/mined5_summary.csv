@@ -1,0 +1,13 @@
+﻿cid,alpha_id,status,source,S,F,T,R,DD,trainS,trainF,testS,testF,testDD,error,expr
+g01_xrent_vol,XgWnklXa,UNSUBMITTED,A:xrent锚+反转+放量(f02加码),2.44,1.84,0.2014,0.1149,0.0411,2.53,1.97,2.04,1.36,0.0294,,"group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+g02_xrent_cash,npK2nONd,UNSUBMITTED,A:xrent+cash双锚+反转,2.52,2.09,0.1619,0.111,0.0315,2.78,2.45,1.36,0.78,0.0194,,"group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2))"
+g03_cash_vol,gJQMmKre,UNSUBMITTED,A:cash锚+反转+放量,2.33,1.53,0.2237,0.0969,0.0382,2.21,1.44,2.97,2.02,0.014,,"group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+g04_ebit_cash,0mREAEL2,UNSUBMITTED,A:ebit/ev+cash双锚,1.97,1.46,0.1799,0.0983,0.0435,2.03,1.55,1.72,1.07,0.0261,,"group_rank(ts_av_diff(ebit/enterprise_value, 60), subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2))"
+g05_opex_vol,9qVr97Wx,UNSUBMITTED,A:opex锚+反转+放量,2.23,1.53,0.1985,0.0937,0.0393,2.06,1.38,3.02,2.28,0.0322,,"group_rank(operating_expense/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+g06_xc_vol,P0Z3nOLq,UNSUBMITTED,B:秩相关量价+反转,1.51,0.88,0.2334,0.0796,0.0396,1.53,0.92,1.45,0.72,0.0223,,"group_rank(-ts_corr(rank(close), rank(volume), 20), subindustry) + rank(-ts_delta(close, 2))"
+g07_amihud,blRqNKeM,UNSUBMITTED,B:Amihud非流动性+反转,2.07,1.62,0.165,0.1006,0.0375,2.15,1.73,1.73,1.17,0.022,,"group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + rank(-ts_delta(close, 2))"
+g08_lowvol,P0Z3nYjK,UNSUBMITTED,B:低波动+反转,0.4,0.22,0.187,0.0564,0.3947,0.48,0.29,0.03,0.0,0.1158,,"group_rank(-ts_mean(returns * returns, 20), subindustry) + rank(-ts_delta(close, 2))"
+g09_xcorr20,xAYkevqp,UNSUBMITTED,B:60日量价背离+反转+放量,1.47,0.93,0.2095,0.0835,0.0962,1.56,1.05,1.02,0.46,0.0519,,"group_rank(-ts_corr(close, volume, 60), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"
+g10_tsrank250,akLnN911,UNSUBMITTED,B:长窗价格位置+反转,0.17,0.05,0.178,0.0177,0.1576,0.24,0.09,-0.11,-0.03,0.0975,,"group_rank(ts_rank(close, 250), subindustry) + rank(-ts_delta(close, 2))"
+g11_xrent_mult,1YxdorEM,UNSUBMITTED,A:xrent锚乘法结构,2.06,1.48,0.1902,0.0979,0.0367,2.24,1.69,1.28,0.7,0.0254,,"group_rank(fnd6_xrent/assets, subindustry) * rank(-ts_delta(close, 2))"
+g12_wc_vol,wpYlLmK5,UNSUBMITTED,A:营运资本+反转+放量,2.19,1.39,0.221,0.089,0.0402,2.15,1.38,2.45,1.49,0.0186,,"group_rank(ts_av_diff(assets_curr/assets, 30), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))"

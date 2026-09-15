@@ -53,6 +53,8 @@ D:\Python\worldquant\
 │   │                          04_失败模式 / 05_历史因子复盘 / 06_打法手册）
 │   ├── research/              外部论文/研报移植记录
 │   ├── study/                 学习材料（零基础四课、进阶指南）
+│   │   └── learn/             ★ 平台 Learn 文档原文归档（分批收入；`00_归档索引.md` 登记批次与去重结论；
+│   │                          `images/` 配图、`refs/` 外链缓存）
 │   ├── exam/                  考试与备考资料（含 images/ 截图）
 │   ├── project/               平台规则、SDD 工程文档、数据集参考、报告
 │   ├── reference/             官方 PDF + 知识图（images/）
@@ -72,6 +74,7 @@ D:\Python\worldquant\
 | 新方法论文档 | `docs/methodology/{已有子目录}/` | 子目录按主题，不新建顶层目录 |
 | 论文/研报移植记录 | `docs/research/` | 命名 `{来源}_{主题}.md` |
 | 备考/考试材料 | `docs/exam/` | 截图放 `docs/exam/images/` |
+| 平台 Learn 文档原文 | `docs/study/learn/NN_文档名.md` | **原文照录、不改写**；配图 `learn_NN_*.png` 放 `images/`；每收一批同步登记 `00_归档索引.md` |
 | 过程日志/临时文件 | `_autologs/` | 不要落根目录 |
 
 **禁止**：根目录新增任何 .py / .md / 数据文件（除本文件、README.md、brain_credentials.txt）。
@@ -243,6 +246,7 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 历史上所有表达式 | `src/archive/expr_library.py` |
 | 平台规则/数据集说明 | `docs/project/` |
 | 备考/考试资料 | `docs/exam/` |
+| 平台 Learn 文档原文（面试备考） | `docs/study/learn/`，先看 `00_归档索引.md` |
 
 ---
 
@@ -255,3 +259,4 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 2026-09-15 | 钩子源文件版本化到 `src/ops/git-hooks/pre-commit`（`.git/hooks/` 不入库，换机器需按第 5 节命令重建） |
 | 2026-09-15 | 关联远端 `origin` = github.com/jslijb/worldQuantAlpha；`git_snapshot.py` 增加自动推送与**公开仓库拦截**（新增 `--no-push` / `--allow-public` 参数） |
 | 2026-09-15 | 首次全量推送完成（8 提交 / 1342 文件，凭据零泄漏）；`git_snapshot.py` 新增 `--push-only`（已有本地提交待推时用）；记录远端为 Public 及放行规则 |
+| 2026-09-15 | 进入面试备考阶段。新增 `docs/study/learn/`（平台 Learn 文档原文分批归档：第 1 批《欢迎来到 WorldQuant BRAIN》+ 9 张配图 + 9 条外链缓存），配套 `00_归档索引.md` 登记批次与去重结论；第 1 节树形图与放置规则表同步 |

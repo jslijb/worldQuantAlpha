@@ -62,3 +62,13 @@
 - **本任务 prompt 已同步更新**（脚本路径 + 双探针 + 新数据路径），无需再手动改。两个生产定时任务（`07ac2d4a` 每日挖矿 / `a9b2c5cd` 本任务）的 prompt 均已更新。
 - **验证**：`src/submit/probe_corr_service.py` 在新路径下跑通（读到台账、扫出 52 个达标未提交候选）→ 路径改造成功。台账零损伤（61 行 / 60 唯一 id / mined 1098 条完整）。
 - **下次执行注意**：服务恢复后跑 `src/submit/submit_v2.py auto w112_`，再依次 w114_ / w115_ / w116_ / w118_ / w119_（每前缀一条，串行）；仍要先确认 `auto_submit_loop.py` 未在运行（它已移到 `src/ops/`，且 `service_ok()` 用缓存探针会恒 True，勿开）。
+
+## 2026-09-15 11:11（北京）｜第 6 次执行：服务仍未恢复，0 提交，本轮无改动
+
+- **补提交：新提交 0 个，台账零写入。** `src/submit/probe_corr_service.py` 双探针（缓存 `E5vj5YdL` + 全新 `KPOAOXEE`）各 3 次均 `200 + Retry-After:1.0 + bodylen=0`、无 records → **STILL_DOWN**。未跑 submit_v2、未长轮询。
+- **第 4 步按规则跳过**：`git status --porcelain` 为空（本轮无任何文件改动）→ 未执行 git_snapshot。仓库最新提交仍为 `ed5a3cc`（由另一会话产生，非本任务）。
+- **台账**：61 行 / 60 唯一 id / 美东 0914 当日 = 4。积压：六前缀 52 个 + w120_:1 / w121_:8 = 61 个；全 mined 池 434 个 / 1098 文件。
+- **口径修正（记下来省下次返工）**：mined json 指标位于 **`is.sharpe` / `is.fitness` / `test.sharpe`**（平铺），**不是** `is.stats.sharpe`。用后者会算出 0 个候选，会误判"没有积压"。质量过滤的 checks 在 `is.checks[].result`。
+- **并发检查**：无 `auto_submit_loop.py` 运行；执行时另一 WorkBuddy 会话在跑 `git_snapshot.py`（PID 19476），未冲突。
+- **时间窗**：北京 11:11 = 美东 0914 23:11，该窗口（北京 12:00 关）剩约 49 分钟。**0915 六次执行（01:15 / 09:00 / 10:09 / 10:32 / 11:00 / 11:11）全部 0 提交。**
+- **下次执行注意**：①双探针判定，缓存探针不可单独用作依据 ②先确认无 `auto_submit_loop.py` ③服务恢复后优先 w121_（8 个达标、w121_d SF 5.30 最高质量）与 w114_（13 个），再补 w112_/w115_/w116_/w118_/w119_ ④有实际提交再走 git_snapshot。

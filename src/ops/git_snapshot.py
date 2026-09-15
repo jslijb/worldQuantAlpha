@@ -118,28 +118,40 @@ def build_message(changes: list, note: str) -> str:
 
     # ---- 标题 ----
     parts = []
-    if batches:
-        b = ", ".join(batches[:4]) + (" 等" if len(batches) > 4 else "")
-        parts.append(f"挖矿 {b}: +{len(new_mined)} 候选")
-    elif new_mined:
-        parts.append(f"挖矿: +{len(new_mined)} 候选")
-    if ledger_delta is not None and ledger_delta > 0:
-        parts.append(f"提交 +{ledger_delta}")
+    mined_cnt = len(new_mined)
+    if mined_cnt:
+        if len(batches) <= 1:
+            parts.append(f"新增 {mined_cnt} 条候选")
+        else:
+            b = ", ".join(batches[:3]) + (" 等" if len(batches) > 3 else "")
+            parts.append(f"{b} 共新增 {mined_cnt} 条候选")
+    elif mod_mined:
+        parts.append(f"更新 {len(mod_mined)} 条模拟记录")
+    if ledger_delta and ledger_delta > 0:
+        parts.append(f"台账 +{ledger_delta}")
     if src_cnt:
-        parts.append(f"代码 {src_cnt} 改")
-    if not parts and docs_cnt:
-        parts.append(f"文档 {docs_cnt} 改")
+        parts.append(f"代码 {src_cnt} 项")
+    if docs_cnt:
+        parts.append(f"文档 {docs_cnt} 项")
+
     if not parts:
         parts.append(f"杂项变更 {len(changes)} 项")
 
-    if batches:
-        head = f"mine({batches[0]}): " + " / ".join(parts)
-    elif ledger_delta is not None and ledger_delta > 0:
-        head = "submit: " + " / ".join(parts)
-    elif docs_cnt and not new_mined:
-        head = "docs: " + " / ".join(parts)
+    # 前缀：优先体现"挖矿"与"提交"这两类主线动作
+    if len(batches) == 1:
+        prefix = f"mine({batches[0]})"
+    elif batches or mod_mined:
+        prefix = "mine"
+    elif ledger_delta and ledger_delta > 0:
+        prefix = "submit"
+    elif src_cnt and not docs_cnt:
+        prefix = "code"
+    elif docs_cnt and not src_cnt:
+        prefix = "docs"
     else:
-        head = "chore: " + " / ".join(parts)
+        prefix = "chore"
+
+    head = f"{prefix}: " + " / ".join(parts)
 
     # ---- 正文 ----
     body = []

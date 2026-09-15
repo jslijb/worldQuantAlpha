@@ -27,7 +27,9 @@ $PY src/tools/summarize_mined.py         # 3. 汇总挖矿结果
 worldquant/
 ├── CLAUDE.md              ★ 项目规范源（AI 工具先读这里）
 ├── README.md              本文件
-├── brain_credentials.txt  平台凭据
+├── brain_credentials.txt  平台凭据（已 git 忽略，不入库）
+├── .gitignore             git 忽略规则
+├── .gitattributes         换行符/二进制处理
 │
 ├── src/                   ★ 全部代码
 │   ├── core/              公共库（utils、AlphaSimulator）
@@ -65,6 +67,23 @@ worldquant/
 - **想知道历史上跑过哪些表达式** → `src/archive/expr_library.py`
 
 完整文档索引见 `docs/README.md`。
+
+## 版本控制
+
+项目已用 git 管理（本地仓库，无远端），分支 `main`。
+
+```bash
+$PY src/ops/git_snapshot.py              # 自动识别变更并提交
+$PY src/ops/git_snapshot.py --dry-run    # 只看将要提交什么，不真提交
+git log --oneline                        # 查看提交历史
+git status --short                       # 查看未提交改动
+```
+
+**提交约定**：每挖完一批 Alpha 提交一次，每完成一轮提交/文档改动提交一次。脚本自动生成提交信息（形如 `mine(w122): 新增 9 条候选 / 台账 +3`），无变更时静默跳过、不产生空提交。
+
+**凭据安全**：`brain_credentials.txt` 由 `.gitignore`（主防线）+ `.git/hooks/pre-commit`（二次拦截）双重挡住，永不入库。
+
+**不进版本库**：凭据、工具缓存、运行日志（`*.log`）、`.workbuddy` 除 `memory/` 外的部分。
 
 ## 环境
 

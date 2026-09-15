@@ -26,13 +26,16 @@
 D:\Python\worldquant\
 ├── CLAUDE.md                  ← 本文件（规范源，AI 工具固定读）
 ├── README.md                  ← 项目入口概览
-├── brain_credentials.txt      ← 凭据（脚本按相对路径读，不要移动）
+├── brain_credentials.txt      ← 凭据（脚本按相对路径读，不要移动；★已 git 忽略，永不入库）
+├── .gitignore                 ← git 忽略规则（凭据/缓存/日志；.workbuddy 只留 memory）
+├── .gitattributes             ← 换行符与二进制处理（文本统一 LF 入库）
 │
 ├── src/                       ★ 全部 Python 代码只在这里
 │   ├── core/                  utils.py（登录/取字段）、AlphaSimulator.py（并发模拟器）
 │   ├── submit/                submit_v2.py（★提交器）、probe_corr_service.py（★corr 服务双探针）、precheck_only.py
 │   ├── mine/                  mine_batch120.py、mine_batch121.py（当前活跃挖矿批）
-│   ├── ops/                   auto_submit_loop.py（自动重试循环，当前停用）
+│   ├── ops/                   git_snapshot.py（★挖矿/提交后的统一快照提交入口）、
+│   │                          auto_submit_loop.py（自动重试循环，当前停用）
 │   ├── tools/                 指标计算、结果汇总、字段抓取、本轮重构工具
 │   └── archive/               expr_library.py（★历史表达式库，见下）
 │
@@ -130,7 +133,7 @@ for _d in [_p.parent, *_p.parents]:
 
 ---
 
-## 5. 常用命令
+## 5. 常用命令与版本控制
 
 ```bash
 PY="D:/ProgramData/Miniforge3/envs/bigmodel/python.exe"
@@ -146,11 +149,33 @@ $PY src/submit/precheck_only.py
 
 # 汇总 mined 结果
 $PY src/tools/summarize_mined.py
+
+# ★ 把本次变更提交进本地 git（每批挖矿/提交后必做，见下）
+$PY src/ops/git_snapshot.py
+$PY src/ops/git_snapshot.py "本批说明"      # 追加一行自定义说明
+$PY src/ops/git_snapshot.py --dry-run       # 只看将要提交什么，不真提交
 ```
 
 **提交判定链**：质量闸门（S+F≥4.0 & testS≥1.25 & 无 FAIL）→ corr 预检（max corr<0.7 直通；否则豁免线 = `1.10 × max(所有 corr≥0.7 对手的 Sharpe)`，候选 S 达线也可提交）→ `POST /alphas/{id}/submit` → `GET /alphas/{id}` 核 `status==ACTIVE` → 追加台账。
 
 ⚠️ **必须串行提交**：同账号并发提交会互堵（0914 实测 4 个 POST 201 后永不裁决）。同骨架变体一次只提一个（互撞率 0.82–0.95）。
+
+### 版本控制（git）
+
+- **本地仓库**，分支 `main`，**无远端**（不 push）。
+- **何时提交**：① 每挖完一批 Alpha（`mine_batch{NNN}.py` 跑完）② 每完成一轮提交（台账有新记录）③ 完成一批文档/代码改动。一句话——**一次有意义的产出 = 一次提交**。
+- **怎么提交**：统一走 `src/ops/git_snapshot.py`，它会自动识别变更、生成提交信息、无变更时静默跳过（不产生空提交）。
+- **信息格式**：自动生成，形如
+  - `mine(w122): 新增 9 条候选 / 台账 +3`
+  - `submit: 台账 +5 / 文档 1 项`
+  - 前缀含义：`mine` 挖矿 / `submit` 提交 / `code` 代码 / `docs` 文档 / `chore` 杂项
+- **凭据保护（双重防线）**：
+  1. `.gitignore` 首节挡 `brain_credentials.txt`（主防线）；
+  2. `.git/hooks/pre-commit` 二次拦截：文件名黑名单 + 小微文件内容检测。
+- **禁止**：`git add -f` 强加凭据；`git commit --no-verify` 绕过钩子。凭据一旦进入历史对象极难清除。
+- **回滚**：`git log --oneline` 看历史；`git checkout <hash> -- <路径>` 取回单个文件；`git diff` 看未提交改动。
+- **不进版本库的内容**：凭据、工具缓存（`.codegraph`/`.codeartsdoer`/`.arts`/`.freebuff`）、运行日志（`*.log`）、`.workbuddy` 除 `memory/` 外的部分。
+- **另有全量备份**：`D:\Python\worldquant_backup_20260915\`（0915 重构前快照，勿删）。
 
 ---
 
@@ -220,3 +245,4 @@ $PY src/tools/summarize_mined.py
 | 日期 | 变更 |
 |---|---|
 | 2026-09-15 | 创建。完成项目重构：1900 个散乱文件 → 分层结构；411 个历史脚本提取经验后清除（表达式存入 `src/archive/expr_library.py`，方法论存入 `docs/methodology/`）；建立本规范文件 |
+| 2026-09-15 | 纳入 git 版本控制：新增 `.gitignore`（凭据/缓存/日志不入库，`.workbuddy` 只留 memory）、`.gitattributes`（文本统一 LF）、`.git/hooks/pre-commit`（凭据拦截钩子）、`src/ops/git_snapshot.py`（统一快照提交入口）；第 5 节扩写为「常用命令与版本控制」 |

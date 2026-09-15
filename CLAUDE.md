@@ -201,7 +201,7 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障" |
 | corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**（正常 3~4 次、4~6 秒即返回 records）—— **不是故障**。0915 已证伪此前的"服务停摆"结论：探针只轮询 3 次（6 秒）便放弃所致。已提交 alpha 的 `is.selfCorrelation` 一直有值，可作旁证 |
 | 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%（豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)） |
-| **Learn 视频字幕** | `GET /video-courses`（需登录）直接返回官方**英文字幕**：16 课程组 / 46 视频，**27 个带字幕**（`quantcepts` 组 19 个无）。**不用下载视频、不用本地语音识别**。拉取脚本 `src/tools/fetch_learn_video.py` |
+| **Learn 视频字幕** | `GET /video-courses`（需登录）直接返回官方**英文字幕**：16 课程组 / 46 视频，**27 个带字幕**（`quantcepts` 组 19 个无）。**不用下载视频、不用本地语音识别**。拉取脚本 `src/tools/fetch_learn_video.py`。**`source` 标 YouTube 的视频同样直接带 `transcript` 字段——取字幕不需要访问 YouTube，源站打不开不影响归档** |
 
 ---
 
@@ -263,3 +263,4 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | 2026-09-15 | 首次全量推送完成（8 提交 / 1342 文件，凭据零泄漏）；`git_snapshot.py` 新增 `--push-only`（已有本地提交待推时用）；记录远端为 Public 及放行规则 |
 | 2026-09-15 | 进入面试备考阶段。新增 `docs/study/learn/`（平台 Learn 文档原文分批归档：第 1 批《欢迎来到 WorldQuant BRAIN》+ 9 张配图 + 9 条外链缓存），配套 `00_归档索引.md` 登记批次与去重结论；第 1 节树形图与放置规则表同步 |
 | 2026-09-15 | 发现 `GET /video-courses` 接口可直接取 Learn 培训视频的**官方英文字幕**（16 课程组/46 视频，27 个有字幕），无需下载视频或本地 ASR。新增 `src/tools/fetch_learn_video.py`；归档第 2 批《在 BRAIN 上开始的 10 个步骤》、`课程视频总表.md`、`视频01_什么是Alpha_中英对照.md`；第 6 节平台约束表同步 |
+| 2026-09-15 | **`introduction-alphas` 组 6/6 视频全部译完**（`视频01`~`视频06`，合计 30,107 字符字幕）。确认该组第 2~6 个视频虽 `source=YouTube`，但 `transcript` 由接口一并返回，**取字幕无需访问 YouTube**；第 6 节约束表补记该点，索引与 `课程视频总表.md` 同步 |

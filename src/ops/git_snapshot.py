@@ -268,7 +268,35 @@ def main() -> int:
 
     log = git("log", "-1", "--stat", "--format=%h %ad %s", "--date=format:%Y-%m-%d %H:%M")
     print(log.out.strip())
-    print("\n[完成] 已提交到本地仓库（未 push，本仓库无远端）")
+
+    # ---------- 推送远端 ----------
+    url = git("remote", "get-url", "origin").out.strip()
+    if not url:
+        print("\n[完成] 已提交到本地仓库（未配置远端 origin，未推送）")
+        return 0
+    if no_push:
+        print("\n[完成] 已提交到本地仓库（--no-push 指定跳过推送）")
+        return 0
+
+    vis = remote_visibility(url)
+    if vis == "public" and not allow_public:
+        print(f"\n[拦截推送·红线] 远端 {url} 是**公开仓库**。")
+        print("  本项目含 1098 条 alpha 表达式、提交台账与完整方法论，")
+        print("  推送到公开仓库后无法撤回（会被克隆/索引）。")
+        print("  处理办法（任选其一）：")
+        print("    1. GitHub 仓库 Settings → General → Danger Zone → Change visibility 改为 Private")
+        print("    2. 确认要公开：显式加参数 --allow-public")
+        print("  本地提交已保存，不受影响。")
+        return 4
+
+    print(f"\n远端 {url}（可见性: {vis}），正在推送 …")
+    r = git("push", "-u", "origin", "HEAD")
+    if r.returncode == 0:
+        print(f"[完成] 已推送到 {url}")
+    else:
+        print("[警告] 推送失败（本地提交已保存，不受影响）：")
+        print((r.err or r.out).strip()[:600])
+        print("  常见原因：未登录 GitHub（首次推送会弹出登录窗口）/ 网络不通 / 无仓库写权限")
     return 0
 
 

@@ -1,0 +1,21 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.
+  warnings.warn(
+白名单 top9: [('fnd6_txtubadjust', 1.33), ('fnd6_newa1v1300_aol2', 1.19), ('fnd6_newqv1300_aol2q', 1.17), ('fnd6_txtubposinc', 1.13), ('fnd6_newqv1300_dpactq', 0.96), ('fnd6
+w129_a :: group_rank(fnd6_txtubadjust/assets, subindustry) + group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_newqv1300_aol2q/assets, subi
+w129_b :: group_rank(fnd6_txtubadjust/assets, subindustry) + group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_txtubposinc/assets, subindus
+w129_c :: group_rank(fnd6_txtubadjust/assets, subindustry) + group_rank(fnd6_txtubposinc/assets, subindustry) + group_rank(fnd6_newqv1300_dpactq/assets, subindu
+w129_d :: group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_txtubposinc/assets, subindustry) + group_rank(fnd6_newa1v1300_ano/assets, subin
+w129_e :: group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_newqv1300_dpactq/assets, subindustry) + group_rank(fnd6_newa1v1300_ano/assets,
+w129_f :: group_rank(fnd6_txtubadjust/assets, subindustry) + group_rank(fnd6_newqv1300_dpactq/assets, subindustry) + group_rank(fnd6_newa1v1300_dpact/assets, su
+w129_g :: group_rank(fnd6_newqv1300_aol2q/assets, subindustry) + group_rank(fnd6_txtubposinc/assets, subindustry) + group_rank(fnd6_txs/assets, subindustry) + 0
+w129_h :: group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_newa1v1300_ano/assets, subindustry) + group_rank(fnd6_pstkl/assets, subindustry
+w129_i :: group_rank(fnd6_txtubadjust/assets, subindustry) + group_rank(fnd6_newa1v1300_aol2/assets, subindustry) + group_rank(fnd6_newqv1300_aol2q/assets, subi
+w129_b 2rwrKGjJ S=2.00 F=1.67 SF=3.67 T=0.1293 testS=1.16 FAIL=[] [fail]
+w129_a 78N8d69v S=2.02 F=1.62 SF=3.64 T=0.1246 testS=1.85 FAIL=[] [fail]
+...
+w129_c kqoqKw7l S=1.93 F=1.56 SF=3.49 T=0.1414 testS=1.16 FAIL=[] [fail]
+w129_d KPNPbj08 S=1.89 F=1.48 SF=3.37 T=0.1269 testS=1.39 FAIL=[] [fail]
+w129_e O0N0pE3R S=2.00 F=1.5 SF=3.50 T=0.1392 testS=1.93 FAIL=[] [fail]
+w129_f ZYbYpl10 S=1.65 F=1.35 SF=3.00 T=0.1359 testS=0.78 FAIL=[] [fail]
+w129_g Vkakp3nY S=1.69 F=1.4 SF=3.09 T=0.1369 testS=1.74 FAIL=[] [fail]
+w129_h xA3AxjqJ S=2.04 F=1.44 SF=3.48 T=0.1411 testS=1.61 FAIL=[] [fail]

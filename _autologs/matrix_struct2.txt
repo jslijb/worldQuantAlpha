@@ -1,0 +1,5 @@
+record keys: ['id', 'description', 'dataset', 'category', 'subcategory', 'region', 'delay', 'universe', 'type', 'dateCoverage', 'coverage', 'userCount', 'alphaCount', 'themes', 'dateCreated']
+{"id": "assets", "description": "Assets - Total", "dataset": {"id": "fundamental6", "name": "Company Fundamental Data for Equity"}, "category": {"id": "fundamental", "name": "Fundamental"}, "subcategory": {"id": "fundamental-fundamental-data", "name": "Fundamental Data"}, "region": "USA", "delay": 1, "universe": "TOP3000", "type": "MATRIX", "dateCoverage": 1.0, "coverage": 0.5, "userCount": 55614, "alphaCount": 178512, "themes": [], "dateCreated": "2022-05-01"}
+count-ish keys: ['userCount', 'alphaCount']
+min5: [9, 9, 9, 10, 10] median: 747
+aC 30-150 数量: 19

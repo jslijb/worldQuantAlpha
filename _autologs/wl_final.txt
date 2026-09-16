@@ -1,0 +1,13 @@
+验证 43 个，有数据 40 个
+ fnd6_txtubadjust             aC=379 S=1.33 F=0.87
+ fnd6_newa1v1300_aol2         aC=251 S=1.19 F=0.65
+ fnd6_newqv1300_aol2q         aC=387 S=1.17 F=0.66
+ fnd6_txtubposinc             aC=378 S=1.13 F=0.69
+ fnd6_newqv1300_dpactq        aC=322 S=0.96 F=0.53
+ fnd6_newa1v1300_ano          aC=395 S=0.92 F=0.41
+ fnd6_newa1v1300_dpact        aC=389 S=0.86 F=0.55
+ fnd6_txs                     aC=370 S=0.84 F=0.52
+ fnd6_pstkl                   aC=365 S=0.82 F=0.41
+ fnd6_txtubtxtr               aC=302 S=0.8 F=0.49
+ fnd6_mfmq_mibtq              aC=347 S=0.79 F=0.39
+ fnd6_lol2                    aC=368 S=0.77 F=0.39

@@ -38,6 +38,23 @@ TAG = ''
 if '--tag' in sys.argv:
     TAG = sys.argv[sys.argv.index('--tag') + 1]
 
+# ---- 设置轴覆盖（0916 新增）：同一套组合换中性化/decay 重跑 = 换 PnL 投影维度 ----
+NEUT = ''
+if '--neut' in sys.argv:
+    NEUT = sys.argv[sys.argv.index('--neut') + 1].upper()
+DECAY = None
+if '--decay' in sys.argv:
+    DECAY = int(sys.argv[sys.argv.index('--decay') + 1])
+
+
+def base_settings():
+    st = BASE()
+    if NEUT:
+        st['neutralization'] = NEUT
+    if DECAY is not None:
+        st['decay'] = DECAY
+    return st
+
 spec = json.load(open(SPEC, encoding='utf-8'))
 _raw = list(spec.items())[:LIMIT]
 # 加 --tag 时用新编号，避免与上一批同名 json 撞车被当成"已有产出"跳过（0916 踩过）
@@ -69,7 +86,7 @@ def run_one(item):
     of = f'{OUT}/{cid}.json'
     if _os.path.exists(of):
         print(f'{cid} 已有产出，跳过', flush=True); return
-    r = post_retry({'type': 'REGULAR', 'settings': BASE(), 'regular': expr}, cid)
+    r = post_retry({'type': 'REGULAR', 'settings': base_settings(), 'regular': expr}, cid)
     if r is None:
         return
     loc = r.headers.get('Location'); p = None

@@ -101,8 +101,9 @@ except Exception as e:
 
 if state == 'ACCEPTED':
     ds = d.get('dateSubmitted'); b = d.get('is') or {}
-    expr = ''
-    if cid:
+    # ⚠️ 优先取平台返回值：第 2 个 CLI 参数是标签（非 cid），拼不出 mined 文件名 → expr 会空
+    expr = (d.get('regular') or {}).get('code') or ''
+    if not expr and cid:
         try: expr = json.load(open(f'data/alpha_quality_analysis/mined/{cid}.json')).get('regular', {}).get('code', '')
         except Exception: pass
     with open('data/alpha_quality_analysis/SUBMITTED_LEDGER.csv', 'a', encoding='utf-8-sig', newline='') as f:

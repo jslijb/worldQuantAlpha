@@ -138,3 +138,17 @@
 - **git**：`ebdc908` 已推送成功（远端本次可达）。
 - **产出**：日报 `_autologs/日报_20260916_提交轮次.md`；方法论 `docs/methodology/03_过墙与提交/01_相关性墙破法.md` §8.9；CLAUDE.md §6 补 3 条。
 - **下次执行注意**：① 先读 `CLAUDE.md` §6 的探索差 bias 纪律 ② 搜索阈值 ≤0.57 + 实跑复核 ③ 每提交一条要重跑搜索（池子更新自动绕开）④ 待试：K 腿（新数据轴）低权重混搭、中性化设置轴 `NONE`/`STATISTICAL`、老族价量腿扩窗口（`-ts_rank(returns,5)` 单腿 tS 3.77）。
+
+## 2026-09-16 18:20–19:15（北京）｜第 10 次执行：**当日 15 条入池 / 14 高质量（加压线 8 → 超 6）；破墙维度全量实证收官**
+
+- **账**：本轮新提交 **3 条** —— `levpXXGl`(MARKET, SF4.71, selfCorr **.6015**)、`omL8Mazn`(SECTOR, 4.34, .6994)、`YPbLZK2W`(MARKET, 4.09, .6028)。
+  台账 63 → **77 行（76 唯一）**；美东 0916 入池 **15 / 高质量 14**；**剩余欠账 0**；**距 Super Alpha 100 还差 24 条**。
+- **★★ 本轮真正产出 = 破墙维度总表（11 项判死 + 1 项只吃一口 + 1 项还开着），全部一手实测**：
+  - **判死**：①换字段/换锚 ②**换区域（本账号 USA 单区 —— ASI/EUR/GLB/HKG/JPN 全 400）** ③**风险中性化（SLOW_AND_FAST/SLOW/FAST/CROWDING/STATISTICAL 全 400；RAM 取值非法）** ④PPA/PPAC（要风险中性化+唯一字段≤3，双不符）⑤universe/truncation/D0 ⑥结构级改造（batch104 SF 0.11~1.15）⑦新数据轴单独成腿 ⑧vec_avg 评级轴 ⑨456 积压（最低 corr 0.6934，直通 0）⑩换分组（单腿改善 0.17，空间未打开）⑪顶层 zscore/rank。
+  - **⑫ 中性化投影 = 有效但只吃一口**：下移 **−0.14~−0.27**（`mLmLW6E6` SUB .8931 → MARKET 版 .6239 → 平台 .6028）；**不改变表达式之间相似度**。饱和实测 8 样本：MARKET 进 2 条后后续全撞 0.71~0.88，SECTOR 进 1 条后后续撞 0.8083。**MARKET 伤 tS，SECTOR 保 tS（2.21/1.98/1.93）** → 只救 corr 0.70~0.72 的近门槛，用 SECTOR。
+  - **⑬ 唯一还开着 = USA 内发现新"高质量单腿"字段**。已测：`option8` 波动率字段**全灭 SF 0.09~0.23**（可排除）、`socialmedia12` **无 MATRIX 字段**（全 VECTOR）。model16/news12 待收。
+- **平台事实（影响判断，务必记）**：① **没有 `REGULAR_SUBMISSION` 检查项** → "每日最多 4 条 RA"对本账号**不生效**（今日 15 条全 ACCEPTED）；实际 8 项 = LOW_SHARPE/LOW_FITNESS/LOW_TURNOVER/HIGH_TURNOVER/CONCENTRATED_WEIGHT/LOW_SUB_UNIVERSE_SHARPE/SELF_CORRELATION/MATCHES_COMPETITION。② **`GET /alphas/{id}/submit` 在 ACTIVE 后仍返回 200 + 完整 checks（含 value/limit）** = 读回真实判据的口子。
+- **新工具**：`src/mine/mine_neut_convert.py`（通用中性化转换器，任何候选清单 → 换 neut 重跑）；`src/submit/auto_submit_passers.py`（批量 gate+corr+提交，每成功一条重算池子；含 PnL 限流退避 + **池子取不全即中止**两道安全阀）；`_autologs/_blocked_cands.json`（22 条受阻候选库存 SF4.22~6.05）。
+- **修掉的 bug**：①台账 `expr` 空 7 行（submit_v3 拿标签当 cid 拼路径）→ 改取平台 `regular.code` 并回填 ②`/recordsets/pnl` 限流（Retry-After+空 body）未重试 → 误报"取不到" ③**池子取不全静默跳过 → corr 低估 → 会误放行**（改成取不全即中止）。
+- **四条通用教训**：**①先探权限再设计实验**（"换区域破墙"手册明写有效，本账号却没权限，白设计）②**悬而未决的"待验证"要用最便宜的方式第一时间打掉**（Slow+Fast 从 0914 挂到今天，一次探针就判死）③本地 corr 缓冲线 0.685 有效（.6996 → 平台 .6994）④**归因平台前先自证工具**。
+- **下次执行注意**：①先读 `CLAUDE.md` §6 的破墙维度总表，**不要重复烧已判死的 11 个维度** ②中性化轴：只投 corr 0.70~0.72 的、用 SECTOR、一批最多 1~2 条，投完立刻重测池子 ③主攻 ⑬ 新单腿字段：`mine_batch165.py` 收尾（model16/news12），socialmedia12 需补 `vec_avg` 包装版 ④SA 差 24 条，**每天靠"中性化轴 1~2 口 + 新字段"的混合节奏推进**。

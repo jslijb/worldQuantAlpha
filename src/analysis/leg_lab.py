@@ -31,6 +31,10 @@ ARGS = [a for a in sys.argv[1:]]
 
 G_EXPR = lambda x: f'group_rank({x}, subindustry)'
 G_EXPR_I = lambda x: f'group_rank({x}, industry)'
+G_EXPR_S = lambda x: f'group_rank({x}, sector)'
+G_EXPR_C = lambda x: f'group_rank({x}, bucket(rank(cap), range="0.1, 1, 0.1"))'
+G_EXPR_V = lambda x: f'group_rank({x}, bucket(rank(ts_std_dev(returns, 60)), range="0.1, 1, 0.1"))'
+G_EXPR_L = lambda x: f'group_rank({x}, bucket(rank(volume), range="0.1, 1, 0.1"))'
 
 
 def sess():
@@ -262,6 +266,15 @@ elif cmd == 'search':
     if '--k' in ARGS:
         ANCH.append('K_cfoI')
         PVS.extend([k for k in KLEGS if k not in ('K_cfoI',)])
+    # b159 换分组/换算子腿（--q 启用）
+    QANCH = [q for q in ['Q_xrI', 'Q_pstI', 'Q_cfoI', 'Q_accI', 'Q_xrS', 'Q_cfoS', 'Q_accS',
+                         'Q_xrC', 'Q_cfoC', 'Q_accC', 'Q_xrV', 'Q_cfoV', 'Q_accV',
+                         'Q_xrL', 'Q_cfoL', 'Q_accL'] if (_pl.Path(MINED) / f'{q}.json').exists()]
+    QPVS = [q for q in ['Q_xrZ', 'Q_cfoQ', 'Q_accR', 'Q_pstZ',
+                        'Q_rate1', 'Q_rate2', 'Q_rate3', 'Q_rate4'] if (_pl.Path(MINED) / f'{q}.json').exists()]
+    if '--q' in ARGS:
+        ANCH.extend(QANCH)
+        PVS.extend(QPVS)
     # 对齐日期：以池子共有日期为准
     dates = None
     for ps in pool.values():
@@ -305,11 +318,10 @@ elif cmd == 'search':
         if _a == '--na' or _a.startswith('--na='):
             NA_MAX = int(_a.split('=')[1]) if '=' in _a else int(ARGS[_i + 1])
     if '--anch' in ARGS:
-        _w = ARGS[ARGS.index('--anch') + 1]
-        if _w == 'M':
-            A = [l for l in A if l.startswith('M_')]
-        elif _w == 'L':
-            A = [l for l in A if l.startswith('L_')]
+        # 支持组合，如 --anch LQ（L_ 与 Q_ 都用）；过滤必须在 Q/M/K 追加之后生效
+        _w = ARGS[ARGS.index('--anch') + 1].upper()
+        _pre = tuple(f'{ch}_' for ch in _w if ch.isalpha())
+        A = [l for l in A if l.startswith(_pre)]
     NV_MAX = 3
     for _i, _a in enumerate(ARGS):
         if _a == '--nv' or _a.startswith('--nv='):
@@ -441,6 +453,31 @@ elif cmd == 'search':
      'K_carry': G_EXPR('forward_price_90/forward_price_30 - 1'),
      'K_corr90':G_EXPR('correlation_last_90_days_spy'),
      'K_pcr_rev':G_EXPR('-pcr_vol_10'),
+     # ---- b159 换分组 / 换算子腿 ----
+     'Q_xrI':  G_EXPR_I('fnd6_xrent/assets'),
+     'Q_pstI': G_EXPR_I('fnd6_pstkl/cap'),
+     'Q_cfoI': G_EXPR_I('ts_av_diff(cashflow_op/enterprise_value,45)'),
+     'Q_accI': G_EXPR_I('fn_accrued_liab_curr_a/assets'),
+     'Q_xrS':  G_EXPR_S('fnd6_xrent/assets'),
+     'Q_cfoS': G_EXPR_S('ts_av_diff(cashflow_op/enterprise_value,45)'),
+     'Q_accS': G_EXPR_S('fn_accrued_liab_curr_a/assets'),
+     'Q_xrC':  G_EXPR_C('fnd6_xrent/assets'),
+     'Q_cfoC': G_EXPR_C('ts_av_diff(cashflow_op/enterprise_value,45)'),
+     'Q_accC': G_EXPR_C('fn_accrued_liab_curr_a/assets'),
+     'Q_xrV':  G_EXPR_V('fnd6_xrent/assets'),
+     'Q_cfoV': G_EXPR_V('ts_av_diff(cashflow_op/enterprise_value,45)'),
+     'Q_accV': G_EXPR_V('fn_accrued_liab_curr_a/assets'),
+     'Q_xrL':  G_EXPR_L('fnd6_xrent/assets'),
+     'Q_cfoL': G_EXPR_L('ts_av_diff(cashflow_op/enterprise_value,45)'),
+     'Q_accL': G_EXPR_L('fn_accrued_liab_curr_a/assets'),
+     'Q_xrZ':  'zscore(fnd6_xrent/assets)',
+     'Q_cfoQ': 'quantile(ts_av_diff(cashflow_op/enterprise_value,45))',
+     'Q_accR': 'rank(fn_accrued_liab_curr_a/assets)',
+     'Q_pstZ': 'zscore(fnd6_pstkl/cap)',
+     'Q_rate1': G_EXPR('vec_avg(anl4_basicdetailrec_ratingvalue)'),
+     'Q_rate2': G_EXPR('vec_avg(anl4_fs_detail_rec_v4_nd_estimate)'),
+     'Q_rate3': G_EXPR('vec_avg(anl4_total_rec)'),
+     'Q_rate4': G_EXPR('-vec_avg(anl4_eaz2lrec_ratingvalue)'),
     }
     TAKE = 40
     if '--take' in ARGS:

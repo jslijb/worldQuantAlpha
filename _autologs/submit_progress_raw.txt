@@ -1,0 +1,8 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+=== 58QPEeOM HTTP 404
+headers: {'Content-Type': 'text/html; charset=UTF-8', 'Content-Length': '0'}
+body[:600]: 
+=== 883wqwVX HTTP 404
+headers: {'Content-Type': 'text/html; charset=UTF-8', 'Content-Length': '0'}
+body[:600]: 

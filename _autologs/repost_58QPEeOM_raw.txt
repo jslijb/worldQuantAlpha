@@ -1,0 +1,49 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+POST 201
+POST headers: {'Date': 'Wed, 16 Sep 2026 03:16:04 GMT', 'Content-Type': 'text/html; charset=UTF-8', 'Content-Length': '0', 'Connection': 'keep-alive', 'Retry-After': '1.0', 'Location': 'https://api.worldquantbrain.com/alphas/58QPEeOM/submit', 'Allow': 'GET, POST, PUT, PATCH, HEAD, OPTIONS', 'X-Request-Id': '2833221b904f438e813d427d5e83b72c', 'X-Frame-Options': 'SAMEORIGIN', 'Vary': 'Accept-Language, Cookie, Origin', 'Content-Language': 'en', 'Access-Control-Allow-Origin': 'https://platform.worldquantbrain.com', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Expose-Headers': 'Location,Retry-After', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'}
+POST body[:300]: 
+r.url: https://api.worldquantbrain.com/alphas/58QPEeOM/submit
+Location: https://api.worldquantbrain.com/alphas/58QPEeOM/submit
+--- poll0 t=0s HTTP=200 RetryAfter=1.0 len=0
+no-json: JSONDecodeError
+--- poll1 t=2s HTTP=200 RetryAfter=1.0 len=0
+no-json: JSONDecodeError
+--- poll2 t=3s HTTP=200 RetryAfter=1.0 len=0
+no-json: JSONDecodeError
+--- poll3 t=4s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll4 t=15s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll5 t=27s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll6 t=37s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll7 t=48s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll8 t=58s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll9 t=76s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll10 t=86s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll11 t=97s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll12 t=114s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll13 t=125s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}
+--- poll14 t=135s HTTP=403 RetryAfter=None len=1386
+body: {"is":{"checks":[{"name":"LOW_SHARPE","result":"PASS","limit":1.25,"value":2.57},{"name":"LOW_FITNESS","result":"PASS","limit":1.0,"value":2.21},{"name":"LOW_TURNOVER","result":"PASS","limit":0.01,"value":0.151},{"name":"HIGH_TURNOVER","result":"PASS","limit":0.7,"value":0.151},{"name":"CONCENTRATED_WEIGHT","result":"PASS"},{"name":"LOW_SUB_UNIVERSE_SHARPE","result":"PASS","limit":1.11,"value":1.56},{"name":"SELF_CORRELATION","result":"FAIL","limit":0.7,"value":0.813},{"name":"MATCHES_COMPETITIO
+checks: {'CONCENTRATED_WEIGHT': 'PASS', 'LOW_SUB_UNIVERSE_SHARPE': 'PASS', 'SELF_CORRELATION': 'FAIL'}

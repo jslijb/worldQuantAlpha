@@ -1,0 +1,32 @@
+{
+ "w168_00": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.406,
+  "maxcorr": 0.4905,
+  "nearest": "akLp3pzW",
+  "anchors": [
+   "L_pst",
+   "L_int"
+  ],
+  "pvs": [
+   "N_tr5"
+  ],
+  "wp": 1.0
+ },
+ "w168_01": {
+  "expr": "1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(volume/ts_mean(volume, 120), subindustry) + 1.25*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.316,
+  "maxcorr": 0.495,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_int",
+   "L_xr"
+  ],
+  "pvs": [
+   "P_v120",
+   "P_on5",
+   "N_tr5"
+  ],
+  "wp": 1.25
+ }
+}

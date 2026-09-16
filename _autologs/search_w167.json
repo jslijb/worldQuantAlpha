@@ -1,0 +1,269 @@
+{
+ "w167_00": {
+  "expr": "1.5*group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 5), subindustry) + 1.5*group_rank(mean_news_impact_projection, subindustry)",
+  "S": 3.23,
+  "maxcorr": 0.5976,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_impact"
+  ],
+  "wp": 1.5
+ },
+ "w167_01": {
+  "expr": "1.5*group_rank(fnd6_mfmq_mibtq/cap, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(fn_accrued_liab_curr_a/assets, industry)",
+  "S": 3.116,
+  "maxcorr": 0.5903,
+  "nearest": "QPbP6aRQ",
+  "anchors": [
+   "L_mib",
+   "L_cfo"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_accI"
+  ],
+  "wp": 2.0
+ },
+ "w167_02": {
+  "expr": "1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(authorized_stock_buyback_amount/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(forward_price_90/forward_price_30 - 1, subindustry)",
+  "S": 3.097,
+  "maxcorr": 0.5859,
+  "nearest": "j23Pl0e5",
+  "anchors": [
+   "L_cfo",
+   "L_bb"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_carry"
+  ],
+  "wp": 2.0
+ },
+ "w167_03": {
+  "expr": "1.5*group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 20), subindustry) + 2.0*group_rank(mean_news_impact_projection, subindustry)",
+  "S": 3.084,
+  "maxcorr": 0.5963,
+  "nearest": "A10a7pdY",
+  "anchors": [
+   "L_aol",
+   "L_xr"
+  ],
+  "pvs": [
+   "P_tr20",
+   "K_impact"
+  ],
+  "wp": 2.0
+ },
+ "w167_04": {
+  "expr": "1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 60), subindustry)",
+  "S": 3.017,
+  "maxcorr": 0.5897,
+  "nearest": "pwRwWoJ3",
+  "anchors": [
+   "L_cash",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "N_am60"
+  ],
+  "wp": 2.0
+ },
+ "w167_05": {
+  "expr": "1.5*group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(mean_event_novelty_score, subindustry)",
+  "S": 2.96,
+  "maxcorr": 0.5914,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_ac",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_novel"
+  ],
+  "wp": 2.0
+ },
+ "w167_06": {
+  "expr": "1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry) + 1.25*group_rank(forward_price_90/forward_price_30 - 1, subindustry)",
+  "S": 2.922,
+  "maxcorr": 0.588,
+  "nearest": "QPbP6aRQ",
+  "anchors": [
+   "L_int",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_carry"
+  ],
+  "wp": 1.25
+ },
+ "w167_07": {
+  "expr": "1.5*group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.885,
+  "maxcorr": 0.5735,
+  "nearest": "N1QxNQK7",
+  "anchors": [
+   "L_aol",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5"
+  ],
+  "wp": 1.5
+ },
+ "w167_08": {
+  "expr": "1.5*group_rank(fnd6_txs/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(pcr_vol_10, subindustry)",
+  "S": 2.882,
+  "maxcorr": 0.5973,
+  "nearest": "npKGgKLw",
+  "anchors": [
+   "L_txs",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_pcr10"
+  ],
+  "wp": 2.0
+ },
+ "w167_09": {
+  "expr": "1.5*group_rank(fnd6_mfmq_mibtq/cap, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(mean_news_impact_projection, subindustry)",
+  "S": 2.867,
+  "maxcorr": 0.5594,
+  "nearest": "MPaPe0oo",
+  "anchors": [
+   "L_mib",
+   "L_int"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_impact"
+  ],
+  "wp": 2.0
+ },
+ "w167_10": {
+  "expr": "1.5*group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(-ts_rank(returns, 20), subindustry) + group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.865,
+  "maxcorr": 0.5824,
+  "nearest": "kqjpepz8",
+  "anchors": [
+   "L_txt",
+   "L_xr"
+  ],
+  "pvs": [
+   "P_tr20",
+   "N_tr5"
+  ],
+  "wp": 1.0
+ },
+ "w167_11": {
+  "expr": "1.5*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry) + 2.0*group_rank(mean_equity_sentiment_score, subindustry)",
+  "S": 2.838,
+  "maxcorr": 0.5983,
+  "nearest": "RRVLeabj",
+  "anchors": [
+   "L_acc",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_esent"
+  ],
+  "wp": 2.0
+ },
+ "w167_12": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 20), subindustry) + 1.5*group_rank(mean_event_novelty_score, subindustry)",
+  "S": 2.833,
+  "maxcorr": 0.5845,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_pst",
+   "L_acc"
+  ],
+  "pvs": [
+   "P_tr20",
+   "K_novel"
+  ],
+  "wp": 1.5
+ },
+ "w167_13": {
+  "expr": "1.5*group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(-ts_rank(returns, 20), subindustry) + group_rank(forward_price_90/forward_price_30 - 1, subindustry)",
+  "S": 2.817,
+  "maxcorr": 0.5784,
+  "nearest": "N1QxNQK7",
+  "anchors": [
+   "L_aol",
+   "L_int"
+  ],
+  "pvs": [
+   "P_tr20",
+   "K_carry"
+  ],
+  "wp": 1.0
+ },
+ "w167_14": {
+  "expr": "1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.809,
+  "maxcorr": 0.5932,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_cash",
+   "L_acc"
+  ],
+  "pvs": [
+   "N_tr5"
+  ],
+  "wp": 0.75
+ },
+ "w167_15": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_rank(returns, 60), subindustry) + 1.25*group_rank(mean_equity_sentiment_score, subindustry)",
+  "S": 2.796,
+  "maxcorr": 0.5974,
+  "nearest": "A10a7pdY",
+  "anchors": [
+   "L_pst",
+   "L_xr"
+  ],
+  "pvs": [
+   "N_tr60",
+   "K_esent"
+  ],
+  "wp": 1.25
+ },
+ "w167_16": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-ts_rank(returns, 5), subindustry) + group_rank(mean_news_impact_projection, subindustry)",
+  "S": 2.788,
+  "maxcorr": 0.5774,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_pst",
+   "L_acc"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_impact"
+  ],
+  "wp": 1.0
+ },
+ "w167_17": {
+  "expr": "1.5*group_rank(fnd6_lqpl1/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-ts_rank(returns, 5), subindustry) + group_rank(mean_news_impact_projection, subindustry)",
+  "S": 2.781,
+  "maxcorr": 0.5992,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "L_lqp",
+   "L_acc"
+  ],
+  "pvs": [
+   "N_tr5",
+   "K_impact"
+  ],
+  "wp": 1.0
+ }
+}

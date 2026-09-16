@@ -155,8 +155,25 @@ $PY src/submit/probe_corr_service.py
 # 提交某个前缀的达标候选（自动去重 + 质量过滤 + corr 预检 + 提交 + 记账）
 $PY src/submit/submit_v2.py auto w114_
 
+# ★ 提交并读「对手明细表」（推荐：先测 corr，再决定要不要真交）
+$PY src/submit/verdict_dump.py <alpha_id> <cid>   # 落盘 _autologs/verdict_{id}.json + 打印对手表
+
+# ★ 批量扫提交（把提交当 corr 测量仪；一次一个、串行、被拒无副作用）
+$PY src/submit/corr_probe_sweep.py --file _autologs/sweep_list.txt
+
 # corr 预检不可用时改走盲提交（一次一个；PENDING 即停手防互堵）
 $PY src/submit/blind_submit.py <alpha_id> <cid>
+
+# ★★ 本地算 self-corr（0916 新增，筛选成本归零，**发提交之前一律先跑这个**）
+$PY src/analysis/pnl_corr.py <cid|alpha_id> [--top 8] [--refresh]
+$PY src/analysis/pool_diag.py pool                 # 全池互相拥挤度：谁最"与众不同"
+$PY src/analysis/pool_diag.py near <alpha_id>      # 某条的最近邻明细
+$PY src/analysis/pool_diag.py matrix <id...>       # 指定几条的互相关矩阵
+$PY src/analysis/screen_unsubmitted.py             # 把 456 条历史积压候选全量筛 corr
+$PY src/analysis/leg_lab.py check                  # 验 PnL 线性性（预测 vs 实测）
+$PY src/analysis/leg_lab.py pair                   # 腿两两互相关
+$PY src/analysis/leg_lab.py eval "L_pst:1.5, P_tr20:1.5"
+$PY src/analysis/leg_lab.py search --min-s 2.1 --max-corr 0.67
 
 # 只读 corr 预检（绝不提交/不写台账），用于实验判读
 $PY src/submit/corr_only.py w122_
@@ -213,8 +230,19 @@ $PY src/ops/git_snapshot.py --no-push                  # 只提交本地，不�
 | coverage | USA/TOP3000/delay1 恒为 0.5，无区分度；选字段看 **alphaCount 越低越不易撞车** |
 | **API 限流** | **60 请求/分钟**（响应头 `RateLimit-Limit: 60` / `RateLimit-Remaining`）。超限返回 **HTTP 429**（body 仅 22 字节）。corr 预检一条候选需轮询 **3~4 次请求**，47 条 ≈ 190 请求 → **批量预检必须限速（≥1.3 秒/请求）+ 429 退避**，否则全部超时并被误读为"服务故障"。⚠️ **0915 实测：本轮探针+预检共约 380 次 corr 端点请求，之后相关判决一直是 `PENDING`** —— 探测本身就是积压的成因之一，别再打 |
 | corr 端点正确语义 | `200 + Retry-After + 空 body` = **平台正在现算，须继续轮询**，**不是故障**。⚠️ **0915 二次修正**：当前实际状态是**相关计算在账号侧排队积压**，90~180 秒量级的连续轮询（实测 51 次/90 秒、180 秒预算）**都拿不到 records**，且**全程零 429**（所以也不是限流封禁）。`_autologs/corr_ready_0915.txt` 一次性快扫为空 = 一条算好的都没有 |
-| **★ 提交判决机制（0916 定案）** | **判决 4~9 秒就出，不存在排队积压**。`POST /alphas/{id}/submit`（201）→ 轮询 `GET /alphas/{id}/submit`：`200+Retry-After+空 body`=计算中（约 4 秒）；**`403 + {"is":{"checks":[...]}}` = 判决书**（含 SELF_CORRELATION 数值）；alpha 变 ACTIVE = 入池。旧 `blind_submit.py` 只认顶层 status/stage 键，**把判决书当空数据丢弃** → 0914~0915 的"假 PENDING/积压"全部由此而来；判决过期后端点 404，重 POST 可再取。**提交器用 `src/submit/submit_v3.py` / `run_queue_v3.py`，别再用 blind_submit**；`correlations/self` 端点彻底弃用。0916 实测 9 条同骨架候选全被拒（corr 0.7265~0.9919，详见 SUBMIT_VERDICTS.csv），w125 系 0.5 降权家族封死 |
+| **★ 提交判决机制（0916 定案）** | **判决 4~9 秒就出，不存在排队积压**。`POST /alphas/{id}/submit`（201）→ 轮询 `GET /alphas/{id}/submit`：`200+Retry-After+空 body`=计算中（约 4 秒）；**`403 + {"is":{"checks":[...]}}` = 判决书**（含 SELF_CORRELATION 数值）；alpha 变 ACTIVE = 入池。旧 `blind_submit.py` 只认顶层 status/stage 键，**把判决书当空数据丢弃** → 0914~0915 的"假 PENDING/积压"全部由此而来；判决过期后端点 404，重 POST 可再取。**提交器用 `src/submit/submit_v3.py` / `run_queue_v3.py`，别再用 blind_submit**；`correlations/self` 端点彻底弃用 |
+| **⚠️ 第三种假判决：无 FAIL 的 403 回执被误判为"被拒"（0916 晚，QPbP6aRQ 实测）** | submit 端点的 403 body 里，checks 可能**带 PASS 与数值、却一条 FAIL 都没有**——那是"检查已跑完且都过"的回执，alpha 几秒后变 ACTIVE。旧逻辑「有 result 就算判决 → REJECTED」把它误判成拒信，**导致一条真入池的 alpha 漏记台账、裁决档案留错档**（QPbP6aRQ 实际 ACTIVE/selfCorr=0.6949，却记成 REJECTED）。**唯一正确判据 = 出现 `FAIL` 才算拒信**；无 FAIL 一律继续轮询等 ACTIVE，等到超时也只记 `UNKNOWN`、不记 REJECTED（已修入 submit_v3.py）。附带修正：selfCorr **不论 PASS/FAIL 都要取值**（旧版只在 FAIL 分支里取 → 台账 corr 常为空） |
+| **★★ 判决书里的对手明细表（0916 PM 发现）** | `403` 判决体除 `is.checks` 外还有 **`is.selfCorrelated.records`**，逐条列出撞到的每个 alpha 的 **id / correlation / sharpe**（schema: id,name,instrumentType,region,universe,correlation,sharpe,returns,turnover,fitness,margin）。→ **豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)，必须逐条算**。实测 w132_h 撞 4 条：kqoq0zed .9339/2.02、6Xr2eQaJ .7544/2.27、akLp3pzW .7031/2.78、e79PvPpE .7016/3.13 → 线取 3.443（**单个低 S 对手救不了**）。工具 `src/submit/verdict_dump.py`。**提交即测量**：一次 POST（3~5 秒）拿到完整对手表 |
+| **★ 质量与相关性同源（0916 实证）** | 引擎腿 `ts_av_diff(cash/*,45)` + `ts_av_diff(cashflow_op/*,45)` **既是质量引擎也是相关性来源**：加回 → SF 3.85→4.30 但 corr 0.6999→**0.961**；去掉 → SF 掉到 3.38~3.50。当前前沿 = **SF 4.11 ↔ corr 0.7993**（w141_a，7 腿骨架 + /cap）。另：**aC<30 无数据"只对 fnd6 极冷字段成立**——`fundamental2` 的 `authorized_stock_buyback_amount`（**aC=8**）有效，是池内最强 `0mR2K6lr` 的核心腿 |
+| `neutralization` 取值 | 可选 `NONE` / `MARKET` / `SECTOR` / `INDUSTRY` / `SUBINDUSTRY`；**`STATISTICAL` 不可用**（提交报 400 "Neutralization STATISTICAL is not available"） |
+| `data-fields` API 参数 | 正确写法：`/data-fields?instrumentType=EQUITY&region=USA&delay=1&universe=TOP3000&limit=50&dataset.id=<ds>&offset=<n>`。**用 `dataset=` 会返回 `["Invalid query"]`**；`tooltip` 无 coverage 时不要依赖它 |
 | 提交测试 | `selfCorrelation ≥ 0.7` 触发 Production Correlation 测试；通过 = max corr < 0.7 **或** Sharpe 比相关 alpha 高 10%（豁免线 = 1.10 × max(所有 corr≥0.7 对手的 S)） |
+| **★★ 本地算 self-corr（0916 PM，筛选成本归零）** | `GET /alphas/{id}/recordsets/pnl` 返回该 alpha 的 **累计 PnL**（schema 仅 date+pnl）→ **必须先差分成日 PnL**，不差分任意两条都 0.99 相关。差分后本地算的 max corr 与平台判决值误差 **±0.02**（平台 ≈ 本地 **+0.006~+0.017**，实测 4 样本：le8EAJLO .6934→.6997；w154_b .8707→.8769；akLp3pzW .8053→.8036；kqoq0zed .6827→.6999）→ **判直通要留缓冲：本地 ≤ 0.685**。工具 `src/analysis/pnl_corr.py`。**能在不提交、不污染池子的前提下测任意候选的相关性** |
+| **★★ PnL 近似线性（0916 PM）** | alpha 信号 = Σ wᵢ·group_rank(腿ᵢ)；subindustry 去均值与 decay 均为线性算子，trunc 只削尾部 → **PnL(Σ wᵢ·腿ᵢ) ≈ Σ wᵢ·PnL(腿ᵢ)**。实测：预测（锚腿 PnL + 价量腿 PnL）vs 实测 w154_b = **corr 0.9903**（预测 S 2.197 / 实测 2.140）。→ **只跑单腿建库，任意组合的 S 与 corr 离线可算**（`src/analysis/leg_lab.py`，numpy 向量化 `corr = Mmat@w / √(wᵀGw)`，260 万组合秒级）。⚠️ 算 S 必须用**原始日 PnL**（先扣均值则均值≈0、S 恒为 0）；**G 与 Mmat 必须同尺度**（都用原始 PnL），否则相关差 ~0.017 |
+| **⚠️ 台账列序（易错，0916 踩过）** | `id,expr,S,F,T,R,DD,selfCorr,dateSubmitted,decay,neutralization,batch` → **S 是 `row[2]`，`row[3]` 是 Fitness**。把 Fitness 当 Sharpe 用会**把豁免线算低四成**（曾虚报 177 条"够豁免"，实际 0 条）。**豁免线的 S 一律取台账 row[2]** |
+| **⚠️ PnL 线性预测会系统性低估 maxcorr（0916 晚实测，必须留余量）** | leg_lab 的线性预测（Σwᵢ·PnL(腿ᵢ)）**不是精确值**：实测「预测 PnL vs 实测 PnL」corr 只有 **0.83~0.96**（腿多/权重杂时更差），导致 **预测 maxcorr 系统性低估真实值 +0.05~+0.19（均值 ≈ +0.12）**。16 条样本：w164_01 .5989→.7510(+.152)、w164_00 .6249→.8156(+.191)、w162_07 .6516→.8064(+.155)、w164_07 .6233→**0.6746(+.051，唯一过线)**。→ **纪律：搜索阈值压到 `--max-corr 0.55~0.57`（不要用 0.65），且实跑后必须用 `pnl_corr.py` 实测复核（本地 ≤0.685）才能提交**。`leg_lab` 只是候选生成器，**不是判决器** |
+| **⚠️ `POST /simulations` 负载结构（0916 晚踩过）** | 正确写法：`{'type':'REGULAR', 'settings':{...12 项设置...}, 'regular': <表达式>}` —— **`regular` 必须在顶层，不能塞进 `settings`**。塞进 settings 会返回 `400 {"settings":{"regular":["Unexpected property."]},"regular":["This field is required."]}`（batch159 首跑 24 条全灭即此因）。照 `mine_batch156/157.py` 的 `run_one` 写 |
+| **⚠️ 池子只能取自台账** | 算 max corr 时**不得从 `data/alpha_quality_analysis/pnl/` 缓存目录取"池子"**——该目录混着数百条未提交候选/实验腿，混进来会**把 max corr 虚高压死**（曾把 433 条未提交候选当池子 → 搜出 0 个可用组合）。正确做法：池子 = `SUBMITTED_LEDGER.csv` 里的 8 位 id |
 | **Learn 文档接口** | 平台 Learn 是**两套独立内容**：①**文档** = `GET /tutorials`（目录树，**7 课程/29 页**）+ `GET /tutorial-pages/{page_id}`（正文 `content` 块数组）；②**视频课程** = `GET /video-courses`。**`/tutorials` 无分页**：`next=None`、`offset=20` 起返回空，**29 页即全量**（已与平台 Documentation 页面的 7 个分组逐一核对：9+5+3+3+5+3+1）；正文里的 `/learn/documentation/...` 链接反查也**没有目录树外的页面**（唯一例外 `another-sample-alpha` 是官方自己的死链）。抓取脚本 `src/tools/fetch_learn_docs.py`（文档，`tree`/`page`/**`all` 全量**）/ `fetch_learn_video.py`（视频）/ `merge_video_notes.py`（同组视频合并） |
 | **文档页 content 块类型** | 实测共 **6 种**（漏一种就丢内容）：`TEXT`(HTML→MD)、`HEADING`、`IMAGE`(独立块，**value.url 需登录态下载**)、`TABLE`、**`EQUATION`**(LaTeX，原样保留)、**`SIMULATION_EXAMPLE`**(表达式 + 12 项完整模拟设置)。⚠️ 图片**大多数不在 TEXT 的 HTML 里，而是独立 `IMAGE` 块**——只解析 TEXT 会漏掉绝大部分配图（0915 首轮即此坑，漏 81 张） |
 | **Learn 视频字幕** | `GET /video-courses?limit=100`（需登录）直接返回官方**英文字幕**：**16 课程组 / 69 视频，50 个带字幕**（仅 `quantcepts` 组 19 个无）。**不用下载视频、不用本地语音识别**。⚠️ **接口默认只返 10 条，必须带 `?limit=100`**，否则漏掉后半程课程组（0915 曾误记为"46 视频/27 字幕"，即此因）。**`source` 标 YouTube 的视频同样直接带 `transcript` 字段——取字幕不需要访问 YouTube**；文档页内嵌的 YouTube 视频也可用 `uid` 反查本接口取字幕 |

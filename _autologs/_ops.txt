@@ -1,0 +1,6 @@
+ts_zscore | sig= None | def= ts_zscore(x, d)
+ts_decay_linear | sig= None | def= ts_decay_linear(x, d, dense = false)
+hump | sig= None | def= hump(x, hump = 0.01)
+quantile | sig= None | def= quantile(x, driver = gaussian, sigma = 1.0)
+zscore | sig= None | def= zscore(x)
+trade_when | sig= None | def= trade_when(x, y, z)

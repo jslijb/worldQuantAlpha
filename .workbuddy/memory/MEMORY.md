@@ -55,9 +55,9 @@
 
 **共性 = 必须有独有成分腿。老族价量腿（`-ts_rank(returns,20)` / Amihud `-ts_mean(abs(returns)/volume,20)`）是没被挤爆的几何。**
 
-## 破墙维度总表（0916 全量实证收官，详见 `CLAUDE.md` §6 / `_autologs/日报_20260916_晚轮次.md`）
-**判死 11 项**：①换字段/换锚（`/cap` 归一成市值因子）②**换区域（本账号 USA 单区，ASI/EUR/GLB/HKG/JPN 全 400）**③**风险中性化（SLOW_AND_FAST/SLOW/FAST/CROWDING/STATISTICAL 全 400；RAM 取值非法）**④PPA/PPAC（需风险中性化 + 唯一字段≤3，双不符）⑤universe/truncation/D0 ⑥结构级改造（batch104 SF 0.11~1.15）⑦新数据轴单独成腿 ⑧`vec_avg` 评级轴（SF≤0.88）⑨456 条积压（最低 corr 0.6934，直通 0）⑩换分组粒度（单腿改善 0.17 但空间未打开）⑪顶层 zscore/rank（丢中性化好处）。
-**唯一还开着 = ⑬ USA 内发现新"高质量单腿"字段**（当年 fnd6_xrent / cashflow_op 就这么破的）。已排除：`option8` 波动率字段（SF 0.09~0.23）、`socialmedia12`（无 MATRIX 字段，全 VECTOR）。待测：model16 / news12。
+## 破墙维度总表（0916~0917 全量实证收官，详见 `CLAUDE.md` §6）
+**判死 15 项**：①换字段/换锚（`/cap` 归一成市值因子）②**换区域（本账号 USA 单区，ASI/EUR/GLB/HKG/JPN 全 400）**③**风险中性化（SLOW_AND_FAST/SLOW/FAST/CROWDING/STATISTICAL 全 400；RAM 取值非法）**④PPA/PPAC（需风险中性化 + 唯一字段≤3，双不符）⑤universe/truncation/D0 ⑥结构级改造（batch104 SF 0.11~1.15）⑦新数据轴单独成腿 ⑧`vec_avg` 评级轴（SF≤0.88）⑨456 条积压（最低 corr 0.6934，直通 0）⑩换分组粒度（单腿改善 0.17 但空间未打开）⑪顶层 zscore/rank（丢中性化好处）⑫新字段轴全关（0917：option8/socialmedia12/model16/news12 + analyst4 PEAD+0阶30字段+覆盖数，全部不出种子）⑬**腿稀释量产（x174/175：单腿≈−0.02 不可外推，双腿符号不定；赢家进池即成新撞点）**⑭**decay 拉大（x176：12/12 反升 +0.02~0.03）**⑮**逐腿 group_zscore/group_neutralize 替换（x178：14/14 质量摧毁）**。
+**→ 可及 14 个数据集已全部测绘完毕，本地可及空间见底；唯一解锁 = 平台侧新权限（多区域 / 新数据集），待李工在平台操作。**
 **四条通用教训**：**①先探权限再设计实验**（换区域诱人但没权限）②**悬而未决的"待验证"用最便宜方式第一时间打掉**（Slow+Fast 挂了三天，一次探针就判死）③**本地 corr 精度 ±0.02 内、缓冲线 0.685 有效**（.6996→平台 .6994）④**归因平台前先自证工具**。
 
 ## 已证伪（勿再试）

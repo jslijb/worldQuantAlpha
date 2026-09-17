@@ -1,0 +1,2 @@
+w142_a.json  3qXqlz5P S=2.74 F=1.07 SF=3.81 T=0.7027 tS=2.11 [fail]
+w142_b.json  pwRwj7Ro S=2.59 F=0.96 SF=3.55 T=0.712 tS=1.86 [fail]

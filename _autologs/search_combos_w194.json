@@ -1,0 +1,73 @@
+{
+ "w158_00": {
+  "expr": "1.5*group_rank(operating_expense/assets, subindustry) + group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 0.75*group_rank(volume/ts_mean(volume, 90), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.784,
+  "maxcorr": 0.5477,
+  "nearest": "QPbPwvnW",
+  "anchors": [
+   "M_opex",
+   "M_ni",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_v90",
+   "P_am20",
+   "N_tr5"
+  ],
+  "wp": 0.75
+ },
+ "w158_01": {
+  "expr": "1.5*group_rank(operating_expense/assets, subindustry) + group_rank(fnd6_txs/cap, subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.639,
+  "maxcorr": 0.5458,
+  "nearest": "9qX3M2mq",
+  "anchors": [
+   "M_opex",
+   "L_txs",
+   "M_cfoQ",
+   "M_g12"
+  ],
+  "pvs": [
+   "P_c2",
+   "P_am20",
+   "N_tr5"
+  ],
+  "wp": 2.0
+ },
+ "w158_02": {
+  "expr": "1.5*group_rank(operating_expense/assets, subindustry) + group_rank(fnd6_intc/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + group_rank(fnd6_tstkc/assets, subindustry) + 1.5*group_rank(volume/ts_mean(volume, 90), subindustry) + 1.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + 1.5*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.364,
+  "maxcorr": 0.5445,
+  "nearest": "gJbkQ31Q",
+  "anchors": [
+   "M_opex",
+   "M_intc",
+   "M_cashZ",
+   "M_tstk"
+  ],
+  "pvs": [
+   "P_v90",
+   "P_on5",
+   "N_tr5"
+  ],
+  "wp": 1.5
+ },
+ "w158_03": {
+  "expr": "1.5*group_rank(operating_expense/assets, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 0.5*group_rank(-ts_delta(close, 20), subindustry) + 0.5*group_rank(-ts_std_dev(returns, 20), subindustry) + 0.5*group_rank(-ts_rank(returns, 60), subindustry)",
+  "S": 2.206,
+  "maxcorr": 0.5374,
+  "nearest": "levb0dQx",
+  "anchors": [
+   "M_opex",
+   "L_acc",
+   "M_tot",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_c20",
+   "P_sd20",
+   "N_tr60"
+  ],
+  "wp": 0.5
+ }
+}

@@ -1,0 +1,11 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+POST 201 Location= https://api.worldquantbrain.com/alphas/rKOKjQP8/submit
+selfCorrelated 字段: ['id', 'name', 'instrumentType', 'region', 'universe', 'correlation', 'sharpe', 'returns', 'turnover', 'fitness', 'margin']
+max = 0.7993  min = None  对手数 = 5
+alpha_id           corr   sharpe  豁免线(1.1*S)
+0mR2K6lr         0.7993     3.45  3.795
+e79PvPpE         0.7989     3.13  3.443
+N1QJPJE8         0.7411     2.47  2.717
+A10MYm3d         0.7267      1.9  2.09
+E5vx6NJP         0.7163     2.45  2.695

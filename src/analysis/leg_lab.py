@@ -78,7 +78,16 @@ def get_pnl(aid):
     return None
 
 
+ALIAS = {'P_int20': 'x180_leg_int', 'M_cov': 'x180_leg_cov'}  # 腿名 -> mined 文件名
+
+
 def cid2id(cid):
+    if cid in ALIAS:
+        p = _pl.Path(MINED) / f'{ALIAS[cid]}.json'
+        if p.exists():
+            d = json.load(open(p, encoding='utf-8'))
+            if d.get('id'):
+                return d['id']
     if len(cid) == 8 and cid.isalnum():
         return cid
     p = _pl.Path(MINED) / f'{cid}.json'
@@ -254,6 +263,11 @@ elif cmd == 'search':
     for _l in ['N_tr5', 'N_tr60', 'N_am60', 'N_rvol']:
         if (_pl.Path(MINED) / f'{_l}.json').exists():
             PVS.append(_l)
+    # b180 新腿：日内收益（gJbkQ31Q 获胜腿）、分析师覆盖数变化（池里零条几何）
+    if (_pl.Path(MINED) / 'x180_leg_int.json').exists():
+        PVS.append('P_int20')
+    if (_pl.Path(MINED) / 'x180_leg_cov.json').exists():
+        ANCH.append('M_cov')
     for _l in ['M_accI', 'M_intI', 'M_cfoQ', 'M_intc', 'M_tot', 'M_ni',
                'M_liab', 'M_txp', 'M_lnoq', 'M_g12', 'M_tfvce', 'M_debt',
                'M_opex', 'M_revt', 'M_cashZ', 'M_tstk']:
@@ -322,32 +336,49 @@ elif cmd == 'search':
         _w = ARGS[ARGS.index('--anch') + 1].upper()
         _pre = tuple(f'{ch}_' for ch in _w if ch.isalpha())
         A = [l for l in A if l.startswith(_pre)]
+    WITH = None
+    for _i, _a in enumerate(ARGS):
+        if _a == '--with' or _a.startswith('--with='):
+            WITH = _a.split('=')[1] if '=' in _a else ARGS[_i + 1]
+    if WITH:
+        print(f'--with {WITH}：锚组合必须包含该腿')
     NV_MAX = 3
     for _i, _a in enumerate(ARGS):
         if _a == '--nv' or _a.startswith('--nv='):
             NV_MAX = int(_a.split('=')[1]) if '=' in _a else int(ARGS[_i + 1])
     print(f'锚候选 {len(A)} 条 × 价量候选 {len(Vv)} 条，最大锚数 {NA_MAX}，最大价量数 {NV_MAX}')
     hits = []; n_eval = 0
-    for na in range(1, NA_MAX + 1):
-        for anchors in itertools.combinations(A, na):
-            wa = np.zeros(len(legs))
-            for j, x in enumerate(anchors):
-                wa[idx[x]] = 1.5 if j == 0 else 1.0
-            for nv in range(1, NV_MAX + 1):
-                for pvs in itertools.combinations(Vv, nv):
-                    wv = np.zeros(len(legs))
-                    for x in pvs:
-                        wv[idx[x]] = 1.0
-                    for wp in (0.5, 0.75, 1.0, 1.25, 1.5, 2.0):
-                        w = wa + wp * wv
-                        var = float(w @ G @ w)
-                        if var <= 0:
-                            continue
-                        n_eval += 1
-                        cvec = (Mmat @ w) / (var ** .5)
-                        mx = float(cvec.max())
-                        if mx <= max_corr:
-                            hits.append((mx, w, anchors, pvs, wp, int(cvec.argmax())))
+
+    def _eval_anchor_set(anchors):
+        global n_eval
+        wa = np.zeros(len(legs))
+        for j, x in enumerate(anchors):
+            wa[idx[x]] = 1.5 if j == 0 else 1.0
+        for nv in range(1, NV_MAX + 1):
+            for pvs in itertools.combinations(Vv, nv):
+                wv = np.zeros(len(legs))
+                for x in pvs:
+                    wv[idx[x]] = 1.0
+                for wp in (0.5, 0.75, 1.0, 1.25, 1.5, 2.0):
+                    w = wa + wp * wv
+                    var = float(w @ G @ w)
+                    if var <= 0:
+                        continue
+                    n_eval += 1
+                    cvec = (Mmat @ w) / (var ** .5)
+                    mx = float(cvec.max())
+                    if mx <= max_corr:
+                        hits.append((mx, w, anchors, pvs, wp, int(cvec.argmax())))
+
+    if WITH:
+        _other = [l for l in A if l != WITH]
+        for na in range(0, NA_MAX):
+            for extras in itertools.combinations(_other, na):
+                _eval_anchor_set((WITH,) + extras)
+    else:
+        for na in range(1, NA_MAX + 1):
+            for anchors in itertools.combinations(A, na):
+                _eval_anchor_set(anchors)
     print(f'评估 {n_eval} 个组合，max corr ≤ {max_corr} 的有 {len(hits)} 个')
     res = []
     for mx, w, anchors, pvs, wp, hit in hits:
@@ -417,6 +448,9 @@ elif cmd == 'search':
      'P_on5':  G_EXPR('-ts_mean(open/ts_delay(close,1) - 1, 5)'),
      'P_sd20': G_EXPR('-ts_std_dev(returns, 20)'),
      'P_vd':   G_EXPR('(close - vwap)/vwap'),
+     # ---- b180 新腿 ----
+     'P_int20': G_EXPR('-ts_rank(close/open - 1, 20)'),
+     'M_cov':   G_EXPR('ts_backfill(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, 45), 120)'),
      # ---- b157 扩容腿（N_ 价量 / M_ 锚）----
      'N_tr5':   G_EXPR('-ts_rank(returns, 5)'),
      'N_tr60':  G_EXPR('-ts_rank(returns, 60)'),

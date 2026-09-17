@@ -1,0 +1,152 @@
+{
+ "w182_00": {
+  "expr": "1.5*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_intc/assets, subindustry) + group_rank(liabilities_curr/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.956,
+  "maxcorr": 0.5483,
+  "nearest": "E5vkQ76G",
+  "anchors": [
+   "L_acc",
+   "M_intc",
+   "M_liab",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "N_tr5"
+  ],
+  "wp": 1.25
+ },
+ "w182_01": {
+  "expr": "1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + group_rank(fnd6_mfma2_revt/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.739,
+  "maxcorr": 0.5498,
+  "nearest": "9qX3M2mq",
+  "anchors": [
+   "L_cfo",
+   "L_xr",
+   "M_g12",
+   "M_revt"
+  ],
+  "pvs": [
+   "P_c2",
+   "P_am20",
+   "N_tr5"
+  ],
+  "wp": 2.0
+ },
+ "w182_02": {
+  "expr": "1.5*group_rank(ts_backfill(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, 45), 120), subindustry) + group_rank(operating_expense/assets, subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.732,
+  "maxcorr": 0.5441,
+  "nearest": "mLmwpAKK",
+  "anchors": [
+   "M_cov",
+   "M_opex"
+  ],
+  "pvs": [
+   "N_tr5"
+  ],
+  "wp": 1.25
+ },
+ "w182_03": {
+  "expr": "1.5*group_rank(ts_backfill(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, 45), 120), subindustry) + group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 1.25*group_rank(volume/ts_mean(volume, 60), subindustry) + 1.25*group_rank(-ts_rank(close/open - 1, 20), subindustry)",
+  "S": 2.581,
+  "maxcorr": 0.5494,
+  "nearest": "O0N0R5NY",
+  "anchors": [
+   "M_cov",
+   "M_ni",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_v60",
+   "P_int20"
+  ],
+  "wp": 1.25
+ },
+ "w182_04": {
+  "expr": "1.5*group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, subindustry) + group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + group_rank(liabilities_curr/assets, subindustry) + group_rank(operating_expense/assets, subindustry) + 0.75*group_rank(-ts_delta(vwap, 5), subindustry) + 0.75*group_rank((close - vwap)/vwap, subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.361,
+  "maxcorr": 0.5482,
+  "nearest": "npKGgKLw",
+  "anchors": [
+   "M_tot",
+   "M_ni",
+   "M_liab",
+   "M_opex"
+  ],
+  "pvs": [
+   "P_vw5",
+   "P_vd",
+   "N_tr5"
+  ],
+  "wp": 0.75
+ },
+ "w182_05": {
+  "expr": "1.5*group_rank(ts_backfill(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, 45), 120), subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(liabilities_curr/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.329,
+  "maxcorr": 0.5317,
+  "nearest": "QPbPwvnW",
+  "anchors": [
+   "M_cov",
+   "M_cfoQ",
+   "M_liab",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_am20",
+   "P_on5",
+   "N_tr5"
+  ],
+  "wp": 1.0
+ },
+ "w182_06": {
+  "expr": "1.5*group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + group_rank(liabilities_curr/assets, subindustry) + group_rank(volume/ts_mean(volume, 60), subindustry) + group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.269,
+  "maxcorr": 0.5497,
+  "nearest": "gJbkQ31Q",
+  "anchors": [
+   "M_ni",
+   "M_liab"
+  ],
+  "pvs": [
+   "P_v60",
+   "P_on5",
+   "N_tr5"
+  ],
+  "wp": 1.0
+ },
+ "w182_07": {
+  "expr": "1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + group_rank(anl4_fs_detail_estimate_1qf_v4_nd_totassets_mean/assets, subindustry) + group_rank(operating_expense/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 0.5*group_rank(-ts_delta(close, 20), subindustry) + 0.5*group_rank(volume/ts_mean(volume, 120), subindustry)",
+  "S": 2.218,
+  "maxcorr": 0.5483,
+  "nearest": "npdpEJ3l",
+  "anchors": [
+   "M_intI",
+   "M_tot",
+   "M_opex",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_c20",
+   "P_v120"
+  ],
+  "wp": 0.5
+ },
+ "w182_08": {
+  "expr": "1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + 1.25*group_rank((close - vwap)/vwap, subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry) + 1.25*group_rank(-ts_rank(close/open - 1, 20), subindustry)",
+  "S": 2.212,
+  "maxcorr": 0.549,
+  "nearest": "pwRwWoJ3",
+  "anchors": [
+   "L_int",
+   "M_cfoQ",
+   "M_ni"
+  ],
+  "pvs": [
+   "P_vd",
+   "N_tr5",
+   "P_int20"
+  ],
+  "wp": 1.25
+ }
+}

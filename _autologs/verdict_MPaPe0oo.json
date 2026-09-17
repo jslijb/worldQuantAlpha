@@ -1,0 +1,64 @@
+{
+ "accepted": true,
+ "is": {
+  "pnl": 4962034,
+  "bookSize": 20000000,
+  "longCount": 1530,
+  "shortCount": 1541,
+  "turnover": 0.0996,
+  "returns": 0.1003,
+  "drawdown": 0.0476,
+  "margin": 0.002013,
+  "sharpe": 2.3,
+  "fitness": 2.06,
+  "startDate": "2019-01-01",
+  "selfCorrelation": 0.6892,
+  "prodCorrelation": 0.0,
+  "checks": [
+   {
+    "name": "LOW_SHARPE",
+    "result": "PASS",
+    "limit": 1.25,
+    "value": 2.3
+   },
+   {
+    "name": "LOW_FITNESS",
+    "result": "PASS",
+    "limit": 1.0,
+    "value": 2.06
+   },
+   {
+    "name": "LOW_TURNOVER",
+    "result": "PASS",
+    "limit": 0.01,
+    "value": 0.0996
+   },
+   {
+    "name": "HIGH_TURNOVER",
+    "result": "PASS",
+    "limit": 0.7,
+    "value": 0.0996
+   },
+   {
+    "name": "CONCENTRATED_WEIGHT",
+    "result": "PASS"
+   },
+   {
+    "name": "LOW_SUB_UNIVERSE_SHARPE",
+    "result": "PASS",
+    "limit": 1.0,
+    "value": 1.41
+   },
+   {
+    "name": "MATCHES_COMPETITION",
+    "result": "PASS",
+    "competitions": [
+     {
+      "id": "challenge",
+      "name": "Challenge"
+     }
+    ]
+   }
+  ]
+ }
+}

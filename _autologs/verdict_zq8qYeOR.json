@@ -1,0 +1,149 @@
+{
+ "is": {
+  "checks": [
+   {
+    "name": "LOW_SHARPE",
+    "result": "PASS",
+    "limit": 1.25,
+    "value": 2.05
+   },
+   {
+    "name": "LOW_FITNESS",
+    "result": "PASS",
+    "limit": 1.0,
+    "value": 2.0
+   },
+   {
+    "name": "LOW_TURNOVER",
+    "result": "PASS",
+    "limit": 0.01,
+    "value": 0.1141
+   },
+   {
+    "name": "HIGH_TURNOVER",
+    "result": "PASS",
+    "limit": 0.7,
+    "value": 0.1141
+   },
+   {
+    "name": "CONCENTRATED_WEIGHT",
+    "result": "PASS"
+   },
+   {
+    "name": "LOW_SUB_UNIVERSE_SHARPE",
+    "result": "PASS",
+    "limit": 0.89,
+    "value": 1.29
+   },
+   {
+    "name": "SELF_CORRELATION",
+    "result": "FAIL",
+    "limit": 0.7,
+    "value": 0.9856
+   },
+   {
+    "name": "MATCHES_COMPETITION",
+    "result": "PASS",
+    "competitions": [
+     {
+      "id": "challenge",
+      "name": "Challenge"
+     }
+    ]
+   }
+  ],
+  "selfCorrelated": {
+   "schema": {
+    "name": "selfCorrelation",
+    "title": "Self Correlated",
+    "properties": [
+     {
+      "name": "id",
+      "title": "Id",
+      "type": "string"
+     },
+     {
+      "name": "name",
+      "title": "Name",
+      "type": "string"
+     },
+     {
+      "name": "instrumentType",
+      "title": "Instrument Type",
+      "type": "string"
+     },
+     {
+      "name": "region",
+      "title": "Region",
+      "type": "string"
+     },
+     {
+      "name": "universe",
+      "title": "Universe",
+      "type": "string"
+     },
+     {
+      "name": "correlation",
+      "title": "Correlation",
+      "type": "decimal"
+     },
+     {
+      "name": "sharpe",
+      "title": "Sharpe",
+      "type": "decimal"
+     },
+     {
+      "name": "returns",
+      "title": "Returns",
+      "type": "percent"
+     },
+     {
+      "name": "turnover",
+      "title": "Turnover",
+      "type": "percent"
+     },
+     {
+      "name": "fitness",
+      "title": "Fitness",
+      "type": "decimal"
+     },
+     {
+      "name": "margin",
+      "title": "Margin",
+      "type": "permyriad"
+     }
+    ]
+   },
+   "records": [
+    [
+     "kqoq0zed",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.9856,
+     2.02,
+     0.1175,
+     0.1427,
+     1.83,
+     0.001646
+    ],
+    [
+     "akLp3pzW",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.7069,
+     2.78,
+     0.1129,
+     0.1778,
+     2.22,
+     0.001271
+    ]
+   ],
+   "min": null,
+   "max": 0.9856
+  }
+ }
+}

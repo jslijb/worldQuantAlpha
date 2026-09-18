@@ -1,0 +1,20 @@
+{
+ "w198_00": {
+  "expr": "1.5*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(volume/ts_mean(volume, 90), subindustry) + 2.0*group_rank(-ts_rank(returns, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.496,
+  "maxcorr": 0.4981,
+  "nearest": "0mXm1neK",
+  "anchors": [
+   "M_lnoq",
+   "L_cfo",
+   "L_xr",
+   "M_g12"
+  ],
+  "pvs": [
+   "P_v90",
+   "P_tr20",
+   "N_tr5"
+  ],
+  "wp": 2.0
+ }
+}

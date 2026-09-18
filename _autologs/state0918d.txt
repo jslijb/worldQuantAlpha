@@ -1,0 +1,73 @@
+# -*- coding: utf-8 -*-
+"""mine_neut_convert.py —— 通用「中性化转换器」：把一批达标候选换成其它中性化重跑
+
+用途：候选表达式本身达标（S+F / tS / 无 FAIL 都过），但被 corr 封死无法提交。
+      换中性化 = 换 PnL 的投影维度，对「表达式 ↔ 池子」的相关性做一次下移
+      （0916 实测 −0.14 ~ −0.27），零新字段成本。
+      一个表达式只能吃一口（MARKET 版入池后 SUB/SECTOR 版必撞它）。
+
+用法：
+  python src/mine/mine_neut_convert.py --cids w162_00,w162_01 --neuts MARKET,SECTOR --pfx x162
+  python src/mine/mine_neut_convert.py --list _autologs/_backlog456.json --corr-max 0.78 --pfx x163
+  python src/mine/mine_neut_convert.py --cids w172 --glob 'w172_*' --neuts MARKET
+
+候选来源三选一：--cids a,b,c ｜ --glob 'w172_*' ｜ --list <json>（元素含 cid 字段 + 可选 corr）
+过滤：--min-sf 4.0 --min-ts 1.25 --corr-max 0.78（--list 模式下按 corr 预筛）
+自动跳过：已入池（台账）、表达式重复、已有同名产出
+"""
+import os as _os, pathlib as _pl, sys, json, glob, time
+_p = _pl.Path(__file__).resolve()
+for _d in [_p.parent, *_p.parents]:
+    if (_d / 'brain_credentials.txt').exists():
+        _os.chdir(_d); break
+import requests
+from concurrent.futures import ThreadPoolExecutor
+
+OUT = 'data/alpha_quality_analysis/mined'
+MINED = _pl.Path(OUT)
+
+
+def opt(name, default=None):
+    a = sys.argv
+    for x in a:
+        if x == name: return a[a.index(x) + 1]
+        if x.startswith(name + '='): return x.split('=', 1)[1]
+    return default
+
+
+CIDSLIST = opt('--cids', '')
+GLOBP = opt('--glob', '')
+LISTJ = opt('--list', '')
+NEUTS = [n.strip().upper() for n in opt('--neuts', 'MARKET,SECTOR').split(',') if n.strip()]
+PFX = opt('--pfx', 'x')
+MIN_SF = float(opt('--min-sf', 4.0))
+MIN_TS = float(opt('--min-ts', 1.25))
+CORR_MAX = float(opt('--corr-max', 1.01))
+WORKERS = int(opt('--workers', 2))
+LIMIT = int(opt('--limit', 9999))
+
+# ---- 候选清单 ----
+cids = []
+if LISTJ:
+    for it in json.load(open(LISTJ, encoding='utf-8')):
+        cid = it.get('cid') if isinstance(it, dict) else it
+        cr = (it or {}).get('corr') if isinstance(it, dict) else None
+        if cid and (cr is None or cr <= CORR_MAX):
+            cids.append(cid)
+elif GLOBP:
+    cids = sorted(_pl.Path(f).stem for f in glob.glob(f'{OUT}/{GLOBP}.json'))
+elif CIDSLIST:
+    cids = [c.strip() for c in CIDSLIST.split(',') if c.strip()]
+
+submitted = {l.split(',')[0].strip('"') for l in
+             open('data/alpha_quality_analysis/SUBMITTED_LEDGER.csv', encoding='utf-8-sig').read().splitlines()[1:]}
+
+todo = []
+seen = set()
+for cid in cids:
+    f = MINED / f'{cid}.json'
+    if not f.exists():
+        print(f'{cid} 无 mined 记录，跳过'); continue
+    d = json.load(open(f, encoding='utf-8'))
+    aid = d.get('id')
+    if aid in subm

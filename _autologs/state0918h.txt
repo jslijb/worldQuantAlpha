@@ -1,0 +1,6 @@
+== w197a(M_intc)
+  S=2.668 maxcorr=0.4909 鎾?mXm1neK | 1.5*group_rank(fnd6_intc/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, s
+file exists: True
+== w197b(M_accI)
+  S=2.641 maxcorr=0.4934 鎾濷0N0R5NY | 1.5*group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent
+file exists: True

@@ -1,0 +1,38 @@
+{
+ "w196_00": {
+  "expr": "1.5*group_rank(fnd6_tstkc/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.676,
+  "maxcorr": 0.5408,
+  "nearest": "akLmmvPW",
+  "anchors": [
+   "M_tstk",
+   "L_cfo",
+   "L_xr",
+   "M_g12"
+  ],
+  "pvs": [
+   "P_c2",
+   "P_am20",
+   "N_tr5"
+  ],
+  "wp": 2.0
+ },
+ "w196_01": {
+  "expr": "1.5*group_rank(fnd6_tstkc/assets, subindustry) + group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + group_rank(operating_expense/assets, subindustry) + zscore(ts_av_diff(cash/assets,45)) + 1.25*group_rank(volume/ts_mean(volume, 90), subindustry) + 1.25*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "S": 2.287,
+  "maxcorr": 0.5438,
+  "nearest": "6XrbGx1L",
+  "anchors": [
+   "M_tstk",
+   "M_ni",
+   "M_opex",
+   "M_cashZ"
+  ],
+  "pvs": [
+   "P_v90",
+   "P_on5",
+   "N_tr5"
+  ],
+  "wp": 1.25
+ }
+}

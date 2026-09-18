@@ -1,0 +1,11 @@
+search_combos_w198_M_cfoQ.json -> 1
+  w198_00 S=2.536 mc=0.4924
+search_combos_w198_M_debt.json -> 1
+  w198_00 S=2.501 mc=0.4996
+search_combos_w198_M_intI.json -> 1
+  w198_00 S=2.628 mc=0.4995
+search_combos_w198_M_lnoq.json -> 1
+  w198_00 S=2.496 mc=0.4981
+search_combos_w198_M_tstk.json -> 1
+  w198_00 S=2.500 mc=0.4987
+TOTAL 5

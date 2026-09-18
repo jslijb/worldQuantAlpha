@@ -1,0 +1,17 @@
+w196_00   delta=+0.2492 engine_hits/len=(2, 379) legs=?
+w196_02   delta=+0.3157 engine_hits/len=(2, 387) legs=?
+w196_04   delta=+0.1867 engine_hits/len=(2, 371) legs=?
+w196_08   delta=+0.3906 engine_hits/len=(2, 398) legs=?
+w196_11   delta=+0.1755 engine_hits/len=(2, 401) legs=?
+w196_12   delta=+0.1997 engine_hits/len=(2, 403) legs=?
+w196_15   delta=+0.2310 engine_hits/len=(2, 379) legs=?
+w196_18   delta=+0.3066 engine_hits/len=(2, 396) legs=?
+w197_00   delta=+0.3732 engine_hits/len=(2, 381) legs=?
+w197_01   delta=+0.3736 engine_hits/len=(2, 391) legs=?
+w198_00   delta=+0.3161 engine_hits/len=(2, 382) legs=?
+w198_01   delta=+0.2879 engine_hits/len=(2, 395) legs=?
+w198_02   delta=+0.3207 engine_hits/len=(2, 414) legs=?
+w198_03   delta=+0.3055 engine_hits/len=(2, 404) legs=?
+w198_04   delta=+0.3398 engine_hits/len=(2, 391) legs=?
+
+corr(engine_density, delta) = -0.149  (n=15)

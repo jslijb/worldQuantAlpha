@@ -1,0 +1,2 @@
+  w200_00 S=2.88 maxcorr=0.674 shared=0.14 鎾?qX3M2mq | 1.5*group_rank(-ts_rank(close/open - 1, 20), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(fnd6
+combos=1 shared_frac min=0.14 max=0.14

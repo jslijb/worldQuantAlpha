@@ -1,0 +1,22 @@
+backlog456 entries: 25
+with corr: 25
+w59_b corr=0.6934
+w114_m corr=0.7387
+w115_c corr=0.7394
+w27_lnoq_xrent corr=0.7418
+w63_f corr=0.7574
+w39_h corr=0.7623
+w87_d corr=0.7642
+w54_c corr=0.7645
+w87_b corr=0.7749
+w91_f corr=0.7749
+w62_f corr=0.7755
+w114_c corr=0.7767
+w37_l corr=0.7785
+w68_f corr=0.7790
+w67_a corr=0.7794
+w41_b corr=0.7795
+w114_g corr=0.7799
+w55_d corr=0.7856
+w40_e corr=0.7863
+w41_f corr=0.7863

@@ -1,0 +1,50 @@
+{
+ "C_int_2s": {
+  "expr": "group_rank(if_else(ts_std_dev(returns, 60) > ts_mean(ts_std_dev(returns, 60), 120), -ts_rank(close/open - 1, 20), ts_rank(close/open - 1, 20)), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "C_int_2s"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "C_int_gap": {
+  "expr": "group_rank(if_else(open < ts_delay(close, 1), -ts_rank(close/open - 1, 20), 0), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "C_int_gap"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "C_int_mom": {
+  "expr": "group_rank(+ts_rank(close/open - 1, 20), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "C_int_mom"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "C_int_vg": {
+  "expr": "group_rank(if_else(ts_std_dev(returns, 60) > ts_mean(ts_std_dev(returns, 60), 120), -ts_rank(close/open - 1, 20), 0), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "C_int_vg"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ }
+}

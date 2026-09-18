@@ -1,0 +1,5 @@
+len 2162 head b'\xff\xfep\x00y\x00t\x00h\x00o\x00n\x00.\x00e\x00x\x00e\x00 \x00:\x00 \x00D\x00:\x00\\\x00P\x00r\x00o\x00g\x00r\x00a\x00m\x00D\x00a\x00t\x00a\x00\\\x00M\x00i\x00n\x00i\x00f\x00o\x00r\x00g\x00e\x003\x00\\\x00'
+utf-8 FAIL 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+utf-16 OK corr_in=True len=1080
+SAMPLE '  鉁?JjNlZEmx w198_02                  SF=6.01 tS=2.85 corr=0.8202 鎾濴LNL3qqm 鈫?璺宠繃'
+gbk FAIL 'gbk' codec can't decode byte 0xff in position 0: illegal multibyte sequence

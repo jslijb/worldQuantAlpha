@@ -1,0 +1,3 @@
+S=2.37 F=1.76 tS=0.5999 date=2026-09-16
+1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_rank(returns, 20), subindustry) + 0.75*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry) + 0.75*group_rank(-ts_rank(volume/ts_mean(volume, 120), 20), subindustry) + 0.5*group_rank(-ts_mean(open/ts_delay(close, 1) - 1, 5), subindustry) 
+pool exprs containing subindustry: 50/86

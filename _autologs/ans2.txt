@@ -1,0 +1,16 @@
+x163_w114c_MAR.json id=JjNMmMJn S=2.08 F=1.59 SF=3.67 tS=1.22 FAIL=[] sub=False neut=MARKET base=None
+x163_w114g_MAR.json id=N1axjm6e S=1.49 F=1.03 SF=2.52 tS=1.44 FAIL=[] sub=False neut=MARKET base=None
+x163_w114m_MAR.json id=kqoEeQog S=1.56 F=1.18 SF=2.74 tS=0.98 FAIL=[] sub=False neut=MARKET base=None
+x163_w115c_MAR.json id=O0NQKAOp S=2.16 F=1.76 SF=3.92 tS=1.16 FAIL=[] sub=False neut=MARKET base=None
+x163_w27lnoqxrent_MAR.json id=vRrwaX7z S=2.11 F=2.04 SF=4.15 tS=1.28 FAIL=[] sub=False neut=MARKET base=None
+x163_w37l_MAR.json id=1YXkLV26 S=1.91 F=1.76 SF=3.67 tS=0.69 FAIL=[] sub=False neut=MARKET base=None
+x163_w39h_MAR.json id=1YXkVdbX S=2.02 F=1.94 SF=3.96 tS=0.71 FAIL=[] sub=False neut=MARKET base=None
+x163_w41b_MAR.json id=gJbkKNQK S=2.15 F=2.15 SF=4.30 tS=0.75 FAIL=[] sub=False neut=MARKET base=None
+x163_w54c_MAR.json id=E5pO0dNm S=1.48 F=1.33 SF=2.81 tS=0.85 FAIL=[] sub=False neut=MARKET base=None
+x163_w62f_MAR.json id=levpk9P7 S=1.94 F=1.12 SF=3.06 tS=1.85 FAIL=[] sub=False neut=MARKET base=None
+x163_w63f_MAR.json id=Wjb1w8Zd S=1.98 F=1.24 SF=3.22 tS=1.77 FAIL=[] sub=False neut=MARKET base=None
+x163_w67a_MAR.json id=xA3OQlzw S=2.06 F=1.48 SF=3.54 tS=1.83 FAIL=[] sub=False neut=MARKET base=None
+x163_w68f_MAR.json id=78N7Q102 S=2.05 F=1.53 SF=3.58 tS=1.4 FAIL=[] sub=False neut=MARKET base=None
+x163_w87b_MAR.json id=A1NjYdpg S=1.86 F=1.66 SF=3.52 tS=0.82 FAIL=[] sub=False neut=MARKET base=None
+x163_w87d_MAR.json id=j2AzlVP9 S=1.75 F=1.55 SF=3.30 tS=0.75 FAIL=[] sub=False neut=MARKET base=None
+x163_w91f_MAR.json id=2rw8Ql38 S=1.86 F=1.66 SF=3.52 tS=0.82 FAIL=[] sub=False neut=MARKET base=None

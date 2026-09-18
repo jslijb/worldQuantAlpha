@@ -1,0 +1,16 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 36
++ ... worldquant; & 'D:\ProgramData\Miniforge3\envs\bigmodel\python.exe' sr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+姹犲瓙 84 鏉★紱鎷夊彇澶辫触 0 鏉? []
+鑵垮簱 14: P_on5 P_int20 P_vd L_xr L_int L_acc M_intc M_g12 M_debt M_tstk M_accI M_intI M_lnoq L_cfo
+瀵归綈鏃ユ湡 1235 澶?
+璇勪及 2016锛孲鈮?.2 鐨?146 鏉?
+澶氭牱鎬х瓫閫夛細146 鈫?1 鏉★紙涓や袱鐩稿叧 鈮?.6锛?
+  w200_00 S=2.88 maxcorr=0.674 shared=0.14 鎾?qX3M2mq | 1.5*group_rank(-ts_rank(close/open - 1, 20), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(fnd6
+宸茶惤鐩?_autologs/search_combos_w200.json锛? 鏉★級

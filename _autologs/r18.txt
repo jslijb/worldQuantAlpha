@@ -1,0 +1,9 @@
+combos=8
+w200_00 S=2.88 pred=0.674 shared=0.14 mains=P_int20 eng=True anch=2
+w200_01 S=2.86 pred=0.688 shared=0.14 mains=P_int20 eng=True anch=2
+w200_02 S=2.84 pred=0.683 shared=0.14 mains=P_int20 eng=True anch=2
+w200_03 S=2.83 pred=0.681 shared=0.14 mains=P_int20 eng=True anch=2
+w200_04 S=2.61 pred=0.688 shared=0.00 mains=P_int20 eng=False anch=2
+w200_05 S=2.57 pred=0.701 shared=0.00 mains=P_int20 eng=False anch=2
+w200_06 S=2.56 pred=0.694 shared=0.00 mains=P_int20 eng=False anch=2
+w200_07 S=2.55 pred=0.738 shared=0.00 mains=P_int20 eng=False anch=2

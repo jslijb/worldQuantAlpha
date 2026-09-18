@@ -1,0 +1,21 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 36
++ ... worldquant; & 'D:\ProgramData\Miniforge3\envs\bigmodel\python.exe' sr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 w200_*锛氳揪鏍囧€欓€?8 鏉★紝鎸?SF 闄嶅簭澶勭悊
+姹犲瓙 84 鏉?
+  鉁?78NOMo6b w200_02                  SF=5.55 tS=2.41 corr=0.7618 鎾瀙wRwWoJ3 鈫?璺宠繃
+  鉁?levx9aQO w200_00                  SF=5.52 tS=2.29 corr=0.7663 鎾瀏JbkQ31Q 鈫?璺宠繃
+  鉁?JjNl18px w200_01                  SF=5.44 tS=3.04 corr=0.7422 鎾瀏JbkQ31Q 鈫?璺宠繃
+  鉁?gJbvdL0v w200_03                  SF=5.36 tS=2.15 corr=0.7873 鎾瀏JbkQ31Q 鈫?璺宠繃
+  鉁?QPbegA9g w200_04                  SF=4.90 tS=2.13 corr=0.7104 鎾濶1avK6zw 鈫?璺宠繃
+  鉁?0mXo5bp1 w200_06                  SF=4.75 tS=1.99 corr=0.7469 鎾濶1avK6zw 鈫?璺宠繃
+  鉁?3qXd5vg0 w200_05                  SF=4.74 tS=3.00 corr=0.6765 鈫?鎻愪氦
+    *** 鍙拌处宸茶拷鍔?3qXd5vg0 dateSubmitted=2026-09-18T12:48:35-04:00 selfCorr=0.6842
+  鉁?mLmOQwQX w200_07                  SF=4.55 tS=1.86 corr=0.7634 鎾?qXd5vg0 鈫?璺宠繃
+auto_submit_passers 瀹屾垚锛氭湰杞彁浜?1 鏉?

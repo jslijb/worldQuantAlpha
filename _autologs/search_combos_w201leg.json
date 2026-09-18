@@ -1,0 +1,122 @@
+{
+ "P_int10": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 10), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int10"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_int20C": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 20), bucket(rank(cap), range=\"0.1, 1, 0.1\"))",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int20C"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_int20I": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 20), industry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int20I"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_int20V": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\"))",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int20V"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_int40": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 40), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int40"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_int60": {
+  "expr": "group_rank(-ts_rank(close/open - 1, 60), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_int60"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_on10": {
+  "expr": "group_rank(-ts_mean(open/ts_delay(close,1) - 1, 10), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_on10"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_on20": {
+  "expr": "group_rank(-ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_on20"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_on5I": {
+  "expr": "group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_on5I"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "P_vd5": {
+  "expr": "group_rank(ts_mean((close - vwap)/vwap, 5), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "P_vd5"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ }
+}

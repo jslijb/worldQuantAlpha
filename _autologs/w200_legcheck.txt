@@ -1,0 +1,17 @@
+P_on5    id=blbl6gaK  pnl_cache=True
+P_int20  id=XgbQZkp1  pnl_cache=True
+P_vd     id=JjNj8jaW  pnl_cache=True
+P_sd20   id=leveAYYl  pnl_cache=True
+L_cfo    id=gJbJW8Gv  pnl_cache=True
+L_cash   id=omLmoNa6  pnl_cache=True
+L_xr     id=xA3ArKOg  pnl_cache=True
+L_int    id=e7b76jRO  pnl_cache=True
+L_acc    id=omLmoGVm  pnl_cache=True
+M_intc   id=blblzjrr  pnl_cache=True
+M_g12    id=omLmGMNE  pnl_cache=True
+M_debt   id=pwRwGMJv  pnl_cache=True
+M_tstk   id=1YXYKmYW  pnl_cache=True
+M_accI   id=0mXmapY6  pnl_cache=True
+M_intI   id=O0N026xd  pnl_cache=True
+M_cfoQ   id=Vkak50nM  pnl_cache=True
+M_lnoq   id=A1N1rXkw  pnl_cache=True

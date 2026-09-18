@@ -1,0 +1,19 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 36
++ ... worldquant; & 'D:\ProgramData\Miniforge3\envs\bigmodel\python.exe' sr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 w159_*锛氳揪鏍囧€欓€?7 鏉★紝鎸?SF 闄嶅簭澶勭悊
+姹犲瓙 84 鏉?
+  鉁?A1N1eOvd w159_00                  SF=5.94 tS=1.83 corr=0.8791 鎾?qjqm3Q9 鈫?璺宠繃
+  鉁?E5p5NVkR w159_04                  SF=5.74 tS=2.12 corr=0.8442 鎾?8znv2Y1 鈫?璺宠繃
+  鉁?xA3AVvGw w159_05                  SF=5.65 tS=2.17 corr=0.9151 鎾濷0N0R5NY 鈫?璺宠繃
+  鉁?d5b5YP8j w159_06                  SF=5.65 tS=2.02 corr=0.9130 鎾濷0N0R5NY 鈫?璺宠繃
+  鉁?E5p5NGzr w159_02                  SF=5.46 tS=1.36 corr=0.9959 鎾濷0N0R5NY 鈫?璺宠繃
+  鉁?A1N1e7YW w159_03                  SF=5.45 tS=1.38 corr=0.9954 鎾濷0N0R5NY 鈫?璺宠繃
+  鉁?A1N1e5pd w159_07                  SF=5.43 tS=1.49 corr=0.9915 鎾濷0N0R5NY 鈫?璺宠繃
+auto_submit_passers 瀹屾垚锛氭湰杞彁浜?0 鏉?

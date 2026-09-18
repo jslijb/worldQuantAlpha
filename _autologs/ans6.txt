@@ -1,0 +1,2 @@
+x199_w114m_MAR.json id=kqoEeQog S=1.56 F=1.18 SF=2.74 tS=0.98 FAIL=[] neut=MARKET
+x199_w114m_SEC.json id=2rwEjw1b S=2.26 F=1.53 SF=3.79 tS=1.77 FAIL=[] neut=SECTOR

@@ -1,0 +1,25 @@
+﻿13:41:18.033169 http.c:861              <= Recv header, 0000000020 bytes (0x000
+00014)
+13:41:18.033169 http.c:873              <= Recv header: content-length: 26
+13:41:18.033169 http.c:861              <= Recv header, 0000000037 bytes (0x000
+00025)
+13:41:18.033169 http.c:873              <= Recv header: date: Sat, 19 Sep 2026 
+05:41:16 GMT
+13:41:18.033169 http.c:861              <= Recv header, 0000000023 bytes (0x000
+00017)
+13:41:18.033169 http.c:873              <= Recv header: x-frame-options: DENY
+13:41:18.033169 http.c:861              <= Recv header, 0000000057 bytes (0x000
+00039)
+13:41:18.033169 http.c:873              <= Recv header: x-github-request-id: 28
+09:22D21E:B01EF9:C49836:6AAE207C
+13:41:18.033169 http.c:861              <= Recv header, 0000000037 bytes (0x000
+00025)
+13:41:18.033169 http.c:873              <= Recv header: x-github-edge-region: s
+outheastasia
+13:41:18.033169 http.c:861              <= Recv header, 0000000002 bytes (0x000
+00002)
+13:41:18.033169 http.c:873              <= Recv header:
+13:41:18.033673 http.c:914              == Info: Connection #0 to host 127.0.0.
+1 left intact
+13:41:18.033673 run-command.c:674       trace: run_command: 'git credential-man
+ager get'

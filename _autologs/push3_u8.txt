@@ -1,0 +1,9 @@
+﻿git : fatal: unable to access 'https://github.com/jslijb/worldQuantAlpha.git/':
+ CONNECT tunnel failed, response 502
+所在位置 行:445 字符: 89
++ ... worldquant; git -c http.version=HTTP/1.1 push origin HEAD *> D:\Pytho ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: unable t...d, response 502 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -1,0 +1,10 @@
+﻿git : fatal: unable to access 'https://github.com/jslijb/worldQuantAlpha.git/':
+ OpenSSL SSL_read: OpenSSL/3.2.4: error:0A000126:SSL routines::unexpected eof w
+hile reading, errno 0
+所在位置 行:445 字符: 121
++ ... le 5;$i++){ git -c http.version=HTTP/1.1 push origin HEAD *> "D:\Pyth ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: unable t...eading, errno 0 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

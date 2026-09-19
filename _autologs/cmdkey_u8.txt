@@ -1,0 +1,61 @@
+﻿
+当前保存的凭据:
+
+    目标: MicrosoftAccount:target=SSO_POP_User:user=jslijb@hotmail.com
+    类型: 普通 
+    用户: jslijb@hotmail.com
+    仅为此登录保存
+    
+    目标: MicrosoftAccount:target=SSO_POP_Device
+    类型: 普通 
+    用户: 02gslpvrilzntcgv
+    仅为此登录保存
+    
+    目标: LegacyGeneric:target=MicrosoftAccount:user=jslijb@hotmail.com
+    类型: 普通 
+    用户: jslijb@hotmail.com
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=git:https://github.com
+    类型: 普通 
+    用户: jslijb
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=git:https://refresh_token.git.jc2009.com
+    类型: 普通 
+    用户: OAUTH_USER
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=JianyingPro Cached Credential
+    类型: 普通 
+    用户: JianyingPro
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=git:https://gitee.com
+    类型: 普通 
+    用户: 13823584849
+    本地机器持续时间
+    
+    目标: WindowsLive:target=virtualapp/didlogical
+    类型: 普通 
+    用户: 02gslpvrilzntcgv
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=cn.zhipuai.autoclaw.device-identity.cn.release.official/default
+    类型: 普通 
+    用户: AutoClaw
+    本地机器持续时间
+    
+    目标: LegacyGeneric:target=git:https://git.jc2009.com
+    类型: 普通 
+    用户: OAUTH_USER
+    本地机器持续时间
+    
+    目标: Domain:target=192.168.8.16
+    类型: 域密码
+    用户: ljb
+    
+    目标: Domain:target=192.168.1.134
+    类型: 域密码
+    用户: ljb
+    

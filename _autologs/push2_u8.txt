@@ -1,0 +1,9 @@
+﻿git : fatal: unable to access 'https://github.com/jslijb/worldQuantAlpha.git/':
+ Error in the HTTP2 framing layer
+所在位置 行:445 字符: 89
++ ... worldquant; git push origin HEAD *> D:\Python\worldquant\_autologs\pu ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: unable t...2 framing layer 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

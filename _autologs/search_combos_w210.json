@@ -1,0 +1,102 @@
+{
+ "w210_00": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.568,
+  "maxcorr": 0.6189
+ },
+ "w210_01": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.505,
+  "maxcorr": 0.6154
+ },
+ "w210_02": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.472,
+  "maxcorr": 0.6134
+ },
+ "w210_03": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.428,
+  "maxcorr": 0.6246
+ },
+ "w210_04": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.413,
+  "maxcorr": 0.6166
+ },
+ "w210_05": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.4,
+  "maxcorr": 0.6223
+ },
+ "w210_06": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.395,
+  "maxcorr": 0.6163
+ },
+ "w210_07": {
+  "expr": "1.5*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry)",
+  "S": 2.389,
+  "maxcorr": 0.601
+ },
+ "w210_08": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.364,
+  "maxcorr": 0.614
+ },
+ "w210_09": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.362,
+  "maxcorr": 0.6148
+ },
+ "w210_10": {
+  "expr": "1.5*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry)",
+  "S": 2.351,
+  "maxcorr": 0.602
+ },
+ "w210_11": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.331,
+  "maxcorr": 0.6127
+ },
+ "w210_12": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.303,
+  "maxcorr": 0.6147
+ },
+ "w210_13": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.296,
+  "maxcorr": 0.6242
+ },
+ "w210_14": {
+  "expr": "2.0*group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(returns), rank(volume), 10)), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.286,
+  "maxcorr": 0.6218
+ },
+ "w210_15": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.274,
+  "maxcorr": 0.6197
+ },
+ "w210_16": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.265,
+  "maxcorr": 0.596
+ },
+ "w210_17": {
+  "expr": "2.0*group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(returns), rank(volume), 10)), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.261,
+  "maxcorr": 0.604
+ },
+ "w210_18": {
+  "expr": "2.0*group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(returns), rank(volume), 10)), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.252,
+  "maxcorr": 0.6223
+ },
+ "w210_19": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(debt_st/assets, subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.247,
+  "maxcorr": 0.6197
+ }
+}

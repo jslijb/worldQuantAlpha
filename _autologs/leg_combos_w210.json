@@ -1,0 +1,11 @@
+{
+ "w210leg_argmin60":   {"expr": "group_rank(ts_arg_min(returns, 60), subindustry)"},
+ "w210leg_argmin20":   {"expr": "group_rank(ts_arg_min(returns, 20), subindustry)"},
+ "w210leg_argshort10": {"expr": "group_rank(-ts_arg_min(returns, 10), subindustry)"},
+ "w210leg_argmaxvol20":{"expr": "group_rank(ts_arg_max(volume, 20), subindustry)"},
+ "w210leg_heat_c_pv10":{"expr": "group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(close), rank(volume), 10)), subindustry)"},
+ "w210leg_heat_c_rv10":{"expr": "group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(returns), rank(volume), 10)), subindustry)"},
+ "w210leg_heat_c_dcv5":{"expr": "group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_corr(rank(ts_delta(close, 2)), rank(volume), 5)), subindustry)"},
+ "w210leg_heat_volrev":{"expr": "group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_delta(volume, 5)), subindustry)"},
+ "w210leg_heat_tailvol":{"expr": "group_rank(rank(ts_zscore(ts_sum(volume, 20), 252)) * (-ts_std_dev(returns, 10)), subindustry)"}
+}

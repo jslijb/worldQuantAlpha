@@ -1,0 +1,18 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 w210_*锛氳揪鏍囧€欓€?6 鏉★紝鎸?SF 闄嶅簭澶勭悊
+姹犲瓙 86 鏉?
+  鉁?E5pYLQPL w210_00                  SF=4.54 tS=1.29 corr=0.7113 鎾瀙wRwWoJ3 鈫?璺宠繃
+  鉁?0mX95n5p w210_06                  SF=4.32 tS=1.37 corr=0.7359 鎾濹PbP6aRQ 鈫?璺宠繃
+  鉁?3qX3Jz70 w210_08                  SF=4.32 tS=1.37 corr=0.7359 鎾濹PbP6aRQ 鈫?璺宠繃
+  鉁?0mX95n5p w210_09                  SF=4.32 tS=1.37 corr=0.7359 鎾濹PbP6aRQ 鈫?璺宠繃
+  鉁?3qX3Jz70 w210_11                  SF=4.32 tS=1.37 corr=0.7359 鎾濹PbP6aRQ 鈫?璺宠繃
+  鉁?YPbnYzol w210_12                  SF=4.04 tS=1.33 corr=0.6968 鎾?mXm1neK 鈫?璺宠繃
+auto_submit_passers 瀹屾垚锛氭湰杞彁浜?0 鏉?

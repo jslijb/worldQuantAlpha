@@ -1,0 +1,21 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests
+\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)
+/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version! 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+w210leg_argmin60 9qjbdWGK SF=-0.30 S=-0.24 F=-0.06 T=0.0997 tS=-0.49 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+w210leg_argmin20 xA392bEq SF=-1.04 S=-0.77 F=-0.27 T=0.2238 tS=0.38 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+w210leg_argshort10 d5bg3zW2 SF=1.89 S=1.36 F=0.53 T=0.3411 tS=-0.02 pred_corr=None FAIL=['LOW_FITNESS'] [fail]
+w210leg_argmaxvol20 akbMQGKv SF=-0.84 S=-0.64 F=-0.20 T=0.2198 tS=-0.8 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w210leg_heat_c_pv10 LLNqm0xL SF=0.59 S=0.46 F=0.13 T=0.2263 tS=0.08 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w210leg_heat_c_rv10 pwRoGwJj SF=0.53 S=0.42 F=0.11 T=0.2022 tS=0.88 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+w210leg_heat_c_dcv5 YPbnzqPR SF=0.54 S=0.44 F=0.10 T=0.3021 tS=0.57 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w210leg_heat_volrev vRrxG0QA SF=-0.06 S=-0.06 F=0.00 T=0.4981 tS=1.87 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w210leg_heat_tailvol GrbYz32P SF=0.00 S=0.00 F=0.00 T=0.0889 tS=-0.07 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [fail]
+mine_batch181 done

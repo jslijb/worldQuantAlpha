@@ -19,7 +19,7 @@
 ## 口径
 - 每日 5 个高质量是**下限不是上限**；不删除已提交的；欠账顺延（当日目标 = 5 + 历史欠账）。
 - **高质量** = S+F ≥ 4.0 + tS ≥ 1.25 + corr < 0.7 或豁免（豁免线 = 1.10 × max(该候选自己 corr≥0.7 的对手 S)，**随候选而变**）。
-- **台账** `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` 是唯一事实源（S=`row[2]`、F=`row[3]`），只追加。累计满 100 → 启动 Super Alpha。
+- **台账** `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` 是唯一事实源（S=`row[2]`、F=`row[3]`），只追加。累计满 100 → 启动 Super Alpha。**计数口径 = 唯一 id 数**（0919 实证：YP57jVzo 曾重复记账 2 行，平台核实仅提交一次，已追加更正行；有效提交 86，勿再按行数报 87）。
 - **美东口径**：北京 12:00 = 美东 00:00；dateSubmitted 自带 -04:00。
 
 ## 提交判决机制（0916 定案，取代"排队积压"叙事）

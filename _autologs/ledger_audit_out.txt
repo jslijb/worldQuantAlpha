@@ -1,0 +1,25 @@
+﻿header: ['id', 'expr', 'S', 'F', 'T', 'R', 'DD', 'selfCorr', 'dateSubmitted', 'decay', 'neutralization', 'batch']
+total_rows: 87
+unique_ids: 86
+
+== recent days (US Eastern) ==
+2026-09-12 5
+2026-09-13 3
+2026-09-14 4
+2026-09-15 1
+2026-09-16 18
+2026-09-17 5
+2026-09-18 1
+2026-09-19 1
+
+today(09-19 ET): 1
+
+== debt since 2026-09-13 (target 5/day) ==
+2026-09-13 submitted 3 gap 2
+2026-09-14 submitted 4 gap 1
+2026-09-15 submitted 1 gap 4
+2026-09-16 submitted 18 gap 0
+2026-09-17 submitted 5 gap 0
+2026-09-18 submitted 1 gap 4
+2026-09-19 submitted 1 gap 4
+total_debt: 15 | today target = 5 + prior debt = 16

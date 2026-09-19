@@ -1,0 +1,252 @@
+{
+ "w204_00": {
+  "expr": "1.5*group_rank(-ts_rank(close/open - 1, 5), subindustry) + group_rank(debt_st/assets, industry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.62,
+  "maxcorr": 0.6487,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_debt_I",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_01": {
+  "expr": "1.25*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(debt_st/assets, industry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.61,
+  "maxcorr": 0.6497,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_debt_I",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_02": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry)",
+  "S": 2.596,
+  "maxcorr": 0.648,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_V",
+   "A_int_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_03": {
+  "expr": "1.5*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(debt_st/assets, industry) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.576,
+  "maxcorr": 0.6467,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_debt_I",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_04": {
+  "expr": "1.5*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.5*group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + 0.5*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.542,
+  "maxcorr": 0.6487,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_V",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_05": {
+  "expr": "1.25*group_rank(-ts_rank(close/open - 1, 5), subindustry) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + group_rank(debt_st/assets, industry) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.514,
+  "maxcorr": 0.6433,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_V",
+   "A_debt_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_06": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.5*group_rank(fnd6_xrent/assets, industry) + 0.5*group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.481,
+  "maxcorr": 0.6477,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_I",
+   "A_xr_V",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_07": {
+  "expr": "1.25*group_rank(-ts_rank(close/open - 1, 10), bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.473,
+  "maxcorr": 0.6492,
+  "nearest": "O0N0R5NY",
+  "mains": [
+   "P_int10V"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_xr_V",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_08": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.5*group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.468,
+  "maxcorr": 0.647,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_xr_V",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_09": {
+  "expr": "1.5*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.466,
+  "maxcorr": 0.6479,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_10": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + group_rank(fnd6_xrent/assets, industry) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.466,
+  "maxcorr": 0.6479,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_11": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.5*group_rank(fnd6_xrent/assets, industry) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + 0.5*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.458,
+  "maxcorr": 0.6371,
+  "nearest": "kqjpepz8",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_I",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_12": {
+  "expr": "1.25*group_rank(-ts_rank(close/open - 1, 5), subindustry) + group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.457,
+  "maxcorr": 0.6465,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_13": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.5*group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + 0.5*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.448,
+  "maxcorr": 0.6341,
+  "nearest": "kqjpepz8",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_int_I",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_14": {
+  "expr": "2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.444,
+  "maxcorr": 0.6469,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "w204_15": {
+  "expr": "1.5*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(fnd6_xrent/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(fnd6_newqv1300_lnoq/assets, industry)",
+  "S": 2.444,
+  "maxcorr": 0.6469,
+  "nearest": "3qXd5vg0",
+  "mains": [
+   "P_int5"
+  ],
+  "anchors": [
+   "A_xr_C",
+   "A_lnoq_I"
+  ],
+  "engine": false,
+  "shared_frac": 0
+ }
+}

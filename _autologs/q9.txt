@@ -1,0 +1,15 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 36
++ ... worldquant; & 'D:\ProgramData\Miniforge3\envs\bigmodel\python.exe' sr ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 w204_*锛氳揪鏍囧€欓€?3 鏉★紝鎸?SF 闄嶅簭澶勭悊
+姹犲瓙 86 鏉?
+  鉁?wpZXkMnd w204_02                  SF=4.35 tS=3.15 corr=0.7489 鎾瀦q8Xeo2R 鈫?璺宠繃
+  鉁?E5poPnNR w204_11                  SF=4.29 tS=3.50 corr=0.7371 鎾瀦q8Xeo2R 鈫?璺宠繃
+  鉁?KPNxA08l w204_13                  SF=4.03 tS=3.77 corr=0.7097 鎾?mXm1neK 鈫?璺宠繃
+auto_submit_passers 瀹屾垚锛氭湰杞彁浜?0 鏉?

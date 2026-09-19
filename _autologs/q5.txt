@@ -1,0 +1,6 @@
+R_raw_b     id=RRbj3E0a SF=0.88 tS=1.08 FAIL=['LOW_SHARPE', 'LOW_FITNESS']
+R_raw_e     id=88jkmbpo SF=0.69 tS=-0.11 FAIL=['LOW_SHARPE', 'LOW_FITNESS']
+R_dev_b20   id=gJb7nawJ SF=0.92 tS=1.26 FAIL=['LOW_SHARPE', 'LOW_FITNESS']
+R_dev_e20   id=omLQxad2 SF=0.57 tS=-0.35 FAIL=['LOW_SHARPE', 'LOW_FITNESS']
+R_dev_e60   id=e7beXMml SF=0.85 tS=0.04 FAIL=['LOW_SHARPE', 'LOW_FITNESS']
+R_chg_e     id=omLQxRv6 SF=-0.09 tS=-0.66 FAIL=['LOW_SHARPE', 'LOW_FITNESS']

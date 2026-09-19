@@ -1,0 +1,9 @@
+  w206_00 S=2.36 maxcorr=0.602 shared=0.12 hit=zq8Xeo2R | 1.25*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carr
+  w206_01 S=2.34 maxcorr=0.609 shared=0.09 hit=3qXd5vg0 | 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0
+  w206_02 S=2.32 maxcorr=0.607 shared=0.10 hit=3qXd5vg0 | 1.25*group_rank(-ts_rank(close/open - 1, 10), subindustry) + group_rank(debt_st/assets, subindustry) + 0.3*gro
+  w206_03 S=2.31 maxcorr=0.596 shared=0.12 hit=zq8Xeo2R | 1.25*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carr
+  w206_04 S=2.31 maxcorr=0.597 shared=0.09 hit=3qXd5vg0 | 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0
+  w206_05 S=2.31 maxcorr=0.595 shared=0.09 hit=3qXd5vg0 | 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0
+  w206_06 S=2.31 maxcorr=0.602 shared=0.11 hit=zq8Xeo2R | 1.25*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.6*group_rank(fnd6_tstkc/assets, subindustry) + 
+  w206_07 S=2.31 maxcorr=0.606 shared=0.07 hit=3qXd5vg0 | 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0
+  w206_08 S=2.30 maxcorr=0.592 shared=0.09 hit=3qXd5vg0 | 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0

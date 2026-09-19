@@ -1,0 +1,74 @@
+{
+ "R_chg_e": {
+  "expr": "group_rank(ts_delta(vec_avg(anl4_eaz2lrec_ratingvalue), 20), bucket(rank(cap), range=\"0.1, 1, 0.1\"))",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_chg_e"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "R_dev_b20": {
+  "expr": "group_rank(ts_av_diff(vec_avg(anl4_basicdetailrec_ratingvalue), 20), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_dev_b20"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "R_dev_e20": {
+  "expr": "group_rank(ts_av_diff(vec_avg(anl4_eaz2lrec_ratingvalue), 20), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_dev_e20"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "R_dev_e60": {
+  "expr": "group_rank(ts_av_diff(vec_avg(anl4_eaz2lrec_ratingvalue), 60), industry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_dev_e60"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "R_raw_b": {
+  "expr": "group_rank(vec_avg(anl4_basicdetailrec_ratingvalue), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_raw_b"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ },
+ "R_raw_e": {
+  "expr": "group_rank(vec_avg(anl4_eaz2lrec_ratingvalue), subindustry)",
+  "S": 0,
+  "maxcorr": 0,
+  "nearest": "",
+  "mains": [
+   "R_raw_e"
+  ],
+  "anchors": [],
+  "engine": false,
+  "shared_frac": 0
+ }
+}

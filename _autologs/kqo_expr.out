@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+    j = json.load(open(r'D:/Python/worldquant/data/alpha_quality_analysis/mined/kqoq0zed.json', encoding='utf-8'))
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/Python/worldquant/data/alpha_quality_analysis/mined/kqoq0zed.json'

@@ -1,0 +1,8 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+w218_g 88j6RXvv SF=2.48 S=1.51 F=0.97 T=0.1589 tS=1.72 pred_corr=None FAIL=['LOW_FITNESS'] [fail]
+w218_h wpZzQvQ6 SF=2.70 S=1.60 F=1.10 T=0.1247 tS=2.39 pred_corr=None FAIL=[] [fail]
+w218_i mLmzaLaE SF=3.14 S=1.79 F=1.35 T=0.1254 tS=2.59 pred_corr=None FAIL=[] [fail]
+w218_j omLza7m5 SF=2.86 S=1.72 F=1.14 T=0.1536 tS=1.86 pred_corr=None FAIL=[] [fail]
+w218_k YPbkaww6 SF=3.96 S=2.15 F=1.81 T=0.126 tS=2.17 pred_corr=None FAIL=[] [fail]
+mine_batch181 done

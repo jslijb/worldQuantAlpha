@@ -1,0 +1,9 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+w218_b SIM-FAIL {"id": "31AYUIgDV5aE95O1hkPO1HMp", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use unknown variable \"fnd6_newa2_oancf\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 11, "end": 27, "property": "regular"}, "links": {"linkToCo
+w218_a QPblYGlg SF=3.01 S=1.76 F=1.25 T=0.1039 tS=1.93 pred_corr=None FAIL=[] [fail]
+w218_c P02lM2JE SF=2.85 S=1.65 F=1.20 T=0.105 tS=1.53 pred_corr=None FAIL=[] [fail]
+w218_e SIM-FAIL {"id": "6gzMX8Ov4HM9TgJkrzthfj", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use unknown variable \"fnd6_sale\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 11, "end": 20, "property": "regular"}, "links": {"linkToCommonError
+w218_d 1YXmjPNM SF=3.29 S=1.86 F=1.43 T=0.0996 tS=1.21 pred_corr=None FAIL=[] [fail]
+w218_f 9qj6EOjx SF=3.96 S=2.15 F=1.81 T=0.126 tS=2.17 pred_corr=None FAIL=[] [fail]
+mine_batch181 done

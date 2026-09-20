@@ -1,0 +1,124 @@
+﻿椤圭洰鏍? D:\Python\worldquant
+鍙樻洿椤? 79
+--------------------------------------------------------
+mine: w215, w216, w217 鍏辨柊澧?25 鏉″€欓€?/ 鍙拌处 +1 / 鏂囨。 3 椤?
+
+鐩插尯淇(zq8 PnL鍏ユ睜,LLNXPaea鏈湴0.9180vs骞冲彴0.9143楠岃瘉)+qMxzlLYK鍏ユ睜(SF4.20,corr0.6691);E5paK2Xm鎶曞奖鏁戞彺鍒ゆ0.7824;w215~w217杩戦棬妲涚█閲婂ぇ鎴樺叏璁板綍
+
+鍙拌处: 90 鈫?91 琛?(+1)
+鏂板妯℃嫙璁板綍: 25 鏉?
+鍏朵粬鍙樻洿: 54 椤?
+  M  .workbuddy/memory/2026-09-20.md
+  M  .workbuddy/memory/MEMORY.md
+  M  .workbuddy/memory/automations/07ac2d4a-0c98-4e36-a3e7-49c5a06c777b/memory.md
+  ?? _autologs/fetch_qMxzlLYK.out
+  ?? _autologs/fetch_qMxzlLYK.py
+  ?? _autologs/find_pg.out
+  ?? _autologs/find_pg.py
+  ?? _autologs/git_check_0920.py
+  ?? _autologs/git_snap_0920b.out
+  ?? _autologs/git_verify_0920.out
+  ?? _autologs/leg_combos_w215.json
+  ?? _autologs/leg_combos_w216.json
+  ?? _autologs/leg_combos_w216z.json
+  ?? _autologs/leg_combos_w217.json
+  ?? _autologs/sub_E5paK2Xm.out
+  ?? _autologs/verdict_E5paK2Xm.out
+  ?? _autologs/verdict_E5paK2Xm.py
+  ?? _autologs/verify_qMxzlLYK.out
+  ?? _autologs/verify_qMxzlLYK.py
+  ?? _autologs/w213c_r2.out
+  ?? _autologs/w214_scan.out
+  ?? _autologs/w214_scan.py
+  ?? _autologs/w214_scan.utf8.txt
+  ?? _autologs/w214_scan2.out
+  ?? _autologs/w214_scan2.py
+  ... 鍙︽湁 29 椤?
+--------------------------------------------------------
+5cae57b 2026-09-20 15:38 mine: w215, w216, w217 鍏辨柊澧?25 鏉″€欓€?/ 鍙拌处 +1 / 鏂囨。 3 椤?
+
+ .workbuddy/memory/2026-09-20.md                    |  19 +++
+ .workbuddy/memory/MEMORY.md                        | 145 +++++++--------------
+ .../07ac2d4a-0c98-4e36-a3e7-49c5a06c777b/memory.md |   6 +
+ _autologs/fetch_qMxzlLYK.out                       |   1 +
+ _autologs/fetch_qMxzlLYK.py                        |  31 +++++
+ _autologs/find_pg.out                              |   1 +
+ _autologs/find_pg.py                               |  13 ++
+ _autologs/git_check_0920.py                        |  11 ++
+ _autologs/git_snap_0920b.out                       |   0
+ _autologs/git_verify_0920.out                      |  16 +++
+ _autologs/leg_combos_w215.json                     |  10 ++
+ _autologs/leg_combos_w216.json                     |   6 +
+ _autologs/leg_combos_w216z.json                    |   3 +
+ _autologs/leg_combos_w217.json                     |   4 +
+ _autologs/sub_E5paK2Xm.out                         |   4 +
+ _autologs/verdict_E5paK2Xm.out                     |   2 +
+ _autologs/verdict_E5paK2Xm.py                      |  17 +++
+ _autologs/verify_qMxzlLYK.out                      |   3 +
+ _autologs/verify_qMxzlLYK.py                       |  15 +++
+ _autologs/w213c_r2.out                             |  12 ++
+ _autologs/w214_scan.out                            |  33 +++++
+ _autologs/w214_scan.py                             |  67 ++++++++++
+ _autologs/w214_scan.utf8.txt                       |  33 +++++
+ _autologs/w214_scan2.out                           |  17 +++
+ _autologs/w214_scan2.py                            |  54 ++++++++
+ _autologs/w214_scan2.utf8.txt                      |   1 +
+ _autologs/w215_exprs.out                           |  12 ++
+ _autologs/w215_run.out                             |   9 ++
+ _autologs/w215_submit.out                          |  10 ++
+ _autologs/w216_judge.out                           |   4 +
+ _autologs/w216_run.out                             |   5 +
+ _autologs/w216z_run.out                            |   2 +
+ _autologs/w217_judge.out                           |   5 +
+ _autologs/w217_run.out                             |   3 +
+ _autologs/who_pgWnklXa.out                         |   4 +
+ _autologs/who_pgWnklXa.py                          |  12 ++
+ _autologs/x214_quality.py                          |  33 +++++
+ _autologs/x214_run.out                             |  12 ++
+ _autologs/zq8_shadow.out                           |  21 +++
+ _autologs/zq8_shadow.py                            |  67 ++++++++++
+ _autologs/zq8_shadow2.out                          |  20 +++
+ _autologs/zq8_shadow2.py                           |  35 +++++
+ data/alpha_quality_analysis/SUBMITTED_LEDGER.csv   |   1 +
+ data/alpha_quality_analysis/SUBMIT_VERDICTS.csv    |   2 +
+ data/alpha_quality_analysis/mined/w215_c1.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_c2.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_d1.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_d2.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_h1.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_h2.json     |   1 +
+ data/alpha_quality_analysis/mined/w215_w54x.json   |   1 +
+ data/alpha_quality_analysis/mined/w215_w54y.json   |   1 +
+ data/alpha_quality_analysis/mined/w216_d3.json     |   1 +
+ data/alpha_quality_analysis/mined/w216_d4.json     |   1 +
+ data/alpha_quality_analysis/mined/w216_z1.json     |   1 +
+ data/alpha_quality_analysis/mined/w216_z2.json     |   1 +
+ data/alpha_quality_analysis/mined/w216_z3.json     |   1 +
+ data/alpha_quality_analysis/mined/w217_z4.json     |   1 +
+ data/alpha_quality_analysis/mined/w217_z5.json     |   1 +
+ .../mined/x214_f12vwaprev_MAR.json                 |   1 +
+ .../mined/x214_f12vwaprev_SEC.json                 |   1 +
+ .../mined/x214_w125c_MAR.json                      |   1 +
+ .../mined/x214_w125c_SEC.json                      |   1 +
+ .../mined/x214_w125d_MAR.json                      |   1 +
+ .../mined/x214_w125d_SEC.json                      |   1 +
+ .../mined/x214_w131h_MAR.json                      |   1 +
+ .../mined/x214_w131h_SEC.json                      |   1 +
+ .../mined/x214_w54c_MAR.json                       |   1 +
+ .../mined/x214_w54c_SEC.json                       |   1 +
+ data/alpha_quality_analysis/pnl/1YXmw5YR.json      |   1 +
+ data/alpha_quality_analysis/pnl/2rwZNnN8.json      |   1 +
+ data/alpha_quality_analysis/pnl/E5paK2Xm.json      |   1 +
+ data/alpha_quality_analysis/pnl/KPN891vx.json      |   1 +
+ data/alpha_quality_analysis/pnl/P02l7dPJ.json      |   1 +
+ data/alpha_quality_analysis/pnl/Xgbl8qZ1.json      |   1 +
+ data/alpha_quality_analysis/pnl/akbP1qwx.json      |   1 +
+ data/alpha_quality_analysis/pnl/pwRzKnN3.json      |   1 +
+ data/alpha_quality_analysis/pnl/qMxzlLYK.json      |   1 +
+ data/alpha_quality_analysis/pnl/vRrzvqEr.json      |   1 +
+ 79 files changed, 718 insertions(+), 98 deletions(-)
+
+杩滅 https://github.com/jslijb/worldQuantAlpha.git锛堝彲瑙佹€? unknown锛夛紝姝ｅ湪鎺ㄩ€?鈥?
+[璀﹀憡] 鎺ㄩ€佸け璐ワ紙鏈湴鎻愪氦宸蹭繚瀛橈紝涓嶅彈褰卞搷锛夛細
+fatal: unable to access 'https://github.com/jslijb/worldQuantAlpha.git/': Recv failure: Connection was reset
+  甯歌鍘熷洜锛氭湭鐧诲綍 GitHub锛堥娆℃帹閫佷細寮瑰嚭鐧诲綍绐楀彛锛? 缃戠粶涓嶉€?/ 鏃犱粨搴撳啓鏉冮檺

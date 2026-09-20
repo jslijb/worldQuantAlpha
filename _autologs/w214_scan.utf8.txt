@@ -1,0 +1,33 @@
+VERDICT_HEADER: ['timestamp', 'alpha_id', 'cid', 'verdict', 'selfCorr', 'failChecks']
+VERDICT_ROWS: 92
+
+QUALITY PASSERS (not in ledger): with_corr=0 unknown_corr=720
+
+--- corr <= 0.78 (rescue candidates) ---
+
+--- corr unknown (first 25, by SF desc) ---
+  w158_01 id=XgbgNwna SF=6.82 tS=2.07
+  w158_04 id=qMxM5j1A SF=6.74 tS=2.15
+  w158_02 id=d5b59n6K SF=6.71 tS=2.0
+  w158_03 id=vRrRYmxa SF=6.71 tS=2.1
+  w182_01 id=1YXQJRoX SF=6.69 tS=3.13
+  w158_05 id=GrbrQbWZ SF=6.65 tS=2.24
+  w158_07 id=blblxz5M SF=6.51 tS=1.91
+  w189_01 id=3qXZGMmO SF=6.49 tS=2.22
+  w193_00 id=VkagZle0 SF=6.47 tS=3.14
+  w158_06 id=P020P5MM SF=6.43 tS=1.71
+  w188_01 id=Xgb59aRb SF=6.34 tS=3.25
+  w191_01 id=JjNZ3Rbm SF=6.28 tS=2.71
+  w196_02 id=XgbEJ6j5 SF=6.28 tS=2.63
+  w185_01 id=ZYbebzJY SF=6.22 tS=2.56
+  w186_01 id=ZYbebzJY SF=6.22 tS=2.56
+  n160_pwRwWoJ3_SEC id=qMx9ZPaP SF=6.21 tS=1.5
+  w53_c id=wpY3Yxvd SF=6.19 tS=2.49
+  w161_00 id=A1N1mVMw SF=6.18 tS=2.37
+  w192_00 id=MPaod5Lk SF=6.17 tS=2.65
+  w54_d id=A10e0LQY SF=6.15 tS=2.53
+  w55_h id=Vk6Za7Lw SF=6.15 tS=2.54
+  w52_g id=kqVvjjnK SF=6.14 tS=2.53
+  w54_h id=qMWOWaE1 SF=6.14 tS=2.53
+  w53_f id=Vk6Z6nmw SF=6.11 tS=2.43
+  w196_08 id=9qjQWk3V SF=6.09 tS=2.7

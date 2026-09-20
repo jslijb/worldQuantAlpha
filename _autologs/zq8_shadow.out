@@ -1,0 +1,21 @@
+﻿x214_w54c_SEC(E5paK2Xm): pnl ok, 1236 rows
+w125_c(Vk6AxE1b): pnl ok, 1236 rows
+w125_d(j23qYr8O): pnl ok, 1236 rows
+w131_h(QPbPVOn5): pnl ok, 1236 rows
+w54_c(blRJRxvl): pnl ok, 1235 rows
+zq8jl99K: ok
+  corr(x214_w54c_SEC, zq8jl99K) = 0.0000
+  corr(w125_c, zq8jl99K) = 0.0000
+  corr(w125_d, zq8jl99K) = 0.0000
+  corr(w131_h, zq8jl99K) = 0.0000
+  corr(w54_c, zq8jl99K) = 0.0000
+  corr(x214_w54c_SEC, w125_c) = 0.0000
+  corr(x214_w54c_SEC, w125_d) = 0.0000
+  corr(x214_w54c_SEC, w131_h) = 0.0000
+  corr(x214_w54c_SEC, w54_c) = 0.0000
+  corr(w125_c, w125_d) = 0.0000
+  corr(w125_c, w131_h) = 0.0000
+  corr(w125_c, w54_c) = 0.0000
+  corr(w125_d, w131_h) = 0.0000
+  corr(w125_d, w54_c) = 0.0000
+  corr(w131_h, w54_c) = 0.0000

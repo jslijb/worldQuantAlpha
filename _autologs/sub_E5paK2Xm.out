@@ -1,0 +1,4 @@
+﻿POST /submit -> 201
+=== E5paK2Xm verdict: REJECTED (6s) ===
+FAIL 椤? ['SELF_CORRELATION'] selfCorr= 0.7824
+琚嫆锛?{'SELF_CORRELATION': ('FAIL', 0.7824, 0.7)}

@@ -1,0 +1,36 @@
+  w213c_00 YPbmRAgJ SF=4.71 (S2.71/F2.0) tS=1.47 FAIL=[] struct=A_E5pYLQPL ev=evh60a(w0.5) offlineS=2.599 pred=0.6148 TO=0.181
+  w213c_01 zq8jl99K SF=4.67 (S2.68/F1.99) tS=1.5 FAIL=[] struct=A_E5pYLQPL ev=evh60a(w0.75) offlineS=2.516 pred=0.5942 TO=0.181
+  w213c_02 LLN60ME6 SF=4.57 (S2.63/F1.94) tS=1.47 FAIL=[] struct=A_E5pYLQPL ev=ev60nb(w0.5) offlineS=2.438 pred=0.5844 TO=0.180
+  w213c_03 zq8jlrGV SF=4.43 (S2.6/F1.83) tS=1.49 FAIL=[] struct=B_0mX95n5p ev=evh60a(w0.5) offlineS=2.403 pred=0.609 TO=0.218
+  w213c_05 MPaXJnka SF=4.36 (S2.55/F1.81) tS=1.5 FAIL=[] struct=B_0mX95n5p ev=evh60a(w0.75) offlineS=2.319 pred=0.6085 TO=0.216
+  w213c_07 LLNXPaea SF=4.34 (S2.49/F1.85) tS=1.47 FAIL=[] struct=A_E5pYLQPL ev=ev60nb(w0.75) offlineS=2.25 pred=0.5696 TO=0.179
+  w213c_08 JjNXVYnO SF=4.21 (S2.47/F1.74) tS=1.45 FAIL=[] struct=B_0mX95n5p ev=ev60nb(w0.5) offlineS=2.212 pred=0.6012 TO=0.217
+  w213c_04 N1a6YGLq SF=4.2 (S2.47/F1.73) tS=1.48 FAIL=[] struct=C_YPbnYzol ev=evh60a(w0.5) offlineS=2.348 pred=0.5959 TO=0.185
+  w213c_06 3qX6MQRO SF=4.16 (S2.44/F1.72) tS=1.5 FAIL=[] struct=C_YPbnYzol ev=evh60a(w0.75) offlineS=2.278 pred=0.5859 TO=0.184
+  w213c_09 9qj6z66o SF=4.07 (S2.4/F1.67) tS=1.47 FAIL=[] struct=C_YPbnYzol ev=ev60nb(w0.5) offlineS=2.172 pred=0.5649 TO=0.184
+  w213c_10 QPbl1aMg SF=4.06 (S2.39/F1.67) tS=0.97 FAIL=[] struct=A_E5pYLQPL ev=evh60b(w0.5) offlineS=2.108 pred=0.5933 TO=0.179
+  w213c_12 1YXmqjwz SF=3.93 (S2.3/F1.63) tS=1.43 FAIL=[] struct=B_0mX95n5p ev=ev60nb(w0.75) offlineS=2.024 pred=0.6026 TO=0.214
+  w213c_14 d5b72P2v SF=3.88 (S2.33/F1.55) tS=1.05 FAIL=[] struct=B_0mX95n5p ev=evh60b(w0.5) offlineS=1.953 pred=0.5851 TO=0.216
+  w213c_13 JjNXVzej SF=3.85 (S2.26/F1.59) tS=1.47 FAIL=[] struct=C_YPbnYzol ev=ev60nb(w0.75) offlineS=1.996 pred=0.5735 TO=0.183
+  w213c_17 JjNXjRqx SF=3.74 (S2.22/F1.52) tS=0.77 FAIL=['LOW_SUB_UNIVERSE_SHARPE'] struct=A_E5pYLQPL ev=evh60b(w0.75) offlineS=1.824 pred=0.582 TO=0.178
+  w213c_11 vRrzKv3v SF=3.63 (S2.15/F1.48) tS=0.77 FAIL=[] struct=A_E5pYLQPL ev=ev60a(w0.5) offlineS=2.071 pred=0.653 TO=0.179
+  w213c_16 JjNXjwwA SF=3.6 (S2.17/F1.43) tS=1.03 FAIL=[] struct=C_YPbnYzol ev=evh60b(w0.5) offlineS=1.843 pred=0.5807 TO=0.183
+  w213c_20 qMxzM6dv SF=3.57 (S2.16/F1.41) tS=0.84 FAIL=['LOW_SUB_UNIVERSE_SHARPE'] struct=B_0mX95n5p ev=evh60b(w0.75) offlineS=1.675 pred=0.5517 TO=0.213
+  w213c_15 P02l00Qx SF=3.47 (S2.1/F1.37) tS=0.88 FAIL=[] struct=B_0mX95n5p ev=ev60a(w0.5) offlineS=1.944 pred=0.6296 TO=0.216
+  w213c_22 levzeEx7 SF=3.31 (S2.01/F1.3) tS=0.83 FAIL=['LOW_SUB_UNIVERSE_SHARPE'] struct=C_YPbnYzol ev=evh60b(w0.75) offlineS=1.569 pred=0.5496 TO=0.182
+  w213c_18 A1Na1bjl SF=3.18 (S1.93/F1.25) tS=0.83 FAIL=[] struct=C_YPbnYzol ev=ev60a(w0.5) offlineS=1.823 pred=0.6224 TO=0.183
+  w213c_19 Vkalk8ZY SF=3.1 (S1.85/F1.25) tS=0.48 FAIL=[] struct=A_E5pYLQPL ev=ev60a(w0.75) offlineS=1.765 pred=0.6485 TO=0.178
+  w213c_21 npdzpvLq SF=2.93 (S1.79/F1.14) tS=0.55 FAIL=[] struct=B_0mX95n5p ev=ev60a(w0.75) offlineS=1.648 pred=0.63 TO=0.214
+  w213c_23 ZYblY8XZ SF=2.68 (S1.64/F1.04) tS=0.53 FAIL=[] struct=C_YPbnYzol ev=ev60a(w0.75) offlineS=1.538 pred=0.6199 TO=0.182
+
+质量闸门达标: 10 条
+  >>> w213c_00 YPbmRAgJ SF=4.71 S=2.71 F=2.0 tS=1.47 ev=evh60a(w0.5)
+  >>> w213c_01 zq8jl99K SF=4.67 S=2.68 F=1.99 tS=1.5 ev=evh60a(w0.75)
+  >>> w213c_02 LLN60ME6 SF=4.57 S=2.63 F=1.94 tS=1.47 ev=ev60nb(w0.5)
+  >>> w213c_03 zq8jlrGV SF=4.43 S=2.6 F=1.83 tS=1.49 ev=evh60a(w0.5)
+  >>> w213c_05 MPaXJnka SF=4.36 S=2.55 F=1.81 tS=1.5 ev=evh60a(w0.75)
+  >>> w213c_07 LLNXPaea SF=4.34 S=2.49 F=1.85 tS=1.47 ev=ev60nb(w0.75)
+  >>> w213c_08 JjNXVYnO SF=4.21 S=2.47 F=1.74 tS=1.45 ev=ev60nb(w0.5)
+  >>> w213c_04 N1a6YGLq SF=4.2 S=2.47 F=1.73 tS=1.48 ev=evh60a(w0.5)
+  >>> w213c_06 3qX6MQRO SF=4.16 S=2.44 F=1.72 tS=1.5 ev=evh60a(w0.75)
+  >>> w213c_09 9qj6z66o SF=4.07 S=2.4 F=1.67 tS=1.47 ev=ev60nb(w0.5)

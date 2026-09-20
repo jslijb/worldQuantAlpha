@@ -1,0 +1,18 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+匹配 w213c_*：达标候选 10 条，按 SF 降序处理
+池子 86 条
+Traceback (most recent call last):
+  File "D:\Python\worldquant\src\submit\auto_submit_passers.py", line 132, in <module>
+    print(f"  \u2717 {aid} {c['cid']:24s} SF={c['SF']:.2f} tS={c['tS']:.2f} corr={best[0]:.4f} 撞{best[1]} → 跳过", flush=
+True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2717' in position 2: illegal multibyte sequence

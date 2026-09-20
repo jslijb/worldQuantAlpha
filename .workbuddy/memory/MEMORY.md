@@ -19,8 +19,9 @@
 ## 口径
 - 每日 5 个高质量是**下限不是上限**；不删除已提交的；欠账顺延（当日目标 = 5 + 历史欠账）。
 - **高质量** = S+F ≥ 4.0 + tS ≥ 1.25 + corr < 0.7 或豁免（豁免线 = 1.10 × max(该候选自己 corr≥0.7 的对手 S)，**随候选而变**）。
-- **台账** `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` 是唯一事实源（S=`row[2]`、F=`row[3]`），只追加。累计满 100 → 启动 Super Alpha。**计数口径 = 唯一 id 数**（0919 实证：YP57jVzo 曾重复记账 2 行，平台核实仅提交一次，已追加更正行；有效提交 86，勿再按行数报 87）。
+- **台账** `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` 是唯一事实源（S=`row[2]`、F=`row[3]`），只追加。累计满 100 → 启动 Super Alpha。**计数口径 = 唯一 id 数**（0919 实证：YP57jVzo 曾重复记账 2 行，平台核实仅提交一次，已追加更正行）。0920 起有效提交 **87**（zq8jl99K 入池），Super Alpha 差 13。
 - **美东口径**：北京 12:00 = 美东 00:00；dateSubmitted 自带 -04:00。
+- **算子权限坑（0920 实测）**：本账号 **`ts_min`/`ts_max` 不可用**（报 inaccessible operator）——区间极值条件用 `close/ts_delay(close,N)-1` 替代；`hump(x,0.01)` 两参也报错（只收 1 参）。
 
 ## 提交判决机制（0916 定案，取代"排队积压"叙事）
 - 判决 **4~9 秒就出**。`POST /alphas/{id}/submit` → 轮询同端点：`403 + is.checks` = 判决书；alpha 变 ACTIVE = 入池。
@@ -33,6 +34,7 @@
 - **★ 杠杆优先级**：**缩放基准（/cap vs /assets）> 分组（subindustry / industry / 分桶）> 锚选择**。**换锚基本无效**——`/cap` 把锚归一成同一个"市值"因子（batch155：换 4 个全新 fnd6 字段仍 0.78）。
 - **★ 引擎腿 = 质量引擎 = 相关性来源，同一条腿**：加回 `ts_av_diff(cash/x,45)`+`ts_av_diff(cashflow_op/x,45)` → SF 3.85→4.30 但 corr 0.6999→0.961；去掉 → corr 降、SF 掉到 3.38~3.50。
 - **相关是动态的**：同一表达式曾从 0.616 → 0.9879，只因中途提交了相似因子。**提交后必须对剩余池重新预检**，同构候选严禁扎堆。
+- **⚠️ auto_submit_passers 重算盲区（0920 实测）**：刚提交的 alpha PnL recordset 未发布、进不了重算池 → **同批同骨架兄弟本地 corr 虚低、本地放行、平台 403 拦截**（判决书 selfCorrelated.records 自带对手）。对策：一条提交成功 → 同批同骨架候选全部冻结，次日换新锚组骨架再挂事件腿。submit_v3 的 POST-403 分支只打 300 字符就退出且不落档，用 `_autologs/full_verdict.py` 重取全文后手工补 SUBMIT_VERDICTS.csv。
 - **★ 两个本地工具把筛选成本打到零**（0916）：
   - `src/analysis/pnl_corr.py`：用 `/alphas/{id}/recordsets/pnl`（**累计，必须先差分**）本地算 self-corr，不提交不污染池。与平台误差 **±0.02**（平台 ≈ 本地 +0.006~+0.017）→ **直通留缓冲：本地 ≤ 0.685**。
   - `src/analysis/leg_lab.py`：腿库离线拼装（PnL 对腿近似线性），任意权重组合离线算 S 与 corr。
@@ -52,6 +54,7 @@
 | **本地 corr 筛积压** | `le8EAJLO` SF4.24 | 456 条积压 12 分钟筛完，命中即提交 |
 | **leg_lab 离线拼装** | `pwRwWoJ3` **SF6.91** / `9qjqm3Q9` 5.69 / `O0N0R5NY` 5.47 | 只跑单腿建库，组合离线算 |
 | **★ 中性化投影（救急，只吃 1~2 口）** | `levpXXGl`(MARKET,.6015) / `omL8Mazn`(SECTOR,.6994) / `YPbLZK2W`(MARKET,.6028) | **下移 −0.14~−0.27，一个几何进 1~2 条就饱和**；MARKET 伤 tS、**SECTOR 保 tS**；只救 corr 0.70~0.72 的近门槛 |
+| **★ 第 5 腿加挂（0920，当前主力）** | `zq8jl99K` **SF4.67/tS1.50** corr .6801 直通 | 已验证达标结构**原样不动**（2.0 argmin 主腿 + 双基本面锚 + 0.5 引擎），第 5 腿加挂事件条件化腿 0.5~0.75（evh60a/ev60nb）。24 试 10 过质量闸门。**事件腿不能顶替锚**（w213b 实测 tS 全塌）；**一骨架每美东日只能提交 1 条**——同骨架兄弟互 corr 0.85~0.95（LLNXPaea 被 zq8jl99K 拦在 0.9143） |
 
 **共性 = 必须有独有成分腿。老族价量腿（`-ts_rank(returns,20)` / Amihud `-ts_mean(abs(returns)/volume,20)`）是没被挤爆的几何。**
 
@@ -71,6 +74,7 @@
 - ⚠️ 上条**不外推到 fundamental2**：最强 `0mR2K6lr`(S=3.45) 与 w103_g 家族用的正是 fundamental2 冷字段（`authorized_stock_buyback_amount` aC=8 等）。
 - 平台 NOT FOUND：`xoptepsq` / `fnd6_newqv1300_xrent` / `fnd6_newqv1300_pncepsq`。
 - **纯骨架（全 0.5 共享腿）无提交价值**：线性缩放不改截面排序，corr ≈1.0。
+- **事件条件化 argmin 腿（0920 w213/w213b）**：单腿全弱（S −0.23~0.74，"老低点做多"方向为负判死）；**顶替基本面锚当佐腿 → tS 全塌（0.96~−0.05）、SF≤3.89 全灭**。只能当第 5 腿加挂（见配方表）。裸 argmin 几何（不条件化）单腿最强 1.36。
 
 ## 研报移植结论
 ### 球队硬币帖（0914，详 `docs/research/`）

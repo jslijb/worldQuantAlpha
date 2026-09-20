@@ -1,0 +1,102 @@
+{
+ "w213b_00": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.277,
+  "maxcorr": 0.5465
+ },
+ "w213b_01": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.22,
+  "maxcorr": 0.5565
+ },
+ "w213b_02": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.213,
+  "maxcorr": 0.5458
+ },
+ "w213b_03": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.213,
+  "maxcorr": 0.5458
+ },
+ "w213b_04": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.213,
+  "maxcorr": 0.5458
+ },
+ "w213b_05": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.07, ts_arg_min(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.211,
+  "maxcorr": 0.5305
+ },
+ "w213b_06": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 20) - 1 < -0.07, ts_arg_min(returns, 20), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.209,
+  "maxcorr": 0.5048
+ },
+ "w213b_07": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.198,
+  "maxcorr": 0.5445
+ },
+ "w213b_08": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.198,
+  "maxcorr": 0.5445
+ },
+ "w213b_09": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.198,
+  "maxcorr": 0.5445
+ },
+ "w213b_10": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.196,
+  "maxcorr": 0.5517
+ },
+ "w213b_11": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.191,
+  "maxcorr": 0.5832
+ },
+ "w213b_12": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.19,
+  "maxcorr": 0.5484
+ },
+ "w213b_13": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 20) - 1 < -0.07, ts_arg_min(returns, 20), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.188,
+  "maxcorr": 0.5118
+ },
+ "w213b_14": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.07, ts_arg_min(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.179,
+  "maxcorr": 0.5219
+ },
+ "w213b_15": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 1.0*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.176,
+  "maxcorr": 0.5769
+ },
+ "w213b_16": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.176,
+  "maxcorr": 0.5769
+ },
+ "w213b_17": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, ts_arg_max(returns, 60), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.176,
+  "maxcorr": 0.5769
+ },
+ "w213b_18": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 20) - 1 < -0.07, ts_arg_min(returns, 20), 0), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.169,
+  "maxcorr": 0.546
+ },
+ "w213b_19": {
+  "expr": "2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.10, ts_arg_min(returns, 60), 60), subindustry) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 < -0.07, ts_arg_min(returns, 60), 0), subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)",
+  "S": 2.167,
+  "maxcorr": 0.533
+ }
+}

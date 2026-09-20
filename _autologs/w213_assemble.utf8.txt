@@ -1,0 +1,44 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+池子 86 条；拉取失败 0 条: []
+腿库 20/20；缺: []
+对齐日期 1235 天
+--- 单腿 vs 池子 max corr ---
+  ev60a: maxcorr=0.505 hit=RRVLeabj
+  ev60b: maxcorr=0.599 hit=QP3XalpK
+  ev60nb: maxcorr=0.584 hit=QP3XalpK
+  ev60db: maxcorr=0.614 hit=QP3XalpK
+  ev120b: maxcorr=0.570 hit=9qX8Nr6r
+  ev20b: maxcorr=0.763 hit=QP3XalpK
+  evsum10: maxcorr=0.512 hit=RRVLeabj
+  evh60a: maxcorr=0.475 hit=QP3XalpK
+  evh60b: maxcorr=0.294 hit=QP7z069Q
+评估 5400，S>=1.5 且 main_frac<=0.45 且 pred<=0.63 的 288 条
+  S=1.88 maxcorr=0.629 main=evh60a(1.5) anchors=('L_xr', 'M_intc', 'M_tstk')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.87 maxcorr=0.571 main=evh60a(1.5) anchors=('L_xr', 'M_intc', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.87 maxcorr=0.621 main=evh60a(1.5) anchors=('L_xr', 'M_tstk', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.87 maxcorr=0.612 main=evh60a(1.5) anchors=('M_intc', 'M_tstk', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.86 maxcorr=0.562 main=evh60a(1.5) anchors=('L_acc', 'M_intc', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=levpXXGl
+  S=1.86 maxcorr=0.621 main=evh60a(1.5) anchors=('L_acc', 'M_intc', 'M_tstk')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.85 maxcorr=0.624 main=evh60a(1.5) anchors=('L_xr', 'L_acc', 'M_tstk')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.85 maxcorr=0.609 main=evh60a(1.5) anchors=('L_acc', 'M_tstk', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.85 maxcorr=0.567 main=evh60a(1.5) anchors=('L_xr', 'L_int', 'M_intc')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.84 maxcorr=0.617 main=evh60a(1.5) anchors=('L_xr', 'L_int', 'M_tstk')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.84 maxcorr=0.573 main=evh60a(1.5) anchors=('L_xr', 'L_acc', 'M_intc')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.84 maxcorr=0.622 main=evh60a(1.5) anchors=('M_intc', 'M_tstk', 'M_accI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.84 maxcorr=0.564 main=evh60a(1.5) anchors=('M_intc', 'M_accI', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=levpXXGl
+  S=1.84 maxcorr=0.608 main=evh60a(1.5) anchors=('L_int', 'M_intc', 'M_tstk')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.83 maxcorr=0.561 main=evh60a(1.5) anchors=('L_int', 'L_acc', 'M_intc')(w0.75) eng=0.5 mainf=0.35 hit=levpXXGl
+  S=1.83 maxcorr=0.624 main=evh60a(1.5) anchors=('L_xr', 'M_tstk', 'M_accI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.83 maxcorr=0.545 main=evh60a(1.5) anchors=('L_int', 'M_intc', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.83 maxcorr=0.610 main=evh60a(1.5) anchors=('M_tstk', 'M_accI', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+  S=1.82 maxcorr=0.589 main=evh60a(1.5) anchors=('L_xr', 'L_acc', 'M_intI')(w0.75) eng=0.5 mainf=0.35 hit=levpXXGl
+  S=1.82 maxcorr=0.573 main=evh60a(1.5) anchors=('L_xr', 'M_intc', 'M_accI')(w0.75) eng=0.5 mainf=0.35 hit=kqoq0zed
+已落盘 _autologs/search_combos_w213.json（20 条）

@@ -1,0 +1,37 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+池子 86 条；拉取失败 0 条: []
+腿库 10/10；缺: []
+对齐日期 1235 天
+  A_E5pYLQPL +ev60a(w0.75): S=1.76 pred=0.648 hit=kqVp6wnO
+  A_E5pYLQPL +ev60a(w0.5): S=2.07 pred=0.653 hit=kqVp6wnO
+  A_E5pYLQPL +ev60nb(w0.75): S=2.25 pred=0.570 hit=qMW92Az2
+  A_E5pYLQPL +ev60nb(w0.5): S=2.44 pred=0.584 hit=mLmwpAKK
+  A_E5pYLQPL +evh60a(w0.75): S=2.52 pred=0.594 hit=e79PvPpE
+  A_E5pYLQPL +evh60a(w0.5): S=2.60 pred=0.615 hit=e79PvPpE
+  A_E5pYLQPL +evh60b(w0.75): S=1.82 pred=0.582 hit=kqVp6wnO
+  A_E5pYLQPL +evh60b(w0.5): S=2.11 pred=0.593 hit=kqVp6wnO
+  B_0mX95n5p +ev60a(w0.75): S=1.65 pred=0.630 hit=kqVp6wnO
+  B_0mX95n5p +ev60a(w0.5): S=1.94 pred=0.630 hit=kqVp6wnO
+  B_0mX95n5p +ev60nb(w0.75): S=2.02 pred=0.603 hit=E5vx6NJP
+  B_0mX95n5p +ev60nb(w0.5): S=2.21 pred=0.601 hit=E5vx6NJP
+  B_0mX95n5p +evh60a(w0.75): S=2.32 pred=0.608 hit=kqoq0zed
+  B_0mX95n5p +evh60a(w0.5): S=2.40 pred=0.609 hit=kqoq0zed
+  B_0mX95n5p +evh60b(w0.75): S=1.67 pred=0.552 hit=kqVp6wnO
+  B_0mX95n5p +evh60b(w0.5): S=1.95 pred=0.585 hit=pwRwWoJ3
+  C_YPbnYzol +ev60a(w0.75): S=1.54 pred=0.620 hit=kqVp6wnO
+  C_YPbnYzol +ev60a(w0.5): S=1.82 pred=0.622 hit=kqVp6wnO
+  C_YPbnYzol +ev60nb(w0.75): S=2.00 pred=0.573 hit=E5vx6NJP
+  C_YPbnYzol +ev60nb(w0.5): S=2.17 pred=0.565 hit=E5vx6NJP
+  C_YPbnYzol +evh60a(w0.75): S=2.28 pred=0.586 hit=kqoq0zed
+  C_YPbnYzol +evh60a(w0.5): S=2.35 pred=0.596 hit=e79PvPpE
+  C_YPbnYzol +evh60b(w0.75): S=1.57 pred=0.550 hit=kqVp6wnO
+  C_YPbnYzol +evh60b(w0.5): S=1.84 pred=0.581 hit=0mXm1neK
+已落盘 _autologs/search_combos_w213c.json（24 条）

@@ -1,0 +1,17 @@
+python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+w213leg_ev60a SIM-FAIL {"id": "4hMSrxeZB4oE9Fl1aAYoQhd7", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"li
+w213leg_ev60b SIM-FAIL {"id": "1YfuK39Z34Ya9KXtOQXL1rM", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"lin
+w213leg_ev60db SIM-FAIL {"id": "NYc1T6Ix4MRb4jZtbCFBvL", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"link
+w213leg_ev60nb SIM-FAIL {"id": "2RkrZ15et4Saa8prWAWM5SA", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"lin
+w213leg_ev120b SIM-FAIL {"id": "20iD5IeQe4Q7cBd1236aGiqj", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 39, "property": "regular"}, "links": {"li
+w213leg_ev20b SIM-FAIL {"id": "4fI5tFgeh4YgbgKJBE1tN55", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_min\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"lin
+w213leg_evh60a SIM-FAIL {"id": "2FPIQo40g5ia9FBTX9Tz1Wg", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_max\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"lin
+w213leg_evh60b SIM-FAIL {"id": "2MQ3n18tW5cNa6fCQQSTgmN", "type": "REGULAR", "status": "ERROR", "message": "Attempted to use inaccessible or unknown operator \"ts_max\". <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": 1, "start": 19, "end": 38, "property": "regular"}, "links": {"lin

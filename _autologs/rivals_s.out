@@ -1,0 +1,20 @@
+HEADER: ['id', 'expr', 'S', 'F', 'T', 'R', 'DD', 'selfCorr', 'dateSubmitted', 'decay', 'neutralization', 'batch']
+id=XgWnklXa | expr=group_rank(fnd6_xrent/assets, subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60)) | selfCorr= | dateSubmitted=2026-09-08T06:48:15-04:00 | batch=0908批次5个
+
+id=6Xr2eQaJ | expr=group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry) + 0.5*rank(volume/ts_mean(volume, 120)) | selfCorr= | dateSubmitted=2026-09-13T09:48:59-04:00 | batch=0913批次w85_a
+
+id=e79PvPpE | expr=group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)) | selfCorr= | dateSubmitted=2026-09-13T22:19:20-04:00 | batch=0913批次w92_d
+
+id=kqoq0zed | expr=1.5*group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(fnd6_newqv1300_dpactq/cap, subindustry) + 0.75*group_rank(-ts_delta(vwap, 5), subindustry) + 0.75*group_rank(volume/ts_mean(volume, 120), subindustry) | selfCorr=0.6999 | dateSubmitted=2026-09-16T01:12:48-04:00 | batch=0916-v3-w132_d
+
+id=zq8jl99K | expr=2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry) + 0.75*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) | selfCorr=0.6798 | dateSubmitted=2026-09-20T00:55:53-04:00 | batch=0916-v3-0920-w213c-w213c_01
+
+id=qMxzlLYK | expr=group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_dxd5/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_aqi/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) | selfCorr=0.6821 | dateSubmitted=2026-09-20T03:21:03-04:00 | batch=0916-v3-0920-w215-w215_c1
+
+=== 今日过闸候选 ===
+LLNXEe7L w218_s5 SF=4.55 S=2.3 F=2.25 corr=0.7642 rival=kqoq0zed
+88j6G01o w218_s3 SF=4.5 S=2.3 F=2.2 corr=0.7057 rival=e79PvPpE
+N1ajLwA7 w218_s2 SF=4.48 S=2.29 F=2.19 corr=0.7135 rival=kqoq0zed
+d5b79j6K w218_s SF=4.44 S=2.27 F=2.17 corr=0.7117 rival=kqoq0zed
+e7b2VgaO w218_u1 SF=4.26 S=2.18 F=2.08 corr=0.713 rival=kqoq0zed
+xA3zlPJw w218_p SF=4.13 S=2.11 F=2.02 corr=0.7374 rival=6Xr2eQaJ

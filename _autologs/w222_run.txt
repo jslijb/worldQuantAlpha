@@ -1,0 +1,11 @@
+﻿w222_b N1a5M2VL SF=5.06 S=3.12 F=1.94 T=0.3641 tS=2.99 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_a RRbkXv5z SF=5.13 S=3.04 F=2.09 T=0.2777 tS=2.53 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_c 58zqN8dN SF=4.00 S=2.35 F=1.65 T=0.1963 tS=2.92 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_d N1a5kxqq SF=3.86 S=2.13 F=1.73 T=0.1046 tS=2.21 pred_corr=None FAIL=[] [fail]
+w222_e wpZJX6m5 SF=5.56 S=3.10 F=2.46 T=0.1833 tS=2.03 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_f zq8JXwdX SF=4.69 S=2.60 F=2.09 T=0.1802 tS=1.8 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_h wpZJXRP1 SF=4.26 S=2.50 F=1.76 T=0.1983 tS=2.9 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_g gJbo78gM SF=4.61 S=2.93 F=1.68 T=0.5189 tS=3.43 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_i d5bleWeX SF=4.54 S=2.47 F=2.07 T=0.0591 tS=1.52 pred_corr=None FAIL=[] [鈽匬ASS]
+w222_j RRbk0e61 SF=5.49 S=3.29 F=2.20 T=0.352 tS=3.15 pred_corr=None FAIL=[] [鈽匬ASS]
+mine_batch181 done

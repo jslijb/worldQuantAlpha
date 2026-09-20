@@ -1,0 +1,12 @@
+﻿w223_a 1YXnVYpJ SF=4.32 S=2.60 F=1.72 T=0.2059 tS=1.71 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_b YPbWwPxW SF=5.32 S=2.97 F=2.35 T=0.1895 tS=2.41 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_d 3qXnYdkO SF=4.93 S=2.94 F=1.99 T=0.2102 tS=2.12 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_c e7bq8AXJ SF=4.08 S=2.47 F=1.61 T=0.4143 tS=2.7 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_e XgbYw1bx SF=4.25 S=2.56 F=1.69 T=0.2486 tS=2.29 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_f XgbYwKn8 SF=4.22 S=2.37 F=1.85 T=0.1882 tS=1.61 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_g Grb30d2Q SF=3.90 S=2.30 F=1.60 T=0.1896 tS=2.58 pred_corr=None FAIL=[] [fail]
+w223_h Grb30gMG SF=3.98 S=2.17 F=1.81 T=0.1614 tS=1.95 pred_corr=None FAIL=[] [fail]
+w223_i akbW2QA6 SF=4.32 S=2.61 F=1.71 T=0.2152 tS=2.22 pred_corr=None FAIL=[] [鈽匬ASS]
+w223_j A1NOJXRW SF=1.63 S=0.98 F=0.65 T=0.1751 tS=0.4 pred_corr=None FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+w223_k j2AdW519 SF=5.30 S=3.08 F=2.22 T=0.2416 tS=2.71 pred_corr=None FAIL=[] [鈽匬ASS]
+mine_batch181 done

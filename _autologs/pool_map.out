@@ -1,0 +1,35 @@
+=== 池子 Sharpe TOP 15（对手地图）===
+S=3.45 0mR2K6lr: group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(news_short_interest, subindustry) 
+
+S=3.33 pwRwWoJ3: 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/as
+
+S=3.26 1YX6MA0M: 2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 0.5*group_rank(-annu
+
+S=3.25 j23Pl0e5: group_rank(anl4_fs_detail_estimate_1qf_v4_nd_grossincome_high/assets, subindustry) + group_rank(fnd6_txtubxintis/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) +
+
+S=3.17 mLgd6nwX: group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 46), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 44), subindustry) + group_rank(-ts_del
+
+S=3.13 e79PvPpE: group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+
+S=3.02 e79kPeEM: group_rank(liabilities_curr/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), industry) + group_rank(-ts_rank(close, 5), industry)
+
+S=2.92 O0N0R5NY: 1.5*group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(volume/
+
+S=2.92 9qjqm3Q9: 1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-ts
+
+S=2.91 3qXd5vg0: 1.5*group_rank(-ts_rank(close/open - 1, 20), subindustry) + 0.75*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + 0.75*group_rank(fnd6_intc/assets, subindustry)
+
+S=2.82 O0rZ90n1: group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 30), subindustry) + rank(-ts_delta(close, 2)) + rank(volume/ts_mean(volume, 60))
+
+S=2.79 le8EMjoN: group_rank(fnd6_newqv1300_ivstq/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_del
+
+S=2.78 akLp3pzW: group_rank(fnd6_cicurr/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_intc/assets, bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + 0.
+
+S=2.78 mLmwpAKK: 1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + group_rank(fnd6_intc/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 5), subindustry) + 1.5*group_rank
+
+S=2.74 kqjpepz8: group_rank(liabilities_curr/assets, industry) + group_rank(-ts_rank(close, 5), industry)
+
+
+=== Sharpe 分布 ===
+n=90 max=3.45 min=1.26 median=2.36
+>=3.0: 7 条; 2.5~3.0: 19; 2.0~2.5: 49; <2.0: 15

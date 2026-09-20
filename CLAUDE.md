@@ -18,12 +18,19 @@
 | 运行环境 | Python `D:/ProgramData/Miniforge3/envs/bigmodel/python.exe`（conda 环境 bigmodel） |
 | 凭据 | `brain_credentials.txt`（项目根，JSON 格式；已 git 忽略，永不入库） |
 
-**流水线口径（2026-09-17 起）**：
+**流水线口径（2026-09-20 修正·重要）**：
+0. **相关性判决是两条路，不是一条线**（0920 由 LLNXEe7L 提交实证，此前一直漏用第②条）：
+   - ① **直通**：本地 max corr ≤ 0.685（缓冲线）→ 提交。
+   - ② **豁免线**：corr ≥ 0.685 的候选**不是死刑**——只要 **候选 S ≥ 1.10 × max(所有 corr≥0.7 对手的 S)**，平台放行。实证：LLNXEe7L corr 0.7642、S 2.30 vs 对手 kqoq0zed S 2.02（+13.9%）→ POST 201、6 秒后 ACTIVE 入池。
+   - 执行工具：`src/submit/submit_exempt.py '<前缀通配>' --min-sf 4.0 --min-ts 1.25 --limit N --tag <日期-批次> [--dry]`。旧工具 `auto_submit_passers.py` 只实现①，会误杀②的候选 —— **判决一律走 submit_exempt.py**。
+   - 对手 S 取**平台实况**（`GET /alphas/{id}` 的 is.sharpe，缓存 `data/alpha_quality_analysis/pool_s.json`），不取台账（台账 S 列常为空）。
+   - 同族/同骨架候选的 S 也进对手集合：新入池成员会让兄弟的豁免线抬高（例：s5 入池 S2.30 → s2 的豁免线 2.53 > s2 的 2.29 → 自动被挡）。
 1. leg_lab 离线生成候选（阈值 `--max-corr 0.55~0.57`，它只是生成器不是判决器）
-2. `pnl_corr.py` 实测复核，**本地 ≤ 0.685 才可提交**（缓冲线）
+2. `pnl_corr.py` 实测复核（供直通判定；豁免判定用 submit_exempt）
 3. `submit_v3.py` 提交——**出现 FAIL 才是拒信**，无 FAIL 只记 UNKNOWN 不记 REJECTED
 4. 台账 `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` **只追加**；池子只取自台账
-5. 质量闸门、豁免线（1.10 × max(corr≥0.7 对手的 S)，S 取台账 row[2]）、判决机制、偏移定律 → **总纲 §3、§5**
+5. 质量闸门、判决机制、偏移定律 → **总纲 §3、§5**
+6. **每提交成功一条必须做两件收尾**：① 台账追加（三证之一）；② PnL 入 `data/alpha_quality_analysis/pnl/` 缓存、S 入 `pool_s.json` —— 否则下一轮判决池子取不全（脚本会中止）或豁免线算错。
 
 ---
 

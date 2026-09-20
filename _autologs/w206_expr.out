@@ -1,0 +1,28 @@
+=== w206_05 id=1YX6MA0M ===
+2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)
+settings: neut=SUBINDUSTRY decay=10 delay=1 univ=TOP3000 trunc=0.08
+IS: S=3.26 F=1.94 T=0.4392 R=0.1555
+
+=== w206_01 id=0mXnJj5v ===
+2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(fnd6_intc/assets, subindustry) + 0.5*group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)
+settings: neut=SUBINDUSTRY decay=10 delay=1 univ=TOP3000 trunc=0.08
+IS: S=3.26 F=1.91 T=0.4581 R=0.1573
+
+=== w206_00 id=O0NK3W1Y ===
+1.25*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.3*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + 0.5*group_rank(ts_mean((close - vwap)/vwap, 5), subindustry)
+settings: neut=SUBINDUSTRY decay=10 delay=1 univ=TOP3000 trunc=0.08
+IS: S=2.14 F=1.13 T=0.3375 R=0.0936
+
+=== w204_02 id=wpZXkMnd ===
+2.0*group_rank(-ts_rank(close/open - 1, 5), subindustry) + 0.75*group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 60)), range="0.1, 1, 0.1")) + 0.75*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry)
+settings: neut=SUBINDUSTRY decay=10 delay=1 univ=TOP3000 trunc=0.08
+IS: S=2.78 F=1.57 T=0.3487 R=0.1113
+
+=== 生成器文件 ===
+src/mine\mine_w200_intraday.py
+src/mine\mine_w201_intraday.py
+src/mine\mine_w203_expand.py
+src/mine\mine_w204_crossgeom.py
+src/mine\mine_w205_hybrid.py
+src/mine\mine_w206_finetune.py
+src/mine\mine_w208_overnight.py

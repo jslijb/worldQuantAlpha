@@ -26,15 +26,25 @@ def project_root():
     return _pl.Path.cwd()
 
 
-def cid2id(cid):
-    """8 位 alpha id 原样返回；别名 / 组合 cid 去 mined 目录反查真实 id。"""
-    if len(cid) == 8 and cid.isalnum():
+def cid2id(cid, alias=None, extra=(), plain8=True):
+    """cid → 真实 alpha id。解析顺序（按各批次原文语义）：
+    alias（w200 系：别名字典，优先于一切）→ 8 位原样（plain8=False 关闭，
+    w204/w205/w210 系原文无此检查，防 8 位腿名 P_int10I/argmin60 被误拦）→
+    本名 json → extra 候选链（w210 系 LEG_CID/ALIAS，本名优先于映射）→ glob 反查 _cid。"""
+    if alias and cid in alias:
+        p = _pl.Path(MINED) / f'{alias[cid]}.json'
+        if p.exists():
+            d = json.load(open(p, encoding='utf-8'))
+            if d.get('id'):
+                return d['id']
+    if plain8 and len(cid) == 8 and cid.isalnum():
         return cid
-    p = _pl.Path(MINED) / f'{cid}.json'
-    if p.exists():
-        d = json.load(open(p, encoding='utf-8'))
-        if d.get('id'):
-            return d['id']
+    for base in [cid, *[e for e in extra if e]]:
+        p = _pl.Path(MINED) / f'{base}.json'
+        if p.exists():
+            d = json.load(open(p, encoding='utf-8'))
+            if d.get('id'):
+                return d['id']
     for h in _pl.Path(MINED).glob('*.json'):
         try:
             d = json.load(open(h, encoding='utf-8'))
@@ -88,7 +98,7 @@ def get_pnl(aid):
 
 
 def load_pool():
-    """从台账装载已提交 alpha 的 PnL（池子）；拉取失败的报警。"""
+    """从台账装载已提交 alpha 的 PnL（池子）；静默返回 (pool, missing)，报警文案由调用方打印。"""
     pool, missing = {}, []
     for row in csv.reader(open(LEDGER, newline='', encoding='utf-8')):
         if row and len(row[0]) == 8 and row[0].isalnum() and row[0] not in pool:
@@ -97,16 +107,15 @@ def load_pool():
                 pool[row[0]] = v
             else:
                 missing.append(row[0])
-    if missing:
-        print(f'WARN 以上成员不在池内，pred 会漏掉与它们的碰撞: {missing}')
     return pool, missing
 
 
-def load_legs(legs):
-    """装载腿库 PnL；返回 {leg: pnl}（只含拉取成功的）。"""
+def load_legs(legs, alias=None, extra=(), plain8=True):
+    """装载腿库 PnL；返回 {leg: pnl}（只含拉取成功的）。
+    alias/extra/plain8 原样透传 cid2id（各批次解析语义见 cid2id 文档）。"""
     load = {}
     for l in legs:
-        aid = cid2id(l)
+        aid = cid2id(l, alias=alias, extra=extra, plain8=plain8)
         if not aid:
             print(f'WARN 腿 {l} 无 id'); continue
         p = get_pnl(aid)

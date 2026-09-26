@@ -130,16 +130,19 @@ D:\Python\worldquant\
 ├── CLAUDE.md                  ← 本文件（红线 + 流水线口径）
 ├── README.md / brain_credentials.txt / .gitignore / .gitattributes
 ├── src/                       ★ 全部 Python 代码
-│   ├── core/                  utils.py（登录/取字段）、AlphaSimulator.py（并发模拟器）
+│   ├── core/                  utils.py（登录/取字段）、AlphaSimulator.py（并发模拟器）、
+│   │                          combo_gen.py（★批次生成器共享脚手架：cid2id/load_legs/align_dates）
 │   ├── analysis/              leg_lab.py（腿库离线拼装，生成器）、pnl_corr.py（★本地 corr 判决）、
 │   │                          pool_diag.py、screen_mined.py、screen_unsubmitted.py、exempt_scan.py
-│   ├── mine/                  活跃生成器：mine_batch181.py（模拟执行器）、mine_w200/w201_intraday.py、
-│   │                          mine_w203~w208（轴收口实验批）、mine_neut_convert.py、mine_from_spec.py
+│   ├── mine/                  ★ specs.py（11 批次配方库 build_wNNN）+ gen_combos.py（统一入口：
+│   │                          `gen_combos.py w200 w204` / --all / --list）；mine_batch181.py（模拟执行器）、
+│   │                          mine_neut_convert.py、mine_from_spec.py；
+│   │                          mine_w200~w213（11 个老批次脚本，已迁 specs，离线校验通过后删除）
 │   ├── submit/                submit_v3.py（★提交器）、auto_submit_passers.py（★批量判决+提交）、
-│   │                          run_queue_v3.py、submit_v2.py、verdict_dump.py
-│   ├── ops/                   git_snapshot.py（★统一快照入口）、auto_submit_loop.py（停用）
+│   │                          run_queue_v3.py、verdict_dump.py
+│   ├── ops/                   git_snapshot.py（★统一快照入口）
 │   ├── tools/                 fetch_alphas.py、fetch_learn_docs.py、fetch_learn_video.py、merge_video_notes.py
-│   └── archive/               expr_library.py（历史表达式库）
+│   └── archive/               expr_library.py（历史表达式库）、submit_v2.py、auto_submit_loop.py（停用）
 ├── data/alpha_quality_analysis/
 │   ├── SUBMITTED_LEDGER.csv   ★ 台账，唯一事实源，只追加
 │   ├── mined/                 模拟结果 json（{批次}_{序号}.json）
@@ -149,10 +152,13 @@ D:\Python\worldquant\
 │   ├── research/              外部论文/研报移植记录
 │   ├── study/  exam/          备考材料（★面试材料，不许动）
 │   ├── project/ reference/ archive/
-└── _autologs/                 运行日志（临时产物，可清理）
+└── _autologs/                 运行日志（临时产物；.gitignore 整目录忽略，不进版本历史；
+                              需长期保留的工具脚本先搬 src/tools/）
 ```
 
-**放置规则**：新挖矿脚本 `src/mine/mine_w{NNN}_*.py`（编号递增）；新结论**只写 00_总纲.md**（带日期，推翻旧结论明写"已推翻+日期"）；模拟 json 落 `mined/`；过程日志落 `_autologs/`。**禁止**根目录新增任何文件。
+**放置规则**：新批次配方一律加进 `src/mine/specs.py`（新增 build_wNNN 函数，经 gen_combos.py 入口跑），**不再新建独立 mine_wNNN 脚本**；新结论**只写 00_总纲.md**（带日期，推翻旧结论明写"已推翻+日期"）；模拟 json 落 `mined/`；过程日志落 `_autologs/`。**禁止**根目录新增任何文件。
+
+**specs 迁移纪律（0926 定）**：老批次脚本删除前必须①specs 输出 == 原文输出逐字节比对（当前数据下重跑两边 diff）；②腿名解析语义保真——w200 系传 `alias=`、w204/w205 传 `plain8=False`、w210 系传 `extra=(LEG_CID.get(l), ALIAS.get(l)), plain8=False`（L_int 本名 e7b76jRO 与映射 x180_leg_int XgbQZkp1 是两个不同 id，顺序不可颠倒）。
 
 **路径写法**：`src/` 下脚本必须自带项目根定位（向上找 `brain_credentials.txt` 后 `os.chdir`）。
 

@@ -1,0 +1,1987 @@
+
+==== 09-22 13:04:47  池 113 条（PnL 112）====
+---- e7bOqGbM ----
+   S=2.710 F=2.320 TO=0.1412 tS=2.29 FAIL=[]
+   最高相关 top6：
+      LL98E87L    corr=0.8513  S=2.45   ★≥0.66
+      9qVEA1ZV    corr=0.7699  S=2.46   ★≥0.66
+      O0rZ90n1    corr=0.7363  S=2.82   ★≥0.66
+      XgWnklXa    corr=0.6333  S=2.44
+      le8EMjoN    corr=0.6182  S=2.79
+      QPbPpA8W    corr=0.5512  S=2.58
+   ⇒ 走豁免：need=1.10x2.82=3.102（对手 O0rZ90n1）；gap = +0.392  ✗ 未过
+   超 0.66=3  超 0.685=3  超 0.80=1
+---- QPba58lr ----
+   S=2.740 F=2.170 TO=0.1707 tS=2.53 FAIL=[]
+   最高相关 top6：
+      LL98E87L    corr=0.8277  S=2.45   ★≥0.66
+      O0rZ90n1    corr=0.7666  S=2.82   ★≥0.66
+      9qVEA1ZV    corr=0.7486  S=2.46   ★≥0.66
+      XgWnklXa    corr=0.6737  S=2.44   ★≥0.66
+      le8EMjoN    corr=0.6634  S=2.79   ★≥0.66
+      le8KY21N    corr=0.5765  S=2.14
+   ⇒ 走豁免：need=1.10x2.82=3.102（对手 O0rZ90n1）；gap = +0.362  ✗ 未过
+   超 0.66=5  超 0.685=3  超 0.80=1
+---- O0Np5rwv ----
+   S=2.630 F=2.330 TO=0.1265 tS=2.17 FAIL=[]
+   最高相关 top6：
+      LL98E87L    corr=0.8643  S=2.45   ★≥0.66
+      9qVEA1ZV    corr=0.7751  S=2.46   ★≥0.66
+      O0rZ90n1    corr=0.7106  S=2.82   ★≥0.66
+      XgWnklXa    corr=0.6053  S=2.44
+      le8EMjoN    corr=0.5864  S=2.79
+      QPbPpA8W    corr=0.5471  S=2.58
+   ⇒ 走豁免：need=1.10x2.82=3.102（对手 O0rZ90n1）；gap = +0.472  ✗ 未过
+   超 0.66=3  超 0.685=3  超 0.80=1
+
+==== 09-22 13:07:20  池 113 条（PnL 112）====
+---- RRV5P0Yn ----
+   S=2.630 F=2.580 TO=0.1387 tS=1.91 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.7984  S=2.39   ★≥0.66
+      e791WzbO    corr=0.7537  S=2.16   ★≥0.66
+      rK59235m    corr=0.7282  S=2.72   ★≥0.66
+      O0rZ90n1    corr=0.6984  S=2.82   ★≥0.66
+      ZY07MXgd    corr=0.6875  S=2.46   ★≥0.66
+      0mRwgR6k    corr=0.6818  S=2.35   ★≥0.66
+   ⇒ 走豁免：need=1.10x2.82=3.102（对手 O0rZ90n1）；gap = +0.472  ✗ 未过
+   超 0.66=7  超 0.685=5  超 0.80=0
+---- qMxAPva1 ----
+   S=2.700 F=2.540 TO=0.1556 tS=2.06 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.7955  S=2.39   ★≥0.66
+      e791WzbO    corr=0.7483  S=2.16   ★≥0.66
+      rK59235m    corr=0.7481  S=2.72   ★≥0.66
+      O0rZ90n1    corr=0.7197  S=2.82   ★≥0.66
+      ZY07MXgd    corr=0.6840  S=2.46   ★≥0.66
+      XgWnklXa    corr=0.6819  S=2.44   ★≥0.66
+   ⇒ 走豁免：need=1.10x3.17=3.487（对手 mLgd6nwX）；gap = +0.787  ✗ 未过
+   超 0.66=11  超 0.685=4  超 0.80=0
+---- omLK3KA2 ----
+   S=2.750 F=2.380 TO=0.1893 tS=2.28 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.7779  S=2.39   ★≥0.66
+      rK59235m    corr=0.7590  S=2.72   ★≥0.66
+      O0rZ90n1    corr=0.7499  S=2.82   ★≥0.66
+      e791WzbO    corr=0.7256  S=2.16   ★≥0.66
+      XgWnklXa    corr=0.7222  S=2.44   ★≥0.66
+      mLgd6nwX    corr=0.7162  S=3.17   ★≥0.66
+   ⇒ 走豁免：need=1.10x3.17=3.487（对手 mLgd6nwX）；gap = +0.737  ✗ 未过
+   超 0.66=11  超 0.685=7  超 0.80=0
+---- wpYNPJld ----
+   S=2.520 F=2.540 TO=0.1226 tS=1.78 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.7937  S=2.39   ★≥0.66
+      e791WzbO    corr=0.7472  S=2.16   ★≥0.66
+      rK59235m    corr=0.6920  S=2.72   ★≥0.66
+      ZY07MXgd    corr=0.6854  S=2.46   ★≥0.66
+      0mRwgR6k    corr=0.6840  S=2.35   ★≥0.66
+      O0rZ90n1    corr=0.6727  S=2.82   ★≥0.66
+   ⇒ 走豁免：need=1.10x2.82=3.102（对手 O0rZ90n1）；gap = +0.582  ✗ 未过
+   超 0.66=6  超 0.685=4  超 0.80=0
+
+==== 09-22 13:07:34  池 113 条（PnL 112）====
+---- kqoQ2l2d ----
+   S=2.350 F=1.760 TO=0.1836 tS=1.68 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.7319  S=2.19   ★≥0.66
+      58znv2Y1    corr=0.6129  S=2.56
+      npdOdMdz    corr=0.6029  S=1.91
+      6Xjmjr7G    corr=0.5919  S=2.67
+      kqoq0zed    corr=0.5872  S=2.02
+      MPakMndk    corr=0.5817  S=2.62
+   ⇒ 走豁免：need=1.10x2.19=2.409（对手 1YXJeQoW）；gap = +0.059  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+---- e7bLwQwp ----
+   S=2.330 F=1.700 TO=0.1987 tS=2.21 FAIL=[]
+   最高相关 top6：
+      MPakMndk    corr=0.8346  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6703  S=2.19   ★≥0.66
+      npdOdMdz    corr=0.6077  S=1.91
+      O0N55k1Y    corr=0.5277  S=2.87
+      omL8Mazn    corr=0.4954  S=2.28
+      KPNwG8Oj    corr=0.4873  S=2.58
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.552  ✗ 未过
+   超 0.66=2  超 0.685=1  超 0.80=1
+
+==== 09-22 13:14:01  池 114 条（PnL 113）====
+---- RRbpNa6e ----
+   S=2.660 F=2.270 TO=0.1934 tS=2.34 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.8685  S=2.39   ★≥0.66
+      kqVJXpAl    corr=0.7114  S=2.43   ★≥0.66
+      rK59235m    corr=0.7062  S=2.72   ★≥0.66
+      e791WzbO    corr=0.6771  S=2.16   ★≥0.66
+      rKj7w0Z1    corr=0.6540  S=1.60
+      O0rZ90n1    corr=0.6419  S=2.82
+   ⇒ 走豁免：need=1.10x2.72=2.992（对手 rK59235m）；gap = +0.332  ✗ 未过
+   超 0.66=4  超 0.685=3  超 0.80=1
+---- E5pwq0MJ ----
+   S=2.610 F=2.400 TO=0.1606 tS=2.16 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.8863  S=2.39   ★≥0.66
+      e791WzbO    corr=0.6953  S=2.16   ★≥0.66
+      rK59235m    corr=0.6945  S=2.72   ★≥0.66
+      kqVJXpAl    corr=0.6920  S=2.43   ★≥0.66
+      rKj7w0Z1    corr=0.6463  S=1.60
+      wpjoxbbd    corr=0.6234  S=1.37
+   ⇒ 走豁免：need=1.10x2.72=2.992（对手 rK59235m）；gap = +0.382  ✗ 未过
+   超 0.66=4  超 0.685=4  超 0.80=1
+---- XgbpkQda ----
+   S=2.530 F=2.410 TO=0.1444 tS=2.07 FAIL=[]
+   最高相关 top6：
+      RRV5l5Go    corr=0.8908  S=2.39   ★≥0.66
+      e791WzbO    corr=0.7003  S=2.16   ★≥0.66
+      rK59235m    corr=0.6777  S=2.72   ★≥0.66
+      kqVJXpAl    corr=0.6748  S=2.43   ★≥0.66
+      rKj7w0Z1    corr=0.6333  S=1.60
+      ZY07MXgd    corr=0.6221  S=2.46
+   ⇒ 走豁免：need=1.10x2.72=2.992（对手 rK59235m）；gap = +0.462  ✗ 未过
+   超 0.66=4  超 0.685=2  超 0.80=1
+---- gJb1mA9M ----
+   S=2.110 F=1.600 TO=0.1729 tS=1.62 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.7607  S=2.19   ★≥0.66
+      58znv2Y1    corr=0.6232  S=2.56
+      6Xjmjr7G    corr=0.5837  S=2.67
+      kqoq0zed    corr=0.5808  S=2.02
+      npdOdMdz    corr=0.5695  S=1.91
+      0mXm1neK    corr=0.5554  S=2.38
+   ⇒ 走豁免：need=1.10x2.19=2.409（对手 1YXJeQoW）；gap = +0.299  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+
+==== 09-22 13:16:52  池 114 条（PnL 113）====
+---- xA3xeVAb ----
+   S=2.480 F=1.260 TO=0.4607 tS=2.51 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.6149  S=2.19
+      58znv2Y1    corr=0.5800  S=2.56
+      6Xjmjr7G    corr=0.5735  S=2.67
+      1YX6MA0M    corr=0.5715  S=3.26
+      gJbk9V1K    corr=0.5369  S=2.82
+      3qXd5vg0    corr=0.5292  S=2.91
+   ⇒ **直通**（corr 0.6149 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-22 13:22:57  池 114 条（PnL 113）====
+---- A1NwkYOX ----
+   S=2.200 F=1.910 TO=0.1540 tS=1.22 FAIL=[]
+   最高相关 top6：
+      kqVJXpAl    corr=0.8429  S=2.43   ★≥0.66
+      RRV5l5Go    corr=0.6386  S=2.39
+      e791WzbO    corr=0.5646  S=2.16
+      rK59235m    corr=0.5554  S=2.72
+      e79PvPpE    corr=0.4926  S=3.13
+      rKj7w0Z1    corr=0.4874  S=1.60
+   ⇒ 走豁免：need=1.10x2.43=2.673（对手 kqVJXpAl）；gap = +0.473  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- vRrLdqgr ----
+   S=2.520 F=1.410 TO=0.3734 tS=2.3 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.6516  S=2.19
+      58znv2Y1    corr=0.5999  S=2.56
+      6Xjmjr7G    corr=0.5918  S=2.67
+      1YX6MA0M    corr=0.5847  S=3.26
+      gJbk9V1K    corr=0.5550  S=2.82
+      3qXd5vg0    corr=0.5436  S=2.91
+   ⇒ **直通**（corr 0.6516 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- MPapkLNo ----
+   S=1.940 F=1.690 TO=0.1290 tS=0.84 FAIL=[]
+   最高相关 top6：
+      kqVJXpAl    corr=0.7782  S=2.43   ★≥0.66
+      RRV5l5Go    corr=0.6275  S=2.39
+      e791WzbO    corr=0.5444  S=2.16
+      rK59235m    corr=0.5090  S=2.72
+      vRjG1Jzw    corr=0.4450  S=1.79
+      e79PvPpE    corr=0.4422  S=3.13
+   ⇒ 走豁免：need=1.10x2.43=2.673（对手 kqVJXpAl）；gap = +0.733  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+
+==== 09-22 13:26:13  池 114 条（PnL 113）====
+---- npdO71xw ----
+   S=2.200 F=1.850 TO=0.1075 tS=1.76 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8989  S=1.91   ★≥0.66
+      MPakMndk    corr=0.7298  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6726  S=2.19   ★≥0.66
+      kqoq0zed    corr=0.4806  S=2.02
+      KPNwG8Oj    corr=0.4646  S=2.58
+      pwRwWoJ3    corr=0.4520  S=3.33
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.682  ✗ 未过
+   超 0.66=3  超 0.685=2  超 0.80=1
+---- xA3RANep ----
+   S=2.210 F=1.870 TO=0.1329 tS=1.49 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.8663  S=2.19   ★≥0.66
+      MPakMndk    corr=0.7663  S=2.62   ★≥0.66
+      npdOdMdz    corr=0.6842  S=1.91   ★≥0.66
+      pwRwWoJ3    corr=0.5507  S=3.33
+      kqVJXpAl    corr=0.4901  S=2.43
+      LLNlX5nv    corr=0.4861  S=2.51
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.672  ✗ 未过
+   超 0.66=3  超 0.685=2  超 0.80=1
+---- npd3p8aa ----
+   S=2.260 F=1.920 TO=0.1327 tS=1.56 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.8926  S=2.19   ★≥0.66
+      MPakMndk    corr=0.7397  S=2.62   ★≥0.66
+      npdOdMdz    corr=0.6058  S=1.91
+      pwRwWoJ3    corr=0.5587  S=3.33
+      kqVJXpAl    corr=0.4768  S=2.43
+      mLmOPGap    corr=0.4620  S=2.57
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.622  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- vRrdwa8G ----
+   S=2.230 F=1.810 TO=0.1486 tS=1.49 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.8956  S=2.19   ★≥0.66
+      MPakMndk    corr=0.7774  S=2.62   ★≥0.66
+      npdOdMdz    corr=0.6781  S=1.91   ★≥0.66
+      pwRwWoJ3    corr=0.5502  S=3.33
+      omL8Mazn    corr=0.4793  S=2.28
+      O0N55k1Y    corr=0.4393  S=2.87
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.652  ✗ 未过
+   超 0.66=3  超 0.685=2  超 0.80=1
+---- pwR8wxao ----
+   S=2.200 F=1.800 TO=0.1430 tS=1.46 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.8597  S=2.19   ★≥0.66
+      MPakMndk    corr=0.7844  S=2.62   ★≥0.66
+      npdOdMdz    corr=0.6843  S=1.91   ★≥0.66
+      pwRwWoJ3    corr=0.5414  S=3.33
+      omL8Mazn    corr=0.4869  S=2.28
+      LLNlX5nv    corr=0.4627  S=2.51
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.682  ✗ 未过
+   超 0.66=3  超 0.685=2  超 0.80=1
+
+==== 09-22 13:31:26  池 114 条（PnL 113）====
+
+==== 09-22 13:34:37  池 114 条（PnL 113）====
+---- A10QMWWw ----
+   S=1.800 F=1.300 TO=0.1371 tS=1.17 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.5307  S=2.82
+      e791WzbO    corr=0.5141  S=2.16
+      RRV5l5Go    corr=0.5009  S=2.39
+      wpYgReRx    corr=0.4993  S=1.54
+      e79PvPpE    corr=0.4661  S=3.13
+      6Xr2eQaJ    corr=0.4571  S=2.27
+   ⇒ **直通**（corr 0.5307 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- Grb30d2Q ----
+   S=2.300 F=1.600 TO=0.1896 tS=2.58 FAIL=[]
+   最高相关 top6：
+      le8EMjoN    corr=0.6158  S=2.79
+      rKOrk5Qa    corr=0.6076  S=2.58
+      le8KY21N    corr=0.5932  S=2.14
+      1YX6MA0M    corr=0.5764  S=3.26
+      0mXKpmYq    corr=0.5655  S=2.55
+      LL98E87L    corr=0.5590  S=2.45
+   ⇒ **直通**（corr 0.6158 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- Grb3Ym2G ----
+   S=2.100 F=1.540 TO=0.1189 tS=0.86 FAIL=[]
+   最高相关 top6：
+      kqVp6wnO    corr=0.6646  S=2.51   ★≥0.66
+      pwRwWoJ3    corr=0.6550  S=3.33
+      O0N0R5NY    corr=0.6491  S=2.92
+      zq8Xeo2R    corr=0.6484  S=2.52
+      LLNXEe7L    corr=0.6056  S=2.30
+      wpZJX6m5    corr=0.5972  S=3.10
+   ⇒ **直通**（corr 0.6646 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- Grba8EgP ----
+   S=1.410 F=1.040 TO=0.1472 tS=2.43 FAIL=[]
+   最高相关 top6：
+      1YwRK1wW    corr=0.4555  S=2.11
+      A10MYm3d    corr=0.4527  S=1.90
+      88jKeENW    corr=0.4478  S=2.39
+      wpYgReRx    corr=0.4442  S=1.54
+      e79PvPpE    corr=0.4259  S=3.13
+      QP3XalpK    corr=0.4095  S=1.27
+   ⇒ **直通**（corr 0.4555 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- GrbvgqXO ----
+   S=1.740 F=1.140 TO=0.1898 tS=0.85 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.5997  S=2.27
+      6Xjmjr7G    corr=0.4856  S=2.67
+      QP3V2bVG    corr=0.4521  S=2.58
+      npdpEJ3l    corr=0.4350  S=2.52
+      58QVJA9M    corr=0.4192  S=2.15
+      O0N0R5NY    corr=0.4061  S=2.92
+   ⇒ **直通**（corr 0.5997 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- GrdR2wWJ ----
+   S=1.760 F=1.170 TO=0.1638 tS=1.71 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6351  S=2.45
+      le8EMjoN    corr=0.6210  S=2.79
+      0mXKpmYq    corr=0.6064  S=2.55
+      akLp3pzW    corr=0.5998  S=2.78
+      le8KY21N    corr=0.5718  S=2.14
+      qMxzlLYK    corr=0.5669  S=2.28
+   ⇒ **直通**（corr 0.6351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- LL9Qvdja ----
+   S=1.650 F=1.040 TO=0.2015 tS=2.31 FAIL=[]
+   最高相关 top6：
+      YP5OJqjl    corr=0.5760  S=2.18
+      0mXKpmYq    corr=0.5688  S=2.55
+      E5vx6NJP    corr=0.5619  S=2.45
+      le8EMjoN    corr=0.5069  S=2.79
+      YPbLZK2W    corr=0.4895  S=2.15
+      N1axM3mp    corr=0.4847  S=0.00
+   ⇒ **直通**（corr 0.5760 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- MP1dYzQ8 ----
+   S=2.320 F=1.100 TO=0.4830 tS=2.08 FAIL=[]
+   最高相关 top6：
+      le8EAJLO    corr=0.6837  S=2.73   ★≥0.66
+      akLmmvPW    corr=0.6430  S=2.48
+      rK59235m    corr=0.6256  S=2.72
+      N1QJPJE8    corr=0.6198  S=2.47
+      e79kPeEM    corr=0.6093  S=3.02
+      0mR2K6lr    corr=0.5950  S=3.45
+   ⇒ **直通**（corr 0.6837 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- N1avOkZq ----
+   S=1.650 F=1.250 TO=0.0742 tS=0.85 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6226  S=2.27
+      9qVrJkYe    corr=0.4562  S=2.29
+      npdpEJ3l    corr=0.4239  S=2.52
+      levb0dQx    corr=0.3902  S=2.34
+      ZYbPbXj1    corr=0.3900  S=2.59
+      9qjqm3Q9    corr=0.3896  S=2.92
+   ⇒ **直通**（corr 0.6226 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- N1axjm6e ----
+   S=1.490 F=1.030 TO=0.2692 tS=1.44 FAIL=[]
+   最高相关 top6：
+      YPbLZK2W    corr=0.6771  S=2.15   ★≥0.66
+      N1axM3mp    corr=0.6474  S=0.00
+      le8EMjoN    corr=0.5743  S=2.79
+      le8KY21N    corr=0.5707  S=2.14
+      YP5OJqjl    corr=0.5292  S=2.18
+      j23Pl0e5    corr=0.5083  S=3.25
+   ⇒ **直通**（corr 0.6771 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- O0NQe7l7 ----
+   S=2.070 F=1.380 TO=0.1887 tS=0.98 FAIL=[]
+   最高相关 top6：
+      gJbkQ31Q    corr=0.6717  S=2.37   ★≥0.66
+      O0N0R5NY    corr=0.6245  S=2.92
+      6Xjmjr7G    corr=0.5924  S=2.67
+      O0NP30KR    corr=0.5465  S=2.44
+      LLNXEe7L    corr=0.5460  S=2.30
+      58znv2Y1    corr=0.5293  S=2.56
+   ⇒ **直通**（corr 0.6717 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- P02Eg80J ----
+   S=1.710 F=1.310 TO=0.1585 tS=0.58 FAIL=[]
+   最高相关 top6：
+      mLmOPGap    corr=0.6834  S=2.57   ★≥0.66
+      YP57jVzo    corr=0.5794  S=2.14
+      O0N55k1Y    corr=0.5709  S=2.87
+      pwRwWoJ3    corr=0.5316  S=3.33
+      le8ddYbe    corr=0.5122  S=2.41
+      zqYmRz0E    corr=0.4983  S=2.16
+   ⇒ **直通**（corr 0.6834 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- QP3Ovl3w ----
+   S=2.290 F=1.230 TO=0.4441 tS=4.22 FAIL=[]
+   最高相关 top6：
+      le8EMjoN    corr=0.6145  S=2.79
+      le8KY21N    corr=0.6034  S=2.14
+      j23Pl0e5    corr=0.5739  S=3.25
+      le8EAJLO    corr=0.5637  S=2.73
+      mLgd6nwX    corr=0.4815  S=3.17
+      e79kPeEM    corr=0.4730  S=3.02
+   ⇒ **直通**（corr 0.6145 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- QP3RGpJM ----
+   S=1.780 F=1.000 TO=0.2476 tS=1.66 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6846  S=2.45   ★≥0.66
+      0mXKpmYq    corr=0.6246  S=2.55
+      npKGgKLw    corr=0.6205  S=2.42
+      j23Pl0e5    corr=0.6125  S=3.25
+      qMxzlLYK    corr=0.6022  S=2.28
+      YP5OJqjl    corr=0.5974  S=2.18
+   ⇒ **直通**（corr 0.6846 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- QPbLvnnM ----
+   S=1.920 F=1.570 TO=0.1264 tS=0.58 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6671  S=2.27   ★≥0.66
+      O0NP30KR    corr=0.5019  S=2.44
+      883OXpJl    corr=0.4821  S=2.48
+      omL8Mazn    corr=0.4551  S=2.28
+      O0N0R5NY    corr=0.4068  S=2.92
+      O0rZ90n1    corr=0.4007  S=2.82
+   ⇒ **直通**（corr 0.6671 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- XgWv6vNX ----
+   S=1.690 F=1.550 TO=0.1175 tS=0.28 FAIL=[]
+   最高相关 top6：
+      9qV8l13o    corr=0.6777  S=2.27   ★≥0.66
+      ZY07MXgd    corr=0.6286  S=2.46
+      e791WzbO    corr=0.5559  S=2.16
+      58Q7kl1z    corr=0.5146  S=2.14
+      wpjoxbbd    corr=0.4743  S=1.37
+      vRjG1Jzw    corr=0.4661  S=1.79
+   ⇒ **直通**（corr 0.6777 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- XgbY698X ----
+   S=2.190 F=1.050 TO=0.4205 tS=0.08 FAIL=[]
+   最高相关 top6：
+      N1avK6zw    corr=0.6227  S=2.42
+      gJbkQ31Q    corr=0.6005  S=2.37
+      akbjdK26    corr=0.5867  S=2.12
+      O0N0R5NY    corr=0.5797  S=2.92
+      6Xjmjr7G    corr=0.5776  S=2.67
+      zq8Xeo2R    corr=0.5705  S=2.52
+   ⇒ **直通**（corr 0.6227 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- YP5lJKRM ----
+   S=1.740 F=1.550 TO=0.1129 tS=0.78 FAIL=[]
+   最高相关 top6：
+      9qVEA1ZV    corr=0.6713  S=2.46   ★≥0.66
+      e791WzbO    corr=0.6045  S=2.16
+      6Xr2eQaJ    corr=0.5941  S=2.27
+      58p2XdxX    corr=0.5765  S=1.55
+      omL8Mazn    corr=0.5617  S=2.28
+      kqoq0zed    corr=0.5588  S=2.02
+   ⇒ **直通**（corr 0.6713 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- YPbmeJLv ----
+   S=2.210 F=1.240 TO=0.2723 tS=0.4 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.6071  S=2.68
+      LLNlX5nv    corr=0.6034  S=2.51
+      3qXd5vg0    corr=0.5910  S=2.91
+      9qjZ8oZ2    corr=0.5755  S=2.53
+      1YX6MA0M    corr=0.5627  S=3.26
+      O0N0R5NY    corr=0.5615  S=2.92
+   ⇒ **直通**（corr 0.6071 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZY07Rejd ----
+   S=1.720 F=1.050 TO=0.1894 tS=2.14 FAIL=[]
+   最高相关 top6：
+      akLmmvPW    corr=0.6398  S=2.48
+      9qX3M2mq    corr=0.6041  S=2.49
+      9qVrJkYe    corr=0.6008  S=2.29
+      58QVJA9M    corr=0.5965  S=2.15
+      rK59235m    corr=0.5918  S=2.72
+      1YwRK1wW    corr=0.5899  S=2.11
+   ⇒ **直通**（corr 0.6398 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZY07Zw88 ----
+   S=1.850 F=1.520 TO=0.1169 tS=1.45 FAIL=[]
+   最高相关 top6：
+      0mRwgR6k    corr=0.6557  S=2.35
+      ZY07MXgd    corr=0.6523  S=2.46
+      O0N0R5NY    corr=0.6084  S=2.92
+      6XrbGx1L    corr=0.5326  S=2.26
+      RRVLeabj    corr=0.5217  S=1.61
+      e791WzbO    corr=0.5152  S=2.16
+   ⇒ **直通**（corr 0.6557 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZYbkV5Q1 ----
+   S=2.200 F=1.170 TO=0.3254 tS=2.82 FAIL=[]
+   最高相关 top6：
+      O0NP30KR    corr=0.6683  S=2.44   ★≥0.66
+      zq8Xeo2R    corr=0.6617  S=2.52   ★≥0.66
+      1YX6MA0M    corr=0.6568  S=3.26
+      58znv2Y1    corr=0.6542  S=2.56
+      0mXm1neK    corr=0.6333  S=2.38
+      akbjdK26    corr=0.6169  S=2.12
+   ⇒ **直通**（corr 0.6683 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- ZYblY8XZ ----
+   S=1.640 F=1.040 TO=0.1817 tS=0.53 FAIL=[]
+   最高相关 top6：
+      kqVp6wnO    corr=0.6739  S=2.51   ★≥0.66
+      0mXm1neK    corr=0.6496  S=2.38
+      6Xr2eQaJ    corr=0.6452  S=2.27
+      npdpEJ3l    corr=0.6406  S=2.52
+      zq8Xeo2R    corr=0.6101  S=2.52
+      RRVLeabj    corr=0.5976  S=1.61
+   ⇒ **直通**（corr 0.6739 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- blbWNYpK ----
+   S=2.030 F=1.720 TO=0.1641 tS=1.6 FAIL=[]
+   最高相关 top6：
+      E5v15JPJ    corr=0.6808  S=1.67   ★≥0.66
+      O0N55k1Y    corr=0.6709  S=2.87   ★≥0.66
+      E5prgA1K    corr=0.6694  S=2.57   ★≥0.66
+      zqYmRz0E    corr=0.6198  S=2.16
+      MPaPe0oo    corr=0.6086  S=2.30
+      akLqqmm6    corr=0.5983  S=1.71
+   ⇒ **直通**（corr 0.6808 < 0.685）
+   超 0.66=3  超 0.685=0  超 0.80=0
+---- gJQ22APl ----
+   S=1.940 F=1.190 TO=0.2054 tS=2.04 FAIL=[]
+   最高相关 top6：
+      npKGgKLw    corr=0.5847  S=2.42
+      YP5OJqjl    corr=0.5189  S=2.18
+      akLp3pzW    corr=0.4976  S=2.78
+      E5vx6NJP    corr=0.4954  S=2.45
+      j23Pl0e5    corr=0.4951  S=3.25
+      qMxzlLYK    corr=0.4797  S=2.28
+   ⇒ **直通**（corr 0.5847 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- gJbK2Ong ----
+   S=2.190 F=1.330 TO=0.2546 tS=0.16 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.6781  S=2.68   ★≥0.66
+      kqVp6wnO    corr=0.6332  S=2.51
+      O0N0R5NY    corr=0.6309  S=2.92
+      wpZJX6m5    corr=0.6095  S=3.10
+      LLNlX5nv    corr=0.6060  S=2.51
+      zq8Xeo2R    corr=0.6053  S=2.52
+   ⇒ **直通**（corr 0.6781 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- j23em7jO ----
+   S=1.550 F=1.120 TO=0.2006 tS=1.47 FAIL=[]
+   最高相关 top6：
+      e791WzbO    corr=0.6455  S=2.16
+      N1QJPJE8    corr=0.6328  S=2.47
+      WjPexbLZ    corr=0.6175  S=2.32
+      9qV8l13o    corr=0.5949  S=2.27
+      e79PvPpE    corr=0.5695  S=3.13
+      6Xr2eQaJ    corr=0.5640  S=2.27
+   ⇒ **直通**（corr 0.6455 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- kqVAwNp6 ----
+   S=1.850 F=1.180 TO=0.1891 tS=2.11 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6692  S=2.45   ★≥0.66
+      akLp3pzW    corr=0.6504  S=2.78
+      qMxzlLYK    corr=0.6432  S=2.28
+      0mXKpmYq    corr=0.6234  S=2.55
+      npKGgKLw    corr=0.6093  S=2.42
+      j23Pl0e5    corr=0.5855  S=3.25
+   ⇒ **直通**（corr 0.6692 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- kqoXwPjK ----
+   S=2.330 F=1.400 TO=0.2620 tS=0.04 FAIL=[]
+   最高相关 top6：
+      LLNlX5nv    corr=0.6577  S=2.51
+      zq8jl99K    corr=0.6327  S=2.68
+      1YX6MA0M    corr=0.6313  S=3.26
+      O0N0R5NY    corr=0.6175  S=2.92
+      wpZJX6m5    corr=0.6108  S=3.10
+      gJbkQ31Q    corr=0.6022  S=2.37
+   ⇒ **直通**（corr 0.6577 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgNQEkx ----
+   S=2.050 F=1.500 TO=0.1971 tS=-0.01 FAIL=[]
+   最高相关 top6：
+      e79PvPpE    corr=0.5749  S=3.13
+      0mR2K6lr    corr=0.5671  S=3.45
+      N1QJPJE8    corr=0.5393  S=2.47
+      6Xr2eQaJ    corr=0.4711  S=2.27
+      MPakMndk    corr=0.4704  S=2.62
+      E5vx6NJP    corr=0.4622  S=2.45
+   ⇒ **直通**（corr 0.5749 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgvnAlE ----
+   S=1.730 F=1.110 TO=0.1459 tS=0.74 FAIL=[]
+   最高相关 top6：
+      YP57jVzo    corr=0.6512  S=2.14
+      O0N55k1Y    corr=0.6498  S=2.87
+      N1QJPJE8    corr=0.6204  S=2.47
+      6Xr2eQaJ    corr=0.6176  S=2.27
+      9qV8l13o    corr=0.5957  S=2.27
+      npdpEJ3l    corr=0.5726  S=2.52
+   ⇒ **直通**（corr 0.6512 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgvnV36 ----
+   S=1.710 F=1.100 TO=0.1473 tS=2.18 FAIL=[]
+   最高相关 top6：
+      kqoq0zed    corr=0.6505  S=2.02
+      omL8Mazn    corr=0.6454  S=2.28
+      LLNXEe7L    corr=0.6452  S=2.30
+      akLp3pzW    corr=0.6257  S=2.78
+      kqVp6wnO    corr=0.6217  S=2.51
+      qMxzlLYK    corr=0.6194  S=2.28
+   ⇒ **直通**（corr 0.6505 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLmzaLaE ----
+   S=1.790 F=1.350 TO=0.1254 tS=2.59 FAIL=[]
+   最高相关 top6：
+      qMxzlLYK    corr=0.5264  S=2.28
+      e79PvPpE    corr=0.4891  S=3.13
+      j23Pl0e5    corr=0.4869  S=3.25
+      N1QJPJE8    corr=0.4759  S=2.47
+      0mR2K6lr    corr=0.4617  S=3.45
+      rK59235m    corr=0.4601  S=2.72
+   ⇒ **直通**（corr 0.5264 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- npK7JLkM ----
+   S=1.630 F=1.110 TO=0.1208 tS=1.73 FAIL=[]
+   最高相关 top6：
+      0mRwgR6k    corr=0.5285  S=2.35
+      O0N0R5NY    corr=0.5025  S=2.92
+      QP3V2bVG    corr=0.4746  S=2.58
+      QP7z069Q    corr=0.4086  S=1.64
+      ZY07MXgd    corr=0.4075  S=2.46
+      O0rZ90n1    corr=0.4043  S=2.82
+   ⇒ **直通**（corr 0.5285 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- omLza7m5 ----
+   S=1.720 F=1.140 TO=0.1536 tS=1.86 FAIL=[]
+   最高相关 top6：
+      rK59235m    corr=0.4881  S=2.72
+      N1QJPJE8    corr=0.4878  S=2.47
+      e79PvPpE    corr=0.4757  S=3.13
+      j23Pl0e5    corr=0.4653  S=3.25
+      0mR2K6lr    corr=0.4514  S=3.45
+      e791WzbO    corr=0.4361  S=2.16
+   ⇒ **直通**（corr 0.4881 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- pwRYrNng ----
+   S=1.590 F=1.040 TO=0.0726 tS=1.08 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.4351  S=2.68
+      1YX6MA0M    corr=0.4096  S=3.26
+      mLmwpAKK    corr=0.4042  S=2.78
+      akbjdK26    corr=0.4023  S=2.12
+      qMW92Az2    corr=0.4023  S=2.32
+      KPNwG8Oj    corr=0.3866  S=2.58
+   ⇒ **直通**（corr 0.4351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- rK50GvOm ----
+   S=1.730 F=1.600 TO=0.0931 tS=0.53 FAIL=[]
+   最高相关 top6：
+      6Xr2eQaJ    corr=0.6685  S=2.27   ★≥0.66
+      RRVLeabj    corr=0.6677  S=1.61   ★≥0.66
+      e791WzbO    corr=0.6220  S=2.16
+      6XrbGx1L    corr=0.5656  S=2.26
+      kqoq0zed    corr=0.5634  S=2.02
+      58p2XdxX    corr=0.5545  S=1.55
+   ⇒ **直通**（corr 0.6685 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- rK5dLZxj ----
+   S=2.210 F=1.840 TO=0.1319 tS=-0.48 FAIL=[]
+   最高相关 top6：
+      kqVJXpAl    corr=0.6472  S=2.43
+      RRV5l5Go    corr=0.5867  S=2.39
+      O0rZ90n1    corr=0.5613  S=2.82
+      XgWnklXa    corr=0.4708  S=2.44
+      QPbPpA8W    corr=0.4529  S=2.58
+      9qVEA1ZV    corr=0.4414  S=2.46
+   ⇒ **直通**（corr 0.6472 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- vRr3mV5z ----
+   S=1.980 F=1.430 TO=0.1447 tS=1.76 FAIL=[]
+   最高相关 top6：
+      Vka1Nar0    corr=0.6520  S=2.55
+      levb0dQx    corr=0.5939  S=2.34
+      6Xjmjr7G    corr=0.5880  S=2.67
+      gJbkQ31Q    corr=0.5618  S=2.37
+      wpZJX6m5    corr=0.5596  S=3.10
+      E5prgA1K    corr=0.5221  S=2.57
+   ⇒ **直通**（corr 0.6520 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- wpY9qNxp ----
+   S=2.130 F=1.360 TO=0.2056 tS=1.67 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.6075  S=2.82
+      wpYgReRx    corr=0.4971  S=1.54
+      e79PvPpE    corr=0.4900  S=3.13
+      RRV5l5Go    corr=0.4869  S=2.39
+      e791WzbO    corr=0.4825  S=2.16
+      0mR2K6lr    corr=0.4815  S=3.45
+   ⇒ **直通**（corr 0.6075 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- wpZzQvQ6 ----
+   S=1.600 F=1.100 TO=0.1247 tS=2.39 FAIL=[]
+   最高相关 top6：
+      j23Pl0e5    corr=0.4880  S=3.25
+      qMxzlLYK    corr=0.4742  S=2.28
+      YP5OJqjl    corr=0.4593  S=2.18
+      N1QJPJE8    corr=0.4273  S=2.47
+      rK59235m    corr=0.4250  S=2.72
+      ZYbPbXj1    corr=0.4188  S=2.59
+   ⇒ **直通**（corr 0.4880 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- xA3OQlzw ----
+   S=2.060 F=1.480 TO=0.2810 tS=1.83 FAIL=[]
+   最高相关 top6：
+      9qX3M2mq    corr=0.6694  S=2.49   ★≥0.66
+      1YwRK1wW    corr=0.6409  S=2.11
+      rKOrk5Qa    corr=0.6282  S=2.58
+      kqjpepz8    corr=0.6195  S=2.74
+      YP5OJqjl    corr=0.5952  S=2.18
+      ZYbPbXj1    corr=0.5889  S=2.59
+   ⇒ **直通**（corr 0.6694 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- xA3zxA3w ----
+   S=1.320 F=1.040 TO=0.1769 tS=0.91 FAIL=[]
+   最高相关 top6：
+      YPbLZK2W    corr=0.6826  S=2.15   ★≥0.66
+      1YwRK1wW    corr=0.5769  S=2.11
+      9qX3M2mq    corr=0.5674  S=2.49
+      rKOrk5Qa    corr=0.5381  S=2.58
+      0mXKpmYq    corr=0.5286  S=2.55
+      N1axM3mp    corr=0.5244  S=0.00
+   ⇒ **直通**（corr 0.6826 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+
+==== 09-22 13:35:02  池 114 条（PnL 113）====
+---- A10QMWWw ----
+   S=1.800 F=1.300 TO=0.1371 tS=1.17 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.5307  S=2.82
+      e791WzbO    corr=0.5141  S=2.16
+      RRV5l5Go    corr=0.5009  S=2.39
+      wpYgReRx    corr=0.4993  S=1.54
+      e79PvPpE    corr=0.4661  S=3.13
+      6Xr2eQaJ    corr=0.4571  S=2.27
+   ⇒ **直通**（corr 0.5307 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- Grb30d2Q ----
+   S=2.300 F=1.600 TO=0.1896 tS=2.58 FAIL=[]
+   最高相关 top6：
+      le8EMjoN    corr=0.6158  S=2.79
+      rKOrk5Qa    corr=0.6076  S=2.58
+      le8KY21N    corr=0.5932  S=2.14
+      1YX6MA0M    corr=0.5764  S=3.26
+      0mXKpmYq    corr=0.5655  S=2.55
+      LL98E87L    corr=0.5590  S=2.45
+   ⇒ **直通**（corr 0.6158 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- Grb3Ym2G ----
+   S=2.100 F=1.540 TO=0.1189 tS=0.86 FAIL=[]
+   最高相关 top6：
+      kqVp6wnO    corr=0.6646  S=2.51   ★≥0.66
+      pwRwWoJ3    corr=0.6550  S=3.33
+      O0N0R5NY    corr=0.6491  S=2.92
+      zq8Xeo2R    corr=0.6484  S=2.52
+      LLNXEe7L    corr=0.6056  S=2.30
+      wpZJX6m5    corr=0.5972  S=3.10
+   ⇒ **直通**（corr 0.6646 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- Grba8EgP ----
+   S=1.410 F=1.040 TO=0.1472 tS=2.43 FAIL=[]
+   最高相关 top6：
+      1YwRK1wW    corr=0.4555  S=2.11
+      A10MYm3d    corr=0.4527  S=1.90
+      88jKeENW    corr=0.4478  S=2.39
+      wpYgReRx    corr=0.4442  S=1.54
+      e79PvPpE    corr=0.4259  S=3.13
+      QP3XalpK    corr=0.4095  S=1.27
+   ⇒ **直通**（corr 0.4555 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- GrbvgqXO ----
+   S=1.740 F=1.140 TO=0.1898 tS=0.85 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.5997  S=2.27
+      6Xjmjr7G    corr=0.4856  S=2.67
+      QP3V2bVG    corr=0.4521  S=2.58
+      npdpEJ3l    corr=0.4350  S=2.52
+      58QVJA9M    corr=0.4192  S=2.15
+      O0N0R5NY    corr=0.4061  S=2.92
+   ⇒ **直通**（corr 0.5997 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- GrdR2wWJ ----
+   S=1.760 F=1.170 TO=0.1638 tS=1.71 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6351  S=2.45
+      le8EMjoN    corr=0.6210  S=2.79
+      0mXKpmYq    corr=0.6064  S=2.55
+      akLp3pzW    corr=0.5998  S=2.78
+      le8KY21N    corr=0.5718  S=2.14
+      qMxzlLYK    corr=0.5669  S=2.28
+   ⇒ **直通**（corr 0.6351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- LL9Qvdja ----
+   S=1.650 F=1.040 TO=0.2015 tS=2.31 FAIL=[]
+   最高相关 top6：
+      YP5OJqjl    corr=0.5760  S=2.18
+      0mXKpmYq    corr=0.5688  S=2.55
+      E5vx6NJP    corr=0.5619  S=2.45
+      le8EMjoN    corr=0.5069  S=2.79
+      YPbLZK2W    corr=0.4895  S=2.15
+      N1axM3mp    corr=0.4847  S=0.00
+   ⇒ **直通**（corr 0.5760 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- MP1dYzQ8 ----
+   S=2.320 F=1.100 TO=0.4830 tS=2.08 FAIL=[]
+   最高相关 top6：
+      le8EAJLO    corr=0.6837  S=2.73   ★≥0.66
+      akLmmvPW    corr=0.6430  S=2.48
+      rK59235m    corr=0.6256  S=2.72
+      N1QJPJE8    corr=0.6198  S=2.47
+      e79kPeEM    corr=0.6093  S=3.02
+      0mR2K6lr    corr=0.5950  S=3.45
+   ⇒ **直通**（corr 0.6837 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- N1avOkZq ----
+   S=1.650 F=1.250 TO=0.0742 tS=0.85 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6226  S=2.27
+      9qVrJkYe    corr=0.4562  S=2.29
+      npdpEJ3l    corr=0.4239  S=2.52
+      levb0dQx    corr=0.3902  S=2.34
+      ZYbPbXj1    corr=0.3900  S=2.59
+      9qjqm3Q9    corr=0.3896  S=2.92
+   ⇒ **直通**（corr 0.6226 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- N1axjm6e ----
+   S=1.490 F=1.030 TO=0.2692 tS=1.44 FAIL=[]
+   最高相关 top6：
+      YPbLZK2W    corr=0.6771  S=2.15   ★≥0.66
+      N1axM3mp    corr=0.6474  S=0.00
+      le8EMjoN    corr=0.5743  S=2.79
+      le8KY21N    corr=0.5707  S=2.14
+      YP5OJqjl    corr=0.5292  S=2.18
+      j23Pl0e5    corr=0.5083  S=3.25
+   ⇒ **直通**（corr 0.6771 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- O0NQe7l7 ----
+   S=2.070 F=1.380 TO=0.1887 tS=0.98 FAIL=[]
+   最高相关 top6：
+      gJbkQ31Q    corr=0.6717  S=2.37   ★≥0.66
+      O0N0R5NY    corr=0.6245  S=2.92
+      6Xjmjr7G    corr=0.5924  S=2.67
+      O0NP30KR    corr=0.5465  S=2.44
+      LLNXEe7L    corr=0.5460  S=2.30
+      58znv2Y1    corr=0.5293  S=2.56
+   ⇒ **直通**（corr 0.6717 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- P02Eg80J ----
+   S=1.710 F=1.310 TO=0.1585 tS=0.58 FAIL=[]
+   最高相关 top6：
+      mLmOPGap    corr=0.6834  S=2.57   ★≥0.66
+      YP57jVzo    corr=0.5794  S=2.14
+      O0N55k1Y    corr=0.5709  S=2.87
+      pwRwWoJ3    corr=0.5316  S=3.33
+      le8ddYbe    corr=0.5122  S=2.41
+      zqYmRz0E    corr=0.4983  S=2.16
+   ⇒ **直通**（corr 0.6834 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- QP3Ovl3w ----
+   S=2.290 F=1.230 TO=0.4441 tS=4.22 FAIL=[]
+   最高相关 top6：
+      le8EMjoN    corr=0.6145  S=2.79
+      le8KY21N    corr=0.6034  S=2.14
+      j23Pl0e5    corr=0.5739  S=3.25
+      le8EAJLO    corr=0.5637  S=2.73
+      mLgd6nwX    corr=0.4815  S=3.17
+      e79kPeEM    corr=0.4730  S=3.02
+   ⇒ **直通**（corr 0.6145 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- QP3RGpJM ----
+   S=1.780 F=1.000 TO=0.2476 tS=1.66 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6846  S=2.45   ★≥0.66
+      0mXKpmYq    corr=0.6246  S=2.55
+      npKGgKLw    corr=0.6205  S=2.42
+      j23Pl0e5    corr=0.6125  S=3.25
+      qMxzlLYK    corr=0.6022  S=2.28
+      YP5OJqjl    corr=0.5974  S=2.18
+   ⇒ **直通**（corr 0.6846 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- QPbLvnnM ----
+   S=1.920 F=1.570 TO=0.1264 tS=0.58 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6671  S=2.27   ★≥0.66
+      O0NP30KR    corr=0.5019  S=2.44
+      883OXpJl    corr=0.4821  S=2.48
+      omL8Mazn    corr=0.4551  S=2.28
+      O0N0R5NY    corr=0.4068  S=2.92
+      O0rZ90n1    corr=0.4007  S=2.82
+   ⇒ **直通**（corr 0.6671 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- XgWv6vNX ----
+   S=1.690 F=1.550 TO=0.1175 tS=0.28 FAIL=[]
+   最高相关 top6：
+      9qV8l13o    corr=0.6777  S=2.27   ★≥0.66
+      ZY07MXgd    corr=0.6286  S=2.46
+      e791WzbO    corr=0.5559  S=2.16
+      58Q7kl1z    corr=0.5146  S=2.14
+      wpjoxbbd    corr=0.4743  S=1.37
+      vRjG1Jzw    corr=0.4661  S=1.79
+   ⇒ **直通**（corr 0.6777 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- XgbY698X ----
+   S=2.190 F=1.050 TO=0.4205 tS=0.08 FAIL=[]
+   最高相关 top6：
+      N1avK6zw    corr=0.6227  S=2.42
+      gJbkQ31Q    corr=0.6005  S=2.37
+      akbjdK26    corr=0.5867  S=2.12
+      O0N0R5NY    corr=0.5797  S=2.92
+      6Xjmjr7G    corr=0.5776  S=2.67
+      zq8Xeo2R    corr=0.5705  S=2.52
+   ⇒ **直通**（corr 0.6227 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- YP5lJKRM ----
+   S=1.740 F=1.550 TO=0.1129 tS=0.78 FAIL=[]
+   最高相关 top6：
+      9qVEA1ZV    corr=0.6713  S=2.46   ★≥0.66
+      e791WzbO    corr=0.6045  S=2.16
+      6Xr2eQaJ    corr=0.5941  S=2.27
+      58p2XdxX    corr=0.5765  S=1.55
+      omL8Mazn    corr=0.5617  S=2.28
+      kqoq0zed    corr=0.5588  S=2.02
+   ⇒ **直通**（corr 0.6713 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- YPbmeJLv ----
+   S=2.210 F=1.240 TO=0.2723 tS=0.4 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.6071  S=2.68
+      LLNlX5nv    corr=0.6034  S=2.51
+      3qXd5vg0    corr=0.5910  S=2.91
+      9qjZ8oZ2    corr=0.5755  S=2.53
+      1YX6MA0M    corr=0.5627  S=3.26
+      O0N0R5NY    corr=0.5615  S=2.92
+   ⇒ **直通**（corr 0.6071 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZY07Rejd ----
+   S=1.720 F=1.050 TO=0.1894 tS=2.14 FAIL=[]
+   最高相关 top6：
+      akLmmvPW    corr=0.6398  S=2.48
+      9qX3M2mq    corr=0.6041  S=2.49
+      9qVrJkYe    corr=0.6008  S=2.29
+      58QVJA9M    corr=0.5965  S=2.15
+      rK59235m    corr=0.5918  S=2.72
+      1YwRK1wW    corr=0.5899  S=2.11
+   ⇒ **直通**（corr 0.6398 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZY07Zw88 ----
+   S=1.850 F=1.520 TO=0.1169 tS=1.45 FAIL=[]
+   最高相关 top6：
+      0mRwgR6k    corr=0.6557  S=2.35
+      ZY07MXgd    corr=0.6523  S=2.46
+      O0N0R5NY    corr=0.6084  S=2.92
+      6XrbGx1L    corr=0.5326  S=2.26
+      RRVLeabj    corr=0.5217  S=1.61
+      e791WzbO    corr=0.5152  S=2.16
+   ⇒ **直通**（corr 0.6557 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- ZYbkV5Q1 ----
+   S=2.200 F=1.170 TO=0.3254 tS=2.82 FAIL=[]
+   最高相关 top6：
+      O0NP30KR    corr=0.6683  S=2.44   ★≥0.66
+      zq8Xeo2R    corr=0.6617  S=2.52   ★≥0.66
+      1YX6MA0M    corr=0.6568  S=3.26
+      58znv2Y1    corr=0.6542  S=2.56
+      0mXm1neK    corr=0.6333  S=2.38
+      akbjdK26    corr=0.6169  S=2.12
+   ⇒ **直通**（corr 0.6683 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- ZYblY8XZ ----
+   S=1.640 F=1.040 TO=0.1817 tS=0.53 FAIL=[]
+   最高相关 top6：
+      kqVp6wnO    corr=0.6739  S=2.51   ★≥0.66
+      0mXm1neK    corr=0.6496  S=2.38
+      6Xr2eQaJ    corr=0.6452  S=2.27
+      npdpEJ3l    corr=0.6406  S=2.52
+      zq8Xeo2R    corr=0.6101  S=2.52
+      RRVLeabj    corr=0.5976  S=1.61
+   ⇒ **直通**（corr 0.6739 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- blbWNYpK ----
+   S=2.030 F=1.720 TO=0.1641 tS=1.6 FAIL=[]
+   最高相关 top6：
+      E5v15JPJ    corr=0.6808  S=1.67   ★≥0.66
+      O0N55k1Y    corr=0.6709  S=2.87   ★≥0.66
+      E5prgA1K    corr=0.6694  S=2.57   ★≥0.66
+      zqYmRz0E    corr=0.6198  S=2.16
+      MPaPe0oo    corr=0.6086  S=2.30
+      akLqqmm6    corr=0.5983  S=1.71
+   ⇒ **直通**（corr 0.6808 < 0.685）
+   超 0.66=3  超 0.685=0  超 0.80=0
+---- gJQ22APl ----
+   S=1.940 F=1.190 TO=0.2054 tS=2.04 FAIL=[]
+   最高相关 top6：
+      npKGgKLw    corr=0.5847  S=2.42
+      YP5OJqjl    corr=0.5189  S=2.18
+      akLp3pzW    corr=0.4976  S=2.78
+      E5vx6NJP    corr=0.4954  S=2.45
+      j23Pl0e5    corr=0.4951  S=3.25
+      qMxzlLYK    corr=0.4797  S=2.28
+   ⇒ **直通**（corr 0.5847 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- gJbK2Ong ----
+   S=2.190 F=1.330 TO=0.2546 tS=0.16 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.6781  S=2.68   ★≥0.66
+      kqVp6wnO    corr=0.6332  S=2.51
+      O0N0R5NY    corr=0.6309  S=2.92
+      wpZJX6m5    corr=0.6095  S=3.10
+      LLNlX5nv    corr=0.6060  S=2.51
+      zq8Xeo2R    corr=0.6053  S=2.52
+   ⇒ **直通**（corr 0.6781 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- j23em7jO ----
+   S=1.550 F=1.120 TO=0.2006 tS=1.47 FAIL=[]
+   最高相关 top6：
+      e791WzbO    corr=0.6455  S=2.16
+      N1QJPJE8    corr=0.6328  S=2.47
+      WjPexbLZ    corr=0.6175  S=2.32
+      9qV8l13o    corr=0.5949  S=2.27
+      e79PvPpE    corr=0.5695  S=3.13
+      6Xr2eQaJ    corr=0.5640  S=2.27
+   ⇒ **直通**（corr 0.6455 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- kqVAwNp6 ----
+   S=1.850 F=1.180 TO=0.1891 tS=2.11 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6692  S=2.45   ★≥0.66
+      akLp3pzW    corr=0.6504  S=2.78
+      qMxzlLYK    corr=0.6432  S=2.28
+      0mXKpmYq    corr=0.6234  S=2.55
+      npKGgKLw    corr=0.6093  S=2.42
+      j23Pl0e5    corr=0.5855  S=3.25
+   ⇒ **直通**（corr 0.6692 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- kqoXwPjK ----
+   S=2.330 F=1.400 TO=0.2620 tS=0.04 FAIL=[]
+   最高相关 top6：
+      LLNlX5nv    corr=0.6577  S=2.51
+      zq8jl99K    corr=0.6327  S=2.68
+      1YX6MA0M    corr=0.6313  S=3.26
+      O0N0R5NY    corr=0.6175  S=2.92
+      wpZJX6m5    corr=0.6108  S=3.10
+      gJbkQ31Q    corr=0.6022  S=2.37
+   ⇒ **直通**（corr 0.6577 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgNQEkx ----
+   S=2.050 F=1.500 TO=0.1971 tS=-0.01 FAIL=[]
+   最高相关 top6：
+      e79PvPpE    corr=0.5749  S=3.13
+      0mR2K6lr    corr=0.5671  S=3.45
+      N1QJPJE8    corr=0.5393  S=2.47
+      6Xr2eQaJ    corr=0.4711  S=2.27
+      MPakMndk    corr=0.4704  S=2.62
+      E5vx6NJP    corr=0.4622  S=2.45
+   ⇒ **直通**（corr 0.5749 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgvnAlE ----
+   S=1.730 F=1.110 TO=0.1459 tS=0.74 FAIL=[]
+   最高相关 top6：
+      YP57jVzo    corr=0.6512  S=2.14
+      O0N55k1Y    corr=0.6498  S=2.87
+      N1QJPJE8    corr=0.6204  S=2.47
+      6Xr2eQaJ    corr=0.6176  S=2.27
+      9qV8l13o    corr=0.5957  S=2.27
+      npdpEJ3l    corr=0.5726  S=2.52
+   ⇒ **直通**（corr 0.6512 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLgvnV36 ----
+   S=1.710 F=1.100 TO=0.1473 tS=2.18 FAIL=[]
+   最高相关 top6：
+      kqoq0zed    corr=0.6505  S=2.02
+      omL8Mazn    corr=0.6454  S=2.28
+      LLNXEe7L    corr=0.6452  S=2.30
+      akLp3pzW    corr=0.6257  S=2.78
+      kqVp6wnO    corr=0.6217  S=2.51
+      qMxzlLYK    corr=0.6194  S=2.28
+   ⇒ **直通**（corr 0.6505 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLmzaLaE ----
+   S=1.790 F=1.350 TO=0.1254 tS=2.59 FAIL=[]
+   最高相关 top6：
+      qMxzlLYK    corr=0.5264  S=2.28
+      e79PvPpE    corr=0.4891  S=3.13
+      j23Pl0e5    corr=0.4869  S=3.25
+      N1QJPJE8    corr=0.4759  S=2.47
+      0mR2K6lr    corr=0.4617  S=3.45
+      rK59235m    corr=0.4601  S=2.72
+   ⇒ **直通**（corr 0.5264 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- npK7JLkM ----
+   S=1.630 F=1.110 TO=0.1208 tS=1.73 FAIL=[]
+   最高相关 top6：
+      0mRwgR6k    corr=0.5285  S=2.35
+      O0N0R5NY    corr=0.5025  S=2.92
+      QP3V2bVG    corr=0.4746  S=2.58
+      QP7z069Q    corr=0.4086  S=1.64
+      ZY07MXgd    corr=0.4075  S=2.46
+      O0rZ90n1    corr=0.4043  S=2.82
+   ⇒ **直通**（corr 0.5285 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- omLza7m5 ----
+   S=1.720 F=1.140 TO=0.1536 tS=1.86 FAIL=[]
+   最高相关 top6：
+      rK59235m    corr=0.4881  S=2.72
+      N1QJPJE8    corr=0.4878  S=2.47
+      e79PvPpE    corr=0.4757  S=3.13
+      j23Pl0e5    corr=0.4653  S=3.25
+      0mR2K6lr    corr=0.4514  S=3.45
+      e791WzbO    corr=0.4361  S=2.16
+   ⇒ **直通**（corr 0.4881 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- pwRYrNng ----
+   S=1.590 F=1.040 TO=0.0726 tS=1.08 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.4351  S=2.68
+      1YX6MA0M    corr=0.4096  S=3.26
+      mLmwpAKK    corr=0.4042  S=2.78
+      akbjdK26    corr=0.4023  S=2.12
+      qMW92Az2    corr=0.4023  S=2.32
+      KPNwG8Oj    corr=0.3866  S=2.58
+   ⇒ **直通**（corr 0.4351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- rK50GvOm ----
+   S=1.730 F=1.600 TO=0.0931 tS=0.53 FAIL=[]
+   最高相关 top6：
+      6Xr2eQaJ    corr=0.6685  S=2.27   ★≥0.66
+      RRVLeabj    corr=0.6677  S=1.61   ★≥0.66
+      e791WzbO    corr=0.6220  S=2.16
+      6XrbGx1L    corr=0.5656  S=2.26
+      kqoq0zed    corr=0.5634  S=2.02
+      58p2XdxX    corr=0.5545  S=1.55
+   ⇒ **直通**（corr 0.6685 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- rK5dLZxj ----
+   S=2.210 F=1.840 TO=0.1319 tS=-0.48 FAIL=[]
+   最高相关 top6：
+      kqVJXpAl    corr=0.6472  S=2.43
+      RRV5l5Go    corr=0.5867  S=2.39
+      O0rZ90n1    corr=0.5613  S=2.82
+      XgWnklXa    corr=0.4708  S=2.44
+      QPbPpA8W    corr=0.4529  S=2.58
+      9qVEA1ZV    corr=0.4414  S=2.46
+   ⇒ **直通**（corr 0.6472 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- vRr3mV5z ----
+   S=1.980 F=1.430 TO=0.1447 tS=1.76 FAIL=[]
+   最高相关 top6：
+      Vka1Nar0    corr=0.6520  S=2.55
+      levb0dQx    corr=0.5939  S=2.34
+      6Xjmjr7G    corr=0.5880  S=2.67
+      gJbkQ31Q    corr=0.5618  S=2.37
+      wpZJX6m5    corr=0.5596  S=3.10
+      E5prgA1K    corr=0.5221  S=2.57
+   ⇒ **直通**（corr 0.6520 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- wpY9qNxp ----
+   S=2.130 F=1.360 TO=0.2056 tS=1.67 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.6075  S=2.82
+      wpYgReRx    corr=0.4971  S=1.54
+      e79PvPpE    corr=0.4900  S=3.13
+      RRV5l5Go    corr=0.4869  S=2.39
+      e791WzbO    corr=0.4825  S=2.16
+      0mR2K6lr    corr=0.4815  S=3.45
+   ⇒ **直通**（corr 0.6075 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- wpZzQvQ6 ----
+   S=1.600 F=1.100 TO=0.1247 tS=2.39 FAIL=[]
+   最高相关 top6：
+      j23Pl0e5    corr=0.4880  S=3.25
+      qMxzlLYK    corr=0.4742  S=2.28
+      YP5OJqjl    corr=0.4593  S=2.18
+      N1QJPJE8    corr=0.4273  S=2.47
+      rK59235m    corr=0.4250  S=2.72
+      ZYbPbXj1    corr=0.4188  S=2.59
+   ⇒ **直通**（corr 0.4880 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- xA3OQlzw ----
+   S=2.060 F=1.480 TO=0.2810 tS=1.83 FAIL=[]
+   最高相关 top6：
+      9qX3M2mq    corr=0.6694  S=2.49   ★≥0.66
+      1YwRK1wW    corr=0.6409  S=2.11
+      rKOrk5Qa    corr=0.6282  S=2.58
+      kqjpepz8    corr=0.6195  S=2.74
+      YP5OJqjl    corr=0.5952  S=2.18
+      ZYbPbXj1    corr=0.5889  S=2.59
+   ⇒ **直通**（corr 0.6694 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- xA3zxA3w ----
+   S=1.320 F=1.040 TO=0.1769 tS=0.91 FAIL=[]
+   最高相关 top6：
+      YPbLZK2W    corr=0.6826  S=2.15   ★≥0.66
+      1YwRK1wW    corr=0.5769  S=2.11
+      9qX3M2mq    corr=0.5674  S=2.49
+      rKOrk5Qa    corr=0.5381  S=2.58
+      0mXKpmYq    corr=0.5286  S=2.55
+      N1axM3mp    corr=0.5244  S=0.00
+   ⇒ **直通**（corr 0.6826 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+
+==== 09-22 13:39:28  池 114 条（PnL 113）====
+
+==== 09-22 13:40:29  池 114 条（PnL 113）====
+---- 1YX12gvK ----
+   S=2.310 F=1.680 TO=0.1579 tS=1.61 FAIL=[]
+   最高相关 top6：
+      LLNXEe7L    corr=0.6551  S=2.30
+      akbjdK26    corr=0.6374  S=2.12
+      e79PvPpE    corr=0.6238  S=3.13
+      6Xr2eQaJ    corr=0.6217  S=2.27
+      kqoq0zed    corr=0.6171  S=2.02
+      QPbP6aRQ    corr=0.6107  S=2.51
+   ⇒ **直通**（corr 0.6551 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 1YXmjPNM ----
+   S=1.860 F=1.430 TO=0.0996 tS=1.21 FAIL=[]
+   最高相关 top6：
+      qMxzlLYK    corr=0.6803  S=2.28   ★≥0.66
+      akLp3pzW    corr=0.5844  S=2.78
+      npKGgKLw    corr=0.5747  S=2.42
+      E5vx6NJP    corr=0.5660  S=2.45
+      kqoq0zed    corr=0.5150  S=2.02
+      0mXKpmYq    corr=0.4957  S=2.55
+   ⇒ **直通**（corr 0.6803 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- 1YxO8gpM ----
+   S=2.170 F=1.070 TO=0.4752 tS=0.85 FAIL=[]
+   最高相关 top6：
+      le8EAJLO    corr=0.6047  S=2.73
+      kqVJXpAl    corr=0.5887  S=2.43
+      akLmmvPW    corr=0.5774  S=2.48
+      rK59235m    corr=0.5748  S=2.72
+      e79kPeEM    corr=0.5635  S=3.02
+      qMW92Az2    corr=0.5589  S=2.32
+   ⇒ **直通**（corr 0.6047 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 2rw8Pn8Y ----
+   S=1.920 F=1.600 TO=0.2035 tS=1.38 FAIL=[]
+   最高相关 top6：
+      N1axM3mp    corr=0.6577  S=0.00
+      YPbLZK2W    corr=0.6437  S=2.15
+      le8KY21N    corr=0.6110  S=2.14
+      QP3V2bVG    corr=0.6006  S=2.58
+      ZYbPbXj1    corr=0.5854  S=2.59
+      le8EMjoN    corr=0.5672  S=2.79
+   ⇒ **直通**（corr 0.6577 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 3q92zYp0 ----
+   S=1.390 F=1.000 TO=0.0806 tS=0.98 FAIL=[]
+   最高相关 top6：
+      YP5OJqjl    corr=0.6273  S=2.18
+      E5vx6NJP    corr=0.5490  S=2.45
+      rKOrk5Qa    corr=0.5464  S=2.58
+      le8EMjoN    corr=0.5143  S=2.79
+      YPbLZK2W    corr=0.5029  S=2.15
+      levpXXGl    corr=0.4999  S=2.31
+   ⇒ **直通**（corr 0.6273 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 58Qj07Yk ----
+   S=2.030 F=1.290 TO=0.1768 tS=1.07 FAIL=[]
+   最高相关 top6：
+      XgWnklXa    corr=0.6437  S=2.44
+      O0rZ90n1    corr=0.6243  S=2.82
+      0mRwgR6k    corr=0.6153  S=2.35
+      MP1mQRro    corr=0.5201  S=1.91
+      N1avK6zw    corr=0.5167  S=2.42
+      j23nOrVW    corr=0.4979  S=1.92
+   ⇒ **直通**（corr 0.6437 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 58zNK8d6 ----
+   S=1.990 F=1.220 TO=0.2228 tS=2.19 FAIL=[]
+   最高相关 top6：
+      zq8Xeo2R    corr=0.6668  S=2.52   ★≥0.66
+      O0NP30KR    corr=0.6621  S=2.44   ★≥0.66
+      58znv2Y1    corr=0.6546  S=2.56
+      O0N0R5NY    corr=0.6373  S=2.92
+      akbjdK26    corr=0.6309  S=2.12
+      0mXm1neK    corr=0.6296  S=2.38
+   ⇒ **直通**（corr 0.6668 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- 6Xjvoowp ----
+   S=1.580 F=1.230 TO=0.0786 tS=0.63 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6222  S=2.27
+      RRVLeabj    corr=0.4871  S=1.61
+      ZY07MXgd    corr=0.4564  S=2.46
+      9qVrJkYe    corr=0.4419  S=2.29
+      6XrbGx1L    corr=0.4363  S=2.26
+      QP7z069Q    corr=0.4256  S=1.64
+   ⇒ **直通**（corr 0.6222 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 78ZjkVnZ ----
+   S=1.720 F=1.200 TO=0.1826 tS=1.85 FAIL=[]
+   最高相关 top6：
+      akLqqmm6    corr=0.6712  S=1.71   ★≥0.66
+      1YwRK1wW    corr=0.5773  S=2.11
+      88jKeENW    corr=0.5433  S=2.39
+      9qX3M2mq    corr=0.5189  S=2.49
+      A10a7pdY    corr=0.5078  S=2.32
+      58QVJA9M    corr=0.4702  S=2.15
+   ⇒ **直通**（corr 0.6712 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- 883GVZvW ----
+   S=1.560 F=1.270 TO=0.1265 tS=0.2 FAIL=[]
+   最高相关 top6：
+      9qVEA1ZV    corr=0.6363  S=2.46
+      RRV5l5Go    corr=0.6295  S=2.39
+      e791WzbO    corr=0.5487  S=2.16
+      kqoq0zed    corr=0.5378  S=2.02
+      6Xr2eQaJ    corr=0.5344  S=2.27
+      O0rZ90n1    corr=0.5131  S=2.82
+   ⇒ **直通**（corr 0.6363 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 9qVE11b2 ----
+   S=1.990 F=1.370 TO=0.1675 tS=1.41 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.5793  S=2.82
+      wpYgReRx    corr=0.5021  S=1.54
+      e791WzbO    corr=0.5010  S=2.16
+      RRV5l5Go    corr=0.5001  S=2.39
+      e79PvPpE    corr=0.4866  S=3.13
+      0mR2K6lr    corr=0.4694  S=3.45
+   ⇒ **直通**（corr 0.5793 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 9qVd5b6r ----
+   S=1.890 F=1.300 TO=0.2377 tS=2.38 FAIL=[]
+   最高相关 top6：
+      qMW92Az2    corr=0.6538  S=2.32
+      N1QxNQK7    corr=0.6180  S=2.06
+      1YwRK1wW    corr=0.6178  S=2.11
+      9qX3M2mq    corr=0.6154  S=2.49
+      akLqqmm6    corr=0.6121  S=1.71
+      gJbk9V1K    corr=0.5962  S=2.82
+   ⇒ **直通**（corr 0.6538 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 9qjL8AZ2 ----
+   S=1.800 F=1.440 TO=0.1309 tS=0.65 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.6706  S=2.27   ★≥0.66
+      O0NP30KR    corr=0.5364  S=2.44
+      O0N0R5NY    corr=0.4826  S=2.92
+      npdpEJ3l    corr=0.4786  S=2.52
+      kqVp6wnO    corr=0.4674  S=2.51
+      RRVLeabj    corr=0.4597  S=1.61
+   ⇒ **直通**（corr 0.6706 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- 9qjLdVer ----
+   S=1.690 F=1.160 TO=0.1662 tS=0.87 FAIL=[]
+   最高相关 top6：
+      YPbGEV3q    corr=0.5958  S=2.27
+      RRVLeabj    corr=0.4649  S=1.61
+      6XrbGx1L    corr=0.4335  S=2.26
+      58QVJA9M    corr=0.4196  S=2.15
+      npdpEJ3l    corr=0.4077  S=2.52
+      O0N0R5NY    corr=0.4063  S=2.92
+   ⇒ **直通**（corr 0.5958 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 9qjg5bNx ----
+   S=2.200 F=1.170 TO=0.3254 tS=2.82 FAIL=[]
+   最高相关 top6：
+      O0NP30KR    corr=0.6683  S=2.44   ★≥0.66
+      zq8Xeo2R    corr=0.6617  S=2.52   ★≥0.66
+      1YX6MA0M    corr=0.6568  S=3.26
+      58znv2Y1    corr=0.6542  S=2.56
+      0mXm1neK    corr=0.6333  S=2.38
+      akbjdK26    corr=0.6169  S=2.12
+   ⇒ **直通**（corr 0.6683 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+
+==== 09-22 13:44:40  池 114 条（PnL 113）====
+---- rKOoora9 ----
+   S=2.440 F=1.520 TO=0.2572 tS=2.14 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8540  S=1.91   ★≥0.66
+      MPakMndk    corr=0.7100  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6461  S=2.19
+      KPNwG8Oj    corr=0.5009  S=2.58
+      gJbk9V1K    corr=0.4847  S=2.82
+      N1avK6zw    corr=0.4713  S=2.42
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.442  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- levVV7wl ----
+   S=2.310 F=1.780 TO=0.1572 tS=1.87 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8930  S=1.91   ★≥0.66
+      MPakMndk    corr=0.7359  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6694  S=2.19   ★≥0.66
+      KPNwG8Oj    corr=0.4902  S=2.58
+      kqoq0zed    corr=0.4734  S=2.02
+      gJQMxZoJ    corr=0.4643  S=2.67
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.572  ✗ 未过
+   超 0.66=3  超 0.685=2  超 0.80=1
+---- O0Npprpg ----
+   S=2.230 F=1.770 TO=0.1491 tS=1.96 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.9326  S=1.91   ★≥0.66
+      MPakMndk    corr=0.7303  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6554  S=2.19
+      KPNwG8Oj    corr=0.4991  S=2.58
+      gJbk9V1K    corr=0.4851  S=2.82
+      kqoq0zed    corr=0.4780  S=2.02
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.652  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- E5pww60P ----
+   S=2.390 F=1.550 TO=0.2430 tS=2.24 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8920  S=1.91   ★≥0.66
+      MPakMndk    corr=0.7039  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.6322  S=2.19
+      KPNwG8Oj    corr=0.5083  S=2.58
+      gJbk9V1K    corr=0.5047  S=2.82
+      3qXd5vg0    corr=0.4777  S=2.91
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.492  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- MPappZY9 ----
+   S=2.060 F=1.430 TO=0.1995 tS=1.9 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8909  S=1.91   ★≥0.66
+      MPakMndk    corr=0.6986  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.5966  S=2.19
+      kqoq0zed    corr=0.5189  S=2.02
+      gJbk9V1K    corr=0.4538  S=2.82
+      omL8Mazn    corr=0.4461  S=2.28
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.822  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- akbdd8j6 ----
+   S=2.100 F=1.160 TO=0.3245 tS=1.86 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8448  S=1.91   ★≥0.66
+      MPakMndk    corr=0.6728  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.5704  S=2.19
+      kqoq0zed    corr=0.4967  S=2.02
+      gJbk9V1K    corr=0.4723  S=2.82
+      KPNwG8Oj    corr=0.4434  S=2.58
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.782  ✗ 未过
+   超 0.66=2  超 0.685=1  超 0.80=1
+---- Xgbpngm0 ----
+   S=2.130 F=1.410 TO=0.2277 tS=1.98 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8757  S=1.91   ★≥0.66
+      MPakMndk    corr=0.6941  S=2.62   ★≥0.66
+      1YXJeQoW    corr=0.5828  S=2.19
+      kqoq0zed    corr=0.5087  S=2.02
+      gJbk9V1K    corr=0.4567  S=2.82
+      omL8Mazn    corr=0.4414  S=2.28
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.752  ✗ 未过
+   超 0.66=2  超 0.685=2  超 0.80=1
+---- xA3xkgjN ----
+   S=2.100 F=1.080 TO=0.3747 tS=2.01 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.8094  S=1.91   ★≥0.66
+      MPakMndk    corr=0.6533  S=2.62
+      1YXJeQoW    corr=0.5426  S=2.19
+      kqoq0zed    corr=0.4774  S=2.02
+      gJbk9V1K    corr=0.4720  S=2.82
+      KPNwG8Oj    corr=0.4461  S=2.58
+   ⇒ 走豁免：need=1.10x1.91=2.101（对手 npdOdMdz）；gap = +0.001  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- wpZRlw6l ----
+   S=2.010 F=1.540 TO=0.2082 tS=1.68 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.7399  S=1.91   ★≥0.66
+      MPakMndk    corr=0.6448  S=2.62
+      kqoq0zed    corr=0.5825  S=2.02
+      1YXJeQoW    corr=0.5663  S=2.19
+      omL8Mazn    corr=0.5080  S=2.28
+      gJbk9V1K    corr=0.4894  S=2.82
+   ⇒ 走豁免：need=1.10x1.91=2.101（对手 npdOdMdz）；gap = +0.091  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+---- O0NpZnA1 ----
+   S=2.070 F=1.280 TO=0.3424 tS=1.89 FAIL=[]
+   最高相关 top6：
+      npdOdMdz    corr=0.6792  S=1.91   ★≥0.66
+      MPakMndk    corr=0.5992  S=2.62
+      kqoq0zed    corr=0.5353  S=2.02
+      N1QxNQK7    corr=0.5314  S=2.06
+      1YXJeQoW    corr=0.5262  S=2.19
+      gJbk9V1K    corr=0.4975  S=2.82
+   ⇒ **直通**（corr 0.6792 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- LLNp1RXv ----
+   S=2.080 F=1.550 TO=0.2007 tS=1.26 FAIL=[]
+   最高相关 top6：
+      MPakMndk    corr=0.7973  S=2.62   ★≥0.66
+      88jKeENW    corr=0.6129  S=2.39
+      QPbPpA8W    corr=0.5620  S=2.58
+      e79PvPpE    corr=0.5275  S=3.13
+      wpYgReRx    corr=0.5168  S=1.54
+      kqVJXpAl    corr=0.5146  S=2.43
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.802  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+---- akbdnQ59 ----
+   S=2.260 F=1.410 TO=0.3129 tS=1.58 FAIL=[]
+   最高相关 top6：
+      MPakMndk    corr=0.7825  S=2.62   ★≥0.66
+      88jKeENW    corr=0.6187  S=2.39
+      qMW92Az2    corr=0.5499  S=2.32
+      QPbPpA8W    corr=0.5490  S=2.58
+      KPNwG8Oj    corr=0.5347  S=2.58
+      e79PvPpE    corr=0.5315  S=3.13
+   ⇒ 走豁免：need=1.10x2.62=2.882（对手 MPakMndk）；gap = +0.622  ✗ 未过
+   超 0.66=1  超 0.685=1  超 0.80=0
+
+==== 09-23 12:11:38  池 117 条（PnL 116）====
+---- ZY07Zw88 ----
+   S=1.850 F=1.520 TO=0.1169 tS=1.45 FAIL=[]
+   最高相关 top6：
+      0mRwgR6k    corr=0.6557  S=2.35
+      ZY07MXgd    corr=0.6523  S=2.46
+      O0N0R5NY    corr=0.6084  S=2.92
+      6XrbGx1L    corr=0.5326  S=2.26
+      RRVLeabj    corr=0.5217  S=1.61
+      e791WzbO    corr=0.5152  S=2.16
+   ⇒ **直通**（corr 0.6557 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- vRr3mV5z ----
+   S=1.980 F=1.430 TO=0.1447 tS=1.76 FAIL=[]
+   最高相关 top6：
+      Vka1Nar0    corr=0.6520  S=2.55
+      levb0dQx    corr=0.5939  S=2.34
+      6Xjmjr7G    corr=0.5880  S=2.67
+      gJbkQ31Q    corr=0.5618  S=2.37
+      wpZJX6m5    corr=0.5596  S=3.10
+      E5prgA1K    corr=0.5221  S=2.57
+   ⇒ **直通**（corr 0.6520 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 9qVE11b2 ----
+   S=1.990 F=1.370 TO=0.1675 tS=1.41 FAIL=[]
+   最高相关 top6：
+      O0rZ90n1    corr=0.5793  S=2.82
+      wpYgReRx    corr=0.5021  S=1.54
+      e791WzbO    corr=0.5010  S=2.16
+      RRV5l5Go    corr=0.5001  S=2.39
+      e79PvPpE    corr=0.4866  S=3.13
+      0mR2K6lr    corr=0.4694  S=3.45
+   ⇒ **直通**（corr 0.5793 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- mLmzaLaE ----
+   S=1.790 F=1.350 TO=0.1254 tS=2.59 FAIL=[]
+   最高相关 top6：
+      qMxzlLYK    corr=0.5264  S=2.28
+      e79PvPpE    corr=0.4891  S=3.13
+      j23Pl0e5    corr=0.4869  S=3.25
+      N1QJPJE8    corr=0.4759  S=2.47
+      0mR2K6lr    corr=0.4617  S=3.45
+      rK59235m    corr=0.4601  S=2.72
+   ⇒ **直通**（corr 0.5264 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 78ZjkVnZ ----
+   S=1.720 F=1.200 TO=0.1826 tS=1.85 FAIL=[]
+   最高相关 top6：
+      akLqqmm6    corr=0.6712  S=1.71   ★≥0.66
+      1YwRK1wW    corr=0.5773  S=2.11
+      88jKeENW    corr=0.5433  S=2.39
+      9qX3M2mq    corr=0.5189  S=2.49
+      A10a7pdY    corr=0.5078  S=2.32
+      58QVJA9M    corr=0.4702  S=2.15
+   ⇒ **直通**（corr 0.6712 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- kqVAwNp6 ----
+   S=1.850 F=1.180 TO=0.1891 tS=2.11 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6692  S=2.45   ★≥0.66
+      akLp3pzW    corr=0.6504  S=2.78
+      qMxzlLYK    corr=0.6432  S=2.28
+      0mXKpmYq    corr=0.6234  S=2.55
+      npKGgKLw    corr=0.6093  S=2.42
+      j23Pl0e5    corr=0.5855  S=3.25
+   ⇒ **直通**（corr 0.6692 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+
+==== 09-24 13:02:55  池 122 条（PnL 121）====
+---- kqVAwNp6 ----
+   S=1.850 F=1.180 TO=0.1891 tS=2.11 FAIL=[]
+   最高相关 top6：
+      E5vx6NJP    corr=0.6692  S=2.45   ★≥0.66
+      akLp3pzW    corr=0.6504  S=2.78
+      qMxzlLYK    corr=0.6432  S=2.28
+      0mXKpmYq    corr=0.6234  S=2.55
+      npKGgKLw    corr=0.6093  S=2.42
+      j23Pl0e5    corr=0.5855  S=3.25
+   ⇒ **直通**（corr 0.6692 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+
+==== 09-24 13:05:22  池 123 条（PnL 122）====
+---- GrdR2wWJ ----
+   S=1.760 F=1.170 TO=0.1638 tS=1.71 FAIL=[]
+   最高相关 top6：
+      kqVAwNp6    corr=0.7960  S=0.00   ★≥0.66
+      Grb30d2Q    corr=0.6959  S=0.00   ★≥0.66
+      E5vx6NJP    corr=0.6351  S=2.45
+      le8EMjoN    corr=0.6210  S=2.79
+      0mXKpmYq    corr=0.6064  S=2.55
+      akLp3pzW    corr=0.5998  S=2.78
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 Grb30d2Q）；gap = -1.760  ★过
+   超 0.66=2  超 0.685=2  超 0.80=0
+
+==== 09-24 13:05:43  池 123 条（PnL 122）====
+---- omLza7m5 ----
+   S=1.720 F=1.140 TO=0.1536 tS=1.86 FAIL=[]
+   最高相关 top6：
+      mLmzaLaE    corr=0.8566  S=0.00   ★≥0.66
+      rK59235m    corr=0.4881  S=2.72
+      N1QJPJE8    corr=0.4878  S=2.47
+      e79PvPpE    corr=0.4757  S=3.13
+      j23Pl0e5    corr=0.4653  S=3.25
+      0mR2K6lr    corr=0.4514  S=3.45
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 mLmzaLaE）；gap = -1.720  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+
+==== 09-24 13:06:17  池 123 条（PnL 122）====
+---- npK7JLkM ----
+   S=1.630 F=1.110 TO=0.1208 tS=1.73 FAIL=[]
+   最高相关 top6：
+      ZY07Zw88    corr=0.7115  S=0.00   ★≥0.66
+      0mRwgR6k    corr=0.5285  S=2.35
+      O0N0R5NY    corr=0.5025  S=2.92
+      QP3V2bVG    corr=0.4746  S=2.58
+      QP7z069Q    corr=0.4086  S=1.64
+      ZY07MXgd    corr=0.4075  S=2.46
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 ZY07Zw88）；gap = -1.630  ★过
+   超 0.66=1  超 0.685=1  超 0.80=0
+
+==== 09-24 13:06:47  池 123 条（PnL 122）====
+---- mLgvnV36 ----
+   S=1.710 F=1.100 TO=0.1473 tS=2.18 FAIL=[]
+   最高相关 top6：
+      kqoq0zed    corr=0.6505  S=2.02
+      omL8Mazn    corr=0.6454  S=2.28
+      LLNXEe7L    corr=0.6452  S=2.30
+      akLp3pzW    corr=0.6257  S=2.78
+      kqVp6wnO    corr=0.6217  S=2.51
+      qMxzlLYK    corr=0.6194  S=2.28
+   ⇒ **直通**（corr 0.6505 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- wpZzQvQ6 ----
+   S=1.600 F=1.100 TO=0.1247 tS=2.39 FAIL=[]
+   最高相关 top6：
+      mLmzaLaE    corr=0.9437  S=0.00   ★≥0.66
+      j23Pl0e5    corr=0.4880  S=3.25
+      qMxzlLYK    corr=0.4742  S=2.28
+      YP5OJqjl    corr=0.4593  S=2.18
+      N1QJPJE8    corr=0.4273  S=2.47
+      rK59235m    corr=0.4250  S=2.72
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 mLmzaLaE）；gap = -1.600  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- ZY07Rejd ----
+   S=1.720 F=1.050 TO=0.1894 tS=2.14 FAIL=[]
+   最高相关 top6：
+      akLmmvPW    corr=0.6398  S=2.48
+      9qX3M2mq    corr=0.6041  S=2.49
+      9qVrJkYe    corr=0.6008  S=2.29
+      58QVJA9M    corr=0.5965  S=2.15
+      rK59235m    corr=0.5918  S=2.72
+      1YwRK1wW    corr=0.5899  S=2.11
+   ⇒ **直通**（corr 0.6398 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- Grba8EgP ----
+   S=1.410 F=1.040 TO=0.1472 tS=2.43 FAIL=[]
+   最高相关 top6：
+      1YwRK1wW    corr=0.4555  S=2.11
+      A10MYm3d    corr=0.4527  S=1.90
+      88jKeENW    corr=0.4478  S=2.39
+      wpYgReRx    corr=0.4442  S=1.54
+      78ZjkVnZ    corr=0.4302  S=0.00
+      e79PvPpE    corr=0.4259  S=3.13
+   ⇒ **直通**（corr 0.4555 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-24 13:08:03  池 124 条（PnL 123）====
+---- ZY07Rejd ----
+   S=1.720 F=1.050 TO=0.1894 tS=2.14 FAIL=[]
+   最高相关 top6：
+      akLmmvPW    corr=0.6398  S=2.48
+      9qX3M2mq    corr=0.6041  S=2.49
+      9qVrJkYe    corr=0.6008  S=2.29
+      58QVJA9M    corr=0.5965  S=2.15
+      rK59235m    corr=0.5918  S=2.72
+      1YwRK1wW    corr=0.5899  S=2.11
+   ⇒ **直通**（corr 0.6398 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-24 13:08:33  池 125 条（PnL 124）====
+---- Grba8EgP ----
+   S=1.410 F=1.040 TO=0.1472 tS=2.43 FAIL=[]
+   最高相关 top6：
+      1YwRK1wW    corr=0.4555  S=2.11
+      A10MYm3d    corr=0.4527  S=1.90
+      88jKeENW    corr=0.4478  S=2.39
+      wpYgReRx    corr=0.4442  S=1.54
+      78ZjkVnZ    corr=0.4302  S=0.00
+      e79PvPpE    corr=0.4259  S=3.13
+   ⇒ **直通**（corr 0.4555 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-24 13:09:04  池 126 条（PnL 125）====
+---- 2rw8Pn8Y ----
+   S=1.920 F=1.600 TO=0.2035 tS=1.38 FAIL=[]
+   最高相关 top6：
+      N1axM3mp    corr=0.6577  S=0.00
+      YPbLZK2W    corr=0.6437  S=2.15
+      le8KY21N    corr=0.6110  S=2.14
+      QP3V2bVG    corr=0.6006  S=2.58
+      ZYbPbXj1    corr=0.5854  S=2.59
+      le8EMjoN    corr=0.5672  S=2.79
+   ⇒ **直通**（corr 0.6577 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-25 21:58:45  池 127 条（PnL 126）====
+---- xA3OQlzw ----
+   S=2.060 F=1.480 TO=0.2810 tS=1.83 FAIL=[]
+   最高相关 top6：
+      2rw8Pn8Y    corr=0.6941  S=0.00   ★≥0.66
+      9qX3M2mq    corr=0.6694  S=2.49   ★≥0.66
+      1YwRK1wW    corr=0.6409  S=2.11
+      rKOrk5Qa    corr=0.6282  S=2.58
+      kqjpepz8    corr=0.6195  S=2.74
+      YP5OJqjl    corr=0.5952  S=2.18
+   ⇒ 走豁免：need=1.10x2.49=2.739（对手 9qX3M2mq）；gap = +0.679  ✗ 未过
+   超 0.66=2  超 0.685=1  超 0.80=0
+---- 1YXmjPNM ----
+   S=1.860 F=1.430 TO=0.0996 tS=1.21 FAIL=[]
+   最高相关 top6：
+      kqVAwNp6    corr=0.7643  S=0.00   ★≥0.66
+      qMxzlLYK    corr=0.6803  S=2.28   ★≥0.66
+      mLgvnV36    corr=0.6485  S=0.00
+      akLp3pzW    corr=0.5844  S=2.78
+      npKGgKLw    corr=0.5747  S=2.42
+      E5vx6NJP    corr=0.5660  S=2.45
+   ⇒ 走豁免：need=1.10x2.28=2.508（对手 qMxzlLYK）；gap = +0.648  ✗ 未过
+   超 0.66=2  超 0.685=1  超 0.80=0
+---- wpY9qNxp ----
+   S=2.130 F=1.360 TO=0.2056 tS=1.67 FAIL=[]
+   最高相关 top6：
+      9qVE11b2    corr=0.9878  S=0.00   ★≥0.66
+      O0rZ90n1    corr=0.6075  S=2.82
+      wpYgReRx    corr=0.4971  S=1.54
+      e79PvPpE    corr=0.4900  S=3.13
+      RRV5l5Go    corr=0.4869  S=2.39
+      e791WzbO    corr=0.4825  S=2.16
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 9qVE11b2）；gap = -2.130  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- A10QMWWw ----
+   S=1.800 F=1.300 TO=0.1371 tS=1.17 FAIL=[]
+   最高相关 top6：
+      9qVE11b2    corr=0.9833  S=0.00   ★≥0.66
+      O0rZ90n1    corr=0.5307  S=2.82
+      e791WzbO    corr=0.5141  S=2.16
+      RRV5l5Go    corr=0.5009  S=2.39
+      wpYgReRx    corr=0.4993  S=1.54
+      e79PvPpE    corr=0.4661  S=3.13
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 9qVE11b2）；gap = -1.800  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- 9qVd5b6r ----
+   S=1.890 F=1.300 TO=0.2377 tS=2.38 FAIL=[]
+   最高相关 top6：
+      qMW92Az2    corr=0.6538  S=2.32
+      N1QxNQK7    corr=0.6180  S=2.06
+      1YwRK1wW    corr=0.6178  S=2.11
+      9qX3M2mq    corr=0.6154  S=2.49
+      akLqqmm6    corr=0.6121  S=1.71
+      gJbk9V1K    corr=0.5962  S=2.82
+   ⇒ **直通**（corr 0.6538 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 58Qj07Yk ----
+   S=2.030 F=1.290 TO=0.1768 tS=1.07 FAIL=[]
+   最高相关 top6：
+      9qVE11b2    corr=0.7543  S=0.00   ★≥0.66
+      XgWnklXa    corr=0.6437  S=2.44
+      O0rZ90n1    corr=0.6243  S=2.82
+      0mRwgR6k    corr=0.6153  S=2.35
+      MP1mQRro    corr=0.5201  S=1.91
+      N1avK6zw    corr=0.5167  S=2.42
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 9qVE11b2）；gap = -2.030  ★过
+   超 0.66=1  超 0.685=1  超 0.80=0
+
+==== 09-25 22:00:03  池 127 条（PnL 126）====
+---- gJQ22APl ----
+   S=1.940 F=1.190 TO=0.2054 tS=2.04 FAIL=[]
+   最高相关 top6：
+      kqVAwNp6    corr=0.8276  S=0.00   ★≥0.66
+      npKGgKLw    corr=0.5847  S=2.42
+      mLgvnV36    corr=0.5534  S=0.00
+      YP5OJqjl    corr=0.5189  S=2.18
+      akLp3pzW    corr=0.4976  S=2.78
+      E5vx6NJP    corr=0.4954  S=2.45
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 kqVAwNp6）；gap = -1.940  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- j23em7jO ----
+   S=1.550 F=1.120 TO=0.2006 tS=1.47 FAIL=[]
+   最高相关 top6：
+      e791WzbO    corr=0.6455  S=2.16
+      N1QJPJE8    corr=0.6328  S=2.47
+      WjPexbLZ    corr=0.6175  S=2.32
+      9qV8l13o    corr=0.5949  S=2.27
+      e79PvPpE    corr=0.5695  S=3.13
+      6Xr2eQaJ    corr=0.5640  S=2.27
+   ⇒ **直通**（corr 0.6455 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- LL9Qvdja ----
+   S=1.650 F=1.040 TO=0.2015 tS=2.31 FAIL=[]
+   最高相关 top6：
+      kqVAwNp6    corr=0.8959  S=0.00   ★≥0.66
+      YP5OJqjl    corr=0.5760  S=2.18
+      0mXKpmYq    corr=0.5688  S=2.55
+      Grb30d2Q    corr=0.5670  S=0.00
+      E5vx6NJP    corr=0.5619  S=2.45
+      le8EMjoN    corr=0.5069  S=2.79
+   ⇒ 走豁免：need=1.10x0.00=0.000（对手 kqVAwNp6）；gap = -1.650  ★过
+   超 0.66=1  超 0.685=1  超 0.80=1
+---- pwRYrNng ----
+   S=1.590 F=1.040 TO=0.0726 tS=1.08 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.4351  S=2.68
+      1YX6MA0M    corr=0.4096  S=3.26
+      mLmwpAKK    corr=0.4042  S=2.78
+      akbjdK26    corr=0.4023  S=2.12
+      qMW92Az2    corr=0.4023  S=2.32
+      KPNwG8Oj    corr=0.3866  S=2.58
+   ⇒ **直通**（corr 0.4351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- 58zNK8d6 ----
+   S=1.990 F=1.220 TO=0.2228 tS=2.19 FAIL=[]
+   最高相关 top6：
+      mLgvnV36    corr=0.6697  S=0.00   ★≥0.66
+      zq8Xeo2R    corr=0.6668  S=2.52   ★≥0.66
+      O0NP30KR    corr=0.6621  S=2.44   ★≥0.66
+      58znv2Y1    corr=0.6546  S=2.56
+      O0N0R5NY    corr=0.6373  S=2.92
+      akbjdK26    corr=0.6309  S=2.12
+   ⇒ **直通**（corr 0.6697 < 0.685）
+   超 0.66=3  超 0.685=0  超 0.80=0
+---- QP3Ovl3w ----
+   S=2.290 F=1.230 TO=0.4441 tS=4.22 FAIL=[]
+   最高相关 top6：
+      le8EMjoN    corr=0.6145  S=2.79
+      le8KY21N    corr=0.6034  S=2.14
+      j23Pl0e5    corr=0.5739  S=3.25
+      le8EAJLO    corr=0.5637  S=2.73
+      mLgd6nwX    corr=0.4815  S=3.17
+      e79kPeEM    corr=0.4730  S=3.02
+   ⇒ **直通**（corr 0.6145 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- xA3xeVAb ----
+   S=2.480 F=1.260 TO=0.4607 tS=2.51 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.6149  S=2.19
+      58znv2Y1    corr=0.5800  S=2.56
+      6Xjmjr7G    corr=0.5735  S=2.67
+      1YX6MA0M    corr=0.5715  S=3.26
+      gJbk9V1K    corr=0.5369  S=2.82
+      3qXd5vg0    corr=0.5292  S=2.91
+   ⇒ **直通**（corr 0.6149 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+---- MP1dYzQ8 ----
+   S=2.320 F=1.100 TO=0.4830 tS=2.08 FAIL=[]
+   最高相关 top6：
+      le8EAJLO    corr=0.6837  S=2.73   ★≥0.66
+      akLmmvPW    corr=0.6430  S=2.48
+      rK59235m    corr=0.6256  S=2.72
+      N1QJPJE8    corr=0.6198  S=2.47
+      e79kPeEM    corr=0.6093  S=3.02
+      0mR2K6lr    corr=0.5950  S=3.45
+   ⇒ **直通**（corr 0.6837 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+---- ZYbkV5Q1 ----
+   S=2.200 F=1.170 TO=0.3254 tS=2.82 FAIL=[]
+   最高相关 top6：
+      O0NP30KR    corr=0.6683  S=2.44   ★≥0.66
+      zq8Xeo2R    corr=0.6617  S=2.52   ★≥0.66
+      1YX6MA0M    corr=0.6568  S=3.26
+      58znv2Y1    corr=0.6542  S=2.56
+      mLgvnV36    corr=0.6372  S=0.00
+      0mXm1neK    corr=0.6333  S=2.38
+   ⇒ **直通**（corr 0.6683 < 0.685）
+   超 0.66=2  超 0.685=0  超 0.80=0
+---- N1axjm6e ----
+   S=1.490 F=1.030 TO=0.2692 tS=1.44 FAIL=[]
+   最高相关 top6：
+      2rw8Pn8Y    corr=0.8489  S=0.00   ★≥0.66
+      YPbLZK2W    corr=0.6771  S=2.15   ★≥0.66
+      N1axM3mp    corr=0.6474  S=0.00
+      le8EMjoN    corr=0.5743  S=2.79
+      le8KY21N    corr=0.5707  S=2.14
+      YP5OJqjl    corr=0.5292  S=2.18
+   ⇒ 走豁免：need=1.10x2.15=2.365（对手 YPbLZK2W）；gap = +0.875  ✗ 未过
+   超 0.66=2  超 0.685=1  超 0.80=1
+
+==== 09-26 12:07:06  池 132 条（PnL 131）====
+---- pwRYrNng ----
+   S=1.590 F=1.040 TO=0.0726 tS=1.08 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.4351  S=2.68
+      1YX6MA0M    corr=0.4096  S=3.26
+      mLmwpAKK    corr=0.4042  S=2.78
+      akbjdK26    corr=0.4023  S=2.12
+      qMW92Az2    corr=0.4023  S=2.32
+      KPNwG8Oj    corr=0.3866  S=2.58
+   ⇒ **直通**（corr 0.4351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-26 12:07:08  池 132 条（PnL 131）====
+---- MP1dYzQ8 ----
+   S=2.320 F=1.100 TO=0.4830 tS=2.08 FAIL=[]
+   最高相关 top6：
+      le8EAJLO    corr=0.6837  S=2.73   ★≥0.66
+      akLmmvPW    corr=0.6430  S=2.48
+      rK59235m    corr=0.6256  S=2.72
+      N1QJPJE8    corr=0.6198  S=2.47
+      e79kPeEM    corr=0.6093  S=3.02
+      0mR2K6lr    corr=0.5950  S=3.45
+   ⇒ **直通**（corr 0.6837 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0
+
+==== 09-26 12:07:10  池 132 条（PnL 131）====
+---- ZYbkV5Q1 ----
+   S=2.200 F=1.170 TO=0.3254 tS=2.82 FAIL=[]
+   最高相关 top6：
+      58zNK8d6    corr=0.9827  S=0.00   ★≥0.66
+      O0NP30KR    corr=0.6683  S=2.44   ★≥0.66
+      zq8Xeo2R    corr=0.6617  S=2.52   ★≥0.66
+      1YX6MA0M    corr=0.6568  S=3.26
+      58znv2Y1    corr=0.6542  S=2.56
+      mLgvnV36    corr=0.6372  S=0.00
+   ⇒ 走豁免：need=1.10x2.52=2.772（对手 zq8Xeo2R）；gap = +0.572  ✗ 未过
+   超 0.66=3  超 0.685=1  超 0.80=1
+
+==== 09-26 12:07:34  池 132 条（PnL 131）====
+---- pwRYrNng ----
+   S=1.590 F=1.040 TO=0.0726 tS=1.08 FAIL=[]
+   最高相关 top6：
+      zq8jl99K    corr=0.4351  S=2.68
+      1YX6MA0M    corr=0.4096  S=3.26
+      mLmwpAKK    corr=0.4042  S=2.78
+      akbjdK26    corr=0.4023  S=2.12
+      qMW92Az2    corr=0.4023  S=2.32
+      KPNwG8Oj    corr=0.3866  S=2.58
+   ⇒ **直通**（corr 0.4351 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-26 12:23:44  池 134 条（PnL 133）====
+---- 9qj835Nd ----
+   S=2.080 F=1.290 TO=0.3173 tS=1.55 FAIL=[]
+   最高相关 top6：
+      N1QJPJE8    corr=0.6515  S=2.47
+      2rw8Pn8Y    corr=0.5429  S=1.92
+      9qX3M2mq    corr=0.5368  S=2.49
+      1YwRK1wW    corr=0.5327  S=2.11
+      QP3V2bVG    corr=0.5238  S=2.58
+      A10MYm3d    corr=0.4963  S=1.90
+   ⇒ **直通**（corr 0.6515 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-26 12:24:17  池 135 条（PnL 134）====
+---- RRb9wk8j ----
+   S=1.910 F=1.120 TO=0.2251 tS=1.87 FAIL=[]
+   最高相关 top6：
+      akLmmvPW    corr=0.5570  S=2.48
+      9qVd5b6r    corr=0.4646  S=1.89
+      A10MYm3d    corr=0.4614  S=1.90
+      e79kPeEM    corr=0.4517  S=3.02
+      9qX3M2mq    corr=0.4508  S=2.49
+      npKGgKLw    corr=0.4483  S=2.42
+   ⇒ **直通**（corr 0.5570 < 0.685）
+   超 0.66=0  超 0.685=0  超 0.80=0
+
+==== 09-26 12:24:52  池 136 条（PnL 135）====
+---- KPNvME8N ----
+   S=2.140 F=1.340 TO=0.2844 tS=1.62 FAIL=[]
+   最高相关 top6：
+      1YXJeQoW    corr=0.6822  S=2.19   ★≥0.66
+      2rwnmPzZ    corr=0.6105  S=2.13
+      npdOdMdz    corr=0.5921  S=1.91
+      xA3xeVAb    corr=0.5681  S=2.48
+      58zNK8d6    corr=0.5472  S=1.99
+      omL8Mazn    corr=0.5305  S=2.28
+   ⇒ **直通**（corr 0.6822 < 0.685）
+   超 0.66=1  超 0.685=0  超 0.80=0

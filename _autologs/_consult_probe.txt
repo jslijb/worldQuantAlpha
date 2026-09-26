@@ -1,0 +1,20 @@
+GET /users/self                                    -> 200  {"id":"LJ49886","email":"jslijb@163.com","telephone":"+8613823554849","firstName":"li","lastName":"jiangbo","fullName":"lijiangbo","gender":"MALE","dateCreated":"2026-08-15T04:59:30-04:00","dateVerified":"2026-08-15T05:00:20-04:00","dateApproved":"2026-08-15T05:00:20-04:00","verified":true,"approved":true,"address":{"street":null,"city":null,"state":null,"postalCode":null,"country":"CN"},"educatio
+GET /users/self/consultant                         -> 403  {"detail":"You do not have permission to perform this action."}
+GET /users/self/onboarding                         -> 405  {"detail":"Method \"GET\" not allowed."}
+GET /users/self/recruitment                        -> 404  {"detail":"Not found."}
+GET /users/self/resume                             -> 404  {"detail":"Not found."}
+GET /users/self/employment                         -> 404  {"detail":"Not found."}
+GET /users/self/progress                           -> 404  {"detail":"Not found."}
+GET /users/self/level                              -> 404  {"detail":"Not found."}
+GET /users/self/events                             -> 404  {"detail":"Not found."}
+GET /users/self/trainings                          -> 404  {"detail":"Not found."}
+GET /onboarding                                    -> 404  {"detail":"Not found."}
+GET /consultant                                    -> 404  {"detail":"Not found."}
+GET /consultants/self                              -> 404  {"detail":"Not found."}
+GET /users/self/referral                           -> 404  {"detail":"Not found."}
+GET /users/self/invitations                        -> 404  {"detail":"Not found."}
+
+== 排行榜自查 ==
+GET /leaderboard?limit=3                           -> 404  {"detail":"Not found."}
+GET /users/self/leaderboard?limit=3                -> 404  {"detail":"Not found."}
+GET /competition/challenge/leaderboard?limit=3     -> 404  {"detail":"Not found."}

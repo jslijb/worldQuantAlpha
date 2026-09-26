@@ -1,0 +1,70 @@
+换池批次 u1000（TOP1000/TOP500）落盘 35 条
+====================================================================================================================================
+cid                        aid        pool        dec      S      F     TO      tS margin | FAIL
+------------------------------------------------------------------------------------------------------------------------------------
+u1000_omL9g8AJ_TOP1        MPakMndk   TOP1000      10  2.620  2.350 0.1655    1.94   16.1 | —
+u1000_KPOvGJRj_TOP1        O0NoOjab   TOP1000      16  2.210  1.990 0.1394    0.59   16.3 | —
+u1000_3qXZGMmO_TOP1        omLV8Zvm   TOP1000      10  2.420  1.940 0.1670    1.53   12.9 | —
+u1000_qMx9ZPaP_TOP1        1YXJeQoW   TOP1000      10  2.190  1.940 0.1229    1.26   15.9 | —
+u1000_qMxM5j1A_TOP1        npd3p8aa   TOP1000      10  2.260  1.920 0.1327    1.56   14.4 | —
+u1000_zqYgYexo_TOP1        KPNk3oRg   TOP1000      14  2.180  1.880 0.1505    0.55   14.8 | —
+u1000_XgbgNwna_TOP1        xA3RANep   TOP1000      10  2.210  1.870 0.1329    1.49   14.3 | —
+u1000_wpY3Yxvd_TOP1        pwR8mgdg   TOP1000      16  2.140  1.870 0.1426    0.42   15.3 | —
+u1000_RRV9brza_TOP1        3qXzbrPO   TOP1000      14  2.190  1.860 0.1536    0.20   14.5 | —
+u1000_A10e0LQY_TOP1        Xgb1Gbex   TOP1000      14  2.160  1.830 0.1536    0.38   14.3 | —
+u1000_Vk6Za7Lw_TOP1        E5pk1gMP   TOP1000      14  2.150  1.830 0.1515    0.45   14.5 | —
+u1000_GrbrQbWZ_TOP1        vRrdwa8G   TOP1000      10  2.230  1.810 0.1486    1.49   13.2 | —
+u1000_Vk6Z6nmw_TOP1        P02vWwPK   TOP1000      14  2.120  1.810 0.1499    0.36   14.6 | —
+u1000_omL9g8AJ_TOP5        pwR8YeWx   TOP500       10  2.120  1.810 0.1704    1.15   14.6 | —
+u1000_vRrRYmxa_TOP1        pwR8wxao   TOP1000      10  2.200  1.800 0.1430    1.46   13.4 | —
+u1000_qMx9ZPaP_TOP5        QPbEMn5G   TOP500       10  1.970  1.770 0.1253    1.18   16.2 | —
+u1000_kqVvoRMP_TOP1        1YXJ9aRQ   TOP1000      14  2.060  1.760 0.1550    0.34   14.6 | —
+u1000_qMxM5j1A_TOP5        xA3RAdGm   TOP500       10  2.030  1.730 0.1374    1.43   14.6 | —
+u1000_blblxz5M_TOP1        d5bdkQOY   TOP1000      10  2.050  1.690 0.1312    0.26   13.6 | —
+u1000_GrbrQbWZ_TOP5        O0NoQKvp   TOP500       10  1.970  1.580 0.1536    1.33   12.8 | —
+u1000_P020P5MM_TOP1        MPakMQOo   TOP1000      10  1.950  1.570 0.1279   -0.11   12.9 | —
+u1000_3qXZGMmO_TOP5        A1NkjxMl   TOP500       10  1.960  1.480 0.1694    1.08   11.4 | —
+u1000_blblxz5M_TOP5        JjNbMdWm   TOP500       10  1.730  1.370 0.1372    0.67   12.6 | —
+u1000_d5b59n6K_TOP5        xA3RAVvJ   TOP500       10  1.550  1.210 0.1245    0.47   12.3 | —
+u1000_XgbgNwna_TOP5        78NJ8pw8   TOP500       10  1.580  1.200 0.1360    0.56   11.6 | —
+u1000_vRrRYmxa_TOP5        KPNkleRx   TOP500       10  1.600  1.180 0.1457    0.63   10.9 | —
+u1000_KPOvGJRj_TOP5        E5pk1Po9   TOP500       16  1.350  0.990 0.1436   -0.04   10.7 | LOW_SHARPE,LOW_FITNESS
+u1000_kqVvoRMP_TOP5        2rwJ0nAN   TOP500       14  1.300  0.910 0.1584   -0.27    9.8 | LOW_SHARPE,LOW_FITNESS
+u1000_zqYgYexo_TOP5        mLmZ3RaE   TOP500       14  1.300  0.890 0.1545   -0.15    9.5 | LOW_SHARPE,LOW_FITNESS
+u1000_A10e0LQY_TOP5        Xgb1GJNz   TOP500       14  1.290  0.880 0.1575   -0.17    9.2 | LOW_SHARPE,LOW_FITNESS
+u1000_RRV9brza_TOP5        omLVp5kk   TOP500       14  1.300  0.880 0.1575   -0.15    9.2 | LOW_SHARPE,LOW_FITNESS
+u1000_Vk6Z6nmw_TOP5        0mXzqY56   TOP500       14  1.270  0.870 0.1536   -0.43    9.4 | LOW_SHARPE,LOW_FITNESS
+u1000_P020P5MM_TOP5        A1NkjQpY   TOP500       10  1.270  0.860 0.1323   -0.08    9.2 | LOW_FITNESS
+u1000_wpY3Yxvd_TOP5        O0NoOEqY   TOP500       16  1.240  0.850 0.1467   -0.16    9.5 | LOW_SHARPE,LOW_FITNESS
+u1000_Vk6Za7Lw_TOP5        d5bdpQVK   TOP500       14  1.250  0.840 0.1553   -0.16    9.1 | LOW_SHARPE,LOW_FITNESS
+
+====================================================================================================================================
+过质量闸门（无FAIL & S+F>=4.0 & tS>=1.25 & TO<=20%）= 7 条
+   u1000_omL9g8AJ_TOP1        MPakMndk   TOP1000   S=2.62 F=2.35 TO=0.1655 tS=1.94 margin=16.1bp
+   u1000_3qXZGMmO_TOP1        omLV8Zvm   TOP1000   S=2.42 F=1.94 TO=0.1670 tS=1.53 margin=12.9bp
+   u1000_qMx9ZPaP_TOP1        1YXJeQoW   TOP1000   S=2.19 F=1.94 TO=0.1229 tS=1.26 margin=15.9bp
+   u1000_qMxM5j1A_TOP1        npd3p8aa   TOP1000   S=2.26 F=1.92 TO=0.1327 tS=1.56 margin=14.4bp
+   u1000_XgbgNwna_TOP1        xA3RANep   TOP1000   S=2.21 F=1.87 TO=0.1329 tS=1.49 margin=14.3bp
+   u1000_GrbrQbWZ_TOP1        vRrdwa8G   TOP1000   S=2.23 F=1.81 TO=0.1486 tS=1.49 margin=13.2bp
+   u1000_vRrRYmxa_TOP1        pwR8wxao   TOP1000   S=2.20 F=1.80 TO=0.1430 tS=1.46 margin=13.4bp
+
+分池统计：TOP1000 17 条（过闸 7 / 带FAIL 0）；TOP500 18 条（过闸 0 / 带FAIL 9）
+
+Fitness 代价（源 TOP3000 → 小池版）：
+  cid                        pool      srcF     newF     跌幅
+  MPakMndk                   TOP1000   3.21     2.35     -0.86
+  O0NoOjab                   TOP1000   3.13     1.99     -1.14
+  omLV8Zvm                   TOP1000   3.21     1.94     -1.27
+  1YXJeQoW                   TOP1000   3.20     1.94     -1.26
+  npd3p8aa                   TOP1000   3.46     1.92     -1.54
+  KPNk3oRg                   TOP1000   3.10     1.88     -1.22
+  xA3RANep                   TOP1000   3.52     1.87     -1.65
+  pwR8mgdg                   TOP1000   3.20     1.87     -1.33
+  3qXzbrPO                   TOP1000   3.09     1.86     -1.23
+  Xgb1Gbex                   TOP1000   3.13     1.83     -1.30
+  E5pk1gMP                   TOP1000   3.14     1.83     -1.31
+  vRrdwa8G                   TOP1000   3.37     1.81     -1.56
+  P02vWwPK                   TOP1000   3.13     1.81     -1.32
+  pwR8YeWx                   TOP500    3.21     1.81     -1.40
+  pwR8wxao                   TOP1000   3.41     1.80     -1.61
+  QPbEMn5G                   TOP500    3.20     1.77     -1.43

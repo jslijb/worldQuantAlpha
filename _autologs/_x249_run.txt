@@ -1,0 +1,20 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+spec 16 条，本次跑 16 条
+x249_00 9qjJbEjx S=0.37 F=0.24 SF=0.61 T=0.1022 R=0.0521 tS=-0.04 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_02 zq8OQE38 S=0.42 F=0.21 SF=0.63 T=0.1158 R=0.032 tS=-0.16 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [pred corr=None] [fail]
+x249_01 1YXJ1RZR S=0.49 F=0.36 SF=0.85 T=0.1059 R=0.0661 tS=0.09 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_04 JjNbmMjl S=-0.56 F=-0.32 SF=-0.88 T=0.048 R=-0.0409 tS=0.07 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_03 d5bdmVqE S=-0.44 F=-0.22 SF=-0.66 T=0.0707 R=-0.031 tS=0.23 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_05 E5pkbo3L S=-0.57 F=-0.33 SF=-0.90 T=0.0549 R=-0.0411 tS=0.1 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_06 ZYbrxWAQ S=-0.73 F=-0.45 SF=-1.18 T=0.0505 R=-0.0485 tS=-0.05 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_07 vRrd9dzr S=0.43 F=0.24 SF=0.67 T=0.1104 R=0.0374 tS=0.12 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_09 kqoQXVOO S=0.59 F=0.38 SF=0.97 T=0.1276 R=0.0531 tS=-0.11 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [pred corr=None] [fail]
+x249_10 d5bdmrWg S=0.36 F=0.2 SF=0.56 T=0.1476 R=0.045 tS=-0.33 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_11 d5bd7pOg S=0.66 F=0.45 SF=1.11 T=0.1079 R=0.0582 tS=0.38 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_12 A1NkaY7W S=-0.24 F=-0.08 SF=-0.32 T=0.1022 R=-0.0148 tS=-0.28 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_13 58zM6OAJ S=0.16 F=0.07 SF=0.23 T=0.0663 R=0.0237 tS=-0.19 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_08 zq8Oo808 S=1.03 F=0.81 SF=1.84 T=0.1198 R=0.0782 tS=0.73 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_14 1YXJmWMM S=-0.75 F=-0.48 SF=-1.23 T=0.0559 R=-0.052 tS=0.08 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+x249_15 9qjJ6Ne9 S=0.53 F=0.3 SF=0.83 T=0.1249 R=0.0411 tS=0.41 FAIL=['LOW_SHARPE', 'LOW_FITNESS', 'LOW_SUB_UNIVERSE_SHARPE'] [pred corr=None] [fail]
+mine_from_spec done

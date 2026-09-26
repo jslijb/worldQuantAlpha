@@ -1,0 +1,54 @@
+operators.json 存在: True
+解析出算子名 66 个
+
+== 目标算子可用性 ==
+  ts_regression          可用
+  ts_skewness            ❌ 未在清单中
+  ts_kurtosis            ❌ 未在清单中
+  ts_co_skewness         ❌ 未在清单中
+  ts_co_kurtosis         ❌ 未在清单中
+  hump                   可用
+  ts_decay_linear        可用
+  quantile               可用
+  ts_rank                可用
+  ts_zscore              可用
+  ts_av_diff             可用
+  ts_std_dev             可用
+  ts_corr                可用
+  bucket                 可用
+  group_rank             可用
+  vec_avg                可用
+  vec_sum                可用
+  ts_min                 ❌ 未在清单中
+  ts_max                 ❌ 未在清单中
+  ts_arg_min             可用
+  ts_arg_max             可用
+  ts_backfill            可用
+  signed_power           可用
+  ts_moment              ❌ 未在清单中
+  ts_entropy             ❌ 未在清单中
+  ts_count_nans          可用
+  ts_scale               可用
+  ts_sum                 可用
+  ts_product             可用
+  ts_median              ❌ 未在清单中
+  ts_quantile            可用
+  ts_returns             ❌ 未在清单中
+  ts_theilsen            ❌ 未在清单中
+  ts_triple_corr         ❌ 未在清单中
+  ts_poly_regression     ❌ 未在清单中
+  ts_vector_neut         ❌ 未在清单中
+  ts_vector_proj         ❌ 未在清单中
+  regression_neut        ❌ 未在清单中
+  trade_when             可用
+  if_else                可用
+  winsorize              可用
+  normalize              可用
+  scale                  可用
+  rank                   可用
+  zscore                 可用
+
+== reg_res 产出 ==
+  _cid=None id=MP1QAz26
+  expr=rank(ts_delay(close, 2) - ts_regression(close, vwap, 60, rettype=3))
+  S=1.71 F=0.85 TO=0.5874 tS=3.07 FAIL=['LOW_FITNESS']

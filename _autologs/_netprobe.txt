@@ -1,0 +1,19 @@
+time=2026-09-20 22:33:58.926528
+cred keys=[]
+--- A) auth 端点连续 6 次 ---
+  #0 401 http=401 dt=21.9s
+  #1 401 http=401 dt=1.0s
+  #2 401 http=401 dt=1.6s
+  #3 401 http=401 dt=1.4s
+  #4 401 http=401 dt=1.4s
+  #5 401 http=401 dt=1.8s
+--- B) 对照：平台首页 / 第三方 ---
+  https://api.worldquantbrain.com/           http=401
+  https://worldquantbrain.com/               http=200
+  https://www.baidu.com/                     http=200
+--- C) 代理环境变量 ---
+  HTTP_PROXY=http://127.0.0.1:60364
+  HTTPS_PROXY=http://127.0.0.1:60364
+  http_proxy=http://127.0.0.1:60364
+  https_proxy=http://127.0.0.1:60364
+  NO_PROXY=(unset)

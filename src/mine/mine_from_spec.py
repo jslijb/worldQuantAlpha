@@ -46,6 +46,12 @@ DECAY = None
 if '--decay' in sys.argv:
     DECAY = int(sys.argv[sys.argv.index('--decay') + 1])
 
+# ---- universe 覆盖（0921 新增）：官方评分原文 `Universe (smaller universes get more score)`
+#      我们 97.9% 的产出是 TOP3000，等于长期拿该项最低分。批量跑小池需要这个开关。
+UNIV = ''
+if '--univ' in sys.argv:
+    UNIV = sys.argv[sys.argv.index('--univ') + 1].upper()
+
 
 def base_settings():
     st = BASE()
@@ -53,6 +59,8 @@ def base_settings():
         st['neutralization'] = NEUT
     if DECAY is not None:
         st['decay'] = DECAY
+    if UNIV:
+        st['universe'] = UNIV
     return st
 
 spec = json.load(open(SPEC, encoding='utf-8'))

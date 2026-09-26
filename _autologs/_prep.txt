@@ -1,0 +1,30 @@
+================================================================================================
+ZYbWbbm8  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=15 trunc=0.08 nan=ON
+  S=2.2200 F=2.0500 TO=0.1176 R=0.1063 DD=0.0299 margin=18.09bp tS=1.7500
+  FAIL=['LOW_SUB_UNIVERSE_SHARPE']
+  expr: group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1"))
+================================================================================================
+npdO71xw  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=10 trunc=0.04 nan=ON
+  S=2.2000 F=1.8500 TO=0.1075 R=0.0886 DD=0.0371 margin=16.48bp tS=1.7600
+  FAIL=[]
+  expr: 1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_delta(close, 5), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)
+================================================================================================
+omL9LYp6  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=10 trunc=0.08 nan=ON
+  S=2.0600 F=1.7200 TO=0.1369 R=0.0954 DD=0.0843 margin=13.94bp tS=1.9700
+  FAIL=[]
+  expr: 1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1"))
+================================================================================================
+WjbWLqXo  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=10 trunc=0.08 nan=ON
+  S=2.1300 F=1.7000 TO=0.1552 R=0.0984 DD=0.0848 margin=12.68bp tS=2.0500
+  FAIL=[]
+  expr: 1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.75*gro
+================================================================================================
+O0N575M7  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=10 trunc=0.04 nan=ON
+  S=2.1100 F=1.7600 TO=0.1024 R=0.0874 DD=0.0342 margin=17.07bp tS=1.8400
+  FAIL=[]
+  expr: 1.5*group_rank(fnd6_pstkl/cap, industry) + group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(-ts_delta(close, 5), industry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), industry) + 0.75*group_rank(-ts_rank(returns, 5), industry)

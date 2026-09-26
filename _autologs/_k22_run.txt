@@ -1,0 +1,28 @@
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+k22u_kqoQ2l2d_unTOP500   WjbpaRPk S=1.55 F=1.03 TO=0.1922 tS=1.04 FAIL=['LOW_SUB_UNIVERSE_SHARPE']
+axis_surgery done
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+k22n_kqoQ2l2d_neINDUSTRY gJb1mA9M S=2.11 F=1.60 TO=0.1729 tS=1.62 FAIL=[]
+k22n_kqoQ2l2d_neMARKET   j2AZn0ao S=1.63 F=1.20 TO=0.1614 tS=1.30 FAIL=[]
+axis_surgery done
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+k22d_kqoQ2l2d_de3        xA3xeVAb S=2.48 F=1.26 TO=0.4607 tS=2.51 FAIL=[]
+k22d_kqoQ2l2d_de6        6XjzbaKE S=2.51 F=1.61 TO=0.2741 tS=2.08 FAIL=[]
+axis_surgery done
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+k22t_kqoQ2l2d_tr0.04     kqo3Qxpd S=2.35 F=1.76 TO=0.1836 tS=1.68 FAIL=[]
+k22t_kqoQ2l2d_tr0.02     ZYbprYPn S=2.35 F=1.76 TO=0.1836 tS=1.68 FAIL=[]
+axis_surgery done
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+r22u_RRV5P0Yn_unTOP500   omLKVQ36 S=1.43 F=1.03 TO=0.1609 tS=0.27 FAIL=['LOW_SUB_UNIVERSE_SHARPE']
+r22u_RRV5P0Yn_unTOP1000  A1NwkYOX S=2.20 F=1.91 TO=0.1540 tS=1.22 FAIL=[]
+axis_surgery done
+D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+g22u_883GYlNo_unTOP1000  MPapkLNo S=1.94 F=1.69 TO=0.1290 tS=0.84 FAIL=[]
+axis_surgery done

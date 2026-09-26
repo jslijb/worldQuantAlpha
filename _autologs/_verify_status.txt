@@ -1,0 +1,7 @@
+j2Az8n0E status=UNSUBMITTED    dateSubmitted=None  S=2.60 F=2.44 tS=2.41 TO=11.3%
+blRmGJ9r status=UNSUBMITTED    dateSubmitted=None  S=2.86 F=2.02 tS=2.69 TO=24.9%
+O0N55k1Y status=ACTIVE         dateSubmitted=2026-09-20T08:26:21-04:00  S=2.87 F=2.31 tS=2.70 TO=23.5%
+E5prgA1K status=ACTIVE         dateSubmitted=2026-09-20T08:24:10-04:00  S=2.57 F=1.86 tS=2.62 TO=27.8%
+O0NP30KR status=ACTIVE         dateSubmitted=2026-09-20T08:15:56-04:00  S=2.44 F=1.88 tS=1.30 TO=17.2%
+
+fetched=400  submitted=103  ACTIVE=103

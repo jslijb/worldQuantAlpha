@@ -1,0 +1,47 @@
+====== 顶层 keys ======
+['id', 'name', 'description', 'universities', 'countries', 'excludedCountries', 'status', 'teamBased', 'startDate', 'endDate', 'signUpStartDate', 'signUpEndDate', 'signUpDate', 'team', 'scoring', 'leaderboard', 'prizeBoard', 'universityBoard', 'submissions', 'faq', 'progress', 'helpText']
+
+====== competition 主体（去掉长文本）======
+id                       challenge
+name                     Challenge - Mainland China
+description              Challenge
+universities             None
+countries                ['CN', 'IN', 'KE', 'NG', 'VN']
+excludedCountries        None
+status                   ACCEPTED
+teamBased                False
+startDate                None
+endDate                  None
+signUpStartDate          None
+signUpEndDate            None
+signUpDate               None
+team                     None
+prizeBoard               False
+universityBoard          False
+submissions              False
+faq                      https://support.worldquantbrain.com/hc/en-us/categories/41765545400087-WQ-Challenge-Country
+
+====== leaderboard ======
+rank                     130
+user                     {'id': 'LJ49886', 'name': None, 'image': {'url': 'https://api.worldquantbrain.com/users/LJ49886/image'}}
+score                    0.58
+daysOfSubmission         25
+isScore                  8636.0
+uniquenessScore          0.69
+university               None
+
+====== scoring ======
+"PERFORMANCE"
+
+====== progress ======
+null
+
+OS count = 112
+
+====== 其他可能的积分接口 ======
+/users/self                                                    -> 200  {"id":"LJ49886","email":"jslijb@163.com","telephone":"+8613823554849","firstName":"li","lastName":"jiangbo","fullName":"lijiangbo","gender":"MALE","dateCreated":"2026-08-15T04:59:30-04:00","dateVerified":"2026-08-15T05:00:20-04:00","dateApproved":"2026-08-15T05:00:20-04:00","verified":true,"approved
+/users/self/competitions                                       -> 200  {"count":1,"next":null,"previous":null,"results":[{"id":"challenge","name":"Challenge - Mainland China","description":"Challenge","universities":null,"countries":["CN","IN","KE","NG","VN"],"excludedCountries":null,"status":"ACCEPTED","teamBased":false,"startDate":null,"endDate":null,"signUpStartDate
+/competitions                                                  -> 200  {"count":11,"next":"https://api.worldquantbrain.com/competitions?limit=10&offset=10","previous":null,"results":[{"id":"challenge","name":"Challenge - Mainland China","description":"Challenge","universities":null,"countries":["CN","IN","KE","NG","VN"],"excludedCountries":null,"status":"ACCEPTED","tea
+/users/self/points                                             -> 404  {"detail":"Not found."}
+/users/self/consultant                                         -> 403  {"detail":"You do not have permission to perform this action."}
+/users/self/level                                              -> 404  {"detail":"Not found."}

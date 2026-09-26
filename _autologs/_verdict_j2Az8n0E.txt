@@ -1,0 +1,193 @@
+POST status = 403
+headers: Retry-After=None Location=None
+
+--- checks (8) ---
+  LOW_SHARPE                     PASS     limit=1.25     value=2.6
+  LOW_FITNESS                    PASS     limit=1.0      value=2.44
+  LOW_TURNOVER                   PASS     limit=0.01     value=0.1127
+  HIGH_TURNOVER                  PASS     limit=0.7      value=0.1127
+  CONCENTRATED_WEIGHT            PASS     limit=None     value=None
+  LOW_SUB_UNIVERSE_SHARPE        PASS     limit=1.13     value=1.65
+  SELF_CORRELATION               FAIL     limit=0.7      value=0.7367
+  MATCHES_COMPETITION            PASS     limit=None     value=None
+
+FAILS = ['SELF_CORRELATION']
+
+selfCorrelated: {"schema": {"name": "selfCorrelation", "title": "Self Correlated", "properties": [{"name": "id", "title": "Id", "type": "string"}, {"name": "name", "title": "Name", "type": "string"}, {"name": "instrumentType", "title": "Instrument Type", "type": "string"}, {"name": "region", "title": "Region", "type": "string"}, {"name": "universe", "title": "Universe", "type": "string"}, {"name": "correlation", "title": "Correlation", "type": "decimal"}, {"name": "sharpe", "title": "Sharpe", "type": "decimal"}, {"name": "returns", "title": "Returns", "type": "percent"}, {"name": "turnover", "title": "Turnover", "type": "percent"}, {"name": "fitness", "title": "Fitness", "type": "decimal"}, {"name": "margin", "title": "Margin", "type": "permyriad"}]}, "records": [["MPaPe0oo", null, "EQUITY", "USA", "TOP3000", 0.7367, 2.3, 0.1003, 0.0996, 2.06, 0.002013], ["omL8Mazn", null, "EQUITY", "USA", "TOP3000", 0.7365, 2.28, 0.1025, 0.1132, 2.06, 0.001812], ["LLNXEe7L", null, "EQUITY", "USA", "TOP3000", 0.7317, 2.3, 0.1196, 0.0944, 2.25, 0.002533], ["kqVp6wnO", null, "EQUITY", "USA", "TOP3000", 0.7184, 2.51, 0.1104, 0.1904, 1.91, 0.00116]], "min": null, "max": 0.7367}
+
+full json:
+{
+ "is": {
+  "checks": [
+   {
+    "name": "LOW_SHARPE",
+    "result": "PASS",
+    "limit": 1.25,
+    "value": 2.6
+   },
+   {
+    "name": "LOW_FITNESS",
+    "result": "PASS",
+    "limit": 1.0,
+    "value": 2.44
+   },
+   {
+    "name": "LOW_TURNOVER",
+    "result": "PASS",
+    "limit": 0.01,
+    "value": 0.1127
+   },
+   {
+    "name": "HIGH_TURNOVER",
+    "result": "PASS",
+    "limit": 0.7,
+    "value": 0.1127
+   },
+   {
+    "name": "CONCENTRATED_WEIGHT",
+    "result": "PASS"
+   },
+   {
+    "name": "LOW_SUB_UNIVERSE_SHARPE",
+    "result": "PASS",
+    "limit": 1.13,
+    "value": 1.65
+   },
+   {
+    "name": "SELF_CORRELATION",
+    "result": "FAIL",
+    "limit": 0.7,
+    "value": 0.7367
+   },
+   {
+    "name": "MATCHES_COMPETITION",
+    "result": "PASS",
+    "competitions": [
+     {
+      "id": "challenge",
+      "name": "Challenge"
+     }
+    ]
+   }
+  ],
+  "selfCorrelated": {
+   "schema": {
+    "name": "selfCorrelation",
+    "title": "Self Correlated",
+    "properties": [
+     {
+      "name": "id",
+      "title": "Id",
+      "type": "string"
+     },
+     {
+      "name": "name",
+      "title": "Name",
+      "type": "string"
+     },
+     {
+      "name": "instrumentType",
+      "title": "Instrument Type",
+      "type": "string"
+     },
+     {
+      "name": "region",
+      "title": "Region",
+      "type": "string"
+     },
+     {
+      "name": "universe",
+      "title": "Universe",
+      "type": "string"
+     },
+     {
+      "name": "correlation",
+      "title": "Correlation",
+      "type": "decimal"
+     },
+     {
+      "name": "sharpe",
+      "title": "Sharpe",
+      "type": "decimal"
+     },
+     {
+      "name": "returns",
+      "title": "Returns",
+      "type": "percent"
+     },
+     {
+      "name": "turnover",
+      "title": "Turnover",
+      "type": "percent"
+     },
+     {
+      "name": "fitness",
+      "title": "Fitness",
+      "type": "decimal"
+     },
+     {
+      "name": "margin",
+      "title": "Margin",
+      "type": "permyriad"
+     }
+    ]
+   },
+   "records": [
+    [
+     "MPaPe0oo",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.7367,
+     2.3,
+     0.1003,
+     0.0996,
+     2.06,
+     0.002013
+    ],
+    [
+     "omL8Mazn",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.7365,
+     2.28,
+     0.1025,
+     0.1132,
+     2.06,
+     0.001812
+    ],
+    [
+     "LLNXEe7L",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.7317,
+     2.3,
+     0.1196,
+     0.0944,
+     2.25,
+     0.002533
+    ],
+    [
+     "kqVp6wnO",
+     null,
+     "EQUITY",
+     "USA",
+     "TOP3000",
+     0.7184,
+     2.51,
+     0.1104,
+     0.1904,
+     1.91,
+     0.00116
+    ]
+   ],
+   "min": null,
+   "max": 0.7367
+  }
+ }
+}

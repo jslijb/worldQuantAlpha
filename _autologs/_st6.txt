@@ -1,0 +1,4 @@
+﻿=== running ===
+D:/Python/worldquant/src/submit/submit_exempt.py * --min-sf 4.0 --min-ts 1.25 --limit 8 --tag 0920-exempt2
+D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w228.json --workers 2
+D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w229.json --workers 2

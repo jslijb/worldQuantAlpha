@@ -1,0 +1,17 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests
+\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)
+/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:449 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version! 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 kqjpepz8_v2锛氳揪鏍囧€欓€?1 鏉★紙璞佸厤姣?1.1锛宑orr 鍦版澘 0.66锛孎鈮?.0锛孴O鈮?00%锛?
+  鍊欓€夋睜鎸?Fitness 鎺掑簭锛堟帓鍚嶅鍚戯級锛?
+    kqjpepz8_v2                S=2.50 F=2.40 tS=1.99 TO= 14.6% margin= 18.5bp
+姹犲瓙 103 鏉★紙S 宸茬煡 103 鏉★級
+  鉁?JjN5nadj kqjpepz8_v2                SF=4.90 S=2.50 corr=0.7423 鎾?qjqm3Q9(S=2.92) 闇€鈮?.21 鈫?涓嶅 | 瀵规墜[9qjqm3Q9(S=2.92,corr=0.7423) QPbPpA8W(S=2.58,corr=0.7107) zqYmRz0E(S=2.16,corr=0.7369)]
+submit_exempt 瀹屾垚锛氭湰杞彁浜?0 鏉?

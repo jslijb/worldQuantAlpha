@@ -1,0 +1,22 @@
+=== w236  n=184  type=dict ===
+  keys(前5): ['1YwRK1wW_v2__MAR', '1YwRK1wW_v2__SEC', '1YwRK1wW_v2__IND', '9qX3M2mq_v2__MAR', '9qX3M2mq_v2__SEC']
+  样本 [1YwRK1wW_v2__MAR] -> {"expr": "group_rank(liabilities_curr/assets, subindustry) + group_rank(-ts_rank(close, 20), subindustry) + group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + group_rank(volume/ts_mean(volume, 120), subindustry) + group_rank(-ts_delta(close, 20), subindustry)", "neutralization": "MARKET", "decay": 10, "truncation": 0.08, "_note": "换挡 SUBINDUSTRY->MARKET，原corr=0.7175"}
+
+=== w237  n=242  type=dict ===
+  keys(前5): ['w189_01__g_sec', 'w189_01__g_ind', 'w189_01__g_bvol', 'w189_01__g_bdv', 'w162_06__g_sec']
+  样本 [w189_01__g_sec] -> {"expr": "1.5*group_rank(liabilities_curr/assets, sector) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), sector) + group_rank(fnd6_xrent/assets, sector) + group_rank(fnd6_newqv1300_glcea12/assets, sector) + 2.0*group_rank(-ts_delta(close, 5), sector) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), sector) + 2.0*group_rank(-ts_rank(returns, 5), sector)", "neutralization": "SUBINDUSTRY", "decay": 10, "truncation": 0.08, "_note": "换分组->sector"}
+
+=== w238  n=12  type=dict ===
+  keys(前5): ['1YwRK1wW_v2__bvol', '1YwRK1wW_v2__bdv', '9qX3M2mq_v2__bvol', '9qX3M2mq_v2__bdv', 'x163_w27lnoqxrent_MAR__bvol']
+  样本 [1YwRK1wW_v2__bvol] -> {"expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))", "neutralization": "SUBINDUSTRY", "decay": 10, "truncation": 0.08, "_note": "近线换桶 bv
+
+=== w239  n=30  type=dict ===
+  keys(前5): ['x162_w164_00_MAR__d1', 'x162_w164_00_MAR__d2', 'x162_w164_00_MAR__d4', 'x162_w164_00_MAR__d6', 'x162_w164_00_MAR__d20']
+  样本 [x162_w164_00_MAR__d1] -> {"expr": "1.5*group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_newqv1300_dpactq/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 20), subindustry) + 1.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 1.5*group_rank(-ts_rank(returns, 5), subindustry)", "neutralization": "MARKET", "decay": 1, "truncation": 0.08, "_note": "提S decay10->1（缺口0.07）"}
+
+=== w240  n=60  type=dict ===
+  keys(前5): ['1YwRK1wW_v2__r_bvol', '1YwRK1wW_v2__r_bdv', '1YwRK1wW_v2__r_sec', '1YwRK1wW_v2__r_ind', '9qX3M2mq_v2__r_bvol']
+  样本 [1YwRK1wW_v2__r_bvol] -> {"expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))", "neutralization": "SUBINDUSTRY", "decay": 10, "truncation": 0.08, "_note": "换分组->bv
+
+=== A_MAR (O0N5o3Nv) 台账表达式 ===
+  group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), subindustry)

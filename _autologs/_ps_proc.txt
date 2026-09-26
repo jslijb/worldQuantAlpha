@@ -1,0 +1,1 @@
+﻿PID 23712 :: "D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w232.json --workers 2

@@ -1,0 +1,29 @@
+﻿最近15分钟产出: 24
+w230_h.json
+w230_i.json
+w229_j.json
+w230_j.json
+w230_k.json
+w229_k.json
+w230_l.json
+w230_m.json
+w229_l.json
+w230_n.json
+w230_o.json
+w231_g.json
+w231_f.json
+w231_h.json
+w231_i.json
+kqjpepz8_v1.json
+w231_j.json
+kqjpepz8_v2.json
+kqjpepz8_v3.json
+N1QxNQK7_v1.json
+N1QxNQK7_v2.json
+N1QxNQK7_v3.json
+A_hump.json
+9qX3M2mq_v1.json
+--- running ---
+D:/Python/worldquant/src/submit/submit_exempt.py * --min-sf 4.0 --min-ts 1.25 --min-f 2.0 --max-to 0.25 --limit 15 --tag 0920-rank
+D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w232.json --workers 2
+D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w234.json --workers 2

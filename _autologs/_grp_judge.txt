@@ -1,0 +1,10 @@
+匹配 *__*：达标候选 3 条（豁免比 1.1，直通线 0.685，对手收录地板 0.66，F≥2.0，TO≤20%）
+  候选池按 Fitness 排序（排名导向）：
+    w189_01__g_sec             S=3.21 F=3.21 tS=2.23 TO= 16.4% margin= 20.0bp
+    w189_01__SEC               S=3.14 F=3.07 tS=1.91 TO= 15.9% margin= 19.1bp
+    w189_01__g_bdv             S=2.45 F=2.30 tS=1.43 TO= 16.7% margin= 17.6bp
+池子 104 条（S 已知 104 条）
+  ✗ omL9g8AJ w189_01__g_sec             SF=6.42 S=3.21 corr_max=0.8122 撞0mR2K6lr(S=3.45) 需≥3.80 → 不够 | 对手[0mR2K6lr(S=3.45,corr=0.6614) pwRwWoJ3(S=3.33,corr=0.8122) e79PvPpE(S=3.13,corr=0.6631) wpZJX6m5(S=3.10,corr=0.6631) 9qjqm3Q9(S=2.92,corr=0.7327)]
+  ✗ 88jKQRAX w189_01__SEC               SF=6.21 S=3.14 corr_max=0.7985 撞pwRwWoJ3(S=3.33) 需≥3.66 → 不够 | 对手[pwRwWoJ3(S=3.33,corr=0.7985) 9qjqm3Q9(S=2.92,corr=0.7218) O0N55k1Y(S=2.87,corr=0.7455) gJQMxZoJ(S=2.67,corr=0.7650) Vka1Nar0(S=2.55,corr=0.7161)]
+  ✗ A1NO79zQ w189_01__g_bdv             SF=4.75 S=2.45 corr_max=0.7558 撞qMW92Az2(S=2.32) 需≥2.55 → 不够 | 对手[qMW92Az2(S=2.32,corr=0.7558) N1QxNQK7(S=2.06,corr=0.6951)]
+submit_exempt 完成：本轮提交 0 条

@@ -1,0 +1,86 @@
+==============================================================================
+pwRwWoJ3  S=3.33 F=3.58 tS=2.25 TO=12.1% ret=14.4% DD=3.0% margin=23.93bp grade=SPECTACULAR
+set: univ=TOP3000 neut=SUBINDUSTRY decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 20), subindustry) + 1.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)
+==============================================================================
+ZYbPbXj1  S=2.59 F=2.78 tS=1.60 TO=10.5% ret=14.4% DD=3.3% margin=27.43bp grade=SPECTACULAR
+set: univ=TOP3000 neut=MARKET decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120)) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), subindustry)
+==============================================================================
+9qjqm3Q9  S=2.92 F=2.77 tS=2.33 TO=11.9% ret=11.2% DD=2.8% margin=18.92bp grade=SPECTACULAR
+set: univ=TOP3000 neut=SUBINDUSTRY decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-ts_delta(close, 20), subindustry) + group_rank(-ts_rank(returns, 20), subindustry) + group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)
+==============================================================================
+e79PvPpE  S=3.13 F=2.72 tS=2.75 TO=19.2% ret=14.5% DD=3.4% margin=15.14bp grade=EXCELLENT
+set: univ=TOP3000 neut=SUBINDUSTRY decay=4 trunc=0.08 delay=0 nan=ON
+expr:
+  group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+==============================================================================
+levpXXGl  S=2.31 F=2.40 tS=1.50 TO=9.8% ret=13.5% DD=3.5% margin=27.69bp grade=EXCELLENT
+set: univ=TOP3000 neut=MARKET decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  1.5*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_delta(close, 20), subindustry) + 1.5*group_rank(volume/ts_mean(volume, 60), subindustry) + 1.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)
+==============================================================================
+QPbP6aRQ  S=2.51 F=2.06 tS=1.99 TO=6.1% ret=8.5% DD=2.8% margin=27.59bp grade=EXCELLENT
+set: univ=TOP3000 neut=SUBINDUSTRY decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  1.5*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(-ts_delta(close, 2), subindustry)
+==============================================================================
+O0N0R5NY  S=2.92 F=2.55 tS=1.51 TO=15.5% ret=11.8% DD=3.3% margin=15.26bp grade=SPECTACULAR
+set: univ=TOP3000 neut=SUBINDUSTRY decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  1.5*group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(volume/ts_mean(volume, 90), subindustry) + 1.25*group_rank(-ts_rank(returns, 20), subindustry)
+==============================================================================
+1YX6MA0M  S=3.26 F=1.94 tS=3.53 TO=43.9% ret=15.6% DD=2.5% margin=7.08bp grade=GOOD
+set: univ=TOP3000 neut=SUBINDUSTRY decay=10 trunc=0.08 delay=1 nan=ON
+expr:
+  2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)
+==============================================================================
+0mR2K6lr  S=3.45 F=2.13 tS=3.62 TO=42.2% ret=16.2% DD=3.1% margin=7.65bp grade=GOOD
+set: univ=TOP3000 neut=SUBINDUSTRY decay=1 trunc=0.08 delay=0 nan=ON
+expr:
+  group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(news_short_interest, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
+==============================================================================
+mLgd6nwX  S=3.17 F=1.96 tS=3.31 TO=47.0% ret=17.9% DD=3.5% margin=7.63bp grade=GOOD
+set: univ=TOP3000 neut=SUBINDUSTRY decay=2 trunc=0.08 delay=0 nan=OFF
+expr:
+  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 46), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 44), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+==============================================================================
+e79kPeEM  S=3.02 F=1.79 tS=0.00 TO=57.0% ret=20.0% DD=4.5% margin=7.02bp grade=GOOD
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), industry) + group_rank(-ts_rank(close, 5), industry)
+==============================================================================
+kqjpepz8  S=2.74 F=1.42 tS=0.00 TO=66.3% ret=17.9% DD=5.2% margin=5.39bp grade=AVERAGE
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/assets, industry) + group_rank(-ts_rank(close, 5), industry)
+==============================================================================
+N1QxNQK7  S=2.06 F=1.17 tS=0.00 TO=65.8% ret=21.1% DD=17.6% margin=6.41bp grade=AVERAGE
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/cap, industry) + group_rank(-ts_rank(close, 5), industry)
+==============================================================================
+qMW92Az2  S=2.32 F=1.60 tS=0.00 TO=46.4% ret=22.1% DD=13.5% margin=9.53bp grade=GOOD
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/cap, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), industry) + group_rank(-ts_rank(close, 10), industry)
+==============================================================================
+1YwRK1wW  S=2.11 F=1.31 tS=0.00 TO=41.1% ret=15.9% DD=7.1% margin=7.72bp grade=AVERAGE
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/assets, industry) + group_rank(-ts_rank(close, 20), industry)
+==============================================================================
+9qX8Nr6r  S=1.26 F=1.49 tS=0.00 TO=3.8% ret=17.5% DD=26.4% margin=91.34bp grade=AVERAGE
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  liabilities_curr/cap
+==============================================================================
+9qX3M2mq  S=2.49 F=1.45 tS=0.00 TO=52.8% ret=17.8% DD=5.4% margin=6.76bp grade=AVERAGE
+set: univ=TOP3000 neut=INDUSTRY decay=0 trunc=0.01 delay=1 nan=OFF
+expr:
+  group_rank(liabilities_curr/assets, industry) + group_rank(-ts_rank(close, 10), industry)
+DONE

@@ -1,0 +1,68 @@
+日志: exempt_0920_212224.log
+解析出候选 198 条
+标记分布: {'✗': 198}
+
+corr_max: 最小 0.6862 / 中位 0.8547 / 最大 1.0000
+
+== corr_max 分带 ==
+  <=0.685 直通       0 条
+  0.685~0.70       1 条
+  0.70~0.75        4 条
+  0.75~0.80       43 条
+  0.80~0.90       92 条
+  >=0.90          58 条
+
+== 离墙最近 Top 30（corr_max 升序）==
+  cid                          aid              S     SF  corr_max       需≥ 撞谁
+  9qX3M2mq_v2__r_bvol          88jKeENW      2.39   4.69    0.6862     3.21 9qjqm3Q9(S=2.92)
+  9qX3M2mq_v2__r_sec           RRbk1OEe      2.32   4.63    0.7210     3.21 9qjqm3Q9(S=2.92)
+  D_e79kPeEM_d15               N1a5rLgL      2.75   5.42    0.7419     3.44 e79PvPpE(S=3.13)
+  kqjpepz8_v2                  JjN5nadj      2.50   4.90    0.7423     3.21 9qjqm3Q9(S=2.92)
+  D_e79kPeEM_d20               P02X3maq      2.65   5.15    0.7427     3.41 wpZJX6m5(S=3.10)
+  e79kPeEM_v2                  3qXn7pl0      2.80   5.69    0.7546     3.80 0mR2K6lr(S=3.45)
+  x162_w164_04_SEC             pwRY1Ako      2.83   5.66    0.7563     3.66 pwRwWoJ3(S=3.33)
+  w162_06__g_ind               zq8JRQYV      2.79   5.59    0.7564     3.66 pwRwWoJ3(S=3.33)
+  w162_06__g_sec               A1NO7qWX      2.74   5.47    0.7593     3.66 pwRwWoJ3(S=3.33)
+  x174_w125_d_AMIINT           j2Az8n0E      2.60   5.04    0.7622     3.66 pwRwWoJ3(S=3.33)
+  w39_h                        RRV5zJX0      2.52   4.85    0.7623     3.10 O0rZ90n1(S=2.82)
+  x172_w164_04_OVN             mLmwVok6      3.05   5.88    0.7644     3.66 pwRwWoJ3(S=3.33)
+  w54_c                        blRJRxvl      2.74   5.24    0.7645     3.49 mLgd6nwX(S=3.17)
+  Acap_SUB                     3qXnAveX      2.52   5.00    0.7668     3.44 e79PvPpE(S=3.13)
+  w162_06                      XgbgZLZX      2.90   5.81    0.7678     3.66 pwRwWoJ3(S=3.33)
+  x214_w54c_SEC                E5paK2Xm      2.57   4.95    0.7690     3.80 0mR2K6lr(S=3.45)
+  w164_04                      KPNPoMAz      2.97   5.86    0.7698     3.66 pwRwWoJ3(S=3.33)
+  w161_03                      qMxMV8NA      2.85   5.68    0.7766     3.66 pwRwWoJ3(S=3.33)
+  w228_g                       mLmxxJq6      3.07   5.98    0.7768     3.80 0mR2K6lr(S=3.45)
+  x162_w162_06_SEC             wpZKwnv2      2.67   5.35    0.7771     3.66 pwRwWoJ3(S=3.33)
+  w41_b                        883GYlNo      2.44   4.84    0.7795     2.71 ZY07MXgd(S=2.46)
+  m161_gJQMxZoJ                LLNVeOVn      2.41   4.81    0.7834     2.94 gJQMxZoJ(S=2.67)
+  A_w15                        88jKnzMa      2.71   5.52    0.7854     3.66 pwRwWoJ3(S=3.33)
+  w55_d                        2rO9wZvJ      2.74   5.57    0.7856     3.49 mLgd6nwX(S=3.17)
+  w40_e                        78ZGmRV5      2.47   4.92    0.7863     2.99 rK59235m(S=2.72)
+  w41_f                        vRkY66xQ      2.47   4.92    0.7863     2.99 rK59235m(S=2.72)
+  A_IND                        WjbWga9x      2.50   4.93    0.7878     3.44 e79PvPpE(S=3.13)
+  qMW92Az2_v3                  E5prkjOJ      2.44   5.08    0.7886     2.84 QPbPpA8W(S=2.58)
+  w42_c                        kqV89LJd      2.49   4.98    0.7900     3.10 O0rZ90n1(S=2.82)
+  w42_f                        N1QK8ezq      2.48   4.98    0.7910     2.99 rK59235m(S=2.72)
+
+== 缺口最小的 Top 20（need - S 升序，最接近豁免放行）==
+  x162_w164_04_MAR             pwRYz9pg    S= 2.45 需≥ 2.54 缺口 +0.09 corr_max=0.8400 撞levpXXGl(S=2.31)
+  w41_c                        O0r6VZzJ    S= 2.38 需≥ 2.63 缺口 +0.25 corr_max=0.8770 撞RRV5l5Go(S=2.39)
+  w41_b                        883GYlNo    S= 2.44 需≥ 2.71 缺口 +0.27 corr_max=0.7795 撞ZY07MXgd(S=2.46)
+  w188_01                      Xgb59aRb    S= 3.37 需≥ 3.66 缺口 +0.29 corr_max=0.8752 撞pwRwWoJ3(S=3.33)
+  w158_01                      XgbgNwna    S= 3.30 需≥ 3.66 缺口 +0.36 corr_max=0.9779 撞pwRwWoJ3(S=3.33)
+  w158_03                      vRrRYmxa    S= 3.30 需≥ 3.66 缺口 +0.36 corr_max=0.9801 撞pwRwWoJ3(S=3.33)
+  w164_01                      Grbr2YO5    S= 2.83 需≥ 3.21 缺口 +0.38 corr_max=0.8808 撞O0N0R5NY(S=2.92)
+  w32_a                        1Yxjkb0K    S= 2.72 需≥ 3.10 缺口 +0.38 corr_max=0.9216 撞O0rZ90n1(S=2.82)
+  w158_04                      qMxM5j1A    S= 3.28 需≥ 3.66 缺口 +0.38 corr_max=0.9839 撞pwRwWoJ3(S=3.33)
+  w158_05                      GrbrQbWZ    S= 3.28 需≥ 3.66 缺口 +0.38 corr_max=0.9888 撞pwRwWoJ3(S=3.33)
+  w189_01                      3qXZGMmO    S= 3.28 需≥ 3.66 缺口 +0.38 corr_max=0.8041 撞pwRwWoJ3(S=3.33)
+  qMW92Az2_v3                  E5prkjOJ    S= 2.44 需≥ 2.84 缺口 +0.40 corr_max=0.7886 撞QPbPpA8W(S=2.58)
+  w158_02                      d5b59n6K    S= 3.26 需≥ 3.66 缺口 +0.40 corr_max=0.9639 撞pwRwWoJ3(S=3.33)
+  w230_c                       YPbW2deM    S= 2.42 需≥ 2.83 缺口 +0.41 corr_max=0.8227 撞E5prgA1K(S=2.57)
+  w193_00                      VkagZle0    S= 3.38 需≥ 3.80 缺口 +0.42 corr_max=0.9351 撞0mR2K6lr(S=3.45)
+  w162_00                      mLmLW6E6    S= 3.22 需≥ 3.66 缺口 +0.44 corr_max=0.8931 撞pwRwWoJ3(S=3.33)
+  x174_m161_e79PvPpE_OTMAMI    YPbLbleq    S= 2.41 需≥ 2.85 缺口 +0.44 corr_max=0.9868 撞ZYbPbXj1(S=2.59)
+  x175_m161_e79PvPpE_BIT       2rw8Ap9x    S= 2.39 需≥ 2.85 缺口 +0.46 corr_max=0.9676 撞ZYbPbXj1(S=2.59)
+  w196_02                      XgbEJ6j5    S= 3.33 需≥ 3.80 缺口 +0.47 corr_max=0.9094 撞0mR2K6lr(S=3.45)
+  w158_07                      blblxz5M    S= 3.19 需≥ 3.66 缺口 +0.47 corr_max=0.8731 撞pwRwWoJ3(S=3.33)

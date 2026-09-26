@@ -1,0 +1,9 @@
+======================================================================
+PAGE challenge-help -> 200
+TITLE: WorldQuant Challenge
+======================================================================
+PAGE 10-steps-start-brain-platform -> 200
+TITLE: 10 Steps to Start on BRAIN
+======================================================================
+PAGE about-brain-platform -> 200
+TITLE: Introduction to Alphas

@@ -1,0 +1,113 @@
+==========================================================================================================================
+[model16] 字段总数=24  cov>=0.7 共 8（MATRIX 8 / VECTOR 0）
+   M analyst_revision_rank_derivative               cov=1.000  Daily-indicator variant of momentum capturing recent price m
+   M cashflow_efficiency_rank_derivative            cov=1.000  Ranks stocks by their ability to generate cash flows and ope
+   M composite_factor_score_derivative              cov=1.000  Momentum score based on analyst revisions; intraday variant
+   M earnings_certainty_rank_derivative             cov=1.000  Measures the sustainability and certainty of earnings qualit
+   M growth_potential_rank_derivative               cov=1.000  Composite growth score qualifying the stock’s expected mediu
+   M multi_factor_acceleration_score_derivative     cov=1.000  Change in the acceleration of multi-factor score compared to
+   M multi_factor_static_score_derivative           cov=1.000  Change in static multi-factor score compared to previous per
+   M relative_valuation_rank_derivative             cov=1.000  Assesses whether the stock is under or overpriced based on s
+
+==========================================================================================================================
+[model51] 字段总数=16  cov>=0.7 共 16（MATRIX 16 / VECTOR 0）
+   M beta_last_30_days_spy                          cov=0.977  The rolling beta value of the security relative to SPY, calc
+   M correlation_last_30_days_spy                   cov=0.977  The Pearson correlation coefficient of daily log returns bet
+   M beta_last_60_days_spy                          cov=0.975  The rolling beta value of the security relative to SPY, calc
+   M correlation_last_60_days_spy                   cov=0.975  The Pearson correlation coefficient of daily log returns bet
+   M beta_last_90_days_spy                          cov=0.973  The rolling beta value of the security relative to SPY, calc
+   M correlation_last_90_days_spy                   cov=0.973  The Pearson correlation coefficient of daily log returns bet
+   M systematic_risk_last_30_days                   cov=0.965  The portion of the security’s return variance attributed to 
+   M unsystematic_risk_last_30_days                 cov=0.965  The portion of return variance not explained by SPY (idiosyn
+   M systematic_risk_last_60_days                   cov=0.964  The portion of the security’s return variance attributed to 
+   M unsystematic_risk_last_60_days                 cov=0.964  The portion of return variance not explained by SPY (idiosyn
+   M systematic_risk_last_90_days                   cov=0.962  The portion of the security’s return variance attributed to 
+   M unsystematic_risk_last_90_days                 cov=0.962  The portion of return variance not explained by SPY (idiosyn
+   M beta_last_360_days_spy                         cov=0.948  The rolling beta value of the security relative to SPY, calc
+   M correlation_last_360_days_spy                  cov=0.948  The Pearson correlation coefficient of daily log returns bet
+   M systematic_risk_last_360_days                  cov=0.937  The portion of the security’s return variance attributed to 
+   M unsystematic_risk_last_360_days                cov=0.937  The portion of return variance not explained by SPY (idiosyn
+
+==========================================================================================================================
+[fundamental2] 字段总数=766  cov>=0.7 共 56（MATRIX 56 / VECTOR 0）
+   M common_stock_shares_outstanding_count          cov=0.931  Total number of common stock shares outstanding.
+   M allocated_sbp_expense_total                    cov=0.856  Total allocated expense for share-based compensation.
+   M net_deferred_tax_assets_liabilities_2          cov=0.853  Net amount of deferred tax assets and liabilities.
+   M common_shares_outstanding_total                cov=0.851  Total number of common shares currently outstanding.
+   M income_tax_expense_total_3                     cov=0.842  Total income tax expense recognized in the period.
+   M deferred_tax_liabilities_total_4               cov=0.839  Total amount of deferred tax liabilities.
+   M unrecognized_compensation_cost_nonvested_awards cov=0.830  Total compensation cost not yet recognized for nonvested sha
+   M deferred_tax_assets_net_value                  cov=0.829  Net value of deferred tax assets.
+   M income_taxes_paid_total                        cov=0.824  Total amount of income taxes paid.
+   M operating_leases_minimum_payments_due_year2    cov=0.820  Minimum payments due under operating leases in the second ye
+   M operating_leases_min_payments_3y               cov=0.820  Minimum payments due under operating leases in three years.
+   M current_minimum_operating_lease_payment        cov=0.818  Minimum payments due currently under operating lease agreeme
+   M option_awards_granted_count                    cov=0.812  Number of share-based payment options granted during the per
+   M operating_leases_minimum_payments_due_year4    cov=0.810  Minimum payments due under operating leases in the fourth ye
+   M ppe_gross_value                                cov=0.806  Total gross value of property, plant, and equipment before d
+   M share_award_expense_total                      cov=0.801  Total allocated share-based compensation expense.
+   M non_option_equity_awards_granted_count         cov=0.800  Number of equity instruments other than options granted duri
+   M income_tax_expense_total                       cov=0.800  Total income tax expense for the period.
+   M net_interest_paid                              cov=0.797  Net amount of interest paid during the period.
+   M sbp_equity_nonvested_count                     cov=0.795  Number of nonvested equity instruments other than options un
+   M operating_lease_minimum_payments_due_five_years cov=0.792  Minimum required payments for operating leases due in five y
+   M accumulated_depreciation_depletion_amortization_ppne cov=0.785  Total accumulated depreciation, depletion, and amortization 
+   M current_income_tax_expense_amount              cov=0.785  Expense recognized for current income taxes during the perio
+   M debt_repayments_total_2                        cov=0.785  Total repayments made on debt obligations.
+   M annual_deferred_income_tax_expense             cov=0.783  Expense recognized for deferred income taxes during the annu
+   M future_minimum_operating_lease_payments        cov=0.780  Minimum payments due in the future for operating leases.
+   M option_award_outstanding_count                 cov=0.778  Number of share-based payment options outstanding at the end
+   M comprehensive_income_net_tax                   cov=0.777  Comprehensive income after accounting for tax effects.
+   M operating_leases_minimum_payments_due_thereafter cov=0.776  Minimum payments due under operating leases after the specif
+   M deferred_tax_assets_loss_carryforward          cov=0.774  Deferred tax assets arising from operating loss carryforward
+   M shares_issued_stock_options_exercised          cov=0.770  Number of shares issued due to stock options exercised durin
+   M other_comprehensive_income_net_tax             cov=0.769  Accumulated other comprehensive income or loss, net of tax.
+   M antidilutive_securities_eps_exclusion_count    cov=0.769  Number of antidilutive securities excluded from EPS calculat
+   M non_option_equity_awards_forfeited_count       cov=0.767  Number of equity instruments other than options forfeited du
+   M vested_equity_award_total_value                cov=0.766  Total fair value of equity awards other than options vested 
+   M deferred_tax_assets_valuation_allowance_value  cov=0.759  Valuation allowance for deferred tax assets.
+   M comprehensive_income_net_tax_value             cov=0.754  Comprehensive income value after tax adjustments.
+   M options_outstanding_avg_exercise_price         cov=0.753  Weighted average exercise price of outstanding share-based p
+   M antidilutive_securities_excluded_eps           cov=0.750  Number of antidilutive securities excluded from earnings per
+   M option_award_forfeitures_expirations_count     cov=0.750  Number of share-based payment options forfeited or expired d
+   M debt_issuance_proceeds_2                       cov=0.747  Total cash received from issuing debt instruments.
+   M line_of_credit_repayments                      cov=0.745  Total repayments made on lines of credit.
+   M net_operating_lease_rent_expense               cov=0.739  Net rent expense incurred under operating lease agreements.
+   M debt_repayments_total                          cov=0.738  Total repayments made on outstanding debt.
+   M accumulated_oci_net_of_tax_value               cov=0.735  Accumulated other comprehensive income or loss after tax adj
+   M option_exercise_avg_price_period               cov=0.734  Weighted average exercise price for options exercised during
+   M federal_statutory_tax_rate                     cov=0.725  Federal statutory income tax rate applicable to the entity.
+   M exercisable_options_count                      cov=0.720  Number of share-based payment options that are exercisable.
+   M unrecognized_tax_positions                     cov=0.718  Tax benefits claimed but not yet recognized in financial sta
+   M fn_entity_common_stock_shares_out_a            cov=0.716  Indicate number of shares or other units outstanding of each
+   M repayments_of_credit_lines                     cov=0.716  Total repayments made on lines of credit.
+   M diluted_shares_outstanding_adjustment          cov=0.709  Adjustment to the weighted average number of diluted shares 
+   M diluted_shares_outstanding_adjustment_avg      cov=0.709  Adjustment to the weighted average number of diluted shares 
+   M fn_def_tax_assets_liab_net_a                   cov=0.706  Amount, after allocation of valuation allowances and deferre
+   M gross_machinery_equipment_value_2              cov=0.705  Gross value of machinery and equipment.
+   M current_federal_tax_expense_amount             cov=0.705  Expense recognized for current federal taxes during the peri
+
+==========================================================================================================================
+[pv13] 字段总数=165  cov>=0.7 共 114（MATRIX 21 / VECTOR 0）
+   M rel_num_all                                    cov=0.994  number of the companies whose product overlapped with the in
+   M pv13_reveremap                                 cov=0.992  Mapping data
+   M rel_ret_all                                    cov=0.961  Averaged one-day return of the companies whose product overl
+   M pv13_revere_country                            cov=0.957  Country code
+   M pv13_revere_city                               cov=0.938  City code
+   M pv13_revere_key_sector_total                   cov=0.933  Number of key focus sectors for the company
+   M pv13_revere_term_sector_total                  cov=0.933  Number of terminal sectors for the company
+   M pv13_revere_zipcode                            cov=0.933  Zip code
+   M pv13_custretsig_retsig                         cov=0.928  Sign of customer return
+   M pv13_com_page_rank                             cov=0.905  the PageRank of competitors
+   M pv13_com_rk_au                                 cov=0.905  the HITS authority score of competitors
+   M pv13_ompetitorgraphrank_hub_rank               cov=0.905  the HITS hub score of competitors
+   M rel_num_comp                                   cov=0.890  number of the instrument's competitors
+   M pv13_revere_index_value                        cov=0.860  Value of specified index for the date
+   M pv13_revere_index_cap                          cov=0.850  Company market capitalization
+   M rel_ret_comp                                   cov=0.823  Averaged one-day return of the competing companies
+   M pv13_ustomergraphrank_auth_rank                cov=0.791  the HITS authority score of customers
+   M pv13_ustomergraphrank_hub_rank                 cov=0.791  the HITS hub score of customers
+   M pv13_ustomergraphrank_page_rank                cov=0.791  the PageRank of customers
+   M rel_num_part                                   cov=0.784  number of the instrument's partners
+   M rel_ret_part                                   cov=0.710  Averaged one-day return of the instrument's partners
+

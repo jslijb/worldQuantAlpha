@@ -1,0 +1,6 @@
+================================================================================================
+ZYbWbbm8  status=UNSUBMITTED stage=IS  台账已收录=False
+  池=TOP1000 中性=SUBINDUSTRY delay=1 decay=15 trunc=0.08 nan=ON
+  S=2.2200 F=2.0500 TO=0.1176 R=0.1063 DD=0.0299 margin=18.09bp tS=1.7500
+  FAIL=['LOW_SUB_UNIVERSE_SHARPE']
+  expr: group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1"))

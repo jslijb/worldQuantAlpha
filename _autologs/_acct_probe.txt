@@ -1,0 +1,96 @@
+== A. 参数组合探测 ==
+no-params                                -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=10&offset=10
+       results = 10
+limit=100                                -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100
+       results = 100
+limit=100&status=UNSUBMITTED             -> keys=['count', 'next', 'previous', 'results']
+       count = 3545
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&status=UNSUBMITTED
+       results = 100
+limit=100&stage=IS                       -> keys=['count', 'next', 'previous', 'results']
+       count = 3545
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&stage=IS
+       results = 100
+limit=100&hidden=true                    -> keys=['count', 'next', 'previous', 'results']
+       count = 0
+       results = 0
+limit=100&hidden=false                   -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?hidden=false&limit=100&offset=100
+       results = 100
+limit=500                                -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100
+       results = 100
+limit=1000                               -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100
+       results = 100
+
+== B. offset 边界扫描（limit=100）==
+offset=0                                 -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100
+       results = 100
+offset=500                               -> keys=['count', 'next', 'previous', 'results']
+       count = 3652
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=600
+       previous = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=400
+       results = 100
+offset=900                               -> keys=['count', 'next', 'previous', 'results']
+       count = 3654
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=1000
+       previous = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=800
+       results = 100
+offset=1000                              -> keys=['count', 'next', 'previous', 'results']
+       count = 3654
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=1100
+       previous = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=900
+       results = 100
+offset=1050                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1090                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1100                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1101                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1150                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1200                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=1500                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=2000                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=3000                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=3400                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+offset=3500                              -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+
+== C. UNSUBMITTED 过滤 + 大 offset ==
+UNSUBMITTED offset=0                     -> keys=['count', 'next', 'previous', 'results']
+       count = 3547
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&status=UNSUBMITTED
+       results = 100
+UNSUBMITTED offset=1000                  -> keys=['count', 'next', 'previous', 'results']
+       count = 3547
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=1100&status=UNSUBMITTED
+       previous = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=900&status=UNSUBMITTED
+       results = 100
+UNSUBMITTED offset=1100                  -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+UNSUBMITTED offset=2000                  -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+UNSUBMITTED offset=3000                  -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+UNSUBMITTED offset=3500                  -> HTTP 400  ["Cannot display more than the first 1,000 alphas. Apply filters to narrow results and see more."]
+
+== D. 其他可能突破的参数 ==
+{'limit': 100, 'order': '-dateCreated'}  -> keys=['count', 'next', 'previous', 'results']
+       count = 3654
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&order=-dateCreated
+       results = 100
+{'limit': 100, 'order': 'dateCreated'}   -> keys=['count', 'next', 'previous', 'results']
+       count = 3654
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&order=dateCreated
+       results = 100
+{'limit': 100, 'type': 'REGULAR'}        -> keys=['count', 'next', 'previous', 'results']
+       count = 3654
+       next = https://api.worldquantbrain.com/users/self/alphas?limit=100&offset=100&type=REGULAR
+       results = 100
+{'limit': 100, 'hidden': 'true', 'status': 'UNSUBMITTED'} -> keys=['count', 'next', 'previous', 'results']
+       count = 0
+       results = 0

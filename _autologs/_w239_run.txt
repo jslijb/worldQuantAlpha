@@ -1,0 +1,29 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:446 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+x162_w164_00_MAR__d2 NET HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+x162_w164_00_MAR__d1 E5prekgR SF=3.45 S=2.51 F=0.94 T=0.9795 tS=3.16 pred_corr=None FAIL=['LOW_FITNESS', 'HIGH_TURNOVER'] [fail]
+x162_w164_00_MAR__d20 mLmxVjWW SF=4.53 S=2.25 F=2.28 T=0.1055 tS=1.19 pred_corr=None FAIL=[] [fail]
+x162_w164_00_MAR__d2 j2AdrAaW SF=3.99 S=2.69 F=1.30 T=0.651 tS=3.02 pred_corr=None FAIL=[] [fail]
+x162_w164_04_MAR__d1 KPNwEVep SF=4.09 S=2.77 F=1.32 T=0.6739 tS=2.62 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_MAR__d2 QPb59AdG SF=4.42 S=2.76 F=1.66 T=0.4305 tS=2.42 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_MAR__d4 P02XObnK SF=4.62 S=2.64 F=1.98 T=0.2627 tS=1.9 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_MAR__d6 0mXKpmYq SF=4.73 S=2.55 F=2.18 T=0.1959 tS=1.69 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_MAR__d20 zq8JNql1 SF=4.55 S=2.27 F=2.28 T=0.0764 tS=1.26 pred_corr=None FAIL=[] [鈽匬ASS]
+w189_01__g_bdv__d1 akbW13A9 SF=4.01 S=2.77 F=1.24 T=0.8175 tS=2.86 pred_corr=None FAIL=['HIGH_TURNOVER'] [fail]
+w189_01__g_bdv__d2 vRrJNV9G SF=4.34 S=2.77 F=1.57 T=0.5311 tS=2.74 pred_corr=None FAIL=[] [鈽匬ASS]
+w189_01__g_bdv__d6 KPNwG8Oj SF=4.64 S=2.58 F=2.06 T=0.2466 tS=1.84 pred_corr=None FAIL=[] [鈽匬ASS]
+w189_01__g_bdv__d4 vRrJNJ9b SF=4.54 S=2.66 F=1.88 T=0.3276 tS=2.13 pred_corr=None FAIL=[] [鈽匬ASS]
+w189_01__g_bdv__d20 88jKplmm SF=4.43 S=2.19 F=2.24 T=0.0986 tS=1.0 pred_corr=None FAIL=[] [fail]
+w39_i__d1 omL9NqMl SF=5.08 S=3.38 F=1.70 T=0.5554 tS=4.0 pred_corr=None FAIL=[] [鈽匬ASS]
+w39_i__d2 j2Ad6oaW SF=5.28 S=3.33 F=1.95 T=0.4009 tS=3.75 pred_corr=None FAIL=[] [鈽匬ASS]
+w39_i__d4 QPb5G6ZQ SF=5.47 S=3.20 F=2.27 T=0.255 tS=3.06 pred_corr=None FAIL=[] [鈽匬ASS]
+w41_b__d1 xA3mNpnm SF=5.11 S=3.38 F=1.73 T=0.6091 tS=3.66 pred_corr=None FAIL=[] [鈽匬ASS]
+w41_b__d4 78NKjWL1 SF=5.50 S=3.19 F=2.31 T=0.2831 tS=2.8 pred_corr=None FAIL=[] [鈽匬ASS]
+w41_b__d6 blbWj2ol SF=5.69 S=3.12 F=2.57 T=0.212 tS=2.43 pred_corr=None FAIL=[] [鈽匬ASS]

@@ -1,0 +1,130 @@
+{
+ "w162_06__u1000_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_delta(close, 5), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__u1000_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_delta(close, 5), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w162_06__u500_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_delta(close, 5), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP500 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__u500_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 0.75*group_rank(-ts_delta(close, 5), subindustry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 0.75*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP500 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_ind__u1000_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, industry) + group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(-ts_delta(close, 5), industry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), industry) + 0.75*group_rank(-ts_rank(returns, 5), industry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_ind__u1000_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, industry) + group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(-ts_delta(close, 5), industry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), industry) + 0.75*group_rank(-ts_rank(returns, 5), industry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_ind__u500_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, industry) + group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(-ts_delta(close, 5), industry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), industry) + 0.75*group_rank(-ts_rank(returns, 5), industry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP500 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_ind__u500_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, industry) + group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(fnd6_xrent/assets, industry) + 0.75*group_rank(-ts_delta(close, 5), industry) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), industry) + 0.75*group_rank(-ts_rank(returns, 5), industry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP500 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_sec__u1000_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, sector) + group_rank(fn_accrued_liab_curr_a/assets, sector) + group_rank(fnd6_xrent/assets, sector) + 0.75*group_rank(-ts_delta(close, 5), sector) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), sector) + 0.75*group_rank(-ts_rank(returns, 5), sector)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_sec__u1000_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, sector) + group_rank(fn_accrued_liab_curr_a/assets, sector) + group_rank(fnd6_xrent/assets, sector) + 0.75*group_rank(-ts_delta(close, 5), sector) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), sector) + 0.75*group_rank(-ts_rank(returns, 5), sector)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_sec__u500_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, sector) + group_rank(fn_accrued_liab_curr_a/assets, sector) + group_rank(fnd6_xrent/assets, sector) + 0.75*group_rank(-ts_delta(close, 5), sector) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), sector) + 0.75*group_rank(-ts_rank(returns, 5), sector)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP500 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w162_06__g_sec__u500_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, sector) + group_rank(fn_accrued_liab_curr_a/assets, sector) + group_rank(fnd6_xrent/assets, sector) + 0.75*group_rank(-ts_delta(close, 5), sector) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), sector) + 0.75*group_rank(-ts_rank(returns, 5), sector)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP500 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w164_04__u1000_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_delta(close, 5), subindustry) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w164_04__u1000_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_delta(close, 5), subindustry) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP1000",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP1000 + trunc0.04（基线 TOP3000/0.08）"
+ },
+ "w164_04__u500_t08": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_delta(close, 5), subindustry) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.08,
+  "_note": "官方得分杠杆：TOP500 + trunc0.08（基线 TOP3000/0.08）"
+ },
+ "w164_04__u500_t04": {
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_delta(close, 5), subindustry) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 1.25*group_rank(-ts_rank(returns, 5), subindustry)",
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "universe": "TOP500",
+  "truncation": 0.04,
+  "_note": "官方得分杠杆：TOP500 + trunc0.04（基线 TOP3000/0.08）"
+ }
+}

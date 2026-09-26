@@ -1,0 +1,2 @@
+源 E5p5NVkR  S=3.02 F=2.72 TO=0.1700 tS=2.12  原 decay=10 > 目标线 2.41（对手 1YXJeQoW S=2.19）
+combos = 3  decay=[12, 8, 6]

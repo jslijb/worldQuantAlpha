@@ -1,0 +1,103 @@
+过闸未提交候选 714 条
+不同表达式（code 去重）：510
+骨架族数（字段集合签名）：275
+
+族规模分布：max 68  中位 1  单条族 168 个
+
+== 按族内最大 S 降序 Top 30 族 ==
+  族4   条数=4    maxS=3.51 maxF=2.05 | 代表 P0ZmX82J w101_e S=3.51 F=2.05 TO=0.466 tS=3.71 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, enterprise_value, news_open_gap, volume
+  族1   条数=1    maxS=3.51 maxF=2.04 | 代表 KPOMXQWE w102_b S=3.51 F=2.04 TO=0.472 tS=3.75 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, dividend, enterprise_value, news_open_gap, sharesout, volume
+  族7   条数=7    maxS=3.51 maxF=3.18 | 代表 1YXQJRoX w182_01 S=3.51 F=3.18 TO=0.203 tS=3.13 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_mfma2_revt, fnd6_newqv1300_glcea12, fnd6_xrent, returns, volume
+  族2   条数=2    maxS=3.50 maxF=2.03 | 代表 A108gEJw w102_a S=3.50 F=2.03 TO=0.474 tS=3.71 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, enterprise_value, news_open_gap, news_short_interest, volume
+  族1   条数=1    maxS=3.50 maxF=2.02 | 代表 O0rXnEa1 w102_d S=3.50 F=2.02 TO=0.480 tS=3.75 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, dividend, enterprise_value, news_open_gap, news_short_interest, sharesout, volume
+  族1   条数=1    maxS=3.46 maxF=2.14 | 代表 xAYpO9qn w97_c S=3.46 F=2.14 TO=0.423 tS=3.54 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, driver, enterprise_value, gaussian, volume
+  族24  条数=24   maxS=3.45 maxF=2.88 | 代表 E5vM2QN1 w95_a S=3.45 F=2.16 TO=0.412 tS=3.62 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, enterprise_value, volume
+  族3   条数=3    maxS=3.45 maxF=2.70 | 代表 A108RmPW w96_b S=3.45 F=2.14 TO=0.419 tS=3.66 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, dividend, enterprise_value, sharesout, volume
+  族1   条数=1    maxS=3.44 maxF=2.57 | 代表 JjNlZEmx w198_02 S=3.44 F=2.57 TO=0.291 tS=2.85 TOP3000/SUBINDUSTRY/d10
+       字段: annual_intangible_assets_net_carrying_value, assets, cashflow_op, enterprise_value, fnd6_newqv1300_glcea12, fnd6_xrent, returns, volume
+  族2   条数=2    maxS=3.40 maxF=2.69 | 代表 9qjQWk3V w196_08 S=3.40 F=2.69 TO=0.243 tS=2.70 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, enterprise_value, fn_accrued_liab_curr_a, fnd6_newqv1300_glcea12, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.40 maxF=2.49 | 代表 Vkan1Ek5 w197_00 S=3.40 F=2.49 TO=0.309 tS=2.93 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, enterprise_value, fnd6_intc, fnd6_newqv1300_glcea12, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.39 maxF=2.89 | 代表 JjNZ3Rbm w191_01 S=3.39 F=2.89 TO=0.215 tS=2.71 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_newqv1300_glcea12, fnd6_tfvce, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.37 maxF=2.97 | 代表 Xgb59aRb w188_01 S=3.37 F=2.97 TO=0.199 tS=3.25 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_mfma2_revt, fnd6_newa2v1300_ni, fnd6_newqv1300_glcea12, returns, volume
+  族2   条数=2    maxS=3.33 maxF=2.89 | 代表 ZYbebzJY w185_01 S=3.33 F=2.89 TO=0.206 tS=2.56 TOP3000/SUBINDUSTRY/d10
+       字段: anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, assets, cashflow_op, close, enterprise_value, fnd6_newqv1300_glcea12, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.33 maxF=2.95 | 代表 XgbEJ6j5 w196_02 S=3.33 F=2.95 TO=0.200 tS=2.63 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_newqv1300_glcea12, fnd6_tstkc, fnd6_xrent, returns, volume
+  族3   条数=3    maxS=3.33 maxF=2.27 | 代表 j2Ad6oaW w39_i__d2 S=3.33 F=1.95 TO=0.401 tS=3.75 TOP3000/SUBINDUSTRY/d2
+       字段: assets, cash, close, fnd6_newqv1300_cimiiq, fnd6_newqv1300_ivstq, fnd6_xrent, volume
+  族4   条数=4    maxS=3.30 maxF=2.67 | 代表 j2Ad0ZGO D_e79kPeEM_d2 S=3.30 F=2.05 TO=0.414 tS=3.76 TOP3000/SUBINDUSTRY/d2
+       字段: assets, cashflow_op, close, enterprise_value, liabilities_curr
+  族3   条数=3    maxS=3.30 maxF=3.52 | 代表 XgbgNwna w158_01 S=3.30 F=3.52 TO=0.124 tS=2.07 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, enterprise_value, fn_accrued_liab_curr_a, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.29 maxF=2.20 | 代表 RRbk0e61 w222_j S=3.29 F=2.20 TO=0.352 tS=3.15 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_xrent, news_short_interest, open, volume
+  族3   条数=3    maxS=3.29 maxF=2.46 | 代表 MPaM10LL x174_x172_w165_01_OVN_AMII S=3.29 F=2.46 TO=0.251 tS=2.61 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cap, cashflow_op, close, enterprise_value, fnd6_pstkl, fnd6_xrent, open, returns, volume
+  族2   条数=2    maxS=3.28 maxF=3.37 | 代表 GrbrQbWZ w158_05 S=3.28 F=3.37 TO=0.137 tS=2.24 TOP3000/SUBINDUSTRY/d10
+       字段: annual_intangible_assets_net_carrying_value, assets, cashflow_op, enterprise_value, fn_accrued_liab_curr_a, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.28 maxF=3.46 | 代表 qMxM5j1A w158_04 S=3.28 F=3.46 TO=0.122 tS=2.15 TOP3000/SUBINDUSTRY/d10
+       字段: annual_intangible_assets_net_carrying_value, assets, cashflow_op, enterprise_value, fnd6_xrent, returns, volume
+  族3   条数=3    maxS=3.28 maxF=3.21 | 代表 3qXZGMmO w189_01 S=3.28 F=3.21 TO=0.164 tS=2.22 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_newqv1300_glcea12, fnd6_xrent, liabilities_curr, returns, volume
+  族3   条数=3    maxS=3.26 maxF=2.39 | 代表 e79Z8AkN w100_h S=3.26 F=2.11 TO=0.359 tS=3.05 TOP3000/SUBINDUSTRY/d1
+       字段: annual_intangible_assets_net_carrying_value, assets, authorized_stock_buyback_amount, cash, cashflow_op, close, enterprise_value, returns, volume
+  族2   条数=2    maxS=3.26 maxF=2.91 | 代表 MPaod5Lk w192_00 S=3.26 F=2.91 TO=0.191 tS=2.65 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_newqv1300_glcea12, fnd6_txtubpospinc, fnd6_xrent, returns, volume
+  族2   条数=2    maxS=3.26 maxF=1.91 | 代表 0mXnJj5v w206_01 S=3.26 F=1.91 TO=0.458 tS=3.47 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cashflow_op, close, enterprise_value, fnd6_intc, fnd6_newqv1300_glcea12, fnd6_xrent, open
+  族1   条数=1    maxS=3.24 maxF=2.94 | 代表 A1N1mVMw w161_00 S=3.24 F=2.94 TO=0.177 tS=2.37 TOP3000/SUBINDUSTRY/d10
+       字段: annual_intangible_assets_net_carrying_value, assets, cashflow_op, enterprise_value, fn_accrued_liab_curr_a, fnd6_xrent, returns
+  族1   条数=1    maxS=3.22 maxF=2.83 | 代表 mLmLW6E6 w162_00 S=3.22 F=2.83 TO=0.195 tS=2.77 TOP3000/SUBINDUSTRY/d10
+       字段: assets, cap, cash, cashflow_op, enterprise_value, fnd6_newqv1300_dpactq, fnd6_xrent, returns, volume
+  族1   条数=1    maxS=3.22 maxF=2.72 | 代表 levRQz5x w228_n S=3.22 F=2.72 TO=0.225 tS=2.99 TOP3000/SUBINDUSTRY/d10
+       字段: annual_intangible_assets_net_carrying_value, assets, cashflow_op, close, enterprise_value, fnd6_intc, fnd6_mfma2_revt, returns, volume
+  族1   条数=1    maxS=3.22 maxF=2.01 | 代表 1YxAYVvK w96_e S=3.22 F=2.01 TO=0.411 tS=3.18 TOP3000/SUBINDUSTRY/d1
+       字段: assets, authorized_stock_buyback_amount, cash, cashflow_op, close, common_stock_repurchase_payment, enterprise_value, volume
+
+== 按 S>=3.2 挑族代表（高质量 + 一族一条）==
+  P0ZmX82J w101_e                       S=3.51 F=2.05 TO=0.466 tS=3.71 TOP3000/SUBINDUSTRY/d1
+  KPOMXQWE w102_b                       S=3.51 F=2.04 TO=0.472 tS=3.75 TOP3000/SUBINDUSTRY/d1
+  1YXQJRoX w182_01                      S=3.51 F=3.18 TO=0.203 tS=3.13 TOP3000/SUBINDUSTRY/d10
+  A108gEJw w102_a                       S=3.50 F=2.03 TO=0.474 tS=3.71 TOP3000/SUBINDUSTRY/d1
+  O0rXnEa1 w102_d                       S=3.50 F=2.02 TO=0.480 tS=3.75 TOP3000/SUBINDUSTRY/d1
+  xAYpO9qn w97_c                        S=3.46 F=2.14 TO=0.423 tS=3.54 TOP3000/SUBINDUSTRY/d1
+  E5vM2QN1 w95_a                        S=3.45 F=2.16 TO=0.412 tS=3.62 TOP3000/SUBINDUSTRY/d1
+  A108RmPW w96_b                        S=3.45 F=2.14 TO=0.419 tS=3.66 TOP3000/SUBINDUSTRY/d1
+  JjNlZEmx w198_02                      S=3.44 F=2.57 TO=0.291 tS=2.85 TOP3000/SUBINDUSTRY/d10
+  9qjQWk3V w196_08                      S=3.40 F=2.69 TO=0.243 tS=2.70 TOP3000/SUBINDUSTRY/d10
+  Vkan1Ek5 w197_00                      S=3.40 F=2.49 TO=0.309 tS=2.93 TOP3000/SUBINDUSTRY/d10
+  JjNZ3Rbm w191_01                      S=3.39 F=2.89 TO=0.215 tS=2.71 TOP3000/SUBINDUSTRY/d10
+  Xgb59aRb w188_01                      S=3.37 F=2.97 TO=0.199 tS=3.25 TOP3000/SUBINDUSTRY/d10
+  ZYbebzJY w185_01                      S=3.33 F=2.89 TO=0.206 tS=2.56 TOP3000/SUBINDUSTRY/d10
+  XgbEJ6j5 w196_02                      S=3.33 F=2.95 TO=0.200 tS=2.63 TOP3000/SUBINDUSTRY/d10
+  j2Ad6oaW w39_i__d2                    S=3.33 F=1.95 TO=0.401 tS=3.75 TOP3000/SUBINDUSTRY/d2
+  j2Ad0ZGO D_e79kPeEM_d2                S=3.30 F=2.05 TO=0.414 tS=3.76 TOP3000/SUBINDUSTRY/d2
+  XgbgNwna w158_01                      S=3.30 F=3.52 TO=0.124 tS=2.07 TOP3000/SUBINDUSTRY/d10
+  RRbk0e61 w222_j                       S=3.29 F=2.20 TO=0.352 tS=3.15 TOP3000/SUBINDUSTRY/d10
+  MPaM10LL x174_x172_w165_01_OVN_AMII   S=3.29 F=2.46 TO=0.251 tS=2.61 TOP3000/SUBINDUSTRY/d10
+  GrbrQbWZ w158_05                      S=3.28 F=3.37 TO=0.137 tS=2.24 TOP3000/SUBINDUSTRY/d10
+  qMxM5j1A w158_04                      S=3.28 F=3.46 TO=0.122 tS=2.15 TOP3000/SUBINDUSTRY/d10
+  3qXZGMmO w189_01                      S=3.28 F=3.21 TO=0.164 tS=2.22 TOP3000/SUBINDUSTRY/d10
+  e79Z8AkN w100_h                       S=3.26 F=2.11 TO=0.359 tS=3.05 TOP3000/SUBINDUSTRY/d1
+  MPaod5Lk w192_00                      S=3.26 F=2.91 TO=0.191 tS=2.65 TOP3000/SUBINDUSTRY/d10
+  0mXnJj5v w206_01                      S=3.26 F=1.91 TO=0.458 tS=3.47 TOP3000/SUBINDUSTRY/d10
+  A1N1mVMw w161_00                      S=3.24 F=2.94 TO=0.177 tS=2.37 TOP3000/SUBINDUSTRY/d10
+  mLmLW6E6 w162_00                      S=3.22 F=2.83 TO=0.195 tS=2.77 TOP3000/SUBINDUSTRY/d10
+  levRQz5x w228_n                       S=3.22 F=2.72 TO=0.225 tS=2.99 TOP3000/SUBINDUSTRY/d10
+  1YxAYVvK w96_e                        S=3.22 F=2.01 TO=0.411 tS=3.18 TOP3000/SUBINDUSTRY/d1
+  MPa9rEWo w206_04                      S=3.21 F=1.91 TO=0.442 tS=3.35 TOP3000/SUBINDUSTRY/d10
+  Grb1d5m5 x174_x172_w165_01_OVN_AMIC   S=3.21 F=2.55 TO=0.217 tS=2.34 TOP3000/SUBINDUSTRY/d10
+  blb7eZvM w206_08                      S=3.20 F=1.83 TO=0.453 tS=3.50 TOP3000/SUBINDUSTRY/d10
+  共 33 条（= 可尝试的独立机会数）

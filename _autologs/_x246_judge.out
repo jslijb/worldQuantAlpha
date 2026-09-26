@@ -1,0 +1,10 @@
+D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+匹配 x246*：达标候选 2 条（豁免比 1.1，直通线 0.685，收对手地板 0.66，算线用 0.66，F≥1.5，TO≤22%）
+  候选池按 Fitness 排序（排名导向）：
+    x246_E5p5NVkR_TOP1         S=2.35 F=1.76 tS=1.68 TO= 18.4% margin= 11.2bp
+    x246_Xgb59aRb_TOP1         S=2.33 F=1.70 tS=2.21 TO= 19.9% margin= 10.7bp
+池子 109 条（S 已知 109 条）
+  ✗ kqoQ2l2d x246_E5p5NVkR_TOP1         SF=4.11 S=2.35 corr_max=0.7319 撞1YXJeQoW(S=2.19) 需≥2.41(旧口径需≥2.41) → 不够 | 有效对手[1YXJeQoW(S=2.19,corr=0.7319)] 全名单[1YXJeQoW(S=2.19,corr=0.7319)]
+  ✗ e7bLwQwp x246_Xgb59aRb_TOP1         SF=4.03 S=2.33 corr_max=0.8346 撞MPakMndk(S=2.62) 需≥2.88(旧口径需≥2.88) → 不够 | 有效对手[MPakMndk(S=2.62,corr=0.8346) 1YXJeQoW(S=2.19,corr=0.6703)] 全名单[MPakMndk(S=2.62,corr=0.8346) 1YXJeQoW(S=2.19,corr=0.6703)]
+submit_exempt 完成：本轮提交 0 条

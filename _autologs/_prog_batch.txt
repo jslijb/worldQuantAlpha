@@ -1,0 +1,40 @@
+w232: 26/30 有产出
+    21:08:09  D_e79kPeEM_d15
+    21:06:21  D_e79kPeEM_d4
+    21:05:41  D_e79kPeEM_d2
+    21:04:38  D_kqjpepz8_d20
+    21:03:47  D_kqjpepz8_d15
+    21:02:46  D_kqjpepz8_d8
+w233: (无 combos 文件)
+w234: 17/18 有产出
+    20:56:10  B_gn
+    20:54:57  B_d20
+    20:54:49  B_d5
+    20:53:20  B_plus
+    20:53:17  B_decl
+    20:51:51  B_hump
+w235: 13/13 有产出
+    20:58:08  Acap_SEC
+    20:57:18  A_SUB_d15
+    20:55:31  A_SEC_d6
+    20:53:06  Lcap_SEC
+    20:51:28  Acap_SUB
+    20:50:07  L_NON
+w236: 0/184 有产出
+
+== mined 目录里 mtime 最新的 15 个 ==
+  09-20 21:08:09  D_e79kPeEM_d15.json
+  09-20 21:07:30  w189_01__SEC.json
+  09-20 21:07:25  w189_01__MAR.json
+  09-20 21:06:21  D_e79kPeEM_d4.json
+  09-20 21:05:41  D_e79kPeEM_d2.json
+  09-20 21:04:38  D_kqjpepz8_d20.json
+  09-20 21:03:47  D_kqjpepz8_d15.json
+  09-20 21:02:46  D_kqjpepz8_d8.json
+  09-20 21:01:38  D_kqjpepz8_d2.json
+  09-20 21:01:30  D_kqjpepz8_d4.json
+  09-20 20:59:58  H_hump_v2.json
+  09-20 20:59:56  H_hump_kqjpepz8.json
+  09-20 20:58:37  e79kPeEM_v3.json
+  09-20 20:58:08  Acap_SEC.json
+  09-20 20:57:18  A_SUB_d15.json

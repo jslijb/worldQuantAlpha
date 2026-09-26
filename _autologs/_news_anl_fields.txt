@@ -1,0 +1,241 @@
+数据集类目：Analyst(12), Fundamental(24), Model(12), News(2)
+本次盘点类目：['Analyst', 'News']
+
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[Analyst] analyst4               字段数=1324  名称=Analyst Estimate Data for Equity
+   anl4_dez1basicafv4_est             cov=1.00  类型=VECTOR    Estimation value
+   anl4_dez1basicafv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   estimate_value_currency_code       cov=1.00  类型=VECTOR    Home currency of instrument
+   estimate_value_currency_code_qtr   cov=1.00  类型=VECTOR    Home currency of instrument
+   anl4_dez1basicqfv4_preest          cov=1.00  类型=VECTOR    The previous estimation of finanicial item
+   anl4_dez1basicqfv4_est             cov=1.00  类型=VECTOR    Estimation value
+   actuals_value_currency_code        cov=1.00  类型=MATRIX    Pricing Currency where the security trades
+   pretax_income_max_guidance_qtr     cov=1.00  类型=MATRIX    The maximum guidance value for Pretax income.
+   basic_shares_max_guidance_qtr      cov=1.00  类型=MATRIX    The maximum guidance value for Basic Shares.
+   eps_adjusted_min_guidance_qtr      cov=1.00  类型=MATRIX    Minimum guidance value for adjusted Earnings per share excluding
+   book_value_per_share_min_guidance_qtr cov=1.00  类型=MATRIX    Book value per share - minimum guidance value
+   stock_option_expense_max_guidance_qtr cov=1.00  类型=MATRIX    Stock option expense - maximum guidance value
+   pretax_income_reported_min_guidance_qtr cov=1.00  类型=MATRIX    Reported Pretax income- minimum guidance value
+   operating_profit_max_guidance_qtr  cov=1.00  类型=MATRIX    The maximum guidance value for Earnings Before Interest and Taxe
+   … 其余 36 个
+==============================================================================================================
+[News] news12                 字段数=875  名称=US News Data
+   end_of_day_vwap_2                  cov=1.00  类型=VECTOR    End of Day Volume-Weighted Average Price for all events on Day 1
+   after_hours_vwap_2                 cov=1.00  类型=VECTOR    Volume-Weighted Average Price after trade or post-market session
+   range_to_atr_ratio                 cov=1.00  类型=VECTOR    Ratio of today’s price range to 20-day average true range.
+   max_pct_increase_post_news         cov=1.00  类型=VECTOR    Maximum absolute upward price movement following the news/event 
+   volume_standard_deviation          cov=1.00  类型=VECTOR    Standard deviation of trading volume following the event on Day 
+   session_open_price                 cov=1.00  类型=VECTOR    Opening price of the security on Day 1
+   lowest_price_pre_news              cov=1.00  类型=VECTOR    Lowest price in the Time-Of-News window for the stock on Day 1
+   advantageous_position_flag         cov=1.00  类型=VECTOR    Indicator of whether a long or short position would have been mo
+   prev_day_pct_change                cov=1.00  类型=VECTOR    Previous day's price, volume, or related metric for contextual c
+   spy_etf_close_price                cov=1.00  类型=VECTOR    Closing price of SPY ETF (S&P 500 benchmark), used as market pro
+   previous_close_price               cov=1.00  类型=VECTOR    Previous day’s closing price of the security
+   previous_day_volume                cov=1.00  类型=VECTOR    Previous day’s trading volume for the security
+   volume_at_open                     cov=1.00  类型=VECTOR    Trading volume at market open.
+   end_of_session_close_price         cov=1.00  类型=VECTOR    End of Day closing price for the security on Day 1
+   … 其余 36 个
+==============================================================================================================
+[News] news12                 字段数=875  名称=US News Data
+   end_of_day_vwap_2                  cov=1.00  类型=VECTOR    End of Day Volume-Weighted Average Price for all events on Day 1
+   after_hours_vwap_2                 cov=1.00  类型=VECTOR    Volume-Weighted Average Price after trade or post-market session
+   range_to_atr_ratio                 cov=1.00  类型=VECTOR    Ratio of today’s price range to 20-day average true range.
+   max_pct_increase_post_news         cov=1.00  类型=VECTOR    Maximum absolute upward price movement following the news/event 
+   volume_standard_deviation          cov=1.00  类型=VECTOR    Standard deviation of trading volume following the event on Day 
+   session_open_price                 cov=1.00  类型=VECTOR    Opening price of the security on Day 1
+   lowest_price_pre_news              cov=1.00  类型=VECTOR    Lowest price in the Time-Of-News window for the stock on Day 1
+   advantageous_position_flag         cov=1.00  类型=VECTOR    Indicator of whether a long or short position would have been mo
+   prev_day_pct_change                cov=1.00  类型=VECTOR    Previous day's price, volume, or related metric for contextual c
+   spy_etf_close_price                cov=1.00  类型=VECTOR    Closing price of SPY ETF (S&P 500 benchmark), used as market pro
+   previous_close_price               cov=1.00  类型=VECTOR    Previous day’s closing price of the security
+   previous_day_volume                cov=1.00  类型=VECTOR    Previous day’s trading volume for the security
+   volume_at_open                     cov=1.00  类型=VECTOR    Trading volume at market open.
+   end_of_session_close_price         cov=1.00  类型=VECTOR    End of Day closing price for the security on Day 1
+   … 其余 36 个

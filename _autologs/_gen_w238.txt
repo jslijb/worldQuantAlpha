@@ -1,0 +1,13 @@
+近线 8 条 → 组合 12 条
+  1YwRK1wW_v2              corr=0.7175 opc=20 → 新增 2 条
+  9qX3M2mq_v2              corr=0.7252 opc=20 → 新增 2 条
+  x174_w125_d_AMIINT       opc=63 预估换桶后 69 > 64 跳过
+  x174_w125_d_AMIINT       opc=63 预估换桶后 69 > 64 跳过
+  x174_w125_d_AMIINT       corr=0.7314 opc=63 → 新增 0 条
+  A_SEC                    opc=63 预估换桶后 69 > 64 跳过
+  A_SEC                    opc=63 预估换桶后 69 > 64 跳过
+  A_SEC                    corr=0.7334 opc=63 → 新增 0 条
+  x163_w27lnoqxrent_MAR    corr=0.7398 opc=17 → 新增 2 条
+  kqjpepz8_v2              corr=0.7423 opc=20 → 新增 2 条
+  9qX3M2mq_v3              corr=0.7520 opc=12 → 新增 2 条
+  w162_02                  corr=0.7532 opc=21 → 新增 2 条

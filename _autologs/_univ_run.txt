@@ -1,0 +1,85 @@
+D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+源候选 20 个（去重表达式 18）× 2 池 = 36 条待跑
+  src XgbgNwna    S=3.30 F=3.52 TO=0.124 tS=2.07  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src qMxM5j1A    S=3.28 F=3.46 TO=0.122 tS=2.15  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(-ann
+  src d5b59n6K    S=3.26 F=3.45 TO=0.112 tS=2.00  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src vRrRYmxa    S=3.30 F=3.41 TO=0.134 tS=2.10  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src GrbrQbWZ    S=3.28 F=3.37 TO=0.137 tS=2.24  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src blblxz5M    S=3.19 F=3.32 TO=0.119 tS=1.91  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src P020P5MM    S=3.19 F=3.24 TO=0.119 tS=1.71  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src 3qXZGMmO    S=3.28 F=3.21 TO=0.164 tS=2.22  1.5*group_rank(liabilities_curr/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/e
+  src omL9g8AJ    S=3.21 F=3.21 TO=0.164 tS=2.23  1.5*group_rank(liabilities_curr/assets, sector) + group_rank(ts_av_diff(cashflow_op/enterp
+  src wpY3Yxvd    S=2.99 F=3.20 TO=0.133 tS=2.49  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src qMx9ZPaP    S=3.01 F=3.20 TO=0.114 tS=1.50  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src Vk6Za7Lw    S=3.01 F=3.14 TO=0.142 tS=2.54  group_neutralize(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/a
+  src qMWOWaE1    S=3.01 F=3.13 TO=0.143 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src A10e0LQY    S=3.02 F=3.13 TO=0.144 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src Vk6Z6nmw    S=2.98 F=3.13 TO=0.141 tS=2.43  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src kqVvjjnK    S=3.01 F=3.13 TO=0.143 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src KPOvGJRj    S=2.92 F=3.13 TO=0.130 tS=2.48  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src zqYgYexo    S=2.98 F=3.10 TO=0.141 tS=2.51  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src RRV9brza    S=3.00 F=3.09 TO=0.144 tS=2.38  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 42), subin
+  src kqVvoRMP    S=2.96 F=3.09 TO=0.145 tS=2.58  group_rank(fnd6_xrent/assets, industry) + group_rank(ts_av_diff(cash/assets, 45), industry
+u1000_XgbgNwna_TOP1 已有产出，跳过
+u1000_qMxM5j1A_TOP1 已有产出，跳过
+u1000_qMxM5j1A_TOP5 已有产出，跳过
+u1000_XgbgNwna_TOP5 78NJ8pw8 TOP500    SF=2.78 S=1.58 F=1.20 T=0.136 tS=0.56 FAIL=[] [fail]
+u1000_vRrRYmxa_TOP1 pwR8wxao TOP1000   SF=4.00 S=2.20 F=1.80 T=0.143 tS=1.46 FAIL=[] [★PASS]
+u1000_d5b59n6K_TOP5 xA3RAVvJ TOP500    SF=2.76 S=1.55 F=1.21 T=0.124 tS=0.47 FAIL=[] [fail]
+u1000_vRrRYmxa_TOP5 KPNkleRx TOP500    SF=2.78 S=1.60 F=1.18 T=0.146 tS=0.63 FAIL=[] [fail]
+u1000_GrbrQbWZ_TOP5 O0NoQKvp TOP500    SF=3.55 S=1.97 F=1.58 T=0.154 tS=1.33 FAIL=[] [fail]
+u1000_GrbrQbWZ_TOP1 vRrdwa8G TOP1000   SF=4.04 S=2.23 F=1.81 T=0.149 tS=1.49 FAIL=[] [★PASS]
+u1000_blblxz5M_TOP1 d5bdkQOY TOP1000   SF=3.74 S=2.05 F=1.69 T=0.131 tS=0.26 FAIL=[] [fail]
+u1000_blblxz5M_TOP5 JjNbMdWm TOP500    SF=3.10 S=1.73 F=1.37 T=0.137 tS=0.67 FAIL=[] [fail]
+u1000_P020P5MM_TOP1 MPakMQOo TOP1000   SF=3.52 S=1.95 F=1.57 T=0.128 tS=-0.11 FAIL=[] [fail]
+u1000_P020P5MM_TOP5 A1NkjQpY TOP500    SF=2.13 S=1.27 F=0.86 T=0.132 tS=-0.08 FAIL=['LOW_FITNESS'] [fail]
+u1000_3qXZGMmO_TOP5 A1NkjxMl TOP500    SF=3.44 S=1.96 F=1.48 T=0.169 tS=1.08 FAIL=[] [fail]
+u1000_3qXZGMmO_TOP1 omLV8Zvm TOP1000   SF=4.36 S=2.42 F=1.94 T=0.167 tS=1.53 FAIL=[] [★PASS]
+u1000_omL9g8AJ_TOP1 MPakMndk TOP1000   SF=4.97 S=2.62 F=2.35 T=0.166 tS=1.94 FAIL=[] [★PASS]
+u1000_omL9g8AJ_TOP5 pwR8YeWx TOP500    SF=3.93 S=2.12 F=1.81 T=0.170 tS=1.15 FAIL=[] [fail]
+u1000_wpY3Yxvd_TOP5 O0NoOEqY TOP500    SF=2.09 S=1.24 F=0.85 T=0.147 tS=-0.16 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_qMx9ZPaP_TOP1 1YXJeQoW TOP1000   SF=4.13 S=2.19 F=1.94 T=0.123 tS=1.26 FAIL=[] [★PASS]
+u1000_wpY3Yxvd_TOP1 pwR8mgdg TOP1000   SF=4.01 S=2.14 F=1.87 T=0.143 tS=0.42 FAIL=[] [fail]
+u1000_Vk6Za7Lw_TOP1 E5pk1gMP TOP1000   SF=3.98 S=2.15 F=1.83 T=0.151 tS=0.45 FAIL=[] [fail]
+u1000_qMx9ZPaP_TOP5 QPbEMn5G TOP500    SF=3.74 S=1.97 F=1.77 T=0.125 tS=1.18 FAIL=[] [fail]
+u1000_Vk6Za7Lw_TOP5 d5bdpQVK TOP500    SF=2.09 S=1.25 F=0.84 T=0.155 tS=-0.16 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_A10e0LQY_TOP1 Xgb1Gbex TOP1000   SF=3.99 S=2.16 F=1.83 T=0.154 tS=0.38 FAIL=[] [fail]
+u1000_A10e0LQY_TOP5 Xgb1GJNz TOP500    SF=2.17 S=1.29 F=0.88 T=0.158 tS=-0.17 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_Vk6Z6nmw_TOP5 0mXzqY56 TOP500    SF=2.14 S=1.27 F=0.87 T=0.154 tS=-0.43 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_KPOvGJRj_TOP1 O0NoOjab TOP1000   SF=4.20 S=2.21 F=1.99 T=0.139 tS=0.59 FAIL=[] [fail]
+u1000_KPOvGJRj_TOP5 E5pk1Po9 TOP500    SF=2.34 S=1.35 F=0.99 T=0.144 tS=-0.04 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_zqYgYexo_TOP1 KPNk3oRg TOP1000   SF=4.06 S=2.18 F=1.88 T=0.150 tS=0.55 FAIL=[] [fail]
+u1000_RRV9brza_TOP1 3qXzbrPO TOP1000   SF=4.05 S=2.19 F=1.86 T=0.154 tS=0.2 FAIL=[] [fail]
+u1000_zqYgYexo_TOP5 mLmZ3RaE TOP500    SF=2.19 S=1.30 F=0.89 T=0.154 tS=-0.15 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_RRV9brza_TOP5 omLVp5kk TOP500    SF=2.18 S=1.30 F=0.88 T=0.158 tS=-0.15 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_kqVvoRMP_TOP5 2rwJ0nAN TOP500    SF=2.21 S=1.30 F=0.91 T=0.158 tS=-0.27 FAIL=['LOW_SHARPE', 'LOW_FITNESS'] [fail]
+u1000_Vk6Z6nmw_TOP1 P02vWwPK TOP1000   SF=3.93 S=2.12 F=1.81 T=0.150 tS=0.36 FAIL=[] [fail]
+u1000_kqVvoRMP_TOP1 1YXJ9aRQ TOP1000   SF=3.82 S=2.06 F=1.76 T=0.155 tS=0.34 FAIL=[] [fail]
+mine_univ_convert done
+源候选 12 个（去重表达式 12）× 1 池 = 12 条待跑
+  src VkagZle0    S=3.38 F=3.09 TO=0.197 tS=3.14  1.5*group_rank(fnd6_mfma2_revt/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/en
+  src Xgb59aRb    S=3.37 F=2.97 TO=0.199 tS=3.25  1.5*group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + group_rank(ts_av
+  src XgbEJ6j5    S=3.33 F=2.95 TO=0.200 tS=2.63  1.5*group_rank(fnd6_tstkc/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterpr
+  src A1N1eOvd    S=3.02 F=2.92 TO=0.116 tS=1.83  1.5*group_rank(ts_av_diff(assets_curr/assets,30), subindustry) + group_rank(fnd6_xrent/ass
+  src MPaod5Lk    S=3.26 F=2.91 TO=0.191 tS=2.65  1.5*group_rank(fnd6_txtubpospinc/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/
+  src xAYoEXvm    S=3.01 F=2.88 TO=0.152 tS=2.53  group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intan
+  src 2rO9wZvJ    S=2.74 F=2.83 TO=0.118 tS=1.67  trade_when(volume > ts_mean(volume, 20), group_rank(fnd6_xrent/assets, subindustry) + grou
+  src mLmLW6E6    S=3.22 F=2.83 TO=0.195 tS=2.77  1.5*group_rank(fnd6_newqv1300_dpactq/cap, subindustry) + group_rank(ts_av_diff(cash/assets
+  src qMxMV8NA    S=2.85 F=2.83 TO=0.093 tS=2.19  1.5*group_rank(fnd6_pstkl/cap, subindustry) + group_rank(-annual_intangible_assets_net_car
+  src d5b5voEJ    S=2.74 F=2.82 TO=0.104 tS=2.12  1.5*group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible
+  src E5vNEL1K    S=2.61 F=2.79 TO=0.126 tS=1.99  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_
+  src E5p5NVkR    S=3.02 F=2.72 TO=0.170 tS=2.12  1.5*group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(ts_av_diff(cashflow_op/
+源候选 12 个（去重表达式 12）× 1 池 = 12 条待跑
+  src XgbgNwna    S=3.30 F=3.52 TO=0.124 tS=2.07  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src qMxM5j1A    S=3.28 F=3.46 TO=0.122 tS=2.15  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(-ann
+  src d5b59n6K    S=3.26 F=3.45 TO=0.112 tS=2.00  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src vRrRYmxa    S=3.30 F=3.41 TO=0.134 tS=2.10  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src GrbrQbWZ    S=3.28 F=3.37 TO=0.137 tS=2.24  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src blblxz5M    S=3.19 F=3.32 TO=0.119 tS=1.91  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src P020P5MM    S=3.19 F=3.24 TO=0.119 tS=1.71  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src 3qXZGMmO    S=3.28 F=3.21 TO=0.164 tS=2.22  1.5*group_rank(liabilities_curr/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/e
+  src omL9g8AJ    S=3.21 F=3.21 TO=0.164 tS=2.23  1.5*group_rank(liabilities_curr/assets, sector) + group_rank(ts_av_diff(cashflow_op/enterp
+  src wpY3Yxvd    S=2.99 F=3.20 TO=0.133 tS=2.49  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src qMx9ZPaP    S=3.01 F=3.20 TO=0.114 tS=1.50  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src Vk6Za7Lw    S=3.01 F=3.14 TO=0.142 tS=2.54  group_neutralize(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/a

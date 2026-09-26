@@ -1,0 +1,14 @@
+w162_06                S=2.90 F=2.91 TO=0.103 legs_g1=6
+w162_06__g_ind         S=2.79 F=2.80 TO=0.100 legs_g1=6
+w162_06__g_sec         S=2.74 F=2.73 TO=0.098 legs_g1=6
+w164_04                S=2.97 F=2.89 TO=0.142 legs_g1=6
+D_e79kPeEM_d15         S=2.75 F=2.67 TO=0.113 legs_g1=3
+kqjpepz8_v2            S=2.50 F=2.40 TO=0.146 legs_g1=5
+e79kPeEM_v2            S=2.80 F=2.89 TO=0.138 legs_g1=6
+x162_w164_04_SEC       S=2.83 F=2.83 TO=0.135 legs_g1=6
+x172_w164_04_OVN       S=3.05 F=2.83 TO=0.161 legs_g1=7
+x174_w125_d_AMIINT     S=2.60 F=2.44 TO=0.113 legs_g1=2
+Acap_SUB               S=2.52 F=2.48 TO=0.115 legs_g1=2
+w214_x54c_SEC          : 未找到 mined 产出
+
+w242 combos = 33

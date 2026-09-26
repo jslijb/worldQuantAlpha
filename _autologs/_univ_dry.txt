@@ -1,0 +1,30 @@
+﻿python.exe : D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 38
++ ... orldquant'; & 'D:\ProgramData\miniforge3\envs\bigmodel\python.exe' 's ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+源候选 20 个（去重表达式 18）× 2 池 = 36 条待跑
+  src XgbgNwna    S=3.30 F=3.52 TO=0.124 tS=2.07  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src qMxM5j1A    S=3.28 F=3.46 TO=0.122 tS=2.15  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(-ann
+  src d5b59n6K    S=3.26 F=3.45 TO=0.112 tS=2.00  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src vRrRYmxa    S=3.30 F=3.41 TO=0.134 tS=2.10  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src GrbrQbWZ    S=3.28 F=3.37 TO=0.137 tS=2.24  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src blblxz5M    S=3.19 F=3.32 TO=0.119 tS=1.91  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src P020P5MM    S=3.19 F=3.24 TO=0.119 tS=1.71  1.5*group_rank(ts_av_diff(cash/assets,45), subindustry) + group_rank(fn_accrued_liab_curr_
+  src 3qXZGMmO    S=3.28 F=3.21 TO=0.164 tS=2.22  1.5*group_rank(liabilities_curr/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/e
+  src omL9g8AJ    S=3.21 F=3.21 TO=0.164 tS=2.23  1.5*group_rank(liabilities_curr/assets, sector) + group_rank(ts_av_diff(cashflow_op/enterp
+  src wpY3Yxvd    S=2.99 F=3.20 TO=0.133 tS=2.49  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src qMx9ZPaP    S=3.01 F=3.20 TO=0.114 tS=1.50  1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_a
+  src Vk6Za7Lw    S=3.01 F=3.14 TO=0.142 tS=2.54  group_neutralize(group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/a
+  src qMWOWaE1    S=3.01 F=3.13 TO=0.143 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src A10e0LQY    S=3.02 F=3.13 TO=0.144 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src Vk6Z6nmw    S=2.98 F=3.13 TO=0.141 tS=2.43  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src kqVvjjnK    S=3.01 F=3.13 TO=0.143 tS=2.53  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src KPOvGJRj    S=2.92 F=3.13 TO=0.130 tS=2.48  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src zqYgYexo    S=2.98 F=3.10 TO=0.141 tS=2.51  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subin
+  src RRV9brza    S=3.00 F=3.09 TO=0.144 tS=2.38  group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 42), subin
+  src kqVvoRMP    S=2.96 F=3.09 TO=0.145 tS=2.58  group_rank(fnd6_xrent/assets, industry) + group_rank(ts_av_diff(cash/assets, 45), industry

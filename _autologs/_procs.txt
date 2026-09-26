@@ -1,0 +1,4 @@
+﻿PID=18088 :: "D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/
+PID=25844 :: "D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/
+PID=26720 :: "D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/
+PID=27148 :: "D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/submit/submit_exempt.py * --min-f 2.0 --max-to 0.20 --limit 8 

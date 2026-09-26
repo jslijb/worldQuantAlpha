@@ -1,0 +1,10 @@
+== 单轴手术：axis=universe，源 6 条，值 ['TOP1000', 'TOP500'] ==
+[源] E5v8P8AJ   TOP3000  INDUSTRY    dly=1 dec=3    S=2.75 F=1.85 TO=0.3229 tS=2.42 FAIL=[]
+[源] WjPZ1PpP   TOP3000  SUBINDUSTRY dly=1 dec=4    S=2.69 F=1.75 TO=0.2526 tS=2.63 FAIL=[]
+[源] akL0jNj1   TOP3000  SUBINDUSTRY dly=1 dec=4    S=2.60 F=1.68 TO=0.2311 tS=2.95 FAIL=[]
+[源] N1a57ZWE   TOP3000  MARKET      dly=1 dec=6    S=2.63 F=1.90 TO=0.2888 tS=2.08 FAIL=[]
+[源] 883wm6LV   TOP3000  SUBINDUSTRY dly=1 dec=4    S=2.53 F=1.52 TO=0.2736 tS=2.83 FAIL=[]
+[源] KPNwEVep   TOP3000  MARKET      dly=1 dec=1    S=2.77 F=1.32 TO=0.6739 tS=2.62 FAIL=[]
+  计划模拟 12 个（6 条 x 2 值）
+
+axis_surgery done：12:23:27

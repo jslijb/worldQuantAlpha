@@ -1,0 +1,8 @@
+近线 12 + 甜点 12 → 组合 60 条（上限 60）
+  x174_w125_d_AMIINT         __bvol opc63+69>64 跳过
+  x174_w125_d_AMIINT         __bdv opc63+69>64 跳过
+  A_SEC                      __bvol opc63+69>64 跳过
+  A_SEC                      __bdv opc63+69>64 跳过
+  A_IND                      __bvol opc63+69>64 跳过
+  A_IND                      __bdv opc63+69>64 跳过
+  w189_01__g_bdv             无 subindustry 分组，跳过

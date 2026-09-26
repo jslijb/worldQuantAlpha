@@ -1,0 +1,20 @@
+== 账号 alpha 计数（count 口径）==
+  全部          = 3858
+  stage=OS      = 137   <- 已入池（提交成功）
+  stage=IS      = 3721
+  UNSUBMITTED   = 3721   <- 待提交
+  ACTIVE        = 137
+
+  按 universe 切（待提交池）：
+    TOP3000   = 3535
+    TOP2000   = 20
+    TOP1000   = 132
+    TOP500    = 33
+    TOP200    = 1
+
+== 排行榜（competitions/challenge）==
+  rank               = 50
+  score              = 0.62
+  isScore            = 8923.0
+  daysOfSubmission   = 29
+  uniquenessScore    = 0.7

@@ -1,0 +1,80 @@
+顶层字段: ['id', 'name', 'description', 'universities', 'countries', 'excludedCountries', 'status', 'teamBased', 'startDate', 'endDate', 'signUpStartDate', 'signUpEndDate', 'signUpDate', 'team', 'scoring', 'leaderboard', 'prizeBoard', 'universityBoard', 'submissions', 'faq', 'progress', 'helpText']
+
+### id = challenge
+
+### name = Challenge - Mainland China
+
+### description = Challenge
+
+### universities = None
+
+### countries ###
+[
+ "CN",
+ "IN",
+ "KE",
+ "NG",
+ "VN"
+]
+
+### excludedCountries = None
+
+### status = ACCEPTED
+
+### teamBased = False
+
+### startDate = None
+
+### endDate = None
+
+### signUpStartDate = None
+
+### signUpEndDate = None
+
+### signUpDate = None
+
+### team = None
+
+### scoring = PERFORMANCE
+
+### leaderboard ###
+{
+ "rank": 130,
+ "user": {
+  "id": "LJ49886",
+  "name": null,
+  "image": {
+   "url": "https://api.worldquantbrain.com/users/LJ49886/image"
+  }
+ },
+ "score": 0.58,
+ "daysOfSubmission": 25,
+ "isScore": 8636.0,
+ "uniquenessScore": 0.69,
+ "university": null
+}
+
+### prizeBoard = False
+
+### universityBoard = False
+
+### submissions = False
+
+### faq = https://support.worldquantbrain.com/hc/en-us/categories/41765545400087-WQ-Challenge-Country
+
+### progress = None
+
+### helpText = Continue submitting Alphas — top rankers may get consultant invites every week.
+
+=== 全部竞赛 scoring 口径 ===
+challenge                  status=ACCEPTED   scoring=PERFORMANCE    team=False  desc=Challenge
+IQC2026S3                  status=EXCLUDED   scoring=PERFORMANCE    team=True  desc=International Quant Championship 2026 Stage 3
+IQC2026S2                  status=EXCLUDED   scoring=PERFORMANCE    team=True  desc=International Quant Championship 2026 Stage 2
+IQC2026S1                  status=EXCLUDED   scoring=PERFORMANCE    team=True  desc=International Quant Championship 2026 Stage 1
+DataScienceID2025          status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor
+yerevanstatealphathonAM2025 status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor
+sunwayalphathonMY2025      status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor
+unmalphathonMY2025         status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor
+apualphathonMY2025         status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor
+qfepth2025q4               status=EXCLUDED   scoring=CHALLENGE      team=False  desc=Thailand - Quant Finance Explorer Program August 2025
+umalphathonMY2025          status=EXCLUDED   scoring=CHALLENGE      team=False  desc=<div lang="en"><h4>Opportunity</h4>  <ul>     <li>Top perfor

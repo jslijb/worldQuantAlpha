@@ -1,0 +1,74 @@
+status=200
+{
+ "id": "LJ49886",
+ "email": "jslijb@163.com",
+ "telephone": "+8613823554849",
+ "firstName": "li",
+ "lastName": "jiangbo",
+ "fullName": "lijiangbo",
+ "gender": "MALE",
+ "dateCreated": "2026-08-15T04:59:30-04:00",
+ "dateVerified": "2026-08-15T05:00:20-04:00",
+ "dateApproved": "2026-08-15T05:00:20-04:00",
+ "verified": true,
+ "approved": true,
+ "address": {
+  "street": null,
+  "city": null,
+  "state": null,
+  "postalCode": null,
+  "country": "CN"
+ },
+ "education": {
+  "university": "not applicable",
+  "major": null,
+  "degree": null,
+  "stem": null,
+  "graduationYear": null,
+  "gpa": null,
+  "maxGPA": null
+ },
+ "employment": null,
+ "recruitment": null,
+ "resume": null,
+ "image": {
+  "url": "https://api.worldquantbrain.com/users/LJ49886/image"
+ },
+ "settings": {
+  "allowTracking": true,
+  "communication": {
+   "allowSMS": true
+  },
+  "privacy": {
+   "name": {
+    "visibility": "PRIVATE",
+    "moderation": "NONE"
+   },
+   "image": {
+    "visibility": "PUBLIC",
+    "moderation": "APPROVED"
+   }
+  },
+  "client": {
+   "version": 1,
+   "preferences": {
+    "simulationWalkthrough": true,
+    "goldDialogShown": true
+   }
+  }
+ },
+ "onboarding": {
+  "status": "SHORTLIST"
+ },
+ "auxiliary": {
+  "campaign": {
+   "campaign": "Brain",
+   "source": "Individual",
+   "medium": "referral",
+   "term": null,
+   "content": "DZ11181"
+  }
+ },
+ "geniusLevel": null,
+ "level": "GOLD"
+}

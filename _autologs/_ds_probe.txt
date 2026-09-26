@@ -1,0 +1,79 @@
+data-sets -> 200 count=150
+拉到数据集 150 个
+
+== 数据集类目分布 ==
+  Price Volume                       36
+  Fundamental                        24
+  News                               24
+  Social Media                       24
+  Option                             18
+  Analyst                            12
+  Model                              12
+
+== 关键词命中数据集（前 3 个字段示例）==
+  sentiment  12 个: socialmedia12[18f], socialmedia12[9f], socialmedia12[18f], socialmedia12[9f], socialmedia12[18f], socialmedia12[18f], socialmedia12[18f], socialmedia12[18f]
+  news       24 个: news12[737f], news12[737f], news12[737f], news12[737f], news12[875f], news12[737f], news12[875f], news12[737f]
+  analyst    12 个: analyst4[1324f], analyst4[113f], analyst4[1324f], analyst4[1324f], analyst4[1324f], analyst4[1324f], analyst4[1324f], analyst4[113f]
+  option     18 个: option8[64f], option8[64f], option8[64f], option8[64f], option8[64f], option8[64f], option8[64f], option8[64f]
+
+== 全部数据集（按字段数排序，前 60）==
+  analyst4                      1324 fields  users=2563  Analyst Estimate Data for Equity
+  analyst4                      1324 fields  users=1115  Analyst Estimate Data for Equity
+  analyst4                      1324 fields  users=3653  Analyst Estimate Data for Equity
+  analyst4                      1324 fields  users=6178  Analyst Estimate Data for Equity
+  analyst4                      1324 fields  users=47361 Analyst Estimate Data for Equity
+  analyst4                      1324 fields  users=1880  Analyst Estimate Data for Equity
+  fundamental6                   886 fields  users=10523 Company Fundamental Data for Equity
+  fundamental6                   886 fields  users=3919  Company Fundamental Data for Equity
+  fundamental6                   886 fields  users=19596 Company Fundamental Data for Equity
+  fundamental6                   886 fields  users=3874  Company Fundamental Data for Equity
+  fundamental6                   886 fields  users=16010 Company Fundamental Data for Equity
+  fundamental6                   886 fields  users=86000 Company Fundamental Data for Equity
+  news12                         875 fields  users=749   US News Data
+  news12                         875 fields  users=1241  US News Data
+  news12                         875 fields  users=1168  US News Data
+  news12                         875 fields  users=2376  US News Data
+  news12                         875 fields  users=4488  US News Data
+  news12                         875 fields  users=30227 US News Data
+  fundamental2                   766 fields  users=21    Report Footnotes
+  fundamental2                   766 fields  users=491   Report Footnotes
+  fundamental2                   766 fields  users=36    Report Footnotes
+  fundamental2                   766 fields  users=775   Report Footnotes
+  fundamental2                   766 fields  users=36    Report Footnotes
+  fundamental2                   766 fields  users=94    Report Footnotes
+  fundamental2                   766 fields  users=70    Report Footnotes
+  fundamental2                   766 fields  users=1060  Report Footnotes
+  fundamental2                   766 fields  users=3493  Report Footnotes
+  fundamental2                   766 fields  users=3981  Report Footnotes
+  fundamental2                   766 fields  users=2065  Report Footnotes
+  fundamental2                   766 fields  users=35703 Report Footnotes
+  news12                         737 fields  users=10    US News Data
+  news12                         737 fields  users=31    US News Data
+  news12                         737 fields  users=108   US News Data
+  news12                         737 fields  users=2127  US News Data
+  news12                         737 fields  users=16    US News Data
+  news12                         737 fields  users=62    US News Data
+  fundamental6                   342 fields  users=180   Company Fundamental Data for Equity
+  fundamental6                   342 fields  users=121   Company Fundamental Data for Equity
+  fundamental6                   342 fields  users=97    Company Fundamental Data for Equity
+  fundamental6                   342 fields  users=1029  Company Fundamental Data for Equity
+  fundamental6                   342 fields  users=487   Company Fundamental Data for Equity
+  fundamental6                   342 fields  users=4188  Company Fundamental Data for Equity
+  pv13                           165 fields  users=952   Relationship Data for Equity
+  pv13                           165 fields  users=969   Relationship Data for Equity
+  pv13                           165 fields  users=539   Relationship Data for Equity
+  pv13                           165 fields  users=2806  Relationship Data for Equity
+  pv13                           165 fields  users=3023  Relationship Data for Equity
+  pv13                           165 fields  users=18481 Relationship Data for Equity
+  news18                         121 fields  users=170   Ravenpack News Data
+  news18                         121 fields  users=1217  Ravenpack News Data
+  news18                         121 fields  users=1326  Ravenpack News Data
+  news18                         121 fields  users=8906  Ravenpack News Data
+  news18                         121 fields  users=408   Ravenpack News Data
+  news18                         121 fields  users=902   Ravenpack News Data
+  analyst4                       113 fields  users=15    Analyst Estimate Data for Equity
+  analyst4                       113 fields  users=44    Analyst Estimate Data for Equity
+  analyst4                       113 fields  users=10    Analyst Estimate Data for Equity
+  analyst4                       113 fields  users=18    Analyst Estimate Data for Equity
+  analyst4                       113 fields  users=52    Analyst Estimate Data for Equity
+  analyst4                       113 fields  users=857   Analyst Estimate Data for Equity

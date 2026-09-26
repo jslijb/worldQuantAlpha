@@ -1,0 +1,13 @@
+﻿python.exe :   File "D:\Python\worldquant\_autologs\gen_w225.py", line 22
+所在位置 行:445 字符: 34
++ ...  = "utf-8"; & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "D:\Pyth...25.py", line 22 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    comb['w225_e'] = {'expr': G(INV, 1.5) + ' + 1.5*group_rank(liabilities_curr
+/cap, subindustry) + ' + ' + XR + ' + ' + CFOEV}
+                                                                               
+                                      ^
+SyntaxError: unterminated string literal (detected at line 22)

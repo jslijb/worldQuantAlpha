@@ -1,0 +1,17 @@
+=== KPNwG8Oj  (0920-w189bdv-d6) ===
+  POST /submit -> 201
+  === KPNwG8Oj verdict: ACCEPTED (4s) ===
+  selfCorr= 0.7725
+  *** 台账已追加 KPNwG8Oj dateSubmitted=2026-09-20T09:31:55-04:00 selfCorr=0.7725
+
+=== 78NKjWL1  (0920-w41b-d4) ===
+  POST /submit -> 201
+  === 78NKjWL1 verdict: REJECTED (4s) ===
+  FAIL 项: ['SELF_CORRELATION'] selfCorr= 0.8149
+  被拒： {'SELF_CORRELATION': ('FAIL', 0.8149, 0.7)}
+
+=== QPb5G6ZQ  (0920-w39i-d4) ===
+  POST /submit -> 201
+  === QPb5G6ZQ verdict: REJECTED (7s) ===
+  FAIL 项: ['SELF_CORRELATION'] selfCorr= 0.7504
+  被拒： {'SELF_CORRELATION': ('FAIL', 0.7504, 0.7)}

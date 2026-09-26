@@ -1,0 +1,92 @@
+平台未提交池条目: 3554
+台账唯一 id: 107
+
+== 维度分布 (全部 3554 条) ==
+  uni   : TOP3000=3478, TOP1000=51, TOP2000=16, TOP500=8, TOP200=1
+  neu   : SUBINDUSTRY=2275, INDUSTRY=963, MARKET=138, SECTOR=117, NONE=61
+  reg   : USA=3554
+  delay : 1=3285, 0=269
+  inst  : EQUITY=3554
+  decay  : 10=1035, 8=617, 0=574, 4=506, 3=145, 2=118, 1=101, 6=98, 40=90, 12=56, 20=47, 14=36
+
+平台未标 FAIL: 2022 / 3554
+过质量闸门: 487 条
+  其中台账里已有: 0
+  真增量 (台账没有): 487
+
+== 过闸候选按 universe 分 ==
+  TOP3000      480
+  TOP2000      6
+  TOP1000      1
+
+  == 过闸候选按 neutralization 分 ==
+  SUBINDUSTRY    386
+  SECTOR         47
+  MARKET         28
+  INDUSTRY       26
+
+== ★ 过闸 且 universe != TOP3000 : 7 条 ==
+  id         universe     neut           region    delay dec       S      F      TO     tS     SF 台账
+  YP58Mr5l   TOP2000      SUBINDUSTRY    USA       0     14     2.68   2.65   0.146   1.61   5.33 no
+  A10ev37X   TOP2000      SUBINDUSTRY    USA       0     12     2.67   2.52   0.160   1.50   5.19 no
+  O0rR8mjg   TOP2000      SUBINDUSTRY    USA       0     10     2.65   2.39   0.175   1.61   5.04 no
+  d5OY1Xgv   TOP2000      SUBINDUSTRY    USA       0     10     2.65   2.39   0.175   1.61   5.04 no
+  O0r6VZzJ   TOP2000      SUBINDUSTRY    USA       1     40     2.38   2.34   0.122   1.99   4.72 no
+  GrdXOVGP   TOP2000      SUBINDUSTRY    USA       0     8      2.64   2.23   0.200   1.63   4.87 no
+  npdO71xw   TOP1000      SUBINDUSTRY    USA       1     10     2.20   1.85   0.107   1.76   4.05 no
+
+== 全部非 TOP3000 条目: 76 条, 按 universe ==
+  TOP1000      51
+  TOP2000      16
+  TOP500       8
+  TOP200       1
+
+== TOP3000 过闸候选 F 前 40 (核对是否已在台账) ==
+  id         universe     neut           region    delay dec       S      F      TO     tS     SF 台账
+  XgbgNwna   TOP3000      SUBINDUSTRY    USA       1     10     3.30   3.52   0.124   2.07   6.82 no
+  qMxM5j1A   TOP3000      SUBINDUSTRY    USA       1     10     3.28   3.46   0.122   2.15   6.74 no
+  d5b59n6K   TOP3000      SUBINDUSTRY    USA       1     10     3.26   3.45   0.112   2.00   6.71 no
+  vRrRYmxa   TOP3000      SUBINDUSTRY    USA       1     10     3.30   3.41   0.134   2.10   6.71 no
+  GrbrQbWZ   TOP3000      SUBINDUSTRY    USA       1     10     3.28   3.37   0.137   2.24   6.65 no
+  blblxz5M   TOP3000      SUBINDUSTRY    USA       1     10     3.19   3.32   0.119   1.91   6.51 no
+  P020P5MM   TOP3000      SUBINDUSTRY    USA       1     10     3.19   3.24   0.119   1.71   6.43 no
+  3qXZGMmO   TOP3000      SUBINDUSTRY    USA       1     10     3.28   3.21   0.164   2.22   6.49 no
+  omL9g8AJ   TOP3000      SUBINDUSTRY    USA       1     10     3.21   3.21   0.164   2.23   6.42 no
+  wpY3Yxvd   TOP3000      SUBINDUSTRY    USA       0     16     2.99   3.20   0.133   2.49   6.19 no
+  qMx9ZPaP   TOP3000      SECTOR         USA       1     10     3.01   3.20   0.114   1.50   6.21 no
+  Vk6Za7Lw   TOP3000      SUBINDUSTRY    USA       0     14     3.01   3.14   0.142   2.54   6.15 no
+  qMWOWaE1   TOP3000      SUBINDUSTRY    USA       0     14     3.01   3.13   0.143   2.53   6.14 no
+  A10e0LQY   TOP3000      SUBINDUSTRY    USA       0     14     3.02   3.13   0.144   2.53   6.15 no
+  Vk6Z6nmw   TOP3000      SUBINDUSTRY    USA       0     14     2.98   3.13   0.141   2.43   6.11 no
+  kqVvjjnK   TOP3000      SUBINDUSTRY    USA       0     14     3.01   3.13   0.143   2.53   6.14 no
+  KPOvGJRj   TOP3000      SUBINDUSTRY    USA       0     16     2.92   3.13   0.130   2.48   6.05 no
+  zqYgYexo   TOP3000      SUBINDUSTRY    USA       0     14     2.98   3.10   0.141   2.51   6.08 no
+  RRV9brza   TOP3000      SUBINDUSTRY    USA       0     14     3.00   3.09   0.144   2.38   6.09 no
+  kqVvoRMP   TOP3000      SUBINDUSTRY    USA       0     14     2.96   3.09   0.145   2.58   6.05 no
+  j23orrMk   TOP3000      SUBINDUSTRY    USA       0     20     2.86   3.09   0.117   2.40   5.95 no
+  VkagZle0   TOP3000      SUBINDUSTRY    USA       1     10     3.38   3.09   0.197   3.14   6.47 no
+  78Z3Z5m5   TOP3000      SUBINDUSTRY    USA       0     14     2.97   3.07   0.142   2.65   6.04 no
+  78Z3ZAe1   TOP3000      SUBINDUSTRY    USA       0     14     2.97   3.07   0.142   2.59   6.04 no
+  d5OYjqdY   TOP3000      SUBINDUSTRY    USA       0     14     2.91   3.07   0.138   2.42   5.98 no
+  88jKQRAX   TOP3000      SECTOR         USA       1     10     3.14   3.07   0.159   1.91   6.21 no
+  78Z3ZgrZ   TOP3000      SUBINDUSTRY    USA       0     14     3.00   3.06   0.149   2.42   6.06 no
+  kqVvVxag   TOP3000      SUBINDUSTRY    USA       0     14     2.97   3.06   0.143   2.32   6.03 no
+  vRkZN1gG   TOP3000      SUBINDUSTRY    USA       0     14     2.94   3.06   0.139   2.52   6.00 no
+  LL9ENRX2   TOP3000      SUBINDUSTRY    USA       0     14     2.83   3.03   0.109   2.22   5.86 no
+  MP1d7Nvk   TOP3000      SUBINDUSTRY    USA       0     12     3.02   3.03   0.155   2.57   6.05 no
+  JjxoNKAj   TOP3000      SUBINDUSTRY    USA       0     12     2.99   3.02   0.158   2.64   6.01 no
+  N1QLrPN7   TOP3000      SUBINDUSTRY    USA       0     20     2.83   3.02   0.118   2.12   5.85 no
+  78Z3jxx2   TOP3000      SUBINDUSTRY    USA       0     14     2.90   3.01   0.139   2.58   5.91 no
+  9qjAA08K   TOP3000      SUBINDUSTRY    USA       1     10     3.26   3.01   0.190   2.70   6.27 no
+  JjxoxraA   TOP3000      SUBINDUSTRY    USA       0     14     2.94   3.00   0.144   2.46   5.94 no
+  58QrQzeM   TOP3000      SUBINDUSTRY    USA       0     14     2.96   3.00   0.143   3.11   5.96 no
+  ZY0g7q2d   TOP3000      SUBINDUSTRY    USA       0     14     2.84   3.00   0.136   2.30   5.84 no
+  O0rR7mmR   TOP3000      SUBINDUSTRY    USA       0     12     2.93   2.98   0.150   2.46   5.91 no
+  Xgb59aRb   TOP3000      SUBINDUSTRY    USA       1     10     3.37   2.97   0.199   3.25   6.34 no
+
+== 全部条目 delay 分布 ==
+  1 -> 3285
+  0 -> 269
+== 过闸候选 delay 分布 ==
+  1 -> 405
+  0 -> 82

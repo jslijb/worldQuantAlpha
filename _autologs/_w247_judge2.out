@@ -1,0 +1,12 @@
+D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+匹配 *__bdv_u1k：达标候选 3 条（豁免比 1.1，直通线 0.685，收对手地板 0.66，算线用 0.66，F≥1.8，TO≤20%）
+  候选池按 Fitness 排序（排名导向）：
+    qMxM5j1A__bdv_u1k          S=2.29 F=2.22 tS=1.77 TO= 12.1% margin= 19.3bp
+    GrbrQbWZ__bdv_u1k          S=2.15 F=2.03 tS=1.57 TO= 13.6% margin= 17.8bp
+    3qXZGMmO__bdv_u1k          S=2.16 F=1.87 tS=1.51 TO= 17.2% margin= 15.0bp
+池子 109 条（S 已知 109 条）
+  ✗ A1NkdwEW qMxM5j1A__bdv_u1k          SF=4.51 S=2.29 corr_max=0.8032 撞MPakMndk(S=2.62) 需≥2.88(旧口径需≥2.88) → 不够 | 有效对手[MPakMndk(S=2.62,corr=0.7394) 1YXJeQoW(S=2.19,corr=0.8032)] 全名单[MPakMndk(S=2.62,corr=0.7394) 1YXJeQoW(S=2.19,corr=0.8032)]
+  ✗ LLNkJR52 GrbrQbWZ__bdv_u1k          SF=4.18 S=2.15 corr_max=0.7742 撞MPakMndk(S=2.62) 需≥2.88(旧口径需≥2.88) → 不够 | 有效对手[MPakMndk(S=2.62,corr=0.7410) 1YXJeQoW(S=2.19,corr=0.7742)] 全名单[MPakMndk(S=2.62,corr=0.7410) 1YXJeQoW(S=2.19,corr=0.7742)]
+  ✗ Wjb9mk2j 3qXZGMmO__bdv_u1k          SF=4.03 S=2.16 corr_max=0.8880 撞MPakMndk(S=2.62) 需≥2.88(旧口径需≥2.88) → 不够 | 有效对手[MPakMndk(S=2.62,corr=0.8880) KPNwG8Oj(S=2.58,corr=0.7199) qMW92Az2(S=2.32,corr=0.6674)] 全名单[MPakMndk(S=2.62,corr=0.8880) KPNwG8Oj(S=2.58,corr=0.7199) qMW92Az2(S=2.32,corr=0.6674)]
+submit_exempt 完成：本轮提交 0 条

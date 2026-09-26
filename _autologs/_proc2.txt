@@ -1,0 +1,2 @@
+﻿PID=4720 START=09/20/2026 19:56:18
+  CMD="D:\ProgramData\Miniforge3\envs\bigmodel\python.exe" D:/Python/worldquant/src/mine/mine_batch181.py --combos D:/Python/worldquant/_autologs/leg_combos_w225.json --workers 2

@@ -1,0 +1,32 @@
+=== 1YXQJRoX  S=3.51 F=3.18 tS=3.13 cid=w182_01
+    1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + group_rank(fnd6_mfma2_revt/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== VkagZle0  S=3.38 F=3.09 tS=3.14 cid=w193_00
+    1.5*group_rank(fnd6_mfma2_revt/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== Xgb59aRb  S=3.37 F=2.97 tS=3.25 cid=w188_01
+    1.5*group_rank(-(fnd6_newa2v1300_ni - cashflow_op)/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + group_rank(fnd6_mfma2_revt/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== JjNZ3Rbm  S=3.39 F=2.89 tS=2.71 cid=w191_01
+    1.5*group_rank(fnd6_tfvce/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== XgbgNwna  S=3.3 F=3.52 tS=2.07 cid=w158_01
+    1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.25*group_rank(-ts_rank(returns, 20), subindustry) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)
+
+=== qMx9ZPaP  S=3.01 F=3.2 tS=1.5 cid=n160_pwRwWoJ3_SEC
+    1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fn_accrued_liab_curr_a/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + 1.5*group_rank(-ts_rank(returns, 20), subindustry) + 1.5*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry)
+
+=== wpY3Yxvd  S=2.99 F=3.2 tS=2.49 cid=w53_c
+    group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 2), subindustry) + rank(volume/ts_mean(volume, 60))
+
+=== 9qjQWk3V  S=3.4 F=2.69 tS=2.7 cid=w196_08
+    1.5*group_rank(fn_accrued_liab_curr_a/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_rank(returns, 20), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== JjNlZEmx  S=3.44 F=2.57 tS=2.85 cid=w198_02
+    1.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, industry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(volume/ts_mean(volume, 120), subindustry) + 2.0*group_rank(-ts_rank(returns, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== Vkan1Ek5  S=3.4 F=2.49 tS=2.93 cid=w197_00
+    1.5*group_rank(fnd6_intc/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(volume/ts_mean(volume, 90), subindustry) + 2.0*group_rank(-ts_rank(returns, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)
+
+=== 1YX6MA0M  S=3.26 F=1.94 tS=3.53 cid=w206_05
+    2.5*group_rank(-ts_rank(close/open - 1, 10), subindustry) + 0.5*group_rank(fnd6_xrent/assets, subindustry) + 0.5*group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 0.5*group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.4*group_rank(ts_av_diff(cashflow_op/enterprise_value,45), subindustry)

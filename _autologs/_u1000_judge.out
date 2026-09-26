@@ -1,0 +1,20 @@
+D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+匹配 u1000*：达标候选 7 条（豁免比 1.1，直通线 0.685，收对手地板 0.66，算线用 0.66，F≥1.8，TO≤20%）
+  候选池按 Fitness 排序（排名导向）：
+    u1000_omL9g8AJ_TOP1        S=2.62 F=2.35 tS=1.94 TO= 16.6% margin= 16.1bp
+    u1000_3qXZGMmO_TOP1        S=2.42 F=1.94 tS=1.53 TO= 16.7% margin= 12.9bp
+    u1000_qMx9ZPaP_TOP1        S=2.19 F=1.94 tS=1.26 TO= 12.3% margin= 15.9bp
+    u1000_qMxM5j1A_TOP1        S=2.26 F=1.92 tS=1.56 TO= 13.3% margin= 14.4bp
+    u1000_XgbgNwna_TOP1        S=2.21 F=1.87 tS=1.49 TO= 13.3% margin= 14.3bp
+    u1000_GrbrQbWZ_TOP1        S=2.23 F=1.81 tS=1.49 TO= 14.9% margin= 13.2bp
+    u1000_vRrRYmxa_TOP1        S=2.20 F=1.80 tS=1.46 TO= 14.3% margin= 13.4bp
+池子 107 条（S 已知 107 条）
+  ✓ MPakMndk u1000_omL9g8AJ_TOP1        SF=4.97 tS=1.94 corr<0.66 → 直通提交
+  ✓ omLV8Zvm u1000_3qXZGMmO_TOP1        SF=4.36 tS=1.53 corr<0.66 → 直通提交
+  ✓ 1YXJeQoW u1000_qMx9ZPaP_TOP1        SF=4.13 tS=1.26 corr<0.66 → 直通提交
+  ✓ npd3p8aa u1000_qMxM5j1A_TOP1        SF=4.18 tS=1.56 corr<0.66 → 直通提交
+  ✓ xA3RANep u1000_XgbgNwna_TOP1        SF=4.08 tS=1.49 corr<0.66 → 直通提交
+  ✓ vRrdwa8G u1000_GrbrQbWZ_TOP1        SF=4.04 tS=1.49 corr<0.66 → 直通提交
+  ✓ pwR8wxao u1000_vRrRYmxa_TOP1        SF=4.00 tS=1.46 corr<0.66 → 直通提交
+submit_exempt 完成：本轮提交 0 条

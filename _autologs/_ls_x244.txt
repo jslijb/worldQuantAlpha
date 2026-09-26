@@ -1,0 +1,20 @@
+x244 落盘 18 条
+cid                                aid            S     F      TO    tS neu          decay
+x244_x174w125dAMIINTrind_MAR       akbWaOZ9    2.22  2.25  0.0976  None MARKET          10
+x244_x174w125dAMIINTrsec_MAR       wpZJoj8Q    2.17  2.19   0.098  None MARKET          10
+x244_x174w125dAMIINTrind_SEC       KPNw7Onz    2.13  2.06  0.1037  None SECTOR          10
+x244_w215w54xrbdv_SEC              zq8J3rJO    2.07  2.01  0.1318  None SECTOR          10
+x244_w215w54xrsec_SEC              P02XoGVx    2.05   2.0  0.1299  None SECTOR          10
+x244_x174w125dAMIINTrsec_SEC       N1a5PzG8    2.06  1.98  0.1042  None SECTOR          10
+x244_w215w54yrind_SEC              58zqErJ1    2.01  1.95  0.1308  None SECTOR          10
+x244_w16202rind_SEC                npdOa0lE     2.2   1.9  0.0723  None SECTOR          10
+x244_w215w54yrsec_SEC              wpZJQkAp    1.81  1.78  0.1294  None SECTOR          10
+x244_w16202rbvol_SEC               blbWaWep    2.08  1.77  0.0738  None SECTOR          10
+x244_w16202rind_MAR                QPb50kpQ    1.98  1.74  0.0709  None MARKET          10
+x244_w16202rbdv_SEC                d5blak6x    1.97   1.7  0.0749  None SECTOR          10
+x244_w215w54xrsec_MAR              MPa5Y7or    1.52  1.45  0.1091  None MARKET          10
+x244_w215w54yrind_MAR              LLNlM8vn    1.48  1.42  0.1117  None MARKET          10
+x244_w215w54yrsec_MAR              58zqJxWN    1.44  1.39    0.11  None MARKET          10
+x244_w16202rbvol_MAR               6XjYMPRJ    1.55  1.38  0.0729  None MARKET          10
+x244_w215w54xrbdv_MAR              78NKLnYx    1.38  1.34  0.1038  None MARKET          10
+x244_w16202rbdv_MAR                MPa5YEkM    1.42  1.27  0.0742  None MARKET          10

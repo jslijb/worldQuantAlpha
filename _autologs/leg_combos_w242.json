@@ -1,0 +1,244 @@
+{
+ "w162_06__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 w162_06，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 w162_06，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 w162_06，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_ind__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 w162_06__g_ind，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_ind__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 w162_06__g_ind，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_ind__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 w162_06__g_ind，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_sec__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 w162_06__g_sec，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_sec__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 w162_06__g_sec，平台同法已验证 0.6846 入池）"
+ },
+ "w162_06__g_sec__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fn_accrued_liab_curr_a/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 w162_06__g_sec，平台同法已验证 0.6846 入池）"
+ },
+ "w164_04__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 w164_04，平台同法已验证 0.6846 入池）"
+ },
+ "w164_04__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 w164_04，平台同法已验证 0.6846 入池）"
+ },
+ "w164_04__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 w164_04，平台同法已验证 0.6846 入池）"
+ },
+ "D_e79kPeEM_d15__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 15,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 D_e79kPeEM_d15，平台同法已验证 0.6846 入池）"
+ },
+ "D_e79kPeEM_d15__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 15,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 D_e79kPeEM_d15，平台同法已验证 0.6846 入池）"
+ },
+ "D_e79kPeEM_d15__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 15,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 D_e79kPeEM_d15，平台同法已验证 0.6846 入池）"
+ },
+ "kqjpepz8_v2__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 kqjpepz8_v2，平台同法已验证 0.6846 入池）"
+ },
+ "kqjpepz8_v2__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 kqjpepz8_v2，平台同法已验证 0.6846 入池）"
+ },
+ "kqjpepz8_v2__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 kqjpepz8_v2，平台同法已验证 0.6846 入池）"
+ },
+ "e79kPeEM_v2__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 e79kPeEM_v2，平台同法已验证 0.6846 入池）"
+ },
+ "e79kPeEM_v2__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 e79kPeEM_v2，平台同法已验证 0.6846 入池）"
+ },
+ "e79kPeEM_v2__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(liabilities_curr/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_rank(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(volume/ts_mean(volume, 120), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(-ts_delta(close, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 e79kPeEM_v2，平台同法已验证 0.6846 入池）"
+ },
+ "x162_w164_04_SEC__bvol": {
+  "neutralization": "SECTOR",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 x162_w164_04_SEC，平台同法已验证 0.6846 入池）"
+ },
+ "x162_w164_04_SEC__bdv": {
+  "neutralization": "SECTOR",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 x162_w164_04_SEC，平台同法已验证 0.6846 入池）"
+ },
+ "x162_w164_04_SEC__bvol_u1k": {
+  "neutralization": "SECTOR",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 x162_w164_04_SEC，平台同法已验证 0.6846 入池）"
+ },
+ "x172_w164_04_OVN__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(open/ts_delay(close, 1) - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 x172_w164_04_OVN，平台同法已验证 0.6846 入池）"
+ },
+ "x172_w164_04_OVN__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(open/ts_delay(close, 1) - 1, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 x172_w164_04_OVN，平台同法已验证 0.6846 入池）"
+ },
+ "x172_w164_04_OVN__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "1.5*group_rank(fnd6_pstkl/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_txtubadjust/cap, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_xrent/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_delta(close, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 1.25*group_rank(-ts_rank(returns, 5), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.75*group_rank(-ts_rank(open/ts_delay(close, 1) - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 x172_w164_04_OVN，平台同法已验证 0.6846 入池）"
+ },
+ "x174_w125_d_AMIINT__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 x174_w125_d_AMIINT，平台同法已验证 0.6846 入池）"
+ },
+ "x174_w125_d_AMIINT__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 x174_w125_d_AMIINT，平台同法已验证 0.6846 入池）"
+ },
+ "x174_w125_d_AMIINT__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 x174_w125_d_AMIINT，平台同法已验证 0.6846 入池）"
+ },
+ "Acap_SUB__bvol": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->波动率桶（源 Acap_SUB，平台同法已验证 0.6846 入池）"
+ },
+ "Acap_SUB__bdv": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_mean(volume*close, 20)), range=\"0.1, 1, 0.1\"))",
+  "_note": "换桶->成交额桶（源 Acap_SUB，平台同法已验证 0.6846 入池）"
+ },
+ "Acap_SUB__bvol_u1k": {
+  "neutralization": "SUBINDUSTRY",
+  "decay": 10,
+  "truncation": 0.08,
+  "expr": "group_rank(fnd6_newa2v1300_tstk/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_loq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_cicurrq/assets, bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(cap), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_mean(abs(returns)/volume, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_rank(close/open - 1, 20), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\"))",
+  "universe": "TOP1000",
+  "_note": "换桶->波动率桶 + TOP1000（源 Acap_SUB，平台同法已验证 0.6846 入池）"
+ }
+}

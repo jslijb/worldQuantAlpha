@@ -1,0 +1,6 @@
+D:\ProgramData\miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+POST /submit -> 201
+=== 1YXJeQoW verdict: ACCEPTED (5s) ===
+selfCorr= 0.643
+*** 台账已追加 1YXJeQoW dateSubmitted=2026-09-21T06:03:45-04:00 selfCorr=0.643

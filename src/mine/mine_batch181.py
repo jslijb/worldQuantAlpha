@@ -35,11 +35,16 @@ def run_one(item):
     of = f'{OUT}/{cid}.json'
     if _os.path.exists(of):
         print(f'{cid} 已有产出，跳过', flush=True); return
-    expr = meta['expr']
+    expr = meta['expr'] if isinstance(meta, dict) else meta
+    meta = meta if isinstance(meta, dict) else {}
+    st = dict(BASE)
+    for k in ('neutralization', 'decay', 'universe', 'truncation', 'region', 'delay'):
+        if meta.get(k) is not None:
+            st[k] = meta[k]
     r = None
     for att in range(8):
         try:
-            r = sess.post('https://api.worldquantbrain.com/simulations', json={'type': 'REGULAR', 'settings': BASE, 'regular': expr})
+            r = sess.post('https://api.worldquantbrain.com/simulations', json={'type': 'REGULAR', 'settings': st, 'regular': expr})
         except Exception as e:
             print(cid, 'NET', e, flush=True); time.sleep(20); continue
         if r.status_code in (200, 201):
@@ -67,7 +72,8 @@ def run_one(item):
     if not aid:
         print(f'{cid} SIM-FAIL {json.dumps(jj)[:300]}', flush=True); return
     d = sess.get(f'https://api.worldquantbrain.com/alphas/{aid}').json()
-    d['_cid'] = cid; d['_neut'] = 'SUBINDUSTRY'
+    d['_cid'] = cid; d['_neut'] = st['neutralization']; d['_decay'] = st['decay']
+    d['_trunc'] = st['truncation']; d['_note'] = meta.get('_note')
     d['_pred_S'] = meta.get('S'); d['_base_corr'] = meta.get('maxcorr')
     json.dump(d, open(of, 'w'), ensure_ascii=False)
     b = d.get('is') or {}; te = d.get('test') or {}

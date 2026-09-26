@@ -12,21 +12,110 @@
 
 | 项 | 内容 |
 |---|---|
-| 目标 | 每日 5 个高质量 Alpha（下限）+ 历史欠账；累计 100 个提交解锁 Super Alpha；Rank 进前 100 |
-| 高质量定义 | S+F ≥ 4.0（IS Sharpe + IS Fitness）**且** tS ≥ 1.25（验证期不崩）**且** checks 无 FAIL |
+| 目标 | **提升排名（IS Score 累计）**；每日 5 个高质量 Alpha（下限）+ 历史欠账；Super Alpha 提交线 100 已达成，但**账号未授权 super 模拟**（见下） |
+| 高质量定义 | S+F ≥ 4.0（IS Sharpe + IS Fitness）**且** tS ≥ 1.25（验证期不崩）**且** checks 无 FAIL **且** turnover ≤ 25%（0920 加） |
 | 真正的瓶颈 | **相关性墙**（详见总纲 §1、§2） |
 | 运行环境 | Python `D:/ProgramData/Miniforge3/envs/bigmodel/python.exe`（conda 环境 bigmodel） |
 | 凭据 | `brain_credentials.txt`（项目根，JSON 格式；已 git 忽略，永不入库） |
 
+**★ 目标函数（李工 0920 定，压倒一切的一条）**
+
+> 原话："提交 Alpha 不是目的，提升排名才是目的，后续赚钱更是目的。你需要提升夏普率，同时降低换手率，优化之前的 Alpha 因子，不能只盯夏普率。"
+
+- **提交数量不是目标。** 排名主杠杆是 **IS Score = 所有已提交 Alpha 的 IS 得分累计**，单条贡献与 **Sharpe / Fitness 正相关**（S=3.0 贡献 >400 分，S=1.3 贡献 <100 分）；Total Score 是 Days + IS Score + Uniqueness 三维等权。维度定义见 `docs/project/目标_排名目标.md`。
+- **候选排序键 = Fitness，不是 S+F。** `Fitness = Sharpe × √(|returns| / max(turnover, 0.125))` —— 它已把夏普、收益、换手三者综合。按 S+F 排序会优先挑出**高换手炸弹**（TO 40%+、margin 仅 5~8bp），看着夏普高，实际排名贡献低、赚不到钱。
+- **turnover 硬数据（2026-09-20 平台 103 条 ACTIVE 实测）**：甜点 **10%~20%**（平均 S+F 4.44）；TO<10% 呆滞（3.90，tS 1.16）；TO 20~30% 偏高（3.94）；TO>50% 失控（tS 0.00）。**margin 是换手率的镜子**：TO<20% → 15~28bp；TO>40% → 5~8bp（**差 3 倍，这就是赚钱能力**）。
+- **降换手的三类杠杆（实证）**：① 用 `hump(x)` / `ts_decay_linear(x, 5)` / `quantile()` 包裹（w55_e 由 TO 14.3%→10.9%、margin 21.6→26.3bp）；② 慢速腿替代快腿（`-ts_mean(abs(returns)/volume,20)`、`-ts_rank(returns,20)`、`-ts_delta(close,20)`、`volume/ts_mean(volume,120)`）；③ 设置本身——**decay 0→10 是最大杠杆**（同表达式的 e79PvPpE decay=4/TO19.2%/F2.72 vs 0mR2K6lr decay=1/TO42.2%/F2.13）。
+- **高换手族的雷参数签名（勿再有）**：`INDUSTRY + decay=0 + truncation=0.01 + nanHandling=OFF + 腿数 2~3`。
+- **低换手高 F 族的参数签名（照抄）**：`decay=10 + truncation=0.08 + nanHandling=ON + SUBINDUSTRY/SECTOR + 腿数 6~8 + 至少一条慢速腿`。
+- 判决工具已按此改造：`submit_exempt.py` 增 `--min-f` / `--max-to`，排序键 `S+F` → `F`。
+
+**★ 账号状态与赚钱通道（2026-09-20 API 实测，`GET /users/self`）**：
+
+| 项 | 实测值 | 含义 |
+|---|---|---|
+| `level` | **GOLD** | 账号层级 GOLD，不是最高档 |
+| `onboarding.status` | **SHORTLIST** | **已在顾问候选名单上**（对应研究顾问面试流程） |
+| `education.university` | `"not applicable"` | 教育信息未有效填写 |
+| `employment` / `recruitment` / `resume` | **全 null** | **招聘档案三项全空** |
+| `geniusLevel` | null | — |
+| `dateCreated` / `dateApproved` | 2026-08-15 | 账号 8 月 15 日建好 |
+
+- **Super Alpha 不可用**：`POST /simulations` 带 `"type": "SUPER"` → `400 {"type":["Not permissioned for super simulations"]}`。⇒ **"累计 100 提交"只是门槛之一，真正卡的是账号权限层级**（此前以为 100 条达成即可用，是误判）。
+  - 顺带拿到 SUPER 模拟的必填字段（将来有权限时直接用）：`settings.selectionHandling`、`settings.selectionLimit`、`combo`（string）、`selection`（string/需为字符串）。
+- 平台页面帮助语原文：`"Continue submitting Alphas — top rankers may get consultant invites every week."` ⇒ **排名直接挂钩顾问邀约**，与李工的求职主线是同一条通道。
+- 收入规则：Regular Base Payment 1~60 USD/天、**每日结算上限 4 个**；Super Alpha 每日上限 1 个、与 Regular 分开计算（**当前无权限**）。前三个月核心目标是提 **Value Factor**，"50%+ Alpha 集中在单一 region/turnover/字段"会**压低**它 → 要往分散走，不要继续堆同族。
+
+**★ 官方评分算法原文（2026-09-20 归档复核，唯一事实源）**
+
+来源：`docs/study/learn/docs/01_discover-brain/07_scoring-algorithm-challenge-users.md`（平台 `GET /tutorial-pages/scoring-algorithm-challenge-users` 原文，非二手推断）。此前"目标_排名目标.md"里的三维等权模型是**从排行榜截图反推的估算**，本节是官方口径，冲突时以本节为准。
+
+| 官方要点 | 原文 | 对我们的含义 |
+|---|---|---|
+| 计分单位 | "Score is tied to day, not to individual Alphas" | 分数按**天**结算，不是按单条 Alpha |
+| 两个因子 | **Quantity Factor**（当天提交条数越多分越高）+ **Quality Factor**（当天所有 Alpha 质量因子的**平均**） | 质量是**平均**——当天多提交一条差的，会把当天整批的质量均值**拉下来** |
+| 归一化 | "normalized across all the users who submitted at least one Alpha on that particular day" | 横向和别人比，不是绝对分 |
+| **每日上限** | **"Maximum daily score is 2000. Typically, this involves submitting 1 to 2 alphas a day."** | **★ 单日堆数量是白干**：Quantity 在 1~2 条就饱和。我们 0920 单日提交 18 条，纯浪费 |
+| 层级线 | BRONZE 1000 / SILVER 5000 / GOLD 10000 | 我们 level=GOLD |
+
+**Quality Factor 的四个官方子项（原文列举）**：
+
+| 子项 | 官方说法 | 我们现状（0920 实测） | 可动杠杆 |
+|---|---|---|---|
+| **Universe** | "smaller universes get more score" | **97.9% 是 TOP3000（最大池）→ 该项拿最低分** | 降池到 TOP1000/TOP500（**从没当得分项测过**，w241 在跑） |
+| **SelfCorrelation** | "the less the better" | 有记录 74 条：**均值 0.694 / 中位 0.683**；**25 条 ≥0.70**（最差 1YwKML56 0.9687、rKj7w0Z1 0.9667、9qX3M2mq 0.9569） | **★ 降 corr 不只是"过墙"，它本身就是加分项**——与 0a 的降 corr 四杠杆同向 |
+| **Fitness** | "the larger the better" | **均值仅 1.860**：F≥3.0 只有 1 条，1.5~2.0 有 49 条，F<1.5 有 21 条 | 提 F 是最大的单点杠杆（F 已含 S/收益/换手三者） |
+| **Delay** | "D1 Alphas contribute more to score than D0" | delay=1 占 2196/2423（90.6%）✓ | 已达标，保持 D1 |
+
+- ⚠ **turnover 不在官方子项清单里**，但它通过 **Fitness** 进入（`F = S × √(|ret| / max(TO, 0.125))`）→ **TO 低于 12.5% 不再有额外收益**。所以换手率的目标区间应设为 **10%~12.5%**（此前记的"TO≤20%"只是"别太差"的下限，不是最优）。低于 10% 反而常伴呆滞信号（TO<10% 档平均 S+F 3.90、tS 1.16）。
+- **推论（据此调整打法）**：① **不再为凑数提交边际 Alpha**——它拉低当天质量均值、且入池后抬高后续所有候选的 selfCorr，是**负向资产**；② 单日 1~2 条**高质量**即可拿满当天 Quantity，多出来的仓位应该用来**试新轴**而不是**发变体**；③ 候选排序键维持 **Fitness**，但新增"Universe 降池"与"selfCorr 目标 <0.4"两个方向。
+
 **流水线口径（2026-09-20 修正·重要）**：
-0. **相关性判决是两条路，不是一条线**（0920 由 LLNXEe7L 提交实证，此前一直漏用第②条）：
-   - ① **直通**：本地 max corr ≤ 0.685（缓冲线）→ 提交。
-   - ② **豁免线**：corr ≥ 0.685 的候选**不是死刑**——只要 **候选 S ≥ 1.10 × max(所有 corr≥0.7 对手的 S)**，平台放行。实证：LLNXEe7L corr 0.7642、S 2.30 vs 对手 kqoq0zed S 2.02（+13.9%）→ POST 201、6 秒后 ACTIVE 入池。
-   - 执行工具：`src/submit/submit_exempt.py '<前缀通配>' --min-sf 4.0 --min-ts 1.25 --limit N --tag <日期-批次> [--dry]`。旧工具 `auto_submit_passers.py` 只实现①，会误杀②的候选 —— **判决一律走 submit_exempt.py**。
+0. **相关性判决：两条路（0920 晚复核判决书原文后确认，此前一轮"豁免线是假的"是误判）**：
+   - ① **直通**：本地 max corr ≤ 0.685（缓冲线）→ 提交。平台实际 corr ≈ 本地 +0.005。
+   - ② **豁免线（规则成立，未被推翻）**：corr ≥ 0.7 的候选，只要 **候选 S ≥ 1.10 × max(所有 corr≥0.7 对手的 S)** 平台就放行。
+     - ⚠ **上一轮的"反例 j2Az8n0E"经判决书原文复核后不成立**：其对手为 MPaPe0oo(S2.30)/omL8Mazn(S2.28)/LLNXEe7L(S2.30)/**kqVp6wnO(S2.51)**，豁免线 = 1.1×2.51 = **2.761**，候选 S=2.60 **< 2.761** → **平台拒得正确，规则成立**。当时误判的原因：本地 corr 低估 → **漏收 kqVp6wnO** → 用 MPaPe0oo 的 2.30 算成 2.53 → 误以为"够线却被拒"。
+     - 结论：**规则可以用，但前提是"对手收全"** —— 这正是 `--corr-floor` 必须压到 0.66 的原因（宁可多收）。
+   - **★ 0920 22:00 修正（推翻当晚早些时候"两条路都走不通"的结论）**：豁免路**是活的**，关键在**候选 S 与 `need` 的关系是"可以动的"**。
+     - 当时判"豁免 0 条"的错因：只拿**基线 decay** 的候选 S 去比 `need`，没意识到 **decay 可以调 S**。实测两条当天入池：
+       | 候选 | 基线 S | 调 decay 后 S | `need` | 平台 selfCorr | 结果 |
+       |---|---|---|---|---|---|
+       | `x162_w164_04_MAR` d10→**d6** | 2.45 | **2.55** | 2.54 | **0.8042** | ✅ ACCEPTED |
+       | `w189_01__g_bdv` d10→**d6** | 2.45 | **2.58** | 2.55 | **0.7725** | ✅ ACCEPTED |
+     - 反向验证（本地 `need` 算得准，一分不差）：
+       | 候选 | S | `need` | 平台 selfCorr | 结果 |
+       |---|---|---|---|---|
+       | `w41_b__d4` | 3.19 | 3.212 | 0.8149 | ❌ 差 0.022 |
+       | `w39_i__d4` | 3.20 | 3.212 | 0.7504 | ❌ 差 0.012 |
+     - ⇒ **平台真实判据 = 豁免线，不是 corr 硬阈值**：corr **0.77~0.80 照样放行**，被拒的两条 corr 反而更低（0.7504/0.8149，都在 0.77~0.82 区间）——**决定成败的是 S vs 1.1×max(对手 S)，不是 corr 高低**。
+     - ⇒ **本工具算的 `need` 与平台一致**（4 例全对），可信；`--corr-floor 0.66` 的保守设定被验证是**对的**（收全对手才能算对线）。
+     - ⚠ **`need` 是时变的**：池子每入池一条，相关家族的 `need` 就抬一次。**必须用当前池实时算，禁止引用历史日志里的 need**（此坑当天踩到：`w39_i`/`w41_b` 的旧 need 写 2.71/2.46，实际已是 3.212 → 误判为"够线"去打，被拒）。工具：`submit_exempt.py` 每次运行都重算，直接用它。
+   - **当前有效出量路径（0920 22:00 起，两条实证）= 低靶区 + 降 decay 顶 S 压线**：
+     ① 找"只撞弱靶"的候选（最高对手 S 低 → `need` 低）：工具 `_autologs/sweetspot.py`；
+     ② 沿 decay 阶梯下探（基线 d10 → d8 → d6 → d5 → d4），S 上升、TO 同步上升；
+     ③ **停点 = S 刚过 `need` 且仍满足 TO ≤ 20% 且 tS ≥ 1.25**（02 家族拐点在 d6：S2.55/TO19.6%/F2.18/tS1.69）；
+     ④ 用 `submit_exempt.py` 或 `submit_v3.py` 直接 POST（免费精确测量）。
+     - ⚠ 别贪：decay 再往下 S 只多 0.1~0.2，但 TO 从 20% 炸到 43%~67%（d4 26.3% / d2 43.1% / d1 67.4%），F 塌到 1.3~2.0 → 质量闸门崩。
+   - 直通（本地 ≤0.685）仍然稳、仍然优先；**0.685~0.69 这段不要判死，直接 POST 测**（实证：本地 0.6862 → 平台 **0.6846**，偏移 **−0.0016**，平台比本地还低）。
+   - 执行工具：`src/submit/submit_exempt.py '<前缀通配>' --min-f 2.0 --max-to 0.20 --limit N --tag <日期-批次> [--dry]`。**已修两个混用的阈值**：`--corr-floor 0.66` 只负责"收哪些对手进名单"，新增 `--corr-direct 0.685` 负责"能否直通"；日志现在报**真实 `corr_max`**（旧版报的是"最高 S 对手的 corr"，会看错）。
    - 对手 S 取**平台实况**（`GET /alphas/{id}` 的 is.sharpe，缓存 `data/alpha_quality_analysis/pool_s.json`），不取台账（台账 S 列常为空）。
-   - 同族/同骨架候选的 S 也进对手集合：新入池成员会让兄弟的豁免线抬高（例：s5 入池 S2.30 → s2 的豁免线 2.53 > s2 的 2.29 → 自动被挡）。
+0a. **降 corr 的四大杠杆（按实测效力排序，0920 数据）**：
+   - **① 换分组为 bucket（★ 0920 22:00 已从假设升级为实证结论）**：**直接证据**——`9qX3M2mq_v2` 家族走 subindustry/sector 都卡 0.72+，改成 `bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")` 后**平台 selfCorr 0.6846 → ACCEPTED 入池**（`9qX3M2mq_v2__r_bvol` / 88jKeENW）。此前入池的 `O0N5o3Nv`（波动率桶）与 `9qjZ8oZ2`（成交额桶 `bucket(rank(ts_mean(volume*close,20)))`）同属桶分组。
+     - ⚠ **不是万能**：`w162_06` 家族四变体（`__g_ind` 0.7564 / `__g_sec` 0.7593 / 本体 0.7678 / `w164_04` 0.7698）桶分组救不动 → **对低 TO / 慢腿骨架有效，对高相关家族无效**。
+     - ⚠ **算子上限卡死满腿候选**：平台上限 64，而近线候选多条 `operatorCount` 已达 **63**（如 `x174_w125_d_AMIINT`、`A_SEC`），换桶需 +6 → 超限，**必须同时减腿**（少挂 1~2 条 0.5 权重的锚）才能换分组。批次 `_autologs/gen_w242.py`（11 家族 × 3 变体 = 33 组）。
+     - ⚠ **算子上限卡死满腿候选**：平台上限 64，而近线候选多条 `operatorCount` 已达 **63**（如 `x174_w125_d_AMIINT`、`A_SEC`），换桶需 +6 → 超限，**必须同时减腿**（少挂 1~2 条 0.5 权重的锚）才能换分组。
+   - **② 中性化换挡（有效但效力因骨架而异，不是普适 −0.09）**：`x174_w125_d_AMIINT` 骨架 SUBINDUSTRY 平台 corr 0.7367 → MARKET **0.6467**（−0.090，直通入池）；但 `w189_01` SUBINDUSTRY 0.8041 → SECTOR **0.7985**（仅 −0.006，仍撞 pwRwWoJ3，判死）。
+     - ⚠ 结论修正：**A_MAR 的成功是"波动率桶骨架 + MARKET"双因素**，不能把 −0.09 当换挡的通用效力。换挡后必须实测 corr，别假设。
+     - ⚠ 代价：**MARKET 伤 tS**（`w189_01__MAR` tS 塌到 1.15 不过闸）、**SECTOR 保 tS**（同骨架 `w189_01__SEC` tS 1.91 仍达标）。换挡优先试 SECTOR。
+   - **③ 加腿稀释 / 系数加权**：只对新轴有效。**改良已提交骨架基本无效**——实证 qMW92Az2_v3 vs 其本体 qMW92Az2 corr **0.7886**。李工"优化之前的 Alpha 因子"这个方向受此硬约束。
+   - **④ 换锚**：基本无效（候选池 97% 共享 `assets/close` 基准）。
+0b. **平台判决书是唯一金标准**：
+   - `POST /alphas/{id}/submit` 是一次**免费且无副作用的精确测量**：成功 → 201 入池；被拒 → 403 返回**完整判决书**（8 项 checks + `is.selfCorrelated.records` 逐条列出对手 id / corr / S / returns / turnover / fitness / margin）。
+   - 被拒的 alpha 状态仍是 `UNSUBMITTED`，可改造后重投 → **把 POST 当 corr 测量仪用**，比本地估算准得多。
+   - 判决书自带对手全指标 → **定向改造有靶**：撞谁、差多少、对手换手多少，一目了然。
+   - 工具：`_autologs/get_verdict.py <alpha_id>` 取完整判决书（解决 `submit_v3.py` 只打 300 字符的盲区）。
 1. leg_lab 离线生成候选（阈值 `--max-corr 0.55~0.57`，它只是生成器不是判决器）
-2. `pnl_corr.py` 实测复核（供直通判定；豁免判定用 submit_exempt）
+2. `pnl_corr.py` 实测复核（供**直通**判定；local ≤0.685 才放行）
 3. `submit_v3.py` 提交——**出现 FAIL 才是拒信**，无 FAIL 只记 UNKNOWN 不记 REJECTED
 4. 台账 `data/alpha_quality_analysis/SUBMITTED_LEDGER.csv` **只追加**；池子只取自台账
 5. 质量闸门、判决机制、偏移定律 → **总纲 §3、§5**

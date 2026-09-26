@@ -1,0 +1,61 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:446 字符: 1
++ & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D:/Python/wor ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+9qX3M2mq_v2__r_bvol NET HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+1YwRK1wW_v2__r_bvol O0N5xA7d SF=4.43 S=2.24 F=2.19 T=0.1339 tS=1.94 pred_corr=None FAIL=[] [鈽匬ASS]
+9qX3M2mq_v2__r_bvol 88jKeENW SF=4.69 S=2.39 F=2.30 T=0.1446 tS=1.98 pred_corr=None FAIL=[] [鈽匬ASS]
+9qX3M2mq_v2__r_sec RRbk1OEe SF=4.63 S=2.32 F=2.31 T=0.143 tS=1.82 pred_corr=None FAIL=[] [鈽匬ASS]
+1YwRK1wW_v2__r_bdv d5blZAEY SF=2.95 S=1.53 F=1.42 T=0.1349 tS=1.16 pred_corr=None FAIL=[] [fail]
+x174_w125_d_AMIINT__r_ind Grb3lkx0 SF=4.95 S=2.56 F=2.39 T=0.1087 tS=2.45 pred_corr=None FAIL=[] [鈽匬ASS]
+A_SEC__r_ind KPNw7Onz SF=4.19 S=2.13 F=2.06 T=0.1037 tS=2.32 pred_corr=None FAIL=[] [鈽匬ASS]
+x163_w27lnoqxrent_MAR__r_bdv VkaY7adw SF=3.72 S=1.87 F=1.85 T=0.1499 tS=1.04 pred_corr=None FAIL=[] [fail]
+x163_w27lnoqxrent_MAR__r_sec 58zql58M SF=4.13 S=2.09 F=2.04 T=0.155 tS=1.11 pred_corr=None FAIL=[] [fail]
+x174_w125_d_AMIINT__r_sec WjbW7JEo SF=4.90 S=2.54 F=2.36 T=0.1071 tS=2.41 pred_corr=None FAIL=[] [鈽匬ASS]
+kqjpepz8_v2__r_bdv gJboj2mM SF=3.48 S=1.81 F=1.67 T=0.1532 tS=1.22 pred_corr=None FAIL=[] [fail]
+kqjpepz8_v2__r_bvol YPbW7R5R SF=4.83 S=2.48 F=2.35 T=0.1498 tS=2.1 pred_corr=None FAIL=[] [鈽匬ASS]
+kqjpepz8_v2__r_sec LLNl9aAM SF=4.95 S=2.49 F=2.46 T=0.148 tS=1.92 pred_corr=None FAIL=[] [鈽匬ASS]
+kqjpepz8_v2__r_ind 9qjAVLRV SF=4.96 S=2.50 F=2.46 T=0.1463 tS=1.98 pred_corr=None FAIL=[] [鈽匬ASS]
+9qX3M2mq_v3__r_bvol LLNl9qa1 SF=4.44 S=2.25 F=2.19 T=0.1222 tS=1.71 pred_corr=None FAIL=[] [鈽匬ASS]
+9qX3M2mq_v3__r_bdv omL96vpk SF=3.29 S=1.71 F=1.58 T=0.1246 tS=0.85 pred_corr=None FAIL=[] [fail]
+9qX3M2mq_v3__r_sec omL96YX6 SF=4.69 S=2.35 F=2.34 T=0.1208 tS=1.3 pred_corr=None FAIL=[] [鈽匬ASS]
+9qX3M2mq_v3__r_ind d5blOQrK SF=4.54 S=2.30 F=2.24 T=0.1199 tS=1.28 pred_corr=None FAIL=[] [鈽匬ASS]
+w162_02__r_sec vRrJkrbd SF=4.96 S=2.68 F=2.28 T=0.0746 tS=2.38 pred_corr=None FAIL=[] [鈽匬ASS]
+w162_02__r_bdv 3qXn9X8g SF=4.58 S=2.49 F=2.09 T=0.0764 tS=1.96 pred_corr=None FAIL=[] [鈽匬ASS]
+w162_02__r_ind levR8Gz2 SF=5.13 S=2.76 F=2.37 T=0.0764 tS=2.5 pred_corr=None FAIL=[] [鈽匬ASS]
+w215_w54y__r_bvol zq8JY0aX SF=4.15 S=2.19 F=1.96 T=0.1374 tS=1.6 pred_corr=None FAIL=[] [鈽匬ASS]
+w215_w54y__r_sec vRrJkWEd SF=4.16 S=2.15 F=2.01 T=0.135 tS=1.65 pred_corr=None FAIL=[] [鈽匬ASS]
+w162_02__r_bvol 2rwnO3YN SF=4.72 S=2.57 F=2.15 T=0.076 tS=2.48 pred_corr=None FAIL=[] [鈽匬ASS]
+w215_w54y__r_ind RRbkbnNb SF=4.24 S=2.19 F=2.05 T=0.136 tS=1.81 pred_corr=None FAIL=[] [鈽匬ASS]
+N1QxNQK7_v3__r_ind 1YXnX1am SF=4.18 S=2.06 F=2.12 T=0.1276 tS=1.4 pred_corr=None FAIL=[] [鈽匬ASS]
+A_IND__r_sec LLNlNR09 SF=4.89 S=2.48 F=2.41 T=0.1065 tS=2.47 pred_corr=None FAIL=[] [鈽匬ASS]
+A_IND__r_ind YPbWbMkJ SF=4.94 S=2.50 F=2.44 T=0.1083 tS=2.5 pred_corr=None FAIL=[] [鈽匬ASS]
+N1QxNQK7_v3__r_bvol P02X283x SF=3.34 S=1.73 F=1.61 T=0.1316 tS=1.56 pred_corr=None FAIL=[] [fail]
+x162_w164_04_SEC__r_bvol VkaYaL7M SF=5.06 S=2.53 F=2.53 T=0.136 tS=1.58 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_SEC__r_bdv A1NONoQW SF=4.25 S=2.13 F=2.12 T=0.1377 tS=0.88 pred_corr=None FAIL=[] [fail]
+x162_w164_04_SEC__r_sec qMxm09pZ SF=5.12 S=2.53 F=2.59 T=0.1353 tS=1.34 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_SEC__r_ind ZYbWAGQ8 SF=5.61 S=2.76 F=2.85 T=0.1351 tS=1.7 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_00_MAR__r_bdv 2rwnmPzZ SF=4.07 S=2.13 F=1.94 T=0.2003 tS=1.02 pred_corr=None FAIL=[] [fail]
+x162_w164_00_MAR__r_sec VkaY0lMV SF=4.72 S=2.49 F=2.23 T=0.1917 tS=1.63 pred_corr=None FAIL=[] [鈽匬ASS]
+x162_w164_04_MAR__r_sec 6XjYKz0G SF=4.74 S=2.32 F=2.42 T=0.1315 tS=1.21 pred_corr=None FAIL=[] [fail]
+w39_i__r_bdv 88jKPQnl SF=4.25 S=2.23 F=2.02 T=0.0564 tS=1.02 pred_corr=None FAIL=['LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w41_c__r_bdv RRbk66eb SF=4.45 S=2.27 F=2.18 T=0.0595 tS=0.67 pred_corr=None FAIL=[] [fail]
+w39_i__r_sec blbWOOjq SF=4.51 S=2.36 F=2.15 T=0.0547 tS=1.24 pred_corr=None FAIL=[] [fail]
+w41_b__r_sec zq8JbGV8 SF=4.35 S=2.23 F=2.12 T=0.0511 tS=0.77 pred_corr=None FAIL=[] [fail]
+z1_cfevcashxo__r_sec e7bqQjJd SF=4.25 S=2.30 F=1.95 T=0.073 tS=1.31 pred_corr=None FAIL=[] [鈽匬ASS]
+w41_b__r_bdv mLmxYpLX SF=4.29 S=2.20 F=2.09 T=0.0527 tS=0.58 pred_corr=None FAIL=[] [fail]
+w36_a__r_bdv 9qjAE1Ro SF=3.75 S=2.01 F=1.74 T=0.0529 tS=1.09 pred_corr=None FAIL=[] [fail]
+z1_cfevcashxo__r_bdv e7bqQjJd SF=4.25 S=2.30 F=1.95 T=0.073 tS=1.31 pred_corr=None FAIL=[] [鈽匬ASS]
+w36_a__r_sec 2rwnjaj8 SF=4.03 S=2.15 F=1.88 T=0.0514 tS=1.26 pred_corr=None FAIL=[] [鈽匬ASS]
+w215_w54x__r_bdv O0N5JbVv SF=4.63 S=2.41 F=2.22 T=0.137 tS=1.73 pred_corr=None FAIL=[] [鈽匬ASS]
+w215_w54x__r_sec NET HTTPSConnectionPool(host='api.worldquantbrain.com', port=443): Max retries exceeded with url: /simulations (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+w222_i__r_bdv pwR1vjYg SF=4.18 S=2.23 F=1.95 T=0.0699 tS=1.09 pred_corr=None FAIL=[] [fail]
+w222_i__r_sec 88jKvlda SF=4.10 S=2.22 F=1.88 T=0.063 tS=1.37 pred_corr=None FAIL=[] [鈽匬ASS]
+w41_c__r_sec rKOrdG1J SF=4.53 S=2.31 F=2.22 T=0.0578 tS=0.89 pred_corr=None FAIL=[] [fail]
+w215_w54x__r_sec 2rwnjeww SF=4.66 S=2.41 F=2.25 T=0.1357 tS=1.72 pred_corr=None FAIL=[] [鈽匬ASS]
+mine_batch181 done

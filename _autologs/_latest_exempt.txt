@@ -1,0 +1,28 @@
+最近 3 份判决日志：
+  exempt_0920_223738.log  09-20 22:37:54
+  exempt_0920_223459.log  09-20 22:35:14
+  exempt_0920_223318.log  09-20 22:33:18
+
+==========================================================================================
+### exempt_0920_223738.log
+匹配 *__g_*：达标候选 8 条（豁免比 1.1，直通线 0.685，收对手地板 0.66，算线用 0.66，F≥1.8，TO≤25%）
+池子 107 条（S 已知 107 条）
+  ✗ omL9g8AJ w189_01__g_sec             SF=6.42 S=3.21 corr_max=0.8122 撞0mR2K6lr(S=3.45) 需≥3.80(旧口径需≥3.80) → 不够 | 有效对手[0mR2K6lr(S=3.45,corr=0.6614) pwRwWoJ3(S=3.33,corr=0.8122) e79PvPpE(S=3.13,corr=0.6631) wpZJX6m5(S=3.10,corr=0.6631) 9qjqm3Q9(S=2.92,corr=0.7327)] 全名单[0mR2K6lr(S=3.45,corr=0.6614) pwRwWoJ3(S=3.33,corr=0.8122) e79PvPpE(S=3.13,corr=0.6631) wpZJX6m5(S=3.10,corr=0.6631) 9qjqm3Q9(S=2.92,corr=0.7327)]
+  ✗ zq8JRQYV w162_06__g_ind             SF=5.59 S=2.79 corr_max=0.8083 撞pwRwWoJ3(S=3.33) 需≥3.66(旧口径需≥3.66) → 不够 | 有效对手[pwRwWoJ3(S=3.33,corr=0.7564) gJbk9V1K(S=2.82,corr=0.6833) KPNwG8Oj(S=2.58,corr=0.7405) 0mXKpmYq(S=2.55,corr=0.8083) QPbP6aRQ(S=2.51,corr=0.7198)] 全名单[pwRwWoJ3(S=3.33,corr=0.7564) gJbk9V1K(S=2.82,corr=0.6833) KPNwG8Oj(S=2.58,corr=0.7405) 0mXKpmYq(S=2.55,corr=0.8083) QPbP6aRQ(S=2.51,corr=0.7198)]
+  ✗ A1NO7qWX w162_06__g_sec             SF=5.47 S=2.74 corr_max=0.8012 撞pwRwWoJ3(S=3.33) 需≥3.66(旧口径需≥3.66) → 不够 | 有效对手[pwRwWoJ3(S=3.33,corr=0.7593) O0N0R5NY(S=2.92,corr=0.6630) gJbk9V1K(S=2.82,corr=0.6855) KPNwG8Oj(S=2.58,corr=0.7331) 0mXKpmYq(S=2.55,corr=0.8012)] 全名单[pwRwWoJ3(S=3.33,corr=0.7593) O0N0R5NY(S=2.92,corr=0.6630) gJbk9V1K(S=2.82,corr=0.6855) KPNwG8Oj(S=2.58,corr=0.7331) 0mXKpmYq(S=2.55,corr=0.8012)]
+  ✗ YPbW5WQA w162_06__g_ind__bvol       SF=5.21 S=2.65 corr_max=0.7908 撞pwRwWoJ3(S=3.33) 需≥3.66(旧口径需≥3.66) → 不够 | 有效对手[pwRwWoJ3(S=3.33,corr=0.7458) gJbk9V1K(S=2.82,corr=0.6653) KPNwG8Oj(S=2.58,corr=0.6977) 0mXKpmYq(S=2.55,corr=0.7908) QPbP6aRQ(S=2.51,corr=0.7241)] 全名单[pwRwWoJ3(S=3.33,corr=0.7458) gJbk9V1K(S=2.82,corr=0.6653) KPNwG8Oj(S=2.58,corr=0.6977) 0mXKpmYq(S=2.55,corr=0.7908) QPbP6aRQ(S=2.51,corr=0.7241)]
+  ✗ YPbW5WQA w162_06__g_sec__bvol       SF=5.21 S=2.65 corr_max=0.7908 撞pwRwWoJ3(S=3.33) 需≥3.66(旧口径需≥3.66) → 不够 | 有效对手[pwRwWoJ3(S=3.33,corr=0.7458) gJbk9V1K(S=2.82,corr=0.6653) KPNwG8Oj(S=2.58,corr=0.6977) 0mXKpmYq(S=2.55,corr=0.7908) QPbP6aRQ(S=2.51,corr=0.7241)] 全名单[pwRwWoJ3(S=3.33,corr=0.7458) gJbk9V1K(S=2.82,corr=0.6653) KPNwG8Oj(S=2.58,corr=0.6977) 0mXKpmYq(S=2.55,corr=0.7908) QPbP6aRQ(S=2.51,corr=0.7241)]
+  ✗ A1NO79zQ w189_01__g_bdv             SF=4.75 S=2.45 corr_max=0.9857 撞KPNwG8Oj(S=2.58) 需≥2.84(旧口径需≥2.84) → 不够 | 有效对手[KPNwG8Oj(S=2.58,corr=0.9857) 88jKeENW(S=2.39,corr=0.6653) qMW92Az2(S=2.32,corr=0.7558) N1QxNQK7(S=2.06,corr=0.6951)] 全名单[KPNwG8Oj(S=2.58,corr=0.9857) 88jKeENW(S=2.39,corr=0.6653) qMW92Az2(S=2.32,corr=0.7558) N1QxNQK7(S=2.06,corr=0.6951)]
+  ✗ 3qXneRPO w162_06__g_ind__bdv        SF=4.30 S=2.19 corr_max=0.8291 撞KPNwG8Oj(S=2.58) 需≥2.84(旧口径需≥2.84) → 不够 | 有效对手[KPNwG8Oj(S=2.58,corr=0.8291) 0mXKpmYq(S=2.55,corr=0.6892) QPbP6aRQ(S=2.51,corr=0.6715) N1avK6zw(S=2.42,corr=0.7131)] 全名单[KPNwG8Oj(S=2.58,corr=0.8291) 0mXKpmYq(S=2.55,corr=0.6892) QPbP6aRQ(S=2.51,corr=0.6715) N1avK6zw(S=2.42,corr=0.7131)]
+  ✗ 3qXneRPO w162_06__g_sec__bdv        SF=4.30 S=2.19 corr_max=0.8291 撞KPNwG8Oj(S=2.58) 需≥2.84(旧口径需≥2.84) → 不够 | 有效对手[KPNwG8Oj(S=2.58,corr=0.8291) 0mXKpmYq(S=2.55,corr=0.6892) QPbP6aRQ(S=2.51,corr=0.6715) N1avK6zw(S=2.42,corr=0.7131)] 全名单[KPNwG8Oj(S=2.58,corr=0.8291) 0mXKpmYq(S=2.55,corr=0.6892) QPbP6aRQ(S=2.51,corr=0.6715) N1avK6zw(S=2.42,corr=0.7131)]
+submit_exempt 完成：本轮提交 0 条
+==========================================================================================
+### exempt_0920_223459.log
+匹配 x244*：达标候选 5 条（豁免比 1.1，直通线 0.685，收对手地板 0.66，算线用 0.66，F≥1.8，TO≤20%）
+池子 107 条（S 已知 107 条）
+  ✗ akbWaOZ9 x244_x174w125dAMIINTrind_MAR SF=4.47 S=2.22 corr_max=0.9979 撞O0N5o3Nv(S=2.22) 需≥2.44(旧口径需≥2.44) → 不够 | 有效对手[O0N5o3Nv(S=2.22,corr=0.9979)] 全名单[O0N5o3Nv(S=2.22,corr=0.9979)]
+  ✗ wpZJoj8Q x244_x174w125dAMIINTrsec_MAR SF=4.36 S=2.17 corr_max=0.9933 撞omL8Mazn(S=2.28) 需≥2.51(旧口径需≥2.51) → 不够 | 有效对手[omL8Mazn(S=2.28,corr=0.6606) O0N5o3Nv(S=2.22,corr=0.9933)] 全名单[omL8Mazn(S=2.28,corr=0.6606) O0N5o3Nv(S=2.22,corr=0.9933)]
+  ✗ KPNw7Onz x244_x174w125dAMIINTrind_SEC SF=4.19 S=2.13 corr_max=0.8220 撞O0N55k1Y(S=2.87) 需≥3.16(旧口径需≥3.16) → 不够 | 有效对手[O0N55k1Y(S=2.87,corr=0.6707) 6Xjmjr7G(S=2.67,corr=0.6638) kqVp6wnO(S=2.51,corr=0.6704) LLNXEe7L(S=2.30,corr=0.7049) omL8Mazn(S=2.28,corr=0.7354)] 全名单[O0N55k1Y(S=2.87,corr=0.6707) 6Xjmjr7G(S=2.67,corr=0.6638) kqVp6wnO(S=2.51,corr=0.6704) LLNXEe7L(S=2.30,corr=0.7049) omL8Mazn(S=2.28,corr=0.7354)]
+  ✗ N1a5PzG8 x244_x174w125dAMIINTrsec_SEC SF=4.04 S=2.06 corr_max=0.8143 撞O0N55k1Y(S=2.87) 需≥3.16(旧口径需≥3.16) → 不够 | 有效对手[O0N55k1Y(S=2.87,corr=0.6835) kqVp6wnO(S=2.51,corr=0.6723) LLNXEe7L(S=2.30,corr=0.6840) omL8Mazn(S=2.28,corr=0.7381) 6Xr2eQaJ(S=2.27,corr=0.6606)] 全名单[O0N55k1Y(S=2.87,corr=0.6835) kqVp6wnO(S=2.51,corr=0.6723) LLNXEe7L(S=2.30,corr=0.6840) omL8Mazn(S=2.28,corr=0.7381) 6Xr2eQaJ(S=2.27,corr=0.6606)]
+  ✗ npdOa0lE x244_w16202rind_SEC        SF=4.10 S=2.20 corr_max=0.7299 撞zq8jl99K(S=2.68) 需≥2.95(旧口径需≥2.95) → 不够 | 有效对手[zq8jl99K(S=2.68,corr=0.6744) 6Xr2eQaJ(S=2.27,corr=0.7299)] 全名单[zq8jl99K(S=2.68,corr=0.6744) 6Xr2eQaJ(S=2.27,corr=0.7299)]
+submit_exempt 完成：本轮提交 0 条

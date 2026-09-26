@@ -1,0 +1,19 @@
+﻿python.exe : D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarn
+ing: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+所在位置 行:445 字符: 32
++ ... NG="utf-8"; & "D:/ProgramData/Miniforge3/envs/bigmodel/python.exe" "D ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\ProgramData\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+鍖归厤 w228_*锛氳揪鏍囧€欓€?6 鏉★紙璞佸厤姣?1.1锛宑orr 鍦版澘 0.7锛?
+姹犲瓙 97 鏉★紙S 宸茬煡 97 鏉★級
+  鉁?9qjAA08K w228_f                     SF=6.27 S=3.26 corr=0.7018 鎾?mR2K6lr(S=3.45) 闇€鈮?.80 鈫?涓嶅
+  鉁?0mXKQwgk w228_a                     SF=6.24 S=3.39 corr=0.8343 鎾瀙wRwWoJ3(S=3.33) 闇€鈮?.66 鈫?涓嶅
+  鉁?6XjYqL7G w228_b                     SF=5.75 S=3.19 corr=0.7729 鎾瀙wRwWoJ3(S=3.33) 闇€鈮?.66 鈫?涓嶅
+  鉁?pwR11rOg w228_e                     SF=5.69 S=3.13 corr=0.7585 鎾瀙wRwWoJ3(S=3.33) 闇€鈮?.66 鈫?涓嶅
+  鉁?xA3mzG3J w228_c                     SF=5.55 S=3.13 corr=0.7489 鎾瀙wRwWoJ3(S=3.33) 闇€鈮?.66 鈫?涓嶅
+  鉁?O0N5ml3b w228_d                     SF=5.40 S=3.00 corr=0.7274 鎾瀙wRwWoJ3(S=3.33) 闇€鈮?.66 鈫?涓嶅
+submit_exempt 瀹屾垚锛氭湰杞彁浜?0 鏉?
+

@@ -1,0 +1,124 @@
+池子 107 条（取到 PnL 107，缺 0）
+待判候选 76 条（min_f 1.80 / max_to 0.20 / 直通线 0.685）
+==================================================================================================================================
+id          universe neut          dly  dec       S      F      TO     tS | corr_max 撞谁              need 判定
+----------------------------------------------------------------------------------------------------------------------------------
+YP58Mr5l    TOP2000  SUBINDUSTRY   0    14     2.68   2.65   0.146   1.61 |   0.9070 mLgd6nwX        3.49 ✗ 不够
+A10ev37X    TOP2000  SUBINDUSTRY   0    12     2.67   2.52   0.160   1.50 |   0.8804 mLgd6nwX        3.49 ✗ 不够
+RRV59RAd    TOP2000  SUBINDUSTRY   1    20     2.43   2.42   0.122   1.24 |   0.9963 O0rZ90n1        3.10 ✗ 不够
+O0rR8mjg    TOP2000  SUBINDUSTRY   0    10     2.65   2.39   0.175   1.61 |   0.8744 mLgd6nwX        3.49 ✗ 不够
+d5OY1Xgv    TOP2000  SUBINDUSTRY   0    10     2.65   2.39   0.175   1.61 |   0.8744 mLgd6nwX        3.49 ✗ 不够
+O0r6VZzJ    TOP2000  SUBINDUSTRY   1    40     2.38   2.34   0.122   1.99 |   0.8770 RRV5l5Go        2.63 ✗ 不够
+vRkYpk1a    TOP2000  SUBINDUSTRY   1    30     2.35   2.29   0.105   1.17 |   0.9973 O0rZ90n1        3.10 ✗ 不够
+GrdXOVGP    TOP2000  SUBINDUSTRY   0    8      2.64   2.23   0.200   1.63 |   0.8502 mLgd6nwX        3.49 ✗ 不够
+d5O93jvJ    TOP2000  SUBINDUSTRY   1    35     2.31   2.23   0.101   1.18 |   0.9918 O0rZ90n1        3.10 ✗ 不够
+MP1gdNGz    TOP2000  SUBINDUSTRY   1    40     2.28   2.19   0.097   1.20 |   0.9851 RRV5l5Go        2.63 ✗ 不够
+ZYbWbbm8    TOP1000  SUBINDUSTRY   1    15     2.22   2.05   0.118   1.75 |   0.0000                    - ★ 直通
+npKmP0Pd    TOP2000  SUBINDUSTRY   0    6      2.62   2.03   0.239   1.66 |   0.8415 0mR2K6lr        3.80 ✗ 不够
+wpYN38Z1    TOP1000  SUBINDUSTRY   1    12     2.32   1.96   0.163   0.87 |   0.9075 kqVJXpAl        2.67 ✗ 不够
+JjxoOVvl    TOP1000  SUBINDUSTRY   1    21     2.18   1.89   0.152   1.20 |   0.8392 kqVJXpAl        2.67 ✗ 不够
+YP5xkNzR    TOP1000  SUBINDUSTRY   1    8      2.42   1.88   0.204   0.92 |   0.9219 kqVJXpAl        2.67 ✗ 不够
+rK59lLnj    TOP1000  SUBINDUSTRY   1    25     2.07   1.87   0.119   0.48 |   0.8595 kqVJXpAl        2.67 ✗ 不够
+npdO71xw    TOP1000  SUBINDUSTRY   1    10     2.20   1.85   0.107   1.76 |   0.0000                    - ★ 直通
+rK5dLZxj    TOP1000  SUBINDUSTRY   1    20     2.21   1.84   0.132  -0.48 |   0.0000                    - ★ 直通
+VkaY0ZA0    TOP1000  SECTOR        1    10     1.96   1.79   0.141   1.55 |   0.0000                    - ★ 直通
+O0N575M7    TOP1000  SUBINDUSTRY   1    10     2.11   1.76   0.102   1.84 |   0.0000                    - ★ 直通
+3qXnlLng    TOP1000  SUBINDUSTRY   1    10     2.11   1.76   0.102   1.84 |   0.0000                    - ★ 直通
+GrdgvGOP    TOP1000  SUBINDUSTRY   1    8      2.48   1.75   0.218   0.10 |   0.6875 kqVJXpAl        2.67 ✗ 不够
+YP5lJ3nl    TOP1000  SUBINDUSTRY   1    40     1.97   1.72   0.133   0.89 |   0.7910 kqVJXpAl        2.67 ✗ 不够
+omL9LYp6    TOP1000  SUBINDUSTRY   1    10     2.06   1.72   0.137   1.97 |   0.0000                    - ★ 直通
+WjbWLqXo    TOP1000  SUBINDUSTRY   1    10     2.13   1.70   0.155   2.05 |   0.0000                    - ★ 直通
+A1NOvq8E    TOP1000  SUBINDUSTRY   1    10     1.97   1.70   0.143   1.27 |   0.0000                    - ★ 直通
+N1QKJkdw    TOP1000  SUBINDUSTRY   1    40     1.91   1.66   0.104   0.38 |   0.8199 kqVJXpAl        2.67 ✗ 不够
+npdOdMdz    TOP1000  SUBINDUSTRY   1    10     1.91   1.55   0.104   2.18 |   0.0000                    - ★ 直通
+QP3WOeqK    TOP2000  SUBINDUSTRY   1    40     1.85   1.53   0.120   0.99 |   0.7770 9qVEA1ZV        2.71 ✗ 不够
+mLgNQEkx    TOP500   SUBINDUSTRY   0    4      2.05   1.50   0.197  -0.01 |   0.0000                    - ★ 直通
+qMW5OYX2    TOP2000  SUBINDUSTRY   1    40     1.91   1.49   0.088   0.84 |   0.7955 LL98E87L        2.70 ✗ 不够
+LL9w30e1    TOP1000  SUBINDUSTRY   0    4      2.13   1.49   0.195   1.50 |   0.7353 0mR2K6lr        3.80 ✗ 不够
+9qV2w0qV    TOP2000  SUBINDUSTRY   1    4      2.10   1.48   0.195   1.71 |   0.8312 0mR2K6lr        3.80 ✗ 不够
+P0ZxREMM    TOP1000  SUBINDUSTRY   1    2      2.65   1.46   0.472   0.88 |   0.8281 kqVJXpAl        2.67 ✗ 不够
+E5vNE16R    TOP1000  SUBINDUSTRY   1    25     1.64   1.37   0.116   0.99 |   0.8114 kqVJXpAl        2.67 ✗ 不够
+883GVZvW    TOP2000  SUBINDUSTRY   1    40     1.56   1.27   0.127   0.20 |   0.0000                    - ★ 直通
+YPbPgjnA    TOP2000  SUBINDUSTRY   1    6      1.64   1.19   0.149   1.00 |   0.8496 gJbk9V1K        3.10 ✗ 不够
+d5OYGngw    TOP1000  SUBINDUSTRY   0    2      2.24   1.15   0.470   1.02 |   0.7287 mLgd6nwX        3.49 ✗ 不够
+1YxO8gpM    TOP1000  SUBINDUSTRY   1    2      2.17   1.07   0.475   0.85 |   0.0000                    - ★ 直通
+0mwgVgAk    TOP1000  INDUSTRY      1    6      1.32   0.95   0.164  -1.00 |   0.7648 kqVJXpAl        2.67 ✗ 不够
+ZY7z8lY0    TOP1000  INDUSTRY      1    0      1.44   0.95   0.205  -1.00 |   0.7123 kqVJXpAl        2.67 ✗ 不够
+P07zR92M    TOP1000  INDUSTRY      1    0      0.93   0.95   0.037  -1.00 |   0.8555 N1QxNQK7        2.27 ✗ 不够
+QP3YjAAg    TOP1000  SUBINDUSTRY   1    8      1.51   0.93   0.218   1.19 |   0.0000                    - ★ 直通
+qMWORzRO    TOP1000  INDUSTRY      1    2      1.92   0.89   0.479   1.42 |   0.0000                    - ★ 直通
+XgWV363m    TOP1000  SUBINDUSTRY   1    2      1.94   0.89   0.499   1.14 |   0.0000                    - ★ 直通
+JjxEzEve    TOP1000  INDUSTRY      1    0      1.43   0.86   0.252  -1.00 |   0.7983 le8ddYbe        2.65 ✗ 不够
+ZY7zVJnn    TOP1000  INDUSTRY      1    0      1.15   0.84   0.023  -1.00 |   0.6639                    - ★ 直通
+mLj7G6V9    TOP1000  INDUSTRY      1    0      1.10   0.83   0.024  -1.00 |   0.6700                    - ★ 直通
+pwPjxxQ3    TOP1000  SUBINDUSTRY   1    12     1.15   0.82   0.128   0.53 |   0.6829                    - ★ 直通
+om6oz5Rk    TOP1000  SUBINDUSTRY   1    8      1.35   0.80   0.223   1.76 |   0.7122 kqVJXpAl        2.67 ✗ 不够
+MP1dpvXo    TOP1000  SUBINDUSTRY   1    25     1.24   0.80   0.149   0.92 |   0.6693                    - ★ 直通
+9qXlqRWe    TOP1000  SUBINDUSTRY   1    0      1.52   0.71   0.397  -1.00 |   0.6840                    - ★ 直通
+E5vNw9eG    TOP1000  SUBINDUSTRY   1    40     1.04   0.64   0.137   0.59 |   0.0000                    - ★ 直通
+npKAoevq    TOP1000  SUBINDUSTRY   1    8      1.17   0.62   0.229   1.43 |   0.0000                    - ★ 直通
+mLgdGnAp    TOP1000  SUBINDUSTRY   1    3      1.37   0.61   0.400   1.30 |   0.0000                    - ★ 直通
+WjPLXkbo    TOP1000  SUBINDUSTRY   1    8      1.19   0.60   0.237  -0.26 |   0.0000                    - ★ 直通
+mLg9zQep    TOP1000  INDUSTRY      1    8      0.99   0.58   0.223  -1.00 |   0.8597 A10MYm3d        2.09 ✗ 不够
+LL7KLlN6    TOP1000  SUBINDUSTRY   1    0      1.18   0.56   0.402  -1.00 |   0.6826                    - ★ 直通
+O0rJmKl7    TOP500   SUBINDUSTRY   1    8      1.09   0.55   0.221  -0.69 |   0.0000                    - ★ 直通
+xAYVLExw    TOP1000  SUBINDUSTRY   1    2      1.40   0.55   0.432  -1.11 |   0.0000                    - ★ 直通
+xAYgz7Zm    TOP1000  INDUSTRY      1    8      0.96   0.53   0.209  -1.00 |   0.8326 akLqqmm6        1.88 ✗ 不够
+A10QakQR    TOP500   SUBINDUSTRY   1    8      0.98   0.50   0.231   0.42 |   0.0000                    - ★ 直通
+RRV59W71    TOP500   SUBINDUSTRY   1    40     0.83   0.50   0.110  -0.23 |   0.0000                    - ★ 直通
+6XrOYpAY    TOP500   INDUSTRY      1    8      0.86   0.47   0.214  -1.00 |   0.7647 A10MYm3d        2.09 ✗ 不够
+RRV983ba    TOP1000  SUBINDUSTRY   1    25     0.77   0.45   0.145   0.40 |   0.0000                    - ★ 直通
+O0rRZbEp    TOP500   SUBINDUSTRY   1    25     0.75   0.38   0.157  -0.27 |   0.0000                    - ★ 直通
+le8O5n6O    TOP1000  INDUSTRY      1    0      0.72   0.33   0.224  -1.00 |   0.8240 le8ddYbe        2.65 ✗ 不够
+WjPLdzlZ    TOP1000  SUBINDUSTRY   1    8      0.70   0.31   0.213  -0.49 |   0.0000                    - ★ 直通
+6XrAq8KP    TOP1000  SUBINDUSTRY   1    8      0.60   0.26   0.257   2.00 |   0.0000                    - ★ 直通
+MP1RzXKo    TOP500   INDUSTRY      1    0      0.55   0.22   0.229  -1.00 |   0.0000                    - ★ 直通
+1YxOdvQW    TOP1000  SUBINDUSTRY   1    25     0.54   0.22   0.146  -1.17 |   0.0000                    - ★ 直通
+QP3X5Yag    TOP200   INDUSTRY      1    8      0.33   0.12   0.196  -1.00 |   0.0000                    - ★ 直通
+6XrZWEKE    TOP1000  SUBINDUSTRY   1    2      0.42   0.10   0.548   0.56 |   0.0000                    - ★ 直通
+P07z1Ww7    TOP500   INDUSTRY      1    0     -0.02  -0.00   0.028  -1.00 |   0.0000                    - ★ 直通
+9qXMJOWo    TOP1000  INDUSTRY      1    0     -0.15  -0.06   0.022  -1.00 |   0.0000                    - ★ 直通
+78Z31OkZ    TOP1000  SUBINDUSTRY   1    25    -0.23  -0.07   0.165  -0.29 |   0.0000                    - ★ 直通
+==================================================================================================================================
+判决完毕：判了 76 条，通过 41 条
+  ★ ZYbWbbm8    TOP1000  S=2.22 F=2.05 TO=0.118 tS=1.75 corr_max=0.0000
+  ★ npdO71xw    TOP1000  S=2.20 F=1.85 TO=0.107 tS=1.76 corr_max=0.0000
+  ★ rK5dLZxj    TOP1000  S=2.21 F=1.84 TO=0.132 tS=-0.48 corr_max=0.0000
+  ★ VkaY0ZA0    TOP1000  S=1.96 F=1.79 TO=0.141 tS=1.55 corr_max=0.0000
+  ★ O0N575M7    TOP1000  S=2.11 F=1.76 TO=0.102 tS=1.84 corr_max=0.0000
+  ★ 3qXnlLng    TOP1000  S=2.11 F=1.76 TO=0.102 tS=1.84 corr_max=0.0000
+  ★ omL9LYp6    TOP1000  S=2.06 F=1.72 TO=0.137 tS=1.97 corr_max=0.0000
+  ★ WjbWLqXo    TOP1000  S=2.13 F=1.70 TO=0.155 tS=2.05 corr_max=0.0000
+  ★ A1NOvq8E    TOP1000  S=1.97 F=1.70 TO=0.143 tS=1.27 corr_max=0.0000
+  ★ npdOdMdz    TOP1000  S=1.91 F=1.55 TO=0.104 tS=2.18 corr_max=0.0000
+  ★ mLgNQEkx    TOP500   S=2.05 F=1.50 TO=0.197 tS=-0.01 corr_max=0.0000
+  ★ 883GVZvW    TOP2000  S=1.56 F=1.27 TO=0.127 tS=0.20 corr_max=0.0000
+  ★ 1YxO8gpM    TOP1000  S=2.17 F=1.07 TO=0.475 tS=0.85 corr_max=0.0000
+  ★ QP3YjAAg    TOP1000  S=1.51 F=0.93 TO=0.218 tS=1.19 corr_max=0.0000
+  ★ qMWORzRO    TOP1000  S=1.92 F=0.89 TO=0.479 tS=1.42 corr_max=0.0000
+  ★ XgWV363m    TOP1000  S=1.94 F=0.89 TO=0.499 tS=1.14 corr_max=0.0000
+  ★ ZY7zVJnn    TOP1000  S=1.15 F=0.84 TO=0.023 tS=-1.00 corr_max=0.6639
+  ★ mLj7G6V9    TOP1000  S=1.10 F=0.83 TO=0.024 tS=-1.00 corr_max=0.6700
+  ★ pwPjxxQ3    TOP1000  S=1.15 F=0.82 TO=0.128 tS=0.53 corr_max=0.6829
+  ★ MP1dpvXo    TOP1000  S=1.24 F=0.80 TO=0.149 tS=0.92 corr_max=0.6693
+  ★ 9qXlqRWe    TOP1000  S=1.52 F=0.71 TO=0.397 tS=-1.00 corr_max=0.6840
+  ★ E5vNw9eG    TOP1000  S=1.04 F=0.64 TO=0.137 tS=0.59 corr_max=0.0000
+  ★ npKAoevq    TOP1000  S=1.17 F=0.62 TO=0.229 tS=1.43 corr_max=0.0000
+  ★ mLgdGnAp    TOP1000  S=1.37 F=0.61 TO=0.400 tS=1.30 corr_max=0.0000
+  ★ WjPLXkbo    TOP1000  S=1.19 F=0.60 TO=0.237 tS=-0.26 corr_max=0.0000
+  ★ LL7KLlN6    TOP1000  S=1.18 F=0.56 TO=0.402 tS=-1.00 corr_max=0.6826
+  ★ O0rJmKl7    TOP500   S=1.09 F=0.55 TO=0.221 tS=-0.69 corr_max=0.0000
+  ★ xAYVLExw    TOP1000  S=1.40 F=0.55 TO=0.432 tS=-1.11 corr_max=0.0000
+  ★ A10QakQR    TOP500   S=0.98 F=0.50 TO=0.231 tS=0.42 corr_max=0.0000
+  ★ RRV59W71    TOP500   S=0.83 F=0.50 TO=0.110 tS=-0.23 corr_max=0.0000
+  ★ RRV983ba    TOP1000  S=0.77 F=0.45 TO=0.145 tS=0.40 corr_max=0.0000
+  ★ O0rRZbEp    TOP500   S=0.75 F=0.38 TO=0.157 tS=-0.27 corr_max=0.0000
+  ★ WjPLdzlZ    TOP1000  S=0.70 F=0.31 TO=0.213 tS=-0.49 corr_max=0.0000
+  ★ 6XrAq8KP    TOP1000  S=0.60 F=0.26 TO=0.257 tS=2.00 corr_max=0.0000
+  ★ MP1RzXKo    TOP500   S=0.55 F=0.22 TO=0.229 tS=-1.00 corr_max=0.0000
+  ★ 1YxOdvQW    TOP1000  S=0.54 F=0.22 TO=0.146 tS=-1.17 corr_max=0.0000
+  ★ QP3X5Yag    TOP200   S=0.33 F=0.12 TO=0.196 tS=-1.00 corr_max=0.0000
+  ★ 6XrZWEKE    TOP1000  S=0.42 F=0.10 TO=0.548 tS=0.56 corr_max=0.0000
+  ★ P07z1Ww7    TOP500   S=-0.02 F=-0.00 TO=0.028 tS=-1.00 corr_max=0.0000
+  ★ 9qXMJOWo    TOP1000  S=-0.15 F=-0.06 TO=0.022 tS=-1.00 corr_max=0.0000
+  ★ 78Z31OkZ    TOP1000  S=-0.23 F=-0.07 TO=0.165 tS=-0.29 corr_max=0.0000

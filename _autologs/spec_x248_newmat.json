@@ -1,0 +1,18 @@
+{
+  "x248_00": {"expr": "1.5*group_rank(historical_volatility_30 - implied_volatility_mean_30, subindustry) + 1.0*group_rank(implied_volatility_call_30 - implied_volatility_put_30, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry) + 0.5*group_rank(volume/ts_mean(volume, 120), subindustry)"},
+  "x248_01": {"expr": "1.5*group_rank(implied_volatility_mean_360 - implied_volatility_mean_30, subindustry) + 1.0*group_rank(historical_volatility_60 - implied_volatility_mean_60, subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry) + 0.5*group_rank(volume/ts_mean(volume, 60), subindustry)"},
+  "x248_02": {"expr": "1.5*group_rank(implied_volatility_mean_skew_30, subindustry) + 1.0*group_rank(implied_volatility_mean_90 - implied_volatility_mean_720, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry)"},
+  "x248_03": {"expr": "1.5*group_rank(historical_volatility_120 - implied_volatility_mean_120, subindustry) + 0.75*group_rank(-ts_zscore(implied_volatility_mean_30, 60), subindustry) + 0.5*group_rank(cash/assets, subindustry) + 0.5*group_rank(-ts_delta(close, 20), subindustry)"},
+  "x248_04": {"expr": "1.5*group_rank(-pcr_oi_30, subindustry) + 1.0*group_rank(-pcr_oi_all, subindustry) + 0.5*group_rank(option_breakeven_30/close - 1, subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry)"},
+  "x248_05": {"expr": "1.5*group_rank(-pcr_oi_60, subindustry) + 0.75*group_rank(ts_delta(pcr_oi_30, 5), subindustry) + 0.75*group_rank(historical_volatility_30 - implied_volatility_mean_30, subindustry) + 0.5*group_rank(volume/ts_mean(volume, 60), subindustry)"},
+  "x248_06": {"expr": "1.5*group_rank(-ts_zscore(pcr_oi_90, 120), subindustry) + 1.0*group_rank(option_breakeven_90/close - 1, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry)"},
+  "x248_07": {"expr": "1.5*group_rank(implied_volatility_mean_90 - historical_volatility_90, subindustry) + 0.75*group_rank(-pcr_oi_120, subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry) + 0.5*group_rank(volume/ts_mean(volume, 120), subindustry)"},
+  "x248_08": {"expr": "1.5*group_rank(mean_composite_sentiment_score, subindustry) + 1.0*group_rank(ts_delta(mean_equity_sentiment_score, 5), subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry)"},
+  "x248_09": {"expr": "1.5*group_rank(mean_earnings_evaluation_sentiment, subindustry) + 1.0*group_rank(mean_event_novelty_score, subindustry) + 0.5*group_rank(volume/ts_mean(volume, 60), subindustry)"},
+  "x248_10": {"expr": "1.5*group_rank(mean_news_impact_projection, subindustry) + 0.75*group_rank(mean_event_sentiment_score, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry)"},
+  "x248_11": {"expr": "1.5*group_rank(mean_corporate_action_sentiment, subindustry) + 1.0*group_rank(-mean_entity_relevance_score, subindustry) + 0.5*group_rank(cashflow_op/enterprise_value, subindustry)"},
+  "x248_12": {"expr": "1.5*group_rank(snt_social_value, subindustry) + 1.0*group_rank(snt_social_volume, subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry)"},
+  "x248_13": {"expr": "1.5*group_rank(scl12_sentiment, subindustry) + 1.0*group_rank(scl12_buzz, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry)"},
+  "x248_14": {"expr": "1.5*group_rank(snt_value, subindustry) + 0.75*group_rank(snt_buzz, subindustry) + 0.5*group_rank(volume/ts_mean(volume, 60), subindustry)"},
+  "x248_15": {"expr": "1.5*group_rank(snt_social_value, subindustry) + 0.75*group_rank(mean_composite_sentiment_score, subindustry) + 0.75*group_rank(historical_volatility_30 - implied_volatility_mean_30, subindustry) + 0.5*group_rank(-ts_delta(close, 5), subindustry)"}
+}

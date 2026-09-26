@@ -1,0 +1,46 @@
+解析到 177 条判决记录
+
+== ① corr_max <= 0.688（直通区）==
+  (无)
+
+== ② corr_max 0.688~0.70（缓冲待测区）==
+  (无)
+
+== ③ 满足豁免线（S >= need）==
+  (无)
+
+== ④ 全库 corr_max 分布 ==
+  <=0.60      0
+  0.60-0.65   0
+  0.65-0.685  0
+  0.685-0.70  0
+  0.70-0.80   32
+  0.80-0.90   90
+  >0.90       55
+
+== ⑤ SF 最高 Top25（不管 corr）==
+  鉁?XgbgNwna w158_01                    SF= 6.82 S= 3.30 corr=0.9779 撞 -(S=0.00) need=0.00
+  鉁?qMxM5j1A w158_04                    SF= 6.74 S= 3.28 corr=0.9839 撞 -(S=0.00) need=0.00
+  鉁?d5b59n6K w158_02                    SF= 6.71 S= 3.26 corr=0.9639 撞 -(S=0.00) need=0.00
+  鉁?vRrRYmxa w158_03                    SF= 6.71 S= 3.30 corr=0.9801 撞 -(S=0.00) need=0.00
+  鉁?GrbrQbWZ w158_05                    SF= 6.65 S= 3.28 corr=0.9888 撞 -(S=0.00) need=0.00
+  鉁?blblxz5M w158_07                    SF= 6.51 S= 3.19 corr=0.8731 撞 -(S=0.00) need=0.00
+  鉁?3qXZGMmO w189_01                    SF= 6.49 S= 3.28 corr=0.8041 撞 -(S=0.00) need=0.00
+  鉁?VkagZle0 w193_00                    SF= 6.47 S= 3.38 corr=0.9351 撞 -(S=0.00) need=0.00
+  鉁?P020P5MM w158_06                    SF= 6.43 S= 3.19 corr=0.8421 撞 -(S=0.00) need=0.00
+  鉁?omL9g8AJ w189_01__g_sec             SF= 6.42 S= 3.21 corr=0.8122 撞 -(S=0.00) need=0.00
+  鉁?Xgb59aRb w188_01                    SF= 6.34 S= 3.37 corr=0.8752 撞 -(S=0.00) need=0.00
+  鉁?XgbEJ6j5 w196_02                    SF= 6.28 S= 3.33 corr=0.9094 撞 -(S=0.00) need=0.00
+  鉁?9qjAA08K w228_f                     SF= 6.27 S= 3.26 corr=0.8680 撞 -(S=0.00) need=0.00
+  鉁?qMx9ZPaP n160_pwRwWoJ3_SEC          SF= 6.21 S= 3.01 corr=0.9453 撞 -(S=0.00) need=0.00
+  鉁?88jKQRAX w189_01__SEC               SF= 6.21 S= 3.14 corr=0.7985 撞 -(S=0.00) need=0.00
+  鉁?wpY3Yxvd w53_c                      SF= 6.19 S= 2.99 corr=0.8410 撞 -(S=0.00) need=0.00
+  鉁?A1N1mVMw w161_00                    SF= 6.18 S= 3.24 corr=0.8235 撞 -(S=0.00) need=0.00
+  鉁?MPaod5Lk w192_00                    SF= 6.17 S= 3.26 corr=0.8787 撞 -(S=0.00) need=0.00
+  鉁?Vk6Za7Lw w55_h                      SF= 6.15 S= 3.01 corr=0.8454 撞 -(S=0.00) need=0.00
+  鉁?A10e0LQY w54_d                      SF= 6.15 S= 3.02 corr=0.8481 撞 -(S=0.00) need=0.00
+  鉁?kqVvjjnK w52_g                      SF= 6.14 S= 3.01 corr=0.8447 撞 -(S=0.00) need=0.00
+  鉁?qMWOWaE1 w54_h                      SF= 6.14 S= 3.01 corr=0.8447 撞 -(S=0.00) need=0.00
+  鉁?Vk6Z6nmw w53_f                      SF= 6.11 S= 2.98 corr=0.8471 撞 -(S=0.00) need=0.00
+  鉁?RRV9brza w55_f                      SF= 6.09 S= 3.00 corr=0.8470 撞 -(S=0.00) need=0.00
+  鉁?zqYgYexo w54_e                      SF= 6.08 S= 2.98 corr=0.8493 撞 -(S=0.00) need=0.00

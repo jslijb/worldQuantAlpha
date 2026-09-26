@@ -1,0 +1,22 @@
+﻿n160 json count: 18
+mined total: 2340
+--- n160 files ---
+n160_58z8eK91_MAR.json
+n160_58z8eK91_NON.json
+n160_58z8eK91_SEC.json
+n160_d5b5voEJ_MAR.json
+n160_d5b5voEJ_NON.json
+n160_d5b5voEJ_SEC.json
+n160_MPaPVYpM_MAR.json
+n160_MPaPVYpM_NON.json
+n160_MPaPVYpM_SEC.json
+n160_N1a18988_MAR.json
+n160_N1a18988_NON.json
+n160_N1a18988_SEC.json
+n160_pwRwWoJ3_MAR.json
+n160_pwRwWoJ3_NON.json
+n160_pwRwWoJ3_SEC.json
+n160_qMxMV8NA_MAR.json
+n160_qMxMV8NA_NON.json
+n160_qMxMV8NA_SEC.json
+--- n160 combos defs ---

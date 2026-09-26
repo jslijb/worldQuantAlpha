@@ -1,0 +1,13 @@
+﻿w224_b 2rwnQZqN SF=5.13 S=3.04 F=2.09 T=0.2777 tS=2.53 pred_corr=None FAIL=[] [鈽匬ASS]
+w224_a 9qjAb9kx SF=3.86 S=2.13 F=1.73 T=0.1046 tS=2.21 pred_corr=None FAIL=[] [fail]
+w224_c 58zq3pWn SF=5.14 S=2.73 F=2.41 T=0.1058 tS=1.27 pred_corr=None FAIL=[] [鈽匬ASS]
+w224_d kqoLbg8k SF=5.07 S=2.67 F=2.40 T=0.108 tS=1.92 pred_corr=None FAIL=[] [鈽匬ASS]
+w224_e Grb3Ym2G SF=3.64 S=2.10 F=1.54 T=0.1189 tS=0.86 pred_corr=None FAIL=[] [fail]
+w224_f A1NOYzaw SF=3.28 S=1.88 F=1.40 T=0.0353 tS=1.43 pred_corr=None FAIL=[] [fail]
+w224_g vRrJx7zd SF=3.92 S=2.16 F=1.76 T=0.029 tS=0.98 pred_corr=None FAIL=[] [fail]
+w224_h omL9AbZm SF=4.58 S=2.47 F=2.11 T=0.0466 tS=0.53 pred_corr=None FAIL=[] [fail]
+w224_i MPa5XW2r SF=2.72 S=1.60 F=1.12 T=0.0261 tS=1.39 pred_corr=None FAIL=[] [fail]
+w224_j E5prbXW9 SF=4.14 S=2.23 F=1.91 T=0.0887 tS=0.84 pred_corr=None FAIL=['LOW_SUB_UNIVERSE_SHARPE'] [fail]
+w224_k mLmxAz7K SF=3.18 S=1.85 F=1.33 T=0.0305 tS=0.93 pred_corr=None FAIL=[] [fail]
+w224_l KPNw6w1k SF=4.77 S=2.53 F=2.24 T=0.0284 tS=1.04 pred_corr=None FAIL=[] [fail]
+mine_batch181 done

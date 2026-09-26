@@ -1,0 +1,21 @@
+/users/self/super-alphas?limit=10                                        -> 404 (23 bytes)
+
+/super-alphas?limit=10                                                   -> 404 (23 bytes)
+
+/users/self/alphas?stage=OS&limit=5                                      -> 200 (13538 bytes)
+    {"count":103,"next":"https://api.worldquantbrain.com/users/self/alphas?limit=5&offset=5&stage=OS","previous":null,"results":[{"id":"E5prgA1K","type":"REGULAR","author":"LJ49886","settings":{"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":10,"neutralization":"INDUSTRY","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2019-01-01","endDate":
+
+/competitions                                                            -> 200 (9908 bytes)
+    {"count":11,"next":"https://api.worldquantbrain.com/competitions?limit=10&offset=10","previous":null,"results":[{"id":"challenge","name":"Challenge - Mainland China","description":"Challenge","universities":null,"countries":["CN","IN","KE","NG","VN"],"excludedCountries":null,"status":"ACCEPTED","teamBased":false,"startDate":null,"endDate":null,"signUpStartDate":null,"signUpEndDate":null,"signUpDate":null,"team":null,"scoring":"PERFORMANCE","leaderboard":{"rank":169,"user":{"id":"LJ49886","name":
+
+/users/self/competitions                                                 -> 200 (882 bytes)
+    {"count":1,"next":null,"previous":null,"results":[{"id":"challenge","name":"Challenge - Mainland China","description":"Challenge","universities":null,"countries":["CN","IN","KE","NG","VN"],"excludedCountries":null,"status":"ACCEPTED","teamBased":false,"startDate":null,"endDate":null,"signUpStartDate":null,"signUpEndDate":null,"signUpDate":null,"team":null,"scoring":"PERFORMANCE","leaderboard":{"rank":169,"user":{"id":"LJ49886","name":null,"image":{"url":"https://api.worldquantbrain.com/users/LJ4
+
+/users/self/consultant                                                   -> 403 (63 bytes)
+
+/users/self/payments                                                     -> 404 (23 bytes)
+
+/users/self/leaderboard                                                  -> 404 (23 bytes)
+
+/leaderboard/consultant                                                  -> 404 (23 bytes)
+

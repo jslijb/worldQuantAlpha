@@ -1,0 +1,12 @@
+KPNvME8N     PnL 1235 天
+pwRYrNng     PnL 1235 天
+MP1dYzQ8     PnL 1235 天
+9qj835Nd     PnL 1235 天
+RRb9wk8j     PnL 1235 天
+
+                 KPNvME8N     pwRYrNng     MP1dYzQ8     9qj835Nd     RRb9wk8j
+KPNvME8N           1.0000       0.1362       0.1312       0.1302       0.1024
+pwRYrNng           0.1362       1.0000       0.1662       0.1505       0.2373
+MP1dYzQ8           0.1312       0.1662       1.0000       0.4038       0.4080
+9qj835Nd           0.1302       0.1505       0.4038       1.0000       0.3207
+RRb9wk8j           0.1024       0.2373       0.4080       0.3207       1.0000

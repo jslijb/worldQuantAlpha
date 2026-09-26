@@ -1,0 +1,33 @@
+== 基线计数 ==
+  count(UNSUBMITTED) = 3549
+  count(全部)        = 3656
+
+== 分片拉取 ==
+08-27                              count=134   取到 134
+08-28                              count=35    取到 35
+08-29                              count=147   取到 147
+08-30                              count=102   取到 102
+08-31                              count=3     取到 3
+09-02                              count=151   取到 151
+09-03                              count=270   取到 270
+09-04                              count=50    取到 50
+09-05                              count=40    取到 40
+09-06                              count=96    取到 96
+09-07                              count=120   取到 120
+09-08                              count=63    取到 63
+09-09                              count=160   取到 160
+09-10                              count=132   取到 132
+09-11                              count=181   取到 181
+09-12                              count=108   取到 108
+09-13                              count=192   取到 192
+09-14                              count=253   取到 253
+09-15                              count=46    取到 46
+09-16                              count=650   取到 650
+09-17                              count=61    取到 61
+09-18                              count=68    取到 68
+09-19                              count=132   取到 132
+09-20                              count=360   取到 360
+
+拉取条目 3554，唯一 id 3554
+已写出 data/alpha_quality_analysis/raw_from_api/all_unsubmitted.json
+API 调用 104 次

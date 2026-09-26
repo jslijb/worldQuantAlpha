@@ -1,5 +1,0 @@
-﻿    + FullyQualifiedErrorId : NativeCommandError
-ed; CN=Sectigo Public Server Authentication CA DV E36
-13:41:18.033169 http.c:873              <= Recv header: HTTP/2 401
-13:41:18.033169 http.c:873              <= Recv header: www-authenticate: Basic
-13:41:18.033673 run-command.c:674       trace: run_command: 'git credential-man

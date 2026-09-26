@@ -1,9 +1,0 @@
-﻿w221_b YPbWZLXo SF=3.00 S=1.74 F=1.26 T=0.0283 tS=1.43 pred_corr=None FAIL=[] [fail]
-w221_a XgbYqGX5 SF=4.28 S=2.29 F=1.99 T=0.0848 tS=0.83 pred_corr=None FAIL=[] [fail]
-w221_d 78NKOgMO SF=3.88 S=2.17 F=1.71 T=0.0451 tS=1.48 pred_corr=None FAIL=[] [fail]
-w221_c E5pr30AG SF=3.61 S=1.99 F=1.62 T=0.0257 tS=0.86 pred_corr=None FAIL=[] [fail]
-w221_f 3qXndzVQ SF=5.18 S=3.18 F=2.00 T=0.3693 tS=2.99 pred_corr=None FAIL=[] [鈽匬ASS]
-w221_e gJbovxXe SF=4.42 S=2.40 F=2.02 T=0.0457 tS=1.5 pred_corr=None FAIL=['LOW_SUB_UNIVERSE_SHARPE'] [fail]
-w221_g rKOrk5Qa SF=4.50 S=2.58 F=1.92 T=0.183 tS=2.85 pred_corr=None FAIL=[] [鈽匬ASS]
-w221_h rKOrkOMd SF=5.14 S=2.67 F=2.47 T=0.0818 tS=1.09 pred_corr=None FAIL=['LOW_SUB_UNIVERSE_SHARPE'] [fail]
-mine_batch181 done

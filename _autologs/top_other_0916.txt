@@ -1,8 +1,0 @@
-5.24 w54_c blRJRxvl S=2.74 | group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cash, 45)/assets, subin
-4.72 w5_s8_ind zqYk25AG S=2.47 | group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) +
-4.65 w4_s8_t005 akL7QMQ1 S=2.46 | group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) +
-4.65 u8_dec20 YP5789eR S=2.46 | group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) +
-4.61 w92_a akL8wRoR S=2.45 | group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intan
-4.60 w71_d E5v8P8AJ S=2.75 | group_rank(-anl4_fs_detail_estimate_1qf_v4_nd_netdebt_mean/assets, industry) + group_rank(
-4.60 o3_xopr_vwap_d14 blRjZzxM S=2.45 | group_rank(fnd6_xopr/assets, subindustry) + rank(-ts_delta(vwap, 2)) + rank(volume/ts_mean
-4.55 d1_d0_grev_xo_vol xAYjommJ S=2.44 | group_rank(-ts_delta(close, 2), subindustry) + group_rank(fnd6_xopr/assets, subindustry) +

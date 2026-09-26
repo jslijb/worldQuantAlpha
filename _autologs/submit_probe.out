@@ -1,7 +1,0 @@
-=== POST /alphas/LLNXEe7L/submit 实测（Sharpe +13.9% vs 对手）===
-HTTP 201
-HEADERS: {"Retry-After": "1.0", "Location": "https://api.worldquantbrain.com/alphas/LLNXEe7L/submit"}
-BODY(raw): 
-
-=== 6 秒后 GET ===
-status=ACTIVE dateSubmitted=2026-09-20T06:47:51-04:00

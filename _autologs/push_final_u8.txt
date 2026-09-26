@@ -1,9 +1,0 @@
-﻿git : fatal: unable to access 'https://github.com/jslijb/worldQuantAlpha.git/':
- Empty reply from server
-所在位置 行:445 字符: 89
-+ ... worldquant; git -c http.version=HTTP/1.1 push origin HEAD *> D:\Pytho ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (fatal: unable t...ply from server 
-   :String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 

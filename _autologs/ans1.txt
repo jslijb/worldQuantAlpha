@@ -1,7 +1,0 @@
-x163 backlog conversion files: 16
-x162 files: 36
-backlog csv exists: True
-backlog header: ['cid', 'id', 'S', 'F', 'SF', 'T', 'R', 'DD', 'tS', 'band', 'fails', 'grade', 'universe', 'neutralization', 'decay', 'truncation', 'delay', 'submitted', 'expr']
-backlog rows: 456
-blocked json exists: True
-blocked entries: 22

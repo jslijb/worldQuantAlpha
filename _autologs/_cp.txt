@@ -1,8 +1,0 @@
-﻿=========== w224_exempt.txt ===========
-(copied)
-=========== w223_exempt.txt ===========
-(copied)
-=========== w222_exempt.txt ===========
-(copied)
-=========== exempt_w5.txt ===========
-(copied)

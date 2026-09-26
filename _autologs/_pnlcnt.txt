@@ -1,2 +1,0 @@
-﻿pnl files: 1067
-ledger rows: 110

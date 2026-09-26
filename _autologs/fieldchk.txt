@@ -1,8 +1,0 @@
-delay=1 anl4_basicdetailrec_ratingvalue OK type=VECTOR cov=None aC=None
-delay=1 anl4_eaz2lrec_ratingvalue OK type=VECTOR cov=None aC=None
-delay=1 anl4_fs_detail_rec_v4_nd_estimate OK type=VECTOR cov=None aC=None
-delay=1 anl4_total_rec OK type=VECTOR cov=None aC=None
-delay=0 anl4_basicdetailrec_ratingvalue OK type=VECTOR cov=None aC=None
-delay=0 anl4_eaz2lrec_ratingvalue OK type=VECTOR cov=None aC=None
-delay=0 anl4_fs_detail_rec_v4_nd_estimate OK type=VECTOR cov=None aC=None
-delay=0 anl4_total_rec OK type=VECTOR cov=None aC=None

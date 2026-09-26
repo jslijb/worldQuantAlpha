@@ -1,7 +1,0 @@
-D:\ProgramData\Miniforge3\envs\bigmodel\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.6.0)/charset_normalizer (3.4.4) doesn't match a supported version!
-  warnings.warn(
-w218_f3 SIM-FAIL {"id": "6cyCDgeA4KCabikfx4kAHb", "type": "REGULAR", "status": "ERROR", "message": "Expression with 66 operators exceeds limit of 64. <linkToCommonErrorMessages>Learn more</linkToCommonErrorMessages>", "location": {"line": null, "start": null, "end": null, "property": "regular"}, "links": {"linkToCom
-w218_f2 rKOzRmWd SF=3.88 S=2.15 F=1.73 T=0.122 tS=1.69 pred_corr=None FAIL=[] [fail]
-w218_f5 RRbaE0Go SF=3.96 S=2.15 F=1.81 T=0.126 tS=2.17 pred_corr=None FAIL=[] [fail]
-w218_f6 E5pa6e5J SF=3.96 S=2.15 F=1.81 T=0.126 tS=2.17 pred_corr=None FAIL=[] [fail]
-mine_batch181 done

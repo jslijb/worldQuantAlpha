@@ -1,6 +1,0 @@
-cid=w196_04 aid=blbpYLb6
-  S=2.87 F=2.51 TO=0.1988 R=0.1524 DD=0.0531 margin=0.001534
-  tS=1.93 tF=1.26
-  neut=SUBINDUSTRY decay=None trunc=None ops=30
-  FAIL=[]
-  code: 1.5*group_rank(fnd6_intc/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + 2.0*group_rank(-ts_rank(returns, 5), subindustry)

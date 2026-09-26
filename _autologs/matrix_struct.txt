@@ -1,3 +1,0 @@
-<class 'list'>
-len 574
-[{"id": "assets", "description": "Assets - Total", "dataset": {"id": "fundamental6", "name": "Company Fundamental Data for Equity"}, "category": {"id": "fundamental", "name": "Fundamental"}, "subcategory": {"id": "fundamental-fundamental-data", "name": "Fundamental Data"}, "region": "USA", "delay": 1, "universe": "TOP3000", "type": "MATRIX", "dateCoverage": 1.0, "coverage": 0.5, "userCount": 55614

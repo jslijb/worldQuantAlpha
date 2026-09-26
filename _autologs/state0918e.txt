@@ -1,6 +1,0 @@
-w196_04 id=blbpYLb6 S=2.87 F=2.51 SF=5.38 tS=1.93 FAIL=[]
-expr={'code': '1.5*group_rank(fnd6_intc/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(fnd6_newqv1300_glcea12/assets, subindustry) + 2.0*group_rank(-ts_delta(close, 2), subindustry) + 2.0*group_ran
-x196_w19611_MAR.json id=1YXvqlKX S=1.72 F=1.5 SF=3.22 tS=1.3 FAIL=[] neut=MARKET
-x196_w19611_SEC.json id=omL21rY5 S=2.04 F=1.78 SF=3.82 tS=1.27 FAIL=[] neut=SECTOR
-x196_w19612_MAR.json id=xA3MAKnJ S=2.17 F=2.12 SF=4.29 tS=2.02 FAIL=[] neut=MARKET
-x196_w19612_SEC.json id=mLmOPGap S=2.57 F=2.51 SF=5.08 tS=1.98 FAIL=[] neut=SECTOR

@@ -1,5 +1,0 @@
-le8EMjoN     submitted selfCorr.8092 DOWN 120s poll=56
-akLmmvPW     submitted              DOWN 120s poll=65
-MP1rjMj9     fresh w120_r           UP  n=5 maxcorr=0.9885  0.3s poll=1
-N1QZX9mq     fresh w121_b           DOWN 120s poll=65
-Jjx9VOze     fresh w121_i           DOWN 120s poll=54

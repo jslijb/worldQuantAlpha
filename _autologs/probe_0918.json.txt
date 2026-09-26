@@ -1,5 +1,0 @@
-regular type: <class 'dict'> {'code': '1.5*group_rank(ts_backfill(ts_av_diff(anl4_fs_detail_estimate_1qf_v4_nd_epsr_number, 45), 120), subindustry) + group_rank(fnd6_xrent/assets, subindustry) + quantile(ts_av_diff(cashflow_op/enterprise_value,45)) + group_rank(liabilities_curr/
-test type: <class 'dict'>
-test: {'pnl': 451092, 'bookSize': 20000000, 'longCount': 1048, 'shortCount': 1048, 'turnover': 0.1267, 'returns': 0.0449, 'drawdown': 0.0277, 'margin': 0.000709, 'fitness': 0.62, 'sharpe': 1.04, 'startDate': '2022-12-31'}
-w195_01 test: {'pnl': 695383, 'bookSize': 20000000, 'longCount': 1157, 'shortCount': 1119, 'turnover': 0.1813, 'returns': 0.0693, 'drawdown': 0.0318, 'margin': 0.000764, 'fitness': 0.96, 'sharpe': 1.55, 'startDate': '2022-12-31'}
-w195_01 _pred_S 2.438 base 0.5315

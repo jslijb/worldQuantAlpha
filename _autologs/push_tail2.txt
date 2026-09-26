@@ -1,8 +1,0 @@
-﻿outheastasia
-13:41:18.033169 http.c:861              <= Recv header, 0000000002 bytes (0x000
-00002)
-13:41:18.033169 http.c:873              <= Recv header:
-13:41:18.033673 http.c:914              == Info: Connection #0 to host 127.0.0.
-1 left intact
-13:41:18.033673 run-command.c:674       trace: run_command: 'git credential-man
-ager get'

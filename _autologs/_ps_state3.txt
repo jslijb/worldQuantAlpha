@@ -1,5 +1,0 @@
-﻿== mined dir count ==
-files total: 2358
-== w232/w233/w234/w235 ==
-== scripts ==
-== autologs _out*.txt ==

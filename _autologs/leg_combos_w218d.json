@@ -1,8 +1,0 @@
-{
- "w218_m": {
-  "expr": "0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry)"
- },
- "w218_n": {
-  "expr": "group_rank(fnd6_newqv1300_glced12/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + group_rank(fnd6_newqv1300_citotalq/assets, bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cash/assets, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(-ts_delta(close, 2), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(volume/ts_mean(volume, 60), bucket(rank(ts_std_dev(returns, 20)), range=\"0.1, 1, 0.1\")) + 0.5*group_rank(if_else(close/ts_delay(close, 60) - 1 > 0.10, -ts_arg_max(returns, 60), 0), subindustry) + 1.0*rank(fnd6_newqv1300_wcapq/assets)"
- }
-}

@@ -1,9 +1,0 @@
-=== 6Xr2eQaJ ===
-group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + 0.5*group_rank(-ts_delta(close, 10), subindustry) + 0.5*rank(volume/ts_mean(volume, 120))
-
-=== e79PvPpE ===
-group_rank(authorized_stock_buyback_amount/assets, subindustry) + group_rank(-annual_intangible_assets_net_carrying_value/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_rank(-ts_delta(close, 10), subindustry) + rank(volume/ts_mean(volume, 120))
-
-=== kqoq0zed ===
-1.5*group_rank(fnd6_txtubadjust/cap, subindustry) + group_rank(fnd6_newa1v1300_aol2/cap, subindustry) + group_rank(fnd6_newqv1300_dpactq/cap, subindustry) + 0.75*group_rank(-ts_delta(vwap, 5), subindustry) + 0.75*group_rank(volume/ts_mean(volume, 120), subindustry)
-

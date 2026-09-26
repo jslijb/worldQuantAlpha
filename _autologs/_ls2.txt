@@ -1,7 +1,0 @@
-﻿
-Name                             Length
-----                             ------
-_live_struct__exempt_dry_run.txt    404
-_live_struct__exempt_live.txt       401
-
-

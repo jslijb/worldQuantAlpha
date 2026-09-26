@@ -1,8 +1,0 @@
-w59_b id=le8EAJLO SF=4.24 tS=2.91 FAIL=[] neut=SUBINDUSTRY
-  expr: {'code': 'group_rank(fnd6_newqv1300_cimiiq/assets, subindustry) + group_rank(ts_av_diff(cash/assets, 45), subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + group_r
-w114_m id=om6jX2Xn SF=4.13 tS=2.33 FAIL=[] neut=SUBINDUSTRY
-  expr: {'code': 'group_rank(ts_corr(cap, ts_mean(volume, 20), 60), bucket(rank(ts_mean(volume*close, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_intc/assets, bucket(rank(ts_mean(volume*close, 20)), range="
-w115_c id=xAY7oGrn SF=4.36 tS=1.91 FAIL=[] neut=SECTOR
-  expr: {'code': 'group_rank(fnd6_intc/assets, bucket(rank(cap), range="0.1, 1, 0.1")) + group_rank(fnd6_tfvce/assets, bucket(rank(cap), range="0.1, 1, 0.1")) + group_rank(ts_av_diff(cash/assets, 45), bucket(
-w27_lnoq_xrent id=j238M38O SF=4.63 tS=2.28 FAIL=[] neut=SUBINDUSTRY
-  expr: {'code': 'group_rank(fnd6_newqv1300_lnoq/assets, subindustry) + group_rank(fnd6_xrent/assets, subindustry) + group_rank(ts_av_diff(cashflow_op/enterprise_value, 60), subindustry) + rank(-ts_delta(clos

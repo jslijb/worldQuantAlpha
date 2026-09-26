@@ -198,6 +198,15 @@ $PY src/ops/git_snapshot.py --no-push / --dry-run
 - **远端**：`origin` = `https://github.com/jslijb/worldQuantAlpha.git`（**Public**，李工 0915 确认），分支 `main`。`--allow-public` 只在已确认的 origin 上用；origin 换仓库必须重新确认可见性。
 - **凭据保护双重防线**：`.gitignore` + `.git/hooks/pre-commit`。禁止 `git add -f` 加凭据、禁止 `--no-verify`。
 - **回滚**：`git checkout <hash> -- <路径>` 取回单个文件。
+
+### 提交纪律与代码整洁（李工 0926 定）
+- **改完必提交**：任何代码 / 文档 / 台账改动完成即跑 `git_snapshot.py --allow-public` 落库（公开仓库已确认，见上）。禁止"攒一批再交"——分散改动易丢、易冲突、难回溯。
+- **提交前先清理（硬纪律，三条不过不准提交）**：
+  1. **去重**：功能相同的脚本合并为一个。同类批次脚本（`src/mine/mine_wNNN_*.py`）归并成参数化入口；版本迭代脚本只留最新版（如 `submit_v2.py` 之类旧版删除，禁止双版本共存）。
+  2. **提公共**：多处复用的代码段（平台请求 / 判分 / 台账读写 / 指标计算）抽成 `src/core/` 下的函数或类，禁止在各脚本里复制粘贴同样的几十行。
+  3. **不入库一次性脚本**：`_autologs/` 下的探索性 / 临时脚本（探针、debug、对账、一次性统计）**不进入版本历史**——需长期保留的才搬进 `src/` 对应模块；该目录定位为"运行产物"，已被跟踪的历史文件择机 `git rm --cached` 清理。
+- **结构红线**：`src/` 严格按现有分层（mine / submit / analysis / core / ops / tools / pull）归类；写新功能前先想"放进哪个模块、复用哪个公共函数"，禁止在根目录或 `_autologs/` 随手丢新文件。
+
 - **全量备份**：`D:\Python\worldquant_backup_20260915\`（勿删）。
 
 ---

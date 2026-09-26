@@ -1,8 +1,0 @@
-XgbgNwna    S=3.30 F=3.52 TO=0.124 组参数命中 5 处  neut=SUBINDUSTRY dec=10
-qMxM5j1A    S=3.28 F=3.46 TO=0.122 组参数命中 5 处  neut=SUBINDUSTRY dec=10
-GrbrQbWZ    S=3.28 F=3.37 TO=0.137 组参数命中 6 处  neut=SUBINDUSTRY dec=10
-blblxz5M    S=3.19 F=3.32 TO=0.119 组参数命中 7 处  neut=SUBINDUSTRY dec=10
-P020P5MM    S=3.19 F=3.24 TO=0.119 组参数命中 6 处  neut=SUBINDUSTRY dec=10
-3qXZGMmO    S=3.28 F=3.21 TO=0.164 组参数命中 7 处  neut=SUBINDUSTRY dec=10
-
-w247 combos = 12（6 源 × 2 桶）

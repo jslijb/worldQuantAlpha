@@ -1,2 +1,0 @@
-﻿killed PID 25276
-killed PID 10712

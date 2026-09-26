@@ -1,4 +1,0 @@
-top keys: ['id', 'type', 'author', 'settings', 'regular', 'dateCreated', 'dateSubmitted', 'dateModified', 'name', 'favorite', 'hidden', 'color', 'category', 'tags', 'classifications', 'grade', 'stage', 'status', 'is', 'os', 'train', 'test', 'prod', 'competitions', 'themes', 'pyramids', 'pyramidThemes', 'team', 'origin', '_cid', '_neut', '_decay', '_trunc', '_note', '_pred_S', '_base_corr']
-regular keys: ['code', 'description', 'operatorCount']
-code: group_rank(liabilities_curr/assets, subindustry) + group_rank(-ts_rank(close, 5), subindustry) + group_rank(-ts_mean(abs(returns)/volume, 20), subindustry) + group_rank(volume/ts_mean(volume, 120), subindustry) + group_rank(-ts_delta(close, 20), subindustry)
-_decay=10 _neut=SUBINDUSTRY _trunc=0.08

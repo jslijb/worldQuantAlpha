@@ -1,5 +1,0 @@
-HEADER: ['id', 'expr', 'S', 'F', 'T', 'R', 'DD', 'selfCorr', 'dateSubmitted', 'decay', 'neutralization', 'batch']
-ROWS: 87 UNIQUE: 86 DUP: {'YP57jVzo': 2}
-BLANK_IDS: []
-NUMERIC_KEYS: ['is.turnover', 'is.sharpe', 'is.fitness', 'train.turnover', 'train.fitness', 'train.sharpe', 'test.turnover', 'test.fitness', 'test.sharpe']
-HAS_IS_CHECKS: True

@@ -1,6 +1,0 @@
-﻿w232 done: 0
-w234 done: 0
---- exempt logs (last 3) ---
-exempt_0920_203031.log
-exempt_0920_202114.log
-exempt_0920_203205.log

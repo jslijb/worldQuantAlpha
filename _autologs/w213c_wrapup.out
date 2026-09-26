@@ -1,3 +1,0 @@
-verdict row appended for LLNXPaea
-LEDGER rows=89 unique=87 zq8jl99K_rows=1
-  zq8jl99K: 2.0*group_rank(-ts_arg_min(returns, 10), subindustry) + 1.5*group_rank(-annual_i S= 2.68 F= 1.99 dateSubmitted= 0.6798

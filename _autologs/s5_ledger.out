@@ -1,6 +1,0 @@
-台账 90 行 / 唯一 88
-LLNXEe7L 在台账? False
-平台: status=ACTIVE dateSubmitted=2026-09-20T06:47:51-04:00 S=2.3 F=2.25 T=0.0944 tS=2.72
-expr: group_rank(fnd6_mfma2_revt/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_rank(fnd6_mfmq_mibtq/assets, bucket(rank(ts_std_dev(returns, 20)), range="0.1, 1, 0.1")) + group_
-已追加台账行
-追加后：91 行 / 唯一 89

@@ -1,3 +1,0 @@
-﻿=== _w236_run.txt exists=True size=0 ===
-=== _w236_err.txt exists=True size=0 ===
-combos file size: 91871

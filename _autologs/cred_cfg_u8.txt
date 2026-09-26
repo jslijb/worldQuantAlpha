@@ -1,3 +1,0 @@
-﻿file:D:/Program Files/Git/etc/gitconfig	manager
-file:C:/Users/jslij/.gitconfig	
-file:C:/Users/jslij/.gitconfig	manager

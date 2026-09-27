@@ -142,9 +142,9 @@ Alpha 研究循环(官方 `list-must-read-posts-how-improve-your-alphas-are-subm
 - **权重 vs 仓位**:Alpha 权重(中性化+缩放后)不是"买多少",而是"今天要到达的仓位比例";乘账本规模 = 美元持仓。某天和昨天的权重差 = 当天交易量。
 - **Turnover(换手)怎么来**:`每日交易量 / 账本规模`。报的是模拟期平均日换手。
 - **Decay(衰减)的额外一步**:若设 `decay=n`,最终权重 = 今天值与前几天衰减值的加权平均(见公式)。**越近期权重越大**。Decay 把前几天信息融进来,让 Alpha 不那么"反应过度",从而降低交易成本/换手。
-- **IS / Semi-OS / OS(为什么分三段)**——对应 `parameters-simulation-results`:
+- **IS（样本内）/ Semi-OS（半样本外）/ OS（样本外）(为什么分三段)**——对应 `parameters-simulation-results`:
   - **IS(样本内)**:滚动 5 年(顾问 10 年),从约 7 年前到约 2 年前,每日更新。你看到的回测都在这段。
-  - **Semi-OS**:最近 2 年,**对评分和测试隐藏**。
+  - **Semi-OS（半样本外）**:最近 2 年,**对评分和测试隐藏**。
   - **OS(样本外)**:提交后才跑,检验真实泛化能力。
   - 把最后 2 年藏起来 → 对 OS 表现和分数更有信心。
 - **Test Period(防过拟合)**——对应 `test-period`:可在 IS 内再切出 Train / Test。用 Train 开发,在 Test 验证;两段都好才是强候选。**注意:必须点 "Show test period" 才能提交**(图上橙色线 = Test 期)。
@@ -326,7 +326,7 @@ Decay_linear(x, n) = (x[date]*n + x[date-1]*(n-1) + ... + x[date-n-1]) / (n + (n
 **回测原理**
 5. BRAIN 回测的七步机制讲一遍——从"表达式"到"累计 PnL 曲线"中间发生了什么?
 6. 账本为什么是 2000 万、杠杆基准为什么是 1000 万?多空市场中性怎么来的?
-7. IS / Semi-OS / OS 三段分别是什么?为什么要把最后 2 年藏起来?Test Period 干嘛用?
+7. IS（样本内）/ Semi-OS（半样本外）/ OS（样本外）三段分别是什么?为什么要把最后 2 年藏起来?Test Period 干嘛用?
 8. Delay 0 和 Delay 1 的区别?Decay 是怎么降换手的?
 
 **提升质量**

@@ -174,3 +174,16 @@
 - 手术战果：12 模拟 4 过闸 5 判死 3 未出（WjPZ1PpP/883wm6LV LOW_FITNESS 系）；余货 QPbOpvew(T500) 为明日备选。
 - 新坑：压线候选（本地 corr 0.682~0.684）平台 selfCorr 高 +0.009~0.011，交前本地余量 ≥0.01 更稳。
 - rank 50 / isScore 8923 / days 29 / uniq 0.70；台账 139 行/唯一 137 = 平台 OS 137 对齐。
+
+## 2026-09-27 18:00~19:55 —— 美东 0927 终态 4/5（晚间续战 +1）
+- 李工"不许明天"指令后连打 5 批共 110 发模拟 + 2 次 POST：**LLN2e769 贴线直通入池**（S2.55 F2.53 tS1.65，本地 cmax 0.6860→平台 selfCorr 0.6851，三腿 liab_curr/assets+cf/ev90+短反转 dec15）。当日 4 条：1YX0LpAX/j2AO3Xpe/E5pxQlL9/LLN2e769，欠 1 顺延。
+- **新情报：平台 self-corr 阈值=0.7**（9qj2qQPo 判决书 (FAIL,0.746,0.7)），偏差双向 ±0.02~0.04，本地 cmax≤0.72 才值得 POST 试探。
+- 证死：akbG6pM2 手术族（S 推 3+ 撞 pwRwWoJ3/0mR2K6lr 高 S 墙 0.78~0.83，"增强信号=走向拥挤中心"）；LLN2e769 微扰/bucket 全撞本体 0.87+（一池一家族一口）；anl4 5腿族守门员 kqVp6wnO/LLNXEe7L 0.73~0.76；换分组 -0.13 经验对高同构骨架失效。
+- 台账 143 行/唯一 141 = 平台 OS 141 ✓；rank 53 / isScore 8678 / days 31。明细见 .workbuddy/memory/2026-09-27.md。
+
+## 2026-09-27 20:00~00:20 —— 美东 0927 终态 6/5 超额（夜间续战 +2）
+- 李工质询"凭什么说明天 6 个"后认账，夜间连打四批 320 发：**qMxwl7a1**（bt1 零引用 estimate 腿，selfCorr 0.6669 直通）、**wpZvrAoQ**（bt3 PEAD 跨家族 surprise 腿，selfCorr 0.8475 走豁免，S2.83 F2.62 tS2.94）双双入池，当日 6/5。
+- **核心方法论**：同骨架换字段 210 发 0 突围；跨家族正交融合（PEAD=actual−estimate）首批即破墙。正交信息维度 > 字段微扰。
+- bt2/bt4 全灭实证：guidance 族撞 9qVd5b6r 0.745 网；PEAD 去反转腿撑不起四闸；sh_equity 裸字段不可用。
+- 判墙纪律：当日新交 id S 读 0，need 用台账真值手工算。
+- 台账 145 行/唯一 143 = 平台 OS 143 ✓。明细见 .workbuddy/memory/2026-09-27.md。

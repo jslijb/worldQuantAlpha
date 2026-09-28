@@ -47,8 +47,18 @@
 
 **M-01 跨家族正交融合（0927 实证，当前最强）** 给骨架加一个已提交池没有的**信息维度**
 - 实证：PEAD 腿（surprise = actual−estimate，anl4 配对字段大多零引用）首批 20 发出 2 条真豁免；同骨架字段微扰 210 发 0 突围。
-- 可选正交维度（已入池缺失）：盈余意外（已用 ebitda）、分析师修正动量、目标价隐含收益、机构持仓变化。
+- 可选正交维度（已入池缺失）：52 周高点、季节性、内部人交易（若无权限数据集则排除）。
 - 操作：surprise 指标 × 配对字段在 `_autologs/_fields_usa.json` 按 actual/estimate 同指标配对查。
+- **⚠ 维度内不等于正交（0928 bt5 实证修正）**：wpZvrAoQ（ebitda surprise）入池后，bt5 换 12 个跨类 surprise 指标（cff/capex/sga/bvps/netdebt 等）60 发出 4 PASS **全卡**——对 wpZvrAoQ corr 0.76~0.82、对 qMxwl7a1 0.81~0.82。**PEAD 家族内换指标 = 语义同类换（D-06），不是正交**；一个信息维度已被占住后，该维度整体封闭，正交必须跨到别的维度。
+- **⚠ 修正动量当主信号判死（0928 bt8 实证）**：ts_delta(estimate_median)/|est| 替换 surprise 腿，4 发可跑 SF 3.43~3.90 全 <4.0——修正动量信号弱于 surprise 水平，单独撑不起四闸。
+
+**M-04 精确制导构造（0928 新增，基于守门员网络解剖）** 豁免 need 只由 corr≥0.66 对手里 **S 最大者** 决定 → 构造"避开全部高 S 守门员共享腿、只与低 S 对手相关"的候选
+- 守门员网络（0928 解剖）：LLN2e769(2.55)/wpZvrAoQ(2.83)/qMxwl7a1(2.44)/wpZJX6m5(3.10) **全部含 liab_curr/assets 或 -ts_rank(close,5) 腿**；低 S 对手（wpYgReRx 1.54/1YwRK1wW 2.11/A10MYm3d 1.90/rKj7w0Z1 1.60）结构更松。
+- 关键实证：xA3p60gw（cashflow_op/cap + netdebt surprise + 反转5）对 wpZvrAoQ/qMxwl7a1 已 <0.62 —— **surprise 指标更换对已入池 PEAD 条有效**，其死因只是 LLN2e769 0.82（共享现金流估值语义+反转5）。
+- 配方：质量腿用 gross_profit/assets 系（避开 cf/ev、liab_curr、cashflow_op/cap 家族）+ netdebt surprise + 反转用窗 20 / -ts_delta(close)/close / -ts_corr(close,volume,20)（避开反转5 家族）→ 目标对手集只剩低 S 货，need≈2.32，S2.5+ 过豁免。
+- **⚠ 单变量控制铁律（0928 bt9 实证教训）**：同时换质量腿+反转腿 → 信号塌方（S 0.7~1.7，SF 全 <3.3）。正确做法是**只换一个变量**：强质量腿（cashflow_op/cap 等）保持原样，只换反转腿。
+- **⚠⚠ 价格反转轴整体封闭（0928 bt10 实证，修正"反转5 是唯一公共腿"假设）**：bt10 单变量只换反转腿（窗 10/15/20、delta、vwap、价量corr）11 发出 2 PASS 全卡——高 S 守门员 corr 只从 0.82 降到 0.69~0.74，而低 S 对手 **1YwRK1wW（=liab_curr/assets + -ts_rank(close,20)）、wpYgReRx/MP1mQRro（-ts_av_diff(close,20)）反升到 0.70~0.76 成 top1**。结论：**整条价格反转轴（窗 5~20 任何形式）被两头占满**（短窗=高 S 守门员、中窗=低 S 成员），任何价格反转腿=D-06 语义同类。残余 corr 0.69~0.74 来自质量腿+反转腿的组合语义，非单一公共腿。第三腿必须离开价格反转轴（动量/波动率/量类）。
+- **字段坑**：`gross_profit` 不存在（10 发 SIM-FAIL）；毛利类信号用 `income` 系字段先查 `_fields_usa.json` 确认存在再批量。
 
 **M-02 零引用字段换非主导腿（0927 实证）** 第 2/佐腿换成 alphaCount<30 的字段（对手池没人用 → corr 天然低）
 - 实证：bt1 模板 A 首批 3 条直通、qMxwl7a1 入池（cmax 0.6660）。
@@ -59,6 +69,12 @@
 - 筛选式：F≥1.2 / TO 0.29~0.61 / corr 0.78~0.82 / tS>2.8（Fcap=F×√(TO/0.125)，见 P-07）。
 - 实证：j2AO3Xpe（de30→T1000，corr 0.6320 直通）、E5pxQlL9（de7→T1000，豁免过）。
 - 关键判据：**源族 tS 必须高（>2.8）才有换池余量**；corr 0.85+ 或 O0N0R5NY/0mR2K6lr 网络成员直接跳过。
+- **⚠ 边界（0928 bt6a 实证收窄）**：T1000 换池只适用于**纯基本面比率**结构；**PEAD+反转混合结构 T1000 下 S 掉 40%+**（4/4 全灭，S2.02~2.56→1.21~1.61，LOW_SHARPE 出现）——PEAD 信号集中在小市值股，换小池等于砍掉主信号。适用前先看结构：surprise/anl4 类直接跳过换池。
+
+**D-30 fundamental2 脚注类字段信号太钝（0928 判死）** Report Footnotes 数据集（acquisition/intangible/options 细项）年度更新、coverage 0.6、当佐腿 S 掉到 1.7~2.1（SF 全 <4.0，3/3）
+- 死因类型：DATA（数据更新频率与信号周期不匹配）
+- 字段名坑：表达式用裸 id（acquisition_total_purchase_value），不带数据集前缀
+- 改良方向：无——除非只做极低频（delay 0 / 长期持有）策略
 
 **M-04 中性化换挡 SUBINDUSTRY→MARKET/SECTOR** corr −0.09~−0.27/次
 - 实证：O0N5o3Nv 0.7367→0.6467（0920）。前提：候选质量已达标。

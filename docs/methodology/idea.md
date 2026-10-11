@@ -581,7 +581,42 @@
 | Lf41f1bd2 | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z25_1011 | 4.47 | 0.23 | 0.070 | 0.6113 | GATE-FAIL | 已跑 |
 | L32642c9c | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z25_1011 | 4.51 | 0.43 | 0.074 | 0.6728 | GATE-FAIL | 已跑 |
 
-统计：已跑 187（1011 腿库线 58 条 + lc19z 9 条并入）
+| Lae3ff8f8 | M_opex+P_c2+K_page | 3 | lc20m_1011 | 5.06 | 3.38 | 0.093 | 0.7373 | BLOCK | 可复活 |
+| Lbe2a2adf | N_tr5+L_cash+M_accI | 3 | lc20m_1011 | 4.32 | 2.23 | 0.164 | 0.7104 | BLOCK | 可复活 |
+| Le8cc858f | N_tr5+M_cfoQ+Q_xrI | 3 | lc20m_1011 | 3.97 | 0.90 | 0.149 | 0.8090 | GATE-FAIL | 已跑 |
+| Lb48d04dc | N_tr5+M_intc+Q_accS | 3 | lc20m_1011 | 4.95 | 2.64 | 0.168 | 0.8041 | BLOCK | 可复活 |
+| Lf4ad9021 | N_tr5+N_am60+Q_xrV | 3 | lc20m_1011 | 4.46 | 1.66 | 0.181 | 0.7897 | BLOCK | 可复活 |
+| L1753c4f4 | N_tr5+P_am20+L_xr | 3 | lc20m_1011 | 5.52 | 1.57 | 0.154 | 0.8350 | BLOCK | 可复活 |
+| L7c419b14 | N_tr5+Q_accR+M_cov | 3 | lc20m_1011 | 3.61 | 1.23 | 0.168 | 0.7032 | GATE-FAIL | 已跑 |
+| L5c89c197 | N_tr5+Q_cfoQ+Q_xrS | 3 | lc20m_1011 | 4.03 | 0.97 | 0.168 | 0.7812 | GATE-FAIL | 已跑 |
+| L7217b184 | N_tr60+K_page+Q_accS | 3 | lc20m_1011 | 4.47 | 2.63 | 0.179 | 0.7316 | BLOCK | 可复活 |
+| L8e68ad21 | N_tr60+M_intc+Q_accC | 3 | lc20m_1011 | 5.3 | 2.64 | 0.181 | 0.9040 | BLOCK | 可复活 |
+| L5baffdc9 | P_c2+M_revt+N_am60 | 3 | lc20m_1011 | 4.68 | 2.38 | 0.162 | 0.9174 | BLOCK | 可复活 |
+| L3593fb90 | P_int20+K_page+L_xr | 3 | lc20m_1011 | 4.79 | 2.33 | 0.215 | 0.7763 | GATE-FAIL | 已跑 |
+| L51a1a9ce | P_int20+M_intc+Q_accL | 3 | lc20m_1011 | 5.0 | 2.62 | 0.180 | 0.9309 | GATE-FAIL | 已跑 |
+| Lc1166b91 | P_int20+P_am20+Q_xrI | 3 | lc20m_1011 | 4.91 | 1.86 | 0.215 | 0.8242 | GATE-FAIL | 已跑 |
+| L7c838729 | P_int20+Q_cfoQ+Q_accC | 3 | lc20m_1011 | 3.7 | 1.34 | 0.156 | 0.8181 | GATE-FAIL | 已跑 |
+| L88c7f765 | P_tr20+K_auth+Q_xrS | 3 | lc20m_1011 | 4.89 | 2.10 | 0.269 | 0.8055 | GATE-FAIL | 已跑 |
+| L82c1d90c | P_tr20+K_page+Q_xrI | 3 | lc20m_1011 | 5.13 | 2.12 | 0.184 | 0.8179 | BLOCK | 可复活 |
+| Lfecc3d36 | P_tr20+L_aol+M_accI | 3 | lc20m_1011 | 4.49 | 2.23 | 0.147 | 0.9095 | BLOCK | 可复活 |
+| Le915b855 | P_tr20+M_cfoQ+Q_accC | 3 | lc20m_1011 | 3.86 | 1.30 | 0.156 | 0.8212 | GATE-FAIL | 已跑 |
+| Lec99cba1 | P_tr20+M_revt+Q_accI | 3 | lc20m_1011 | 4.28 | 2.36 | 0.169 | 0.8031 | BLOCK | 可复活 |
+| Lc395ff0a | P_tr20+M_tstk+K_accI | 3 | lc20m_1011 | 4.48 | 2.19 | 0.182 | 0.7653 | BLOCK | 可复活 |
+| La08c1979 | P_tr20+N_am60+L_xr | 3 | lc20m_1011 | 5.73 | 1.75 | 0.164 | 0.8409 | BLOCK | 可复活 |
+| L63d0d969 | P_tr20+P_am20+Q_accL | 3 | lc20m_1011 | 4.73 | 2.00 | 0.155 | 0.8200 | BLOCK | 可复活 |
+| Lf3706376 | P_tr20+P_c20+Q_xrV | 3 | lc20m_1011 | 4.6 | 2.26 | 0.242 | 0.7532 | GATE-FAIL | 已跑 |
+| Le684b88a | P_tr20+Q_accR+M_intc | 3 | lc20m_1011 | 4.49 | 1.60 | 0.224 | 0.8384 | GATE-FAIL | 已跑 |
+| Lf8a65543 | P_tr20+Q_cfoQ+Q_accS | 3 | lc20m_1011 | 3.89 | 1.27 | 0.155 | 0.8216 | GATE-FAIL | 已跑 |
+| Laa8f3212 | N_tr5+M_intc+Q_accS | 3 | lc20n_1011 | 1.77 | 2.16 | 0.178 | — | S<=1.0 或 FAIL | 判死 |
+| L66f4e65b | N_tr60+M_intc+Q_accC | 3 | lc20n_1011 | 2.05 | 1.40 | 0.211 | — | S<=1.0 或 FAIL | 判死 |
+| L98ebce1d | P_tr20+N_am60+L_xr | 3 | lc20n_1011 | 2.16 | 0.61 | 0.169 | — | S<=1.0 或 FAIL | 判死 |
+| Lf70749fd | P_tr20+P_am20+L_xr | 3 | lc20n_1011 | 2.25 | 0.80 | 0.170 | — | S<=1.0 或 FAIL | 判死 |
+| Ld77ccddc | M_opex+P_c2+K_page | 3 | lc20n_1011 | 2.59 | 2.06 | 0.106 | — | SF<4.0 闸门不过 | 判死 |
+| L780a5035 | N_tr60+K_page+Q_accS | 3 | lc20n_1011 | 1.33 | 0.62 | 0.205 | — | S<=1.0 或 FAIL | 判死 |
+| Lcffc1af1 | P_int20+M_intc+Q_accL | 3 | lc20n_1011 | 1.54 | 1.53 | 0.209 | — | S<=1.0 或 FAIL | 判死 |
+| Lbc501e5c | P_tr20+P_am20+Q_accL | 3 | lc20n_1011 | 1.71 | 1.04 | 0.167 | — | S<=1.0 或 FAIL | 判死 |
+
+统计：已跑 221（1011 腿库线 58 条 + lc19z 9 条 + lc20m 26 条 + lc20n T500 8 条并入）
 
 ## 4. 已用组合标记（跑过即打标记，禁止重复消耗模拟配额）
 

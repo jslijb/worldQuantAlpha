@@ -571,8 +571,17 @@
 | L62504f03 | 见 expr | 3 | bl19_1011 | 0 | — | 0.000 | — | S<=1.0 或 FAIL | 判死 |
 | Lb6ec2af8 | 见 expr | 3 | bl19_1011 | 0 | — | 0.000 | — | S<=1.0 或 FAIL | 判死 |
 | Le4f7d97a | 见 expr | 3 | bl19_1011 | 0 | — | 0.000 | — | S<=1.0 或 FAIL | 判死 |
+| Lf8e2350e | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z15_1011 | 4.58 | 0.35 | 0.096 | 0.5972 | GATE-FAIL | 已跑 |
+| Lae09084a | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z15_1011 | 4.75 | 0.40 | 0.112 | 0.5877 | GATE-FAIL | 已跑 |
+| L160f5982 | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z15_1011 | 4.7 | 0.65 | 0.141 | 0.6466 | GATE-FAIL | 已跑 |
+| L0ebdc9f0 | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z15_1011 | 4.7 | 0.35 | 0.150 | 0.5435 | GATE-FAIL | 已跑 |
+| L38c33d99 | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z20_1011 | 4.83 | 0.41 | 0.105 | 0.5845 | GATE-FAIL | 已跑 |
+| L5e53704c | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z20_1011 | 4.52 | 0.30 | 0.080 | 0.6048 | GATE-FAIL | 已跑 |
+| Lf952c35c | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z20_1011 | 4.32 | 0.38 | 0.067 | 0.6708 | GATE-FAIL | 已跑 |
+| Lf41f1bd2 | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z25_1011 | 4.47 | 0.23 | 0.070 | 0.6113 | GATE-FAIL | 已跑 |
+| L32642c9c | K_impact+Q_cfoV_bkt+Q_accR_rk | 3 | lc19z25_1011 | 4.51 | 0.43 | 0.074 | 0.6728 | GATE-FAIL | 已跑 |
 
-统计：已跑 178（1011 腿库线 58 条并入）
+统计：已跑 187（1011 腿库线 58 条 + lc19z 9 条并入）
 
 ## 4. 已用组合标记（跑过即打标记，禁止重复消耗模拟配额）
 

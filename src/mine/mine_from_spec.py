@@ -52,6 +52,16 @@ UNIV = ''
 if '--univ' in sys.argv:
     UNIV = sys.argv[sys.argv.index('--univ') + 1].upper()
 
+# ---- truncation 覆盖（1001 新增）：corr 微扰轴之一
+TRUNC = None
+if '--trunc' in sys.argv:
+    TRUNC = float(sys.argv[sys.argv.index('--trunc') + 1])
+
+# ---- delay 覆盖（1012 新增）：自相关池是否按 delay 分Scope 的探针（D1 的墙拦不住时唯一出路）
+DELAY = None
+if '--delay' in sys.argv:
+    DELAY = int(sys.argv[sys.argv.index('--delay') + 1])
+
 
 def base_settings():
     st = BASE()
@@ -59,6 +69,10 @@ def base_settings():
         st['neutralization'] = NEUT
     if DECAY is not None:
         st['decay'] = DECAY
+    if TRUNC is not None:
+        st['truncation'] = TRUNC
+    if DELAY is not None:
+        st['delay'] = DELAY
     if UNIV:
         st['universe'] = UNIV
     return st

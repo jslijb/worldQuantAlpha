@@ -73,9 +73,12 @@ $PY src/ops/git_snapshot.py --push-only --allow-public   # 推送失败重试
 | neutralization 可用值 | NONE / MARKET / SECTOR / INDUSTRY / SUBINDUSTRY（风险中性化全轴 400） |
 | 判决机制 | 判决 4~9 秒出；403+is.checks = 判决书；FAIL 才是拒信；对手明细在 `is.selfCorrelated.records`；`correlations/self` 端点弃用（200 空 body），corr 自己拉 PnL 算 |
 | 本地 corr | pnl 先差分；池子只取自台账；缓冲线 0.685 |
+| 表达式算子数 | **上限 64**：`函数调用数 + 运算符字符数`（与平台报错逐位吻合）；出合成 spec 前必须先算，超了就是白烧 |
+| delay 轴 | 本账号 USA **只有 delay=1**，`"delay":3` 直接 400 `"3" is not a valid choice`，不存在 D3 逃生门 |
+| `/check` 时效 | 新 alpha 出炉后 **~40 分钟内一律 200 空 body**（`is.type` 也为 null）；且模拟轮询时 `/check` 会被打成 `429 THROTTLED`（无 Retry-After）⇒ 与模拟串行、只开一个进程 |
 | 账号拉取 | count=唯一总数口径（只读 results/next 漏 count 是顽固错型）；offset 上限 1000；过滤器写 `settings.universe=` |
 
-## 4. 判决与模拟工具清单（唯一维护处，CLAUDE.md 不留副本）
+## 6. 判决与模拟工具清单（唯一维护处，CLAUDE.md 不留副本）
 
 > 2026-10-12 按当天实际在跑的链路重写。旧表里的 `corr_predict.py` / `plat_sweep.py` / `corr_poll.py` / `sim_run.py`
 > 已被下面这套取代（脚本还在，但不再是主链路）。**口径依据**：CLAUDE.md §2（判决式）+ atoms.md D-64。
@@ -83,11 +86,11 @@ $PY src/ops/git_snapshot.py --push-only --allow-public   # 推送失败重试
 | 环节 | 脚本 | 关键参数 | 产出 |
 |---|---|---|---|
 | ① 发批前查表 | `src/knowledge/combo_gen.py` | `--level2 / --level3 --batch <名>` | `_autologs/spec_<批>.json` + 组合登记簿候选 |
-| ② 模拟 | `src/mine/mine_from_spec.py` | `--limit N --workers 2 [--neut] [--decay] [--univ] [--trunc] [--tag]` | `data/alpha_quality_analysis/mined/<cid>.json` |
+| ② 模拟 | `src/mine/mine_from_spec.py` | `--limit N --workers 2 [--neut] [--decay] [--univ] [--trunc] [--delay] [--tag]`；⚠ **spec 条目里的 decay/neut 等设置键被静默忽略，只有命令行级覆盖生效**（换设置轴=一个设置一批） | `data/alpha_quality_analysis/mined/<cid>.json` |
 | ③ 取 PnL | `_autologs/fetch_pnl_1011.py` | **id 用空格分隔**（逗号会被当一个 id 吞掉） | `data/alpha_quality_analysis/pnl/<aid>.json` |
-| ④ 全库存判决 | `_autologs/beat_1012.py` | `--min-sf 4.2 --min-ts 1.3 --max-to 0.20` | `_beat_1012.json/.txt`：按 D-64 判据算 `cmax / need70 / gap70`，排 DIRECT / BEAT / BLOCK |
+| ④ 全库存判决 | `_autologs/beat_1012.py` | `--min-sf 4.2 --min-ts 1.3 --max-to 0.20` | `_beat_1012.json/.txt`：按 D-65 判据（**线 1.15**）算 `cmax / wall70 / need15 / gap15`（`need70/gap70` 保留作对照），排 DIRECT / BEAT / BLOCK（`pred`：cmax<0.685→DIRECT，`gap15≥0`→BEAT） |
 | ④′ 旧口径扫描 | `_autologs/sweep_all_1011.py` | 同上 | 向量化 cmax 全库存快筛（`EXEMPT_LINE` 已改 0.70） |
-| ⑤ 平台真值 | `_autologs/pass_scan_1012.py` | `--max-cmax 0.80 --min-sf 4.2 --min-gap -0.30`，**可续跑** | `_pass_scan_1012.jsonl`：`/check` 的 PASS/FAIL + 对手表（不消耗配额） |
+| ⑤ 平台真值 | `_autologs/pass_scan_1012.py` | `--max-cmax 0.80 --min-sf 4.2 --min-gap -0.35`，**可续跑**；`--ids <aid> ... [--out 文件]` 直查指定条（新出炉料） | `_pass_scan_1012.jsonl`：`/check` 的 PASS/FAIL + 对手表（不消耗配额） |
 | ⑤′ 单条看判决 | `_autologs/rawcheck_1011b.py` | 传 id 列表 | 打印每项 check 的 `result` 与 `limit`（判据别再靠猜） |
 | ⑥ 提交 | `src/submit/submit_v3.py` | `<aid> <cid>`，**串行** | POST 201 → 轮询 → ACCEPTED / 403 判决书 |
 | ⑦ 回写 | `_autologs/reg_*.py` + 台账追加 | 台账 `SUBMITTED_LEDGER.csv` 只追加 | 池 +1，`pool_s.json` 同步 |

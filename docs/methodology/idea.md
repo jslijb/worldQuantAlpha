@@ -642,6 +642,51 @@
 | f15b_d14_27 | 同族 | E501 预期修正 | SUBI d14 | 5.33 | 1.67 | 0.084 | **0.8121**（超0.66仅8） | 差 0.248 | **可复活（最优先）** |
 | f15b_d16_01 | kqVvoRMP 族 | — | SUBI d16 | 4.76 | 1.28 | 0.105 | 0.8024 | 撞 corr | 可复活 |
 
+**1012 三批登记（g21 新字段 16 / g22 重跑 10 / g23 解析式高 S 合成 12）。判决线已升 1.15，见 atoms.md D-65。**
+
+| 组合 | 主腿/来源 | 佐腿（机制或预筛） | 设定 | 实测 SF | tS | TO | 本地 cmax | 判决 | 状态 |
+|---|---|---|---|---|---|---|---|---|---|
+| g21_00(npPGw6ed) | correlation_last_360_days_spy | 全新字段机制 | SUBI d10 | 0.09 | -0.06 | 0.0817 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_01(Vk0QKM10) | news_atr_ratio | 全新字段机制 | SUBI d10 | 0.49 | -0.06 | 0.1284 | 未判(闸前死) | SHARPE/FITNESS | 已跑 |
+| g21_02(wpb7XPnQ) | sales_estimate_count | 全新字段机制 | SUBI d10 | 2.80 | 1.49 | 0.0704 | 未判(闸前死) | SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_03(mL6nelpW) | antidilutive_securities_eps_exclusion_count | 全新字段机制 | SUBI d10 | 0.99 | -0.37 | 0.1884 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_04(ZYAVkVKn) | correlation_last_360_days_spy | 全新字段机制 | SUBI d10 | -0.42 | -0.47 | 0.1066 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_05(N1VEkZ1L) | correlation_last_360_days_spy | 全新字段机制 | SUBI d10 | -0.14 | -0.88 | 0.1579 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_06(akxm2kex) | antidilutive_securities_eps_exclusion_count | 全新字段机制 | SUBI d10 | 1.31 | -0.01 | 0.0133 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_07(Vk0QwVlG) | mean_editorial_commentary_sentiment | 全新字段机制 | SUBI d10 | 1.99 | 0.21 | 0.2584 | 未判(闸前死) | FITNESS | 已跑 |
+| g21_08(E5Rn0oEP) | news_pe_ratio | 全新字段机制 | SUBI d10 | 1.20 | -0.3 | 0.101 | 未判(闸前死) | SHARPE/FITNESS | 已跑 |
+| g21_09(QPKRrdXg) | sales_estimate_count | 全新字段机制 | SUBI d10 | 0.38 | 0.19 | 0.0522 | 未判(闸前死) | SHARPE/FITNESS | 已跑 |
+| g21_10(omWjwAQ5) | news_atr_ratio | 全新字段机制 | SUBI d10 | 0.34 | -0.53 | 0.3426 | 未判(闸前死) | SHARPE/FITNESS | 已跑 |
+| g21_11(6XK6PY0Y) | correlation_last_360_days_spy | 全新字段机制 | SUBI d10 | -0.28 | -0.81 | 0.1034 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_12(npPGk3Vw) | vested_equity_award_total_value | 全新字段机制 | SUBI d10 | 1.40 | 0.13 | 0.0134 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_13(N1VEWpLL) | news_atr_ratio | 全新字段机制 | SUBI d10 | 1.97 | 0.2 | 0.0834 | 未判(闸前死) | FITNESS | 已跑 |
+| g21_14(vR27nNbv) | news_mins_20_pct_dn | 全新字段机制 | SUBI d10 | 1.59 | 1.12 | 0.0502 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g21_15(QPKRr3j5) | correlation_last_360_days_spy | 全新字段机制 | SUBI d10 | 0.54 | -0.61 | 0.1683 | 未判(闸前死) | SHARPE/FITNESS/SUB_UNIVERSE_SHARPE | 已跑 |
+| g22_00(gJZNqr9v) | qM0bJmJ2 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 5.80 | 2.84 | 0.1265 | 0.7661 | 撞墙1.15 gap15=-0.335 | 已跑 |
+| g22_01(vR27nYAQ) | LLZwlGmL 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 5.59 | 3.15 | 0.2675 | 0.7689 | 撞 corr(未进beat) gap15=+0.000 | 已跑 |
+| g22_02(88PWk2qq) | pwR1v8Ro 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 4.82 | 1.65 | 0.1077 | 0.7893 | 撞墙1.15 gap15=-0.195 | 已跑 |
+| g22_03(ZYAVw1L3) | gJbo1jqK 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 5.04 | 2.41 | 0.1127 | 0.7622 | 撞墙1.15 gap15=-0.045 | 已跑 |
+| g22_04(j2AJzVpZ) | j2AJzVpZ 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 5.19 | 2.05 | 0.1075 | 0.7288 | 撞墙1.15 gap15=-0.228 | 已跑 |
+| g22_05(pw5bJ2ao) | npP0JJ0q 重跑 | 条目级 decay30 不生效→按默认 d10 重跑 | SUBI d10 | 5.35 | 2.06 | 0.1252 | 0.7187 | 撞 corr(未进beat) gap15=+0.000 | 已跑 |
+| g22_06 | XgJxwzG0 抬S手术 | 应 decay30 | — | — | — | — | 0.7584 | 中止：mine_from_spec 静默忽略条目级设置 | 未跑 |
+| g22_07 | E5RNkO3L 抬S手术 | 应 decay30 | — | — | — | — | 0.7792 | 中止：mine_from_spec 静默忽略条目级设置 | 未跑 |
+| g22_08 | QPKAEmPW 抬S手术 | 应 decay30 | — | — | — | — | 0.7574 | 中止：mine_from_spec 静默忽略条目级设置 | 未跑 |
+| g22_09 | kqV89LJd 抬S手术 | 应 decay30 | — | — | — | — | 0.7900 | 中止：mine_from_spec 静默忽略条目级设置 | 未跑 |
+| g23_00(QPKRqeRQ) | 2rO9wZvJ+1YXrP2Oz 合成 | 预筛 predS 3.39 ≥1.15×2.39 | SUBI d10 | 6.68 | 2.63 | 0.1428 | 0.7707 | 撞墙：出 spec 时墙 2.39，今日 d516QO9v(S3.39) 入库后活墙 3.45，gap15=-0.647 | 已跑 |
+| g23_01(9qW5bg2K) | QPba58lr+9qjqNl1r 合成 | 预筛 predS 3.29 ≥1.15×2.82 | SUBI d10 | 6.41 | 2.66 | 0.1421 | 0.8808 | 撞墙：出 spec 时墙 2.82，今日 d516QO9v(S3.39) 入库后活墙 3.39，gap15=-0.648 | 已跑 |
+| g23_02 | blRJRxvl+d51wo9Yg 合成 | predS 3.28 | SUBI d10 | — | — | — | 0.7218 | 算子数 74~81 超 64 上限，平台直接拒(白烧 2 发) | 死 |
+| g23_03(omWjAYoJ) | blRJRxvl+88jxNmVq 合成 | 预筛 predS 3.27 ≥1.15×2.82 | SUBI d10 | 6.36 | 2.46 | 0.1405 | 0.8609 | 撞墙：出 spec 时墙 2.82，今日 d516QO9v(S3.39) 入库后活墙 3.45，gap15=-0.737 | 已跑 |
+| g23_04(O08dqnmb) | blRJRxvl+N1alPkze 合成 | 预筛 predS 3.25 ≥1.15×2.82 | SUBI d10 | 6.30 | 2.42 | 0.1416 | 0.8618 | 撞墙：出 spec 时墙 2.82，今日 d516QO9v(S3.39) 入库后活墙 3.45，gap15=-0.757 | 已跑 |
+| g23_05(omWjAJRb) | omLK3KA2+d5bleWeX 合成 | 预筛 predS 3.21 ≥1.15×2.51 | SUBI d10 | 6.60 | 2.14 | 0.1141 | 0.7817 | 撞墙：出 spec 时墙 2.51，今日 d516QO9v(S3.39) 入库后活墙 3.39，gap15=-0.668 | 已跑 |
+| g23_06(GrOjYOOG) | 2rwZNnN8+zq8JXwdX 合成 | 预筛 predS 3.19 ≥1.15×2.58 | SUBI d10 | 6.21 | 2.56 | 0.1477 | 0.7427 | 撞墙：出 spec 时墙 2.58，今日 d516QO9v(S3.39) 入库后活墙 2.92，gap15=-0.218 | 已跑 |
+| g23_07 | 3qXnAveX+6Xj25gkP 合成 | predS 3.10 | SUBI d10 | — | — | — | 0.7301 | 算子数 74~81 超 64 上限，平台直接拒(白烧 2 发) | 死 |
+| g23_08(LLZoqzae) | omLK3KA2+d5bleWeX 合成 | 预筛 predS 3.09 ≥1.15×2.58 | SUBI d10 | 6.39 | 2.06 | 0.098 | 0.7507 | 撞墙：出 spec 时墙 2.58，今日 d516QO9v(S3.39) 入库后活墙 3.39，gap15=-0.718 | 已跑 |
+| g23_09(2rmVQ2Yb) | wpb3qXnd+78ZGmRV5 合成 | 预筛 predS 3.07 ≥1.15×2.39 | SUBI d10 | 6.85 | 2.71 | 0.1674 | 0.8339 | 撞墙：出 spec 时墙 2.39，今日 d516QO9v(S3.39) 入库后活墙 3.45，gap15=-0.547 | 已跑 |
+| g23_10(2rmVQ2Yb) | wpb3qXnd+vRkY66xQ 合成 | 预筛 predS 3.07 ≥1.15×2.39 | SUBI d10 | 6.85 | 2.71 | 0.1674 | 0.8339 | 双胞胎：与上一条表达式同（腿序不同），按 D-60 不交，gap15=-0.547 | 已跑(不交) |
+| g23_11(O08dq3od) | e7Q0E9ap+2rO9LxgJ 合成 | 预筛 predS 3.07 ≥1.15×2.58 | SUBI d10 | 6.17 | 2.26 | 0.1755 | 0.8503 | 撞墙：出 spec 时墙 2.58，今日 d516QO9v(S3.39) 入库后活墙 3.45，gap15=-0.797 | 已跑 |
+
+统计：已跑 256（本次并入 g21 16 + g22 4 + g23 9 = 29；另 g22 6 发中止、g23 2 发算子超限）
+
 **本轮结论（写死，不再重复踩）**
 
 1. **母件设定必须原样继承**（见 atoms.md D-34）。套 MARKET+decay40 会把 SF 6.19 打成 1.93。

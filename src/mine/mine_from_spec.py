@@ -131,7 +131,7 @@ def run_one(item):
     d = sess.get(f'https://api.worldquantbrain.com/alphas/{aid}').json()
     d['_cid'] = cid
     d['_pred'] = meta if isinstance(meta, dict) else {}
-    json.dump(d, open(of, 'w'), ensure_ascii=False)
+    json.dump(d, open(of, 'w', encoding='utf-8'), ensure_ascii=False)
     b = d.get('is') or {}; te = d.get('test') or {}
     S = b.get('sharpe') or 0
     fa = [c.get('name') for c in (b.get('checks') or []) if c.get('result') == 'FAIL']

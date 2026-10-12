@@ -75,7 +75,7 @@ $PY src/ops/git_snapshot.py --push-only --allow-public   # 推送失败重试
 | 本地 corr | pnl 先差分；池子只取自台账；缓冲线 0.685 |
 | 表达式算子数 | **上限 64**：`函数调用数 + 运算符字符数`（与平台报错逐位吻合）；出合成 spec 前必须先算，超了就是白烧 |
 | delay 轴 | 本账号 USA **只有 delay=1**，`"delay":3` 直接 400 `"3" is not a valid choice`，不存在 D3 逃生门 |
-| `/check` 时效 | 新 alpha 出炉后 **~40 分钟内一律 200 空 body**（`is.type` 也为 null）；且模拟轮询时 `/check` 会被打成 `429 THROTTLED`（无 Retry-After）⇒ 与模拟串行、只开一个进程 |
+| `/check` 自相关读数 | ① 新出炉 ~40 分钟内是 200 空 body；之后 `SELF_CORRELATION` 变 `result:"ERROR" value:null`，**且不会自己变好**（`mL6WLwW5` 14 小时后仍 ERROR）。② ERROR 有两种含义且接口分不开：还没算 / 没有对手进 0.70 线（atoms.md D-69：54 条真值里 max corr 最低 0.7013，平台从没报过 <0.70 的数）。③ 加 `?region=&universe=&date=&component=` 无效（同一份缓存）；`correlations/pnl`、`overlap` 404。④ 模拟轮询时会被打成 `429 THROTTLED`（无 Retry-After）⇒ 与模拟串行、只开一个进程。**结论：判料用本地 corr + 台账墙，平台真值只在提交判决书里确定可读。** |
 | 账号拉取 | count=唯一总数口径（只读 results/next 漏 count 是顽固错型）；offset 上限 1000；过滤器写 `settings.universe=` |
 
 ## 6. 判决与模拟工具清单（唯一维护处，CLAUDE.md 不留副本）

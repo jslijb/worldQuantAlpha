@@ -74,3 +74,25 @@ $PY src/ops/git_snapshot.py --push-only --allow-public   # 推送失败重试
 | 判决机制 | 判决 4~9 秒出；403+is.checks = 判决书；FAIL 才是拒信；对手明细在 `is.selfCorrelated.records`；`correlations/self` 端点弃用（200 空 body），corr 自己拉 PnL 算 |
 | 本地 corr | pnl 先差分；池子只取自台账；缓冲线 0.685 |
 | 账号拉取 | count=唯一总数口径（只读 results/next 漏 count 是顽固错型）；offset 上限 1000；过滤器写 `settings.universe=` |
+
+## 4. 判决与模拟工具清单（唯一维护处，CLAUDE.md 不留副本）
+
+> 2026-10-12 按当天实际在跑的链路重写。旧表里的 `corr_predict.py` / `plat_sweep.py` / `corr_poll.py` / `sim_run.py`
+> 已被下面这套取代（脚本还在，但不再是主链路）。**口径依据**：CLAUDE.md §2（判决式）+ atoms.md D-64。
+
+| 环节 | 脚本 | 关键参数 | 产出 |
+|---|---|---|---|
+| ① 发批前查表 | `src/knowledge/combo_gen.py` | `--level2 / --level3 --batch <名>` | `_autologs/spec_<批>.json` + 组合登记簿候选 |
+| ② 模拟 | `src/mine/mine_from_spec.py` | `--limit N --workers 2 [--neut] [--decay] [--univ] [--trunc] [--tag]` | `data/alpha_quality_analysis/mined/<cid>.json` |
+| ③ 取 PnL | `_autologs/fetch_pnl_1011.py` | **id 用空格分隔**（逗号会被当一个 id 吞掉） | `data/alpha_quality_analysis/pnl/<aid>.json` |
+| ④ 全库存判决 | `_autologs/beat_1012.py` | `--min-sf 4.2 --min-ts 1.3 --max-to 0.20` | `_beat_1012.json/.txt`：按 D-64 判据算 `cmax / need70 / gap70`，排 DIRECT / BEAT / BLOCK |
+| ④′ 旧口径扫描 | `_autologs/sweep_all_1011.py` | 同上 | 向量化 cmax 全库存快筛（`EXEMPT_LINE` 已改 0.70） |
+| ⑤ 平台真值 | `_autologs/pass_scan_1012.py` | `--max-cmax 0.80 --min-sf 4.2 --min-gap -0.30`，**可续跑** | `_pass_scan_1012.jsonl`：`/check` 的 PASS/FAIL + 对手表（不消耗配额） |
+| ⑤′ 单条看判决 | `_autologs/rawcheck_1011b.py` | 传 id 列表 | 打印每项 check 的 `result` 与 `limit`（判据别再靠猜） |
+| ⑥ 提交 | `src/submit/submit_v3.py` | `<aid> <cid>`，**串行** | POST 201 → 轮询 → ACCEPTED / 403 判决书 |
+| ⑦ 回写 | `_autologs/reg_*.py` + 台账追加 | 台账 `SUBMITTED_LEDGER.csv` 只追加 | 池 +1，`pool_s.json` 同步 |
+
+**常量口径（改判据时必须同步这几个文件）**：`LOCAL_DIRECT = 0.685`、`EXEMPT_LINE = 0.70`
+分布在 `judge_loc_1011.py` / `sweep_all_1011.py` / `blend_search_1011.py` / `pass_scan_1012.py` / `beat_1012.py`。
+**并发纪律**：模拟 `workers 2`（conc=8 会被限流）；`/check` 与模拟同跑时整条链路会慢，批量 `/check` 建议在无模拟时跑。
+**已知坑**：`_autologs/fast_corr.py` 算法有 bug 不可用；`judge_loc_1011.py` 只把最后一轮的行写进 `_judge_loc_1011.txt`，要看历史必须当场快照；mined 里存在从未取过 PnL 的"漏检库存"（D-57）。

@@ -97,8 +97,11 @@ def post_retry(payload, cid):
         if r.status_code in (200, 201):
             return r
         if r.status_code in (429, 504) or 'CONCURRENT' in r.text or 'rate limit' in r.text.lower():
+            if att == 5:
+                print(cid, 'BACKOFF', r.status_code, flush=True)
             time.sleep(30 + att * 20); continue
         print(cid, 'REJECT', r.status_code, r.text[:300], flush=True); return None
+    print(cid, 'GIVEUP-POST 8 次仍被限流，本条未发射', flush=True)
     return None
 
 

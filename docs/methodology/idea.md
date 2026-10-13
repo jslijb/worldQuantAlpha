@@ -338,6 +338,25 @@
 | E1303 | `group_rank(ts_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, 88), subindustry)` | 投资现金流指引下限/资产 = 资本开支保守度 | guid_capex_floor | 新造★ |
 | E1304 | `group_rank(ts_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/anl4_fs_guidances_advanced_af_nd_epsr_maxguidance, 88), industry)` | EPS 指引下/上限比 = 指引不对称 | guid_skew | 新造★ |
 
+### M13.1（10-13 扩）管理层指引**区间宽度族**：腿全部取 analyst4 冷字段，不带任何池内老腿
+
+**为什么开这一格**（三条实测）：① D-73 判死的是「单个冷字段 × 一阶单层」，同型本轮读数 nf27/nh27/f177 最高 S 仅 0.81/0.57/0.91；
+② 已过 S≥1.78 的 249 条 guidance 件（bt2/bt14/bt15/dq）**每条都配了池内老腿**（`liabilities_curr/assets` 等），
+本地 cmax 已算的 34 条最小 0.7187 ⇒ 高分是靠老腿借来的，相关性也是；
+③ 「多腿且腿全部来自 analyst4 冷字段」这个格子从没跑过。字段口径：cov≥0.95 + 我方从未用过 + 平台拥挤度≤全站 P50
+（最冷的一对 max/min 全站只有 1~3 个 alpha、1~3 个人在用）。
+
+**机制**：`(max − min)/|min|` = 管理层自我不确定度（分歧越大未来越易证伪，做多确定性）；
+`max/median` = 指引不对称（乐观偏度）；`ts_delta(estimate)` = 分析师跟随后上调/下调。
+
+| idea_id | 表达式骨架 | 经济含义 | 标签 | 状态 |
+|---|---|---|---|---|
+| E1305 | `group_rank(-ts_mean((max-min)/abs(min), 22), subindustry) + group_rank(ts_mean((max-min)/abs(min), 22), subindustry)` | 两指标区间宽度对照（反号×正号） | guid_width_pair | 待跑 g53 |
+| E1306 | `group_rank(-ts_mean((max-min)/abs(min), 66), industry) ×2` | 长窗宽度，INDUSTRY 分组 | guid_width_66 | 待跑 g53 |
+| E1307 | `1.2*宽度A(sub) + 宽度B(ind) + 0.8*宽度C(sub)` | 三指标宽度加权 | guid_width_trio | 待跑 g53 |
+| E1308 | `宽度(sub) + group_rank(ts_mean(high/low, 22), sub)` | 宽度 × 指引不对称 | guid_width_skew | 待跑 g53 |
+| E1309 | `宽度(sub) + group_rank(ts_delta(<median 预期>, 60), sub)` | 宽度 × 预期修正方向 | guid_width_rev | 待跑 g53 |
+
 ### M14 期权隐含风险的期限结构（option8，★刻意绕开 skew 腿）
 
 **机制**：长期 IV / 短期 IV = 不确定性是暂时事件冲击还是持久状态。斜率高 = 风险被定价在近端（事件型），

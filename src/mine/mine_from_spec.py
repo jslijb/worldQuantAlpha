@@ -105,6 +105,9 @@ def post_retry(payload, cid):
     return None
 
 
+REQUEUE = []
+
+
 def run_one(item):
     cid, meta = item
     expr = meta['expr'] if isinstance(meta, dict) else meta
@@ -113,6 +116,7 @@ def run_one(item):
         print(f'{cid} 已有产出，跳过', flush=True); return
     r = post_retry({'type': 'REGULAR', 'settings': base_settings(), 'regular': expr}, cid)
     if r is None:
+        REQUEUE.append(item)
         return
     loc = r.headers.get('Location'); p = None
     for _ in range(400):
@@ -148,4 +152,15 @@ def run_one(item):
 
 with ThreadPoolExecutor(max_workers=WORKERS) as ex:
     list(ex.map(run_one, items))
+
+# 批尾串行补投：批内 4 worker 互相挤爆限流是 GIVEUP-POST 的成因（g69_00/g70_02/g71_16 三连丢），
+# 收工后没有竞争，此时逐条重投基本一次就过。
+RETRY = list(REQUEUE)
+REQUEUE.clear()
+if RETRY:
+    print('===== 批尾串行补投 %d 条: %s' % (len(RETRY), [i[0] for i in RETRY]), flush=True)
+    for it in RETRY:
+        run_one(it)
+    if REQUEUE:
+        print('GIVEUP-FINAL 补投后仍未发射: %s' % [i[0] for i in REQUEUE], flush=True)
 print('mine_from_spec done', flush=True)

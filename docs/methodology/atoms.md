@@ -6962,3 +6962,62 @@ Qoder 的 Bash 没有可见控制台，Windows 给它起的每一个 `python.exe
 从今天起诊断一律 `pythonw.exe` + 写日志 + `tail`，**前台不再跑 python**。验证：故意用 `python.exe` 前台起控制器，4 秒后扫可见控制台窗口 = 0 个，子进程 rc=0。
 另：[_autologs/_lines_1104.py](file:///D:/Python/worldquant/_autologs/_lines_1104.py) 的名单补上控制器和看门狗，
 现量 `遍历 338 个进程（异常跳过 0）｜命中 7 条线｜提交者 run4 = 1 个`（控制器是计划任务每 30 分钟叫一次的单次进程，所以本来就不该在名单里，它的心跳 10:38/10:40 正常）。
+
+## D-155 (11-06 中午)：「任何时候都不许弹窗」落到机制上——先承认我的仪器是瞎的，真凶是计划任务的 python.exe
+
+他这条是死命令：本项目所有 python 进程任何时候都不许弹窗，全部后台静默；迁到 Windows 计划任务；关掉看门狗任务；不许用 bat。
+
+**第一件要交代的是我自己的错**：今天早上我说过「实测可见控制台窗口 0 个」，那句话是**拿瞎了的仪器测的**。
+我的监视器只筛类名 `ConsoleWindowClass`，而这台 Win11 24H2 的控制台宿主是 **Windows Terminal**
+（类名 `CASCADIA_HOSTING_WINDOW_CLASS`、进程 `windowsterminal.exe`）——它根本不在我的筛子里。
+校准办法是**故意让它弹一次**：显式 `CREATE_NEW_CONSOLE` 起一个睡 12 秒的 python.exe，
+11:33:59 监视器抓到 2 个新窗口（`WindowsTerminal[24520]` 标题就是那条 python.exe 命令行 + `python.exe[20128]` 的 `PseudoConsoleWindow`），
+12/13 秒后消失 ⇒ 仪器从此可信，之后报 0 才算数。
+监视器口径也改了：不再只认类名，**凡属主进程是 python/conhost/WindowsTerminal/cmd/powershell 的可见新窗口一律记**，并且每 60 秒自报「本轮扫到顶层窗口 559~662 个」——总数为 0 就说明 EnumWindows 没工作，那"没弹窗"是假零。
+
+**真凶（现量，不是推理）**：`\wq_daywindow` 这条计划任务的 Action 一直到 11-06 仍是
+`"…\python.exe" -X utf8 -u _autologs\_daywindow_1101.py --once`，每 30 分钟一次、`ExecutionTimeLimit PT15M`
+⇒ 从 11-03 起，每次计划任务都往屏幕上放一个窗口，一躺 1~3 分钟（控制器内部要跑 `_famtrend` 量库存），
+标题正是他 11-04 截图里的 `D:\ProgramData\miniforge3\e…`。
+**我 11-04 写的"计划任务已改成 pythonw"是没落到机器上的话**——XML 里 Action 一字没动，改的只是我这边的一次性命令。
+
+**三层修法**：
+1) **计划任务本体**：Action 换成 `pythonw.exe`（GUI 子系统，永不分配控制台）。普通用户账号下
+   `schtasks /create /xml` 报「拒绝访问」，只有命令行式创建被允许 ⇒ 用
+   `schtasks /create /tn wq_daywindow /tr "pythonw.exe -X utf8 -u …_daywindow_1101.py --once" /sc minute /mo 30`，
+   再用 PowerShell 把 `DisallowStartIfOnBatteries`/`StopIfGoingOnBatteries` 关掉（笔记本用电池也要跑）、`StartWhenAvailable` 打开。
+   没有 bat、没有第二个常驻进程；`/sc minute` 每 30 分钟一拍 ⇒ **关机后开机最多 30 分钟内自动接上**，
+   而且 `--once` 让每一拍都是新进程，改完代码下一拍就生效（不用重启任何东西）。
+2) **机制而不靠纪律**：[_autologs/_noconsole.py](file:///D:/Python/worldquant/_autologs/_noconsole.py) 的 `enforce()`
+   把 `subprocess.Popen.__init__` 打上全局补丁——凡调用方没显式要求窗口的子进程一律加 `CREATE_NO_WINDOW`
+   （显式 `CREATE_NEW_CONSOLE` 尊重调用方，校准实验就靠它）；`os.system` 也转交掉。
+   `guard()` 再把 `_autologs/_boot` 写进 `PYTHONPATH`，于是 [_autologs/_boot/sitecustomize.py](file:///D:/Python/worldquant/_autologs/_boot/sitecustomize.py)
+   让**每一个新起的 python 进程一启动就给自己打这个补丁**。
+   为什么要 sitecustomize：父进程的补丁**传不到孙进程**，而"记着每个脚本都加参数"必然漏
+   ——11-03 过拟合门一上线就"不停弹窗"就是这个原因（门自己起的模拟子进程没带 flag，我当时只改了控制器一处）。
+   sitecustomize 用 importlib 按文件路径加载 `_noconsole`，**不把 `_autologs` 塞进 sys.path**
+   （那目录上百个脚本，进 path 有遮蔽标准库的风险），且整段包 try：sitecustomize 抛异常会让每一个 python 起不来。
+3) **我自己查状态的路径**：新增 [_autologs/_xrun_1106.py](file:///D:/Python/worldquant/_autologs/_xrun_1106.py)——
+   零窗口命令包装器（pythonw 起、给命令加 CREATE_NO_WINDOW、stdout/stderr/rc 落文件，我用 Read 读）。
+   以前用 Bash 直接跑 `python.exe`/`sleep`/`tail`/`powershell`，每条都是一个可见窗口。
+   顺带说明机制真相：`CREATE_NO_WINDOW` 给进程的是**一个不显示的控制台**，子孙进程共用它；
+   而"完全没有控制台"的父进程（pythonw、Task Scheduler 起的进程）再 `DETACHED_PROCESS` 起一个控制台程序时，
+   Windows 才会新建可见窗口——所以窗口只会来自这两种源头，两种现在都堵住了。
+
+**验证走的是真实路径**，不是我自己起的一次性命令：11:39:04 `schtasks /run /tn wq_daywindow`
+⇒ Task Scheduler → pythonw → 控制器 → `_start_lines` → 起了 5 条 python.exe 产线；
+到 11:41:18 监视器累计仍是 2 次（全是 P0 故意弹的）⇒ **这条链 0 窗口**。
+`_lines_1104.py` 现量 `遍历 331 个进程（异常跳过 0）｜命中 4 条线`（含 `_daywindow_1101.py pid=24224 起于11:39:04`，提交者 run4=0 是 11:30 收工线已到点）。
+
+**同一份日志里顺手抓到控制器两个毛病（都已修）**：
+① 11:00 与 11:02 两拍 `量库存失败 [WinError 50] 不支持该请求` / `[WinError 6] 句柄无效` ⇒
+   pythonw 起的控制器把无效 stdin 句柄传给了子进程，库存读成 `None`，那两拍的「早停/补线」判断整拍跳过
+   （又一个"静默说 0"的长相）。修：控制器两处子进程一律 `stdin=subprocess.DEVNULL`，并顺着 `_start_lines` 往下传。
+② 11:39 看到「提交者 run4 不在跑」就把 run4 起在 **11-05 窗口**（该窗口收工线 11-06 11:30，9 分钟前已过）⇒ 起来即退，
+   而心跳显示"已补起"看不出问题。修：`goal_date` 先比窗口收工线（新常数 `DEADLINE_HM='11:30'`，与 `_start_lines_1019.py` 同源），
+   过点就起在下一个窗口。
+
+**看门狗结案（要交代丢了什么）**：Qoder cron 的两条 WorldQuant 任务——「作息闸门」和「ET 日交单看门狗」——已删除，
+常驻 `_wdloop_1105.py`/`_wd_1030.py` 不再被任何东西拉起。
+起停产线这件事不受影响（计划任务在干，而且是本机时钟，不依赖 Qoder 开着）；
+**丢掉的是自动播报**：产线判死、新落地、假死这类事件不会再主动发到会话，改成我每次开工时读 `_daywindow.log` 与台账。

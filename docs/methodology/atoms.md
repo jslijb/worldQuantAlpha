@@ -7007,6 +7007,12 @@ Qoder 的 Bash 没有可见控制台，Windows 给它起的每一个 `python.exe
 **验证走的是真实路径**，不是我自己起的一次性命令：11:39:04 `schtasks /run /tn wq_daywindow`
 ⇒ Task Scheduler → pythonw → 控制器 → `_start_lines` → 起了 5 条 python.exe 产线；
 到 11:41:18 监视器累计仍是 2 次（全是 P0 故意弹的）⇒ **这条链 0 窗口**。
+补一条直接证据（11:46:39，因为 sitecustomize 这一层先前只用了一个无效判据测过——
+`module_from_spec` 不写 `sys.modules`，所以"boot 模块在不在 sys.modules 里"永远为假）：
+新起一个 python.exe 打印 `subprocess.Popen.__init__.__name__` = **patched**、`no_site=0`、
+`PYTHONPATH=D:/Python/worldquant/_autologs/_boot` ⇒ 冷启动的进程确实自动装上了补丁。
+（同一批实验里 A 组"带 `-E` 绕开补丁"也没弹，原因查清了：`CREATE_NO_WINDOW` 给的是**隐藏控制台**，
+子孙进程共用它 ⇒ 那一层被顶层挡住了，两道保险是叠加生效的，不是只靠一道。）
 `_lines_1104.py` 现量 `遍历 331 个进程（异常跳过 0）｜命中 4 条线`（含 `_daywindow_1101.py pid=24224 起于11:39:04`，提交者 run4=0 是 11:30 收工线已到点）。
 
 **同一份日志里顺手抓到控制器两个毛病（都已修）**：

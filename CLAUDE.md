@@ -142,6 +142,11 @@ corr 0.7377 / 0.7170 / 0.7151 都交进去了，corr 0.7013 被拒。
     - **要什么**：需要什么类型的方法（例："能解耦 tS 与 corr 的标准化 / 正交化手法，或同强度但 corr 更干净的信息源"）
     - **验收**：找到的方法满足什么才算数（例："SF ≥ 4.0 且本地 corr ≤ 0.67"）
     **需求单是求援信号，不是收工牌**——写完立刻回到残量方向继续干。
+12. **起任何后台进程都不许弹控制台窗口（李工 11-11 第三次强调，已定性为累犯）**。屏幕上一出现黑窗口就算违规，"反正已经跑起来了"不构成辩解。
+    - **允许的三条路**：① 直接调 `pythonw.exe`（无控制台）；② `subprocess` 必须带 `creationflags=subprocess.CREATE_NO_WINDOW`；③ 进程必须脱离父 shell 存活时，用 `Win32_Process.Create` 起 **`pythonw.exe`**。
+    - **禁止**：`Win32_Process.Create` 起 `powershell.exe` / `cmd.exe`（必弹窗，且本机安全策略已拦截 `cmd /c`）；也不许靠"隐藏窗口"之类的补丁绕，直接换 `pythonw`。
+    - **已知会被 shell 作业对象带走**：在 Shell 工具里直接跑 `python xxx.py` 拉起的常驻线，Shell 命令一结束就全死（11-11 17:3x 实测：8 条线起完 20 秒内全部消失）。常驻进程一律走 ③。
+    - 现有实现可参照 `_autologs/_noconsole.py`（`guard()` 关自身控制台并给子进程装禁弹窗规则）与 Windows 计划任务 `wq_daywindow`（`pythonw.exe ... _daywindow_1101.py --once`）。
 
 ## 7. 快速导航（grep key 索引）
 

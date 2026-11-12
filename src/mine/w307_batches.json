@@ -1,0 +1,3512 @@
+[
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance - anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance - anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance - anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance - anl4_fs_guidances_advanced_af_nd_cff_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance - anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance - anl4_fs_guidances_advanced_af_nd_capex_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance - anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance - anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_width_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_width",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance - anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307x_epsr_wf_subindustry_1.0",
+  "main": "epsr_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307x_epsr_wf_subindustry_1.5",
+  "main": "epsr_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance - anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307x_ebitda_wf_subindustry_1.0",
+  "main": "ebitda_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307x_ebitda_wf_subindustry_1.5",
+  "main": "ebitda_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance - anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307x_cfo_wf_subindustry_1.0",
+  "main": "cfo_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307x_cfo_wf_subindustry_1.5",
+  "main": "cfo_width+floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance - anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance), subindustry) + 0.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 8
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsr_maxguidance + anl4_fs_guidances_advanced_af_nd_epsr_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_epsa_maxguidance + anl4_fs_guidances_advanced_af_nd_epsa_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance + anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebit_maxguidance + anl4_fs_guidances_advanced_af_nd_ebit_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance + anl4_fs_guidances_advanced_af_nd_ebitda_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfo_maxguidance + anl4_fs_guidances_advanced_af_nd_cfo_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cff_maxguidance + anl4_fs_guidances_advanced_af_nd_cff_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_cfi_maxguidance + anl4_fs_guidances_advanced_af_nd_cfi_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_capex_maxguidance + anl4_fs_guidances_advanced_af_nd_capex_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_bvps_maxguidance + anl4_fs_guidances_advanced_af_nd_bvps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcf_maxguidance + anl4_fs_guidances_advanced_af_nd_fcf_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_mid_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_mid",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank((anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance + anl4_fs_guidances_advanced_af_nd_fcfps_minguidance)/2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 6
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsr_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_epsa_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebit_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfo_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cff_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_cfi_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_capex_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_bvps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcf_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_ratio_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_ratio",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_maxguidance/(abs(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance) + 1), industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 7
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsr_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsr_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsr_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_epsa_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_epsa_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_epsa_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_custom_eps_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_custom_eps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_custom_eps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebit_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebit_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebit_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_ebitda_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_ebitda_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_ebitda_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfo_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfo_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfo_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cff_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cff_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cff_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_cfi_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_cfi_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_cfi_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_capex_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_capex_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_capex_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_bvps_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_bvps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_bvps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcf_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcf_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcf_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_subindustry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_subindustry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_subindustry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_subindustry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_industry_3.0_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_industry_3.0_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_industry_3.5_1.0",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w307_anl4_fs_guidances_advanced_af_nd_fcfps_floor_industry_3.5_1.5",
+  "main": "anl4_fs_guidances_advanced_af_nd_fcfps_floor",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(anl4_fs_guidances_advanced_af_nd_fcfps_minguidance/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ }
+]

@@ -1,0 +1,1370 @@
+[
+ {
+  "cid": "w306_oci_subindustry_3.0_1.0",
+  "main": "oci",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_subindustry_3.0_1.5",
+  "main": "oci",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_subindustry_3.5_1.0",
+  "main": "oci",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_subindustry_3.5_1.5",
+  "main": "oci",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_industry_3.0_1.0",
+  "main": "oci",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_industry_3.0_1.5",
+  "main": "oci",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_industry_3.5_1.0",
+  "main": "oci",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_oci_industry_3.5_1.5",
+  "main": "oci",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_subindustry_3.0_1.0",
+  "main": "lease_cur",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(current_minimum_operating_lease_payment/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_subindustry_3.0_1.5",
+  "main": "lease_cur",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(current_minimum_operating_lease_payment/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_subindustry_3.5_1.0",
+  "main": "lease_cur",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(current_minimum_operating_lease_payment/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_subindustry_3.5_1.5",
+  "main": "lease_cur",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(current_minimum_operating_lease_payment/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_industry_3.0_1.0",
+  "main": "lease_cur",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(current_minimum_operating_lease_payment/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_industry_3.0_1.5",
+  "main": "lease_cur",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(current_minimum_operating_lease_payment/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_industry_3.5_1.0",
+  "main": "lease_cur",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(current_minimum_operating_lease_payment/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_cur_industry_3.5_1.5",
+  "main": "lease_cur",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(current_minimum_operating_lease_payment/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_subindustry_3.0_1.0",
+  "main": "dbt_issue",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_subindustry_3.0_1.5",
+  "main": "dbt_issue",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_subindustry_3.5_1.0",
+  "main": "dbt_issue",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_subindustry_3.5_1.5",
+  "main": "dbt_issue",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_industry_3.0_1.0",
+  "main": "dbt_issue",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_industry_3.0_1.5",
+  "main": "dbt_issue",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_industry_3.5_1.0",
+  "main": "dbt_issue",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue_industry_3.5_1.5",
+  "main": "dbt_issue",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_subindustry_3.0_1.0",
+  "main": "sbp_nonvst",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_subindustry_3.0_1.5",
+  "main": "sbp_nonvst",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_subindustry_3.5_1.0",
+  "main": "sbp_nonvst",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_subindustry_3.5_1.5",
+  "main": "sbp_nonvst",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_industry_3.0_1.0",
+  "main": "sbp_nonvst",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_industry_3.0_1.5",
+  "main": "sbp_nonvst",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_industry_3.5_1.0",
+  "main": "sbp_nonvst",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_nonvst_industry_3.5_1.5",
+  "main": "sbp_nonvst",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(sbp_equity_nonvested_count/fn_entity_common_stock_shares_out_a, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_subindustry_3.0_1.0",
+  "main": "lease_y2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_subindustry_3.0_1.5",
+  "main": "lease_y2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_subindustry_3.5_1.0",
+  "main": "lease_y2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_subindustry_3.5_1.5",
+  "main": "lease_y2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_industry_3.0_1.0",
+  "main": "lease_y2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_industry_3.0_1.5",
+  "main": "lease_y2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_industry_3.5_1.0",
+  "main": "lease_y2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y2_industry_3.5_1.5",
+  "main": "lease_y2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_subindustry_3.0_1.0",
+  "main": "lease_3y",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_min_payments_3y/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_subindustry_3.0_1.5",
+  "main": "lease_3y",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_min_payments_3y/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_subindustry_3.5_1.0",
+  "main": "lease_3y",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_min_payments_3y/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_subindustry_3.5_1.5",
+  "main": "lease_3y",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_min_payments_3y/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_industry_3.0_1.0",
+  "main": "lease_3y",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_min_payments_3y/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_industry_3.0_1.5",
+  "main": "lease_3y",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_min_payments_3y/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_industry_3.5_1.0",
+  "main": "lease_3y",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_min_payments_3y/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_3y_industry_3.5_1.5",
+  "main": "lease_3y",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_min_payments_3y/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_subindustry_3.0_1.0",
+  "main": "lease_y4",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year4/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_subindustry_3.0_1.5",
+  "main": "lease_y4",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year4/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_subindustry_3.5_1.0",
+  "main": "lease_y4",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year4/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_subindustry_3.5_1.5",
+  "main": "lease_y4",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year4/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_industry_3.0_1.0",
+  "main": "lease_y4",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year4/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_industry_3.0_1.5",
+  "main": "lease_y4",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_leases_minimum_payments_due_year4/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_industry_3.5_1.0",
+  "main": "lease_y4",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year4/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_y4_industry_3.5_1.5",
+  "main": "lease_y4",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_leases_minimum_payments_due_year4/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_subindustry_3.0_1.0",
+  "main": "lease_5y",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_lease_minimum_payments_due_five_years/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_subindustry_3.0_1.5",
+  "main": "lease_5y",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_lease_minimum_payments_due_five_years/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_subindustry_3.5_1.0",
+  "main": "lease_5y",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_lease_minimum_payments_due_five_years/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_subindustry_3.5_1.5",
+  "main": "lease_5y",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_lease_minimum_payments_due_five_years/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_industry_3.0_1.0",
+  "main": "lease_5y",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(operating_lease_minimum_payments_due_five_years/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_industry_3.0_1.5",
+  "main": "lease_5y",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(operating_lease_minimum_payments_due_five_years/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_industry_3.5_1.0",
+  "main": "lease_5y",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(operating_lease_minimum_payments_due_five_years/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_5y_industry_3.5_1.5",
+  "main": "lease_5y",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(operating_lease_minimum_payments_due_five_years/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_subindustry_3.0_1.0",
+  "main": "lease_fut2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(future_minimum_operating_lease_payments/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_subindustry_3.0_1.5",
+  "main": "lease_fut2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(future_minimum_operating_lease_payments/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_subindustry_3.5_1.0",
+  "main": "lease_fut2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(future_minimum_operating_lease_payments/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_subindustry_3.5_1.5",
+  "main": "lease_fut2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(future_minimum_operating_lease_payments/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_industry_3.0_1.0",
+  "main": "lease_fut2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(future_minimum_operating_lease_payments/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_industry_3.0_1.5",
+  "main": "lease_fut2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(future_minimum_operating_lease_payments/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_industry_3.5_1.0",
+  "main": "lease_fut2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(future_minimum_operating_lease_payments/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_lease_fut2_industry_3.5_1.5",
+  "main": "lease_fut2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(future_minimum_operating_lease_payments/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_subindustry_3.0_1.0",
+  "main": "dbt_repay",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_repayments_total/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_subindustry_3.0_1.5",
+  "main": "dbt_repay",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_repayments_total/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_subindustry_3.5_1.0",
+  "main": "dbt_repay",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_repayments_total/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_subindustry_3.5_1.5",
+  "main": "dbt_repay",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_repayments_total/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_industry_3.0_1.0",
+  "main": "dbt_repay",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_repayments_total/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_industry_3.0_1.5",
+  "main": "dbt_repay",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_repayments_total/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_industry_3.5_1.0",
+  "main": "dbt_repay",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_repayments_total/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_repay_industry_3.5_1.5",
+  "main": "dbt_repay",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_repayments_total/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_subindustry_3.0_1.0",
+  "main": "dbt_locr",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(line_of_credit_repayments/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_subindustry_3.0_1.5",
+  "main": "dbt_locr",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(line_of_credit_repayments/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_subindustry_3.5_1.0",
+  "main": "dbt_locr",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(line_of_credit_repayments/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_subindustry_3.5_1.5",
+  "main": "dbt_locr",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(line_of_credit_repayments/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_industry_3.0_1.0",
+  "main": "dbt_locr",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(line_of_credit_repayments/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_industry_3.0_1.5",
+  "main": "dbt_locr",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(line_of_credit_repayments/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_industry_3.5_1.0",
+  "main": "dbt_locr",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(line_of_credit_repayments/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_locr_industry_3.5_1.5",
+  "main": "dbt_locr",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(line_of_credit_repayments/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_subindustry_3.0_1.0",
+  "main": "dbt_issue3",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_subindustry_3.0_1.5",
+  "main": "dbt_issue3",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_subindustry_3.5_1.0",
+  "main": "dbt_issue3",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_subindustry_3.5_1.5",
+  "main": "dbt_issue3",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_industry_3.0_1.0",
+  "main": "dbt_issue3",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_industry_3.0_1.5",
+  "main": "dbt_issue3",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_industry_3.5_1.0",
+  "main": "dbt_issue3",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dbt_issue3_industry_3.5_1.5",
+  "main": "dbt_issue3",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(debt_issuance_proceeds_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_subindustry_3.0_1.0",
+  "main": "opt_outstd",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_subindustry_3.0_1.5",
+  "main": "opt_outstd",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_subindustry_3.5_1.0",
+  "main": "opt_outstd",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_subindustry_3.5_1.5",
+  "main": "opt_outstd",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_industry_3.0_1.0",
+  "main": "opt_outstd",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_industry_3.0_1.5",
+  "main": "opt_outstd",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_industry_3.5_1.0",
+  "main": "opt_outstd",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_outstd_industry_3.5_1.5",
+  "main": "opt_outstd",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(option_award_outstanding_count/fn_entity_common_stock_shares_out_a, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_subindustry_3.0_1.0",
+  "main": "opt_grant",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(option_awards_granted_count/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_subindustry_3.0_1.5",
+  "main": "opt_grant",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(option_awards_granted_count/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_subindustry_3.5_1.0",
+  "main": "opt_grant",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(option_awards_granted_count/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_subindustry_3.5_1.5",
+  "main": "opt_grant",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(option_awards_granted_count/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_industry_3.0_1.0",
+  "main": "opt_grant",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(option_awards_granted_count/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_industry_3.0_1.5",
+  "main": "opt_grant",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(option_awards_granted_count/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_industry_3.5_1.0",
+  "main": "opt_grant",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(option_awards_granted_count/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_opt_grant_industry_3.5_1.5",
+  "main": "opt_grant",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(option_awards_granted_count/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_subindustry_3.0_1.0",
+  "main": "sbp_alloc2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(allocated_sbp_expense_total/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_subindustry_3.0_1.5",
+  "main": "sbp_alloc2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(allocated_sbp_expense_total/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_subindustry_3.5_1.0",
+  "main": "sbp_alloc2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(allocated_sbp_expense_total/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_subindustry_3.5_1.5",
+  "main": "sbp_alloc2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(allocated_sbp_expense_total/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_industry_3.0_1.0",
+  "main": "sbp_alloc2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(allocated_sbp_expense_total/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_industry_3.0_1.5",
+  "main": "sbp_alloc2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(allocated_sbp_expense_total/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_industry_3.5_1.0",
+  "main": "sbp_alloc2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(allocated_sbp_expense_total/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_sbp_alloc2_industry_3.5_1.5",
+  "main": "sbp_alloc2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(allocated_sbp_expense_total/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_subindustry_3.0_1.0",
+  "main": "dep",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(depreciation_and_amortization/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_subindustry_3.0_1.5",
+  "main": "dep",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(depreciation_and_amortization/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_subindustry_3.5_1.0",
+  "main": "dep",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(depreciation_and_amortization/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_subindustry_3.5_1.5",
+  "main": "dep",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(depreciation_and_amortization/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_industry_3.0_1.0",
+  "main": "dep",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(depreciation_and_amortization/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_industry_3.0_1.5",
+  "main": "dep",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(depreciation_and_amortization/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_industry_3.5_1.0",
+  "main": "dep",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(depreciation_and_amortization/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_dep_industry_3.5_1.5",
+  "main": "dep",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(depreciation_and_amortization/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_subindustry_3.0_1.0",
+  "main": "accdep",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_subindustry_3.0_1.5",
+  "main": "accdep",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_subindustry_3.5_1.0",
+  "main": "accdep",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_subindustry_3.5_1.5",
+  "main": "accdep",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_industry_3.0_1.0",
+  "main": "accdep",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_industry_3.0_1.5",
+  "main": "accdep",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_industry_3.5_1.0",
+  "main": "accdep",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_accdep_industry_3.5_1.5",
+  "main": "accdep",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(accumulated_depreciation_depletion_amortization_ppne/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_subindustry_3.0_1.0",
+  "main": "grosmach",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(gross_machinery_equipment_value_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_subindustry_3.0_1.5",
+  "main": "grosmach",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(gross_machinery_equipment_value_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_subindustry_3.5_1.0",
+  "main": "grosmach",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(gross_machinery_equipment_value_2/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_subindustry_3.5_1.5",
+  "main": "grosmach",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(gross_machinery_equipment_value_2/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_industry_3.0_1.0",
+  "main": "grosmach",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(gross_machinery_equipment_value_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_industry_3.0_1.5",
+  "main": "grosmach",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(gross_machinery_equipment_value_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_industry_3.5_1.0",
+  "main": "grosmach",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(gross_machinery_equipment_value_2/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_grosmach_industry_3.5_1.5",
+  "main": "grosmach",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(gross_machinery_equipment_value_2/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_subindustry_3.0_1.0",
+  "main": "tax_dtl2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(deferred_tax_liabilities_total_4/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_subindustry_3.0_1.5",
+  "main": "tax_dtl2",
+  "grp": "subindustry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(deferred_tax_liabilities_total_4/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_subindustry_3.5_1.0",
+  "main": "tax_dtl2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(deferred_tax_liabilities_total_4/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_subindustry_3.5_1.5",
+  "main": "tax_dtl2",
+  "grp": "subindustry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(deferred_tax_liabilities_total_4/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_industry_3.0_1.0",
+  "main": "tax_dtl2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.0,
+  "code": "3.0*group_rank(deferred_tax_liabilities_total_4/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_industry_3.0_1.5",
+  "main": "tax_dtl2",
+  "grp": "industry",
+  "mw": 3.0,
+  "fw": 1.5,
+  "code": "3.0*group_rank(deferred_tax_liabilities_total_4/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_industry_3.5_1.0",
+  "main": "tax_dtl2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.0,
+  "code": "3.5*group_rank(deferred_tax_liabilities_total_4/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ },
+ {
+  "cid": "w306_tax_dtl2_industry_3.5_1.5",
+  "main": "tax_dtl2",
+  "grp": "industry",
+  "mw": 3.5,
+  "fw": 1.5,
+  "code": "3.5*group_rank(deferred_tax_liabilities_total_4/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry)",
+  "ops": 4
+ }
+]

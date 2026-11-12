@@ -53,3 +53,8 @@ _autologs/
 *~
 Thumbs.db
 desktop.ini
+
+
+# 论文 PDF / 抓取正文 / 索引：版权件与会话产物，只留本机，绝不进公开仓库
+docs/papers/
+.chrome-papers-profile/

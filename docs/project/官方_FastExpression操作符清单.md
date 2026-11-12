@@ -154,7 +154,7 @@
 
 | 算子（签名） | 官方描述（译） | 大白话 | 考试速记 |
 |---|---|---|---|
-| `group_mean(x, weight, group)` | 计算数据字段在每组内的（加权）均值 | 组内均值 | 带 weight 权重参数 |
+| `group_mean(x, weight, group)` | 计算数据字段在每组内的（加权）**调和**平均数 | 组内调和均值 | 带 weight 权重参数；官方原文是 harmonic mean，此处 OCR 曾漏译"调和"二字（已按平台一手原文订正） |
 | `group_neutralize(x, group)` | 组内每个值减去组均值（中性化） | 组内去均值 | **等价 Simulation 面板的 Neutralization**；代码里用了它，面板就要选 None |
 | `group_rank(x, group)` | 组内排名，输出 0.0~1.0 | 组内百分位 | 示例 3/4：子行业内排名 |
 | `group_scale(x, group)` | 组内缩放到 0~1，跨组可比 | 组内归一化 | 与 ts_scale 区分 |

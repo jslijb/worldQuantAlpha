@@ -1,0 +1,290 @@
+[
+ {
+  "cid": "w310_on5_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310_on5_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310_on5_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310_on5_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310_on5_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310_on5_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)"
+ },
+ {
+  "cid": "w310_on5_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)"
+ },
+ {
+  "cid": "w310_on5_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)"
+ },
+ {
+  "cid": "w310_on5_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)"
+ },
+ {
+  "cid": "w310_on5_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), industry)"
+ },
+ {
+  "cid": "w310_int20_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_int20_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_int20_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_int20_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_int20_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_int20_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_int20_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_int20_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_int20_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_int20_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_vd_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310_vd_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310_vd_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310_vd_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310_vd_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310_vd_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank((close - vwap)/vwap, industry)"
+ },
+ {
+  "cid": "w310_vd_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank((close - vwap)/vwap, industry)"
+ },
+ {
+  "cid": "w310_vd_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank((close - vwap)/vwap, industry)"
+ },
+ {
+  "cid": "w310_vd_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank((close - vwap)/vwap, industry)"
+ },
+ {
+  "cid": "w310_vd_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank((close - vwap)/vwap, industry)"
+ },
+ {
+  "cid": "w310_revdiff_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_revdiff_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_revdiff_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_revdiff_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_revdiff_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_revdiff_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_revdiff_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_revdiff_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_revdiff_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_revdiff_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_mean(close/open - 1, 20) - ts_mean(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_onstd_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_onstd_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_onstd_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_onstd_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_onstd_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310_onstd_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_onstd_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_onstd_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_onstd_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_onstd_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(ts_std_dev(open/ts_delay(close,1) - 1, 20), industry)"
+ },
+ {
+  "cid": "w310_illd_subindustry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), subindustry)"
+ },
+ {
+  "cid": "w310_illd_subindustry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), subindustry)"
+ },
+ {
+  "cid": "w310_illd_subindustry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), subindustry)"
+ },
+ {
+  "cid": "w310_illd_subindustry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.5*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), subindustry)"
+ },
+ {
+  "cid": "w310_illd_subindustry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), subindustry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), subindustry)"
+ },
+ {
+  "cid": "w310_illd_industry_3.0_1.0_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), industry)"
+ },
+ {
+  "cid": "w310_illd_industry_3.0_1.5_0.3",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), industry)"
+ },
+ {
+  "cid": "w310_illd_industry_3.0_1.5_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), industry)"
+ },
+ {
+  "cid": "w310_illd_industry_3.0_1.0_0.5",
+  "code": "3.0*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.0*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.5*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), industry)"
+ },
+ {
+  "cid": "w310_illd_industry_3.5_1.5_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, industry) + 1.5*group_rank(ts_av_diff(cashflow_op/enterprise_value, 45), industry) + 0.3*group_rank(abs(close/open - 1) - abs(open/ts_delay(close,1) - 1), industry)"
+ },
+ {
+  "cid": "w310b_on5_subindustry_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.3*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310b_on5_subindustry_0.5",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.5*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310b_on5_subindustry_0.75",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.75*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310b_on5_subindustry_1.0",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(-ts_mean(open/ts_delay(close,1) - 1, 5), subindustry)"
+ },
+ {
+  "cid": "w310b_int20_subindustry_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.3*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310b_int20_subindustry_0.5",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.5*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310b_int20_subindustry_0.75",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.75*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310b_int20_subindustry_1.0",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank(-ts_rank(close/open - 1, 20), subindustry)"
+ },
+ {
+  "cid": "w310b_vd_subindustry_0.3",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.3*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310b_vd_subindustry_0.5",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.5*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310b_vd_subindustry_0.75",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 0.75*group_rank((close - vwap)/vwap, subindustry)"
+ },
+ {
+  "cid": "w310b_vd_subindustry_1.0",
+  "code": "3.5*group_rank(other_comprehensive_income_net_tax/assets, subindustry) + 1.0*group_rank((close - vwap)/vwap, subindustry)"
+ }
+]

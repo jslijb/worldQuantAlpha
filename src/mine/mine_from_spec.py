@@ -62,9 +62,22 @@ DELAY = None
 if '--delay' in sys.argv:
     DELAY = int(sys.argv[sys.argv.index('--delay') + 1])
 
+# ---- 地区覆盖（11-11 新增）：研究顾问预备役开通后 EUR/GLB 不再 400。
+# 跨区域的件不进同一个 self-correlation 池，是绕开相关性墙最干净的路。
+REGION = ''
+if '--region' in sys.argv:
+    REGION = sys.argv[sys.argv.index('--region') + 1].upper()
+
+
+# ---- visualization 开关（1103 新增）：默认 False ⇒ GET /alphas/{id}/recordsets/sharpe 回空 body，
+#      平台图上那条 "Sharpe over time" 序列我们服务端拿不到，只能自己从 pnl 复算。开了才有服务端序列。
+VIZ = '--viz' in sys.argv
+
 
 def base_settings():
     st = BASE()
+    if VIZ:
+        st['visualization'] = True
     if NEUT:
         st['neutralization'] = NEUT
     if DECAY is not None:
@@ -75,6 +88,8 @@ def base_settings():
         st['delay'] = DELAY
     if UNIV:
         st['universe'] = UNIV
+    if REGION:
+        st['region'] = REGION
     return st
 
 spec = json.load(open(SPEC, encoding='utf-8'))
@@ -107,10 +122,33 @@ def post_retry(payload, cid):
 
 REQUEUE = []
 
+# 11-11 加：发射前统一把横截面拉回以零为中心（zscore 外包）。
+# 依据（11-10 23:5x 实测）：同一个件 g163_g133r2884__00_w20_15，原样提交时官方二值测试 sign S=0.08，
+# 同时判 CONCENTRATED_WEIGHT；只在最外层套一个 zscore，S 从 2.53→2.53 不变，
+# sign 从 0.08 → 2.50，官方三项全过并已交进（kqaxwkZZ6）。
+# 原因：group_rank 出来的值落在 [0,1] 偏正、不居中，压成 ±1 后多数股票同号，
+# 少数反向标的被迫承担全部仓位 ⇒ 权重过度集中，信号被抹平。
+# 算子预算按平台口径（函数调用数 + 运算符字符数，上限 64）先算，超了就不加。
+CENTER = _os.environ.get('CENTER', '1') != '0'
+
+
+def centered(expr):
+    if not CENTER or not isinstance(expr, str) or not expr.strip():
+        return expr
+    if expr.lstrip().startswith('zscore('):
+        return expr
+    ops = sum(1 for ch in expr if ch in '+-*/') + expr.count('(')
+    if ops + 1 > 62:
+        return expr
+    if ';' in expr or not expr.rstrip().endswith(')'):
+        return expr
+    return 'zscore(%s)' % expr
+
 
 def run_one(item):
     cid, meta = item
     expr = meta['expr'] if isinstance(meta, dict) else meta
+    expr = centered(expr)
     of = f'{OUT}/{cid}.json'
     if _os.path.exists(of):
         print(f'{cid} 已有产出，跳过', flush=True); return

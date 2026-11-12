@@ -12,7 +12,7 @@ for _d in [_p.parent, *_p.parents]:
 #   旧版 blind_submit.py 只认顶层 status/stage 键，把 403 判决当空数据丢弃 -> 假 PENDING。
 # 用法: python submit_v3.py <alpha_id> <cid>   （cid 取 mined json 表达式）
 # 纪律：一次一个，串行；台账/裁决档案只追加。
-import requests, json, time, sys, csv, datetime
+import requests, json, time, sys, csv, datetime, glob
 
 aid = sys.argv[1]
 cid = sys.argv[2] if len(sys.argv) > 2 else ''
@@ -28,6 +28,37 @@ def alpha_detail(a):
 d0 = alpha_detail(aid)
 if d0 and (d0.get('status') == 'ACTIVE' or d0.get('stage') == 'OS'):
     print(f'{aid} 已经是 ACTIVE，无需提交'); sys.exit(0)
+
+# ---- 防过拟合门（11-09 补，硬前置，不设后门）----
+# 背景：这两道门原来只接在 _autologs/_real_1015.py --ship 里，而本脚本是 CLAUDE.md §3.7 写的
+# 标准提交路径、一个门都没有 ⇒ 手工走这里等于绕过全部防过拟合检查（用户 11-09 拍板补上）。
+# 门 1 _ovfgate_1103：平台 checks 零容忍 + 时间窗 ±25% 邻居扫描 + 留一年 + 滚动一年最低。
+# 门 2 _officialgate_1109：官方帖三条（rank / sign / 换池）。
+# 判据、阈值一个字没改，这里只做"调门 + 过不了就不 POST"。
+sys.path.insert(0, '_autologs')
+if not cid:
+    # 门的输入是 mined 件号，不是 alpha id：只给 id 时去 mined 反查一次
+    for _p in glob.glob('data/alpha_quality_analysis/mined/*.json'):
+        try:
+            if json.load(open(_p, encoding='utf-8')).get('id') == aid:
+                cid = _p.replace('\\', '/').split('/')[-1][:-5]; break
+        except Exception:
+            pass
+if not cid:
+    print(f'{aid} 反查不到 mined 件号 ⇒ 没有防过拟合证据，拒绝提交（把 cid 作为第 2 个参数传进来）')
+    sys.exit(2)
+
+from _ovfgate_1103 import gate as _ovf_gate
+_ok1, _why1 = _ovf_gate(cid)
+print(f'防过拟合门 ⇒ {"过" if _ok1 else "拒"} ｜ {_why1}', flush=True)
+if not _ok1:
+    print('不提交：过拟合门未过。'); sys.exit(2)
+
+from _officialgate_1109 import gate as _official_gate
+_ok2, _why2 = _official_gate(cid)
+print(f'官方三项稳健性检验 ⇒ {"过" if _ok2 else "拒"} ｜ {_why2}', flush=True)
+if not _ok2:
+    print('不提交：官方三项检验未过。'); sys.exit(2)
 
 r = sess.post(f'https://api.worldquantbrain.com/alphas/{aid}/submit')
 print(f'POST /submit -> {r.status_code}', flush=True)

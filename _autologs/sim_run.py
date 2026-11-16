@@ -87,6 +87,45 @@ except Exception as _e:
     O.close()
     sys.exit(5)
 
+# ------------------------------------------------------------------ VF 对齐门 7/8/9
+# 2026-11-16 李工逻辑验证（论坛原文 + 我们台账实测）：
+#   主帖 44770798147735：Genius 六维 Tie-Breaker 考核「每条 Alpha 平均使用的不同字段数
+#     越低越好（单字段 ATOM 可压到 1）」+「全季度不同字段总数越高越好」。
+#   VF 复盘帖 44645223044247：atom 比例 高 VF 81.7% → 低 VF 50.5%（VF 0.97→0.39）；
+#     「VF 下跌不是从某条 alpha 的 Fitness 变低开始的，而是从提交集合里 atom 变少开始的」。
+#   我们台账实测：每条平均 7.73 个字段、单字段仅 1.7%、atom 比例 2.8%（9~10 月 0.6~0.7%）
+#   ⇒ 与 VF 方向完全相反，原有 DIMS 缺"单条字段数"维度是结构性缺口。
+#
+# 门7 每条 alpha 字段数 ≤2 | 门8 每批 ≥2 个台账未用字段 | 门9 本批 atom 占比 ≥50%
+sys.path.insert(0, str(ROOT / '_grid'))
+try:
+    import diversity as DIV
+    _ledger = ROOT / 'data/alpha_quality_analysis/SUBMITTED_LEDGER.csv'
+    _ok3, _vio3, _lines3 = DIV.gate_vf(batch, ledger=str(_ledger), verbose=False)
+    for _L in _lines3:
+        w(_L)
+    if not _ok3:
+        w('')
+        w('!!! VF 对齐门（7/8/9）BLOCK：%d 处不合规' % len(_vio3))
+        for _tag, _who, _why in _vio3:
+            w('    [%s] %s：%s' % (_tag, _who, _why))
+        w('')
+        w('!!! 处理办法：')
+        w('    门7 ⇒ 每条 alpha 的不同字段数降到 ≤2（单字段 ATOM 最优，平台评分要求）。')
+        w('    门8 ⇒ 每批至少引入 2 个台账从没碰过的字段（Total distinct Fields 越高越好）。')
+        w('    门9 ⇒ 本批 atom（单数据集）占比 ≥50%（论坛低 VF 线 50.5%）。')
+        w('!!! 注意：「算子多/字段多」不是深度的证明 —— 深度应来自同一字段的反复变换。')
+        O.close()
+        sys.exit(6)
+    else:
+        w('VF对齐门(7/8/9): PASS')
+except SystemExit:
+    raise
+except Exception as _e:
+    w('VF 对齐门加载失败，按失败关闭（不放行）: %r' % (_e,))
+    O.close()
+    sys.exit(7)
+
 # ------------------------------------------------------------------ 多样性门
 # 李工 2026-11-15 13:02：「提交模拟的时候需要加一层...多样性检查」
 # 默认硬拦：任何维度单项份额超上限就整批不发。唯一例外是 cid 以 SYN_/TEST_

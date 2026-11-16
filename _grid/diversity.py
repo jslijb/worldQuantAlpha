@@ -49,10 +49,174 @@ DIM_CN = {'dataset': '数据集', 'idea': 'idea', 'operator': '算子', 'univers
           'neutralization': '中性化', 'decay': 'decay', 'truncation': 'truncation'}
 RULE = {d: 0.10 for d in DIMS}
 
+# =====================================================================
+# ★ 2026-11-16 新增：与平台 VF / Genius Tie-Breaker 对齐的三个专用门
+#
+# 依据（论坛原文，docs/forum/atom_pack/）：
+#   主帖 44770798147735：
+#     「Genius 六维 Tie-Breaker 考核两项硬指标：每条 Alpha 平均使用的不同字段数
+#       （Avg distinct Fields / Alpha）**越低越好**（单字段 ATOM 可压到 1），
+#       而全季度总计使用的不同字段数（Total distinct Fields）**越高越好**。
+#       用单字段 ATOM 扫描新字段，天然在这两个维度同时拿满优势。」
+#   VF 复盘帖 44645223044247（814 Regular + 269 Super 实测）：
+#     atom 比例 高 VF 81.7% → 低 VF 50.5%；SC 0.6~0.7 组 atom 比例只剩 43%。
+#
+# 我们自己的台账实测（360 条，本地 judge 逐条）：
+#   每条 alpha 平均使用不同字段数 = **7.73**（平台说越低越好）
+#   单字段（=1）占比 **1.7%** | atom 比例 **2.8%** | 9~10 月 atom 比例 0.6~0.7%
+#   ⇒ 与 VF 方向完全相反。原有 DIMS 没有"单条字段数"维度，是结构性缺口。
+#
+# 这三个门不是"多样性份额"型，而是"绝对约束"型，故不放进 DIMS（它们不走 10% 份额逻辑）。
+# =====================================================================
+
+# 门 7：单条 alpha 的不同字段数上限（平台：越低越好，单字段 ATOM = 1）
+MAX_FIELDS_PER_ALPHA = 2
+
+# 门 9：一批新提交的 atom 占比下限（论坛低 VF 线 50.5%）
+MIN_ATOM_RATIO = 0.50
+
+# 门 8：每批至少引入的"台账从未用过"字段数（平台：Total distinct Fields 越高越好）
+MIN_NEW_FIELDS_PER_BATCH = 2
+
+
+def fields_in_code(code):
+    """表达式里用到的业务字段（剔除 6 个豁免分组字段）。
+
+    先用 src.core.atom.fields_of（按平台缓存反查）；若返回空（字段是尚未开荒的新字段、
+    缓存里查不到），**退回标识符粗抽**，否则会把"用了全新字段的表达式"误判成 0 字段。
+    """
+    fs = set()
+    try:
+        from src.core.atom import fields_of
+        fs = set(fields_of(code))
+    except Exception:                                       # noqa: BLE001
+        fs = set()
+    # 剔除豁免分组字段后若为空，说明字段全是尚未开荒的新字段（缓存查不到），
+    # fields_of 只会返回分组字段 ⇒ 此时必须退回标识符粗抽，否则会误判成 0 字段。
+    real = {f for f in fs if f not in EXEMPT_GROUPS}
+    if not real:
+        # 先剔除字符串字面量（driver="gaussian" / range="0,1,0.1"），否则 driver/range 会被当字段
+        code2 = re.sub(r'"[^"]*"', '""', code)
+        ops = set(_OP_RE.findall(code2)) | set(KEYWORDS)
+        # 粗抽：字母开头的标识符（含单字母，如模板占位符 f），去掉算子名/关键字/分组字段
+        real = {t for t in re.findall(r'[a-z][a-z0-9_]*', code2)
+                if t not in ops and t not in KEYWORDS and t not in EXEMPT_GROUPS}
+    return real
+
+
+def is_atom_code(code):
+    """该表达式是否单数据集（ATOM）。
+
+    三层判定（任一成立即 True）：
+      1. src.core.atom.judge() 返回 True（平台 /data-fields 缓存里查得到归属）。
+      2. 剔除豁免分组字段后**只剩 1 个业务字段** ⇒ 必然单数据集。
+         （论坛主帖推荐的「单字段 ATOM 扫描新字段」正是这种；且本地缓存对新字段
+           查不到归属时 judge() 会判 False，不能因此误杀。）
+      3. 全部业务字段都能查到归属，且**归属只有一个** ⇒ atom。
+    """
+    try:
+        from src.core.atom import judge, dataset_of
+        ok, _ds, _why = judge(code)
+        if ok:
+            return True
+    except Exception:                                       # noqa: BLE001
+        pass
+    fs = fields_in_code(code)
+    if not fs:
+        return False
+    if len(fs) == 1:
+        return True
+    try:
+        from src.core.atom import dataset_of as _ds_of
+        owners = set()
+        for f in fs:
+            d = _ds_of(f)
+            if d:
+                owners.add(d)
+        if owners and len(owners) == 1:
+            return True
+    except Exception:                                       # noqa: BLE001
+        pass
+    return False
+
+
+def gate_vf(batch, ledger=None, verbose=True):
+    """门 7/8/9：与平台 VF / Genius Tie-Breaker 对齐的三个专用门。
+
+    门 7 每条 alpha 不同字段数 ≤ MAX_FIELDS_PER_ALPHA（默认 2）
+    门 9 本批 atom 占比 ≥ MIN_ATOM_RATIO（默认 50%）
+    门 8 本批至少引入 MIN_NEW_FIELDS_PER_BATCH 个台账未用过的字段
+
+    返回 (ok, violations, lines)。violations = [(门名, 明细, 说明), ...]
+    """
+    violations = []
+    lines = []
+
+    # ---- 门 7：单条 alpha 字段数上限
+    fcount = {}
+    for b in batch:
+        code = b.get('code') or b.get('expr') or ''
+        fs = fields_in_code(code)
+        cid = b.get('cid', '')
+        fcount[cid] = fs
+        if len(fs) > MAX_FIELDS_PER_ALPHA:
+            violations.append(('门7_单alpha字段数', cid,
+                               '%d 个字段 > %d：%s' % (len(fs), MAX_FIELDS_PER_ALPHA,
+                                                 ', '.join(sorted(fs)))))
+    if fcount:
+        avg = sum(len(v) for v in fcount.values()) / len(fcount)
+        lines.append('门7 单alpha字段数：均 %.2f（上限 %d）| 明细 %s'
+                     % (avg, MAX_FIELDS_PER_ALPHA,
+                        ', '.join('%s=%d' % (k, len(v)) for k, v in list(fcount.items())[:12])))
+
+    # ---- 门 9：本批 atom 占比
+    atoms = [b for b in batch
+             if is_atom_code(b.get('code') or b.get('expr') or '')]
+    ratio = (len(atoms) / len(batch)) if batch else 0.0
+    lines.append('门9 atom占比：%d/%d = %.0f%%（下限 %.0f%%）'
+                 % (len(atoms), len(batch), ratio * 100, MIN_ATOM_RATIO * 100))
+    if batch and ratio < MIN_ATOM_RATIO:
+        violations.append(('门9_atom占比', 'batch',
+                           '%.0f%% < %.0f%%（论坛：低 VF 窗口 atom 比例 50.5%% ⇒ VF 0.39）'
+                           % (ratio * 100, MIN_ATOM_RATIO * 100)))
+
+    # ---- 门 8：新字段下限（批次级门：单条测试时不生效）
+    used = set()
+    if ledger:
+        try:
+            import csv as _csv
+            import io as _io
+            rows = list(_csv.DictReader(
+                _io.open(ledger, encoding='utf-8-sig')))
+            for r in rows:
+                for f in fields_in_code(r.get('expr', '')):
+                    used.add(f)
+        except Exception as e:                              # noqa: BLE001
+            lines.append('门8 读取台账失败：%r' % (e,))
+    batch_fields = set()
+    for fs in fcount.values():
+        batch_fields |= fs
+    new_fields = sorted(batch_fields - used)
+    lines.append('门8 新字段：本批 %d 个字段，其中台账未用过 %d 个（下限 %d，批次级门）%s'
+                 % (len(batch_fields), len(new_fields), MIN_NEW_FIELDS_PER_BATCH,
+                    ('→ ' + ', '.join(new_fields[:10])) if new_fields else ''))
+    if batch and len(batch) >= 3 and len(new_fields) < MIN_NEW_FIELDS_PER_BATCH:
+        violations.append(('门8_新字段', 'batch',
+                           '%d 个 < %d（平台 Genius Tie-Breaker：Total distinct Fields 越高越好）'
+                           % (len(new_fields), MIN_NEW_FIELDS_PER_BATCH)))
+
+    if verbose:
+        for L in lines:
+            print(L)
+    return (not violations), violations, lines
+
+
 EXEMPT_GROUPS = {'country', 'exchange', 'market', 'sector', 'industry', 'subindustry'}
 KEYWORDS = {'if', 'else', 'and', 'or', 'not', 'rettype', 'driver', 'range', 'buckets',
             'constant', 'useStd', 'limit', 'sigma', 'hump', 'sensitivity', 'force',
-            'std', 'weight', 'skipBoth', 'NaNGroup', 'longscale', 'shortscale'}
+            'std', 'weight', 'skipBoth', 'NaNGroup', 'longscale', 'shortscale',
+            'named', 'nan', 'inf', 'none', 'true', 'false', 'gauss', 'gaussian',
+            'uniform', 'normal', 'min', 'max', 'mean', 'stddev', 'count'}
 
 _FIELD_MAP = None
 

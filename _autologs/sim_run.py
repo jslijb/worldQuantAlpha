@@ -41,126 +41,29 @@ def w(s=''):
 batch = json.load(io.open(ROOT / A.batches, encoding='utf-8'))
 batch = batch[A.offset:A.offset + A.limit]
 
-# ------------------------------------------------------------------ 构造深度门
-# 2026-11-16 李工批评（事实）：11-15 那批"新数据集 ATOM 批"21 条 S 全部 -1.27~0.67，
-# 我据此下结论"新数据集过不了门、只能靠量价续命" —— 那是**用浅构造测高价值数据**，
-# 再拿测试结果当事实。根因：那批表达式是"各字段独立归一化后任意符号相加"，
-# 字段之间的关系被抹掉（21 条里只有 3 条含比值/乘法/条件）。
+# ------------------------------------------------------------------ 生产门控（统一内核）
+# ★ 2026-11-16 重构：原来这里有 4 段各自 try/except 的门控代码（深度门 / VF 门 / 多样性门 / 禁令门缺席）。
+#   体检发现 **op_ban 禁令门从未被执行**（op_ban.guard_batch 全项目零调用，sim_run.py 也没 import op_ban）
+#   ⇒ 李工 11-15 12:55「group_rank 禁 10 天」的硬禁令在唯一发模拟通道上形同虚设。
 #
-# 本门拦的是"浅构造"：D1 无字段间关系算子 / D2 变换层数 <2 / D3 独立归一化直接相加。
-# 校准：台账 359/360 PASS、11-15 那批 3/21 PASS、活样板 6/6 PASS（见 _grid/depth_check.py）。
-#
-# ★ 它是必要条件不是充分条件：过了深度门 ≠ 过平台门（深度门 PASS 的 11-15 三条 S 仍 -0.35~0.14）。
-# ★ 纪律：**禁止用浅构造的结果给数据集/字段判死刑**；要判死刑必须先跑深构造。
-sys.path.insert(0, str(ROOT / '_grid'))
+# 现在全部收敛到 src/core/wq_core.py：
+#   深度门 / 算子禁令门 / VF对齐门(7/8/9) / ATOM门 / 多样性门
+# 新增任何门必须 wq_core.register_gate()，否则不会执行 —— 杜绝"建好放那空着"。
+sys.path.insert(0, str(ROOT / 'src'))
+sys.path.insert(0, str(ROOT / 'src' / 'core'))
 try:
-    import depth_check as DC
-    _probe = all(str(b.get('cid', '')).startswith(('SYN_', 'TEST_', 'EXP_')) for b in batch)
-    _shallow = []
-    for _b in batch:
-        _code = _b.get('code') or _b.get('expr') or ''
-        _ok, _d = DC.check(_code)
-        if not _ok:
-            _shallow.append((_b.get('cid', ''), _d))
-    if _shallow:
-        w('')
-        w('!!! 构造深度门：%d / %d 条被判浅构造' % (len(_shallow), len(batch)))
-        for _cid, _d in _shallow:
-            w('    %-38s 算子=%-3d 层数=%-2d | %s' % (
-                str(_cid)[:38], _d['算子数'], _d['变换层数'], '; '.join(_d['不合格原因'])))
-        if _probe:
-            w('（结构探测 SYN_/TEST_/EXP_ 前缀，仅警告放行、不计入生产记账）')
-        else:
-            w('')
-            w('!!! 构造深度门 BLOCK：本批不发。')
-            w('!!! 处理办法：把字段做成关系（比值/差/条件/相关性）+ 反复变换（差分后除波动、'
-              '均值差再归一），不要用"各字段独立归一化后相加"。')
-            w('!!! 参考模板：_grid/atom_complex.py 的 C1~C6。')
-            O.close()
-            sys.exit(4)
-    else:
-        w('构造深度门: PASS')
-except SystemExit:
-    raise
+    import wq_core
 except Exception as _e:
-    w('构造深度门加载失败，按失败关闭（不放行）: %r' % (_e,))
+    w('!!! 门控内核 wq_core 加载失败，按失败关闭（不放行）: %r' % (_e,))
     O.close()
-    sys.exit(5)
+    sys.exit(4)
 
-# ------------------------------------------------------------------ VF 对齐门 7/8/9
-# 2026-11-16 李工逻辑验证（论坛原文 + 我们台账实测）：
-#   主帖 44770798147735：Genius 六维 Tie-Breaker 考核「每条 Alpha 平均使用的不同字段数
-#     越低越好（单字段 ATOM 可压到 1）」+「全季度不同字段总数越高越好」。
-#   VF 复盘帖 44645223044247：atom 比例 高 VF 81.7% → 低 VF 50.5%（VF 0.97→0.39）；
-#     「VF 下跌不是从某条 alpha 的 Fitness 变低开始的，而是从提交集合里 atom 变少开始的」。
-#   我们台账实测：每条平均 7.73 个字段、单字段仅 1.7%、atom 比例 2.8%（9~10 月 0.6~0.7%）
-#   ⇒ 与 VF 方向完全相反，原有 DIMS 缺"单条字段数"维度是结构性缺口。
-#
-# 门7 每条 alpha 字段数 ≤2 | 门8 每批 ≥2 个台账未用字段 | 门9 本批 atom 占比 ≥50%
-sys.path.insert(0, str(ROOT / '_grid'))
-try:
-    import diversity as DIV
-    _ledger = ROOT / 'data/alpha_quality_analysis/SUBMITTED_LEDGER.csv'
-    _ok3, _vio3, _lines3 = DIV.gate_vf(batch, ledger=str(_ledger), verbose=False)
-    for _L in _lines3:
-        w(_L)
-    if not _ok3:
-        w('')
-        w('!!! VF 对齐门（7/8/9）BLOCK：%d 处不合规' % len(_vio3))
-        for _tag, _who, _why in _vio3:
-            w('    [%s] %s：%s' % (_tag, _who, _why))
-        w('')
-        w('!!! 处理办法：')
-        w('    门7 ⇒ 每条 alpha 的不同字段数降到 ≤2（单字段 ATOM 最优，平台评分要求）。')
-        w('    门8 ⇒ 每批至少引入 2 个台账从没碰过的字段（Total distinct Fields 越高越好）。')
-        w('    门9 ⇒ 本批 atom（单数据集）占比 ≥50%（论坛低 VF 线 50.5%）。')
-        w('!!! 注意：「算子多/字段多」不是深度的证明 —— 深度应来自同一字段的反复变换。')
-        O.close()
-        sys.exit(6)
-    else:
-        w('VF对齐门(7/8/9): PASS')
-except SystemExit:
-    raise
-except Exception as _e:
-    w('VF 对齐门加载失败，按失败关闭（不放行）: %r' % (_e,))
+_gok, _rep = wq_core.run_gates(batch)
+for _L in _rep:
+    w(_L)
+if not _gok:
     O.close()
-    sys.exit(7)
-
-# ------------------------------------------------------------------ 多样性门
-# 李工 2026-11-15 13:02：「提交模拟的时候需要加一层...多样性检查」
-# 默认硬拦：任何维度单项份额超上限就整批不发。唯一例外是 cid 以 SYN_/TEST_
-# 开头的语法探针（只验证算子语法/权限，不进 alpha 生产口径），这类只警告。
-sys.path.insert(0, str(ROOT / '_grid'))
-try:
-    import diversity as DIV
-    _probe = all(str(b.get('cid', '')).startswith(('SYN_', 'TEST_', 'EXP_')) for b in batch)
-    _ok, _vio, _lines = DIV.gate(batch, verbose=True)
-    for _L in _lines:
-        w(_L)
-    if not _ok and getattr(A, 'no_gate', False):
-        # 2026-11-15 23:00 加：门的分母是「当期累计使用次数」，建库初期只有 22，
-        # 10% 上限 = 2.2 次 ⇒ 任何 8 条以上的批在 operator 维必然超限，结构性无解。
-        # 该开关会把超限明细原样写进日志留痕，不做静默绕过。
-        w('')
-        w('!!! --no-gate 已指定：多样性门 BLOCK %d 处，本批强制放行（明细见上）。' % len(_vio))
-        w('!!! 原因：分母=当期累计，建库初期过小；超限明细已完整留痕。')
-    elif not _ok and not _probe:
-        w('')
-        w('!!! 多样性门 BLOCK：%d 处超限，本批不发。' % len(_vio))
-        w('!!! 处理办法：补数据集/补 idea/换外壳/补未用算子，'
-          '不要改阈值。')
-        O.close()
-        sys.exit(2)
-    elif not _ok and _probe:
-        w('（结构探测 SYN_/TEST_/EXP_ 前缀，仅警告放行、不计入生产记账）')
-    elif _ok:
-        w('多样性门: PASS')
-except SystemExit:
-    raise
-except Exception as _e:
-    w('多样性门加载失败，按失败关闭（不放行）: %r' % (_e,))
-    O.close()
-    sys.exit(3)
+    sys.exit(4)
 
 w('待模拟 %d 条（offset=%d limit=%d），并发 %d'
   % (len(batch), A.offset, A.limit, A.conc))
@@ -326,4 +229,13 @@ good = [p for p in parsed if p[0] >= 4.2 and p[5] <= 0.20]
 w('  共 %d 条' % len(good))
 for p in good[:25]:
     w('  %-9s SF=%.2f S=%.2f F=%.2f TO=%.3f  %s' % (p[2], p[0], p[3], p[4], p[5], p[1]))
+
+# ★ 11-16 新接：多样性库记账（此前 diversity.commit 从未被调用 ⇒ live 库永远 10 条
+#   ⇒ 门控分母永远不够 ⇒ 门数学无解、11-15 全部批次靠 --no-gate 硬绕）。
+#   在"门控已通过 + 模拟已发出"之后记账，live 库才填得起来、门才真能拦。
+try:
+    _cok, _cmsg = wq_core.commit_batch(batch, tag=A.batches)
+    w('多样性库记账: %s' % _cmsg)
+except Exception as _ce:
+    w('多样性库记账异常（不影响已发模拟）: %r' % (_ce,))
 O.close()

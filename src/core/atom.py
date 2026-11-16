@@ -136,13 +136,33 @@ _FIELD_MAP = None
 
 
 def _load_field_map():
-    """合并本地各市场 data-fields 缓存：{字段名: 数据集id}。"""
+    """合并本地各市场 data-fields 缓存：{字段名: 数据集id}。
+
+    ★ 11-16 修复：`all_fields_*.json`（26333 条）覆盖不全，缺 `beta_prediction_dispersion`
+      等字段 ⇒ dataset_of() 返 None ⇒ judge() 误判"无法判定数据集归属" ⇒ ATOM 门误杀。
+      新增 `src/core/pull_field_map.py` 从平台 GET /data-fields 拉**权威**全量映射，
+      落 `field_ds_map.json`（合并版）+ `field_ds_map_by_region.json`（分区域版）。
+      优先级：平台权威合并表 > all_fields_*.json > 硬编码前缀。
+    """
     global _FIELD_MAP
     if _FIELD_MAP is not None:
         return _FIELD_MAP
     import glob
     d = os.path.join(PROJ, 'data', 'alpha_quality_analysis')
     m = {}
+
+    # ① 平台权威合并表（11-16 新增，最优先）
+    for name in ('field_ds_map.json',):
+        p = os.path.join(d, name)
+        if os.path.exists(p):
+            try:
+                for k, v in (json.load(io.open(p, encoding='utf-8')) or {}).items():
+                    if v:
+                        m.setdefault(k.lower(), v)
+            except Exception:
+                pass
+
+    # ② 历史 all_fields_*.json（补缺，不覆盖①）
     for p in glob.glob(os.path.join(d, 'all_fields_*.json')):
         try:
             for name, meta in json.load(io.open(p, encoding='utf-8')).items():
@@ -151,8 +171,32 @@ def _load_field_map():
                     m.setdefault(name.lower(), ds)
         except Exception:
             pass
+
     _FIELD_MAP = m
     return m
+
+
+_FIELD_MAP_BY_REGION = None
+
+
+def load_field_map_by_region(region):
+    """{region: {字段名: dataset_id}}。11-16 新增：修跨市场串味。
+
+    同一字段名在不同 region 可能属不同数据集；合并表只留第一个命中 ⇒ 串味。
+    判定时按表达式所在 region 查分区域表，查不到再回落合并表。
+    """
+    global _FIELD_MAP_BY_REGION
+    if _FIELD_MAP_BY_REGION is None:
+        p = os.path.join(PROJ, 'data', 'alpha_quality_analysis',
+                         'field_ds_map_by_region.json')
+        if os.path.exists(p):
+            try:
+                _FIELD_MAP_BY_REGION = json.load(io.open(p, encoding='utf-8')) or {}
+            except Exception:
+                _FIELD_MAP_BY_REGION = {}
+        else:
+            _FIELD_MAP_BY_REGION = {}
+    return _FIELD_MAP_BY_REGION.get((region or '').upper(), {})
 
 
 def atom_from_platform(alpha):

@@ -313,6 +313,13 @@ def parse_alpha(a):
         v = st.get(k)
         if v is None:
             v = a.get(alt)
+        # ★ 11-16 修复：批次生成器把 decay/neutralization/truncation/universe 放在**顶层**
+        #   （sim_run.py 逐条读 item.get(k)），而 pick() 只查 st 和 alt 短名
+        #   （'dec'/'neu'/'trunc'/'uni'）⇒ 全部记成 '?' ⇒ 多样性门把
+        #   "本批所有件同参数"误判成超限（假超限），且真实的多样性维度完全失效。
+        #   现在按「顶层同名键」再查一次。
+        if v is None:
+            v = a.get(k)
         return '?' if v is None else str(v)
 
     # idea：必须显式登记。
@@ -343,9 +350,31 @@ def _cap_share(dim):
     return max(base, (1.0 / n) if n else 0.0), base, n
 
 
-def gate(batch, basis='live', verbose=True):
+def gate(batch, basis='auto', verbose=True):
+    """批次多样性门。
+
+    ★ 11-16 修正（真 bug，生产上从未真正拦过）：
+      旧实现固定 basis='live'，而 live 事件表自 11-15 规则生效起只有 **81 条**，
+      分母 T 只有 10~34 ⇒ 任何 ≥6 条的批在 operator/neutralization/decay 维必然超限
+      ⇒ **数学上无解**。实测 11-15 全部批次都是靠 `--no-gate` 强制放行的
+      （_sim_atom1115/_sim_lowto*/_sim_lowto10/11/2..9 各 BLOCK 6~13 处照放），
+      所以"多样性硬门"在生产上一次都没真正生效 —— 这正是李工说的"规则只是表面执行"。
+
+    ★ 11-16 二次修正（口径）：
+      改用 lifetime（历史全量 8579+）做分母后，`universe/neutralization/decay` 三维
+      因**历史存量集中**永远超限（TOP3000 79.2% / SUBINDUSTRY 77.2% / decay=10 57.9%），
+      任何新批都过不了 ⇒ 又一次"规则表面执行"。
+      按李工 11-15 定的规矩「**不设历史欠账、不追补**」，这三个**回测参数维度**
+      的历史集中度是既有事实、不该由新批偿还。
+      ⇒ 口径定为：**live 窗口（规则生效后的近期使用）+ 本批** 作分母；
+        lifetime 全量降级为**诊断线（只报警不拦）**，在 lines 里输出供人工判断。
+      阈值一律不改（10% 硬线 + 物理下限 1/N）。
+
+    basis='auto'（默认）= live+本批；'live'/'lifetime'/'history' 可显式指定。
+    """
     if not batch:
         return True, [], ['空批次']
+
     add = {}
     for a in batch:
         for dim, d in parse_alpha(a).items():
@@ -353,7 +382,22 @@ def gate(batch, basis='live', verbose=True):
             for k, v in d.items():
                 add[dim][k] = add[dim].get(k, 0) + v
 
+    # ★ 口径选择：auto ⇒ live 窗口（本批 + 规则生效后近期）。
+    #   lifetime 只做诊断线，不参与拦截。
+    _use_lifetime = (basis == 'lifetime')
+    _live_tot = sum(sum(_counts(d, 'live').values()) for d in DIMS)
+    _lt_tot = sum(sum(_counts(d, 'lifetime').values()) for d in DIMS)
+    if basis == 'auto':
+        basis = 'live'
+    _switched = []
+    if not _use_lifetime and _live_tot < 30 and _lt_tot > _live_tot:
+        _switched = ['live 窗口仅 %d 条（分母过小，live 口径下批内项必然超限）'
+                     '⇒ 本次以 live+本批 口径判定，并在下方给出 lifetime 历史集中度诊断线'
+                     % _live_tot]
+
     violations, lines = [], []
+    for _s in _switched:
+        lines.append('口径: %s' % _s)
     for dim in DIMS:
         hist = _counts(dim, basis)
         share, base, N = _cap_share(dim)
@@ -389,19 +433,50 @@ def gate(batch, basis='live', verbose=True):
             for dim, item, cnt, T, s, share in violations:
                 print('  [%s] %s = %d/%d = %.1f%% > %.1f%%'
                       % (dim, DIM_CN.get(dim, dim), cnt, T, s * 100, share * 100))
+
+    # ★ lifetime 诊断线（只报警不拦）：历史全量口径下的集中度，供人工判断欠账。
+    if not _use_lifetime and _lt_tot > 0:
+        lines.append('')
+        lines.append('--- lifetime 历史集中度诊断线（只报警，不拦批）---')
+        for dim in DIMS:
+            h = _counts(dim, 'lifetime')
+            if not h:
+                continue
+            share, base, N = _cap_share(dim)
+            T = sum(h.values())
+            worst_i, worst = max(h.items(), key=lambda kv: kv[1])
+            flag = '⚠ 历史欠账' if (worst / T) > share else ''
+            lines.append('  %-15s 最重 %-18s %6.1f%% (限 %.1f%%) %s'
+                         % (dim, str(worst_i)[:18], 100.0 * worst / T, share * 100, flag))
+        lines.append('  说明：以上是历史存量集中度，按李工 11-15「不设历史欠账、不追补」'
+                     '不由本批偿还；新批只受上表 live+本批 口径约束。')
     return not violations, violations, lines
 
 
-def commit(batch, tag=None, basis='live'):
-    ok, _, _ = gate(batch, basis=basis, verbose=False)
-    if not ok:
-        raise RuntimeError('批次未过多样性门，拒绝记账')
+def commit(batch, tag=None, basis='live', check=True, dims=None):
+    """把本批的使用记进 event 表（live 口径 = 规则生效后的累计使用）。
+
+    ★ 11-16 修复：`commit()` 全项目**从未被调用过**（只 import 了 diversity 的
+      gate/gate_vf），⇒ live event 表自 11-15 建库起只有 10 条 ⇒
+      门控分母 T=10+本批数 ⇒ 任何 ≥6 条的批必然超限 ⇒ **门数学上无解**。
+      ⇒ 现在由 `src/core/wq_core.py:commit_batch()` 在**门控通过、模拟已发**后调用。
+
+    check=True 时先自查是否过门（防止把没过的批记进库）。
+    dims=None 记全部维度；给元组则只记这些维度
+      （回灌历史件时用：dataset/idea 维度历史件数据不全，灌进去会造 '?' 假最重项）。
+    """
+    if check:
+        ok, _, _ = gate(batch, basis=basis, verbose=False)
+        if not ok:
+            raise RuntimeError('批次未过多样性门，拒绝记账')
     c = conn()
     tag = tag or datetime.now().strftime('%Y%m%d_%H%M')
     ts = datetime.now().isoformat(timespec='seconds')
     for a in batch:
         cid = a.get('cid') or a.get('id') or ''
         for dim, d in parse_alpha(a).items():
+            if dims and dim not in dims:
+                continue
             for k, v in d.items():
                 c.execute("INSERT INTO event(ts,cid,batch,dim,item,n,basis) VALUES(?,?,?,?,?,?,?)",
                           (ts, cid, tag, dim, str(k), v, basis))

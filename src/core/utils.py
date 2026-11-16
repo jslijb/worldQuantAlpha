@@ -12,7 +12,9 @@ for _d in [_p.parent, *_p.parents]:
 import requests
 import json
 import time
-import pandas as pd
+# 2026-11-13：pandas 只在 get_datafields() 里用。顶层 import 会让系统 python
+# （无 pandas）连 submit_and_confirm 都 import 不了，整条提交链直接崩。
+# 改为函数内 lazy import，让提交流程不依赖 pandas。
 from os.path import expanduser
 from requests.auth import HTTPBasicAuth
 
@@ -88,6 +90,7 @@ def get_datafields(s, searchScope, dataset_id='', search=''):
         time.sleep(1)  # 请求间隔，避免触发限流
 
     datafields_list_flat = [item for sublist in datafields_list for item in sublist]
+    import pandas as pd
     datafields_df = pd.DataFrame(datafields_list_flat)
     return datafields_df
 

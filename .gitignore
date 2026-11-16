@@ -32,6 +32,20 @@ env/
 # 定位为"运行产物"，不进版本历史。需长期保留的工具脚本先搬进 src/ 再忽略。
 _autologs/
 
+# 但 _autologs/sim_run.py 是**发模拟的唯一通道**（所有批次都从这儿过），
+# 2026-11-16 起纳入版本控制：门控逻辑改动必须留 diff。
+!_autologs/sim_run.py
+
+# ---------- _grid/ 的数据缓存与一次性产物（保留核心门控代码的版本化） ----------
+# 2026-11-16 修正：此前 _grid/ 整体未被跟踪，导致核心门控代码
+# （op_ban / diversity / depth_check / batch_gen / transforms / atom_complex / corr_gate）
+# 的任何改动都没有 diff、没有回滚、没有历史 —— 这正是"改了但没人看得见"的结构性成因。
+# 现在：门控代码显式纳入版本控制（见下方 ! 规则），只忽略缓存与大体积产物。
+_grid/*
+!_grid/*.py
+!_grid/exp_deep_vs_shallow_1116.json
+!_grid/markets.json
+
 # ---------- 工具缓存 / IDE ----------
 .codegraph/
 .codeartsdoer/

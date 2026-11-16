@@ -1,0 +1,62 @@
+[
+ {
+  "cid": "EXP_A1_option9_shallow",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(pcr_oi_10,60) - ts_zscore(pcr_oi_360,250) + ts_rank(ts_av_diff(pcr_oi_120,20),120),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_A2_option9_deep",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(ts_av_diff(pcr_oi_10,20)/ts_std_dev(pcr_oi_10,60),250) + ts_zscore(ts_av_diff(pcr_oi_360,60)/ts_std_dev(pcr_oi_360,250),250) - ts_zscore(ts_av_diff(pcr_oi_120,20)/ts_std_dev(pcr_oi_120,120),250),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_B1_social12_shallow",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(snt_buzz,60) - ts_zscore(snt_value,120) + ts_rank(scl12_sentiment,250) - ts_mean(snt_buzz_ret,20),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_B2_social12_deep",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(ts_av_diff(snt_buzz,20)/ts_std_dev(snt_buzz,60),250) - ts_zscore(ts_av_diff(snt_value,60)/ts_std_dev(snt_value,250),250) + ts_zscore(ts_av_diff(scl12_sentiment,20)/ts_std_dev(scl12_sentiment,250),250) - ts_zscore(ts_av_diff(snt_buzz_ret,20)/ts_std_dev(snt_buzz_ret,60),250),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_C1_mmp_shallow",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(afinn_positive_sentiment_count - afinn_negative_sentiment_count,120) + ts_rank(afinn_sentiment_score_total,250) - ts_mean(ts_zscore(afinn_positive_word_count,60),20),15),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_C2_mmp_deep",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(ts_av_diff(afinn_positive_sentiment_count,20)/ts_std_dev(afinn_positive_sentiment_count,120),250) - ts_zscore(ts_av_diff(afinn_negative_sentiment_count,20)/ts_std_dev(afinn_negative_sentiment_count,120),250) + ts_zscore(ts_av_diff(afinn_sentiment_score_total,60)/ts_std_dev(afinn_sentiment_score_total,250),250),15),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_D1_anlrev_shallow",
+  "code": "group_zscore(ts_decay_linear(ts_rank(analyst_count_decreasing_annual_eps_14d_short,60) - ts_rank(analyst_count_decreasing_annual_revenue_14d_long,250) + ts_zscore(analyst_count_decreasing_annual_eps_30d_medium,120),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_D2_anlrev_deep",
+  "code": "group_zscore(ts_decay_linear(-ts_zscore(ts_av_diff(analyst_count_decreasing_annual_eps_14d_short,20)/ts_std_dev(analyst_count_decreasing_annual_eps_14d_short,120),250) + ts_zscore(ts_av_diff(analyst_count_decreasing_annual_revenue_14d_long,60)/ts_std_dev(analyst_count_decreasing_annual_revenue_14d_long,250),250) + ts_zscore(ts_av_diff(analyst_count_decreasing_annual_eps_30d_medium,20)/ts_std_dev(analyst_count_decreasing_annual_eps_30d_medium,120),250),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_E1_aieq_shallow",
+  "code": "group_zscore(ts_decay_linear(ts_rank(accruals_intensity_score,250) - ts_zscore(analyst_coverage_breadth,250) + ts_rank(analyst_earnings_revision_score,120),15),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_E2_aieq_deep",
+  "code": "group_zscore(ts_decay_linear(ts_zscore(ts_av_diff(accruals_intensity_score,20)/ts_std_dev(accruals_intensity_score,250),250) - ts_zscore(ts_av_diff(analyst_coverage_breadth,60)/ts_std_dev(analyst_coverage_breadth,250),250) + ts_zscore(ts_av_diff(analyst_earnings_revision_score,20)/ts_std_dev(analyst_earnings_revision_score,120),250),15),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_F1_model109_shallow",
+  "code": "group_zscore(ts_decay_linear(-ts_rank(accruals_percentage_earnings,250) + ts_zscore(analyst_recommendation_diffusion_1m,60) + ts_rank(analyst_revenue_revision_ntm_1m,120),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ },
+ {
+  "cid": "EXP_F2_model109_deep",
+  "code": "group_zscore(ts_decay_linear(-ts_zscore(ts_av_diff(accruals_percentage_earnings,60)/ts_std_dev(accruals_percentage_earnings,250),250) + ts_zscore(ts_av_diff(analyst_recommendation_diffusion_1m,20)/ts_std_dev(analyst_recommendation_diffusion_1m,120),250) + ts_zscore(ts_av_diff(analyst_revenue_revision_ntm_1m,20)/ts_std_dev(analyst_revenue_revision_ntm_1m,120),250),10),subindustry)",
+  "settings": {"instrumentType":"EQUITY","region":"USA","universe":"TOP3000","delay":1,"decay":20,"neutralization":"MARKET","truncation":0.08,"pasteurization":"ON","unitHandling":"VERIFY","nanHandling":"ON","maxTrade":"OFF","maxPosition":"OFF","language":"FASTEXPR","visualization":false,"startDate":"2014-01-01","endDate":"2023-12-31","testPeriod":"P1Y","simulationMode":"FULL"}
+ }
+]

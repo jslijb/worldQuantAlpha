@@ -74,14 +74,42 @@ def _ops(expr):
 
 
 def has_relation(expr):
-    """D1：是否含字段间关系算子。"""
+    """D1：是否含字段间关系。
+
+    关系的三种形态（缺一即视为无关系）：
+      R1 算子型：ts_corr / ts_regression / if_else / trade_when / bucket
+      R2 符号型比值与乘积：'/' '*'
+      R3 **字段间直接相减**（'a - b'，两个字段相减本身就是关系，
+         如期限差 `pcr_oi_10 - pcr_oi_360`、价差 `call - put`）——
+         ★ 2026-11-16 修正：原先 D1 只认 R1/R2，把「两期限直接相减」误判为无关系。
+         活样板 `QPK3n9Zw` 的第二个腿 `implied_volatility_call_90 - implied_volatility_call_30`
+         正是期限差，误杀会导致深度门不可信。
+
+    判定 R3 时要排除「同一个归一化结果内部的减号」与「窗口参数里的负号」，
+    做法：去掉所有窗口参数 `(x,250)` 的第二个参数后再找顶层减号。
+    """
     ops = set(_ops(expr))
     if ops & set(REL_OPS):
         return True, sorted(ops & set(REL_OPS))
-    # 符号级：除号/乘号（排除 settings 里的 driver= 等）
-    body = expr
-    hit = [s for s in REL_SYMBOLS if s in body]
-    return (bool(hit), hit)
+    if any(s in expr for s in REL_SYMBOLS):
+        return True, [s for s in REL_SYMBOLS if s in expr]
+
+    # R3：找减号两侧都是「字段/表达式」的位置（不限括号深度，
+    # 但要排除窗口参数 `(x,250)` 里的负号与纯数字相减）。
+    # 实现：把表达式按所有加减号切开，看两侧是否都含字母标识符。
+    body = re.sub(r'"[^"]*"', '""', expr)
+    # 去掉窗口参数（逗号后紧跟数字的第二个参数）
+    body2 = re.sub(r',\s*-?\d+\s*\)', ')', body)
+    parts = re.split(r'(?<![\w)])-(?![\w(])', body2)
+    if len(parts) >= 2:
+        for i in range(len(parts) - 1):
+            l, r = parts[i].strip(), parts[i + 1].strip()
+            # 两侧都要含标识符（排除 1-0 这种纯数字）
+            lt = re.findall(r'[A-Za-z_][A-Za-z0-9_]*', l)
+            rt = re.findall(r'[A-Za-z_][A-Za-z0-9_]*', r)
+            if lt and rt:
+                return True, ['-']
+    return False, []
 
 
 def transform_layers(expr):

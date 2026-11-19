@@ -62,6 +62,15 @@ pytest tools/tests -q
 pytest alpha_loop/tests -q
 ```
 
+## 版本控制（重要，容易漏）
+
+- 根 `.gitignore` 忽略了 `.codeartsdoer/`，本 skill 目录是用 `git add -f` 强行入库的。
+  ⇒ **新增 skill 文件时必须显式 `git add -f <path>`**，否则 `git status` 看不到，
+  自动维护产物（快照/CHANGELOG）不会进版本历史。
+- `scripts/__pycache__/` 不得入库（曾因 `add -f` 整个目录被误提交，已用一次独立提交修掉）。
+- 提交前必查：`git diff --cached --name-only | grep -iE "credential|pw_cookies|session\.json|pw_profile"`，必须为空。
+- `alpha_loop/state/`（168M，含浏览器 profile 与登录态）永远不入库。
+
 ## 配额节奏
 
 - **配额窗口：北京时间 14:00**（用户实测确认；不要按"美东 0 点 ≈ 北京 13:00"推算，那个换算不成立）。

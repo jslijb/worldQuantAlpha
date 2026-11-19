@@ -23,7 +23,7 @@ from concurrent.futures import ThreadPoolExecutor
 ap = argparse.ArgumentParser()
 ap.add_argument('batches')
 ap.add_argument('--limit', type=int, default=50)
-ap.add_argument('--conc', type=int, default=6)
+ap.add_argument('--conc', type=int, default=1)
 ap.add_argument('--offset', type=int, default=0)
 ap.add_argument('--sleep', type=float, default=3.0)
 ap.add_argument('--out', default='_autologs/_sim_run.txt')
@@ -32,14 +32,54 @@ ap.add_argument('--no-gate', dest='no_gate', action='store_true',
                      '规则结构性无法放行的补量批次')
 A = ap.parse_args()
 
+# ★★★ 2026-11-17 李工纪律第 5 条（硬约束）：回测/提交一律串行，禁止并发。
+# 平台并发 3 留给其他任务；发到服务器的模拟一次只发一件，串行不慢于并发。
+if A.conc != 1:
+    print('!!! 纪律第5条：回测禁止并发 —— --conc 只能为 1（当前=%d）。拒绝执行，exit 5。' % A.conc)
+    sys.exit(5)
+
 MINED = ROOT / 'data/alpha_quality_analysis/mined'
 MINED.mkdir(parents=True, exist_ok=True)
 O = io.open(ROOT / A.out, 'w', encoding='utf-8')
 def w(s=''):
-    O.write(str(s) + '\n'); O.flush(); print(s, flush=True)
+    O.write(str(s) + '\n'); O.flush()
+    try:
+        print(s, flush=True)
+    except UnicodeEncodeError:
+        print(s.encode('gbk', errors='replace').decode('gbk', errors='replace'), flush=True)
 
 batch = json.load(io.open(ROOT / A.batches, encoding='utf-8'))
 batch = batch[A.offset:A.offset + A.limit]
+
+# ★★★ 2026-11-17 纪律第 5 条：全局回测锁 —— 全项目任何时刻只允许一个回测进程在途。
+# 拿不到锁直接退出；锁文件带 PID；>6 小时视为死进程遗留，接管并留痕。
+import atexit
+LOCK = ROOT / '_grid' / 'locks' / 'backtest.lock'
+def _bt_release():
+    try:
+        LOCK.unlink()
+    except OSError:
+        pass
+atexit.register(_bt_release)
+LOCK.parent.mkdir(parents=True, exist_ok=True)
+_got = False
+for _i in range(2):
+    try:
+        _fd = _os.open(str(LOCK), _os.O_CREAT | _os.O_EXCL | _os.O_WRONLY)
+        with _os.fdopen(_fd, 'w') as _f:
+            _f.write('pid=%d %s' % (_os.getpid(), time.strftime('%Y-%m-%d %H:%M:%S')))
+        _got = True
+        break
+    except FileExistsError:
+        _age = time.time() - LOCK.stat().st_mtime
+        if _age > 6 * 3600:
+            print('!!! 回测锁已遗留 %.1f 小时，按死进程遗留接管' % (_age / 3600.0))
+            _bt_release()
+            continue
+        break
+if not _got:
+    print('!!! 纪律第5条：已有回测在途（锁 %s），本进程退出。' % LOCK)
+    sys.exit(5)
 
 # ------------------------------------------------------------------ 生产门控（统一内核）
 # ★ 2026-11-16 重构：原来这里有 4 段各自 try/except 的门控代码（深度门 / VF 门 / 多样性门 / 禁令门缺席）。
@@ -119,24 +159,44 @@ def one(item):
             st[k] = item[k]
     payload = {'type': 'REGULAR', 'settings': st, 'regular': code}
     loc = None
-    for att in range(6):
+    for att in range(12):
         try:
             r = s.post('https://api.worldquantbrain.com/simulations', json=payload, timeout=90)
         except Exception as e:
             time.sleep(4); continue
         if r.status_code ==429:
+            # ★ 11-17 21:1x 实测：平台有**并发模拟上限**，超了返
+            #   CONCURRENT_SIMULATION_LIMIT_EXCEEDED。之前只重试 6 次 × 20s 就放弃，
+            #   而且失败信息要等整批跑完才打印 ⇒ 表现为「模拟静默卡死 5 小时」。
             ra = r.headers.get('Retry-After')
+            try:
+                detail = (r.json() or {}).get('detail', '')
+            except Exception:
+                detail = ''
+            if 'CONCURRENT_SIMULATION_LIMIT' in str(detail):
+                time.sleep(30 + att * 10)      # 平台并发满 ⇒ 退得更久
+                continue
             time.sleep(min(float(ra or 8), 20)); continue
         if r.status_code not in (200, 201):
-            return (cid, None, 'HTTP%s %s' % (r.status_code, r.text[:160]))
+            msg = 'HTTP%s %s' % (r.status_code, r.text[:160])
+            try:
+                w('%-46s %-9s %s' % (cid, '-', msg))     # ★ 失败也立即打印，别再静默
+            except Exception:
+                pass
+            return (cid, None, msg)
         loc = r.headers.get('Location')
         if not loc:
             # 平台 2xx 却不给 Location：把状态码+响应头+正文全留下，否则查不出原因
             _hdr = {k: v for k, v in r.headers.items()
                     if k.lower() in ('retry-after', 'x-ratelimit-remaining',
                                      'x-ratelimit-limit', 'concurrency', 'content-type')}
-            return (cid, None, 'no_location http=%s hdr=%s body=%s'
-                    % (r.status_code, _hdr, (r.text or '')[:200]))
+            msg = 'no_location http=%s hdr=%s body=%s' % (
+                r.status_code, _hdr, (r.text or '')[:200])
+            try:
+                w('%-46s %-9s %s' % (cid, '-', msg))
+            except Exception:
+                pass
+            return (cid, None, msg)
         break
     if not loc:
         return (cid, None, 'no_location')
@@ -198,6 +258,13 @@ def one(item):
     TO = isx.get('turnover') or 0.0
     fails = [c.get('name') for c in (isx.get('checks') or [])
              if c.get('result') == 'FAIL']
+    # ★ 11-17 19:1x 修正：原来只在**整批跑完后**才逐条打印 ⇒ 48 条批跑了 5.5 小时
+    #   日志还是空的（人眼零反馈，等于挂死）。改成单条完成即落盘+打印。
+    try:
+        w('%-46s %-9s S=%.2f F=%.2f TO=%.3f FAIL=%s'
+          % (cid, aid, S, F, TO, fails or '无'))
+    except Exception:
+        pass
     return (cid, aid, 'S=%.2f F=%.2f SF=%.2f TO=%.3f tS=%s FAIL=%s'
             % (S, F, S + F, TO,
                ('%.2f' % (rec['test'].get('sharpe'))) if rec['test'].get('sharpe') else '-',
@@ -238,4 +305,5 @@ try:
     w('多样性库记账: %s' % _cmsg)
 except Exception as _ce:
     w('多样性库记账异常（不影响已发模拟）: %r' % (_ce,))
+_bt_release()
 O.close()

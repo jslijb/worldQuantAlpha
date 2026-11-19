@@ -52,7 +52,9 @@ while i < len(ARGV):
     a = ARGV[i]
     if a == '--file':
         i += 1
-        IDS += [x.strip() for x in io.open(ARGV[i], encoding='utf-8') if x.strip()]
+        # ★ 11-16 17:35 修 BUG：原代码 IDS += [裸字符串]，但下面按 (kind, val) 解包
+        #   ⇒ ValueError: too many values to unpack。文件里每行是 alpha id ⇒ 包成 ('ID', x)。
+        IDS += [('ID', x.strip()) for x in io.open(ARGV[i], encoding='utf-8') if x.strip()]
     elif a == '--cid':
         i += 1
         IDS.append(('CID', ARGV[i]))

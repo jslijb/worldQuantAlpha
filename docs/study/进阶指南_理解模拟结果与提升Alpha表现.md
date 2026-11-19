@@ -119,14 +119,14 @@ Fitness 是 Returns、Turnover 和 Sharpe 的综合函数。
 3. 使用 `ts_backfill` 处理缺失值，提高覆盖率。
 4. 多空数量不平衡时，用 `kth_element` 补齐。
 
-### 3.3 子宇宙 Sharpe 未达标
+### 3.3 子股票池 Sharpe 未达标
 
-子宇宙（Sub-universe）Sharpe 需要在不同股票子集里也都表现稳健。平台会按子宇宙规模动态降低门槛，但仍需超过阈值。
+**子股票池（Sub-universe，Sub-universe 字面直译是"子宇宙"，这里的真实意思就是"从大池子里切出来的更小一档股票池"）** 的 Sharpe 需要在不同股票子集里也都表现稳健。平台会按子池规模动态降低门槛，但仍需超过阈值。
 
 ![Sub-universe Sharpe 阈值公式](./docs/images/subuniverse_sharpe_thresholds.png)
 
 **解决思路**：
-- 扩大 Universe，选择 **Top3000** 而非更小的池子，增加样本量。
+- 扩大股票池（Universe），选择 **Top3000** 而非更小的池子，增加样本量。
 - 让 Alpha 在不同 sector / industry 都有信号覆盖，避免只在少数股票上有效。
 - 加 Market / Industry 中性化，降低行业集中度风险。
 
@@ -156,7 +156,7 @@ Fitness 是 Returns、Turnover 和 Sharpe 的综合函数。
 4. **失败三板斧**：
    - Sharpe 低 → 增强信号 / 降低波动。
    - 权重集中 → 加 rank / truncation / ts_backfill。
-   - 子宇宙 Sharpe 低 → 扩大 Universe / 加强中性化。
+   - 子股票池 Sharpe 低 → 扩大股票池 / 加强中性化。
 5. **单位警告不等于错误**：只要逻辑自洽，可忽略。
 
 ---
@@ -172,7 +172,7 @@ Fitness 是 Returns、Turnover 和 Sharpe 的综合函数。
 | Fitness 公式核心？ | `Sharpe * sqrt( abs(Returns) / max(Turnover, 0.125) )` |
 | 降低 Turnover 常用算子？ | `decay`、`hump`、`ts_decay_linear` |
 | 控制权重集中常用方法？ | `rank`、`truncation=0.1`、`ts_backfill` |
-| 子宇宙 Sharpe 不达标怎么办？ | 扩大 Universe 到 Top3000、加中性化 |
+| 子股票池 Sharpe 不达标怎么办？ | 扩大股票池（Universe）到 Top3000、加中性化 |
 | 单位警告是否阻止提交？ | 不会，仅作参考 |
 | Returns / Drawdown 分母为什么是 0.5*BookSize？ | BookSize=2000万，本金按1000万计算，杠杆2倍 |
 
@@ -191,4 +191,4 @@ Fitness 是 Returns、Turnover 和 Sharpe 的综合函数。
 | `drawdown_formula.png` | Drawdown 公式 |
 | `margin_formula.png` | Margin 公式 |
 | `is_testing_status.png` | IS Testing Status 失败示例 |
-| `subuniverse_sharpe_thresholds.png` | 子宇宙 Sharpe 阈值公式 |
+| `subuniverse_sharpe_thresholds.png` | 子股票池 Sharpe 阈值公式 |

@@ -38,6 +38,34 @@ sys.path.insert(0, os.path.join(ROOT, 'src'))
 
 GRPS = ('industry', 'subindustry', 'sector', 'exchange')
 
+# ★ 11-16 第一批实测教训（16078 件历史 TO 统计）：
+#   数据集      TO中位   TO<20%占比
+#   analyst4    0.074      92.9%
+#   analyst10   0.071      100.0%
+#   analyst15   0.116      100.0%
+#   pv13        0.103      93.7%
+#   fundamental6 0.136     77.7%
+#   fundamental2 0.132     92.4%
+#   news12      0.151      57.8%   ← news_prev_vol 实测 TO=0.9729，6 项 FAIL
+# ⇒ 这批先把低 TO 的数据集全排上。
+TO_PRIOR_LOW = {'analyst4', 'analyst10', 'analyst15', 'pv13',
+                'fundamental6', 'fundamental2'}
+
+# ★ 数据集优先级（按历史 TO 中位升序 = 最可能过 TO 门）：
+#   analyst10 0.071 < analyst4 0.074 < pv13 0.103 < analyst15 0.116
+#   < fundamental2 0.132 < fundamental6 0.136 < news12 0.151
+DS_PRIORITY = ['analyst10', 'analyst4', 'pv13', 'analyst15',
+               'fundamental2', 'fundamental6', 'fundamental23',
+               'model16', 'analyst49', 'analyst_factor_signals',
+               'news12', 'news18', 'model109', 'option8', 'model51',
+               'socialmedia12', 'mmp_nlp_sentiment', 'shortinterest29',
+               'web_traffic_engage', 'model23', 'ai_equity_alpha',
+               'earningscall_embed', 'predictive_starmine',
+               'analyst_revision_horizons', 'analyst_consensus',
+               'analyst44', 'analyst69', 'analyst27', 'analyst16',
+               'analyst11', 'analyst7', 'fundamental72', 'model23',
+               'multifactor_return_pred', 'pv20', 'tech_chart_model']
+
 # ---------------------------------------------------------------- 形态骨架
 # (形态名, 模板, idea_id, 机制说明)
 # 模板里 {F}=字段、{G}=分组字段。全部自带横截面处理（不用 group_rank）。
@@ -234,13 +262,32 @@ def main():
     for ds, fs in cand.items():
         if ds == 'pv1':            # 量价：拥挤格子，VF 边际信息为零
             continue
+        # ★ 11-16 第一批实测教训：news12 的 news_prev_vol 字段 TO=0.9729（6 项 FAIL）。
+        #   历史 TO 先验（实测 16078 件）：analyst4 中位 0.074 / analyst10 0.071 /
+        #   analyst15 0.116 / pv13 0.103 / fundamental6 0.136 / fundamental2 0.132 /
+        #   news12 0.151（且 TO<20% 只占 57.8%，其余都 77~100%）。
+        #   ⇒ **低 TO 数据集优先**，把高频新闻类往后排。
+        if ds not in TO_PRIOR_LOW:
+            continue
         for nm, cov, uc in fs:
             if nm in used:
                 continue
             if fmap.get(nm.lower()) not in (ds, None):
                 continue
             pool.append((ds, nm, cov, uc))
-    pool.sort(key=lambda x: (x[2], x[0]))
+    # 第二池：TO 风险高的数据集（news 类），排后面
+    for ds, fs in cand.items():
+        if ds in TO_PRIOR_LOW:
+            continue
+        for nm, cov, uc in fs:
+            if nm in used:
+                continue
+            if fmap.get(nm.lower()) not in (ds, None):
+                continue
+            pool.append((ds, nm, cov, uc))
+    # 排序：先按数据集优先级（TO 友好优先），同数据集内按 cov 升序（冷门优先）
+    _pri = {d: i for i, d in enumerate(DS_PRIORITY)}
+    pool.sort(key=lambda x: (_pri.get(x[0], 99), x[2]))
 
     random.seed(1116)
     batch = []

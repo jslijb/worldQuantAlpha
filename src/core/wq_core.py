@@ -34,7 +34,7 @@
     if not ok:
         raise SystemExit(4)
 """
-import os as _os, io, sys, json, time
+import os as _os, io, sys, json, time, re
 from pathlib import Path
 
 ROOT = Path(r'D:\Python\worldquant')
@@ -52,9 +52,15 @@ for _p in (str(ROOT), str(_GRID), str(_SRC), str(_SRC / 'core')):
 GATES = []
 
 
-def register_gate(name, fn, exit_code, remedy):
-    """注册一道门。**只有注册到这里的门才会被执行。**"""
-    GATES.append({'name': name, 'fn': fn, 'exit_code': exit_code, 'remedy': remedy})
+def register_gate(name, fn, exit_code, remedy, advisory=False):
+    """注册一道门。**只有注册到这里的门才会被执行。**
+
+    ★ 11-16 16:25（李工指令「我们的门控只有一个 Alpha 必须完全符合 ATOM」）：
+      advisory=True 的门 = **诊断项**：照常计算并写进报告，但**不阻断批次**。
+      唯一硬拦门 = ATOM 门（advisory=False）。
+    """
+    GATES.append({'name': name, 'fn': fn, 'exit_code': exit_code, 'remedy': remedy,
+                  'advisory': advisory})
     return fn
 
 
@@ -97,8 +103,53 @@ def _gate_opban(batch):
     return (not viol), viol, lines
 
 
+def _gate_mech(batch):
+    """机制门：每条候选必须带 mech（"在赌什么"）+ idea_id，且 idea 不能由模板名反推
+
+    ★ 11-16 17:00 新增。起因（李工 16:50 当面自审）：
+      「你看下这个表达式是**为了能够满足门控写的**，还是理解了这个 idea 觉得需要这么写？」
+
+      自审结论：Jj8gZxvA 是**为了满足门控写的**。三条硬证据：
+        1. tpl="C1_三腿时序共振"、idea_id="analyst7__C1_三腿时序共振"
+           ⇒ idea_id 是**从模板名反推**的（方向反了：应是 idea → 表达式）
+        2. 没有 mech 字段 ⇒ 绕过了 batch_gen.assert_mechanism
+        3. 字段语义错（act_q_ebi_surprisenum = 估计家数，被当惊喜值用）
+
+      ⇒ 这道门把"机制先行"落成代码级强制：
+        · 每条必须有 mech（一句话说清在赌什么），空 ⇒ 拦
+        · idea_id 必须显式给出，且**不得**等于 tpl/模板名（那是反推）
+        · idea_id 不得含模板编号形态（C1/C2/外壳名等）⇒ 拦
+    """
+    viol, lines = [], []
+    n_ok = 0
+    for b in batch:
+        cid = b.get('cid', '')
+        mech = (b.get('mech') or '').strip()
+        idea = (b.get('idea_id') or '').strip()
+        tpl = (b.get('tpl') or '').strip()
+        if not mech:
+            viol.append(('机制门', cid, '缺 mech（说不清在赌什么 = 字段堆砌）'))
+            continue
+        if not idea:
+            viol.append(('机制门', cid, '缺 idea_id（不能靠 cid 前缀凑）'))
+            continue
+        # idea_id 不得由模板名反推：模板名形态 = 含 C1/C2/C3 编号，或 idea_id == tpl
+        if tpl and idea == tpl:
+            viol.append(('机制门', cid, 'idea_id 与 tpl 相同 ⇒ 模板名反推 idea，方向反了'))
+            continue
+        if re.search(r'_C\d+', idea) or re.search(r'\bC[1-9]\b', idea):
+            viol.append(('机制门', cid,
+                         'idea_id 含模板编号形态 %r ⇒ 模板名反推 idea，方向反了' % idea))
+            continue
+        n_ok += 1
+    lines.append('机制门: %d/%d 条有 mech + 先行的 idea_id（PASS）'
+                 % (n_ok, len(batch)) if not viol
+                 else '机制门: %d/%d 条不合格（缺 mech / idea 反推）' % (len(viol), len(batch)))
+    return (not viol), viol, lines
+
+
 def _gate_vf(batch):
-    """门7 单 alpha 字段数 ≤2 / 门8 每批 ≥2 台账未用字段 / 门9 atom 占比 ≥50%"""
+    """门7 批次平均字段数 ≤8 / 门8 每批 ≥2 台账未用字段 / 门9 atom 占比 ≥50%"""
     import diversity as DIV
     ledger = ROOT / 'data/alpha_quality_analysis/SUBMITTED_LEDGER.csv'
     ok, viol, lines = DIV.gate_vf(batch, ledger=str(ledger), verbose=False)
@@ -128,13 +179,20 @@ def _gate_diversity(batch):
 
 
 def _gate_atom(batch):
-    """ATOM 判定：每条必须是单数据集（平台 SINGLE_DATA_SET 的本地等价物）"""
+    """ATOM 判定：每条必须是单数据集（平台 SINGLE_DATA_SET 的本地等价物）
+
+    ★ 11-17：按批次条目的 settings.region 传 region 给 judge()，
+      修 AGENTS.md §192 记录的老 bug（字段归属是 region 相关的，
+      不传 region ⇒ 走全局合并表 ⇒ cashflow_op 在 USA/EUR 归属串味）。
+    """
     from atom import judge
     viol, lines = [], []
     n_atom = 0
     for b in batch:
         code = b.get('code') or b.get('expr') or ''
-        ok, ds, why = judge(code)
+        st = b.get('settings') or {}
+        reg = st.get('region') or b.get('region')
+        ok, ds, why = judge(code, region=reg)
         if ok:
             n_atom += 1
         else:
@@ -143,19 +201,95 @@ def _gate_atom(batch):
     return (not viol), viol, lines
 
 
+# ---------------------------------------------------------------- 数据黑名单门（2026-11-17 李工纪律 2/3，硬拦）
+# 纪律2：USA 量价数据（pv1）列入黑名单；USA 整体数据集优先级最低。
+# 纪律3：alpha 必须是真 ATOM；量价字段进表达式 = 伪 ATOM 高风险（vec_avg 隐式 pv1 依赖等），默认拦截。
+PV1_STATIC = {'open', 'high', 'low', 'close', 'volume', 'vwap', 'returns',
+              'adv20', 'cap', 'adjfactor', 'split', 'dividend', 'sharesout'}
+# §1 豁免分组字段：只允许作 group 参数出现，不当作量价数据字段扫描
+EXEMPT_GROUP = {'country', 'exchange', 'market', 'sector', 'industry', 'subindustry'}
+_BL_F = ROOT / 'src' / 'core' / 'blacklist.json'
+try:
+    if _BL_F.exists():
+        PV1_STATIC |= set(json.load(io.open(_BL_F, encoding='utf-8')).get('pv1_fields') or [])
+except Exception:
+    pass  # 黑名单文件损坏时退回内置静态表，门不失效
+
+
+def _gate_blacklist(batch):
+    """数据黑名单门（李工 2026-11-17 纪律 2/3，**硬拦**，不 advisory）：
+
+    1) 纪律2：USA 量价数据（pv1）黑名单 —— 表达式出现 pv1 字段即 BLOCK；
+    2) 纪律3：真 ATOM —— 量价字段进表达式多半构成伪 ATOM，所有 region 默认拦截。
+
+    确需豁免：批次条目显式加 `"exempt_pv1": true` 并在 mech 写明理由（留痕上报）。
+    """
+    from atom import dataset_of
+    viol, lines = [], []
+    for b in batch:
+        code = b.get('code') or b.get('expr') or ''
+        st = b.get('settings') or {}
+        reg = st.get('region') or b.get('region') or ''
+        toks = set(re.findall(r'[A-Za-z_][A-Za-z0-9_]*', code or '')) - EXEMPT_GROUP
+        hits = sorted(toks & PV1_STATIC)
+        for t in sorted(toks - PV1_STATIC):
+            try:
+                ds = dataset_of(t, region=reg)
+            except TypeError:
+                ds = dataset_of(t)
+            if isinstance(ds, str) and ds.strip().lower() == 'pv1':
+                hits.append(t)
+        if hits and not b.get('exempt_pv1'):
+            viol.append(('数据黑名单', b.get('cid', ''),
+                         'pv1 量价字段 %s（region=%s）⇒ USA 量价黑名单/伪 ATOM 风险'
+                         % (','.join(sorted(set(hits))), reg or '?')))
+    lines.append('数据黑名单门(pv1): %s' % ('PASS' if not viol else 'BLOCK %d' % len(viol)))
+    return (not viol), viol, lines
+
+
 # 注册（顺序 = 执行顺序：从便宜到贵，快的先拦）
+# ★★ 11-16 16:25 门控精简（李工指令原文）：
+#   「之前你设置的门控本质上可以删除。数据多样性，算子多样性，idea 多样性，
+#     回测参数多样性，这些门控都可以删除。甚至 group_rank 这个算子从黑名单剔除。
+#     我们的门控只有一个 Alpha 必须完全符合 ATOM。」
+#   ⇒ 唯一硬拦门 = ATOM 门；其余全部 advisory=True（诊断项，只报告不阻断）。
+#   ⇒ 保留诊断项不是为了拦，是为了留证据（这批在深度/机制/多样性上什么状况），
+#     由人判断，不代替人做决定。
+
 register_gate('深度门', _gate_depth, 4,
               '把字段做成关系（比值/差/条件/相关性）+ 反复变换（差分后除波动、均值差再归一），'
-              '不要用"各字段独立归一化后相加"。参考 _grid/atom_single.py 的 S1~S6/N1~N6。')
+              '不要用"各字段独立归一化后相加"。参考 _grid/atom_single.py 的 S1~S6/N1~N6。'
+              '★ 11-16 16:50：深度门**不含算子数下限**，复杂度=关系算子+变换层数，'
+              '字段数与算子数都作硬门（"≥8 算子"是我编的数字，已删）。',
+              advisory=True)
+register_gate('机制门', _gate_mech, 5,
+              '每条候选必须带 mech（"在赌什么"）+ 先行的 idea_id；'
+              'idea_id 不得由模板名/tpl 反推（模板名反推 idea = 方向反了）。'
+              '见 AGENTS.md §纠正 7（李工 11-16 16:50 自审：Jj8gZxvA 是"为过门而写"的）。',
+              advisory=True)
 register_gate('算子禁令门', _gate_opban, 8,
-              '命中李工 11-15 硬禁令的算子必须换掉，禁令窗口 2026-11-15~11-24 不得绕过。')
+              '命中李工 11-15 硬禁令的算子必须换掉，禁令窗口 2026-11-15~11-24 不得绕过。'
+              '★ 11-16 16:25：group_rank 已从黑名单剔除（李工指令），当前无生效禁令。',
+              advisory=True)
 register_gate('VF对齐门(7/8/9)', _gate_vf, 6,
-              '门7 ⇒ 每条 alpha 不同字段数 ≤2；门8 ⇒ 每批 ≥2 个台账未用字段；'
-              '门9 ⇒ 本批 atom 占比 ≥50%。')
+              '门7 ⇒ 批次平均字段数 ≤8（台账实测基线 7.73，不逐条硬拦）；'
+              '门8 ⇒ 每批 ≥2 个台账未用字段；'
+              '门9 ⇒ 本批 atom 占比 ≥50%。',
+              advisory=True)
 register_gate('ATOM门', _gate_atom, 9,
-              '每条必须是单数据集；混数据集的件不得进生产批。')
+              '每条必须是单数据集；混数据集的件不得进生产批。'
+              '★ 11-16 16:25：唯一硬拦门之一（李工「我们的门控只有一个 Alpha 必须完全符合 ATOM」）。')
+register_gate('数据黑名单门', _gate_blacklist, 10,
+              '李工 2026-11-17 纪律2/3：USA 量价（pv1）黑名单；量价字段进表达式 = 伪 ATOM 风险，'
+              '所有 region 默认拦截。改用非量价数据集（如 EUR fundamental23 / model29 / model36 / '
+              'insider_feats / risk72 / model28）。确需豁免：条目加 "exempt_pv1": true '
+              '并在 mech 写明理由（留痕上报）。')
 register_gate('多样性门', _gate_diversity, 2,
-              '补数据集/补 idea/换外壳/补未用算子，不要改阈值。')
+              '补数据集/补 idea/换外壳/补未用算子，不要改阈值。'
+              '★ 11-16 16:25：改为诊断项（李工「数据多样性、算子多样性、idea 多样性、'
+              '回测参数多样性，这些门控都可以删除」）。',
+              advisory=True)
+
 
 # 探测批前缀：只警告不阻断（语法探针，不进生产记账）
 PROBE_PREFIX = ('SYN_', 'TEST_', 'EXP_')
@@ -164,10 +298,14 @@ PROBE_PREFIX = ('SYN_', 'TEST_', 'EXP_')
 # 每接一道门进来就登记一次。self_test() 会核对「注册了但没人调用」的情况。
 WIRED = {
     '深度门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16', 'how': 'wq_core.run_gates()'},
+    '机制门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16',
+               'how': 'wq_core.run_gates() ← 11-16 17:00 新接入（AGENTS.md §纠正 7）'},
     '算子禁令门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16',
                    'how': 'wq_core.run_gates() ← 11-16 新接入（此前从未执行）'},
     'VF对齐门(7/8/9)': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16', 'how': 'wq_core.run_gates()'},
     'ATOM门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16', 'how': 'wq_core.run_gates()'},
+    '数据黑名单门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-17',
+                     'how': 'wq_core.run_gates() ← 李工纪律2/3（USA pv1 黑名单 + 真ATOM，硬拦）'},
     '多样性门': {'caller': '_autologs/sim_run.py', 'date': '2026-11-16', 'how': 'wq_core.run_gates()'},
 }
 
@@ -177,8 +315,22 @@ PROBE_PREFIX_NOTE = '探测批前缀（SYN_/TEST_/EXP_）只警告不阻断'
 def run_gates(batch, log=None, probe=None, ledger=None):
     """跑全部注册的门。
 
+    ★★ 11-16 16:25 门控精简（李工指令）：
+        「之前你设置的门控本质上可以删除。数据多样性，算子多样性，idea 多样性，
+          回测参数多样性，这些门控都可以删除。
+          甚至 group_rank 这个算子从黑名单剔除。
+          **我们的门控只有一个 Alpha 必须完全符合 ATOM。**」
+
+        ⇒ ATOM 门是硬拦门（单数据集）；11-17 新增**数据黑名单门**（硬拦）：USA 量价 pv1 黑名单
+          + 量价字段默认拦截（纪律3：量价多半构成伪 ATOM）。
+        ⇒ 其余门（深度门 / 机制门 / 算子禁令门 / VF对齐门 / 多样性门）全部降级为
+          **诊断输出（advisory）**：照常计算、照常写进报告，但**不阻断批次**。
+          保留它们不是为了拦，而是为了留证据：
+          "这批在深度/机制/多样性上是什么状况"，供人工判断，**不代替人做决定**。
+        ⇒ group_rank 已从算子黑名单剔除（`_grid/op_ban.py`）。
+
     返回 (ok: bool, report: list[str])。
-    任何一道门失败 ⇒ ok=False，report 里逐条写明「哪条件、为什么、怎么改」。
+    任何一道**硬拦门**失败 ⇒ ok=False。
     """
     rep = []
     if log:
@@ -186,6 +338,7 @@ def run_gates(batch, log=None, probe=None, ledger=None):
     if probe is None:
         probe = bool(batch) and all(str(b.get('cid', '')).startswith(PROBE_PREFIX) for b in batch)
     for g in GATES:
+        advisory = g.get('advisory', False)
         try:
             ok, viol, lines = g['fn'](batch)
         except Exception as e:
@@ -205,6 +358,13 @@ def run_gates(batch, log=None, probe=None, ledger=None):
                 norm.append((g['name'], str(v), ''))
         viol = norm
         if not ok:
+            if advisory:
+                # ★ 诊断门：只报告，不阻断（李工 11-16 16:25「门控只有 ATOM」）
+                rep.append('（%s 诊断项：%d 处不合规 —— 不阻断，由人判断）'
+                           % (g['name'], len(viol)))
+                for tag, who, why in viol:
+                    rep.append('    [%s] %s：%s' % (tag, who, why))
+                continue
             if probe:
                 rep.append('（%s 探测批：只警告，不阻断）' % g['name'])
                 for tag, who, why in viol:
@@ -216,7 +376,12 @@ def run_gates(batch, log=None, probe=None, ledger=None):
                 rep.append('!!! 处理办法：%s' % g['remedy'])
                 rep.append('!!! 门码 %d' % g['exit_code'])
                 return False, rep
-    rep.append('全部门控 PASS（%d 道：%s）' % (len(GATES), '、'.join(g['name'] for g in GATES)))
+    hard = [g['name'] for g in GATES if not g.get('advisory', False)]
+    adv = [g['name'] for g in GATES if g.get('advisory', False)]
+    rep.append('门控结果：硬拦门 %s 全部 PASS'
+               % ('、'.join(hard) if hard else '无'))
+    if adv:
+        rep.append('诊断项（不阻断）：%s' % '、'.join(adv))
     return True, rep
 
 

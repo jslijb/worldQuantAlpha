@@ -109,6 +109,7 @@ inverse floor ceiling round min max trade_when hump jump_decay kth_element
 pasteurize densify nan_mask nan_out filter arc_tan sigmoid tanh exp
 vec_avg vec_sum vec_ir vec_max vec_min vec_count vec_skewness vec_kurtosis
 inst_tvr days_from_last_change last_diff_value convert inst_pnl
+is_nan isnan
 '''.split())
 
 TOKEN_RE = re.compile(r'[a-zA-Z_][a-zA-Z0-9_]*')
@@ -152,6 +153,9 @@ def _load_field_map():
     m = {}
 
     # ① 平台权威合并表（11-16 新增，最优先）
+    # ★ 11-16 二次修正：合并表 field_ds_map.json 是旧数据（cashflow_op 标成
+    #   fundamental23，平台真值是 **fundamental6**）⇒ ATOM 门会判错数据集。
+    #   现在以**平台拉取的分区域表**为准，合并表只作补充。
     for name in ('field_ds_map.json',):
         p = os.path.join(d, name)
         if os.path.exists(p):
@@ -161,6 +165,18 @@ def _load_field_map():
                         m.setdefault(k.lower(), v)
             except Exception:
                 pass
+
+    # ①b 平台权威**分区域**表（更准，优先级高于合并表；11-16 二次修正）
+    p_by_region = os.path.join(d, 'field_ds_map_by_region.json')
+    if os.path.exists(p_by_region):
+        try:
+            _by_region = json.load(io.open(p_by_region, encoding='utf-8')) or {}
+            for _reg, _mm in _by_region.items():
+                for k, v in (_mm or {}).items():
+                    if v:
+                        m[k.lower()] = v          # 覆盖（平台真值优先）
+        except Exception:
+            pass
 
     # ② 历史 all_fields_*.json（补缺，不覆盖①）
     for p in glob.glob(os.path.join(d, 'all_fields_*.json')):
@@ -238,35 +254,119 @@ def fields_of(expr):
     return out
 
 
-def dataset_of(field, _cache={}):
-    """字段属于哪个数据集。
+def _query_platform_dataset(field, region='USA', universe='TOP3000', delay=1):
+  """★ 11-16 18:10 新增：向平台 GET /data-fields 定点查一个字段的 dataset 归属。
 
-    顺序：本地 data-fields 全量缓存（覆盖新增数据集） -> 硬编码前缀（老数据集兜底）。
-    查不到返回 None。
-    """
-    f = field.lower()
-    if f in _cache:
-        return _cache[f]
-    ds = _load_field_map().get(f)
+  为什么需要：平台 `GET /data-fields` 一次只返 10000 条（分页上限），
+  而 `fields_usa_meta.json` 缓存也是 10000 条 ⇒ **最新 onboard 的字段查不到归属**
+  （实测 beta_ray_250d / beta_gld_250d 都被 ATOM 门误杀，
+   平台真值都是 pv20）⇒ judge() 报"无法判定数据集归属" ⇒ 唯一硬拦门误拦。
+
+  查不到就返回 None（保持原行为），查得到就写回本地权威表，后续免查。
+  """
+  import io as _io
+  try:
+    import requests
+    from pathlib import Path
+    _ROOT = Path(PROJ)
+    cred = tuple(json.load(_io.open(str(_ROOT / 'brain_credentials.txt'), 'r', encoding='utf-8')))
+    s = requests.Session()
+    s.auth = cred
+    s.trust_env = False
+    r = s.get('https://api.worldquantbrain.com/data-fields',
+              params={'instrumentType': 'EQUITY', 'region': region, 'delay': delay,
+                      'universe': universe, 'search': field, 'limit': 5},
+              timeout=40)
+    if r.status_code != 200:
+      return None
+    raw = r.json()
+    res = (raw.get('results') or []) if isinstance(raw, dict) else (raw or [])
+    for x in res:
+      if x.get('id') == field:
+        return (x.get('dataset') or {}).get('id')
+  except Exception:
+    return None
+  return None
+
+
+def _persist_dataset(field, ds, region='USA'):
+  """把平台查到的归属写回本地权威表（下次不用再查）"""
+  if not ds:
+    return
+  import io as _io
+  d = os.path.join(PROJ, 'data', 'alpha_quality_analysis')
+  for name, key in (('field_ds_map_by_region.json', 'by_region'), ('field_ds_map.json', 'merge')):
+    p = os.path.join(d, name)
+    try:
+      obj = json.load(_io.open(p, encoding='utf-8')) or {}
+      if key == 'by_region':
+        obj.setdefault(region.upper(), {})[field.lower()] = ds
+      else:
+        obj[field.lower()] = ds
+      json.dump(obj, _io.open(p, 'w', encoding='utf-8'), ensure_ascii=False)
+    except Exception:
+      pass
+
+
+def dataset_of(field, _cache={}, _region=None):
+  """字段属于哪个数据集。
+
+  顺序：分区域权威表（region 内） -> 合并权威表 -> 硬编码前缀（老数据集兜底）
+        -> **平台定点查询**（11-16 18:10 新增，见 _query_platform_dataset）。
+
+  ★ 11-16 18:10：平台查询是"最后兜底"，且**只在缓存未命中时触发一次**。
+    起因：平台 /data-fields 一次只返 10000 条，最新 onboard 字段（alphaCount=0）
+    不在本地缓存 ⇒ ATOM 门（唯一硬拦门）误杀。实测 beta_ray_250d/beta_gld_250d
+    平台真值都是 pv20，本地缓存查不到 ⇒ 被拦。
+
+  查不到返回 None。
+  """
+  f = field.lower()
+  if _region is not None:
+    key = (f, str(_region).upper())
+    if key in _cache:
+      return _cache[key]
+    ds = load_field_map_by_region(_region).get(f)
+    if not ds:
+      ds = _load_field_map().get(f)
+    if not ds:
+      ds = _query_platform_dataset(field, region=str(_region).upper())
+      if ds:
+        _persist_dataset(field, ds, region=str(_region).upper())
+    _cache[key] = ds
+    return ds
+  if f in _cache:
+    return _cache[f]
+  ds = _load_field_map().get(f)
+  if not ds:
+    ds = _query_platform_dataset(field, region='USA')
     if ds:
+      _persist_dataset(field, ds, region='USA')
+  if ds:
+    _cache[f] = ds
+    return ds
+  for ds, prefixes in DATASET_PREFIXES:
+    for p in prefixes:
+      if f == p or f.startswith(p):
         _cache[f] = ds
         return ds
-    for ds, prefixes in DATASET_PREFIXES:
-        for p in prefixes:
-            if f == p or f.startswith(p):
-                _cache[f] = ds
-                return ds
-    _cache[f] = None
-    return None
+  _cache[f] = None
+  return None
 
 
-def judge(expr):
+def judge(expr, region=None):
     """判一条表达式。
 
     返回 (is_atom, datasets, reasons)
         is_atom  : True 表示单数据集（ATOM 合格）
         datasets : 识别到的数据集集合
         reasons  : 不合格的具体原因；合格时为空
+
+    ★ 11-17 修正（AGENTS.md §192 记录的老 bug："字段归属是 region 相关的"）：
+      原实现里 `dataset_of(f)` **不传 region** ⇒ 永远走"全局合并表"
+      ⇒ USA 的 cashflow_op 被标成 fundamental23、EUR 的被标成 fundamental6 ⇒ 串味。
+      现在按 region 查分区域权威表（region 内优先），region=None 时行为与原来一致。
+      传 region 后，"同一字段在不同市场归属不同"这件事才判得对。
     """
     reasons = []
     if not expr or not expr.strip():
@@ -295,7 +395,7 @@ def judge(expr):
     for f in flds:
         if f in exempt:
             continue
-        d = dataset_of(f)
+        d = dataset_of(f, _region=region)
         if d:
             ds_hit.setdefault(d, []).append(f)
         elif f not in ATOM_FORBIDDEN_FIELDS:

@@ -839,3 +839,563 @@ g74 发射+判决（`G74DONE`）→ 剩余库存送检（`SWEEPTAILDONE`）。�
 
 **新出现的流程限制（必须逐条串行交单）**：`/check` 的对手集合 = 当前已入池的我的件。提交 1 条后池子 +1，
 **其余候选的 sc 真值全部作废、要重打**。所以"送检一批→一次交一批"不成立，只能送检→交 1 条→重送检。
+
+### M17（1116 周复盘）本周 16 入池 / 9 被拒的配方判据
+
+全量数据见 `docs/research/weekly_alpha_review_2026-11-16.md`（平台 API 实拉 + verdict 逐份读）。
+
+**新验证配方**
+- GLB gSc returns 双腿家族 4/4（d5al5ljw/LLKlxA7m/YPaWd16q/WjlWKLPj）：`0.5*gSc(-ts_std_dev(returns,120),G) + 1.4~1.5*gSc(-ts_av_diff(returns,45|60),G)`，MINVOL1M/STATISTICAL/decay64。G 互换=corr 重掷刀；sector+country 交叉组最强（S2.85/F2.01）。同族每日 ≤1 条。
+- 主题限定超级 d5almKdJ：selection=`(1-self_correlation)*in(datasets,"model51")` + limit10 + decay25 → S3.18/F3.22/TO0.0533 ACTIVE。超级配额可按数据集家族轮吃（下一个候选：global_seasonal_model / predictive_starmine）。
+
+**失败模式定量（9 条 POST 级）**
+- PROD 杀 4 条：WjlK1b2k(0.8856,S8.26)、QP0mXGY5(0.8263,S8.73)、vRAavlk3(0.7061)、1YW6pJQJ(0.7002，差 0.0002)——高 S 特赦在 0.82+ 密集区无效；压线 0.68~0.699 先 decay+6 再交。
+- LOW_FITNESS 杀 5 条：RReZrkq0 TO0.4405→F0.56 最极端；6XMg30YJ/O0WKmPAJ F0.65、YPaXdv2l 0.75、A1xq6OPe 0.92。TO>0.25 的批不发模拟。
+- 预检频次（当前提交器实例）：SKIP-PROD 12 条 corr 0.6972~0.8226；SKIP-LOCAL 85 条，失败项 TOP：LOW_FITNESS 117 次 > IS_LADDER 34 ≈ LOW_SHARPE 34 > HIGH_TURNOVER 24 > GLB EMEA 8（分区短板）。
+
+**多样性记账（本周 13 常规的族分布）**
+GLB gSc returns 族 4 / option 主腿 3 / fnd6 主腿 2 / 混合引擎 3 / tm+tcm 1（KPgepR9k，ATOM 红线下不可复制）。下周方向：gSc 族限流，配额让给新数据集主腿。
+
+**流程项**：/competitions/challenge 11-16 起 404，isScore/rank 断链待修（锚点停在 10-06 isScore 9691/rank 14）；OS count=360 与台账对平（d5almKdJ 漏记已补）。
+
+### M18（1116 15:2x）★ 每日一 idea 轮转制 —— 多样性来自 idea，不来自模板
+
+**李工指令原文（11-16 15:2x）**：
+> 「每个 idea 单独构造，这样多样性就自然而然有了，你那模板套，怎么都不会有多样性，这样无法提升 VF。
+> idea 只能决定数据集，其他的有很多空间来造，我们可以每天用一个 idea 提交 4 个普通的 Alpha，
+> 今天用财务类的 idea，明天有新闻/情绪…，量价类的优先级最低，这样一轮循环后，我再回到财务类的 idea，
+> 继续造，这样多样性就不用刻意了，自然而然就有了」
+
+**据此确立的作业制（覆盖一切"批量凑件"做法）**：
+1. **一天 = 一个 idea = 4 条普通 Alpha**（配额 4 常规，正好一批）。
+   4 条必须是**同一个 idea 的不同构造**（不同腿/不同变换/不同外壳），
+   **不是** 4 个 idea 各一条，更**不是** 模板批量生成。
+2. **idea 决定数据集**；数据集确定后，**构造空间是自由度**（不是模板自由度）。
+3. **轮转顺序（李工指定）**：财务类 → 新闻/情绪类 → 分析师类 → …… → **量价类垫底**。
+   一轮循环完再回财务类，**在同一 idea 家族上再深挖**（不是换新字段，是换新构造）。
+4. **多样性由此自动达成**：idea 维每日只 +1 个新值、数据集维每日只 +1 个新值，
+   而 operator 维/构造维在**同一个 idea 内部**自然铺开。
+   ⇒ **禁止**为了"多样性"而机械换数据集/换外壳/换字段——那是人海战术。
+
+**11-16 当日 idea = M18-01「营运资本错配压力」（fundamental23）**
+
+- **经济机制链**：
+  应收膨胀（客户占款）→ 现金被占用 → 同时应付收缩（供应商收紧信用、挤兑）→
+  现金缓冲薄 → 营运资本净缺口扩大 → 只能靠外部融资或砍投资 → 未来盈利与股价承压。
+- **为什么这个机制未被定价**：这四个科目都是**存量时点值**，
+  市场定价关注利润表（EPS/营收）与其变化，
+  而**营运资本的结构性错配**需要跨 3~4 个资产负债表科目做**组合**才能读出来，
+  单看任一科目都无信号 ⇒ 这是「组合才产生信息」的典型 idea。
+- **字段（全部 fundamental23 单数据集，ATOM 合规；平台权限已验：45 件 UNSUBMITTED）**：
+  | 字段 | 语义 | 在机制里的角色 |
+  |---|---|---|
+  | accounts_receivable_current | 应收账款净额 | 占款规模 |
+  | accounts_receivable_gross | 应收账款毛额 | 毛-净差 = 已计提减值 |
+  | allowance_for_doubtful_accounts | 坏账准备 | 账龄恶化的直接证据 |
+  | accounts_payable_current | 应付账款（流动） | 供应商挤兑强度 |
+  | accounts_payable_noncurrent | 应付账款（非流动） | 供应商长期信用意愿 |
+  | accounts_payable_trade_creditors | 应付贸易债权人 | 纯商业信用（剔金融性应付） |
+  | accounts_payable_notes | 应付票据 | 票据化 = 供应链票据池占比 |
+  | accounts_cash_and_equivalents | 现金及等价物 | 缓冲厚度 |
+  | accounts_total_current_assets | 流动资产合计 | 分母（规模归一） |
+  | accounts_receivable_total_5 | 应收账款合计 | 口径交叉验证 |
+- **4 条构造（同一 idea 的 4 个不同构造，非模板）**：
+  | 编号 | 构造切入 | 经济含义 |
+  |---|---|---|
+  | M18-01-A | **净营运资本缺口的时间变化**：`(AR_total - AP_current) / 流动资产` 的 ts 差分 | 缺口在扩还是在补 |
+  | M18-01-B | **毛-净缺口（隐含减值率）**：`1 - AR_net/AR_gross` 的时序位置 | 账龄是否在恶化 |
+  | M18-01-C | **商业信用比（供应链地位）**：`AP_trade_creditors / AP_total` 的变化 | 供应商给不给信用 |
+  | M18-01-D | **现金缓冲覆盖**：`(cash - AP_current) / 流动资产` 的趋势 | 缓冲还剩多少 |
+  4 条各自成条（单数据集 ≥3 字段），**共用同一经济机制**，用于比较"哪条腿最能读出机制"。
+- **登记状态**：待跑。
+
+**M18-02（明日候选）新闻/情绪类**：
+- 备选机制①：负面情绪的**强度 vs 广度**（负面计数高但文章数不增 = 集中利空 vs 全面悲观）
+- 备选机制②：情绪的**持续性**（新闻情绪的半衰期 vs 股价吸收速度）
+- 数据集候选：mmp_nlp_sentiment（121 字段，uc 0~10，极冷）/ twitter_sentiment_l2（18 字段）
+
+**M18-03（轮转第三站）分析师类**：analyst27 / analyst16 / model109
+- 备选机制①：分析师**修正的宽度 vs 深度**（谁在上调 vs 上调幅度）
+- 备选机制②：评级**期限结构**（近 12 月评级 vs 近 24 月评级的加速度）
+
+
+---
+
+### M19（1116 16:00~17:20）★ 分析师惊喜「形状」重写 + 字段语义纠错 + 形状微调制
+
+#### M19-0 前置纠错：字段语义用错 = 表达式写错（李工 11-16 16:00 判据反转）
+
+> 「每一个 idea 都经过验证的，绝对可以搞出 Alpha 来，现在只看相关度能否够，
+>   你说的 S,F 这些过不了，绝对是没有理解这个 idea，表达式写错了。」
+
+**新判据（覆盖一切"按 S 高低取舍"的旧表述）**：
+- S/F 过不了门 ⇒ **表达式写错了**，不是 idea 不行、不是 S 低。
+- S/F 门 = **表达式正确性检查器**，不是 idea 判决书。
+- S 是**当前形状**的属性 ⇒ 动作是**改形状**，不是取负、不是换 idea。
+- 前置动作固定为：**归因（拆腿）→ 在有信号的腿上做形状微调**。
+
+**查出来的字段语义错（Jj8gZxvA / IDEA_M19）**：
+| 字段 | 我一直以为 | 平台权威 description | 真实 dataset |
+|---|---|---|---|
+| `act_q_ebi_surprisenum` | EBIT 惊喜值 | Number of estimates used for surprise calculation of actual EBIT（**估计家数**） | **analyst7** |
+| `act_q_ner_surprisenum` | 净利润惊喜 | Number of estimates used for surprise calculation of actual net profit（**估计家数**） | **analyst7** |
+| `act_q_bps_surprisemean` | 账面惊喜 | Mean surprise (actual − estimate) of actual BVPS（**这条才对**） | analyst7 |
+
+⇒ 原式 LEG1 实为「分析师覆盖广度变化」、LEG3 实为「估计家数变异系数」，
+  与 SURPRISE_SHAPE **无关**；idea 要的"形状"（mean 相对 std 的信噪比）
+  **根本没用到 `surprisestd`**。台账标的 `earnings4` **也是错的**。
+
+**analyst7 surprise 三件套（写表达式必须按这个来）**：
+- `act_q_XXX_surprisemean` = **惊喜水平**（实际 − 一致预期）
+- `act_q_XXX_surprisestd` = **惊喜分歧**（分析师之间预期差）
+- `act_q_XXX_surprisenum` = **覆盖广度**（几个分析师）
+
+**纪律**：写表达式前先查 description（`_grid/show_ds_fields.py`），不靠字段名猜；
+  idea 名字决定选哪个字段族；dataset 以字段自带 `dataset.id` 为准。
+
+#### M19-01 惊喜「形状」的机制推导（水平 × 分歧 两维）
+
+| 水平 | 分歧 | 含义 | 预期 |
+|---|---|---|---|
+| 高 | 低 | 一致性超预期 = 真信息 | 正向漂移（PEAD） |
+| 高 | 高 | 惊喜大但预期乱（一次性/口径变化） | 不可持续 |
+| 低 | 高 | 预期乱且没兑现 | 负向 |
+
+⇒ **核心量 = `surprisemean / surprisestd`（信噪比 = t 统计量）**：
+  不是"惊喜有多大"，而是"惊喜**相对自身分歧**有多突出"。
+⇒ **第二维 = 跨科目一致性**：EPS 与 Sales/EBIT 惊喜是否同向。
+  同向 = 经营实质改善（可持续）；背离 = 靠一次性项目/口径调整（不可持续）。
+
+#### M19-02 四条构造（同一 idea 的四种独立读法，各手写，非模板套）
+
+| 编号 | 构造 | 字段 | 经济含义 |
+|---|---|---|---|
+| H1 | `surprisemean/surprisestd` | eps / ebi | 信噪比（惊喜相对分歧多突出） |
+| H2 | 惊喜**变化率之差** | eps vs sal | 会计口径 vs 经营口径背离 ⇒ 一次性成分 |
+| H3 | `eps × ebi` 惊喜乘积 | eps, ebi | 跨科目同向 = 一致性 |
+| H4 | `surprisestd/surprisenum` | eps | 分歧是"人少而乱"还是"人多而分歧" |
+
+设置层轮换（同一批 5 条，universe/neutralization/decay/truncation 全部铺开）：
+TOP3000+SUBINDUSTRY+d10+0.08 / TOP1000+INDUSTRY+d20+0.05 / TOP500+SECTOR+d30+0.03
+/ TOP2000+MARKET+d44+0.02 / TOP2000U+SUBINDUSTRY+d15+0.01
+（★ TOP2000U 实测平台不可用，已换 TOP200。）
+
+#### M19-03 形状微调制（六动作，每动有经济含义，工具 `_grid/morph.py`）
+
+| 动作 | 做什么 | 经济含义 |
+|---|---|---|
+| A1 加层 | 内核外再套 ts_zscore(n) | 信号由「跨股比值」变为「该股自身历史的异常偏离」（换信息维度） |
+| A2 减层 | 剥内核 ts_zscore / 剥 ts_decay_linear | 保留幅度信息 / 去掉平滑（换手升、信号更即时） |
+| A3 换窗口 | 最长窗口换档 | 改信号记忆长度（长窗稳而钝，短窗灵而躁） |
+| A4 换归一 | ts_zscore → ts_rank | 时序归一由「几个标准差」改为「历史序位」，免疫极端财报 |
+| A5 换分组 | subindustry → industry/sector | 换「同业参照系」 |
+| A6 换外壳 | group_zscore → group_scale/zscore | 换最终排序语义（保留量纲 / 丢掉同业参照） |
+
+**归因实测（Jj8gZxvA 拆腿，4 条全落）**：
+| 腿 | S | F | TO | tS | 解读 |
+|---|---|---|---|---|---|
+| FULL | -0.14 | -0.02 | 0.113 | -0.38 | rnS=+0.05 |
+| LEG1 | **-0.39** | -0.11 | 0.064 | **+1.51** | ★ tS 全场最高 ⇒ 不是没信号，是 IS 段被风险暴露压住 |
+| LEG2 | -0.09 | -0.01 | 0.204 | 0.38 | 换手太高 |
+| LEG3 | -0.54 | -0.18 | 0.083 | -0.33 | 纯拖累 |
+
+⇒ 正确动作：**在 LEG1 上做形状微调**（不是整条取负），且必须换成**真的惊喜字段**。
+
+#### M19-04 平台 USA EQUITY 实测可用清单（11-16 逐个 POST 验证）
+
+- **universe 6 项**：TOP3000 / TOP2000 / TOP1000 / TOP500 / TOP200 / TOPSP500
+- 不可用（HTTP400）：TOP1500 / TOP1200 / TOP400 / TOP100 / TOP2500 / TOP1600 / TOP2000U
+  / MINVOL1M / ILLIQUID_MINVOL1M / TOPDIV3000
+- **neutralization 6 项**：NONE / MARKET / SECTOR / INDUSTRY / SUBINDUSTRY / STATISTICAL
+  （COUNTRY 不可用）
+
+---
+
+### M20（1116 17:20~18:00）★ 形状微调实测：group_scale 外壳最优 + 算子数与 S 无关（再证）
+
+#### M20-01 今日唯一有信号的方向 = 分析师惊喜「信噪比」
+
+M19 四条构造里只有 **H1（`surprisemean/surprisestd`）** 跑出真信号，
+其余三条（S=0.37 / +0.27 / 负）全塌 ⇒ **idea 本身成立，形状要调**。
+
+基准件（`M1902_H1_snr_eps`，id `RRe2Y1Ez`）：
+```
+group_zscore(ts_decay_linear(ts_zscore(ts_mean(act_q_eps_surprisemean,60)
+                                          /ts_mean(act_q_eps_surprisestd,60),120),10),subindustry)
+```
+→ S=+0.90 F=+0.40 TO=0.037 tS=-0.68 rnS=+0.48
+
+**同日同族控变量对照（11 算子的 Jj8gZxvA vs 5 算子的 M1902_H1）**：
+
+| cid | 算子数 | S | 说明 |
+|---|---|---|---|
+| M1902_H1_snr_eps | **5** | **+0.90** | 今日最高 |
+| M1902_H1_snr_ebit | 5 | +0.71 | EBIT 口径 |
+| M1902_H2_divergence | 7 | +0.37 | tS=+1.56 |
+| M1902_H3_consistency | 5 | +0.27 | |
+| SYN_analyst7_C1_0（=Jj8gZxvA） | **11** | **-0.14** | 字段语义全错 |
+
+⇒ **算子最多的那条 S 最低**。算子数与 S 非单调（详见 M20-03）。
+
+#### M20-02 ★ 形状微调实测：外壳 `group_scale` 把 S 从 0.90 顶到 1.00
+
+`_grid/morph_m1902_h1_eps.json` 18 条（同一内核，只动外壳/窗口/设置层）实测：
+
+| 变体 | 动作 | S | F | TO | 判定 |
+|---|---|---|---|---|---|
+| **MA6_groupzscoregro** | **group_zscore → group_scale** | **+1.00** | **+0.46** | 0.038 | ★★ **checks 无任何 FAIL** |
+| MA4_tszscoretsrank | ts_zscore → ts_rank | +0.92 | +0.40 | 0.032 | FAIL×2 |
+| D4 | decay 10→4 | +0.91 | +0.40 | 0.040 | FAIL×3 |
+| D20 | decay 10→20 | +0.89 | +0.39 | 0.040 | FAIL×3 |
+| NSECTOR | 中性化→SECTOR | +0.89 | +0.39 | 0.040 | FAIL×3 |
+| NMARKET | 中性化→MARKET | +0.87 | +0.38 | 0.040 | FAIL×3 |
+| D44 | decay 10→44 | +0.85 | +0.37 | 0.030 | FAIL×3 |
+| MA5_subindustrysec | 分组→sector | +0.80 | +0.35 | 0.040 | FAIL×3 |
+| MA5_subindustryind | 分组→industry | +0.79 | +0.34 | 0.040 | FAIL×3 |
+| MA6_groupzscorezsc | 去掉 group 层 | +0.79 | +0.34 | 0.040 | FAIL×3 |
+| MA3_12045 | zscore 窗口 120→45 | +0.67 | +0.24 | 0.040 | FAIL×2 |
+| MA2_tsdecaylinear | 剥掉 ts_decay_linear | +0.24 | +0.10 | 0.024 | FAIL×4 |
+| MA2_tszscoretszsco | 剥掉内核 ts_zscore | +0.23 | +0.10 | 0.066 | FAIL×3 |
+
+**三条可复用的形状知识**：
+1. **`group_scale` > `group_zscore`**（同内核同设置，1.00 vs 0.90）——
+   group_scale 把值压到 0~1 区间，**天然有界、不产生极端离群权重**；
+   group_zscore 会给离群股极大权重。⇒ 外壳排序语义是形状知识，不是玄学。
+2. **外壳三层都在贡献，缺一即塌**：剥 decay → 0.24，剥 zscore → 0.23，
+   剥 group → 0.79。⇒ 这三层不是"堆复杂度"，是各自承担不同职责
+   （decay=平滑换手 / ts_zscore=跨股归一 / group=同业参照系）。
+3. **decay 越小越好**（d4 > d10 > d20 > d44），说明该信号**信息衰减快**，
+   印证 PEAD 漂移集中在事件后短窗。
+
+#### M20-03 ★ 再证：算子数与 S 无关（"≥8 算子"是编的数字，二次实测）
+
+**台账 360 条【已过门】件**的算子数 × S（本次新算，事实源 = SUBMITTED_LEDGER.csv）：
+
+| 算子数 | n | S 中位 | 算子数 | n | S 中位 |
+|---|---|---|---|---|---|
+| 0 | 5 | 1.55 | 12 | 12 | 2.50 |
+| 3 | 11 | 2.06 | 13 | 13 | 2.44 |
+| 4 | 16 | 2.33 | 15 | 15 | 2.38 |
+| 5 | 18 | 2.45 | 18 | 14 | 2.39 |
+| 7 | 15 | 2.42 | 20 | 12 | 2.24 |
+| 8 | 19 | 2.38 | 23 | 5 | 2.55 |
+| 9 | 18 | 2.29 | 30 | 1 | 2.77 |
+| 10 | 23 | 2.45 | 37 | 1 | 2.22 |
+
+⇒ 全区间 S 中位 2.05~2.55，**无单调性**。过门件里 0 算子的有 5 条、
+3 算子的有 11 条、37 算子的也有 1 条。**算子数与 S 无因果关系**。
+
+**台账过门件的外壳分布（新算）**：
+| 外壳 | n | 占比 | S 中位 |
+|---|---|---|---|
+| **group_rank** | **345** | **95.8%** | **2.31** |
+| group_scale | 4 | 1.1% | 2.51 |
+| group_zscore | 2 | 0.6% | 1.81 |
+| 无外壳 | 7 | 1.9% | 1.64 |
+
+⇒ 历史 95.8% 的过门件用 `group_rank` 外壳。李工 11-16 已解禁 group_rank，
+  后续外壳轮换应把 group_rank 纳入首选集合（实测 M20-02 里 group_scale 优于 group_zscore，
+  但历史池的 group_rank 样本量最大，是下一个必测点）。
+
+#### M20-04 ★ 相关度不是瓶颈（李工 11-16 16:15「现在只看相关度能否够」）
+
+`_grid/corr_gate.py` 对今日全部候选的判定（池 341 条，池组合 Sharpe a=4.1956）：
+
+| alpha | S(自身) | maxCorr | 门槛 ρ* | 结论 |
+|---|---|---|---|---|
+| A1xgbgJl（M1902_H1_snr_ebit） | 1.072 | **0.3097** | 0.2536 | corr 低但自身 S 不够 |
+| RRe2Y1Ez（M1902_H1_snr_eps） | 0.753 | **0.4121** | 0.1777 | 同上 |
+| oma39Pwn（MA3_12045） | 0.739 | **0.3793** | 0.1745 | 同上 |
+| **O0WbbKvd（MA6_groupzscoregro）** | 0.847 | **0.4083** | 0.2002 | 同上 |
+
+⇒ **maxCorr 0.31~0.41，全部远低于平台线 0.70** ⇒ 相关度这一关已过，
+  瓶颈 100% 在 S。平台 `/alphas/{id}/correlations/prod|self` 端点返 200 空 body
+  （与既往记录一致），判定只能靠 `/check` + 本地 corr_gate（本地与平台差 0.007）。
+
+#### M20-05 内核归因批（`_grid/batch_1116j_m19_core.json`，15 条，1116 17:35 发）
+
+外壳统一用 M20-02 胜出的 `group_scale(ts_decay_linear(ts_zscore(K,120),10),subindustry)`，
+settings 全同（TOP3000/SUBINDUSTRY/decay10/trunc0.08）⇒ 唯一变量是内核。
+
+| 组 | 检验 | cid |
+|---|---|---|
+| A 裸内核 | 惊喜水平 / 分歧 / 信噪比 / 惊喜zscore 各自裸跑 | A1~A4 |
+| B 形状假设 | H1 当期比值 / H2 分歧当否决项 / H2 极端(不含分歧) / H3 增量 | B1~B4 |
+| C 窗口扫描 | ts_mean 窗口 30 / 120 / 250 | C1~C3 |
+| D 论文维度 | **Guo 2019 惊喜新鲜度**（`days_from_last_change`）乘法 / 加法 | D1~D2 |
+| E 跨科目 | EPS信噪比 − Sales信噪比 / 二者之比 | E1~E2 |
+
+**D 组 = Guo 2019（"Underreaction, Overreaction, and Dynamic Autocorrelation of Stock Returns"）
+的机制落地**：美国月度收益 2/3 时间与过去正相关、1/3 负相关；
+投资者**看不到盈利新闻自相关结构的时变性** ⇒ 财报季前半年盈利新闻自相关下降
+⇒ 投资者把新近新闻与旧新闻混淆 ⇒ **overreact** ⇒ 下期负收益。
+⇒ 决定方向的是惊喜的**"新旧程度"**，不只水平。
+analyst7 的 surprise 字段在两次财报更新之间为常数 ⇒ `days_from_last_change` 正好量化新鲜度。
+
+★ 修正一处错误：原方案里的 `act_q_eps_surprisenum` **在 fields_usa_meta.json 中不存在**
+（act_q_eps 只有 surprisemean / surprisestd 两个 surprise 字段）⇒ 会 HTTP400，已删该条。
+
+---
+
+### M22（1116 17:50~18:30）★★ 画瓢路线：从论坛现成模板出（李工 16:45 纠正后）
+
+**李工纠正**：「idea 为什么这么困难？别人都有代码啊，你照着画瓢，微调下，就可以提交了，
+现在直接放弃idea」⇒ 我 16:00~16:45 在从零手写表达式，把简单的事做难了。
+
+#### M22-01 现成代码在哪（本地存档，事实源）
+| 来源 | 位置 | 内容 |
+|---|---|---|
+| **ATOM 主帖官方 4 模板** | `docs/forum/atom_pack/post_main.txt` L138-147 | `group_rank(ts_mean(F,20)/ts_mean(F,120),subindustry)` / `group_neutralize(ts_zscore(F,60),subindustry)` / `ts_decay_linear(-ts_rank(F,252),10)` / `group_rank(ts_delta(F,20)/ts_std_dev(F,60),sector)`；作者原话「100% 纯血统单数据集 ATOM 模板」「经过实战检验」；官方设置 USA/TOP3000/decay=6/SUBINDUSTRY/trunc=0.08 |
+| **AI 工作流帖已验证模式** | `refs/post_39925324948119_*.txt` L52, L245-248 | `rank(anl4_afv4_eps_number)*rank(ts_rank(anl4_afv4_eps_mean/close,40))`（作者实测提交 7 条，最高 S=1.92/F=1.50）；「已验证有效的模式」4 条 |
+| **官方选字段秘诀** | 同上 L124-136 | 「按 onboard 时间 dateCreated 由近到远降序 + alphaCount 由低到高升序」+ coverage>=0.80 |
+
+#### M22-02 ★★ 形状 > 字段（同一批实测，最重要的一条）
+蓝海字段（alphaCount=0，2026-04-01 最新 onboard）× 官方 4 模板，同一批内对照：
+
+| 字段 | T1(均值比) | T2(ts_zscore+行业中性) | T3(分位均值回归) | T4(差分/波动) | 极差 |
+|---|---|---|---|---|---|
+| analyst_ebitda_diffusion_fy1_3m | **+0.84** | **-0.21** | +0.36 | +0.67 | **1.05** |
+| analyst_ebitda_revision_ntm_1m | +0.68 | **-0.67** | +0.61 | +0.52 | **1.35** |
+| analyst_revenue_revision_fy1_3m | +0.56 | +0.15 | — | +0.67 | 0.52 |
+
+⇒ **同一个字段换模板，S 差 1.05~1.35**；而不同字段在同一模板下只差 0.1~0.3。
+⇒ **形状（模板）是 S 的主因，字段是次因**。这正是李工"照着画瓢，微调下"的实证依据。
+
+**T1（长短周期均值比）在 3 个字段上都排第一/第二** ⇒ 现成模板本身是有效的，
+问题在**字段与模板的配对**，不在模板本身。
+
+#### M22-03 ★ 踩坑：官方模板不能套「已聚合字段」
+`analyst_ebitda_diffusion_fy1_3m` 平台 description：
+"Diffusion ratio (upward vs downward) of analyst revisions for next fiscal year (FY1) EBITDA forecast, calculated over the past 3 months"
+⇒ 它**本身就是比率、且已经聚合过 3 个月**。再套 `ts_mean(20)/ts_mean(120)`
+= 把已算好的边际变化再平滑一次 ⇒ 信号被抹平 ⇒ S 只剩 0.84。
+
+**分档判据**：
+| 字段原生形态 | 适配模板 | 不适配 |
+|---|---|---|
+| 原始累计型（assets / eps_mean / 余额） | T1 均值比 / T4 差分比 | — |
+| **已聚合比率型**（diffusion / ratio / beta / mad / nums） | **T3 分位均值回归 / 最小干预外壳** | **T1 均值比（会抹平）** |
+| **已变化率型**（revision_ntm_1m / *_chg） | **T3 / 最小干预外壳** | T1 / T4（重复差分） |
+
+⇒ 新工具 `_grid/forum_templates.py --native` 会按字段名关键词
+（diffusion/revision/nums/ratio/mad/beta/change/score）自动跳过朴素模板。
+
+#### M22-04 ★★ ATOM 门误杀新字段（已修，代码级）
+**现象**：原生批 50 条被 ATOM 门拦掉 10 条，报「无法判定数据集归属的字段: beta_ray_250d」。
+**根因**：平台 `GET /data-fields` 一次只返 **10000 条**（分页上限），
+本地 `fields_usa_meta.json` 也是 10000 条 ⇒ **最新 onboard 的字段查不到归属**
+⇒ 唯一硬拦门误杀（`beta_ray_250d`/`beta_gld_250d` 平台真值都是 pv20，alphaCount=0/1）。
+
+**修复**（`src/core/atom.py`）：`dataset_of()` 加**平台定点查询兜底**
+（`GET /data-fields?search=<字段>`，命中就写回本地权威表），
+⇒ 以后新字段不会因缓存缺口被误杀。已实测 `beta_ray_250d → pv20`、
+`close → pv1`、`assets → fundamental6`。
+
+#### M22-05 历史遗留件：自有件全死，但【他人件是最大的 idea 库】★
+扫全池 mined：
+- **8267 个**「checks 无 FAIL + S≥1.58 + F≥1.0 + 未入台账」⇒ 其中 **7830 个是他人公开 alpha**
+- **437 个是自有的** ⇒ 按 ATOM 筛出 166 个（analyst4 144 / fundamental2 22）
+  ⇒ ★ 但 corr_gate 实测 30 个候选全部 FAIL：maxCorr **0.75~1.00**
+  （最像的都是池内已收录的 `d516QO9v` / `pwRwWoJ3` / `e79PvPpE`）
+  ⇒ **自有历史件这条路封死，不要再翻**。
+
+> ★★ **勘误（11-16 17:40 李工纠正）**：上面把"他人件不可提交"直接写成了"这条路封死"，
+> **这是错的**。他人 alpha **不能原样提交**（它们在生产池里，PROD corr ≈ 1.0），
+> **但它们是最大的现成 idea + 代码库** ⇒ 正确用法是
+> **「拿别人的想法 → 换冷门数据集/低使用字段重新实现 → 微调」**。
+> ⇒ 全量 15129 条（作者 LJ49886）里，**197 条是 ATOM 单数据集 + checks 无 FAIL + S≥1.58 + F≥1.0**
+> 的高质量件，**其中 ai_equity_alpha（池内 0 条）/ analyst_consensus（池内 0 条）是最佳落点**。
+> ⇒ 见 M24。
+
+---
+
+### M24（1116 17:40~）★★★ 别人的 idea + 自己实现 + corr 优先（李工 17:40 纠正后）
+
+**李工原话**：
+> 「下载的 idea 我感觉也不全，很多 idea 有给代码，或者表达式，我们需要实现别人的想法，
+> 然后微调这样能够通过平台的门槛就可以了，这个时候最需要考虑的是相关度的问题。
+> 你实现了不一定能提交，因为相关度可能大于 0.7，
+> 如果你其他的指标都无法通过，那只能说明你的表达式不对，
+> 我不知道你在做什么，貌似一直像以前那样套旧壳」
+
+#### M24-01 ★★★ 三条硬规则（覆盖此前所有"自己造 idea / 套模板"的做法）
+
+| 规则 | 内容 | 依据 |
+|---|---|---|
+| **R1** | **想法必须来自别人已验证的表达式**（本地库 15129 条 / 论坛存档帖），**不自编 idea** | 「很多 idea 有给代码，或者表达式」 |
+| **R2** | **不照抄别人表达式**——别人已提交的 alpha 在生产池里，照抄 PROD corr ≈ 1.0 必死 ⇒ 做法是**拿同一想法的因子换冷门数据集重新实现 + 微调** | 「你实现了不一定能提交，因为相关度可能大于 0.7」 |
+| **R3** | **corr 是第一筛子，不是最后一步**：池内占用高的数据集直接放弃；别人用过的字段变体（alphaCount 高）也避开；优先「池内 0 条 + 平台 alphaCount 低」 | 「这个时候最需要考虑的是相关度的问题」 |
+
+**★ 判据反转（李工 17:40 重申）**：
+「如果你其他的指标都无法通过，那只能说明你的表达式不对」
+⇒ S/F/TO 过不了门 ⇒ **不是 idea 不行、不是数据集不行、不是"这条没用"**，而是**表达式写错了**。
+⇒ 动作 = **换实现方式 / 微调外壳**，不是丢弃想法。
+
+#### M24-02 ★ 旧壳出不了货（实测证据，两批全灭）
+
+| 批 | 做法 | 条数 | 最高 S | FAIL≥3 条数 |
+|---|---|---|---|---|
+| 1116m 原生批 | 最小干预外壳 × 蓝海字段 | 17/50 | **0.78** | 17/17 |
+| 1116n 论坛模板批 | 官方 5 模板 × 蓝海字段 | 19/110 | **1.03**（唯一 FAIL=0） | 18/19 |
+| 1116l 蓝海批 | 官方 4 模板 × alphaCount=0 字段 | 20/20 | 1.03 | — |
+⇒ **全部复用 11 月初的老外壳（`group_rank(ts_mean/ts_delta(ts_zscore(...)))`）⇒ S 全部卡在 1.0 以下**
+⇒ 证实李工判断：**「貌似一直像以前那样套旧壳」**。
+⇒ 破局点不是"再调外壳"，而是**换想法来源（别人的已验证 idea）+ 换数据集（池内 0 条）+ 换外壳家族**。
+
+#### M24-03 ★ 平台算好的 alpha 因子分 = 最理想的"别人的想法"（ai_equity_alpha）
+
+**为什么它是最佳落点**（全部实测）：
+| 条件 | ai_equity_alpha 实测 |
+|---|---|
+| 池内占用 | **0 条**（台账 360 条里一个都没有）|
+| 平台 alphaCount（= 全网用得少 ⇒ PROD corr 天然低）| 43 个字段中 **多数 0~8**，最高 34 |
+| pyramid 倍率 | **1.3**（平台鼓励方向，VF 加成）|
+| 覆盖率 | 0.91 |
+| 想法成熟度 | **平台自己算好的因子分**（应计质量/资产减值风险/商业模式透明度/分析师情绪/修正动量/覆盖广度/预测准确度/资产效率/分歧度）|
+
+**43 个因子按经济含义分 10 组**（每组 = 一个独立的 idea）：
+`accrual_quality`(3) / `impairment_risk`(5) / `opacity_governance`(4) /
+`analyst_sentiment`(12) / `analyst_revision`(6) / `analyst_coverage`(4) /
+`surprise_quality`(3) / `forecast_accuracy`(1) / `asset_efficiency`(4) / `dispersion`(1)
+
+**实现方式（微调维度）**：
+- 外壳取自**别人已验证件**：`zscore(group_rank(ts_delta(F,22),g))`（别人 ai_equity_alpha 上 S=2.55）、
+  `ts_rank(ts_delta(F,60),120)`（别人 analyst4 上 S=1.65）、双因子等权合成
+- 微调轴：**分组**（industry/subindustry/sector/market）× **归一**（zscore/rank/group_zscore/group_scale）× **窗口**（22/60/120）
+- 字段选法：**同族内 alphaCount 最低的** ⇒ 与生产池里用过的变体天然错开 ⇒ corr 低
+- 批规模：66 条（10 组 × [单因子×4 分组 + 双因子×2 + 趋势腿]），ATOM 门 66/66 PASS
+
+#### M24-04 ★ 别人库里可直接用的 197 条（ATOM 单集 + 无 FAIL + S≥1.58 + F≥1.0）
+
+| dataset | n | S 中位 | max | 我方池占用 |
+|---|---|---|---|---|
+| **option8** | 96 | 1.92 | 2.27 | 1 条 |
+| fundamental6 | 58 | 1.84 | 2.46 | 8 条 |
+| pv1 | 16 | 2.01 | 2.22 | 5 条 |
+| **analyst_consensus** | 10 | 1.75 | 1.80 | **0 条** ✅ |
+| **ai_equity_alpha** | 9 | 1.92 | **2.55** | **0 条** ✅ |
+| analyst4 | 7 | 1.84 | 1.85 | 0 条（但池内 anl4 件 111 条是混集）|
+| model51 | 1 | 1.86 | 1.86 | **0 条** ✅ |
+
+**最好的一条**：`akaZMqW5` S=2.55 F=2.18 tS=1.98
+`zscore(group_rank(vec_avg(accruals_analysis_factor_10), industry))`
+（ai_equity_alpha 的 **VECTOR** 因子，需 `vec_avg`；`accruals_analysis_factor_10` alphaCount=45）
+⇒ ★ **不能照抄**（已在生产池），但**"用应计分析因子做行业中性截面排序"这个想法是对的**，
+可用 MATRIX 版 `accruals_intensity_score_2` 重新实现（alphaCount=4）。
+
+#### M24-05 corr 的三层预筛（提交前就要做，不是提交后）
+
+1. **数据集层**：池内占用 > 0 的高占比数据集直接放弃（fundamental6 48% / analyst4 111 条混集 / pv1）
+2. **字段层**：平台 `alphaCount` 低的字段优先（用得少 ⇒ 生产池里同形状少 ⇒ PROD corr 低）
+   —— 这条比"冷门数据集"更强：字段级才是 corr 的实际载体
+3. **表达式层**：不照抄别人已提交的表达式（必然 corr≈1）；改实现方式（外壳/分组/窗口）即可错开
+
+**★ 平台 corr 免费预检的边界（实测）**：
+- `GET /alphas/{id}/check` **只对自己的 alpha 有效**；对他人 alpha 返空 body / PENDING
+  （实测 `akaZMqW5` 解析失败、`MPYJEl99` 三轮 checks=0）
+- `GET /alphas/{id}/correlations/prod` 与 `/self` **都返空 body**（与既往记录一致）
+⇒ **corr 只能在模拟出自己的 alpha 之后查**（本地 `corr_gate.py` 与平台差 0.007，可先本地筛）
+⇒ ⇒ **流程必须是：先按上面三层预筛 → 模拟 → 再查 corr**
+
+---
+
+### M25/M26（1116 17:58~）★★★ 突破：实现别人的想法 + 换科目/换度量 = 今日首个过门族
+
+**起点（别人已验证）**：`kqa5NXq6` S=1.80 F=2.02
+`group_rank(ts_std_dev(vec_avg(actual_value_eps_annual12),60) - ts_std_dev(vec_avg(actual_value_fxadj_eps_annual12),60), sector)`
+（数据集 `analyst_consensus`，池内 **0 条**；`actual_value_fxadj_eps_annual12` 的 alphaCount=**0**）
+
+**机制（idea）**：原始报表口径 EPS 与**汇率调整口径** EPS 的差异 = 该股的**外汇敞口** ⇒
+汇率波动放大盈利波动 ⇒ 定价错误 ⇒ 下期收益。池内 0 条用过，全网用得也少 ⇒ corr 天然低。
+
+#### M25-01 ★ 微调轴（合法轴 = 改参数，不改 idea）
+| 轴 | 取值 | 实测效果 |
+|---|---|---|
+| 科目 | EPS 年度 / EPS 季度 / EBIT 年度 / EBI 年度 / EBI 季度 | 季度 EPS 最高 S=1.94 |
+| 窗口 | 20 / 60 / 120 | **越长 corr 越低**（w20→0.74, w60→0.67, w120→?）|
+| 分组 | industry / subindustry / sector / **market** | **market 最低 corr（0.6403）** |
+| 度量 | ts_std_dev / **ts_av_diff** / ts_delta / ts_mean | **ts_av_diff 降 corr 最多（0.6767）** |
+| universe | TOP3000 / TOP2000 / TOP1000 / TOP500 | TOP3000→TOP500 是唯一实测能独立降 corr 的杠杆 |
+
+#### M25-02 ★★ 实测结果（第一批 S≥1.58 且 checks 无 FAIL 的族）
+| cid | 形状 | S | F | tS | TO | FAIL | maxCorr |
+|---|---|---|---|---|---|---|---|
+| M25_eps_quarter_w20_sector | 季度EPS·std_dev差·sector | 1.85 | 1.88 | 0.72 | 0.022 | **0** | 0.7178 |
+| M25_eps_annual_w20_market | 年度EPS·std_dev差·market | 1.89 | 2.05 | 1.79 | 0.026 | **0** | 0.7434 |
+| M25_eps_annual_w20_industry | 年度EPS·std_dev差·industry | 1.85 | 2.04 | 1.86 | 0.024 | **0** | 0.7497 |
+| M25_eps_annual_w60_industry | 同上 w60 | 1.81 | 1.94 | 1.09 | 0.020 | **0** | 0.7139 |
+| M25_eps_annual_w60_subindustry | 同上 w60 | 1.83 | 1.80 | 1.09 | 0.023 | 1 | **0.6713** ✅ |
+| M25_eps_annual_w60_sector | 同上 w60 | 1.79 | 2.00 | 1.27 | 0.017 | **0** | 0.7036 |
+| **M25_eps_quarter_w20_market** | 季度EPS·market | 1.94 | 1.86 | 0.46 | 0.029 | 1 | **0.6403** ✅ |
+| M25b_eps_annual_D1_industry | **ts_av_diff 差·industry** | 1.89 | 1.87 | 1.05 | 0.021 | **0** | 0.7070 |
+| **M25b_eps_annual_D1_subindustry** | **ts_av_diff 差·subind** | 1.90 | 1.75 | 0.73 | 0.022 | 1 | **0.6767** ✅ |
+| M25b_eps_annual_D2_subindustry | ts_delta 差·subind | 1.79 | 1.77 | 1.22 | 0.021 | **0** | 0.7448 |
+
+#### M25-03 ★★ corr 墙的真实原因（诊断，不是猜）
+`corr_top.py` 查 top-8 最像件 ⇒ **全部撞同一个池内件 `Vk08lZMb`**（0.64~0.76）：
+`1.3*group_rank(ts_delta(cashflow_op,252)/cap, industry) + 1.1*group_rank(ts_delta(fnd6_mfma2_revt,252)/assets, industry) + 2.2*group_rank(-(ebit-cashflow_op)/assets, industry) + ...`
+（fundamental6 五腿混集）
+⇒ **撞的不是数据集，是共同的「低波动 + 盈利质量」因子**
+⇒ 破局手段（实测有效）：**换度量方式**（std_dev → av_diff）+ **换分组**（→ market）+ **拉长窗口**
+⇒ ⚠ **换数据集没用**（池内 fundamental6/pv1/option8 都有同族件）
+
+#### M25-04 ★ 两个临界件各差一口气（下一步的靶）
+| 件 | 过门项 | 卡住项 |
+|---|---|---|
+| `YPa2xM3l` M25_eps_quarter_w20_market | S=1.94 F=1.86 | LOW_SUB_UNIVERSE_SHARPE=0.80（限 0.84）**corr 0.6403 ✅** |
+| `3q0ajb9Z` M25b_eps_annual_D1_subindustry | corr 0.6767 ✅ | LOW_SUB_UNIVERSE_SHARPE=0.81（限 0.82） |
+| `1YWajJvk` M25_eps_quarter_w20_sector | FAIL=0 ✅ | corr 0.7178（最像 qM0E2Ee2） |
+| `rK7Jen08` M25b_eps_annual_D1_industry | FAIL=0 ✅ | corr 0.7070（差 0.007） |
+
+⇒ **分组轴（管 corr）与中性化轴（管 subuniverse_sharpe）相互独立**
+⇒ M28 定向：分组 market/sector/subindustry × 中性化 MARKET/NONE/INDUSTRY × 窗口 20/30/45
+   × universe TOP3000/TOP2000/TOP1000（110 条）
+
+#### M25-05 ★★ 微调的合法轴 vs 非法轴（李工 17:58 的实证）
+**合法（改参数）**：窗口 / 分组 / 归一 / 平滑 / 设置层 / **度量方式**
+**非法（改想法）**：换字段族、换数据集
+★ **反面教材（M24b）**：把别人验证的 VECTOR 字段 `accruals_analysis_factor_10`
+  换成 MATRIX 变体 `accruals_intensity_score_2` ⇒ **S 从 2.55 掉到 0.63**
+  ⇒ **微调 ≠ 换字段**
+★ **另一个反面教材**：给已聚合的因子分加 `ts_delta` ⇒ 信号被抹平（S=0.46, TO=0.0116）
+  ⇒ 时序层不是"复杂度"，加错层会直接毁信号
+
+#### M25-06 ★★ corr 与 subuniverse_sharpe 的双约束（12 条过门件实测）
+**当前 12 条 checks 无 FAIL 的件，corr 全部 0.70~0.76**（本地 corr_gate，与平台差 0.007）：
+| id | 形状 | S | maxCorr | 卡在哪 |
+|---|---|---|---|---|
+| `zqdPbvbO` | 年度EPS·std_dev差·market | 1.89 | 0.7434 | corr |
+| `rK7JR0a9` | 年度EPS·ts_rank差·industry | 1.90 | 0.7477 | corr |
+| `GrmMOqpx` | 年度EPS·std_dev差·industry | 1.85 | 0.7497 | corr |
+| `j2a9eRVe` | 年度EPS·ts_delta差·industry | 1.74 | 0.7606 | corr |
+| `npaZANKE` | 年度EPS·ts_delta差·subind | 1.79 | 0.7448 | corr |
+| `1YWajJvk` | 季度EPS·std_dev差·sector | 1.85 | 0.7178 | corr（最像 qM0E2Ee2）|
+| `rK7Jen08` | 年度EPS·av_diff差·industry | 1.89 | 0.7070 | corr（差 0.007）|
+| `xAvPrlrw` | — | 1.54 | 0.7091 | corr |
+| `O0Wb8bq7` | 年度EPS·std_dev差·sector w60 | 1.79 | 0.7036 | corr |
+| `ZYa2AA1d` | 年度EPS·std_dev差·industry w60 | 1.81 | 0.7139 | corr |
+| `ZYa2Qb68` | — | 1.55 | 0.7422 | corr |
+| `KPgXNELp` | 年度EPS·std_dev差·sector w20 | 1.80 | 0.7213 | corr |
+
+**★ 第二道墙（同样重要）**：`LOW_SUB_UNIVERSE_SHARPE`
+- 池内 341 条过门件的 subuniverse sharpe **中位 1.49~1.60**（最高 2.71）
+- **我的件只有 0.73~0.81** ⇒ 差一个数量级的"域内一致性"
+- 规律：**分组越粗 ⇒ subuniverse 越低**（market 分组 0.73 / industry 0.76 / sector 0.80 / subindustry 0.81）
+- 规律：**中性化 SUBINDUSTRY 的池内件占 273/341** ⇒ 池子主流是细域中性化
+
+**⇒ 双约束互相拉扯**：
+| 想要 | 轴 | 代价 |
+|---|---|---|
+| corr < 0.70 | 分组粗（market）+ 度量换（av_diff/D4）+ 窗口长 | ⇒ subuniverse 掉到 0.73~0.81 ⇒ 撞 LOW_SUB_UNIVERSE_SHARPE |
+| subuniverse 过线 | 分组细（subindustry）+ SUBINDUSTRY 中性化 | ⇒ corr 回升到 0.67~0.74（仍接近线）|
+
+**⇒ M29 定向批（150 条）**：分组 {subindustry, industry} + 中性化 SUBINDUSTRY
++ universe {TOP3000, TOP2000, TOP1000, TOP500}（小 universe 提 subuniverse）
++ 度量 {D1 av_diff, D4 std_dev比, D6 ts_rank差, D7 比值差} + 窗口 {20,45,60,90,120}
+
+#### M25-07 ★★ 换 idea 路线（避开同一因子）：option8 期权偏斜族
+**他人库 197 条可用件按机制族**：期权波动率偏斜 **96 条**（S 中位 1.93）/ 盈利质量 38 / 估值比率 24 /
+动量 17 / 风险波动 10 / 预期修正 6 / 其他 6。
+★ **option8 池内只占 1 条**（QPK3n9Zw），但那一条已用 **90 日期限 + industry**
+⇒ **换期限（10/20/45/150）+ 换度量（差/比/变化）+ 换分组** ⇒ 同想法不同实现 ⇒ corr 低
+⇒ M30 批 90 条（3 度量 × 6 期限 × 4 分组 + 6 组期限结构对）

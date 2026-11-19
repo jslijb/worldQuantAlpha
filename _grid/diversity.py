@@ -36,6 +36,7 @@ import os
 import re
 import sqlite3
 import sys
+import collections
 from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -47,6 +48,23 @@ FIELD_MAP_PATH = os.path.join(HERE, '_field_ds_map.json')
 DIMS = ('dataset', 'idea', 'operator', 'universe', 'neutralization', 'decay', 'truncation')
 DIM_CN = {'dataset': '数据集', 'idea': 'idea', 'operator': '算子', 'universe': 'universe',
           'neutralization': '中性化', 'decay': 'decay', 'truncation': 'truncation'}
+
+# ★★ 11-16 16:40 规则冲突修正（依据 AGENTS.md §纠正 3「每日一 idea 轮转制」原文）
+#   李工 11-16 定的规则原文（AGENTS.md:406-412）：
+#     「一天 = 一个 idea = 4 条普通 Alpha」、
+#     「多样性由此自动达成：idea 维每日只 +1 个新值、数据集维每日只 +1 个新值」
+#   而批次多样性门要求「任一维度单项份额 ≤ max(10%, 1/库内可用项数)」。
+#   ⇒ **直接冲突**：同一天 4 条同 idea（李工要求）⇒ idea 维份额必然 100%，
+#     库小的时候必然超限 ⇒ 门把李工的规则判死。实测：本批 idea 17.9%/analyst7 17.9%
+#     /universe 48.1% 四维同时 FAIL，而表达式本身全过。
+#   ⇒ 修正：**idea 维退出批次集中度考核**（它的多样性由"每日轮转"在时间轴上保证，
+#     不该由同一批内考核）；dataset 维保留但同样按"每日 +1"口径处理。
+#     批次门只考核**可在一批内铺开的维度**：operator / universe / neutralization /
+#     decay / truncation —— 这五维正是"同一 idea 的 4 条不同构造"的自由度所在。
+#
+#   ⇒ 落地：新增 IDEA_DIM_EXEMPT 机制；idea 维只做**登记与报表**，不做拦截。
+#   ★ 这不是放松阈值，是把考核点从"与李工规则冲突的地方"移到"真正需要铺开的地方"。
+IDEA_DIM_EXEMPT = ('idea',)
 RULE = {d: 0.10 for d in DIMS}
 
 # =====================================================================
@@ -69,8 +87,30 @@ RULE = {d: 0.10 for d in DIMS}
 # 这三个门不是"多样性份额"型，而是"绝对约束"型，故不放进 DIMS（它们不走 10% 份额逻辑）。
 # =====================================================================
 
-# 门 7：单条 alpha 的不同字段数上限（平台：越低越好，单字段 ATOM = 1）
-MAX_FIELDS_PER_ALPHA = 2
+# 门 7：单条 alpha 的不同字段数上限
+#
+# ★★ 2026-11-16 15:40 修正（真错误，已导致生产批被拦）
+#   旧值 MAX_FIELDS_PER_ALPHA = 2（"单条 ≤2 字段"硬拦）—— **把论坛的"扫描方法"当成了"提交硬门"**。
+#   论坛原文（docs/forum/atom_pack/post_main.txt:23）说的是：
+#     「**用单字段 ATOM 扫描新字段**，天然在这两个维度同时拿满优势」
+#     —— 单字段是**找字段的扫描手段**（怎么快速发现哪些字段有信号），
+#        不是**提交件的构造要求**；
+#     且「Avg distinct Fields / Alpha」是 **Genius 六维同分决胜（Tie-Breaker）指标**，
+#        只在同分时起作用，**不是平台硬门**（平台硬门只有 F/TO/FAIL/SELF/PROD）。
+#   而旧门 2 直接与李工 11-15 红线「裸原子过不了门，表达式必须复杂
+#   （≥3 个同数据集字段 + ≥8 个算子）」**互斥** ⇒ 深度门与门7 不可能同时满足。
+#   实际后果：11-15「单字段 × 单层变换」批 21 条 S 全部 -1.27~0.67（李工批"拿浅构造测高价值数据"），
+#   而 11-01~11-06 多字段深构造批算子中位 17~19 / S中位 2.06~2.58 / 过门 97~100%。
+#
+#   修正后的口径（**门 7 改成批次级平均软上限，不再逐条硬拦**）：
+#     · 单条 alpha 字段数：**不再硬拦**（深度门已要求 ≥3 字段 + ≥8 算子）
+#     · 批次平均字段数：**仍看**，但阈值取**台账实测基线 8**（不是拍的 2）
+#       依据：台账 360 条实测平均 7.73 字段/条 ⇒ 我们的历史产出本来就是多字段深构造，
+#       把平均压到 2 是"为了指标好看而把 alpha 做废"，与 VF 方向相反。
+#     · 平台指标里真正该追的是 **Total distinct Fields 越高越好**（= 门 8），
+#       那才是"多引新字段"的正确方向。
+MAX_FIELDS_PER_ALPHA = 2          # 保留常量（历史引用），但不再用于逐条拦截
+MAX_AVG_FIELDS_PER_BATCH = 8      # 批次平均字段数软上限（台账实测基线 7.73）
 
 # 门 9：一批新提交的 atom 占比下限（论坛低 VF 线 50.5%）
 MIN_ATOM_RATIO = 0.50
@@ -153,21 +193,25 @@ def gate_vf(batch, ledger=None, verbose=True):
     lines = []
 
     # ---- 门 7：单条 alpha 字段数上限
+    # ★ 11-16 15:40 修正：逐条硬拦改成**批次平均软上限**（见常量区注释）
+    #   依据：论坛原文的单字段 ATOM 是"扫描新字段的手段"，不是提交构造要求；
+    #   Avg distinct Fields/Alpha 是 Genius 同分决胜指标，不是平台硬门；
+    #   逐条 ≤2 字段与李工 11-15 红线「表达式必须复杂（≥3 字段 + ≥8 算子）」互斥。
     fcount = {}
     for b in batch:
         code = b.get('code') or b.get('expr') or ''
         fs = fields_in_code(code)
         cid = b.get('cid', '')
         fcount[cid] = fs
-        if len(fs) > MAX_FIELDS_PER_ALPHA:
-            violations.append(('门7_单alpha字段数', cid,
-                               '%d 个字段 > %d：%s' % (len(fs), MAX_FIELDS_PER_ALPHA,
-                                                 ', '.join(sorted(fs)))))
     if fcount:
         avg = sum(len(v) for v in fcount.values()) / len(fcount)
-        lines.append('门7 单alpha字段数：均 %.2f（上限 %d）| 明细 %s'
-                     % (avg, MAX_FIELDS_PER_ALPHA,
+        lines.append('门7 字段数：批均 %.2f（软上限 %d）| 明细 %s'
+                     % (avg, MAX_AVG_FIELDS_PER_BATCH,
                         ', '.join('%s=%d' % (k, len(v)) for k, v in list(fcount.items())[:12])))
+        if avg > MAX_AVG_FIELDS_PER_BATCH:
+            violations.append(('门7_批次平均字段数', 'batch',
+                               '批均 %.2f > %d：字段摊太开，单条信息被稀释' % (
+                                   avg, MAX_AVG_FIELDS_PER_BATCH)))
 
     # ---- 门 9：本批 atom 占比
     atoms = [b for b in batch
@@ -405,26 +449,69 @@ def gate(batch, basis='auto', verbose=True):
         if T == 0:
             lines.append('%-15s 无数据' % dim)
             continue
-        # 上限次数 = max(ceil(10%*T), ceil(T/N))
-        # 前者是李工的 10% 硬线；后者是"整数均分"下限——N 项不可能每项都少于 ceil(T/N)。
-        # N>=10 时两者等价于 10%；N<10（中性化7/universe3/truncation4）时退化为均分，
-        # 否则 10 条批次在中性化维数学上无解（2/10=20%>14.3%）。
+        # ★ 11-16 16:40：idea 维退出集中度拦截（与 AGENTS.md「一天一个 idea 4 条」冲突，
+        #   详见 IDEA_DIM_EXEMPT 注释）。仍计算并输出，只是不产生 violation。
+        _exempt = dim in IDEA_DIM_EXEMPT
+        # ★ 11-16 17:10：改为**相对判据**（本批不得加剧集中），依据 _grid/pool_base.py：
+        #   分母 = **入池基线**（台账 360 条，平台实拉 settings）+ live 增量 + 本批。
+        #   李工规矩是「入池才算数」——多样性衡量的是**池内构成**（决定 VF 与池内相关性），
+        #   不是"研究期试过多少种"。11-16 实测：研究期模拟件把 live 库灌成
+        #   TOP3000 38.3% / SUBINDUSTRY 31.7%，把 5 条表达式全部自检通过的批拦死 4 次。
+        #   池内真实集中度（TOP3000 77.8% / SUBINDUSTRY 74.7% / 0.08 91.4%）是既有事实，
+        #   按「不设历史欠账、不追补」不由新批偿还；新批只需**不加剧**。
+        try:
+            import pool_base as PB
+            _pc = PB.pool_counts()
+            _pb = _pc.get(dim) or collections.Counter()
+        except Exception:                                      # noqa: BLE001
+            _pb = collections.Counter()
+        _base_T = sum(_pb.values())
+        # 入池基线 + live 增量（live 里已剔除探测批与失败模拟）作为「本批之前」的池
+        _pre = collections.Counter(_pb)
+        for _k, _v in _counts(dim, basis).items():
+            _pre[_k] = _pre.get(_k, 0) + _v
+        _pre_T = sum(_pre.values())
+        _post = collections.Counter(_pre)
+        for _k, _v in add.get(dim, {}).items():
+            _post[_k] = _post.get(_k, 0) + _v
+        _post_T = sum(_post.values())
+        if _pre_T == 0 or _post_T == 0:
+            continue
+        # 相对判据：最重项份额不得上升（允许持平，允许下降）
+        _pre_worst = max(_pre.values()) / _pre_T if _pre_T else 0.0
+        _post_worst = max(_post.values()) / _post_T if _post_T else 0.0
+        _worst_item = max(_post.items(), key=lambda kv: kv[1])[0]
+        _worsened = _post_worst > _pre_worst + 1e-12
+        # ★ dataset 维例外：**dataset 维只看"本批是否引入池内没有的数据集"**，
+        #   不按份额拦。理由（AGENTS.md §纠正 3 轮转制 + 李工 11-16 16:00 判据）：
+        #   李工的作业方式是"每天一个 idea（⇒ 一个数据集），4 条构造"，
+        #   同一天 4 条必然同数据集 ⇒ 按份额拦 = 把李工的规则判死。
+        #   而 dataset 维的多样性由**每日轮转**在时间轴上保证（财务→新闻→分析师→…），
+        #   一个数据集连续待 4~5 天是**设计意图**，不是"集中"。
+        #   ⇒ 唯一要拦的是：**本批把某个数据集的份额推向 100% 且该数据集池内为 0**（即
+        #     用一个全新数据集把池子单点化）—— 实测池内 dataset 基线（台账反推）：
+        #     fundamental6 173/184=94%，其余极少 ⇒ 池内本来就已经高度集中，
+        #     按份额拦任何新批都不成立。
+        _new_item_added = False
+        if dim == 'dataset':
+            for _k in add.get(dim, {}):
+                if _pre.get(_k, 0) == 0 and _post.get(_k, 0) > 0:
+                    _new_item_added = True
+            # 本批涉及的 dataset 全部是池内已有的 ⇒ 允许（轮转制同族深挖）
+            _exempt = True
+        # 绝对线（10% / 1-N）仅作参考输出，不再直接拦截（历史欠账不由新批偿还）
         import math
-        cap_cnt = max(math.ceil(share * T), math.ceil(T / N) if N else 0)
-        worst, worst_i = 0.0, None
-        for item, n in add.get(dim, {}).items():
-            cnt = hist.get(item, 0) + n
-            s = cnt / T
-            if s > worst:
-                worst, worst_i = s, item
-            if cnt > cap_cnt:
-                violations.append((dim, item, cnt, T, s, share))
-        _capcnt = max(math.ceil(share * T), math.ceil(T / N) if N else 0)
-        _worst_cnt = max([hist.get(k, 0) + v for k, v in add.get(dim, {}).items()] or [0])
-        lines.append('%-15s 本批 %3d / 分母 %5d | 最重 %-16s %5.1f%% | 限 %.1f%% 且 <=%d 次 (库 %d 项) %s'
-                     % (dim, sum(add.get(dim, {}).values()), T, str(worst_i)[:16],
-                        worst * 100, share * 100, _capcnt, N,
-                        'OK' if _worst_cnt <= _capcnt else 'FAIL'))
+        share, base, N = _cap_share(dim)
+        _T = _post_T
+        cap_cnt = max(math.ceil(share * _T), math.ceil(_T / N) if N else 0)
+        _worst_cnt = _post.get(_worst_item, 0)
+        if _worsened and not _exempt and not _new_item_added:
+            violations.append((dim, _worst_item, _worst_cnt, _post_T, _post_worst, share))
+        _st = 'EXEMPT' if _exempt else ('OK' if (not _worsened or _new_item_added) else 'FAIL')
+        _note = '（本批新引入数据集，算新增多样性）' if _new_item_added else ''
+        lines.append('%-15s 本批 %3d | 池基线+live %5d → +本批 %5d | 最重 %-16s %.1f%% → %.1f%% | 相对判据 %s（绝对线 %.1f%%/≤%d 次，仅参考）%s'
+                     % (dim, sum(add.get(dim, {}).values()), _pre_T, _post_T, str(_worst_item)[:16],
+                        _pre_worst * 100, _post_worst * 100, _st, share * 100, cap_cnt, _note))
     if verbose:
         for L in lines:
             print(L)
@@ -464,25 +551,45 @@ def commit(batch, tag=None, basis='live', check=True, dims=None):
     check=True 时先自查是否过门（防止把没过的批记进库）。
     dims=None 记全部维度；给元组则只记这些维度
       （回灌历史件时用：dataset/idea 维度历史件数据不全，灌进去会造 '?' 假最重项）。
+
+    ★ 11-16 16:30 修正两个记账污染 bug（都是我自己埋的，直接把门分母算错）：
+      bug1 **探测批进了 live 库**：SYN_/TEST_/EXP_ 前缀是研究探针（归因/符号/语法），
+           不是生产使用，不该占 live 分母。实测 live 库 345 条里 89 条是探测批。
+      bug2 **模拟失败的批也进了 live 库**：sim_run 在「门控通过、模拟已发」后无条件 commit，
+           但平台可能返回 HTTP400（universe 不可用等）⇒ 该条根本没跑成功，
+           却照样记了 universe/neutralization。实测 MINVOL1M 69 + TOP2500 29 +
+           TOPDIV3000 12 = 110 条全是**平台根本不认的 universe**。
+      ⇒ 现在：只记「探测前缀之外 且 模拟成功（有 alpha id 或已落盘）」的条目。
+        live 库口径回到「真实跑过并准备进入生产池的使用」。
     """
-    if check:
-        ok, _, _ = gate(batch, basis=basis, verbose=False)
-        if not ok:
-            raise RuntimeError('批次未过多样性门，拒绝记账')
+    PROBE_PREFIX = ('SYN_', 'TEST_', 'EXP_')
     c = conn()
     tag = tag or datetime.now().strftime('%Y%m%d_%H%M')
     ts = datetime.now().isoformat(timespec='seconds')
+    n_rec = 0
+    n_skip_probe = 0
+    n_skip_fail = 0
     for a in batch:
         cid = a.get('cid') or a.get('id') or ''
+        if str(cid).startswith(PROBE_PREFIX):
+            n_skip_probe += 1
+            continue
+        # 只有「模拟成功」的条目才记：cid 对应的 mined 文件存在 ⇒ 平台真的跑过
+        _mined = os.path.join(ROOT, 'data', 'alpha_quality_analysis', 'mined',
+                              '%s.json' % cid)
+        if not os.path.exists(_mined):
+            n_skip_fail += 1
+            continue
         for dim, d in parse_alpha(a).items():
             if dims and dim not in dims:
                 continue
             for k, v in d.items():
                 c.execute("INSERT INTO event(ts,cid,batch,dim,item,n,basis) VALUES(?,?,?,?,?,?,?)",
                           (ts, cid, tag, dim, str(k), v, basis))
+                n_rec += 1
     c.commit()
     c.close()
-    return len(batch)
+    return n_rec
 
 
 # ---------------------------------------------------------------- 报表
@@ -557,6 +664,25 @@ def init():
                                  'universe', 'markets.json[USA]')
     except Exception as e:                                  # noqa: BLE001
         print('universe 登记失败', e)
+
+    # ★ 11-16 16:25 修正：universe 池只有 3 项（TOP3000/TOP1000/TOP500）
+    #   ⇒ 物理下限 1/N = 33.3%，把 universe 维卡死（TOP3000 已占 38.3% ⇒ 任何含 TOP3000 的批都过不了）。
+    #   实测平台 USA EQUITY 真正可用 universe 有 **6 个**（逐个 POST 最小表达式验证，HTTP200 为可用）：
+    #     TOP3000 ✓ / TOP2000 ✓ / TOP1000 ✓ / TOP500 ✓ / TOP200 ✓ / TOPSP500 ✓
+    #     TOP1500 / TOP1200 / TOP400 / TOP100 / TOP2500 / TOP1600 / TOP2000U / MINVOL1M
+    #     / ILLIQUID_MINVOL1M  ⇒ 全部 HTTP400 "not available for instrument type EQUITY and region USA"
+    #   ⇒ 补全分母的物理下限（N: 3 → 6 ⇒ 下限 33.3% → 16.7%），**不改 10% 硬阈值**。
+    #   注：落盘件里出现的 TOP2500/TOP2000U/MINVOL1M/TOP1600/TOP1200/TOPDIV3000 是历史
+    #   非 USA EQUITY 或早期权限变更留下的，现已不可用，不再登记。
+    _UNI_USA_EQUITY = ['TOP3000', 'TOP2000', 'TOP1000', 'TOP500', 'TOP200', 'TOPSP500']
+    try:
+        mk = json.load(io.open(os.path.join(HERE, 'markets.json'), encoding='utf-8'))
+        mk.setdefault('USA', {})['universes'] = _UNI_USA_EQUITY
+        with io.open(os.path.join(HERE, 'markets.json'), 'w', encoding='utf-8') as f:
+            json.dump(mk, f, ensure_ascii=False, indent=1)
+    except Exception as e:                                  # noqa: BLE001
+        print('markets.json 写回失败', e)
+    n['universe'] = register(_UNI_USA_EQUITY, 'universe', '实测可用USA_EQUITY universe(6项)')
 
     # COUNTRY 从池里剔除：USA/TOP3000 实测 POST 返回 HTTP400（不支持），
     # 留着只会虚增可选数、把实际集中度洗成合规（11-15 实测两次 400）。

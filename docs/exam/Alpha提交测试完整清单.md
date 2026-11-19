@@ -177,11 +177,13 @@ subuniverse_sharpe >= 0.75 * sqrt(subuniverse_size / alpha_universe_size) * alph
 
 ### 4.1 ATOM Alpha
 
-**定义：** 仅使用**一个数据集字段**的 Alpha。
+**定义：** 字段**只来自 1 个数据集（dataset）**的 Alpha。
+
+⚠️ 注意措辞：是「1 个**数据集**」，不是「1 个字段」。同一个数据集里的**多个字段随便用**，不影响 ATOM 资格；只有跨数据集（如 pv1 + fundamental6）才失资格。
 
 **特殊规则：**
 
-- 以下分组字段**不会**使 Alpha 失去 ATOM 资格：currency、country、exchange、industry、subindustry、market。
+- 以下 **9 类**分组字段**不会**使 Alpha 失去 ATOM 资格（官方原文清单，缺一不可记全）：currency、country、exchange、sector、industry、subindustry、market、split、adjfactor。
 - 使用 `inst_pnl` 算子会被计为使用了 **pv1 数据集**。因此 `inst_pnl(<来自非 pv1 数据集字段>)` **不具备 ATOM 资格**。
 - ATOM Alpha **跳过 IS 阶梯 Sharpe 测试**，但仍需通过常规 IS 测试和 **2Y Sharpe 测试**。
 
